@@ -1,0 +1,67 @@
+project:
+  type: website
+
+bibliography: references.bib
+csl: apa.csl
+
+
+website:
+  site-url: http://0.0.0.0:4200/
+  title: "ISE Lab Handbook"
+  navbar:
+    left:
+      - text: "Overview"
+        href: index.qmd
+      - text: "Research"
+        href: research/index.qmd
+      - text: "Teaching"
+        href: teaching/index.qmd
+      - text: "Management"
+        href: management/index.qmd
+      - text: "Contribute"
+        href: contribute.qmd
+
+  sidebar:
+    # Sidebar shown on all research/* pages
+    - title: "Research"
+      style: "floating"
+      search: true
+      contents:
+        - research/index.qmd      # <- MUST be first and match the navbar href
+        - research/vision.qmd
+        - research/standards.qmd
+        - research/workflows.qmd
+
+    # Sidebar shown on all teaching/* pages
+    - title: "Teaching"
+      contents:
+        - teaching/index.qmd      # <- matches navbar href
+        - teaching/principles.qmd
+        - teaching/materials.qmd
+        - teaching/courses.qmd
+
+    # Sidebar shown on all management/* pages
+    - title: "Management"
+      contents:
+        - management/index.qmd    # <- matches navbar href
+        - management/communication.qmd
+        - management/meetings.qmd
+        - management/tools.qmd
+
+    # Sidebar for the contribute page
+    - title: "Contributing"
+      contents:
+        - contribute.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    smooth-scroll: true
+
+execute:
+  freeze: auto
+
