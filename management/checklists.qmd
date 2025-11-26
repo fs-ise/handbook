@@ -1,0 +1,15 @@
+---
+title: "Checklists"
+---
+
+---
+title: "Checklists"
+listing:
+  id: checklist-list
+  contents: .          # or "pages" / "guides" / "checklists/*.qmd" etc.
+  type: table          # gives you a table
+  fields: [title, page_type]   # columns in the table
+  include:             # only include items with page_type = checklist
+    page_type: "checklist"
+  filter-ui: [title, page_type]  # search/filter by these fields
+---

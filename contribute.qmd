@@ -2,5 +2,50 @@
 title: "Contributing"
 ---
 
-Your content here…
+Code annotation (for slides!) (see [link](https://quarto.org/docs/authoring/code-annotation.html))
 
+
+```r
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  )                                              # <2>
+```
+
+1. Take `penguins`, and then,
+2. add new columns for the bill ratio and bill area.
+
+
+Your content here… [^1]
+
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+Icons: [Bootstrap](https://icons.getbootstrap.com/)
+
+\{\{icon="mortarboard-fill"\}\}
+
+Native page break:
+
+\{\{< pagebreak >\}\}
+
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+[^1]: A url and further information.
+
+@AaltonenStelmaszak2024 is useful.
+
+
+Handbook: navigation is updated in `_quarto.yml`.

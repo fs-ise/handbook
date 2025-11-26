@@ -6,16 +6,25 @@ csl: apa.csl
 
 
 website:
+  # announcement: 
+  #   icon: info-circle
+  #   dismissable: true
+  #   content: "**Alert** - this is some information that you should pay attention to"
+  #   type: primary
+  #   position: below-navbar
+
   site-url: http://0.0.0.0:4200/
   title: "ISE Lab Handbook"
+  favicon: assets/favicon.ico
   navbar:
+    logo: assets/logo.png
     left:
       - text: "Overview"
         href: index.qmd
-      - text: "Research"
-        href: research/index.qmd
       - text: "Teaching"
         href: teaching/index.qmd
+      - text: "Research"
+        href: research/index.qmd
       - text: "Management"
         href: management/index.qmd
       - text: "Contribute"
@@ -31,6 +40,7 @@ website:
         - research/vision.qmd
         - research/standards.qmd
         - research/workflows.qmd
+        - research/publications.qmd
 
     # Sidebar shown on all teaching/* pages
     - title: "Teaching"
@@ -47,6 +57,7 @@ website:
         - management/communication.qmd
         - management/meetings.qmd
         - management/tools.qmd
+        - management/checklists.qmd
 
     # Sidebar for the contribute page
     - title: "Contributing"
@@ -61,6 +72,9 @@ format:
     toc-depth: 3
     code-fold: true
     smooth-scroll: true
+    grid:
+      body-width: 1000px
+
 
 execute:
   freeze: auto
