@@ -2,12 +2,16 @@
 title: "Quarto"
 ---
 
+::: {.callout-important}
+Do not create quarto brand extension or use the revealjs seminar plugin (complexity).
+:::
+
 ## TODO
 
 - Layout: template, font, logo (see /home/gerit/ownCloud/inbox/quarto/presentation-example-big_data_analytics)
 - Interaction (seminar plugin + feedback flow)
 - Ask students how they learn (PDF, ...) whether they use a knowledge management system (which one), ...
-
+- always build output in `_site` dir
 
 ## Principles
 
@@ -72,3 +76,36 @@ for `quarto publish gh-pages` : install quarto locally (otherwise, the ssh and g
 
 
 
+## Creating extensions
+
+https://github.com/mcanouil/awesome-quarto
+
+https://m.canouil.dev/quarto-extensions/
+
+quarto list extensions
+
+https://quarto.org/docs/extensions/creating.html
+
+
+<!--
+https://posit-dev.github.io/brand-yml/
+See branded shiny app for creating brand extensions: https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/
+embedd extension:
+quarto add fs-ise/fs-ise-brand --embed fs-ise-presentation
+Brand: https://github.com/mcanouil/quarto-mcanouil
+Example of a brand extension used: https://github.com/mcanouil/mickael.canouil.fr
+-->
+
+Shortcuts:
+- g : goto slide
+- b
+- d
+
+
+### Timer
+
+quarto add gadenbuie/countdown/quarto
+
+```text
+{{< countdown minutes=5 seconds=32 top=10 left=0 >}}
+```
