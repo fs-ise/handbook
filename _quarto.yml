@@ -13,9 +13,11 @@ website:
     type: primary
     position: below-navbar
 
-  site-url: http://0.0.0.0:4200/
   title: "ISE Lab Handbook"
   favicon: assets/favicon.ico
+  site-url: https://fs-ise.github.io/handbook/
+  repo-url: https://github.com/fs-ise/handbook
+  repo-actions: [edit, issue]
   navbar:
     logo: assets/logo.png
     left:
@@ -29,6 +31,8 @@ website:
         href: management/index.qmd
       - text: "Contribute"
         href: contribute.qmd
+      - text: '{{< iconify octicon:mark-github-16 title="GitHub" label="GitHub" >}}'
+        href: "https://github.com/fs-ise/handbook"
 
   sidebar:
     - title: "Research"
@@ -64,6 +68,9 @@ format:
     grid:
       body-width: 1000px
 
+extensions:
+  iconify:
+    style: "color: #002EFF;"
 
 execute:
   freeze: auto
