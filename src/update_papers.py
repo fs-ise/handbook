@@ -98,6 +98,7 @@ def record_to_bibtex(rec: dict) -> str:
             "code_url",
             "author_copy_url",
             "author+an:orcid",
+            "colrev.pubmed.pubmedid",
         }:
             continue
         if value is None or value == "":
