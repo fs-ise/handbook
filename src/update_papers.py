@@ -26,7 +26,7 @@ import html
 import shutil
 from pathlib import Path
 from typing import List, Iterable, Dict, Any
-
+from typing import List, Iterable, Dict, Any, Optional
 import colrev.loader.load_utils as load_utils
 
 
@@ -97,6 +97,7 @@ def record_to_bibtex(rec: dict) -> str:
             "dataset_doi",
             "code_url",
             "author_copy_url",
+            "author+an:orcid",
         }:
             continue
         if value is None or value == "":
@@ -348,6 +349,57 @@ def get_field(record: Dict[str, Any], *names: str, default: str = "") -> str:
     return default
 
 
+def build_authors_metadata(record: Dict[str, Any]) -> List[Dict[str, str]]:
+    """Build a list of author dicts with optional ORCID from record.
+
+    - Splits 'author' on ' and '
+    - Reads ORCIDs from 'author+an:orcid'
+
+    Semantics (CoLRev/BibTeX-style):
+    - 'author+an:orcid' is a positionally aligned list with the authors
+    - Separators are usually ';' (may also be ',')
+    - Empty entries mean "no ORCID for this author" and MUST be kept,
+      so that indices match authors correctly.
+    """
+    raw_authors = get_field(record, "author", default="").strip()
+    if not raw_authors:
+        return []
+
+    # Split BibTeX author string: "Last, First and Last2, First2"
+    names = [a.strip() for a in raw_authors.split(" and ") if a.strip()]
+
+    # ORCIDs (optional), positionally aligned with authors, e.g. ";0000-...;"
+    raw_orcids = str(record.get("author+an:orcid", "")).strip()
+
+    orcids: List[Optional[str]] = []
+    if raw_orcids:
+        # Choose a separator but DO NOT drop empty items
+        if ";" in raw_orcids:
+             sep = ";"
+        elif "," in raw_orcids:
+             sep = ","
+        else:
+             sep = None
+
+        if sep is None:
+            parts = [raw_orcids.strip()]
+        else:
+            parts = [p.strip() for p in raw_orcids.split(sep)]
+
+        # Keep empty positions as None to preserve indices
+        orcids = [p if p else None for p in parts]
+
+    authors_meta: List[Dict[str, str]] = []
+    for idx, name in enumerate(names):
+        entry: Dict[str, str] = {"name": name}
+        if idx < len(orcids) and orcids[idx]:
+            entry["orcid"] = orcids[idx]
+        authors_meta.append(entry)
+
+    return authors_meta
+
+
+
 def build_yaml_header(record: Dict[str, Any]) -> str:
     """
     Build a YAML header string from a CoLRev record.
@@ -361,7 +413,8 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
     - url: from 'url'
     - journal.name: from 'journal' / 'journal.name'
     - outlet: from 'outlet' / 'journal' / 'booktitle'
-    - author: from 'author'
+    - author: from 'author' (flat string)
+    - authors: list of {name, orcid?} from 'author' + 'author+an:orcid'
     - citation_key: from 'ID'
     """
     title = get_field(record, "title").strip()
@@ -380,6 +433,9 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
     journal_name = get_field(record, "journal", "journal.name", default="").strip()
     outlet = get_field(record, "outlet", "journal", "booktitle", default="").strip()
     author = get_field(record, "author", default="").strip()
+
+    # structured authors metadata (list of dicts with optional orcid)
+    authors_meta = build_authors_metadata(record)
 
     yaml_lines = ["---"]
 
@@ -405,17 +461,30 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
         yaml_lines.append(f"journal.name: {json.dumps(journal_name)}")
     if outlet:
         yaml_lines.append(f"outlet: {json.dumps(outlet)}")
+
+    # keep flat author string for simple use
     if author:
         yaml_lines.append(f"author: {json.dumps(author)}")
+
+    # add structured authors list for Quarto + ORCID
+    if authors_meta:
+        yaml_lines.append("authors:")
+        for a in authors_meta:
+            yaml_lines.append(f"  - name: {json.dumps(a['name'])}")
+            if "orcid" in a:
+                yaml_lines.append(f"    orcid: {json.dumps(a['orcid'])}")
 
     key = get_field(record, "ID", "id", default="")
     if key:
         yaml_lines.append(f"citation_key: {json.dumps(key)}")
 
+    yaml_lines.append("format:\n  html:\n    include-after-body: ../../assets/metrics-scripts.html")
+
     yaml_lines.append("---")
     yaml_lines.append("")  # blank line before body
 
     return "\n".join(yaml_lines)
+
 
 
 def build_body(record: Dict[str, Any], template_body: str) -> str:
@@ -432,6 +501,8 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     - Buttons are centered and shown on the same line
     - If summary_url / appendix_url / dataset_url / dataset_doi / code_url are present,
       adds a “## Additional resources” section with links
+    - If there is a DOI, adds an impact metrics block (Altmetric, Dimensions, scite.ai)
+      using that DOI
     - Then appends the template body (with an initial '# Summary' removed if present)
     - Then appends APA-style citation (with hanging indent), BibTeX, and RIS sections.
     """
@@ -459,8 +530,10 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     fulltext_oa_href = ""
     if fulltext_oa_raw:
         if fulltext_oa_raw.startswith("http"):
+            # external OA link
             fulltext_oa_href = fulltext_oa_raw
         elif fulltext_oa_raw == "TODO":
+            # explicitly not available yet
             pass
         else:
             # Treat as repo-root-relative path, so it works from /research/papers/...
@@ -470,6 +543,18 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
         fulltext_label = "Open access PDF"
     else:
         fulltext_label = "Full-text PDF"
+
+    # NEW: build an embedded PDF block for *any* usable PDF href
+    pdf_embed_block = ""
+    if fulltext_oa_href:
+        pdf_embed_block = (
+            f"## {fulltext_label}\n\n"
+            f'<iframe src="{fulltext_oa_href}" width="100%" height="800px" '
+            'style="border: 1px solid #ccc;">\n'
+            "  This browser does not support PDFs. "
+            'Please use the button above to download the PDF.\n'
+            "</iframe>\n"
+        )
 
     # Build a single centered button bar
     buttons_block = ""
@@ -510,8 +595,9 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     parts: List[str] = []
 
     # Summary from abstract + optional buttons
-    summary_text = abstract if abstract else "Short abstract…"
-    summary_block = f"\n\n# Summary\n\n{summary_text}\n"
+    summary_block = ""
+    if abstract:
+        summary_block = f"\n\n# Summary\n\n::: {{ .justify }}\n\n{abstract}\n\n:::\n"
     if buttons_block:
         summary_block += "\n" + buttons_block + "\n"
 
@@ -551,6 +637,10 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
         resources_block = "## Additional resources\n\n" + "\n".join(resource_lines) + "\n"
         parts.append(resources_block)
 
+    # If we have an embedded PDF block, add it after Additional resources
+    if pdf_embed_block:
+        parts.append(pdf_embed_block)
+
     # Avoid duplicated '# Summary' if the template already has one at the top
     tmpl = template_body.lstrip()
     if tmpl.lower().startswith("# summary"):
@@ -562,6 +652,43 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
 
     if tmpl.strip():
         parts.append(tmpl)
+
+    # --- Impact metrics block (Altmetric, Dimensions, scite.ai) ------
+    metrics_block = ""
+    if doi_raw:
+        doi_attr = html.escape(doi_raw, quote=True)
+        metrics_block = (
+            "\n"
+            "```{=html}\n"
+            '<div class="metrics-row">\n\n'
+            "  <!-- Altmetric badge -->\n"
+            '  <div class="metric">\n'
+            '    <div class="altmetric-embed"\n'
+            '         data-badge-type="donut"\n'
+            '         data-badge-popover="right"\n'
+            f'         data-doi="{doi_attr}"\n'
+            '         data-hide-no-mentions="true">\n'
+            "    </div>\n"
+            "  </div>\n\n"
+            "  <!-- Dimensions badge -->\n"
+            '  <div class="metric">\n'
+            '    <span class="__dimensions_badge_embed__"\n'
+            f'          data-doi="{doi_attr}"\n'
+            '          data-style="small_circle"\n'
+            '          data-hide-zero-citations="true"\n'
+            '          data-legend="hover-right">\n'
+            "    </span>\n"
+            "  </div>\n\n"
+            "  <!-- scite.ai badge -->\n"
+            '  <div class="metric">\n'
+            '    <div class="scite-badge"\n'
+            f'         data-doi="{doi_attr}">\n'
+            "    </div>\n"
+            "  </div>\n\n"
+            "</div>\n"
+            "```\n"
+        )
+        parts.append(metrics_block)
 
     # --- Citation sections -------------------------------------------------
     apa_citation = format_apa_citation(record).strip()
@@ -595,6 +722,8 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
         )
 
     return "\n\n".join(parts).rstrip() + "\n"
+
+
 
 
 def main():
