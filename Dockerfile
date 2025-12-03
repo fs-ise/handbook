@@ -7,7 +7,7 @@ RUN apt-get update && \
         texlive-full \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --no-cache-dir jupyter ipykernel matplotlib folium
+RUN pip3 install --no-cache-dir jupyter ipykernel matplotlib folium pandas plotly
 RUN python3 -m ipykernel install --name=python3 --display-name "Python 3"
 
 WORKDIR /project
