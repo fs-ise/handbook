@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../assets/styles.css">
@@ -172,8 +175,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#communication-channels" id="toc-communication-channels" class="nav-link active" data-scroll-target="#communication-channels">Communication channels</a></li>
+  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
+  <li><a href="#research" id="toc-research" class="nav-link" data-scroll-target="#research">Research</a></li>
+  <li><a href="#infrastructure-replacing-orga" id="toc-infrastructure-replacing-orga" class="nav-link" data-scroll-target="#infrastructure-replacing-orga">Infrastructure (replacing orga)</a></li>
+  <li><a href="#risk-management" id="toc-risk-management" class="nav-link" data-scroll-target="#risk-management">Risk management</a></li>
+  <li><a href="#procurement" id="toc-procurement" class="nav-link" data-scroll-target="#procurement">Procurement</a></li>
+  <li><a href="#hr" id="toc-hr" class="nav-link" data-scroll-target="#hr">HR</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -197,9 +212,101 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Your content here…</p>
+<section id="communication-channels" class="level2">
+<h2 class="anchored" data-anchor-id="communication-channels">Communication channels</h2>
+<ul>
+<li>Mail (physical and digital)</li>
+<li>Website</li>
+<li>Handbook</li>
+<li>Faculty</li>
+</ul>
+</section>
+<section id="teaching" class="level2">
+<h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart  TB
+
+    subgraph Teaching
+        direction TB
+        Ext_Lecturers -.-&gt; Course_Orga["&lt;a href='../30-teaching/30_processes/30.02.courses.html'&gt;Course Organization&lt;/a&gt; and &lt;a href='../30-teaching/30_processes/30.59.exams.html'&gt;exams&lt;/a&gt;"]
+        Course_Orga -.-&gt; Certificates["&lt;a href='../30-teaching/30_processes/30.51.certificates.html'&gt;Certificates&lt;/a&gt;"]
+        Course_Orga --&gt; LUFV["&lt;a href='../30-teaching/30_processes/30.20.reports.html'&gt;LUFV Reports&lt;/a&gt;"]
+        Theses["&lt;a href='../30-teaching/30_processes/30.40.theses.html'&gt;Theses&lt;/a&gt;"] --&gt; LUFV
+    end
+
+    style Teaching fill:white,stroke:#333,stroke-width:3px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">Research</h2>
+<ul>
+<li>Library <!-- (https://digital-work-lab.github.io/handbook/docs/10-lab/18_resources/18.01.library.html) --></li>
+<li>Travel</li>
+<li>Publications</li>
+<li>Research support</li>
+<li>Visitors</li>
+</ul>
+</section>
+<section id="infrastructure-replacing-orga" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure-replacing-orga">Infrastructure (replacing orga)</h2>
+<ul>
+<li>Controlling</li>
+<li>Sys Admin</li>
+</ul>
+</section>
+<section id="risk-management" class="level2">
+<h2 class="anchored" data-anchor-id="risk-management">Risk management</h2>
+<ul>
+<li>Compliance</li>
+<li>Emergencies</li>
+<li>Security</li>
+</ul>
+</section>
+<section id="procurement" class="level2">
+<h2 class="anchored" data-anchor-id="procurement">Procurement</h2>
+<ul>
+<li>Orders</li>
+<li>Reimbursements</li>
+<li>Bestellung von Klausurbögen und Prüfungspapier (Druckerei)</li>
+</ul>
+</section>
+<section id="hr" class="level2">
+<h2 class="anchored" data-anchor-id="hr">HR</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart  TB
+
+    subgraph HR
+        direction TB
+        Hiring["&lt;a href='10_processes/10.30.hiring.html'&gt;Hiring&lt;/a&gt;"] --&gt; Contracts["&lt;a href='10_processes/10.31.contracts.html'&gt;Contracts&lt;/a&gt;"]
+        Contracts --&gt; Onboarding["&lt;a href='10_processes/10.32.onboarding.html'&gt;Onboarding&lt;/a&gt;"]
+        Contracts -.-&gt; Sick_leave["&lt;a href='10_processes/10.35.sick_leave.html'&gt;Sick Leave&lt;/a&gt;"]
+        Contracts --&gt; Vacation["&lt;a href='10_processes/10.33.vacation.html'&gt;Vacation&lt;/a&gt;"]
+        Onboarding -.-&gt; Offboarding["&lt;a href='10_processes/10.39.offboarding.html'&gt;Offboarding&lt;/a&gt;"]
+    end
+
+    style HR fill:white,stroke:#333,stroke-width:3px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -607,5 +714,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
