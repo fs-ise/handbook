@@ -10,22 +10,25 @@ Generate Quarto .qmd paper files from a records.bib file using CoLRev.
 - If fulltext_oa is present, adds a Bootstrap button linking to the PDF
   (URL or repo-root-relative path; label depends on oa_status)
 - If there is a DOI/URL, adds a link button (with icon) before the PDF button
-- If author_copy_url exists, adds an author-copy button
+- If author_copy_url / author_copy_file exist, adds an author-copy button
 - If summary_url / appendix_url / dataset_url / dataset_doi / code_url are present,
   adds an “Additional resources” section with links
+- If fulltext_oa or author_copy_file are present, embeds the PDF in the page
 - Appends APA-style citation (with hanging indent), and BibTeX + RIS blocks for copy-paste.
+- YAML header contains a boolean flag:
+    free_fulltext: true  # if there is neither OA/fulltext nor author copy
 
 Requirements:
     pip install colrev
 """
 
 from __future__ import annotations
+import datetime as dt
 
 import json
 import html
 import shutil
 from pathlib import Path
-from typing import List, Iterable, Dict, Any
 from typing import List, Iterable, Dict, Any, Optional
 import colrev.loader.load_utils as load_utils
 
@@ -97,6 +100,7 @@ def record_to_bibtex(rec: dict) -> str:
             "dataset_doi",
             "code_url",
             "author_copy_url",
+            "author_copy_file",
             "author+an:orcid",
             "colrev.pubmed.pubmedid",
         }:
@@ -376,11 +380,11 @@ def build_authors_metadata(record: Dict[str, Any]) -> List[Dict[str, str]]:
     if raw_orcids:
         # Choose a separator but DO NOT drop empty items
         if ";" in raw_orcids:
-             sep = ";"
+            sep = ";"
         elif "," in raw_orcids:
-             sep = ","
+            sep = ","
         else:
-             sep = None
+            sep = None
 
         if sep is None:
             parts = [raw_orcids.strip()]
@@ -400,7 +404,6 @@ def build_authors_metadata(record: Dict[str, Any]) -> List[Dict[str, str]]:
     return authors_meta
 
 
-
 def build_yaml_header(record: Dict[str, Any]) -> str:
     """
     Build a YAML header string from a CoLRev record.
@@ -417,9 +420,22 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
     - author: from 'author' (flat string)
     - authors: list of {name, orcid?} from 'author' + 'author+an:orcid'
     - citation_key: from 'ID'
+    - free_fulltext: true/false
+      true  -> at least one OA/fulltext or author copy available
+      false -> no OA/fulltext and no author copy
+    - self_archiving_possible_1y / _2y:
+      true  -> free_fulltext == false and record is >= 1 / 2 years old
     """
     title = get_field(record, "title").strip()
-    year = get_field(record, "year").strip()
+    year_str = get_field(record, "year").strip()
+
+    # Try to parse year as int (use first 4 chars to be robust)
+    year_int: Optional[int] = None
+    if year_str:
+        try:
+            year_int = int(year_str[:4])
+        except ValueError:
+            year_int = None
 
     raw_keywords = get_field(record, "keywords", default="")
     keywords = split_keywords(raw_keywords)
@@ -435,49 +451,80 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
     outlet = get_field(record, "outlet", "journal", "booktitle", default="").strip()
     author = get_field(record, "author", default="").strip()
 
+    # fulltext / author copy info for availability flag
+    fulltext_oa = get_field(record, "fulltext_oa", default="").strip()
+    author_copy_url = get_field(record, "author_copy_url", default="").strip()
+    author_copy_file = get_field(record, "author_copy_file", default="").strip()
+
+    has_free_fulltext = bool(fulltext_oa or author_copy_url or author_copy_file)
+
+    # --- self-archiving flags based on age (1y / 2y) --------------------
+    # Only relevant if we *don't* already have free fulltext.
+    self_archiving_possible_1y = False
+    self_archiving_possible_2y = False
+    if not has_free_fulltext and year_int is not None:
+        current_year = dt.date.today().year
+        age = current_year - year_int
+        if age >= 1:
+            self_archiving_possible_1y = True
+        if age >= 2:
+            self_archiving_possible_1y = False
+            self_archiving_possible_2y = True
+
     # structured authors metadata (list of dicts with optional orcid)
     authors_meta = build_authors_metadata(record)
 
     yaml_lines = ["---"]
 
     if title:
-        yaml_lines.append(f"title: {json.dumps(title)}")
+        yaml_lines.append(f"title: {json.dumps(title, ensure_ascii=False)}")
     else:
         yaml_lines.append('title: ""  # TODO: add title')
 
-    if year:
-        yaml_lines.append(f"date: {json.dumps(year)}")
+    if year_str:
+        yaml_lines.append(f"date: {json.dumps(year_str, ensure_ascii=False)}")
     else:
         yaml_lines.append('date: ""  # TODO: add year')
     yaml_lines.append('date-format: "YYYY"')
 
-    yaml_lines.append(f"categories: {json.dumps(categories)}")
-    yaml_lines.append(f"keywords: {json.dumps(keywords)}")
+    yaml_lines.append(f"categories: {json.dumps(categories, ensure_ascii=False)}")
+    yaml_lines.append(f"keywords: {json.dumps(keywords, ensure_ascii=False)}")
 
     if doi:
-        yaml_lines.append(f"doi: {json.dumps(doi)}")
+        yaml_lines.append(f"doi: {json.dumps(doi, ensure_ascii=False)}")
     if url:
-        yaml_lines.append(f"url: {json.dumps(url)}")
+        yaml_lines.append(f"url: {json.dumps(url, ensure_ascii=False)}")
     if journal_name:
-        yaml_lines.append(f"journal.name: {json.dumps(journal_name)}")
+        yaml_lines.append(f"journal.name: {json.dumps(journal_name, ensure_ascii=False)}")
     if outlet:
-        yaml_lines.append(f"outlet: {json.dumps(outlet)}")
+        yaml_lines.append(f"outlet: {json.dumps(outlet, ensure_ascii=False)}")
 
     # keep flat author string for simple use
     if author:
-        yaml_lines.append(f"author: {json.dumps(author)}")
+        yaml_lines.append(f"author: {json.dumps(author, ensure_ascii=False)}")
 
     # add structured authors list for Quarto + ORCID
     if authors_meta:
         yaml_lines.append("authors:")
         for a in authors_meta:
-            yaml_lines.append(f"  - name: {json.dumps(a['name'])}")
+            yaml_lines.append(f"  - name: {json.dumps(a['name'], ensure_ascii=False)}")
             if "orcid" in a:
-                yaml_lines.append(f"    orcid: {json.dumps(a['orcid'])}")
+                yaml_lines.append(f"    orcid: {json.dumps(a['orcid'], ensure_ascii=False)}")
 
     key = get_field(record, "ID", "id", default="")
     if key:
-        yaml_lines.append(f"citation_key: {json.dumps(key)}")
+        yaml_lines.append(f"citation_key: {json.dumps(key, ensure_ascii=False)}")
+
+    # availability flag
+    yaml_lines.append(f"free_fulltext: {'true' if has_free_fulltext else 'false'}")
+
+    # self-archiving flags
+    yaml_lines.append(
+        f"self_archiving_possible_1y: {'true' if self_archiving_possible_1y else 'false'}"
+    )
+    yaml_lines.append(
+        f"self_archiving_possible_2y: {'true' if self_archiving_possible_2y else 'false'}"
+    )
 
     yaml_lines.append("format:\n  html:\n    include-after-body: ../../assets/metrics-scripts.html")
 
@@ -494,7 +541,7 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
 
     - Adds a # Summary section based on the abstract field
     - If there is a DOI/URL, adds a link button (with icon)
-    - If author_copy_url exists, adds an author-copy button
+    - If author_copy_url / author_copy_file exist, adds an author-copy button
     - If fulltext_oa is present, adds a Bootstrap button with a PDF icon
       linking to the PDF (URL or repo-root-relative path)
       - Label is 'Open access PDF' if oa_status == 'open'
@@ -504,6 +551,7 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
       adds a “## Additional resources” section with links
     - If there is a DOI, adds an impact metrics block (Altmetric, Dimensions, scite.ai)
       using that DOI
+    - If fulltext_oa or author_copy_file is present, embeds the PDF in the page
     - Then appends the template body (with an initial '# Summary' removed if present)
     - Then appends APA-style citation (with hanging indent), BibTeX, and RIS sections.
     """
@@ -521,8 +569,17 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     elif url_raw:
         landing_link = url_raw
 
-    # Author copy button (e.g., preprint / postprint)
+    # Author copy buttons / file (e.g., preprint / postprint)
     author_copy_url = get_field(record, "author_copy_url", default="").strip()
+    author_copy_file_raw = get_field(record, "author_copy_file", default="").strip()
+
+    author_copy_file_href = ""
+    if author_copy_file_raw:
+        if author_copy_file_raw.startswith("http"):
+            author_copy_file_href = author_copy_file_raw
+        else:
+            # Treat as repo-root-relative path, so it works from /research/papers/...
+            author_copy_file_href = "/" + author_copy_file_raw.lstrip("/")
 
     # OA status and full text PDF
     oa_status = get_field(record, "oa_status", default="").strip().lower()
@@ -545,12 +602,15 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     else:
         fulltext_label = "Full-text PDF"
 
-    # NEW: build an embedded PDF block for *any* usable PDF href
+    # Embedded PDF block – use fulltext_oa if available, otherwise author_copy_file
     pdf_embed_block = ""
-    if fulltext_oa_href:
+    pdf_embed_href = fulltext_oa_href or author_copy_file_href
+    pdf_embed_label = fulltext_label if fulltext_oa_href else "Author-copy PDF"
+
+    if pdf_embed_href:
         pdf_embed_block = (
-            f"## {fulltext_label}\n\n"
-            f'<iframe src="{fulltext_oa_href}" width="100%" height="800px" '
+            f"## {pdf_embed_label}\n\n"
+            f'<iframe src="{pdf_embed_href}" width="100%" height="800px" '
             'style="border: 1px solid #ccc;">\n'
             "  This browser does not support PDFs. "
             'Please use the button above to download the PDF.\n'
@@ -559,7 +619,7 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
 
     # Build a single centered button bar
     buttons_block = ""
-    if landing_link or author_copy_url or fulltext_oa_href:
+    if landing_link or author_copy_url or author_copy_file_href or fulltext_oa_href:
         btns: List[str] = []
 
         if landing_link:
@@ -570,9 +630,10 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
                 "  </a>"
             )
 
-        if author_copy_url:
+        author_copy_href = author_copy_url or author_copy_file_href
+        if author_copy_href:
             btns.append(
-                f'  <a class="btn btn-sm btn-outline-secondary me-2" href="{author_copy_url}" '
+                f'  <a class="btn btn-sm btn-outline-secondary me-2" href="{author_copy_href}" '
                 'target="_blank" role="button">\n'
                 '    <i class="bi bi-file-earmark-text"></i> Author copy\n'
                 "  </a>"
@@ -723,8 +784,6 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
         )
 
     return "\n\n".join(parts).rstrip() + "\n"
-
-
 
 
 def main():
