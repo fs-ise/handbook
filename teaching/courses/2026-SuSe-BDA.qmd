@@ -1,30 +1,44 @@
 ---
 title: "Big Data and Analytics"
-params:
-  semester: "2026-SuSe"
-  status: "▶"
-  student_evaluations: ""
-  improvement_issue: ""
-  improvement_status: "N/A"
+semester: "2026-SuSe"
+status: "upcoming"
+student_evaluations: ""
+improvement_issue: ""
+improvement_status: "N/A"
 ---
+
+::: {.callout-important}
+
+Process needs to be adapted.
+
+:::
 
 # BDA 2026 SuSe
 
 Field               | Value
 ------------------- | -----
 Title               | {{< meta title >}}
-Semester            | {{< meta params.semester >}}
+Semester            | {{< meta semester >}}
 Lecturer            | Gerit Wagner
-Link: VC            | [VC](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
+Link: LMS           | [Cavas](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
 Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){target="_blank"}
-Status              | {{< meta params.status >}}
-Student Evaluations | {{< meta params.student_evaluations >}}
-Improvement Issue   | {{< meta params.improvement_issue >}}
-Status of Revisions | {{< meta params.improvement_status >}}
+Status              | {{< meta status >}}
+Student Evaluations | {{< meta student_evaluations >}}
+Improvement Issue   | {{< meta improvement_issue >}}
+Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
-## 1. Announce the course (4 months before)
+```{mermaid}
+flowchart LR
+    A[<a href="#announce">1. Announce the course</a><br/>4 months before] --> B[<a href="#prepare">2. Prepare the course</a><br/>1 month before]
+    B --> C[<a href="#offer">3. Offer the course</a>]
+    C --> D[<a href="#grade">4. Exam grading<br/>and documentation</a>]
+    D --> E[<a href="#repeat">5. Repeat exam</a><br/>following term]
+
+```
+
+## 1. Announce the course{#announce}
  
 Start: December (summer term), May (winter term)
 
@@ -37,13 +51,13 @@ At the end of the semester:
 
 Deadline: mid-May (summer term), December/January (winter term)
 
-## 2. Prepare the course (1 month before)
+## 2. Prepare the course{#prepare}
 
 Start: March (summer term), September (winter term)
 
 - [ ] Team Assistant and Professor: Set dates and request lecture rooms.
 - [ ] IT department: Create the VC course, two weeks before the semester starts (automatically based on UnivIS).
-- [ ] Have the lecture announced on [Instagram](https://www.instagram.com/informatik_unibamberg/){: target="_blank"}
+- [ ] Have the lecture announced on [Instagram](https://www.instagram.com/informatik_unibamberg/){target=_blank}
 - [ ] Professor: Create a reminder for the evaluations.
 - [ ] Team Assistant: Add moderator and session dates in VC.
 - [ ] Professor: Summarize the feedback from the last course and explain how it was addressed.
@@ -51,17 +65,17 @@ Start: March (summer term), September (winter term)
 
 Deadline: April (summer term), October (winter term)
 
-## 3. Offer the course
+## 3. Offer the course{#offer}
 
 Start: April (summer term), October (winter term)
 
 - [ ] Professor: Schedule evaluations in the pen-ultimate week ([30.21.evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
 - [ ] Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).
 - [ ] Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the [exam checklist](30.59.exams.html#preparing-the-exam).
-- [ ] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){: target="_blank"}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
+- [ ] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
 - [ ] Add exam dates to the [calendar](../../calendar/events.yaml)
 
-## 4. Exam grading and documentation
+## 4. Exam grading and documentation{#grade}
 
 Before grading (day of the exam)
 
@@ -75,17 +89,17 @@ Grading
 - [ ] Create reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).
 - [ ] Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".
 - [ ] Do not dispose of empty exams
-- [ ] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){: target="_blank"} to assign grades and prepare FlexNow import
+- [ ] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
 - [ ] Have failed exams reviewed by a second professor
 
 Entering Grades into FlexNow
 
-- [ ] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){: target="_blank"})).
+- [ ] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
 - [ ] Professor: Archive bonus exercises (if any).
 
 Sending exams to the examination office
 
-- [ ] Professor: Exams are sent to the examination office (in person): [Silke Nüßlein](https://univis.uni-bamberg.de/prg?search=persons&show=info&department=322130&fullname=Silke+Nue%C3%9Flein){: target="_blank"}, Kapuzinerstr. 25, 00.01
+- [ ] Professor: Exams are sent to the examination office (in person): [Silke Nüßlein](https://univis.uni-bamberg.de/prg?search=persons&show=info&department=322130&fullname=Silke+Nue%C3%9Flein){target=_blank}, Kapuzinerstr. 25, 00.01
 
 Documentation
 
@@ -93,11 +107,11 @@ Documentation
 
 Deadline: End of August (summer term), March (winter term)
 
-## 5. Repeat exam (following term)
+## 5. Repeat exam{#repeat}
 
 Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office. (true???)
 
 - [ ] Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.
 - [ ] Repeat relevant steps of *Exams and documentation* (step 4) 
 
-Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office ([link](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/){: target="_blank"}).
+Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office ([link](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/){target=_blank}).
