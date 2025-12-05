@@ -16,7 +16,7 @@
     "href": "management/onboarding.html",
     "title": "Onboarding",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/management/10_processes/10.32.onboarding.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/management/10_processes/10.32.onboarding.html",
     "crumbs": [
       "Management",
       "HR",
@@ -40,7 +40,7 @@
     "href": "management/theses.html",
     "title": "Theses",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/30-teaching/30_processes/30.40.theses.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/30-teaching/30_processes/30.40.theses.html",
     "crumbs": [
       "Management",
       "Teaching",
@@ -52,7 +52,7 @@
     "href": "management/certificates.html",
     "title": "Certificates",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/30-teaching/30_processes/30.51.certificates.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/30-teaching/30_processes/30.51.certificates.html",
     "crumbs": [
       "Management",
       "Teaching",
@@ -96,15 +96,27 @@
     ]
   },
   {
-    "objectID": "management/faculty.html",
-    "href": "management/faculty.html",
-    "title": "Faculty",
+    "objectID": "management/new_modules.html",
+    "href": "management/new_modules.html",
+    "title": "New Modules",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.60.department.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.09.new_modules.html",
+    "crumbs": [
+      "Management",
+      "Teaching",
+      "New Modules"
+    ]
+  },
+  {
+    "objectID": "management/website.html",
+    "href": "management/website.html",
+    "title": "Website",
+    "section": "",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.11.website.html",
     "crumbs": [
       "Management",
       "Communication channels",
-      "Faculty"
+      "Website"
     ]
   },
   {
@@ -124,7 +136,7 @@
     "href": "management/lufv_reports.html",
     "title": "LUFV Reports",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/30-teaching/30_processes/30.20.reports.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/30-teaching/30_processes/30.20.reports.html",
     "crumbs": [
       "Management",
       "Teaching",
@@ -154,15 +166,35 @@
     ]
   },
   {
-    "objectID": "teaching/seminars.html",
-    "href": "teaching/seminars.html",
-    "title": "Seminars",
+    "objectID": "management/offboarding.html",
+    "href": "management/offboarding.html",
+    "title": "Offboarding",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.11.seminars.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/management/10_processes/10.39.offboarding.html",
     "crumbs": [
-      "Teaching",
-      "Seminars"
+      "Management",
+      "HR",
+      "Offboarding"
     ]
+  },
+  {
+    "objectID": "management/compliance.html",
+    "href": "management/compliance.html",
+    "title": "Compliance",
+    "section": "",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.71.compliance.html",
+    "crumbs": [
+      "Management",
+      "Risk management",
+      "Compliance"
+    ]
+  },
+  {
+    "objectID": "teaching/projects.html",
+    "href": "teaching/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "TODO: note currently not offering projects\noverview of projects (materials pages + lectures (past present future) + confidential repository)"
   },
   {
     "objectID": "teaching/quarto.html",
@@ -172,6 +204,7 @@
     "text": "Important\n\n\n\nDo not create quarto brand extension or use the revealjs seminar plugin (complexity).",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -183,6 +216,7 @@
     "text": "TODO\n\nLayout: template, font, logo (see /home/gerit/ownCloud/inbox/quarto/presentation-example-big_data_analytics)\nInteraction (seminar plugin + feedback flow)\nAsk students how they learn (PDF, …) whether they use a knowledge management system (which one), …\nalways build output in _site dir",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -194,6 +228,7 @@
     "text": "Principles\n\nDesign contents in such a way that students can learn them (after the session, pdf, making comments)\nAdd dynamic illustrations only as an extra (link them in the offline version)",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -205,6 +240,7 @@
     "text": "Layout\ntypography defaults:\n  --font-family: \"Source Sans Pro\", sans-serif;\nAdding headings to the navigation\n## Heading {data-menu-title=\"I. Overview\"}\n\n### Will not be in the navigation",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -216,6 +252,7 @@
     "text": "PDF output for students based on an all-slides.qmd (with make pdf)\n---\ntitle: \"BDA Analytics (LECTURE)\"\nformat: revealjs\n---\n\n# BDA Analytics  (LECTURE)\n\nHand-made toc\n\n\\newpage\n\n## Lecture 1\n\n\\{\\{&lt; include lecture_1.qmd &gt;\\}\\}\n\n\\newpage\n\n## Lecture 2\n\n\\{\\{&lt; include lecture_2.qmd &gt;\\}\\}",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -227,6 +264,7 @@
     "text": "Adding extensions\ndocker compose run --rm quarto quarto add gadenbuie/countdown/quarto\ndocker compose run --rm quarto quarto add martinomagnifico/quarto-simplemenu",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -238,6 +276,7 @@
     "text": "Publishing to github pages\nFor quarto publish gh-pages : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).\nSee tutorial",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -249,6 +288,7 @@
     "text": "Creating extensions\nhttps://github.com/mcanouil/awesome-quarto\nhttps://m.canouil.dev/quarto-extensions/\nquarto list extensions\nhttps://quarto.org/docs/extensions/creating.html\n\nShortcuts: - g : goto slide - b - d\n\nTimer\nquarto add gadenbuie/countdown/quarto\n{{&lt; countdown minutes=5 seconds=32 top=10 left=0 &gt;}}",
     "crumbs": [
       "Teaching",
+      "Design",
       "Quarto"
     ]
   },
@@ -260,6 +300,7 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.70.recommendation_letters.html",
     "crumbs": [
       "Teaching",
+      "Student Support",
       "Recommendations"
     ]
   },
@@ -271,6 +312,7 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.40.theses.html",
     "crumbs": [
       "Teaching",
+      "Courses",
       "Theses"
     ]
   },
@@ -282,95 +324,80 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.51.certificates.html",
     "crumbs": [
       "Teaching",
+      "Assessment",
       "Certificates"
     ]
   },
   {
-    "objectID": "teaching/counselling.html",
-    "href": "teaching/counselling.html",
-    "title": "Counselling",
+    "objectID": "teaching/lectures.html",
+    "href": "teaching/lectures.html",
+    "title": "Lectures",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.72.counselling.html",
+    "text": "Title\n\n\n\nsemester\n\n\n\n\n\n\n\n\nBig Data and Analytics\n\n\n \n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Teaching",
-      "Counselling"
+      "Courses",
+      "Lectures"
     ]
   },
   {
-    "objectID": "teaching/dissemination.html",
-    "href": "teaching/dissemination.html",
-    "title": "Dissemination",
-    "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.90.dissemination.html",
+    "objectID": "teaching/lectures.html#repositories",
+    "href": "teaching/lectures.html#repositories",
+    "title": "Lectures",
+    "section": "Repositories",
+    "text": "Repositories\n\nBig Data and Analytics (BDA)\n\nMaterials: repository\nExams: TODO\nGrades: TODO",
     "crumbs": [
       "Teaching",
-      "Dissemination"
+      "Courses",
+      "Lectures"
     ]
   },
   {
-    "objectID": "teaching/pedagogy.html",
-    "href": "teaching/pedagogy.html",
-    "title": "Pedagogy",
+    "objectID": "teaching/exams.html",
+    "href": "teaching/exams.html",
+    "title": "Exams",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.07.pedagogy.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.59.exams.html",
     "crumbs": [
       "Teaching",
-      "Pedagogy"
+      "Assessment",
+      "Exams"
     ]
   },
   {
-    "objectID": "teaching/univis.html",
-    "href": "teaching/univis.html",
-    "title": "UnivIS",
+    "objectID": "teaching/teaching_materials.html",
+    "href": "teaching/teaching_materials.html",
+    "title": "Teaching Materials",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.16.univis.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.08.teaching_materials.html",
     "crumbs": [
       "Teaching",
-      "UnivIS"
+      "Design",
+      "Teaching Materials"
     ]
   },
   {
-    "objectID": "teaching/reports.html",
-    "href": "teaching/reports.html",
-    "title": "Reports",
+    "objectID": "teaching/stipends_and_awards.html",
+    "href": "teaching/stipends_and_awards.html",
+    "title": "Stipends & Awards",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.20.reports.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.71.programs_and_stipends.html",
     "crumbs": [
       "Teaching",
-      "Reports"
+      "Student Support",
+      "Stipends & Awards"
     ]
   },
   {
-    "objectID": "teaching/courses.html",
-    "href": "teaching/courses.html",
-    "title": "Courses",
+    "objectID": "teaching/department.html",
+    "href": "teaching/department.html",
+    "title": "Department",
     "section": "",
-    "text": "The scheduling department (individuals responsible for specific degree programs) contacts me (with preferences gathered via Google Forms). I then receive a proposed schedule (I must manually check and resolve conflicts between programs; if necessary, clarify with the scheduling department or speak directly with colleagues). Ensure that module coordinators list me as the instructor (otherwise invitations will be sent to the wrong person).",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.23.teaching-department.html",
     "crumbs": [
       "Teaching",
-      "Courses"
-    ]
-  },
-  {
-    "objectID": "teaching/courses.html#scheduling-of-courses",
-    "href": "teaching/courses.html#scheduling-of-courses",
-    "title": "Courses",
-    "section": "",
-    "text": "The scheduling department (individuals responsible for specific degree programs) contacts me (with preferences gathered via Google Forms). I then receive a proposed schedule (I must manually check and resolve conflicts between programs; if necessary, clarify with the scheduling department or speak directly with colleagues). Ensure that module coordinators list me as the instructor (otherwise invitations will be sent to the wrong person).",
-    "crumbs": [
-      "Teaching",
-      "Courses"
-    ]
-  },
-  {
-    "objectID": "teaching/courses.html#coordination",
-    "href": "teaching/courses.html#coordination",
-    "title": "Courses",
-    "section": "Coordination",
-    "text": "Coordination\nPlanned: Coordination meetings for overlapping course materials.",
-    "crumbs": [
-      "Teaching",
-      "Courses"
+      "Institutional",
+      "Department"
     ]
   },
   {
@@ -381,29 +408,32 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.03.systems.html",
     "crumbs": [
       "Teaching",
-      "Systems for teaching"
+      "Design",
+      "Systems"
     ]
   },
   {
     "objectID": "teaching/lms.html",
     "href": "teaching/lms.html",
-    "title": "Virtual Campus",
+    "title": "LMS (Canvas)",
     "section": "",
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.19.virtual_campus.html",
     "crumbs": [
       "Teaching",
-      "Virtual Campus"
+      "Delivery",
+      "LMS (Canvas)"
     ]
   },
   {
     "objectID": "teaching/platforms_degree_programs_courses.html",
     "href": "teaching/platforms_degree_programs_courses.html",
-    "title": "Platforms, degree programs and courses",
+    "title": "Academic programs",
     "section": "",
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.06.degree-programs.html",
     "crumbs": [
       "Teaching",
-      "Platforms, degree programs and courses"
+      "Institutional",
+      "Academic programs"
     ]
   },
   {
@@ -2601,6 +2631,7 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.21.evaluations.html",
     "crumbs": [
       "Teaching",
+      "Delivery",
       "Evaluations"
     ]
   },
@@ -2612,6 +2643,7 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.60.reviews.html",
     "crumbs": [
       "Teaching",
+      "Assessment",
       "Reviews"
     ]
   },
@@ -2620,17 +2652,27 @@
     "href": "teaching/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "---\ndisplayMode: compact\n---\ngantt\n    title Academic year 2025/26 – Bachelor\n    dateFormat  YYYY-MM-DD\n    axisFormat %b\n\n    section WiSe 2025/26\n    Lectures WiSe 25/26           :w2, 2025-09-01, 2025-12-12\n\n    section SuSe 2026\n    Lectures SuSe 2026            :s1, 2026-03-23, 2026-05-21",
+    "text": "TODO: integrate univis and flexnow in pages/systems (only lms should have a separate page)",
     "crumbs": [
       "Teaching"
     ]
   },
   {
-    "objectID": "teaching/index.html#courses",
-    "href": "teaching/index.html#courses",
+    "objectID": "teaching/index.html#list-of-current-courses",
+    "href": "teaching/index.html#list-of-current-courses",
     "title": "Teaching",
-    "section": "Courses",
-    "text": "Courses\nSuSe 2026\n\nBig Data & Analytics (repository)\nIT Security Management\n\nWiSe 2026\n\nIntroduction to Programming\nMachine Learning for Big Data",
+    "section": "List of current courses",
+    "text": "List of current courses\nSuSe 2026\n\nBig Data & Analytics\nIT Security Management\n\nWiSe 2026\n\nIntroduction to Programming\nMachine Learning for Big Data\n\n\n\n\n\n\n---\ndisplayMode: compact\n---\ngantt\n    title Academic year 2025/26 – Bachelor\n    dateFormat  YYYY-MM-DD\n    axisFormat %b\n\n    section WiSe 2025/26\n    Lectures WiSe 25/26           :w2, 2025-09-01, 2025-12-12\n\n    section SuSe 2026\n    Lectures SuSe 2026            :s1, 2026-03-23, 2026-05-21",
+    "crumbs": [
+      "Teaching"
+    ]
+  },
+  {
+    "objectID": "teaching/index.html#overview-of-areas",
+    "href": "teaching/index.html#overview-of-areas",
+    "title": "Teaching",
+    "section": "Overview of areas",
+    "text": "Overview of areas\n\n\nCourses\nHow we design and run our core teaching formats — lectures, seminars, projects, and theses — including typical expectations, formats, and responsibilities.\n\n\nDesign\nPrinciples, systems, and tools that shape our teaching setup: program structures, UnivIS entries, Quarto-based materials, pedagogy choices, and continuous course improvement.\n\n\nDelivery\nDay-to-day execution of teaching, focusing on learning platforms, course communication, feedback channels, evaluations, and how we share or disseminate teaching-related information.\n\n\nAssessment\nProcesses, tools, and standards for assessing student performance — from exam organization and FlexNow workflows to certificates, plagiarism handling, and review procedures.\n\n\nStudent Support\nHow we support students beyond the classroom, including counselling, recommendation letters, stipends and awards, as well as other individualized forms of academic support.\n\n\nInstitutional\nThe broader institutional context of our teaching: external platforms, degree programs and modules, departmental structures, and rankings that shape how our teaching is positioned.",
     "crumbs": [
       "Teaching"
     ]
@@ -2643,74 +2685,99 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.15.flexnow.html",
     "crumbs": [
       "Teaching",
+      "Assessment",
       "FlexNow"
     ]
   },
   {
-    "objectID": "teaching/department.html",
-    "href": "teaching/department.html",
-    "title": "Department",
+    "objectID": "teaching/univis.html",
+    "href": "teaching/univis.html",
+    "title": "UnivIS",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.23.teaching-department.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.16.univis.html",
     "crumbs": [
       "Teaching",
-      "Department"
+      "Design",
+      "UnivIS"
     ]
   },
   {
-    "objectID": "teaching/new_modules.html",
-    "href": "teaching/new_modules.html",
-    "title": "New Modules",
+    "objectID": "teaching/pedagogy.html",
+    "href": "teaching/pedagogy.html",
+    "title": "Pedagogy",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.09.new_modules.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.07.pedagogy.html",
     "crumbs": [
       "Teaching",
-      "New Modules"
+      "Design",
+      "Pedagogy"
     ]
   },
   {
-    "objectID": "teaching/stipends_and_awards.html",
-    "href": "teaching/stipends_and_awards.html",
-    "title": "Stipends & Awards",
+    "objectID": "teaching/dissemination.html",
+    "href": "teaching/dissemination.html",
+    "title": "Dissemination",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.71.programs_and_stipends.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.90.dissemination.html",
     "crumbs": [
       "Teaching",
-      "Stipends & Awards"
+      "Delivery",
+      "Dissemination"
     ]
   },
   {
-    "objectID": "teaching/teaching_materials.html",
-    "href": "teaching/teaching_materials.html",
-    "title": "Teaching Materials",
+    "objectID": "teaching/counselling.html",
+    "href": "teaching/counselling.html",
+    "title": "Counselling",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.08.teaching_materials.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.72.counselling.html",
     "crumbs": [
       "Teaching",
-      "Teaching Materials"
+      "Student Support",
+      "Counselling"
     ]
   },
   {
-    "objectID": "teaching/exams.html",
-    "href": "teaching/exams.html",
-    "title": "Exams",
+    "objectID": "teaching/courses/2025-SoSe-IDW.html",
+    "href": "teaching/courses/2025-SoSe-IDW.html",
+    "title": "Big Data and Analytics",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.59.exams.html",
-    "crumbs": [
-      "Teaching",
-      "Exams"
-    ]
+    "text": "Field\nValue\n\n\n\n\nTitle\nBig Data and Analytics\n\n\nSemester\n2026-SuSe\n\n\nLecturer\nGerit Wagner\n\n\nLink: VC\nVC\n\n\nLink: Website\nWebsite\n\n\nStatus\n▶\n\n\nStudent Evaluations\n\n\n\nImprovement Issue\n\n\n\nStatus of Revisions\nN/A\n\n\n\n\n\n\n\n\nStart: December (summer term), May (winter term)\n\nTeam Assistant: Create the course in FlexNow.\n\nAt the end of the semester:\n\nProfessor: Announce lecture on the website for the next semester (without dates/rooms).\nTeam Assistant: Update information in UnivIS (add keywords „WI-Seminar“ and „WI-Seminare“ for seminars), check information on the website.\n\nDeadline: mid-May (summer term), December/January (winter term)\n\n\n\nStart: March (summer term), September (winter term)\n\nTeam Assistant and Professor: Set dates and request lecture rooms.\nIT department: Create the VC course, two weeks before the semester starts (automatically based on UnivIS).\nHave the lecture announced on Instagram{: target=“_blank”}\nProfessor: Create a reminder for the evaluations.\nTeam Assistant: Add moderator and session dates in VC.\nProfessor: Summarize the feedback from the last course and explain how it was addressed.\nProfessor: Activate course in VC (visible to students).\n\nDeadline: April (summer term), October (winter term)\n\n\n\nStart: April (summer term), October (winter term)\n\nProfessor: Schedule evaluations in the pen-ultimate week (30.21.evaluations).\nTeam Assistant: Order exam materials (Prüfungspapier, Mantelbögen).\nProfessor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: “Prüferbestellung”). Use the exam checklist.\nScheine (Formular{: target=“_blank”}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen\nAdd exam dates to the calendar\n\n\n\n\nBefore grading (day of the exam)\n\nProfessor: Cases of cheating (Unterschleif): immediately enter it into FlexNow and send the exam to the examination office (do not grade it)\nProfessor: Cases of missed exams (Versäumnisklausuren): immediately enter it into FlexNow, archive the exams for 1 year.\nProfessor: Send the exam sheets, protocols (Anwesenheitslisten), and two empty exams to the examination office immediately after the exams are completed.\nTeam Assistant: Empty exams (Versäumnis-Klausur): archive for one semester.\n\nGrading\n\nCreate reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).\nAdd bonus points if any and if exam is passed. Otherwise, note the bonus points and add a note “kann nicht angerechnet werden”.\nDo not dispose of empty exams\nUse the grading scripts{: target=“_blank”} to assign grades and prepare FlexNow import\nHave failed exams reviewed by a second professor\n\nEntering Grades into FlexNow\n\nTeam Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow (script{: target=“_blank”})).\nProfessor: Archive bonus exercises (if any).\n\nSending exams to the examination office\n\nProfessor: Exams are sent to the examination office (in person): Silke Nüßlein{: target=“_blank”}, Kapuzinerstr. 25, 00.01\n\nDocumentation\n\nProfessor: Analyse the evaluations, store the files, and document the improvements (see evaluations).\n\nDeadline: End of August (summer term), March (winter term)\n\n\n\nStudents have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office. (true???)\n\nProfessor: Upon notification by the examination office (E-Mail: “Prüferbestellung”), create the repeat exam. Student registrations are available in FlexNow.\nRepeat relevant steps of Exams and documentation (step 4)\n\nStudents can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (link{: target=“_blank”})."
   },
   {
-    "objectID": "teaching/lectures.html",
-    "href": "teaching/lectures.html",
-    "title": "Lectures",
+    "objectID": "teaching/courses/2025-SoSe-IDW.html#announce-the-course-4-months-before",
+    "href": "teaching/courses/2025-SoSe-IDW.html#announce-the-course-4-months-before",
+    "title": "Big Data and Analytics",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.10.lecture.html",
-    "crumbs": [
-      "Teaching",
-      "Lectures"
-    ]
+    "text": "Start: December (summer term), May (winter term)\n\nTeam Assistant: Create the course in FlexNow.\n\nAt the end of the semester:\n\nProfessor: Announce lecture on the website for the next semester (without dates/rooms).\nTeam Assistant: Update information in UnivIS (add keywords „WI-Seminar“ and „WI-Seminare“ for seminars), check information on the website.\n\nDeadline: mid-May (summer term), December/January (winter term)"
+  },
+  {
+    "objectID": "teaching/courses/2025-SoSe-IDW.html#prepare-the-course-1-month-before",
+    "href": "teaching/courses/2025-SoSe-IDW.html#prepare-the-course-1-month-before",
+    "title": "Big Data and Analytics",
+    "section": "",
+    "text": "Start: March (summer term), September (winter term)\n\nTeam Assistant and Professor: Set dates and request lecture rooms.\nIT department: Create the VC course, two weeks before the semester starts (automatically based on UnivIS).\nHave the lecture announced on Instagram{: target=“_blank”}\nProfessor: Create a reminder for the evaluations.\nTeam Assistant: Add moderator and session dates in VC.\nProfessor: Summarize the feedback from the last course and explain how it was addressed.\nProfessor: Activate course in VC (visible to students).\n\nDeadline: April (summer term), October (winter term)"
+  },
+  {
+    "objectID": "teaching/courses/2025-SoSe-IDW.html#offer-the-course",
+    "href": "teaching/courses/2025-SoSe-IDW.html#offer-the-course",
+    "title": "Big Data and Analytics",
+    "section": "",
+    "text": "Start: April (summer term), October (winter term)\n\nProfessor: Schedule evaluations in the pen-ultimate week (30.21.evaluations).\nTeam Assistant: Order exam materials (Prüfungspapier, Mantelbögen).\nProfessor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: “Prüferbestellung”). Use the exam checklist.\nScheine (Formular{: target=“_blank”}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen\nAdd exam dates to the calendar"
+  },
+  {
+    "objectID": "teaching/courses/2025-SoSe-IDW.html#exam-grading-and-documentation",
+    "href": "teaching/courses/2025-SoSe-IDW.html#exam-grading-and-documentation",
+    "title": "Big Data and Analytics",
+    "section": "",
+    "text": "Before grading (day of the exam)\n\nProfessor: Cases of cheating (Unterschleif): immediately enter it into FlexNow and send the exam to the examination office (do not grade it)\nProfessor: Cases of missed exams (Versäumnisklausuren): immediately enter it into FlexNow, archive the exams for 1 year.\nProfessor: Send the exam sheets, protocols (Anwesenheitslisten), and two empty exams to the examination office immediately after the exams are completed.\nTeam Assistant: Empty exams (Versäumnis-Klausur): archive for one semester.\n\nGrading\n\nCreate reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).\nAdd bonus points if any and if exam is passed. Otherwise, note the bonus points and add a note “kann nicht angerechnet werden”.\nDo not dispose of empty exams\nUse the grading scripts{: target=“_blank”} to assign grades and prepare FlexNow import\nHave failed exams reviewed by a second professor\n\nEntering Grades into FlexNow\n\nTeam Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow (script{: target=“_blank”})).\nProfessor: Archive bonus exercises (if any).\n\nSending exams to the examination office\n\nProfessor: Exams are sent to the examination office (in person): Silke Nüßlein{: target=“_blank”}, Kapuzinerstr. 25, 00.01\n\nDocumentation\n\nProfessor: Analyse the evaluations, store the files, and document the improvements (see evaluations).\n\nDeadline: End of August (summer term), March (winter term)"
+  },
+  {
+    "objectID": "teaching/courses/2025-SoSe-IDW.html#repeat-exam-following-term",
+    "href": "teaching/courses/2025-SoSe-IDW.html#repeat-exam-following-term",
+    "title": "Big Data and Analytics",
+    "section": "",
+    "text": "Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office. (true???)\n\nProfessor: Upon notification by the examination office (E-Mail: “Prüferbestellung”), create the repeat exam. Student registrations are available in FlexNow.\nRepeat relevant steps of Exams and documentation (step 4)\n\nStudents can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (link{: target=“_blank”})."
   },
   {
     "objectID": "teaching/rankings.html",
@@ -2720,6 +2787,7 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.05.rankings.html",
     "crumbs": [
       "Teaching",
+      "Institutional",
       "Rankings"
     ]
   },
@@ -2731,6 +2799,7 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.52.plagiarism.html",
     "crumbs": [
       "Teaching",
+      "Assessment",
       "Plagiarism"
     ]
   },
@@ -2742,42 +2811,63 @@
     "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.22.improvements.html",
     "crumbs": [
       "Teaching",
+      "Design",
       "Improvements"
     ]
   },
   {
-    "objectID": "teaching/projects.html",
-    "href": "teaching/projects.html",
-    "title": "Projects",
+    "objectID": "teaching/new.html",
+    "href": "teaching/new.html",
+    "title": "New",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.12.projects.html",
+    "text": "https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.09.new_modules.html https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.10.lecture.html https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.11.seminars.html https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.12.projects.html",
     "crumbs": [
       "Teaching",
-      "Projects"
+      "Design",
+      "New"
     ]
   },
   {
-    "objectID": "management/compliance.html",
-    "href": "management/compliance.html",
-    "title": "Compliance",
+    "objectID": "teaching/seminars.html",
+    "href": "teaching/seminars.html",
+    "title": "Seminars",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.71.compliance.html",
+    "text": "TODO: overview of seminars (materials pages + lectures (past present future) + confidential repository)"
+  },
+  {
+    "objectID": "management/course_scheduling.html",
+    "href": "management/course_scheduling.html",
+    "title": "Course scheduling",
+    "section": "",
+    "text": "The scheduling department (individuals responsible for specific degree programs) contacts me (with preferences gathered via Google Forms). I then receive a proposed schedule (I must manually check and resolve conflicts between programs; if necessary, clarify with the scheduling department or speak directly with colleagues). Ensure that module coordinators list me as the instructor (otherwise invitations will be sent to the wrong person).",
     "crumbs": [
       "Management",
-      "Risk management",
-      "Compliance"
+      "Teaching",
+      "Course scheduling"
     ]
   },
   {
-    "objectID": "management/offboarding.html",
-    "href": "management/offboarding.html",
-    "title": "Offboarding",
+    "objectID": "management/course_scheduling.html#scheduling-of-courses",
+    "href": "management/course_scheduling.html#scheduling-of-courses",
+    "title": "Course scheduling",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/management/10_processes/10.39.offboarding.html",
+    "text": "The scheduling department (individuals responsible for specific degree programs) contacts me (with preferences gathered via Google Forms). I then receive a proposed schedule (I must manually check and resolve conflicts between programs; if necessary, clarify with the scheduling department or speak directly with colleagues). Ensure that module coordinators list me as the instructor (otherwise invitations will be sent to the wrong person).",
     "crumbs": [
       "Management",
-      "HR",
-      "Offboarding"
+      "Teaching",
+      "Course scheduling"
+    ]
+  },
+  {
+    "objectID": "management/course_scheduling.html#coordination",
+    "href": "management/course_scheduling.html#coordination",
+    "title": "Course scheduling",
+    "section": "Coordination",
+    "text": "Coordination\nPlanned: Coordination meetings for overlapping course materials.",
+    "crumbs": [
+      "Management",
+      "Teaching",
+      "Course scheduling"
     ]
   },
   {
@@ -2797,7 +2887,7 @@
     "href": "management/contracts.html",
     "title": "Contracts",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/management/10_processes/10.31.contracts.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/management/10_processes/10.31.contracts.html",
     "crumbs": [
       "Management",
       "HR",
@@ -2817,15 +2907,27 @@
     ]
   },
   {
-    "objectID": "management/website.html",
-    "href": "management/website.html",
-    "title": "Website",
+    "objectID": "management/reports.html",
+    "href": "management/reports.html",
+    "title": "Reports",
     "section": "",
-    "text": "Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.11.website.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.20.reports.html",
+    "crumbs": [
+      "Management",
+      "Teaching",
+      "Reports"
+    ]
+  },
+  {
+    "objectID": "management/faculty.html",
+    "href": "management/faculty.html",
+    "title": "Faculty",
+    "section": "",
+    "text": "Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.60.department.html",
     "crumbs": [
       "Management",
       "Communication channels",
-      "Website"
+      "Faculty"
     ]
   },
   {
@@ -2833,7 +2935,7 @@
     "href": "management/course_organization.html",
     "title": "Course Organization",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/30-teaching/30_processes/30.02.courses.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/30-teaching/30_processes/30.02.courses.html",
     "crumbs": [
       "Management",
       "Teaching",
@@ -2845,14 +2947,14 @@
     "href": "management/sick_leave.html",
     "title": "Sick Leave",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/management/10_processes/10.35.sick_leave.html"
+    "text": "Import https://digital-work-lab.github.io/handbook/management/10_processes/10.35.sick_leave.html"
   },
   {
     "objectID": "management/vacation.html",
     "href": "management/vacation.html",
     "title": "Vacation",
     "section": "",
-    "text": "Import https://fs-ise.github.io/handbook/management/10_processes/10.33.vacation.html",
+    "text": "Import https://digital-work-lab.github.io/handbook/management/10_processes/10.33.vacation.html",
     "crumbs": [
       "Management",
       "HR",
