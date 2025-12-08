@@ -1,5 +1,86 @@
 ---
 title: "Exams"
+transition_status: "toupdate"
+transition_comment: "update completely"
 ---
 
-Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.59.exams.html
+::: callout-note
+This section is marked as "toupdate": completely update
+:::
+
+## Administration
+
+- When creating the course in FlexNow, we state that exams will be organized by the examination office ("zentral organisiert").
+- Team Assistant: [order labels etc.](../../10-lab/10_processes/10.52.orders.html#examination-documents) ("Etiketten und Mantelbögen") as needed
+- The examination office sends out an e-mail request, asking for the number of additional students ("Meldung der Scheinteilnehmenden") 
+
+## Preparing the exam
+
+{: .resource }
+> - [digital-work-lecture-exam](https://github.com/digital-work-lab/digital-work-lecture-exam){: target="_blank"} 🔒
+
+**Creating a new exam**
+
+- Copy the `template_for_copying.tex` to archive and rename; Start with the `_with_solution.tex`
+- Update the header (semester)
+- Check admissible auxiliaries (**student summaries**)
+- Create exam questions (referring to `collection_exam_questions_and_solutions.tex`)
+- Check whether all the contents were covered in the lecture (if sessions were skipped, the contents cannot be covered in the exam)
+- Check specific notes in the `README.md` of the respective exam repository
+- Add grading notes, e.g., "Bewertung: pro fehlendem Zustand und Kante: -0,5 Punkte"
+- Count points within tasks
+- Count points overall
+- Check for missing items (A,B,D)
+- Spellcheck
+- Copy the template and remove the solutions (including multiple-choice checks), update the header
+- Update the `collection_exam_questions_and_solutions.tex`
+- When the exams are not printed immediately, add a reminder to include the student summaries (if applicable)
+
+**Print**
+
+- Print exams
+- Add student summaries (if applicable)
+
+## Preparing materials
+
+- Examination documents by mail
+- Envelope includes:
+  - Important exam documents for your central exams
+  - Checklist for completing the written exams
+  - Name labels
+  - Examination protocol
+  - Event log during an exam
+  - Name notices
+  - Signs “Please do not disturb the exam.”
+  - Attendance list/paper check
+  - Checklist “Examination Process Flow”
+  - Supervision guidelines
+  - Information sheet on canceling an exam for health reasons
+  - Participants during maternity leave, "Scheinteilnehmende", etc.
+- Professor includes the exam sheet (and summaries if applicable)
+
+## Examination day
+
+- Examination dates are announced via email by the examination office
+- Materials are provided by the professor
+- The secretariat will receive further important information by email, for example, on the topic of “identification after exams” ("Nachträgliche Identitätsfeststellung")
+
+{: .important }
+> - Cases of cheating (Unterschleif): immediately enter it into FlexNow and send the exam to the examination office (do not grade it)
+> - Cases of missed exams (Versäumnisklausuren): immediately enter it into FlexNow, archive the exams for 1 year in the filing cabinet.
+> - Send the exam sheets, protocols (Anwesenheitslisten), and two empty exams to the examination office immediately after the exams are completed.
+> - Empty exams (Versäumnis-Klausur): archive for one semester.
+
+## Grading
+
+- Create a reminder for the deadline: approx. 15. September (summer term), 24. March (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).
+- Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".
+- Do not dispose of empty exams
+- Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){: target="_blank"} to assign grades and prepare FlexNow import
+
+## Enter grades in FlexNow
+
+- Have failed exams reviewed by a second professor
+- Grades are entered in [FlexNow](30.15.flexnow.html#entering-grades).
+- Certificates can be issued if exams are not (yet) available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){: target="_blank"}).
+- The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.

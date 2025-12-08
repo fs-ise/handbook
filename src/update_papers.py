@@ -2,7 +2,9 @@
 """
 Generate Quarto .qmd paper files from a records.bib file using CoLRev.
 
-- Reads records.bib from the current working directory
+- Reads records.bib from the configured RECORDS_BIB path
+- Creates a cleaned assets/references.bib using CoLRev's writer utils
+  (removing colrev_status, origin, OA/file fields, etc.)
 - Removes all existing files in research/papers before generation
 - For each record, creates research/papers/<ID>.qmd
 - If research/papers/<ID>.qmd already exists (after cleanup), it is skipped
@@ -16,7 +18,7 @@ Generate Quarto .qmd paper files from a records.bib file using CoLRev.
 - If fulltext_oa or author_copy_file are present, embeds the PDF in the page
 - Appends APA-style citation (with hanging indent), and BibTeX + RIS blocks for copy-paste.
 - YAML header contains a boolean flag:
-    free_fulltext: true  # if there is neither OA/fulltext nor author copy
+    free_fulltext: true  # if there is OA/fulltext or author copy
 
 Requirements:
     pip install colrev
@@ -30,14 +32,59 @@ import html
 import shutil
 from pathlib import Path
 from typing import List, Iterable, Dict, Any, Optional
+
 import colrev.loader.load_utils as load_utils
+import colrev.writer.write_utils as write_utils
 
 
-RECORDS_BIB = Path("/home/gerit/ownCloud/data/publications/my-papers-colrev/data/records.bib")
+RECORDS_BIB = Path(
+    "/home/gerit/ownCloud/data/publications/my-papers-colrev/data/records.bib"
+)
 OUTPUT_DIR = Path("research/papers")
-
+ASSETS_REFERENCES = Path("assets/references.bib")
 
 DEFAULT_BODY_TEMPLATE = """"""
+
+# Fields that should be stripped from the exported references.bib
+FIELDS_TO_STRIP_FOR_REFERENCES = {
+    # "ENTRYTYPE",
+    "citation_key",
+    "colrev_id",
+    "colrev_origin",
+    "colrev_pdf_id",
+    "screening_criteria",
+    "file",
+    "oa_status",
+    "fulltext_oa",
+    "colrev_status",
+    "colrev_masterdata_provenance",
+    "colrev_data_provenance",
+    "colrev.dblp.dblp_key",
+    "curation_id",
+    "language",
+    "dblp_key",
+    "topic",
+    "lr_type_pare_et_al",
+    "goal_rowe",
+    "synthesis",
+    "r_gaps",
+    "theory_building",
+    "aggregating_evidence",
+    "r_agenda",
+    "r_agenda_levels",
+    "cited_by",
+    "colrev.europe_pmc.europe_pmc_id",
+    # additional machine-useful / custom fields we don't want in references.bib
+    "summary_url",
+    "appendix_url",
+    "dataset_url",
+    "dataset_doi",
+    "code_url",
+    "author_copy_url",
+    "author_copy_file",
+    "author+an:orcid",
+    "colrev.pubmed.pubmedid",
+}
 
 
 # ----------------------------------------------------------------------
@@ -63,47 +110,10 @@ def record_to_bibtex(rec: dict) -> str:
     field_lines: List[str] = []
     max_field_len = 10
     for field, value in rec.items():
-        if field in {
-            "ENTRYTYPE",
-            "ID",
-            "citation_key",
-            "colrev_id",
-            "colrev_origin",
-            "colrev_pdf_id",
-            "screening_criteria",
-            "file",
-            "oa_status",
-            "fulltext_oa",
-            "colrev_status",
-            "colrev_masterdata_provenance",
-            "colrev_data_provenance",
-            "colrev.dblp.dblp_key",
-            "curation_id",
-            "language",
-            "dblp_key",
-            "topic",
-            "lr_type_pare_et_al",
-            "goal_rowe",
-            "synthesis",
-            "r_gaps",
-            "theory_building",
-            "aggregating_evidence",
-            "r_agenda",
-            "r_agenda_levels",
-            "cited_by",
-            "keywords",
-            "colrev.europe_pmc.europe_pmc_id",
-            # additional machine-useful / custom fields we *don't* want in BibTeX
-            "summary_url",
-            "appendix_url",
-            "dataset_url",
-            "dataset_doi",
-            "code_url",
-            "author_copy_url",
-            "author_copy_file",
-            "author+an:orcid",
-            "colrev.pubmed.pubmedid",
-        }:
+        if field in FIELDS_TO_STRIP_FOR_REFERENCES:
+            # We also don't want these in the ad-hoc BibTeX block
+            continue
+        if field in ["ID", "ENTRYTYPE", "keywords"]:
             continue
         if value is None or value == "":
             continue
@@ -332,6 +342,49 @@ def load_records(path: Path) -> Iterable[Dict[str, Any]]:
         )
 
 
+def build_clean_references(path: Path) -> Dict[str, Dict[str, Any]]:
+    """
+    Load records via CoLRev and return a dict suitable for write_utils.write_file,
+    with internal / CoLRev-specific fields stripped.
+    """
+    raw = load_utils.load(filename=str(path))
+
+    clean: Dict[str, Dict[str, Any]] = {}
+
+    if isinstance(raw, dict):
+        items = raw.items()
+    elif isinstance(raw, (list, tuple)):
+        # reconstruct keys from ID / citation_key / colrev_id
+        items = []
+        for rec in raw:
+            rec = dict(rec)
+            key = (
+                rec.get("ID")
+                or rec.get("citation_key")
+                or rec.get("colrev_id")
+            )
+            if not key:
+                continue
+            items.append((key, rec))
+    else:
+        raise TypeError(
+            f"Unexpected records type from load_utils.load(): {type(raw)}"
+        )
+
+    for key, rec in items:
+        rec = dict(rec)
+        # Ensure an ID is present
+        rec["ID"] = rec.get("ID") or rec.get("citation_key") or rec.get("colrev_id") or key
+
+        for f in list(rec.keys()):
+            if f in FIELDS_TO_STRIP_FOR_REFERENCES:
+                rec.pop(f, None)
+
+        clean[rec["ID"]] = rec
+
+    return clean
+
+
 def load_body_template() -> str:
     """Return a default template."""
     return DEFAULT_BODY_TEMPLATE
@@ -495,7 +548,9 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
     if url:
         yaml_lines.append(f"url: {json.dumps(url, ensure_ascii=False)}")
     if journal_name:
-        yaml_lines.append(f"journal.name: {json.dumps(journal_name, ensure_ascii=False)}")
+        yaml_lines.append(
+            f"journal.name: {json.dumps(journal_name, ensure_ascii=False)}"
+        )
     if outlet:
         yaml_lines.append(f"outlet: {json.dumps(outlet, ensure_ascii=False)}")
 
@@ -509,7 +564,9 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
         for a in authors_meta:
             yaml_lines.append(f"  - name: {json.dumps(a['name'], ensure_ascii=False)}")
             if "orcid" in a:
-                yaml_lines.append(f"    orcid: {json.dumps(a['orcid'], ensure_ascii=False)}")
+                yaml_lines.append(
+                    f"    orcid: {json.dumps(a['orcid'], ensure_ascii=False)}"
+                )
 
     key = get_field(record, "ID", "id", default="")
     if key:
@@ -526,13 +583,14 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
         f"self_archiving_possible_2y: {'true' if self_archiving_possible_2y else 'false'}"
     )
 
-    yaml_lines.append("format:\n  html:\n    include-after-body: ../../assets/metrics-scripts.html")
+    yaml_lines.append(
+        "format:\n  html:\n    include-after-body: ../../assets/metrics-scripts.html"
+    )
 
     yaml_lines.append("---")
     yaml_lines.append("")  # blank line before body
 
     return "\n".join(yaml_lines)
-
 
 
 def build_body(record: Dict[str, Any], template_body: str) -> str:
@@ -649,9 +707,7 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
             )
 
         buttons_block = (
-            '<div class="text-center my-3">\n'
-            + "\n".join(btns)
-            + "\n</div>\n"
+            '<div class="text-center my-3">\n' + "\n".join(btns) + "\n</div>\n"
         )
 
     parts: List[str] = []
@@ -659,7 +715,10 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     # Summary from abstract + optional buttons
     summary_block = ""
     if abstract:
-        summary_block = f"\n\n# Summary\n\n::: {{ .justify }}\n\n{abstract}\n\n:::\n"
+        summary_block = (
+            "\n\n# Summary\n\n::: { .justify }\n\n"
+            f"{abstract}\n\n:::\n"
+        )
     if buttons_block:
         summary_block += "\n" + buttons_block + "\n"
 
@@ -787,6 +846,15 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
 
 
 def main():
+    if not RECORDS_BIB.is_file():
+        raise FileNotFoundError(f"Records file not found: {RECORDS_BIB}")
+
+    # --- Build cleaned references.bib using CoLRev writer utils ----------
+    clean_records = build_clean_references(RECORDS_BIB)
+    ASSETS_REFERENCES.parent.mkdir(parents=True, exist_ok=True)
+    write_utils.write_file(records_dict=clean_records, filename=str(ASSETS_REFERENCES))
+
+    # --- Generate paper .qmd files ---------------------------------------
     records_iter = load_records(RECORDS_BIB)
 
     # Ensure output dir exists and is empty before generation
