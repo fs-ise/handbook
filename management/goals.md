@@ -1,0 +1,129 @@
+---
+title: "Goals"
+---
+
+## Vision
+
+Digital technologies drive fundamental transformation processes and create new possibilities in the organization and design of work.
+We aim to create a future where work is not only more productive and intelligent but also aligned with human values.
+
+## Mission
+
+We strive to:
+
+- **Investigate the futures of work**: Conduct research within the context of digital work, exploring digital work practices, distributed organizing, and knowledge synthesis.
+- **Collaborate**: Translate research findings into actionable insights while building partnerships with academic institutions, communities, and industry leaders.
+- **Educate**: Provide high-quality, innovative education that equips knowledge workers with the skills to navigate and shape the digital landscape responsibly.
+- **Design**: Advocate for the design of work environments that prioritize human-centric approaches and ethical considerations, ensuring that technological advancements benefit both organizations and their employees.
+
+## Values
+
+Our core values are:
+
+## 🚀 **Impact in research, teaching, and practice**
+
+We challenge ourselves every day to make significant contributions to research on digital work, inspiring students in different teaching formats, and facilitating the application of our work in practice.
+
+## 🛠️ **Rigor, reliability, and reproducibility**
+
+We value rigorous methods that are based on evidence and yield reproducible results. To this end, we select reliable tools and standard operating principles.
+
+## ♻️ **Continuous improvement, openness, sustainability**
+
+We aim to make our work processes, continuous improvement efforts, and outcomes openly accessible. In particular, we prefer open-source over proprietary technology.
+
+<!-- https://www.heise.de/news/Bund-Lizenzkosten-fuer-Microsoft-auf-hohem-Niveau-insgesamt-neuer-Rekord-9744319.html -->
+
+## 🙏 **Participation, support, and diversity**
+
+We build a culture of support, encouraging the participation of different stakeholders, including current and former team members, students, and colleagues. We make diversity our strength.
+
+## 🧑‍🎓️ **Learning**
+
+We believe in continuous growth, setting aside time to learn on a regular basis, and curating helpful resources.
+
+<details markdown="block">
+  <summary>How we implement the values and goals</summary>
+  1. What we emphasize during [onboarding]({{ site.baseurl }}/docs/10-lab/10_processes/10.32.onboarding.html)
+  2. All of our teaching efforts follow the [*plan-do-check-adjust* cycle]({{ site.baseurl }}/docs/30-teaching/). Our [teaching evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html) and [improvements]({{ site.baseurl }}/docs/30-teaching/30_processes/30.22.improvements.html) are available publicly.
+  3. We choose a rigorous manuscript production system, based on Git and Markdown. This allows us to involve students and research assistants in our most important projects, giving them the opportunity to learn and contribute from day one. Without the transparent versioning, reliable control, and effective contribution mechanisms of Git, we would probably "protect the manuscript" and restrict access to our work (e.g., when working with Word).
+</details>
+
+We pursue goals in the following areas:
+
+- [Teaching]({{ site.baseurl }}/docs/30-teaching/30_processes/30.01.goals.html)
+- [Research]({{ site.baseurl }}/docs/20-research/20_processes/20.01.goals.html)
+- [Funding]({{ site.baseurl }}/docs/40-funding)
+- [Service]({{ site.baseurl }}/docs/50-service)
+
+<!-- https://handbook.gitlab.com/handbook/values/#how-do-we-reinforce-our-values -->
+
+## Annual cadence
+
+We organize our work in a cadence of **first half** and **second half** of the year, starting with the *starter* and *mid-year* [planning and review session](10-lab/10_processes/10.21.planning_review_sessions).
+
+```mermaid
+---
+displayMode: compact
+---
+gantt
+    title First half
+    dateFormat  YYYY-MM-DD
+    todayMarker stroke-width:5px,stroke:red,opacity:0.8
+    axisFormat %b
+
+    section Team
+    Starter 🚀  :milestone, {{ site.time | date: "%Y" }}-01-15, milestone
+
+    section Research
+    Focus           :a2, {{ site.time | date: "%Y" }}-02-10, 60d
+
+    section Teaching
+    WiSe           :done, {{ site.time | date: "%Y" }}-01-01, 35d
+    SoSe           :a1, {{ site.time | date: "%Y" }}-04-23, 93d
+```
+
+```mermaid
+---
+displayMode: compact
+---
+gantt
+    title Second half
+    dateFormat  YYYY-MM-DD
+    todayMarker stroke-width:5px,stroke:red,opacity:0.8
+    axisFormat %b
+
+    section Team
+    Mid-year 🎯 :milestone, {{ site.time | date: "%Y" }}-07-01, milestone
+
+    section Research
+    Focus           :a2, {{ site.time | date: "%Y" }}-08-01, 60d
+    
+    section Teaching
+    SoSe           :done, {{ site.time | date: "%Y" }}-06-15, 30d
+    WiSe           :a2, {{ site.time | date: "%Y" }}-10-14, 65d
+    WiSe           :a2, {{ site.time | date: "%Y" | plus: 1 }}-01-07, 30d
+```
+
+The agenda and meeting notes will be entered/linked here (along with links to our strategic / JF agenda)
+
+{: .highlight }
+> **Dates of the review and planning sessions:**
+> - First half: January 15
+> - Second half: August 01
+
+## North-star metric: Regular commits
+
+We track our progress through **incremental, high-quality contributions** to our repositories.  
+The **number of commits** across our work areas serves as our **north-star indicator** of daily progress, learning, and improvement.
+
+This metric reinforces how we work:
+
+- **Frequent delivery** → steady momentum instead of waiting for “big drops”
+- **Transparency** → visible progress enables us to offer guidance and support
+- **Team inclusion** → everyone can see changes and contribute early and often
+- **Quality focus** → commits reflect considered and valuable improvements
+
+> We celebrate every meaningful commit as a visible step forward on our path to excellence.
+
+![Activity](../assets/reports/teaching_research_lab_handbook_commits_per_month.png)
