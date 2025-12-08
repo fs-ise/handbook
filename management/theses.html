@@ -433,8 +433,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#registration" id="toc-registration" class="nav-link" data-scroll-target="#registration">Registration</a></li>
+  <li><a href="#advising" id="toc-advising" class="nav-link" data-scroll-target="#advising">Advising</a></li>
+  <li><a href="#submission-of-the-thesis" id="toc-submission-of-the-thesis" class="nav-link" data-scroll-target="#submission-of-the-thesis">Submission of the thesis</a></li>
+  <li><a href="#thesis-presentation" id="toc-thesis-presentation" class="nav-link" data-scroll-target="#thesis-presentation">Thesis presentation</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#feedback-session" id="toc-feedback-session" class="nav-link" data-scroll-target="#feedback-session">Feedback session</a></li>
+  <li><a href="#applicable-regulations" id="toc-applicable-regulations" class="nav-link" data-scroll-target="#applicable-regulations">Applicable regulations</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/theses.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,9 +471,208 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.40.theses.html</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is marked as “toupdate”: update completely</p>
+</div>
+</div>
+<p>{: .no_toc }</p>
+<p>{: .highlight } This page contains <strong>administration details</strong>. For students, information is available on a <a href="https://digital-work-lab.github.io/theses/" target="_blank">separate page</a>.</p>
+<p>{: .resource } &gt; Information on individual theses is recorded internally (<a href="../35_theses.html">35 Theses</a>).</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>{: .no_toc .text-delta }</p>
+<ul>
+<li>TOC {:toc}</li>
+</ul>
+<pre class="mermaid"><code>sequenceDiagram
+    Note over Professor,Student: 1. Initial meetings to discuss the general topic
+    Note over Student,Examination office: 2. Formal admission
+    Student-&gt;&gt;Examination office: Apply for admission
+    activate Examination office
+    Note right of Examination office: Check admission&lt;br/&gt;requirements
+    Examination office-&gt;&gt;Student: Topic confirmation form (docx)
+    Examination office-&gt;&gt;Team Assistant: Topic confirmation form (docx)
+    deactivate Examination office
+    Note over Professor,Student: Topic selection and registration
+    Student-&gt;&gt;Professor: Signed topic confirmations (2x)
+    activate Professor
+    Professor-&gt;&gt;Student: Signed topic confirmation I
+    Professor-&gt;&gt;Team Assistant: Signed topic confirmation II
+    deactivate Professor
+    activate Team Assistant
+    Team Assistant-&gt;&gt;Examination office: Topic confirmation (docx)
+    deactivate Team Assistant
+    loop Regularly
+        Note over Professor,Student: 3. Thesis writing and feedback sessions
+    end
+        Note over Student,Examination office: 4. Submission
+    Student-&gt;&gt;Examination office: Submit via the form server
+    Examination office-&gt;&gt;Team Assistant: digital version (to archive)
+    activate Team Assistant
+    Team Assistant-&gt;&gt;Professor: Digital version
+    deactivate Team Assistant
+    activate Professor
+    alt Master thesis
+        Note over Professor,Student: 5. Thesis presentation
+    end
+    Note over Professor,Student: 6. Grading
+    Professor-&gt;&gt;Team Assistant: Review and grade
+    activate Team Assistant
+    Team Assistant-&gt;&gt;Examination office: Review and grade
+    deactivate Team Assistant
+    Professor-&gt;&gt;Student: Invitation for feedback session
+    deactivate Professor
+    Note over Professor,Student: 7. Feedback session</code></pre>
+</section>
+<section id="registration" class="level2">
+<h2 class="anchored" data-anchor-id="registration">Registration</h2>
+<p>The administrative process starts with formal thesis registration.</p>
+<p>Students send the <strong>application for admission</strong> to the thesis to the <em>examination office</em> via their <strong>stud email address</strong>. The examination office <strong>verifies</strong> the admission requirements.</p>
+<p>The examination office may ask the student to request <strong>approval from the examination committee</strong> (Prüfungsausschuss) to write a thesis in the area of <em>Digital Work</em>. This is the case when older regulations (Studien- und Fachprüfungsordnung) apply (i.e., when master studies were started before 2018), or for students of Informatics and Applied Informatics (e.g., International Software Systems Science).</p>
+<p>Students <strong>receive the topic confirmation</strong> as a (protected) Word document (.docx) by e-mail together with processing/submission instructions. The next step is to make an appointment with the thesis advisor to determine the topic and sign the topic confirmation. The Team Assistant receives this message in CC.</p>
+<p>The student and thesis advisor schedule a meeting to determine the topic and <strong>sign the topic confirmation</strong>. If the appointment is online, students can print and sign the confirmation, and send it to our <a href="https://www.uni-bamberg.de/digital-work/team/prof-dr-gerit-wagner/" target="_blank">postal address</a>. It is important that we receive <strong>two paper versions with original signatures</strong>:</p>
+<ul>
+<li>1 original with the signature of the professor and the student <strong>for the student</strong>.</li>
+<li>1 original with the signature of the professor and the student <strong>for archiving at the chair</strong> (added to the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files?dir=/10-lab/19_archive&amp;fileid=62" target="_blank">19-archive</a>).</li>
+</ul>
+<p>To <strong>complete the registration</strong>, the thesis advisor</p>
+<pre><code># Save topic confirmation (docx) in this repository and run
+labot thesis --register
+# check and merge pull request</code></pre>
+<ul>
+<li>The script creates a folder in the <a href="https://github.com/digital-work-lab/theses-confidential/" target="_blank">theses overview</a>.</li>
+<li>Moves the documents to <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/30-30-teaching/35_theses&amp;fileid=124" target="_blank">35 - theses</a>.</li>
+<li>Enters the <strong>topic</strong> of the thesis and <strong>date</strong> of the topic issue in the Word document (the date of the topic issue cannot be before the date of enrollment in the Word document; if the Word document cannot be found in the E-Mail history, students can share it):</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/thesis-registration.png" class="img-fluid figure-img" target="_blank"></p>
+<figcaption>Registration</figcaption>
+</figure>
+</div>
+<ul>
+<li>Sends an e-mail containing the Word document to the examination office, which enters the topic and the day of the topic issue into FlexNow (asking for an unprotected document is better than using <a href="https://www.lostmypass.com/file-types/ms-word/" target="_blank">lostmypassword</a>):</li>
+</ul>
+<blockquote class="blockquote">
+<p>wiai.pruefungen@uni-bamberg.de</p>
+<p><strong>Anmeldung Abschlussarbeit</strong></p>
+<p>Liebe Frau Schick,</p>
+<p>Anbei übersende ich Ihnen die ausgefüllte Themenbestätigung für XXXXXXX.</p>
+<p>Mit besten Grüßen</p>
+<p>Gerit Wagner</p>
+</blockquote>
+</section>
+<section id="advising" class="level2">
+<h2 class="anchored" data-anchor-id="advising">Advising</h2>
+<p>Notes on thesis advising and process are stored internally in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/30-30-teaching/35_theses&amp;fileid=124" target="_blank">35 - theses</a>.</p>
+<p>Supervising principles</p>
+<ul>
+<li>Tell students that the exposé is completed (avoid a lengthy process before the actual thesis work starts)</li>
+<li>Give clear feedback on current performance (students should not be surprised by their grade)</li>
+</ul>
+<p>{: .highlight } &gt; <strong>💡 Supervising Best Practices: Starting Conversations</strong> &gt; &gt; When checking in with thesis students, begin with questions that express interest in their experience—without being too personal. Let students choose how much they wish to share. Examples include: &gt; &gt; - <em>How was the start of your semester?</em> &gt; - <em>Is this a busy time for you? How many exams are on your plate, and which ones?</em> &gt; - <em>How are you feeling about your thesis these days? Any areas you’d like to focus on?</em> &gt; &gt; These questions help foster a supportive, respectful environment for supervision.</p>
+</section>
+<section id="submission-of-the-thesis" class="level2">
+<h2 class="anchored" data-anchor-id="submission-of-the-thesis">Submission of the thesis</h2>
+<p>From December 1st, 2025, the binding and timely submission of bachelor’s and master’s theses will take place digitally via the form server <a href="https://form.uni-bamberg.de/form/alias/1/einreichung-ba-ma-arbeit/" target="_blank">here</a>. Digital submission replaces the submission of printed copies, as was previously the case.</p>
+</section>
+<section id="thesis-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="thesis-presentation">Thesis presentation</h2>
+<ul>
+<li>For IS/… students writing a Master’s thesis, a presentation is mandatory.</li>
+<li>The thesis advisor and student set a date for the presentation. Students can decide whether the presentation should be scheduled before or after the grading.</li>
+<li>A second examiner is required (check whether this is adequate).</li>
+<li>The grading template is available <a href="https://github.com/digital-work-lab/handbook/raw/main/assets/templates/evaluation_thesis_presentation/thesis_presentation.docx" target="_blank">here</a></li>
+<li>Protocols should be archived digitally (nextcloud: 14.04).</li>
+<li>A summary and grade of the presentation must be included in the thesis review.</li>
+</ul>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<p>{: .info } &gt; To start grading the thesis and to create the review run &gt; &gt; <code>&gt; labot thesis --grade &gt;</code></p>
+<p>The thesis advisor (professor) grades the thesis based on the template (created by labot) and the predefined <a href="https://digital-work-lab.github.io/theses/docs/evaluation.html" target="_blank">criteria</a>.</p>
+<ul>
+<li><p>The hardback copy of the thesis, which remains at the chair, is stored in the archive room WE5/05.058.</p></li>
+<li><p>A thesis is checked for plagiarism based on <a href="https://www.uni-bamberg.de/its/turnitin" target="_blank">Turnitin</a>. In case plagiarism is detected, the <a href="30.52.plagiarism.html">Plagiarism Process</a> is started.</p></li>
+<li><p>Also check for content generated by AI: <!-- generative AI: cannot be detected reliably --></p>
+<ul>
+<li><a href="https://eduwriter.ai/ai-content-detector" target="_blank">EduWriter AI Content Detector</a> — free version for teachers &amp; students; paste/upload text to get % AI ‐ likelihood.</li>
+<li><a href="https://quillbot.com/ai-content-detector" target="_blank">QuillBot AI Detector</a> — free version; supports multiple languages.</li>
+<li><a href="https://www.grammarly.com/ai-detector" target="_blank">Grammarly AI Detector</a> — free tool to check if parts of a text look AI-generated.</li>
+<li><a href="https://surgegraph.io/ai-detector" target="_blank">SurgeGraph AI Detector</a> — free version; sentence-level tagging.</li>
+<li><a href="https://gptzero.me/" target="_blank">GPTZero</a> — free basic usage; paste in text / upload to get AI content score.</li>
+</ul></li>
+<li><p>If programming is required as part of the thesis, this should be confirmed in the review.</p></li>
+<li><p>For master theses, the weight of the written part is 67% and the weight of the presentation is 33% (based on <a href="https://www.uni-bamberg.de/fileadmin/abt-studium/Modulhandbuecher/WIAI/WI/Master/MHB_MA_WI_2018.pdf" target="_blank">Master WI MHB</a>). For IBWL students, the presentation is mandatory but not graded. <strong>Grades for the thesis and the colloquium must be stated separately (the overall grade must not be stated - it is calculated by FlexNow)</strong>.</p></li>
+<li><p>The deadline is given by the examination office. Our goal is to grade theses within two weeks (the official deadline allows up to 4 months).</p></li>
+<li><p>Spell-check the review.</p></li>
+<li><p>The review and grade in paper form (signed by the professor) are sent to the examination office by the Team Assistant (no cover letter, Hauspost: Ref II/3).</p></li>
+<li><p>The review (PDF) is archived at <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/04_theses&amp;fileid=73" target="_blank">14.04</a>. Materials in 35.XXX should be consolidated.</p></li>
+<li><p>Grades are entered by the examination office.</p></li>
+<li><p>Students can check the grade via FlexNow.</p></li>
+<li><p>Invite the student to a feedback session using the following template:</p></li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Bewertung Ihrer Bachelorarbeit und Feedback</strong></p>
+<p>Sehr geehrte/r Frau/Herr XXXXX,</p>
+<p>Ich habe das Gutachten zu Ihrer Bachelorarbeit erstellt und an das Prüfungsamt übersendet. Vorab möchte ich Ihnen schon inoffiziell mitteilen, dass Ihre Arbeit mit der Note XXXXXX bewertet wird.</p>
+<p>Herzlichen Glückwunsch zu dieser hervorragenden Leistung!</p>
+<p>Abschließend möchte ich Sie zu einem Feedbackgespräch einladen, um die Bewertung und den Prozess zu besprechen. Ich würde mich freuen, wenn Sie diese Möglichkeit wahrnehmen. Einen Termin können Sie über das Calendly-Tool auswählen:</p>
+<p>https://calendly.com/gerit-wagner/30min</p>
+<p>Mit besten Grüßen</p>
+<p>Gerit Wagner</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Bewertung Ihrer Masterarbeit und Feedback</strong></p>
+<p>Sehr geehrte/r Frau/Herr XXXXX,</p>
+<p>Ich habe das Gutachten zu Ihrer Masterarbeit erstellt und an das Prüfungsamt übersendet. Vorab möchte ich Ihnen schon inoffiziell mitteilen, dass die schriftliche Arbeit mit der Note XXXXXX bewertet wird. Die Präsentation wird mit XXXX bewertet. Die Gesamtnote wird vom FlexNow berechnet.</p>
+<p>Herzlichen Glückwunsch zu dieser hervorragenden Leistung!</p>
+<p>Abschließend möchte ich Sie zu einem Feedbackgespräch einladen, um die Bewertung und den Prozess zu besprechen. Ich würde mich freuen, wenn Sie diese Möglichkeit wahrnehmen. Einen Termin können Sie über das Calendly-Tool auswählen:</p>
+<p>https://calendly.com/gerit-wagner/30min</p>
+<p>Mit besten Grüßen</p>
+<p>Gerit Wagner</p>
+</blockquote>
+<p>A confirmation for passing the thesis (Bestehensbescheinigung) can be issued upon request. Thesis supervisors can send a confirmation to the examination office via email. The official confirmation is issued by the examination office.</p>
+<blockquote class="blockquote">
+<p>wiai.pruefungen(at)uni-bamberg.de</p>
+<p>Sehr geehrte Frau Schick,</p>
+<p>Ich bestätige, dass Herr/Frau NAME die Master/Bachelorarbeit mit einer Note besser als 4.0 besteht. Können Sie das Ausstellen der Bestehensbescheinigung veranlassen?</p>
+<p>Mit besten Grüßen</p>
+</blockquote>
+</section>
+<section id="feedback-session" class="level2">
+<h2 class="anchored" data-anchor-id="feedback-session">Feedback session</h2>
+<p>We provide <a href="https://digital-work-lab.github.io/theses/docs/feedback.html" target="_blank">feedback</a> on the thesis and explain the grading.</p>
+<p>{: .highlight } &gt; Ask students whether we can make their thesis available online for other students.</p>
+</section>
+<section id="applicable-regulations" class="level2">
+<h2 class="anchored" data-anchor-id="applicable-regulations">Applicable regulations</h2>
+<!-- 
+- Bachelor Business Information Systems
+- Bachelor International Information Systems Management
+- Bachelor Angewandte Informatik
+- Bachelor Software Systems Science
+- Master Business Information Systems
+- Master International Information Systems Management
+- Master Angewandte Informatik
+- Master Software Systems Science
+- Master Computing in the Humanities
+ -->
+<ul>
+<li><a href="https://www.uni-bamberg.de/abt-studium/aufgaben/pruefungs-studienordnungen/" target="_blank">Prüfungs- und Studienordnungen</a>, insbes. Modulhandbücher</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -868,5 +1080,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/theses.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/theses.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

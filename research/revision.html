@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -405,8 +440,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#setup-creating-the-revision-sheet" id="toc-setup-creating-the-revision-sheet" class="nav-link" data-scroll-target="#setup-creating-the-revision-sheet">Setup: Creating the revision sheet</a></li>
+  <li><a href="#guiding-principles" id="toc-guiding-principles" class="nav-link" data-scroll-target="#guiding-principles">Guiding Principles</a></li>
+  <li><a href="#steps-of-the-process" id="toc-steps-of-the-process" class="nav-link" data-scroll-target="#steps-of-the-process">Steps of the Process</a>
+  <ul class="collapse">
+  <li><a href="#study-the-review-package" id="toc-study-the-review-package" class="nav-link" data-scroll-target="#study-the-review-package">1. Study the review package</a></li>
+  <li><a href="#develop-a-holistic-understanding-of-the-feedback" id="toc-develop-a-holistic-understanding-of-the-feedback" class="nav-link" data-scroll-target="#develop-a-holistic-understanding-of-the-feedback">2. Develop a Holistic Understanding of the Feedback</a></li>
+  <li><a href="#rewrite-the-paper" id="toc-rewrite-the-paper" class="nav-link" data-scroll-target="#rewrite-the-paper">4. Rewrite the Paper</a></li>
+  <li><a href="#write-the-response-document" id="toc-write-the-response-document" class="nav-link" data-scroll-target="#write-the-response-document">5. Write the Response Document</a></li>
+  <li><a href="#start-early-and-establish-a-timeline" id="toc-start-early-and-establish-a-timeline" class="nav-link" data-scroll-target="#start-early-and-establish-a-timeline">6. Start Early and Establish a Timeline</a></li>
+  </ul></li>
+  <li><a href="#expected-outcome" id="toc-expected-outcome" class="nav-link" data-scroll-target="#expected-outcome">Expected Outcome</a></li>
+  <li><a href="#useful-phrases" id="toc-useful-phrases" class="nav-link" data-scroll-target="#useful-phrases">Useful phrases</a></li>
+  <li><a href="#links-and-materials" id="toc-links-and-materials" class="nav-link" data-scroll-target="#links-and-materials">Links and materials</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/revision.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -430,9 +484,294 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.32.revision.html</p>
+<p>{: .no_toc }</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>{: .no_toc .text-delta }</p>
+<ul>
+<li>TOC {:toc}</li>
+</ul>
+</section>
+<section id="setup-creating-the-revision-sheet" class="level2">
+<h2 class="anchored" data-anchor-id="setup-creating-the-revision-sheet">Setup: Creating the revision sheet</h2>
+<p>{: .resource } &gt; 📺 <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1066954?dir=/20-research/20_processes/32_revisions" target="_blank">video demo</a></p>
+<p>The following explains how to create a revision document. In Git, we create revision documents as a list of comments and responses, structured according to comment IDs. This aligns with the line-based diffs of Git/GitHub and allows us to split and merge revision items effectively. When following the standard format, a revision table can be generated at the end.</p>
+<p>{: .highlight } &gt; <strong>Revision document</strong> &gt; &gt; # AE1 &gt; &gt; Comment 1 provided by the AE …. &gt; &gt; &gt; Our response … &gt; &gt; # AE2 &gt; &gt; …</p>
+<p>{: .warning } Do not use public LLMs without the team’s consent. <strong>Check the results meticulously.</strong> Large review packages may not be transferred completely.</p>
+<p>The following prompt can be used to create a revision sheet based on feedback documents (input):</p>
+<pre><code>Remove unnecessary line breaks and add new lines to clarify the structure of paragraphs and reviewers. Do not add headings, and do not modify the content. Give markdown as a result.
+
+🚨 **Append review package** 🚨</code></pre>
+<ul>
+<li>Version, compare and add with gitk</li>
+<li>Remove unnecessary markup/text</li>
+<li>Pre-structure the SE/AE section</li>
+<li>If there are any references, extract them as BibTeX</li>
+</ul>
+<p>Next prompt:</p>
+<pre><code>Structure the review package by adding markers such as "# R1.2" (for comment 2 of reviewer 1) or "# SE1" (for comment 1 of the senior editor) in separate lines (surrounded by empty lines) and adding a quote "Response ..." afterward. Do not remove or modify contents. Do not change markup. Make sure that each issue raised by the review panel has its own number (marker and response). 
+
+For example, an input like this: ""
+Reviewer 1
+
+Thank you for the opportunity to review this paper.
+
+**Clarity**. The following parts need clarification ....
+
+**Contribution**. Please articulate your contribution to prior research.
+
+Thank you...
+
+""
+
+Whould be transformed to:""
+
+\# R1.1
+
+Thank you for the opportunity to review this paper.
+
+&gt; Response: ...
+
+\# R1.2
+
+**Clarity**. The following parts need clarification ....
+
+&gt; Response: ...
+
+\# R1.3
+
+**Contribution**. Please articulate your contribution to prior research.
+
+&gt; Response: ...
+
+&gt; # R1.4
+
+Thank you ...
+
+\Response: ...
+""
+
+Give markdown as a result. Review package:
+
+🚨 **Append review package from first prompt** 🚨</code></pre>
+<p>Next (optional):</p>
+<blockquote class="blockquote">
+<p>Add references to related comments in the response fields:</p>
+<p>🚨 <strong>Append review package from first prompt</strong> 🚨</p>
+</blockquote>
+<ul>
+<li>Complete the revision and address the comments in the Markdown document.</li>
+<li>When comments are addressed, add <code>&lt;!-- status:done --&gt;</code>.</li>
+<li>Export a Word table at the end:</li>
+</ul>
+<p>{: .highlight } &gt; <strong>Conversion to Word (revision table)</strong> &gt; &gt; After completing the revision sheet in Markdown, it can be transformed into a Word document (revision table) : &gt; &gt; <code>&gt; labot paper --revise &gt;</code></p>
+<p>To mark particular issues as closed or later, add the following marks:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># R1.2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Revise XY</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- status:later --&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Response: ...</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu"># R2.2</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>Clarify the theoretical foundation ...</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- status:done --&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; We revised the background section ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<!-- 
+> **Prompt: Create a revision sheet**
+>
+> Based on the review documents, create a revision sheet (table) with three columns: ID, Comment, and Response. Each comment from the review package should be entered in a separate row, starting with the Senior Editor (SE) comments, then the Associate Editor (AE), followed by Reviewer 1 (R1), Reviewer 2 (R2), and Reviewer 3 (R3).
+> 
+> Each comment, suggestion, or point (even sub-comments or bullet points) must be copied in full without shortening, summarizing, or abbreviating any part. This includes greetings, apologies, and any sub-comments.
+> 
+> Ensure all details, such as references, page numbers, and other specific information provided by the editors and reviewers are included verbatim. For related comments, indicate the relationship in the response column (e.g., 'Related to SE.1 or AE.3'). If there is no related comment, leave the response column empty. Do not exclude any content from the review documents.
+> 
+> Return the table in a Word document using landscape format.
+-->
+</section>
+<section id="guiding-principles" class="level2">
+<h2 class="anchored" data-anchor-id="guiding-principles">Guiding Principles</h2>
+<ol type="1">
+<li><strong>Embrace Feedback Positively</strong>: Consider the feedback from reviewers as constructive and aimed at improving your manuscript. Avoid taking critiques personally.</li>
+<li><strong>Holistic Understanding</strong>: Analyze the feedback comprehensively to understand the overall sentiment and common themes among reviewers.</li>
+<li><strong>Strategic Revision</strong>: Develop a coherent revision strategy that addresses major issues collectively rather than in isolation.</li>
+<li><strong>Clear Communication</strong>: Articulate your responses clearly and professionally, ensuring that your revisions align with the reviewers’ and editors’ expectations.</li>
+</ol>
+</section>
+<section id="steps-of-the-process" class="level2">
+<h2 class="anchored" data-anchor-id="steps-of-the-process">Steps of the Process</h2>
+<section id="study-the-review-package" class="level3">
+<h3 class="anchored" data-anchor-id="study-the-review-package">1. Study the review package</h3>
+<ul>
+<li><strong>Step Back</strong>: After receiving the review package, take a break to calm any emotional reactions. This helps in assimilating feedback more objectively.</li>
+<li><strong>Reflect</strong>: Spend a few days reflecting on the feedback without making any immediate changes to the manuscript.</li>
+<li><strong>Create a Revision Sheet</strong>: For teams collaborating in Markdown, a structured Markdown document is recommended along with corresponding branches for the revisions (see LLM prompt below). For teams collaborating in Word, a Word table is recommended.</li>
+</ul>
+</section>
+<section id="develop-a-holistic-understanding-of-the-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="develop-a-holistic-understanding-of-the-feedback">2. Develop a Holistic Understanding of the Feedback</h3>
+<ul>
+<li><strong>Categorize Issues</strong>: Organize feedback into categories such as motivation, theorization, research design, analysis, and implications.</li>
+<li><strong>Identify Disagreements</strong>: Note areas where reviewers agree or disagree, and prioritize addressing the most critical points. e ### 3. Formulate a Revision Strategy</li>
+<li><strong>Consider Alternatives</strong>: Think about different ways to address major issues and evaluate the implications of each approach.</li>
+<li><strong>Evaluate Coherence</strong>: Ensure that the revised manuscript tells a cohesive and credible story, with changes that enhance the overall plot.</li>
+<li><strong>Draft a strategy</strong>: Based on the revision sheet, note which issues are connected, how and in which order they will be addressed, and by whom.</li>
+</ul>
+</section>
+<section id="rewrite-the-paper" class="level3">
+<h3 class="anchored" data-anchor-id="rewrite-the-paper">4. Rewrite the Paper</h3>
+<ul>
+<li><strong>Avoid Rewriting Block</strong>: Start afresh rather than tweaking the old draft to encourage rethinking and reorganization.</li>
+<li><strong>Iterate and Present</strong>: Alternate between thinking, writing, and presenting to gather feedback and refine your manuscript.</li>
+</ul>
+</section>
+<section id="write-the-response-document" class="level3">
+<h3 class="anchored" data-anchor-id="write-the-response-document">5. Write the Response Document</h3>
+<ul>
+<li><strong>Lead with the Big Picture</strong>: Summarize how major issues were addressed and how the storyline has developed.</li>
+<li><strong>Point-by-Point Responses</strong>: Explain your choices in addressing each issue and refer to specific sections in the manuscript where changes were made.</li>
+<li><strong>Include Additional Evidence</strong>: Provide supplementary information that may not fit into the manuscript but addresses reviewers’ concerns.</li>
+</ul>
+</section>
+<section id="start-early-and-establish-a-timeline" class="level3">
+<h3 class="anchored" data-anchor-id="start-early-and-establish-a-timeline">6. Start Early and Establish a Timeline</h3>
+<ul>
+<li><strong>Schedule Activities</strong>: Allocate specific times for revision tasks and ensure collaboration with co-authors is well-coordinated.</li>
+<li><strong>Refine</strong>: Dedicate time towards the end of the revision process to polish the manuscript and response document.</li>
+</ul>
+<p>{: .info } &gt; <strong>Contradicting review packages</strong> &gt; &gt; If the review panel makes contradicting suggestions and the AE does not offer guidance, it may be helpful to meet with the SE, discuss the options, make a decision and refer to that in the response (see <a href="https://www.janrecker.com/this-is-research-podcast/why-you-should-never-write-a-conceptual-paper-2-october-2024/" target="_blank">IS research podcast</a>).</p>
+</section>
+</section>
+<section id="expected-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="expected-outcome">Expected Outcome</h2>
+<p>A well-revised manuscript that: - Demonstrates a comprehensive response to reviewers’ feedback. - Presents a cohesive and enhanced storyline. - Communicates changes clearly and professionally. - Addresses major critiques holistically while considering minor comments effectively. - Reflects a thorough rethinking and restructuring rather than superficial adjustments.</p>
+<p>Example of a Revision Table</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 26%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>No</th>
+<th>Reviewer Comment</th>
+<th>Response and Action Taken</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R1.1</td>
+<td>However, the authors need to clarify some aspects. These aspects relate to the significance of the proposed approach against the background of the rapid evolution of generative AI tools. The authors mention that AI use is currently viewed as misconduct. What mechanisms were in place to identify such use? There is also a possibility that learners used AI not to produce answers but as a tutor to build understanding before class. Thus, generative AI could increase the baseline knowledge of those who use it. The authors need to offer ideas on how to evaluate the impact of the course on learner competency in light of AI. At present, the focus is on learner feedback. The authors might consider whether assessing baseline knowledge, teamwork aptitude, and AI usage habits is key to understanding true course effectiveness.</td>
+<td>We thank the reviewer for this encouraging feedback and the opportunity to revise our manuscript. As noted, it is not possible to reliably confirm AI use through output inspection alone; instead, we rely on structured rules and testing to evaluate individual understanding without AI support. We also reiterate our earlier position that AI can serve as a valuable tutor when used to support, rather than replace, learning.</td>
+</tr>
+<tr class="even">
+<td>R1.2</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>{: .info } &gt; <strong>References to reviewers and editors</strong> &gt; &gt; In the response, we can refer to the AE (short for associate editor) or SE (senior editor) or R1 (reviewer 1). &gt; In addition, we may refer to specific comments, such as R2.4 (the 4th comment of reviewer 2).</p>
+<!--
+| R1.1 | Motivation not persuasive enough        | Enhanced the introduction to better highlight the research gap and significance.                                |
+| R1.2 | Theorization lacks depth                | Incorporated additional theories and clarified the theoretical framework. (**Note**: Related to R2.4 and R3.1)  |
+| R1.3 | Research design needs more detail       | Expanded the methodology section to include more details on the research design.                                |
+| R1.4 | Analysis requires robustness checks     | Conducted additional robustness checks and included the results in the appendix.                                |
+| R1.5 | Contribution to literature not clear    | Added a section explicitly detailing the contributions to existing literature.                                  |
+| R1.6 | Writing quality needs improvement       | Revised the manuscript for clarity, coherence, and readability.                                                 |
+| R1.7 | Figures are unclear                     | Redrew all figures to improve clarity and readability.                                                          |
+| R1.8 | Missing recent literature               | Updated the literature review to include recent studies from the past three years.                              |
+-->
+</section>
+<section id="useful-phrases" class="level2">
+<h2 class="anchored" data-anchor-id="useful-phrases">Useful phrases</h2>
+<p>The following phrases can be useful to effectively communicate revisions and demonstrate appreciation for the reviewers’ feedback, ultimately increasing the chances of your manuscript’s acceptance.</p>
+<p><strong>Expressing Gratitude</strong></p>
+<ul>
+<li>We would like to thank the review team for their extensive efforts and constructive comments.</li>
+<li>We sincerely thank the AE for their always constructive, insightful, and helpful feedback.</li>
+<li>We thank the SE for this encouraging feedback and the opportunity to revise our manuscript once more.</li>
+<li>We are grateful to the reviewer for their constructive comments.</li>
+<li>Once again, we would like to thank you so much for all your effort on our behalf.</li>
+</ul>
+<p><strong>Acknowledging Reviewers’ Positive Feedback</strong></p>
+<ul>
+<li>Seeing that both reviewers and the Senior Editor were positive about the paper, we engaged in a significant revision following their guidance.</li>
+<li>We thank the reviewer for commending us on our review of the literature and for providing very constructive comments.</li>
+<li>We are delighted about the reviewer’s interest in and applause for our work.</li>
+</ul>
+<p><strong>Responding to Specific Comments</strong></p>
+<ul>
+<li>We carefully considered the feedback and outlined the specific changes implemented in response to each comment in this response document.</li>
+<li>We completely reworked our explanation of how …, which was not clear enough, as pointed out by R1.</li>
+<li>We aimed at a stronger grounding in extant work on … and clarifying our notion of …, as suggested by R2.</li>
+<li>We further improved our reasoning and justification for each individual aspect raised by R1.</li>
+</ul>
+<p><strong>Explaining Revisions</strong></p>
+<ul>
+<li>We now include …, which provides an overview of our overall approach, explaining how our main concepts were developed and what sources were considered in each step.</li>
+<li>We further justified the exclusion of … from the scope, which is consistent with the Senior Editor’s recommendation.</li>
+<li>We updated the search for recent papers published in YYYY and extended the search parameters.</li>
+</ul>
+<p><strong>Justifying Changes</strong></p>
+<ul>
+<li>We believe there is a strong need for a clear conceptual/… understanding of ….</li>
+<li>We concur that our focus on XXX warrants stronger justification.</li>
+<li>To address this, we further emphasize that ….</li>
+</ul>
+<p><strong>Addressing Specific Issues</strong></p>
+<ul>
+<li>We agree that the process of … was not clear enough, creating confusion concerning ….</li>
+<li>We solve this puzzle by …</li>
+<li>We revised the XXX paragraph of the YYYY section as follows.</li>
+</ul>
+<p><strong>Emphasizing Improvements</strong></p>
+<ul>
+<li>We updated the manuscript to explicitly justify our focus on IS journals and conferences (in the introduction and the methodology section).</li>
+<li>We double-checked the manuscript to drop unnecessary synonyms and define key terms.</li>
+<li>We polished all figures for better readability and addressed the remaining comments.</li>
+</ul>
+<p><strong>Highlighting Research Relevance</strong></p>
+<ul>
+<li>Since we focus on an emergent topic with research output expected to grow significantly, we updated the search for recent papers.</li>
+<li>The main purpose of our literature review is to conceptualize XXX based on existing IS literature.</li>
+<li>To some degree, we offset the lag effect of research publication by including conference papers in our review.</li>
+</ul>
+<p><strong>Encouraging Positive Reception</strong></p>
+<ul>
+<li>We hope that you share our understanding that we addressed all comments in a positive manner and remain committed to meeting the standards of Journal XXX.</li>
+<li>We hope the revised version of our paper resolves the concerns raised.</li>
+<li>We hope that you see some merit in these changes as well.</li>
+</ul>
+<p><strong>Alternative Phrases</strong></p>
+<ul>
+<li>To reduce the length of our manuscript by about XXX pages, we scrutinized every section.</li>
+<li>It was a pleasure to see how much the paper has developed with the constructive feedback of the review team.</li>
+<li>We are excited about the possibility of publishing it in Journal XXX.</li>
+</ul>
+</section>
+<section id="links-and-materials" class="level1">
+<h1>Links and materials</h1>
+<ul>
+<li><a href="../../../assets/Revision-Sheet.docx">Word template</a> for revisions in non-Git-based projects.</li>
+</ul>
+<p><strong>Recommendations</strong></p>
+<div class="references">
+<p>
+Pang, M. S., &amp; Thatcher, J. B. (2023). A Practical Guide for Successful Revisions and Engagements with Reviewers. <em>Journal of the Association for Information Systems</em>, 24(2), 317-327. <a href="https://aisel.aisnet.org/jais/vol24/iss2/11/">link</a>
+</p>
+<p>
+Rai, A. (2019). Editor’s Comments: the first revision. <em>MIS Quarterly</em>, 43(3), iii-viii. <a href="https://aisel.aisnet.org/misq/vol43/iss3/2/">link</a>
+</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -840,5 +1179,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/revision.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/revision.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

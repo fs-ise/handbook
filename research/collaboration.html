@@ -405,8 +405,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#git-based-collaboration" id="toc-git-based-collaboration" class="nav-link" data-scroll-target="#git-based-collaboration">Git-based collaboration</a></li>
+  <li><a href="#git-based-collaboration-with-word-users" id="toc-git-based-collaboration-with-word-users" class="nav-link" data-scroll-target="#git-based-collaboration-with-word-users">Git-based collaboration with Word users</a></li>
+  <li><a href="#word-based-collaboration" id="toc-word-based-collaboration" class="nav-link" data-scroll-target="#word-based-collaboration">Word-based collaboration</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/collaboration.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -430,9 +440,140 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.16.collaboration.html</p>
+<p>{: .no_toc }</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>{: .no_toc .text-delta }</p>
+<ul>
+<li>TOC {:toc}</li>
+</ul>
+</section>
+<section id="git-based-collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="git-based-collaboration">Git-based collaboration</h2>
+<p>TODO : this will contain best practices and Git commands</p>
+<p>{: .text-center}</p>
+<pre class="mermaid"><code>gitGraph TB:
+   commit id: "setup"
+   commit id: "research_objectives"
+   branch author_2
+   branch author_3
+   checkout author_2
+   commit id: "methods_draft"
+   checkout main
+   merge author_2
+   checkout author_3
+   commit id: "data collection"
+   commit id: "analysis"
+   checkout main
+   merge author_3
+   commit id: "paper draft"
+   commit id: "finalize paper" tag: "submission" type: HIGHLIGHT</code></pre>
+<p>{: .text-center}</p>
+<pre class="mermaid"><code>gitGraph TB:
+   commit id: "finalize paper" tag: "submission" type: HIGHLIGHT
+   commit id: "revision_sheet"
+
+   branch author_2
+   branch author_3
+   checkout author_2
+   commit id: "address issue_1"
+   commit id: "write response"
+   checkout main
+   merge author_2
+   checkout author_3
+   commit id: "address issue_2"
+   checkout main
+   merge author_3
+   commit id: "complete revision"</code></pre>
+<!-- illustrations similar to: https://link.springer.com/article/10.1186/1751-0473-8-7/figures/3 -->
+<p>Changes are tracked by the collaborative versioning system git. Tutorials on git are available online (<a href="https://learngitbranching.js.org/" target="_blank">1</a>, <a href="https://github.com/jlord/git-it-electron" target="_blank">2</a>).</p>
+<p><strong>Contributing changes</strong></p>
+<ul>
+<li>Check the git-diff (gitk) before committing changes.</li>
+<li>Use the following commit message format (do not start commit message with #3):</li>
+</ul>
+<pre class="shell"><code>git commit -m 'address limitations [iss28]'</code></pre>
+<ul>
+<li>Commit minor changes directly to the <code>polishing</code> branch, use dedicated branches otherwise (especially when changes need to be discussed in a pull-request).</li>
+<li>Create a single branch for issues that are related (e.g., group all issues referring to the introduction in the branch <code>update_introduction</code>).</li>
+<li>Example:</li>
+</ul>
+<pre class="shell"><code>git switch main
+git checkout -b iss12</code></pre>
+<ul>
+<li>While working locally on the iss12, rebase it on main when the main branch has been updated by coauthors (for better management of the history):</li>
+</ul>
+<pre class="shell"><code>git switch iss12
+git rebase main</code></pre>
+<ul>
+<li>Once the branch is ready for review, revisions, and merging, share it:</li>
+</ul>
+<pre class="shell"><code>git push iss12
+# set the upstream branch as suggested</code></pre>
+<ul>
+<li>Do not rebase shared branches while working on it.</li>
+<li>Discuss, revise and merge on shared branches (github.com).</li>
+<li>Merge when changes have been confirmed:</li>
+</ul>
+<pre class="shell"><code>git switch main
+git merge --squash iss12
+git push</code></pre>
+<p><strong>Retrieving changes from coauthors</strong></p>
+<ul>
+<li>Check out remote branch:</li>
+</ul>
+<pre class="shell"><code>git switch -c iss12 --track origin/iss12</code></pre>
+<ul>
+<li>When your repository has local changes (commits): pull-rebase to avoid unnecessary merge commits:</li>
+</ul>
+<pre class="shell"><code>git pull --rebase</code></pre>
+<ul>
+<li>When your repository has local changes (uncommitted): stash and pull-rebase:</li>
+</ul>
+<pre class="shell"><code>git stash
+git pull --rebase
+git stash apply</code></pre>
+</section>
+<section id="git-based-collaboration-with-word-users" class="level2">
+<h2 class="anchored" data-anchor-id="git-based-collaboration-with-word-users">Git-based collaboration with Word users</h2>
+<p>{: .highlight } Whenever possible, <strong>ask active coauthors to modify the paper.md file</strong>.</p>
+<p>Otherwise:</p>
+<ul>
+<li><p>To share: create a commit with the latest changes.</p></li>
+<li><p>Export paper as word file.</p></li>
+<li><p>Filename: increment the version number with every docx file that is shared externally (example: <code>Manuscript_v11.docx</code>).</p></li>
+<li><p>For you own reference, you may store the same file in a local directory, including the hash-id of the latest commit as the second part of the filename (example: <code>Manuscript_v11 d091j209fs8.docx</code>). This can be useful to track the mapping between version numbers and the corresponding hash-id (git history).</p></li>
+<li><p>When receiving feedback in the docx: always make sure that feedback (including tracked and untracked changes) is transferred to the paper manually.</p>
+<ul>
+<li>Create PDF from word with tracked changes (it is important to know which ones have/have not been addressed rather than having a Word-file in which all changes have been accepted/issues addressed - this is done in the paper.md.).</li>
+<li>While addressing the comments: highlight suggestions that have been addressed in green (strike out suggestions that will not be addressed), and possibly provide comments on how issues have been addressed (why this way?).</li>
+<li>Typos and very minor comments: address in one commit (e.g., “fix spelling errors”)</li>
+<li>Other comments: address in individual commits (possibly including the comment-ids generated by the word-to-pdf export in the commit message)</li>
+<li>Major issues: include in the readme.md (possibly discuss with coauthors) and address in a separate branch</li>
+</ul></li>
+</ul>
+</section>
+<section id="word-based-collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="word-based-collaboration">Word-based collaboration</h2>
+<p>Collaborating on Word documents (without Git versioning)</p>
+<ol type="1">
+<li><p><strong>Create Shared Cloud Folder</strong>: Use cloud platforms like Dropbox or GoogleDocs for easy access to the latest version (or real-time collaboration).</p></li>
+<li><p><strong>Distribute Tasks</strong>: Assign specific sections to team members (e.g., introduction, methods, conclusion) or avoid parallel work to prevent overwriting changes.</p></li>
+<li><p><strong>Use Track Changes</strong>: Enable “Track Changes” for transparency in edits and feedback, and resolve comments to keep the document clean.</p></li>
+<li><p><strong>Create Versions</strong>: Save incremental versions of the document (e.g., <code>paper_v1.docx</code>, <code>paper_v2.docx</code>) to ensure progress is tracked.</p></li>
+<li><p><strong>Decide on Reference Manager</strong>: Choose a reference manager (e.g., Zotero, Mendeley) and plugin for consistent citation formatting and easy management of references.</p></li>
+</ol>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://link.springer.com/article/10.1186/1751-0473-8-7" target="_blank">Git can facilitate greater reproducibility and increased transparency in science</a></li>
+<li><a href="https://journals.sagepub.com/doi/full/10.1177/2515245918754826" target="_blank">Curating Research Assets: A Tutorial on the Git Version Control System</a></li>
+<li><a href="https://coderefinery.github.io/github-without-command-line/" target="_blank">CodeRefinery: Collaborating and sharing using GitHub without command line</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -840,5 +981,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/collaboration.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/collaboration.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

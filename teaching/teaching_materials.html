@@ -374,8 +374,28 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input">Input</a></li>
+  <li><a href="#page" id="toc-page" class="nav-link" data-scroll-target="#page">Page</a></li>
+  <li><a href="#repository-setup" id="toc-repository-setup" class="nav-link" data-scroll-target="#repository-setup">Repository Setup</a></li>
+  <li><a href="#notebooks-and-exercises" id="toc-notebooks-and-exercises" class="nav-link" data-scroll-target="#notebooks-and-exercises">Notebooks and Exercises</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#teaching-notes" id="toc-teaching-notes" class="nav-link" data-scroll-target="#teaching-notes">Teaching notes</a>
+  <ul class="collapse">
+  <li><a href="#week-1-topics-teaching-notes" id="toc-week-1-topics-teaching-notes" class="nav-link" data-scroll-target="#week-1-topics-teaching-notes">Week 1: Topics (Teaching notes)</a></li>
+  <li><a href="#intro-and-instructor" id="toc-intro-and-instructor" class="nav-link" data-scroll-target="#intro-and-instructor">Intro and instructor </a><a id="intro" class="nav-link" data-scroll-target="undefined"></a></li>
+  </ul></li>
+  <li><a href="#terminal-animations-asciinema" id="toc-terminal-animations-asciinema" class="nav-link" data-scroll-target="#terminal-animations-asciinema">Terminal animations (asciinema)</a></li>
+  <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">Feedback</a></li>
+  <li><a href="#possible-extensions" id="toc-possible-extensions" class="nav-link" data-scroll-target="#possible-extensions">Possible extensions</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/teaching_materials.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -399,9 +419,188 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.08.teaching_materials.html</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is marked as “toupdate”: update ’Additionals checks (VC)</p>
+</div>
+</div>
+<p>{: .no_toc }</p>
+<p>Best practices and resources for preparing teaching materials.</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>{: .no_toc .text-delta }</p>
+<ul>
+<li>TOC {:toc}</li>
+</ul>
+</section>
+<section id="input" class="level2">
+<h2 class="anchored" data-anchor-id="input">Input</h2>
+<ul>
+<li>Check other courses <a href="30.06.degree-programs.html">here</a></li>
+<li>Create an overview of related courses in the REAMDE.md file.</li>
+</ul>
+</section>
+<section id="page" class="level2">
+<h2 class="anchored" data-anchor-id="page">Page</h2>
+<ul>
+<li>Each course should have a separate repository and page.</li>
+<li>Options to provide feedback should be linked on the first page.</li>
+</ul>
+</section>
+<section id="repository-setup" class="level2">
+<h2 class="anchored" data-anchor-id="repository-setup">Repository Setup</h2>
+<p>A teaching repository contains</p>
+<ul>
+<li>A syllabus (<a href="https://digital-work-lab.github.io/open-source-project/docs/syllabus.html" target="_blank">example</a>)</li>
+<li>Detailed teaching notes allow teaching assistants to replicate it quickly.</li>
+<li>Links related to continuous improvement: <strong>feedback</strong>, <strong>evaluations</strong>, <strong>improvement</strong>.</li>
+<li>Add branch protection rule for <code>main</code>: restrict deletions and block force pushes</li>
+</ul>
+<p>Additional checks:</p>
+<ul>
+<li>Dates, rooms, and links should be in one place to prevent inconsistent information.</li>
+<li>VC links never point to a specific course but to a search in VC (e.g., for the <a href="https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B" target="_blank">project</a>).</li>
+<li>Teaching contents are licensed under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">CC-BY license</a> per default.</li>
+</ul>
+</section>
+<section id="notebooks-and-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="notebooks-and-exercises">Notebooks and Exercises</h2>
+<p>We use Jupyter notebooks for exercises.</p>
+<p>Resources</p>
+<ul>
+<li><a href="https://coderefinery.github.io/jupyter/" target="_blank">CodeRefinery on Jupyter Notebooks</a></li>
+<li><a href="https://www.epfl.ch/education/educational-initiatives/jupyter-notebooks-for-education/teaching-and-learning-with-jupyter-notebooks/exercise-worksheets-with-jupyter-notebooks/" target="_blank">Exercise worksheets with Jupyter notebooks</a></li>
+<li><a href="https://github.com/yaozeliang/Python-100-exercises-notebook" target="_blank">Example 1</a></li>
+<li><a href="https://github.com/jerry-git/learn-python3?tab=readme-ov-file" target="_blank">Example 2</a></li>
+</ul>
+</section>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<ul>
+<li>Slides are in Markdown.</li>
+<li>HTML and PDF versions are automatically generated (e.g., GitHub actions).</li>
+<li>Learning objectives should be on all slides (verifiable outcomes).</li>
+<li>Use markers for tasks/questions (see <a href="https://digital-work-lab.github.io/literature-review-seminar/output/01-goals.html#4" target="_blank">example</a>)</li>
+</ul>
+</section>
+<section id="teaching-notes" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-notes">Teaching notes</h2>
+<ul>
+<li>Teaching notes are shared and updated regularly.</li>
+</ul>
+<section id="week-1-topics-teaching-notes" class="level3">
+<h3 class="anchored" data-anchor-id="week-1-topics-teaching-notes">Week 1: Topics (Teaching notes)</h3>
+<p>{: .no_toc }</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Time (min)</th>
+<th>Duration</th>
+<th>Topic</th>
+<th>Additional materials</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-10</td>
+<td>10</td>
+<td><a href="#intro">Intro and instructor background</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10-25</td>
+<td>15</td>
+<td><a href="#what-you-will-learn">What you will learn</a></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>50-80</td>
+<td>30</td>
+<td><a href="#orientation-in-open-source-projects">Orientation in Open Source projects</a></td>
+<td>Group task, discussing solutions afterwards</td>
+</tr>
+<tr class="even">
+<td>80-90</td>
+<td>10</td>
+<td><a href="#next-steps">Next steps</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>{: .objective } &gt; In this session, our goal is to …. (competencies)</p>
+<p>Summary of last session.</p>
+</section>
+<section id="intro-and-instructor" class="level3">
+<h3 class="anchored" data-anchor-id="intro-and-instructor">Intro and instructor <a id="intro"></a></h3>
+<p>{: .no_toc }</p>
+<ul>
+<li>Contents (e.g., photo of the board writing)</li>
+<li>Highlight areas that can be shortened (optional)</li>
+<li>Additional challenges and tasks for students</li>
+<li>Typical questions raised (common errors)</li>
+</ul>
+<p>Summarize lessons learned.</p>
+<p>{: .info } &gt; <strong>Page breaks for PDFs/print</strong> &gt; &gt; &lt;div class="page-break"&gt;&lt;/div&gt;</p>
+</section>
+</section>
+<section id="terminal-animations-asciinema" class="level2">
+<h2 class="anchored" data-anchor-id="terminal-animations-asciinema">Terminal animations (asciinema)</h2>
+<p>Installation</p>
+<pre><code>pip install asciinema
+git clone https://github.com/asciinema/agg
+cd agg
+docker build -t agg .</code></pre>
+<p>Recording and conversion</p>
+<pre><code>asciinema rec demo.cast
+# code ...
+# ctrl+d to quit
+# convert:
+docker run --rm -it -u $(id -u):$(id -g) -v $PWD:/data agg demo.cast demo.gif</code></pre>
+</section>
+<section id="feedback" class="level2">
+<h2 class="anchored" data-anchor-id="feedback">Feedback</h2>
+<ul>
+<li>Limesurvey</li>
+<li><a href="https://rustpad.io/#GCUiny" target="_blank">Rustpad</a> for anonymous feedback/suggestions (contents are deleted after 1 day of inactivity)</li>
+</ul>
+<p>Embedding Google Forms (anonymous responses possible):</p>
+<pre><code>&lt;style&gt;
+blockquote {
+    border-top: 0.1em;
+    font-size: 60%;
+    margin-top: auto;
+}
+&lt;/style&gt;
+
+&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeACViOkyuuG3Bvz4Dhq1yA-Fm8WTPiRst5D_IxK3UuRyFzjg/viewform?embedded=true" width="100%" height="90%" frameborder="" marginheight="0" marginwidth="0"&gt;Wird geladen…&lt;/iframe&gt;
+
+&gt; Open [responses](https://docs.google.com/forms/d/1Wa_MNL3zClW7j-1NPm31PIP7pXs7QqLnZPi4oefA_gA/edit#responses){target=_blank}</code></pre>
+</section>
+<section id="possible-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="possible-extensions">Possible extensions</h2>
+<ul>
+<li>Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)</li>
+<li>reveal-js</li>
+<li>workflows (quality checks)</li>
+<li>setup of exercises</li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://coderefinery.github.io/documentation/guide/" target="_blank">Instructor guide</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -809,5 +1008,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/teaching_materials.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/teaching_materials.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

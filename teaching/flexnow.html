@@ -374,8 +374,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#system" id="toc-system" class="nav-link active" data-scroll-target="#system">System</a></li>
+  <li><a href="#create-courses" id="toc-create-courses" class="nav-link" data-scroll-target="#create-courses">Create courses</a></li>
+  <li><a href="#entering-grades" id="toc-entering-grades" class="nav-link" data-scroll-target="#entering-grades">Entering grades</a></li>
+  <li><a href="#erasmus-students" id="toc-erasmus-students" class="nav-link" data-scroll-target="#erasmus-students">ERASMUS students</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/flexnow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -399,9 +408,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.15.flexnow.html</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is marked as “toupdate”: completely update</p>
+</div>
+</div>
+<section id="system" class="level2">
+<h2 class="anchored" data-anchor-id="system">System</h2>
+<p>{: .text-center}</p>
+<p><a href="https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login">FlexNow</a>{: .btn .btn-green target=“_blank”}</p>
+</section>
+<section id="create-courses" class="level2">
+<h2 class="anchored" data-anchor-id="create-courses">Create courses</h2>
+<ul>
+<li>In der Regel bereits vorhandene LV kopieren</li>
+<li>FlexNow - Menü - LV-Verwaltung - LV wählen - Kopieren nach Semester xy</li>
+</ul>
+</section>
+<section id="entering-grades" class="level2">
+<h2 class="anchored" data-anchor-id="entering-grades">Entering grades</h2>
+<p>{: .info } The grading process is documented <a href="30.59.exams.html">here</a>.</p>
+<ul>
+<li><a href="https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login" target="_blank">Login: FlexNow</a> - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</li>
+<li>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</li>
+<li>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</li>
+<li>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester: “Noten endgültig freischalten und verbuchen” (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71" target="_blank">14.01</a>). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</li>
+<li>Only store grades as PDF (not as csv)?</li>
+<li>Klausuren entsprechend der Reihenfolge im PDF sortieren.</li>
+</ul>
+<p>Projekt:</p>
+<ul>
+<li>Dezentral</li>
+<li>“Teilnehmer hinzufügen”</li>
+<li>Noten eintragen</li>
+<li>Noten freigeben</li>
+<li>Noten als PDF in 14.02 ablegen (ggf. Excel-Datei löschen)</li>
+</ul>
+<p>{: .highlight } &gt; If grades cannot be entered, reach out to the FlexNow team via e-mail: <a href="mailto:flexnow@uni-bamberg.de%3E">flexnow@uni-bamberg.de</a>.</p>
+</section>
+<section id="erasmus-students" class="level2">
+<h2 class="anchored" data-anchor-id="erasmus-students">ERASMUS students</h2>
+<p>For ERASMUS students, the FlexNow team has to assign students to modules. Use the following e-mail template:</p>
+<pre><code>Betreff: Anlage eines Moduls für ERASMUS Studierende
+
+Liebe Kolleginnen und Kollegen des FlexNow-Teams,
+
+Darf ich Sie bitten, in FlexNow das nachstehende Modul für die unten genannten ERASMUS-Studierenden anzulegen:
+
+* **Modulhandbuch:** Modulhandbuch Bachelor Wirtschaftsinformatik – Studienbeginn ab dem WS 2024/2025
+* **Modultitel:** LV\_721\_114387\_1\_81\_1 – Digital-Work-Projekt-B: Bachelorprojekt aus der Fächergruppe Wirtschaftsinformatik (Wagner)
+
+Für folgende Studierende:
+
+* Student name (student ID)
+* Student name (student ID)
+* Student name (student ID)
+
+Vielen Dank im Voraus!
+
+Mit freundlichen Grüßen
+Gerit Wagner</code></pre>
+<p>Once students can be selected, double-check the number of ECTS before submitting grades.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -809,5 +887,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/flexnow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/flexnow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

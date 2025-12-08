@@ -405,8 +405,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#general-guidelines" id="toc-general-guidelines" class="nav-link" data-scroll-target="#general-guidelines">General guidelines</a></li>
+  <li><a href="#template" id="toc-template" class="nav-link" data-scroll-target="#template">Template</a></li>
+  <li><a href="#structure-and-contents" id="toc-structure-and-contents" class="nav-link" data-scroll-target="#structure-and-contents">Structure and Contents</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/presentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -430,9 +440,108 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.28.presentation.html</p>
+<p>{: .no_toc }</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>{: .no_toc .text-delta }</p>
+<ul>
+<li>TOC {:toc}</li>
+</ul>
+</section>
+<section id="general-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="general-guidelines">General guidelines</h2>
+<ul>
+<li>Adapt to the audience</li>
+<li>Prepare a short elevator pitch</li>
+<li>Plan for eventualities (e.g., no Internet/WIFI connection available)</li>
+<li>Make slides available [TODO : link repo] and allow participants to connect/give feedback (TODO : add suggestions)</li>
+<li>Communicate a clear reason why your audience should be interested in your presentation (in particular when some participants are required to attend)</li>
+<li>When appropriate: start with a bold pitch like “After this talk, you will do … differently.”</li>
+<li>When appropriate, use storytelling to make the presentation memorable</li>
+</ul>
+</section>
+<section id="template" class="level2">
+<h2 class="anchored" data-anchor-id="template">Template</h2>
+<ul>
+<li><a href="https://github.com/digital-work-lab/slides" target="_blank">Marp</a> template</li>
+</ul>
+<p>To include a Mermaid diagram:</p>
+<pre><code>&lt;script type="module"&gt;
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+&lt;/script&gt;
+
+&lt;div class="mermaid"&gt;
+  graph LR;
+  a --&gt; b;
+  b --&gt; c;
+  c --&gt; a;
+&lt;/div&gt;</code></pre>
+<p>Callout box:</p>
+<pre><code>&lt;style&gt;
+.callout {
+  border-left: 5px solid #007acc;
+  background-color: #f0f8ff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+
+&lt;div class="callout"&gt;
+  &lt;strong&gt;Note:&lt;/strong&gt; Text</code></pre>
+<p>Footnote:</p>
+<pre><code>&lt;style&gt;
+blockquote {
+    border-top: 0.1em;
+    font-size: 60%;
+    margin-top: auto;
+}
+&lt;/style&gt;
+
+&gt; Note...
+
+&lt;style&gt;
+blockquote {
+    border-top: 0.1em;
+    font-size: 60%;
+    margin-top: auto;
+    padding-left: 40px;
+    text-indent: -30px;
+    text-align: justify;
+}
+&lt;/style&gt;
+
+&gt; Raymond, L., Paré, D., Doyon, O. and Wagner, G. “Understanding nurses’ intention to use artificial intelligence technologies in their clinical practice: A survey-based configurational analysis“. Under review at the *Journal of Advanced Nursing* (minor revision).</code></pre>
+<p>References:</p>
+<pre><code>&lt;span class="citation"&gt;(Ringeval et al., 2020; Li et al., 2025)&lt;/span&gt;
+
+&lt;style scoped&gt;
+p {
+    padding-left: 36px;
+    text-indent: -36px;
+    font-size: 75%;
+    text-align: justify;
+}
+&lt;/style&gt;
+&lt;!-- font-size: 12px; /* or any size you prefer, e.g., 12px */ --&gt;
+
+Castonguay, A., Wagner, G., Motulsky, A., and Paré, G. 2024. “AI Maturity in Health Care: An Overview of 10 OECD Countries“. *Health Policy*, 140, p.104938.</code></pre>
+</section>
+<section id="structure-and-contents" class="level2">
+<h2 class="anchored" data-anchor-id="structure-and-contents">Structure and Contents</h2>
+<ul>
+<li>TODO</li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/rafaelbailo/betterposter-latex-template" target="_blank">Better Poster Latex Template</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -840,5 +949,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/presentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/presentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -433,8 +433,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#system-and-software-updates" id="toc-system-and-software-updates" class="nav-link active" data-scroll-target="#system-and-software-updates">System and software updates</a></li>
+  <li><a href="#backups" id="toc-backups" class="nav-link" data-scroll-target="#backups">Backups</a></li>
+  <li><a href="#passwords" id="toc-passwords" class="nav-link" data-scroll-target="#passwords">Passwords</a></li>
+  <li><a href="#confidential-data-and-communication" id="toc-confidential-data-and-communication" class="nav-link" data-scroll-target="#confidential-data-and-communication">Confidential data and communication</a></li>
+  <li><a href="#authentication-and-access" id="toc-authentication-and-access" class="nav-link" data-scroll-target="#authentication-and-access">Authentication and access</a></li>
+  <li><a href="#spam-or-abusive-language-in-open-github-repositories" id="toc-spam-or-abusive-language-in-open-github-repositories" class="nav-link" data-scroll-target="#spam-or-abusive-language-in-open-github-repositories">Spam or abusive language in open GitHub repositories</a></li>
+  <li><a href="#travel" id="toc-travel" class="nav-link" data-scroll-target="#travel">Travel</a></li>
+  <li><a href="#general-security-practices" id="toc-general-security-practices" class="nav-link" data-scroll-target="#general-security-practices">General Security Practices</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/security.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,9 +472,90 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.72.security.html</p>
+<section id="system-and-software-updates" class="level2">
+<h2 class="anchored" data-anchor-id="system-and-software-updates">System and software updates</h2>
+<ul>
+<li>Keep your operating system and software up-to-date, enable automatic updates</li>
+<li>Regularly uninstall unnecessary software to reduce potential vulnerabilities</li>
+<li>Run antivirus software</li>
+<li>Lock the screen when you leave the room (enable auto-lock after 3 min)</li>
+<li><em>Optional: Turn on disk encryption</em></li>
+<li><em>Optional: Document your setup</em></li>
+<li><em>Optional: Use sandboxing or virtualization for testing software or opening unknown files</em></li>
+</ul>
+</section>
+<section id="backups" class="level2">
+<h2 class="anchored" data-anchor-id="backups">Backups</h2>
+<ul>
+<li>Regular backups on an external device, at least weekly (e.g., <a href="https://github.com/bit-team/backintime" target="_blank">Back-in-time</a> (Linux) or <a href="https://github.com/kopia/kopia?tab=readme-ov-file" target="_blank">Kopia</a>)</li>
+<li>Share Git repositories on GitHub and with the team (publishing and distributing data across multiple devices is a useful measure against ransomware attacks)</li>
+<li>Test backups periodically to ensure data integrity and accessibility</li>
+<li><em>Optional: Create a plan for quick recovery after data loss</em></li>
+</ul>
+</section>
+<section id="passwords" class="level2">
+<h2 class="anchored" data-anchor-id="passwords">Passwords</h2>
+<ul>
+<li>Use strong passwords</li>
+<li>Use different passwords for different accounts</li>
+<li>Understand phishing attacks targeting password theft</li>
+<li><em>Optional: Use a password manager (such as <a href="https://keepass.info/" target="_blank">KeePass</a>)</em></li>
+<li><em>Optional: Regularly change passwords, especially after suspected breaches</em></li>
+</ul>
+</section>
+<section id="confidential-data-and-communication" class="level2">
+<h2 class="anchored" data-anchor-id="confidential-data-and-communication">Confidential data and communication</h2>
+<ul>
+<li>Store sensitive data (such as grades) in directories with restricted access rights and do not postit online without consent</li>
+<li>Use a Nextcloud directory for sharing data (<strong>TODO</strong>: link description)</li>
+<li>Prefer end-to-end encrypted channels</li>
+<li>Be aware of <a href="https://www.bsi.bund.de/EN/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Social-Engineering/social-engineering_node.html" target="_blank">phishing and social engineering attacks</a></li>
+<li><em>Optional: Classify confidential data in the handbook (see <a href="https://digital-work-lab.github.io/handbook/docs/10-lab/11_hr.html" target="_blank">example</a>)</em></li>
+<li><em>Optional: <a href="https://www.uni-bamberg.de/its/dienstleistungen/iam/zertifikate/e-mail/" target="_blank">Sign your E-Mails</a></em></li>
+</ul>
+</section>
+<section id="authentication-and-access" class="level2">
+<h2 class="anchored" data-anchor-id="authentication-and-access">Authentication and access</h2>
+<ul>
+<li>Use 2-factor authentication whenever possible</li>
+<li>Give access to confidential data only when needed and revoke it when it is no longer required</li>
+<li>For confidential data: Apply the principle of least privilege (users should have only the access necessary for their roles)</li>
+</ul>
+</section>
+<section id="spam-or-abusive-language-in-open-github-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="spam-or-abusive-language-in-open-github-repositories">Spam or abusive language in open GitHub repositories</h2>
+<ul>
+<li><em>Optional: See <a href="https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam" target="_blank">block or report users</a></em></li>
+</ul>
+</section>
+<section id="travel" class="level2">
+<h2 class="anchored" data-anchor-id="travel">Travel</h2>
+<ul>
+<li>Do not leave your equipment out of sight</li>
+<li>Do not log into your online accounts on other devices</li>
+<li>Turn off your computer and phone completely when traveling across borders and checkpoints</li>
+<li><em>Optional: Do not use public WiFi hotspots or charging stations</em></li>
+<li><em>Optional: Use VPN and communicate through encrypted channels</em></li>
+<li><em>Optional: Use privacy screens to prevent shoulder surfing when working in public spaces, do not work on confidential data when others can see your screen</em></li>
+</ul>
+</section>
+<section id="general-security-practices" class="level2">
+<h2 class="anchored" data-anchor-id="general-security-practices">General Security Practices</h2>
+<ul>
+<li>Educate team members with regular security training on the latest threats and best practices</li>
+<li>Maintain a clear incident response plan for addressing breaches or malware infections</li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://defendourmovements.org/5-tips-for-online-self-defense/" target="_blank">Digital Self Defense</a></li>
+<li><a href="https://www.digitale-gesellschaft.ch/ratgeber/en/" target="_blank">Ratgeber, Digitale Gesellschaft</a></li>
+<li><a href="https://github.com/Lissy93/personal-security-checklist/blob/HEAD/CHECKLIST.md" target="_blank">personal-security-checklist</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -868,5 +963,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/security.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/security.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

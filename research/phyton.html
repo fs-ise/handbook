@@ -405,8 +405,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#python-packages" id="toc-python-packages" class="nav-link active" data-scroll-target="#python-packages">Python packages</a></li>
+  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link" data-scroll-target="#virtual-environments">Virtual environments</a></li>
+  <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies">Dependencies</a></li>
+  <li><a href="#linter" id="toc-linter" class="nav-link" data-scroll-target="#linter">Linter</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/phyton.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -430,9 +439,97 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.22.python.html</p>
+<p>{: .no_toc }</p>
+<p>Use a current version of Python, but not a pre-release version. See <a href="https://devguide.python.org/versions/" target="_blank">status of Python versions</a>.</p>
+<section id="python-packages" class="level2">
+<h2 class="anchored" data-anchor-id="python-packages">Python packages</h2>
+<ul>
+<li><a href="https://github.com/astral-sh/uv" target="_blank">uv</a> is recommended for package management.</li>
+<li><a href="https://py-pkgs.org/welcome" target="_blank">Guide for Python Package Development</a></li>
+<li>pyOpenSci provides a useful <a href="https://www.pyopensci.org/python-package-guide/" target="_blank">guide</a>.</li>
+</ul>
+</section>
+<section id="virtual-environments" class="level2">
+<h2 class="anchored" data-anchor-id="virtual-environments">Virtual environments</h2>
+<p>Virtual environments (<a href="https://realpython.com/python-virtual-environments-a-primer/" target="_blank">venv</a>) are required to run Python code.</p>
+<pre><code># sudo apt-get install python3-venv
+python -m venv venv
+source venv/bin/activate
+# python -m pip install --upgrade pip
+# python -m pip install -e .
+deactivate</code></pre>
+</section>
+<section id="dependencies" class="level2">
+<h2 class="anchored" data-anchor-id="dependencies">Dependencies</h2>
+<p>If the Python code is not managed as a package, a requirements.txt file should be created.</p>
+</section>
+<section id="linter" class="level2">
+<h2 class="anchored" data-anchor-id="linter">Linter</h2>
+<p><a href="https://github.com/psf/black-pre-commit-mirror" target="_blank">Black</a> and <a href="https://www.pylint.org/" target="_blank">pylint</a> are recommended linters. They should be used part of the <code>.pre-commit-config.yaml</code>:</p>
+<pre><code>repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    -   id: trailing-whitespace
+        exclude: status.txt|readme.md
+    -   id: end-of-file-fixer
+        exclude: bib$|txt$
+    -   id: check-docstring-first
+    -   id: debug-statements
+    -   id: name-tests-test
+-   repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 24.4.2
+    hooks:
+      - id: black
+        language_version: python3
+-   repo: https://github.com/PyCQA/autoflake
+    rev: v2.3.1
+    hooks:
+    -   id: autoflake
+-   repo: https://github.com/PyCQA/flake8
+    rev: 7.0.0
+    hooks:
+    -   id: flake8
+        additional_dependencies: [flake8-typing-imports==1.12.0]
+        args: ['--max-line-length=110', '--extend-ignore=E203,TYP006']
+-   repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.13.0
+    hooks:
+    -   id: reorder-python-imports
+        args: [--py3-plus]
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.16.0
+    hooks:
+    -   id: pyupgrade
+        args: [--py36-plus, --keep-runtime-typing]
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.10.0'
+    hooks:
+    -   id: mypy
+        args: [--disallow-untyped-defs, --disallow-incomplete-defs, --disallow-untyped-calls]
+        additional_dependencies: [types-toml]
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.4.8
+  hooks:
+    - id: ruff # runs faster than pylint
+      args: [--fix, --exit-non-zero-on-fix]
+- repo: local
+  hooks:
+    - id: pylint
+      name: pylint
+      entry: pylint
+      language: system
+      types: [python]
+      files: colrev
+      args:
+        [
+          "-rn", # Only display messages
+          "-sn", # Don't display the score
+        ]
+</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -840,5 +937,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/phyton.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/phyton.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

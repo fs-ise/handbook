@@ -433,8 +433,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#administration" id="toc-administration" class="nav-link" data-scroll-target="#administration">Administration</a></li>
+  <li><a href="#preparing-the-exam" id="toc-preparing-the-exam" class="nav-link" data-scroll-target="#preparing-the-exam">Preparing the exam</a></li>
+  <li><a href="#preparing-materials" id="toc-preparing-materials" class="nav-link" data-scroll-target="#preparing-materials">Preparing materials</a></li>
+  <li><a href="#examination-day" id="toc-examination-day" class="nav-link" data-scroll-target="#examination-day">Examination day</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#enter-grades-in-flexnow" id="toc-enter-grades-in-flexnow" class="nav-link" data-scroll-target="#enter-grades-in-flexnow">Enter grades in FlexNow</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/exams.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,9 +470,112 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.59.exams.html</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is marked as “toupdate”: update completely</p>
+</div>
+</div>
+<p>{: .no_toc }</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>{: .no_toc .text-delta }</p>
+<ul>
+<li>TOC {:toc}</li>
+</ul>
+</section>
+<section id="administration" class="level2">
+<h2 class="anchored" data-anchor-id="administration">Administration</h2>
+<ul>
+<li>When creating the course in FlexNow, we state that exams will be organized by the examination office (“zentral organisiert”).</li>
+<li>Team Assistant: <a href="../../10-lab/10_processes/10.52.orders.html#examination-documents">order labels etc.</a> (“Etiketten und Mantelbögen”) as needed</li>
+<li>The examination office sends out an e-mail request, asking for the number of additional students (“Meldung der Scheinteilnehmenden”)</li>
+</ul>
+</section>
+<section id="preparing-the-exam" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-the-exam">Preparing the exam</h2>
+<p>{: .resource } &gt; - <a href="https://github.com/digital-work-lab/digital-work-lecture-exam" target="_blank">digital-work-lecture-exam</a> 🔒</p>
+<p><strong>Creating a new exam</strong></p>
+<ul>
+<li>Copy the <code>template_for_copying.tex</code> to archive and rename; Start with the <code>_with_solution.tex</code></li>
+<li>Update the header (semester)</li>
+<li>Check admissible auxiliaries (<strong>student summaries</strong>)</li>
+<li>Create exam questions (referring to <code>collection_exam_questions_and_solutions.tex</code>)</li>
+<li>Check whether all the contents were covered in the lecture (if sessions were skipped, the contents cannot be covered in the exam)</li>
+<li>Check specific notes in the <code>README.md</code> of the respective exam repository</li>
+<li>Add grading notes, e.g., “Bewertung: pro fehlendem Zustand und Kante: -0,5 Punkte”</li>
+<li>Count points within tasks</li>
+<li>Count points overall</li>
+<li>Check for missing items (A,B,D)</li>
+<li>Spellcheck</li>
+<li>Copy the template and remove the solutions (including multiple-choice checks), update the header</li>
+<li>Update the <code>collection_exam_questions_and_solutions.tex</code></li>
+<li>When the exams are not printed immediately, add a reminder to include the student summaries (if applicable)</li>
+</ul>
+<p><strong>Print</strong></p>
+<ul>
+<li>Print exams</li>
+<li>Add student summaries (if applicable)</li>
+</ul>
+</section>
+<section id="preparing-materials" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-materials">Preparing materials</h2>
+<ul>
+<li>Examination documents by mail</li>
+<li>Envelope includes:
+<ul>
+<li>Important exam documents for your central exams</li>
+<li>Checklist for completing the written exams</li>
+<li>Name labels</li>
+<li>Examination protocol</li>
+<li>Event log during an exam</li>
+<li>Name notices</li>
+<li>Signs “Please do not disturb the exam.”</li>
+<li>Attendance list/paper check</li>
+<li>Checklist “Examination Process Flow”</li>
+<li>Supervision guidelines</li>
+<li>Information sheet on canceling an exam for health reasons</li>
+<li>Participants during maternity leave, “Scheinteilnehmende”, etc.</li>
+</ul></li>
+<li>Professor includes the exam sheet (and summaries if applicable)</li>
+</ul>
+</section>
+<section id="examination-day" class="level2">
+<h2 class="anchored" data-anchor-id="examination-day">Examination day</h2>
+<ul>
+<li>Examination dates are announced via email by the examination office</li>
+<li>Materials are provided by the professor</li>
+<li>The secretariat will receive further important information by email, for example, on the topic of “identification after exams” (“Nachträgliche Identitätsfeststellung”)</li>
+</ul>
+<p>{: .important } &gt; - Cases of cheating (Unterschleif): immediately enter it into FlexNow and send the exam to the examination office (do not grade it) &gt; - Cases of missed exams (Versäumnisklausuren): immediately enter it into FlexNow, archive the exams for 1 year in the filing cabinet. &gt; - Send the exam sheets, protocols (Anwesenheitslisten), and two empty exams to the examination office immediately after the exams are completed. &gt; - Empty exams (Versäumnis-Klausur): archive for one semester.</p>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<ul>
+<li>Create a reminder for the deadline: approx. 15. September (summer term), 24. March (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).</li>
+<li>Add bonus points if any and <strong>if exam is passed</strong>. Otherwise, note the bonus points and add a note “kann nicht angerechnet werden”.</li>
+<li>Do not dispose of empty exams</li>
+<li>Use the <a href="https://github.com/digital-work-lab/handbook/tree/main/src/grading" target="_blank">grading scripts</a> to assign grades and prepare FlexNow import</li>
+</ul>
+</section>
+<section id="enter-grades-in-flexnow" class="level2">
+<h2 class="anchored" data-anchor-id="enter-grades-in-flexnow">Enter grades in FlexNow</h2>
+<ul>
+<li>Have failed exams reviewed by a second professor</li>
+<li>Grades are entered in <a href="30.15.flexnow.html#entering-grades">FlexNow</a>.</li>
+<li>Certificates can be issued if exams are not (yet) available in FlexNow (<a href="https://github.com/digital-work-lab/handbook/tree/main/src/scheine" target="_blank">script</a>).</li>
+<li>The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -868,5 +983,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/exams.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/exams.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

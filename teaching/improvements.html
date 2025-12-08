@@ -374,8 +374,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#theses" id="toc-theses" class="nav-link active" data-scroll-target="#theses">Theses</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/improvements.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -399,9 +405,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.22.improvements.html</p>
+<p>In the following, we document our efforts to improve in teaching lectures, projects, seminars, and theses.</p>
+
+{% for course in site.courses %}
+
+{% endfor %}
+<table>
+<thead>
+<tr>
+<th>
+Semester
+</th>
+<th>
+Course
+</th>
+<th>
+Student Evaluations
+</th>
+<th>
+Issue
+</th>
+<th>
+Status
+</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>
+{{ course.semester }}
+</td>
+<td>
+<a href="{{ site.baseurl }}{{ course.url }}">{{ course.title }}</a>
+</td>
+<td>
+{% if course.student_evaluations and course.student_evaluations != “” %} <a href="{{ site.baseurl }}/assets/evaluations/{{ course.student_evaluations }}">PDF</a> {% else %} N/A {% endif %}
+</td>
+<td>
+{% if course.improvement_issue and course.improvement_issue != “” %} <a href="{{ course.improvement_issue }}" target="_blank">Issue</a> {% else %} N/A {% endif %}
+</td>
+<td>
+{% if course.improvement_status %} {{ course.improvement_status }} {% else %} N/A {% endif %}
+</td>
+</tr></tbody>
+</table>
+<section id="theses" class="level2">
+<h2 class="anchored" data-anchor-id="theses">Theses</h2>
+<ul>
+<li>Updates of our <a href="https://github.com/digital-work-lab/theses/commits/main/" target="_blank">documentation</a>, including the new hall-of-fame page and information on the Exposé.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -809,5 +863,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/improvements.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/improvements.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

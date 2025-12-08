@@ -405,8 +405,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/repo_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -430,9 +436,95 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.15.repo-setup.html</p>
+<p>The base structure of a repository contains the following:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File or Folder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>README.md</code></td>
+<td>Readme explaining the project.</td>
+</tr>
+<tr class="even">
+<td><code>paper.md</code></td>
+<td>The paper in Markdown format.</td>
+</tr>
+<tr class="odd">
+<td><code>references.bib</code></td>
+<td>The references in BibTeX format.</td>
+</tr>
+<tr class="even">
+<td><code>data/</code></td>
+<td>Directory containing the data.</td>
+</tr>
+<tr class="odd">
+<td><code>analysis/</code></td>
+<td>Directory containing the code for the analyses.</td>
+</tr>
+<tr class="even">
+<td><code>figures/</code></td>
+<td>Directory containing the figures.</td>
+</tr>
+<tr class="odd">
+<td><code>Makefile</code></td>
+<td>Instructions on how to build the paper and/or run the analysis.</td>
+</tr>
+<tr class="even">
+<td><code>Dockerfile</code></td>
+<td>Instructions on how to build the virtual environment.</td>
+</tr>
+<tr class="odd">
+<td><code>.gitignore</code></td>
+<td>A list of files excluded from git versioning.</td>
+</tr>
+</tbody>
+</table>
+<p>The following templates are available for different use cases:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Use Case</th>
+<th>Template</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paper repository</td>
+<td><a href="20.20.paper-templates.html">Paper template</a></td>
+</tr>
+<tr class="even">
+<td>Analysis repository</td>
+<td><a href="20.21.analysis-templates.html">Analysis template</a></td>
+</tr>
+<tr class="odd">
+<td>Literature review (and paper)</td>
+<td><a href="https://github.com/CoLRev-Environment/colrev" target="_blank">CoLRev repository</a></td>
+</tr>
+</tbody>
+</table>
+<p>The research team can decide to combine repositories (e.g., containing the paper with analyses) or create separate repositories.</p>
+<p>{: .highlight } &gt; - Add the tags <code>research</code> and <code>paper</code> to ensure that the repository is listed correctly in the <a href="../../10-lab/18_resources/18.12.repositories.html">overview</a>. &gt; - Set the <code>MY_PAT_TOKEN</code> as a repository secret (for the Labot workflow)</p>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.toptal.com/developers/gitignore" target="_blank">gitignore</a></li>
+<li><a href="https://cookiecutter-data-science.drivendata.org/" target="_blank">Cookiecutter Data Science template</a></li>
+<li><a href="https://show-your.work/en/latest/" target="_blank">showyourwork</a></li>
+<li><a href="https://third-bit.com/py-rse/provenance.html" target="_blank">Research Software Engineering with Python: Chapter 13 Tracking Provenance</a></li>
+<li><a href="https://forschungsdaten.info/themen/organisieren-und-aufbereiten/kollaboratives-arbeiten/tools-fuer-die-organisation-wissenschaftlicher-datenarbeit/" target="_blank">Organizing scientific work</a></li>
+<li><a href="https://book.the-turing-way.org/reproducible-research/compendia" target="_blank">Research Compendia</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -840,5 +932,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/repo_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/repo_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

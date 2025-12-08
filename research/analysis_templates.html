@@ -405,8 +405,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#repository" id="toc-repository" class="nav-link" data-scroll-target="#repository">Repository</a></li>
+  <li><a href="#directory-structure" id="toc-directory-structure" class="nav-link" data-scroll-target="#directory-structure">Directory structure</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker">Docker</a></li>
+  <li><a href="#useful-links-and-textbooks" id="toc-useful-links-and-textbooks" class="nav-link" data-scroll-target="#useful-links-and-textbooks">Useful links and textbooks</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/analysis_templates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -430,9 +441,94 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.21.analysis-templates.html</p>
+<p>{: .no_toc }</p>
+<p>This page summarizes standards for data analysis, including conventions related to the repository, the directory structure, and the data.</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<p>{: .no_toc .text-delta }</p>
+<ul>
+<li>TOC {:toc}</li>
+</ul>
+</section>
+<section id="repository" class="level2">
+<h2 class="anchored" data-anchor-id="repository">Repository</h2>
+<ul>
+<li>Data should be versioned with Git. Repositories can be hosted and shared on GitHub.</li>
+<li>Visibility may initially be set to private. It is essential <strong>not to publish confidential or copyright protected data</strong> (this may include primary data from surveys, or PDF documents with copyrights owned by publishers)</li>
+<li>Once published, the team decides to switch to public visibility.</li>
+<li>Appropriate linters should be activated.</li>
+<li>See <a href="https://github.com/digital-work-lab/repo_example" target="_blank">repo-example</a>, or <a href="https://github.com/julianprester/deep-cenic" target="_blank">deep-cenic</a> example.</li>
+</ul>
+</section>
+<section id="directory-structure" class="level2">
+<h2 class="anchored" data-anchor-id="directory-structure">Directory structure</h2>
+<pre class="text"><code>├── README.md          &lt;- The top-level README summarizing the project.
+├── CITATION.cff       &lt;- How to cite the work.
+├── Makefile           &lt;- Makefile with commands like `make data` or `make train`.
+├── Dockerfile         &lt;- Docker image to standardize the computational environment.
+├── requirements.txt   &lt;- The requirements file for reproducing the analysis environment.
+├── LICENSE            &lt;- A text file containing the license.
+├── .pre-commit-config.yaml
+|                      &lt;- The configuration for pre-commit hooks
+├── .gitignore         &lt;- Excludes files from versioning
+├── data
+│   ├── external       &lt;- Data from third party sources.
+│   ├── interim        &lt;- Intermediate data that has been transformed.
+│   ├── processed      &lt;- The final, canonical data sets for modeling.
+│   └── raw            &lt;- The original, immutable data dump.
+│
+├── src                &lt;- Source code for use in this project.
+│
+├── reports            &lt;- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures        &lt;- Generated graphics and figures to be used in reporting
+│
+├── docs               &lt;- Data dictionaries, manuals, and all other explanatory materials.</code></pre>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<ul>
+<li>Tabular datasets should follow a <a href="https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html" target="_blank">tidy data structure</a>.</li>
+<li>Preferred file formats include text files like md, txt, csv, py, ipynb, r.</li>
+<li>Binary formats, such as docx, pptx, or xlsx should be avoided.</li>
+<li>Resources on <a href="https://www.uni-bamberg.de/ub/forschen-und-publizieren/forschungsdatenmanagement/" target="_blank">research data management</a> may be helpful.</li>
+</ul>
+</section>
+<section id="docker" class="level2">
+<h2 class="anchored" data-anchor-id="docker">Docker</h2>
+<p>TODO : summarize the use of Docker containers <a href="https://github.com/digital-work-lab/repo_example" target="_blank">see analysis directory</a></p>
+</section>
+<section id="useful-links-and-textbooks" class="level2">
+<h2 class="anchored" data-anchor-id="useful-links-and-textbooks">Useful links and textbooks</h2>
+<ul>
+<li><a href="https://drivendata.github.io/cookiecutter-data-science/" target="_blank">Cookiecutter data-science projects</a></li>
+<li><a href="https://github.com/HumanSignal/awesome-data-labeling" target="_blank">List of tools for labeling tasks</a></li>
+<li><a href="https://vsupalov.com/docker-latest-tag" target="_blank">Blog entry: avoid using Docker:latest</a></li>
+<li>Danchev, V. (2021). Reproducible Data Science with Python. <a href="https://valdanchev.github.io/reproducible-data-science-python/intro.html" target="_blank">link</a></li>
+<li><a href="https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R.html#be-careful-when-using-setwd" target="_blank">R: be careful with setwd()</a></li>
+<li><a href="https://github.com/jakubnowicki/r-codespaces" target="_blank">R in GitHub codespaces</a></li>
+<li><a href="https://datasette.io/" target="_blank">Datasette.io</a></li>
+</ul>
+<!--
+- filenames / column names
+- docstrings
+- Organizing principles
+
+Data checklist:
+- [ ] have all raw data been imported?
+- [ ] have all raw data been checked (for duplicates, import errors, ...)?
+- [ ] create a description/coding_scheme.md describing how the data was collected.
+  - When was it collected?
+  - By whom was it collected?
+  - Which processing steps have been implemented?
+  - Save relevant scripts in 1-raw-data.
+- [ ] are import procedures deterministic (e.g., creation of artificial identifiers)? This is essential when the data is updated
+- [ ] is the csv-format consistent (quotenonnumeric)?
+  - when opening and editing csv-files with Calc (LibreOffice), use "Quoted field as text" (Other options) (Make sure this is a default!)
+- [ ] if the dataset is too big to be included in the git repository: create a symlink and describe where the data is stored
+ -->
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -840,5 +936,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/analysis_templates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/analysis_templates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

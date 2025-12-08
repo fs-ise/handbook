@@ -374,8 +374,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#process" id="toc-process" class="nav-link" data-scroll-target="#process">Process</a></li>
+  <li><a href="#example-for-the-invitation-to-the-evaluation" id="toc-example-for-the-invitation-to-the-evaluation" class="nav-link" data-scroll-target="#example-for-the-invitation-to-the-evaluation">Example for the invitation to the evaluation</a></li>
+  <li><a href="#systems" id="toc-systems" class="nav-link" data-scroll-target="#systems">Systems</a></li>
+  <li><a href="#evaluation-results" id="toc-evaluation-results" class="nav-link" data-scroll-target="#evaluation-results">Evaluation results</a></li>
+  <li><a href="#applicable-regulations" id="toc-applicable-regulations" class="nav-link" data-scroll-target="#applicable-regulations">Applicable regulations</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/evaluations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -399,9 +410,100 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.21.evaluations.html</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is marked as “toupdate”: update completely</p>
+</div>
+</div>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>Evaluate teaching activities <strong>at the end of each semester</strong>.</p>
+<p>{: .highlight } &gt; <strong>Trigger</strong> &gt; &gt; Evaluations can be ordered by <strong>early December / early July</strong>. We receive an e-mail reminder.</p>
+</section>
+<section id="process" class="level2">
+<h2 class="anchored" data-anchor-id="process">Process</h2>
+<ul>
+<li>Evaluations can be ordered via EvaSys, which requires a <strong>minimum of 5 students</strong> to complete the evaluation. Otherwise, anonymity is not given, and results will not be made available.</li>
+<li>For small courses, it is possible to use other tools or modes of evaluation.</li>
+<li>It is possible and recommended that the survey be adapted (shortened).</li>
+<li>Evaluation results and potential improvements should be discussed with students (last week of teaching).</li>
+<li>Students should be reminded in the session and via VC.</li>
+<li>Add to the list of prior reports below.</li>
+<li>The evaluation results are stored in 19.XXXXXX (Nextcloud) and published in the handbook: Upload PDFs in <a href="https://github.com/digital-work-lab/handbook/tree/main/assets/evaluations" target="_blank">assets/evaluations</a> and link them in the <a href="https://github.com/digital-work-lab/handbook/tree/main/_courses" target="_blank">course files</a>.</li>
+<li>Evaluation results should be analyzed to improve teaching activities. Improvements are documented in the <a href="30.22.improvements.html">30.22 Improvements</a> section.</li>
+<li>Evaluation results are shared (e.g., via e-mail or link in VC) and discussed with students.</li>
+</ul>
+<p>Note: We are allowed to publish evaluation reports (no personal information, no hand-written responses that could identify individuals).</p>
+<p>{: .highlight } &gt; To use a QR code in the session, ask the <a href="https://www.uni-bamberg.de/pqm/qualitaetsmanagement/" target="_blank">QM team</a>.</p>
+</section>
+<section id="example-for-the-invitation-to-the-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="example-for-the-invitation-to-the-evaluation">Example for the invitation to the evaluation</h2>
+<blockquote class="blockquote">
+<p>Dear Students,</p>
+<p>We would like to invite you to participate in the upcoming course evaluation. Your feedback is voluntary and anonymous, so please be open and honest in your responses. Your participation helps us improve the quality of our courses, and we highly value your opinions.</p>
+<p>Please rest assured that your responses will remain confidential, and there is no risk of disadvantage or negative consequences for you, regardless of the feedback you provide.</p>
+<p>Thank you for your time and honest feedback!</p>
+</blockquote>
+</section>
+<section id="systems" class="level2">
+<h2 class="anchored" data-anchor-id="systems">Systems</h2>
+<p>Create or edit a survey (<a href="https://www.uni-bamberg.de/its/dienstleistungen/eva/evasys/" target="_blank">account</a> required - <a href="https://www.uni-bamberg.de/its/dienstleistungen/eva/evasys/antrag-benutzerkonto-in-evasys/" target="_blank">form</a>):</p>
+<p>{: .text-center}</p>
+<p><a href="https://evasys.uni-bamberg.de/evasys/public/ui/">EvaSys</a>{: .btn .btn-green target=“_blank”}</p>
+<p>Order an evaluation:</p>
+<p>{: .text-center}</p>
+<p><a href="https://www.uni-bamberg.de/its/lehrevaluation/">RZ intern</a>{: .btn .btn-green target=“_blank”}</p>
+</section>
+<section id="evaluation-results" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-results">Evaluation results</h2>
+
+{% for course in site.courses %}
+
+{% endfor %}
+<table>
+<thead>
+<tr>
+<th>
+Semester
+</th>
+<th>
+Course
+</th>
+<th>
+Evaluation / Status
+</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>
+{{ course.semester }}
+</td>
+<td>
+<a href="{{ site.baseurl }}{{ course.url }}">{{ course.title }}</a>
+</td>
+<td>
+{% if course.student_evaluations and course.student_evaluations != “” %} <a href="{{ site.baseurl }}/assets/evaluations/{{ course.student_evaluations }}">PDF</a> {% else %} N/A {% endif %}
+</td>
+</tr></tbody>
+</table>
+</section>
+<section id="applicable-regulations" class="level2">
+<h2 class="anchored" data-anchor-id="applicable-regulations">Applicable regulations</h2>
+<ul>
+<li><a href="https://www.uni-bamberg.de/fileadmin/www.abt-studium/Rechtsvorschriften/1Organisation/Evaluation%20Lehre%20Studium/180305-O-Sicherung-Qualitaet-Lehre-Studium.pdf" target="_blank">Evaluation der Lehre (§5 and §6)</a></li>
+<li><a href="https://www.uni-bamberg.de/qm/evaluation/lehrveranstaltungsevaluation/schriftliche-lehrveranstaltungsevaluation/" target="_blank">Overview: Goals, procedure, data protection etc.</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -809,5 +911,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/evaluations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/evaluations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

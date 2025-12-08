@@ -405,8 +405,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#principles-of-research-data-management" id="toc-principles-of-research-data-management" class="nav-link active" data-scroll-target="#principles-of-research-data-management">Principles of Research Data Management</a></li>
+  <li><a href="#data-reuse" id="toc-data-reuse" class="nav-link" data-scroll-target="#data-reuse">Data Reuse</a></li>
+  <li><a href="#data-management-process" id="toc-data-management-process" class="nav-link" data-scroll-target="#data-management-process">Data Management Process</a></li>
+  <li><a href="#institutional-and-funder-requirements" id="toc-institutional-and-funder-requirements" class="nav-link" data-scroll-target="#institutional-and-funder-requirements">Institutional and Funder Requirements</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/data_management.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -430,9 +440,117 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.17.data.html</p>
+<p>Effective data management is a cornerstone of rigorous research. It ensures the proper organization, preservation, and sharing of research data, aligning with principles of transparency, reproducibility, and ethical responsibility. This section outlines the key principles and processes for research data management, highlights available tools, and links to relevant guidelines and resources.</p>
+<section id="principles-of-research-data-management" class="level2">
+<h2 class="anchored" data-anchor-id="principles-of-research-data-management">Principles of Research Data Management</h2>
+<p>Research data management refers to the organization, storage, preservation, and sharing of data collected and used during a research project. This practice is essential to ensure data is:</p>
+<ol type="1">
+<li><strong>FAIR</strong>: Findable, Accessible, Interoperable, and Reusable</li>
+<li><strong>Secure</strong>: Protected from unauthorized access or loss</li>
+<li><strong>Organized</strong>: Clearly structured (see <a href="https://www.jstatsoft.org/article/view/v059i10" target="_blank">tidy data</a>) and documented for ease of use and understanding</li>
+<li><strong>Reproducible</strong>: Ensuring that future researchers can validate results by using the same data</li>
+</ol>
+<p>Several principles should guide researchers in managing their data:</p>
+<ul>
+<li><strong>Data Collection and Documentation</strong>: Ensure accurate and thorough documentation of the data collection process.</li>
+<li><strong>Data Storage and Security</strong>: Store data securely during the research project, ensuring data integrity and confidentiality.</li>
+<li><strong>Data Sharing and Accessibility</strong>: Share data in open-access repositories where possible to comply with funder requirements and maximize the impact of your research.</li>
+<li><strong>Data Archiving and Preservation</strong>: Safeguard data for long-term access and reuse by archiving it in trusted repositories.</li>
+</ul>
+<p>For further guidance, see the Science Europe guide on <a href="https://scienceeurope.org/our-priorities/research-data/research-data-management" target="_blank">Research Data Management</a>.</p>
+</section>
+<section id="data-reuse" class="level2">
+<h2 class="anchored" data-anchor-id="data-reuse">Data Reuse</h2>
+<p>{: .highlight } Existing data repositories offer a good starting point to identify datasets that can be reused.</p>
+<p>Data repositories:</p>
+<ul>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Awesome public datasets</a></li>
+<li><a href="https://snap.stanford.edu/data/" target="_blank">Stanford Large Network Dataset Collection</a></li>
+</ul>
+</section>
+<section id="data-management-process" class="level2">
+<h2 class="anchored" data-anchor-id="data-management-process">Data Management Process</h2>
+<p>Below is a recommended process structure for managing research data throughout the lifecycle of a project:</p>
+<ol type="1">
+<li><strong>Planning Stage</strong>
+<ul>
+<li>Develop a <strong>Data Management Plan (DMP)</strong> that outlines how the data will be collected, stored, and shared.</li>
+<li>Ensure compliance with institutional and funding body requirements.</li>
+<li>Identify relevant data policies from your funder or publisher.</li>
+</ul></li>
+<li><strong>Data Collection and Organization</strong>
+<ul>
+<li>Establish clear protocols for data collection.</li>
+<li>Use standardized formats and file naming conventions to ensure consistency and ease of use.</li>
+<li>Document metadata thoroughly to facilitate future understanding and use of the data.</li>
+</ul></li>
+<li><strong>Data Storage and Security</strong>
+<ul>
+<li>Store data in secure, backed-up locations during the project to protect against loss.</li>
+<li>Ensure that sensitive data is encrypted and access-controlled where necessary.</li>
+<li>Use platforms like <a href="https://help.osf.io/article/201-create-a-view-only-link-for-a-project" target="_blank">OSF</a> for project collaboration and version control.</li>
+</ul></li>
+<li><strong>Data Sharing and Accessibility</strong>
+<ul>
+<li>Publish data in open-access repositories where possible to comply with funder and publisher requirements (e.g., via <a href="https://docs.github.com/de/repositories/archiving-a-github-repository/referencing-and-citing-content" target="_blank">GitHub</a> - <a href="https://zenodo.org/" target="_blank">Zenodo</a>).</li>
+<li>Add the <code>dataset</code> tag to the GitHub repository (see <a href="https://github.com/orgs/digital-work-lab/repositories?q=topic%3Adataset" target="_blank">overview</a>)</li>
+<li>Create anonymous or view-only links for peer review using tools like <a href="https://anonymous.4open.science/" target="_blank">Anonymous GitHub for peer review</a> or <a href="https://help.osf.io/article/201-create-a-view-only-link-for-a-project" target="_blank">OSF anonymous online datasets</a>.</li>
+<li>Cite data appropriately in publications using DOIs or other identifiers.</li>
+</ul></li>
+<li><strong>Data Archiving and Preservation</strong>
+<ul>
+<li>After project completion, archive data in a trusted repository that supports long-term access and preservation.</li>
+<li>Ensure that your archived data is available under FAIR principles.</li>
+</ul></li>
+</ol>
+</section>
+<section id="institutional-and-funder-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="institutional-and-funder-requirements">Institutional and Funder Requirements</h2>
+<p>Increasingly, institutions and funding bodies require detailed data management plans as part of project proposals. Below are guidelines from key institutions and organizations:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Institution</th>
+<th>Requirements</th>
+<th>Further Information</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>German Research Foundation (DFG)</strong></td>
+<td>The DFG provides guidelines on project planning, application processes, and safeguarding data.</td>
+<td><a href="https://www.dfg.de/en/research_funding/programmes/infrastructure/lis/funding_opportunities/research_data/" target="_blank">DFG Guidelines on Research Data Management</a></td>
+</tr>
+<tr class="even">
+<td><strong>European Union (Horizon 2020)</strong></td>
+<td>The EU requires a DMP and open data policies for projects funded under Horizon 2020.</td>
+<td><a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf" target="_blank">Guidelines on Open Access to Scientific Publications and Research Data</a></td>
+</tr>
+<tr class="odd">
+<td><strong>National Science Foundation (NSF)</strong></td>
+<td>NSF project proposals must include a Data Management Plan to ensure data is appropriately archived and accessible.</td>
+<td><a href="https://www.nsf.gov/bfa/dias/policy/dmp.jsp" target="_blank">NSF Data Sharing Policy</a></td>
+</tr>
+<tr class="even">
+<td><strong>German Rectors’ Conference (HRK)</strong></td>
+<td>HRK offers detailed guidelines for university leaders on establishing robust research data management practices.</td>
+<td><a href="https://www.hrk.de/positionen/beschluss/detail/management-von-forschungsdaten-eine-zentrale-strategische-herausforderung-fuer-hochschulleitungen/" target="_blank">HRK Guidelines</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525" target="_blank">Ten Simple Rules for Creating a Good Data Management Plan</a></li>
+<li><a href="https://anonymous.4open.science/" target="_blank">Anonymous GitHub for peer review</a></li>
+<li><a href="https://www.rwth-aachen.de/cms/root/forschung/forschungsdatenmanagement/erste-schritte/~svay/was-ist-forschungsdaten-management-/?lidx=1" target="_blank">RWTH Aachen FDM</a></li>
+<li><a href="https://github.com/jtleek/datasharing" target="_blank">How to share data with a statistician</a></li>
+</ul>
+<p>Wickham, H. (2014). Tidy data. Journal of Statistical Software, 59, 1-23. <a href="https://www.jstatsoft.org/article/view/v059i10" target="_blank">link</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -840,5 +958,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/data_management.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/data_management.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
