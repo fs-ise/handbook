@@ -295,8 +295,6 @@ def main() -> None:
         print(f"Scanning for .qmd files under {qmd_root} (dry_run={args.dry_run})")
         qmd_files = sorted(Path(qmd_root).rglob("*.qmd"))
 
-        input(qmd_files)
-
         if not qmd_files:
             print("No .qmd files found.")
             return
