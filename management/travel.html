@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../assets/styles.css">
@@ -435,8 +438,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#travel-request" id="toc-travel-request" class="nav-link active" data-scroll-target="#travel-request">Travel request</a></li>
+  <li><a href="#confirmation" id="toc-confirmation" class="nav-link" data-scroll-target="#confirmation">Confirmation</a></li>
+  <li><a href="#travel" id="toc-travel" class="nav-link" data-scroll-target="#travel">Travel</a></li>
+  <li><a href="#hotel-list-20252026" id="toc-hotel-list-20252026" class="nav-link" data-scroll-target="#hotel-list-20252026">Hotel list 2025/2026</a></li>
+  <li><a href="#reimbursement-of-expenses" id="toc-reimbursement-of-expenses" class="nav-link" data-scroll-target="#reimbursement-of-expenses">Reimbursement of expenses</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/travel.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -460,9 +473,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Import https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.50.travel.html</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is marked as “toupdate”: completely update</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    Professor-&gt;&gt;+Reisekostenstelle: Antrag auf Genehmigung einer Dienstreise
+    Reisekostenstelle-&gt;&gt;+Professor: Genehmigter Antrag
+    Note over Professor: Buchen
+    Note over Professor: Konferenz (Rechnungen)
+    Professor-&gt;&gt;+Reisekostenstelle: Reisekostenabrechnung (inkl. Rechnungen und Antrag)
+    Reisekostenstelle-&gt;&gt;+Professor: Erstattung
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="travel-request" class="level2">
+<h2 class="anchored" data-anchor-id="travel-request">Travel request</h2>
+<ul>
+<li>Create a new folder in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/13_travel&amp;fileid=61">13 travel</a>{: target=“_blank”} with a new ID (range: 13.001-13.999).</li>
+<li>Travel request via <a href="https://www.mitarbeiterservice.bayern.de/">Mitarbeiterservice Bayern</a>{: target=“_blank”}</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="{{ site.baseurl }}/assets/images/Screenshot_Reisekostenmanagement.JPG" class="img-fluid figure-img"></p>
+<figcaption>Reisekostenmanagement</figcaption>
+</figure>
+</div>
+<ul>
+<li>Select “Reisemanagement” -&gt; “Neuer Genehmigungsantrag”</li>
+<li>Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.</li>
+<li>Air travel restrictions must be considered, in particular for short flights (2024-03-07_Rundschreiben Genehmigung von Flugreisen.pdf)</li>
+</ul>
+</section>
+<section id="confirmation" class="level2">
+<h2 class="anchored" data-anchor-id="confirmation">Confirmation</h2>
+<ul>
+<li>The applicant will receive the approval by email</li>
+</ul>
+</section>
+<section id="travel" class="level2">
+<h2 class="anchored" data-anchor-id="travel">Travel</h2>
+<ul>
+<li>Collect receipts for expenses</li>
+</ul>
+</section>
+<section id="hotel-list-20252026" class="level2">
+<h2 class="anchored" data-anchor-id="hotel-list-20252026">Hotel list 2025/2026</h2>
+<p><a href="https://www.intranet.uni-bayreuth.de/pool/dokumente/personal-formulare/dr-hotel-hotelliste_freistaat_bybn_2024_inland.pdf">PDF</a>{: target=“_blank”}</p>
+</section>
+<section id="reimbursement-of-expenses" class="level2">
+<h2 class="anchored" data-anchor-id="reimbursement-of-expenses">Reimbursement of expenses</h2>
+<ul>
+<li>via <a href="https://www.mitarbeiterservice.bayern.de/">Mitarbeiterservice Bayern</a>{: target=“_blank”}
+<ul>
+<li>Select “Neuer Abrechnungsantrag”</li>
+<li>Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.</li>
+</ul></li>
+<li>Don’t forget to attach receipts, till vouchers, etc., as PDF</li>
+<li>Save the complete PDF in the 13.XXX folder</li>
+</ul>
+<p>{: .highlight } &gt; At the end of the settlement, all receipts/invoices must be attached to the “File Upload” section; otherwise, payment cannot be made! All original receipts must be retained by the traveler according to the statutory retention period (6 years / exception for projects: 10 years after the end of the project).</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -870,5 +961,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/travel.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/travel.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
