@@ -2,4 +2,109 @@
 title: "Presentation"
 ---
 
-Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.28.presentation.html
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
+
+## General guidelines
+
+- Adapt to the audience
+- Prepare a short elevator pitch
+- Plan for eventualities (e.g., no Internet/WIFI connection available)
+- Make slides available [TODO : link repo] and allow participants to connect/give feedback (TODO : add suggestions)
+- Communicate a clear reason why your audience should be interested in your presentation (in particular when some participants are required to attend)
+- When appropriate: start with a bold pitch like "After this talk, you will do ... differently."
+- When appropriate, use storytelling to make the presentation memorable
+
+## Template
+
+- [Marp](https://github.com/digital-work-lab/slides){target=_blank} template
+
+To include a Mermaid diagram:
+
+```
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+<div class="mermaid">
+  graph LR;
+  a --> b;
+  b --> c;
+  c --> a;
+</div>
+```
+
+Callout box:
+```
+<style>
+.callout {
+  border-left: 5px solid #007acc;
+  background-color: #f0f8ff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+</style>
+
+<div class="callout">
+  <strong>Note:</strong> Text
+```
+
+Footnote:
+
+```
+<style>
+blockquote {
+    border-top: 0.1em;
+    font-size: 60%;
+    margin-top: auto;
+}
+</style>
+
+> Note...
+
+<style>
+blockquote {
+    border-top: 0.1em;
+    font-size: 60%;
+    margin-top: auto;
+    padding-left: 40px;
+    text-indent: -30px;
+    text-align: justify;
+}
+</style>
+
+> Raymond, L., Paré, D., Doyon, O. and Wagner, G. “Understanding nurses’ intention to use artificial intelligence technologies in their clinical practice: A survey-based configurational analysis“. Under review at the *Journal of Advanced Nursing* (minor revision).
+```
+
+References:
+
+```
+<span class="citation">(Ringeval et al., 2020; Li et al., 2025)</span>
+
+<style scoped>
+p {
+    padding-left: 36px;
+    text-indent: -36px;
+    font-size: 75%;
+    text-align: justify;
+}
+</style>
+<!-- font-size: 12px; /* or any size you prefer, e.g., 12px */ -->
+
+Castonguay, A., Wagner, G., Motulsky, A., and Paré, G. 2024. “AI Maturity in Health Care: An Overview of 10 OECD Countries“. *Health Policy*, 140, p.104938.
+```
+
+## Structure and Contents
+
+- TODO
+
+## Resources
+
+- [Better Poster Latex Template](https://github.com/rafaelbailo/betterposter-latex-template){target=_blank}

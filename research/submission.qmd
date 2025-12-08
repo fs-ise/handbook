@@ -2,4 +2,294 @@
 title: "Submission"
 ---
 
-Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.30.submission.html
+{: .no_toc }
+
+This checklist can be used to produce camera-ready papers (initial submissions, revisions, and final versions).
+The checks should be completed in order (keep this in mind when updating this checklist).
+
+{: .highlight }
+> **Things that cannot be fixed 1h before the submission deadline**
+> 
+> - Have a knowledgeable colleague read the paper and provide feedback.
+> - Consider publishing the data/analyses (e.g., on *Figshare*, *GitHub*, *Zenodo*).
+> - Is the research question stated clearly in the first few sentences of  the abstract and the introduction?
+> - If your article was rejected (or revise) and resubmit, did you clearly fix any concerns?
+> - Check whether there is previous research in the target journal that can be cited.
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
+
+## Orga
+
+- Check submission deadline
+
+## Clarity
+
+- Have any major conceptual changes/prominent phrases been changed recently?
+- Consistently use the same terminology (avoid synonyms) of conceptually relevant terms
+- Present major conceptual blocks in the same order (same numbering for hypotheses)
+
+## Up-to-date
+
+- Use the latest statistics (e.g., including exclusion criteria)
+- Use the latest model results
+- The variables in the background/methodology/results/discussion/intro/abstract/conclusion should be the same
+
+## Template, formatting, and spell-checking
+
+{: .warning }
+> Latex tables may be missing when converting Markdown to Word.
+
+- Used the correct template from the journal website? This might require an additional external checklist.
+- Select and check citation style ([search by example](https://csl.mendeley.com/searchByExample/){target=_blank})
+
+- Check page limit
+- Tone (using an LLM): Identify any statements that could sound dismissive
+
+> **Prompt:**
+> Review the following text for tone and inclusivity. Identify any statements that may sound dismissive, overly judgmental, or casual for an academic context. Also flag potentially insensitive language, such as:
+> 
+> - terms implying hierarchy or superiority (e.g., “master”),
+> - labels that frame individuals or groups as deficient (e.g., “struggling students”),
+> - wording that could reinforce stereotypes (e.g., gendered roles, cultural assumptions).
+> 
+> For each flagged case, explain why it might be problematic and suggest a more neutral, context-sensitive alternative phrasing that maintains academic precision while being inclusive. 
+
+- Spell-check (e.g., in Word)
+  - Check tempus (methodology: simple past)
+  - Check common mistakes (e.g., comma for which/who, i.e./e.g. should be in parentheses, using "an" before  vowel sounds, e.g., an hour but a horse)
+  - Remove double-spaces: ctrl+h in Word ([1](https://github.com/jgm/pandoc/issues/4790){target=_blank})
+  - Abbreviations introduced _and_ used consistently?
+  - Consistent capitalization (headings, captions, ...)
+  - Consistent terminology (e.g., paper vs. article)
+  - Use the same decimal separator throughout the paper (. or ,)
+  - Consistently spell out numbers less than 10
+- Check tables and figures
+  - Check references to figures, tables, and appendices
+  - Are your figures/tables self-contained? You should be able to read the article without looking at the figures/tables and vice versa.
+  - Tables:
+    - Check alignment of decimals
+    - Are table legends appropriate?
+    - Are tables embedded into the main text?
+    - Have tables been cited in the text?
+    - Do the citations refer to the CORRECT table/figure?
+    - For better alignment: Adjust paragraph -> indentation, margin left/right.
+  - Figures:
+    - Alignment: Central in the article with consistent margins inside the figure.
+    - Use the same font type for the text and the figures.
+    - Use vector graphics.
+    - Figures should include searchable text (Word: EMF/WMF vector graphics)
+    - For screenshots: include as PDF with OCR
+  - If figures/tables contain references: add the citation keys to the YAML header in [no cite](https://pandoc.org/MANUAL.html#including-uncited-items-in-the-bibliography){target=_blank} field
+- Check references
+  - Go through the reference list and check whether there are references that have been included accidentally (different topic)
+  - Bibliography: check whether all citations are in the bibliography
+  - Direct quotes should include a reference to the specific page
+  - To ensure a blind peer review: Use "Anonymous" consistently (instead of author names)
+  - Search paper for "reference" (to catch notes like ("reference needed"))
+  - Check in-text citations: correctly cited? separated by semicolons?
+
+The following should not be necessary (when the Word/latex reference documents work properly):
+
+- Consistent use of font sizes, types in figures and tables
+- Alignment of Headings etc.
+- Formatting of footnotes
+- Text-alignment/blocks (for all paragraphs)
+
+## Final checks
+
+- Make sure that the paper is anonymous (remove authors from [paper.md](paper.md) before creating the docx/pdf, [inspect word document for personal information](https://support.microsoft.com/en-us/topic/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks-356b7b5d-77af-44fe-a07f-9aa4d085966f){target=_blank})
+- Compare with the previous version to catch accidental changes (Word: Check, Compare documents)
+- Check the PDF. There might be problems when creating the PDF from the Word document.
+- Update abstract in the submission system?
+
+For the revision of conference papers:
+
+- Acknowledge support by a funding body, acknowledge colleagues, and reviewers (e.g., "The authors are grateful to the three expert reviewers for their exceptional comments.")
+- Include the keywords and abstract in the yaml header of [paper.md](paper.md).
+- Check and update metadata (authors, title, ...)
+- Latex: Check if .tex writes metadata to PDF (final version, not for submissions/revisions):
+
+```latex
+\usepackage[pdftitle={Title of the paper}, pdfauthor={AuthorName FamilyName, AuthorName FamilyName}, pdfkeywords={keyword1, keyword2}]{hyperref}
+```
+
+## Cover letter
+
+**Example 1: JOSS**
+
+Dear JOSS editors,
+
+I am pleased to submit the Python package BibDedupe for consideration and possible publication in the Journal of Open-Source Software. This submission addresses the clear need for effective software tailored to the detection of duplicates within bibliographic data.
+
+In academic research, especially in areas involving meta-analysis and research synthesis, the accurate identification of duplicate bibliographic entries is essential. These duplicates, often resulting from the dissemination of a single study across multiple databases, can affect the integrity of research outcomes. Existing tools for deduplication generally do not cater adequately to the unique aspects of bibliographic data, which has very specific and idiosyncratic variations in authors' names, publication titles, and source details. BibDedupe is designed to address these specific challenges, focusing on achieving zero false positives to ensure that each unique study is correctly represented in research summaries.
+
+Our development is informed by a comprehensive understanding of bibliographic data management and data quality requirements. It employs a detailed approach to data preprocessing, blocking, matching, and merging, offering efficiency and reproducibility in deduplicating bibliographic records. The performance of the package is particularly beneficial for researchers engaged in literature reviews involving large volumes of publications.
+
+BibDedupe is one of the first open-source tools in its domain that actively seeks peer review of its code. The field of literature review and meta-analysis software has long been dominated by proprietary and non-peer-reviewed tools, leading to a gap in the availability of rigorously evaluated, open-source options. By submitting BibDedupe to JOSS, we aim to raise standards in the field, encouraging the development of more rigorous, effective, and transparent tools for conducting literature reviews and meta-analyses. This effort aligns with a growing demand in the academic community for open-source tools that are not only functional but also validated through peer review.
+
+I believe BibDedupe will be a valuable contribution to the Journal of Open-Source Software, appealing to researchers looking for efficient and reliable bibliographic data management tools. I look forward to sharing more details in a paper to be submitted to a peer-reviewed journal.
+
+There are no conflicts of interest.
+
+Best regards,
+
+Gerit Wagner
+
+<!--
+Dear JOSS Editors,
+
+I am pleased to submit the Python package search-query for consideration and possible publication in the Journal of Open Source Software. This package addresses the growing need for reliable, transparent, and automatable tools to manage academic search queries, which are foundational to systematic literature reviews and meta-analyses.
+
+In academic research, constructing high-quality search queries is critical for the validity and reproducibility of literature reviews. Yet, existing tools are often proprietary, web-based, or lack validation mechanisms. The search-query library provides a comprehensive, open-source solution to this problem by supporting loading, linting, translating, saving, improving, and automating academic search queries. It currently covers three major platforms—Web of Science, PubMed, and EBSCOHost—and has been tested against a corpus of peer-reviewed queries from SearchRXiv. Our implementation emphasizes extensibility, integration into Python-based workflows, and automation. Notably, the package also includes support for pre-commit hooks and API-based usage scenarios. These features make search-query particularly well-suited for reproducible research pipelines.
+
+We are aware that the paper exceeds 1000 words. However, we believe this is necessary to provide a clear overview of the tool’s functionality, the specific needs it addresses, and its positioning relative to existing tools. In addition, we have included vector-based screenshots (SVG) in the paper to preserve syntax highlighting and visual clarity when illustrating linter outputs and usage examples.
+
+We believe that search-query will be a valuable resource for researchers involved in literature reviews and evidence synthesis.
+
+There are no conflicts of interest.
+
+Best regards, Gerit Wagner (on behalf of the author team)
+-->
+
+## Post-submission tasks
+
+Upon submission, a PaperID is usually assigned by the submission system.
+
+- Paper repository:
+  - Create YYYY-MM-DD-JOURNAL_Paper_PaperID.pdf
+  - Create YYYY-MM-DD-JOURNAL_Submission_proof_PaperID.pdf
+  - Create YYYY-MM-DD-JOURNAL_Revision_sheet_PaperID.pdf
+  - Create YYYY-MM-DD-JOURNAL_Cover_letter_PaperID.pdf
+  - Create git-tag (e.g., `git tag icis2021-submission`, `git tag icis2021-final-version`, `git tag misq-revision1`)
+- Analyses repository:
+  - Tag git-repo (CHECK whether the data exactly matches the paper!, e.g., compare regression results)
+  - Add specific version to Dockerfile (e.g., FROM rocker/tidyverse:3.4.3) - generally avoid using the `:latest` tag
+  - Build dockerfile (docker build .)
+  - Run analyses in Dockerfile
+  - Save python package versions (pip freeze > requirements.txt)
+  - Create git-commit + tag
+  - Change Dockerfile to latest (e.g., FROM rocker/tidyverse)
+  - to do: add a note somewhere on how to restore Python package versions (pip install -r requirements.txt)
+- Add to waiting for and create a reminder to check the progress of the submission
+- Inform coauthors about the submission and thank co-authors/research-associates
+- Update personal paper portfolio
+
+<!-- 
+
+
+
+# Clarity
+
+Things to keep in mind:
+
+ - Did you put a hook into both the abstract and the first paragraph of the article? Even excellent ideas do not sell themselves. So, you must give the sales pitch, the contribution, the unique data, the natural experiment, the current practitioner application, the follow-up to something in that journal, or whatever it is that pulls in the referee, the editor, and the journal readership.
+ - Is the research question stated clearly in the first few sentences of both the abstract and the introduction?
+ - If your article was rejected (or revise) and resubmit, did you clearly fix any concerns?
+ - [ ] Check whether there is previous research in the target journal that can be cited.
+
+- [ ] Were there any major conceptual changes/prominent phrases that have been changed recently?
+- [ ] Consistently use the same terminology (avoid synonyms) of conceptually relevant terms
+- [ ] Present major conceptual blocks in the same order (same numbering for hypotheses)
+
+# Template and Formatting
+
+- [ ] Used the correct template from the journal website? (this might require an additional, external checklist) Check with your co-authors when this requires transferring the whole manuscript from Word to Latex or vice versa.
+- [ ] Page limit?
+- [ ] Fonts: types and sizes (auch in Grafiken, Tabellen – Alignment of Headings etc.)
+- [ ] Zeilenabstand
+- [ ] Check Metadata (Authors, Title, ...)
+- [ ] Abbreviations introduced AND consistently used (EXCEPT in titles/captions/figures/tables!)
+
+- [ ] formatting of footnotes
+- [ ] Check references to Figures, Tables, and Appendices
+- [ ] doppelte Leerzeichen?
+- [ ] check: text-justify
+
+- [ ] Consistent Capitalization
+- [ ] Consistent terminology (e.g., paper/article)
+
+- [ ] Check field references to appendices/figures: accidentally included the title?
+
+# Spelling
+
+- export as docx & spell-check
+- Tempus (Methodology: simple past)
+- , which/who
+- i.e., e.g., (with comma)
+
+https://www.grammarly.com/blog/comma-before-or/
+
+- a vs. an
+  A well known grammar rule says that we should use an before vowel sounds; for example, an accident, an item, an hour. We use a otherwise: a book, a hotel, a university.
+  Notice that we say an hour, not a hour. The choice of a or an is based upon the sound of the word, not the spelling. Hour sounds as if it starts with a vowel sound (ow); hence, we use an. Following this rule, we would say a historic, not an historic because   (for most speakers) historic doesn't start with a vowel sound. Words of three or more syllables that start with h are treated differently by some speakers, though. (This may be because of the tendency of some regional accents to drop initial Hs.)
+  You only use an when the following sound is a vowel — that you should only look at the letter is a misconception. For example, you would say an hour but a horse, etc.
+
+- its vs it's
+  It's is a contraction for it is or it has.
+  Its indicates possessive.
+  ?!?! <-> http://www.englisch-hilfen.de/grammar/genitiv.htm
+  Its' is never correct. Ever.
+
+- 's can be a contraction of is (to be) and has. Also singular possessive!
+
+- to the best of our knowledge
+
+- above-mentioned (UK) vs. abovementioned (US)
+
+- criticism vs critique: Laut dictionary ist “critique” tiefgründiger als “criticism”. “critic” ist aber eine Person die kritisiert.
+- [ ] Web of Science is now owned/maintained by Clarivate Analytics, not Thomson Reuters; historically based on the Social Citation Index (SCI) developed by Eugene Garfield
+
+# Tables and Figures
+
+- [ ] Are your figures/tables self-contained? You should be able to read the article without looking at the figures/tables and vice versa. This is overlooked frustratingly often.
+- [ ] Have you uploaded any lengthy tables as supplementary files for online publication?
+- [ ] Search manuscript for "Verweisquelle"
+- [ ] Search for 'p. (' to catch Docear4Word errors
+
+
+Tables:
+
+- [ ] Alignment of decimals (in tables?)
+- [ ] Have you provided appropriate table legends?
+- [ ] Have you embedded any tables into the main text?
+- [ ] Have they been cited in the text?
+- [ ] Do the citations refer to the CORRECT Table/Figure?
+- [ ] Tabellen-Alignment Probleme:  Absatz, Einzüge, Abstand nach und vor.
+
+Figures:
+
+- [ ] Alignment:
+  - central in article,
+  - consistent margins inside the figure,
+- [ ] Use the same font-type for the text and the figures
+- [ ] Grafiken als Text durchsuchbar (Word: emf/wmf Vektorgrafiken einbinden)
+- [ ] Bei Screenshots: als PDF mit OCR einbinden
+- [ ] Vektorgrafiken verwenden (nur notfalls Rastergrafiken, in hoher Auflösung), e.g. emf/wmf (for Word)
+
+# Up-to-Date
+
+ - [ ] Use the latest statistics (including exclusion criteria)
+ - [ ] Use the latest model results
+ - [ ] The variables in the background/methodology/results/discussion/intro/abstract/conclusion should be the same
+
+# References
+
+ - [ ] Go through the reference list and check whether there are references that have been included accidentally (different topic)
+ - [ ] Correct Reference Style? (check in-text citations and bibliography, there might be Errors in the CSL-file; e.g., and vs. &)
+ - [ ] Bibliography: check whether all Citations are in the Bibliography,
+ - [ ] In particular those in footnotes (there might be bugs, e.g. in Docear4Word)
+ - [ ] Have all of the references been cited in the text?
+ - [ ] Check whether references in tables/figures are in the references section
+ - [ ] Check for (placement) of page references for direct quotes
+ - [ ] Consistent use of Anonymous instead of clear author-name
+ - [ ] Check if .tex writes metadata to pdf (final version, not for submissions/revisions):
+      \usepackage[pdftitle={Title of the paper}, pdfauthor={Gerit Wagner, Ross J. Anderson}, pdfkeywords={data security, eavesdropping}]{hyperref}
+ - [ ] Check: have all references have been inserted as Word-Fields (Docear4Word): Mark each paragraph and check whether the references are displayed in darker grey
+ - [ ] Check AIS. 2011. “Senior Scholars’ Basket of Journals,”. (add Link as URL/link field)
+ - [ ] Search manuscript for "reference" (to catch notes like (reference needed))
+
+-->

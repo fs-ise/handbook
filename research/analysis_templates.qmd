@@ -2,4 +2,87 @@
 title: "Analysis Templates"
 ---
 
-Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.21.analysis-templates.html
+{: .no_toc }
+
+This page summarizes standards for data analysis, including conventions related to the repository, the directory structure, and the data.
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
+
+## Repository
+
+- Data should be versioned with Git. Repositories can be hosted and shared on GitHub.
+- Visibility may initially be set to private. It is essential **not to publish confidential or copyright protected data** (this may include primary data from surveys, or PDF documents with copyrights owned by publishers)
+- Once published, the team decides to switch to public visibility.
+- Appropriate linters should be activated.
+- See [repo-example](https://github.com/digital-work-lab/repo_example){target=_blank}, or [deep-cenic](https://github.com/julianprester/deep-cenic){target=_blank} example.
+
+## Directory structure
+
+```text
+├── README.md          <- The top-level README summarizing the project.
+├── CITATION.cff       <- How to cite the work.
+├── Makefile           <- Makefile with commands like `make data` or `make train`.
+├── Dockerfile         <- Docker image to standardize the computational environment.
+├── requirements.txt   <- The requirements file for reproducing the analysis environment.
+├── LICENSE            <- A text file containing the license.
+├── .pre-commit-config.yaml
+|                      <- The configuration for pre-commit hooks
+├── .gitignore         <- Excludes files from versioning
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
+│
+├── src                <- Source code for use in this project.
+│
+├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures        <- Generated graphics and figures to be used in reporting
+│
+├── docs               <- Data dictionaries, manuals, and all other explanatory materials.
+```
+
+## Data
+
+- Tabular datasets should follow a [tidy data structure](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html){target=_blank}.
+- Preferred file formats include text files like md, txt, csv, py, ipynb, r.
+- Binary formats, such as docx, pptx, or xlsx should be avoided.
+- Resources on [research data management](https://www.uni-bamberg.de/ub/forschen-und-publizieren/forschungsdatenmanagement/){target=_blank} may be helpful.
+
+## Docker
+
+TODO : summarize the use of Docker containers [see analysis directory](https://github.com/digital-work-lab/repo_example){target=_blank}
+
+## Useful links and textbooks
+
+- [Cookiecutter data-science projects](https://drivendata.github.io/cookiecutter-data-science/){target=_blank}
+- [List of tools for labeling tasks](https://github.com/HumanSignal/awesome-data-labeling){target=_blank}
+- [Blog entry: avoid using Docker:latest](https://vsupalov.com/docker-latest-tag){target=_blank}
+- Danchev, V. (2021). Reproducible Data Science with Python. [link](https://valdanchev.github.io/reproducible-data-science-python/intro.html){target=_blank}
+- [R: be careful with setwd()](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R.html#be-careful-when-using-setwd){target=_blank}
+- [R in GitHub codespaces](https://github.com/jakubnowicki/r-codespaces){target=_blank}
+- [Datasette.io](https://datasette.io/){target=_blank}
+
+<!--
+- filenames / column names
+- docstrings
+- Organizing principles
+
+Data checklist:
+- [ ] have all raw data been imported?
+- [ ] have all raw data been checked (for duplicates, import errors, ...)?
+- [ ] create a description/coding_scheme.md describing how the data was collected.
+  - When was it collected?
+  - By whom was it collected?
+  - Which processing steps have been implemented?
+  - Save relevant scripts in 1-raw-data.
+- [ ] are import procedures deterministic (e.g., creation of artificial identifiers)? This is essential when the data is updated
+- [ ] is the csv-format consistent (quotenonnumeric)?
+  - when opening and editing csv-files with Calc (LibreOffice), use "Quoted field as text" (Other options) (Make sure this is a default!)
+- [ ] if the dataset is too big to be included in the git repository: create a symlink and describe where the data is stored
+ -->
+ 

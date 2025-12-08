@@ -2,4 +2,50 @@
 title: "Improvements"
 ---
 
-Import https://digital-work-lab.github.io/handbook/docs/30-teaching/30_processes/30.22.improvements.html 
+In the following, we document our efforts to improve in teaching lectures, projects, seminars, and theses.
+
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Course</th>
+      <th>Student Evaluations</th>
+      <th>Issue</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in site.courses %}
+    <tr>
+      <td>{{ course.semester }}</td>
+      <td><a href="{{ site.baseurl }}{{ course.url }}">{{ course.title }}</a></td>
+      <td>
+        {% if course.student_evaluations and course.student_evaluations != "" %}
+          <a href="{{ site.baseurl }}/assets/evaluations/{{ course.student_evaluations }}">PDF</a>
+        {% else %}
+          N/A
+        {% endif %}
+      </td>
+      <td>
+        {% if course.improvement_issue and course.improvement_issue != "" %}
+          <a href="{{ course.improvement_issue }}" target="_blank">Issue</a>
+        {% else %}
+          N/A
+        {% endif %}
+      </td>
+      <td>
+        {% if course.improvement_status %}
+          {{ course.improvement_status }}
+        {% else %}
+          N/A
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+## Theses
+
+- Updates of our [documentation](https://github.com/digital-work-lab/theses/commits/main/){target=_blank}, including the new hall-of-fame page and information on the Exposé.

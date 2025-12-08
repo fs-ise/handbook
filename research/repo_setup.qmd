@@ -2,4 +2,39 @@
 title: "Repo Setup"
 ---
 
-Import https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.15.repo-setup.html
+The base structure of a repository contains the following:
+
+| File or Folder      | Description                                                     |
+|---------------------|-----------------------------------------------------------------|
+| `README.md`         | Readme explaining the project.                                  |
+| `paper.md`          | The paper in Markdown format.                                   |
+| `references.bib`    | The references in BibTeX format.                                |
+| `data/`             | Directory containing the data.                                  |
+| `analysis/`         | Directory containing the code for the analyses.                 |
+| `figures/`          | Directory containing the figures.                               |
+| `Makefile`          | Instructions on how to build the paper and/or run the analysis. |
+| `Dockerfile`        | Instructions on how to build the virtual environment.           |
+| `.gitignore`        | A list of files excluded from git versioning.                   |
+
+The following templates are available for different use cases:
+
+| Use Case                         | Template                                                                                    |
+|----------------------------------|---------------------------------------------------------------------------------------------|
+| Paper repository                 | [Paper template](20.20.paper-templates.html)                                                |
+| Analysis repository              | [Analysis template](20.21.analysis-templates.html)                                          |
+| Literature review (and paper)    | [CoLRev repository](https://github.com/CoLRev-Environment/colrev){target=_blank}        |
+
+The research team can decide to combine repositories (e.g., containing the paper with analyses) or create separate repositories.
+
+{: .highlight }
+> - Add the tags `research` and `paper` to ensure that the repository is listed correctly in the [overview](../../10-lab/18_resources/18.12.repositories.html).
+> - Set the `MY_PAT_TOKEN` as a repository secret (for the Labot workflow)
+
+## Resources
+
+- [gitignore](https://www.toptal.com/developers/gitignore){target=_blank}
+- [Cookiecutter Data Science template](https://cookiecutter-data-science.drivendata.org/){target=_blank}
+- [showyourwork](https://show-your.work/en/latest/){target=_blank}
+- [Research Software Engineering with Python: Chapter 13 Tracking Provenance](https://third-bit.com/py-rse/provenance.html){target=_blank}
+- [Organizing scientific work](https://forschungsdaten.info/themen/organisieren-und-aufbereiten/kollaboratives-arbeiten/tools-fuer-die-organisation-wissenschaftlicher-datenarbeit/){target=_blank}
+- [Research Compendia](https://book.the-turing-way.org/reproducible-research/compendia){target=_blank}
