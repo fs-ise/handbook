@@ -268,19 +268,7 @@
     "href": "management/handbook.html#principles",
     "title": "Handbook",
     "section": "Principles",
-    "text": "Principles\n\nConfidential data, such as grades and student identities, must not be stored in the handbook.\nChecklists should be simple, structured, and actionable\nAdd links to the confidential data store (see example)\nAdd links to other parts of the handbook or external resources to avoid replicating content (e.g., to PDF forms that may be updated externally).\nHeadings: Use sentence case for all headings and subheadings.\nConsistency: Maintain consistent formatting throughout the document, particularly for lists, tables, and citations.\nTerminology:\n\n\n\n\nPreferred Term\nNot This\n\n\n\n\nSuSe / WiSe\nSS / WS\n\n\nTeam Assistant\nSecretary",
-    "crumbs": [
-      "Management",
-      "Infrastructure",
-      "Handbook"
-    ]
-  },
-  {
-    "objectID": "management/handbook.html#formatting-contents",
-    "href": "management/handbook.html#formatting-contents",
-    "title": "Handbook",
-    "section": "Formatting contents",
-    "text": "Formatting contents\n\nQuarto Guide\n\n\n\n\n\n\n\nNoteExample page\n\n\n\n\n\n---\ntitle: \"Title of the page\"\n---\n\nText with illustrations/figures/screenshots:\n\n![Caption](assets/images/Beispiel_Scheinteilnehmer-Excel.JPG)\n\nNote: copy and adapt the path as needed.\n\nCallouts (colored boxes, as illustrated below):\n\n::: resource\nWe use the `resource` callout when resources (external to the handbook) are available.\n:::\n\n::: confidential\nConfidential data is stored on the [Nextcloud](http://url.com){target=_blank}.\n:::\n\n\n\n\n\n\nResourceResource\n\n\n\nWe use the resource callout when resources (external to the handbook) are available.\n\n\n\n\n\n\n\n\nConfidentialConfidential\n\n\n\nConfidential data is stored on the Nextcloud.",
+    "text": "Principles\n\nConfidential data, such as grades and student identities, must not be stored in the handbook. Instead, add a link to the confidential data store (see example)\nChecklists should be simple, structured, and actionable\nAdd links to other parts of the handbook or external resources to avoid replicating content.\nHeadings: Use sentence case (not Title Case) for all headings and subheadings.\nConsistency: Maintain consistent formatting throughout the document, particularly for lists, tables, and citations.\nFormatting resources are available in the Quarto Guide\n\n\n\n\n\n\n\nNoteExample page\n\n\n\n\n\n---\ntitle: \"Title of the page\"\n---\n\nText with illustrations/figures/screenshots:\n\n![Caption](assets/images/Beispiel_Scheinteilnehmer-Excel.JPG)\n\nNote: copy and adapt the path as needed.\n\nCallouts (colored boxes, as illustrated below):\n\n::: resource\nWe use the `resource` callout when resources (external to the handbook) are available.\n:::\n\n::: confidential\nConfidential data is stored on the [Nextcloud](http://url.com){target=_blank}.\n:::\n\n\n\n\n\n\nResourceResource\n\n\n\nWe use the resource callout when resources (external to the handbook) are available.\n\n\n\n\n\n\n\n\nConfidentialConfidential\n\n\n\nConfidential data is stored on the Nextcloud.\n\n\n\n\n\n\nTerminology:\n\n\n\n\nPreferred Term\nNot This\n\n\n\n\nSuSe / WiSe\nSS / WS\n\n\nTeam Assistant\nSecretary",
     "crumbs": [
       "Management",
       "Infrastructure",
@@ -305,6 +293,18 @@
     "title": "Handbook",
     "section": "How to copy the handbook",
     "text": "How to copy the handbook\nTo create a copy of the handbook, clone the repository.",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "Handbook"
+    ]
+  },
+  {
+    "objectID": "management/handbook.html#how-our-handbook-evolves",
+    "href": "management/handbook.html#how-our-handbook-evolves",
+    "title": "Handbook",
+    "section": "How our handbook evolves",
+    "text": "How our handbook evolves\n\n\n\nActivity",
     "crumbs": [
       "Management",
       "Infrastructure",
@@ -6845,7 +6845,7 @@
     "href": "management/theses.html",
     "title": "Theses",
     "section": "",
-    "text": "Note\n\n\n\nThis section is marked as “toupdate”: update completely\n{: .highlight } This page contains administration details. For students, information is available on a separate page.\n{: .resource } &gt; Information on individual theses is recorded internally (35 Theses).\nsequenceDiagram\n    Note over Professor,Student: 1. Initial meetings to discuss the general topic\n    Note over Student,Examination office: 2. Formal admission\n    Student-&gt;&gt;Examination office: Apply for admission\n    activate Examination office\n    Note right of Examination office: Check admission&lt;br/&gt;requirements\n    Examination office-&gt;&gt;Student: Topic confirmation form (docx)\n    Examination office-&gt;&gt;Team Assistant: Topic confirmation form (docx)\n    deactivate Examination office\n    Note over Professor,Student: Topic selection and registration\n    Student-&gt;&gt;Professor: Signed topic confirmations (2x)\n    activate Professor\n    Professor-&gt;&gt;Student: Signed topic confirmation I\n    Professor-&gt;&gt;Team Assistant: Signed topic confirmation II\n    deactivate Professor\n    activate Team Assistant\n    Team Assistant-&gt;&gt;Examination office: Topic confirmation (docx)\n    deactivate Team Assistant\n    loop Regularly\n        Note over Professor,Student: 3. Thesis writing and feedback sessions\n    end\n        Note over Student,Examination office: 4. Submission\n    Student-&gt;&gt;Examination office: Submit via the form server\n    Examination office-&gt;&gt;Team Assistant: digital version (to archive)\n    activate Team Assistant\n    Team Assistant-&gt;&gt;Professor: Digital version\n    deactivate Team Assistant\n    activate Professor\n    alt Master thesis\n        Note over Professor,Student: 5. Thesis presentation\n    end\n    Note over Professor,Student: 6. Grading\n    Professor-&gt;&gt;Team Assistant: Review and grade\n    activate Team Assistant\n    Team Assistant-&gt;&gt;Examination office: Review and grade\n    deactivate Team Assistant\n    Professor-&gt;&gt;Student: Invitation for feedback session\n    deactivate Professor\n    Note over Professor,Student: 7. Feedback session",
+    "text": "Note\n\n\n\nThis section is marked as “toupdate”: update completely\nsequenceDiagram\n    Note over Professor,Student: 1. Initial meetings to discuss the general topic\n    Note over Student,Examination office: 2. Formal admission\n    Student-&gt;&gt;Examination office: Apply for admission\n    activate Examination office\n    Note right of Examination office: Check admission&lt;br/&gt;requirements\n    Examination office-&gt;&gt;Student: Topic confirmation form (docx)\n    Examination office-&gt;&gt;Team Assistant: Topic confirmation form (docx)\n    deactivate Examination office\n    Note over Professor,Student: Topic selection and registration\n    Student-&gt;&gt;Professor: Signed topic confirmations (2x)\n    activate Professor\n    Professor-&gt;&gt;Student: Signed topic confirmation I\n    Professor-&gt;&gt;Team Assistant: Signed topic confirmation II\n    deactivate Professor\n    activate Team Assistant\n    Team Assistant-&gt;&gt;Examination office: Topic confirmation (docx)\n    deactivate Team Assistant\n    loop Regularly\n        Note over Professor,Student: 3. Thesis writing and feedback sessions\n    end\n        Note over Student,Examination office: 4. Submission\n    Student-&gt;&gt;Examination office: Submit via the form server\n    Examination office-&gt;&gt;Team Assistant: digital version (to archive)\n    activate Team Assistant\n    Team Assistant-&gt;&gt;Professor: Digital version\n    deactivate Team Assistant\n    activate Professor\n    alt Master thesis\n        Note over Professor,Student: 5. Thesis presentation\n    end\n    Note over Professor,Student: 6. Grading\n    Professor-&gt;&gt;Team Assistant: Review and grade\n    activate Team Assistant\n    Team Assistant-&gt;&gt;Examination office: Review and grade\n    deactivate Team Assistant\n    Professor-&gt;&gt;Student: Invitation for feedback session\n    deactivate Professor\n    Note over Professor,Student: 7. Feedback session",
     "crumbs": [
       "Management",
       "Teaching",
