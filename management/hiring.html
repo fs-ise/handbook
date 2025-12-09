@@ -72,17 +72,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -92,6 +81,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -463,12 +463,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/contracts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Contracts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../management/onboarding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Onboarding</span></a>
   </div>
@@ -503,7 +497,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hr" id="toc-hr" class="nav-link active" data-scroll-target="#hr">11 HR</a></li>
+  <li><a href="#processes" id="toc-processes" class="nav-link active" data-scroll-target="#processes">Processes</a></li>
+  <li><a href="#subsequent-steps" id="toc-subsequent-steps" class="nav-link" data-scroll-target="#subsequent-steps">Subsequent steps</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/hiring.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -529,10 +524,37 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<section id="hr" class="level1">
-<h1>11 HR</h1>
-<p>{: .d-inline-block }</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is marked as “toupdate”: update complete process</p>
+</div>
+</div>
 <p>{: .resource } &gt; Confidential data is stored on the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/58?dir=/10-lab/11_hr" target="_blank">Nextcloud</a>.</p>
+<section id="processes" class="level2">
+<h2 class="anchored" data-anchor-id="processes">Processes</h2>
+<p>When sending documents to HR, clearly indicate who should receive the confirmation documents and contracts.</p>
+<ul>
+<li><a href="10.31.contracts_phd.html">PhD students</a> (wissenschaftliches Personal)</li>
+<li><a href="10.31.contracts_sa.html">Student assistants</a></li>
+<li><a href="10.31.contracts_staff.html">Staff</a></li>
+<li><a href="10.31.contracts_ext_lect.html">External lecturers</a></li>
+</ul>
+</section>
+<section id="subsequent-steps" class="level2">
+<h2 class="anchored" data-anchor-id="subsequent-steps">Subsequent steps</h2>
+<ul>
+<li>Contracts are stored in <a href="../11_hr.html">11 HR</a>.</li>
+<li>After creating an initial contract: order workstation etc. (10.52).</li>
+<li>For student assistants, we can order a used laptop (if needed).</li>
+</ul>
 
 
 </section>
