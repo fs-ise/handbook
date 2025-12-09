@@ -2997,11 +2997,11 @@
     ]
   },
   {
-    "objectID": "research/software.html#collaborative-literature-reviews-colrev",
-    "href": "research/software.html#collaborative-literature-reviews-colrev",
+    "objectID": "research/software.html#colrev",
+    "href": "research/software.html#colrev",
     "title": "Software",
-    "section": "Collaborative Literature Reviews (CoLRev)",
-    "text": "Collaborative Literature Reviews (CoLRev)\n\n\n\n\n\n\n  \n\n\n\nCoLRev is an open-source environment for collaborative literature reviews. It integrates with different synthesis tools, takes care of the data, and facilitates Git-based collaboration. To accomplish these goals, CoLRev advances the design of review technology at the intersection of methods, design, cognition, and community building. The following features stand out:\n\nSupports all literature review steps: problem formulation, search, dedupe, (pre)screen, pdf retrieval and preparation, and synthesis\nAn open and extensible environment based on shared data and process standards\nBuilds on git and its transparent collaboration model for the entire literature review process\nOffers a self-explanatory, fault-tolerant, and configurable user workflow\nOperates a model for data quality, content curation, and reuse\nEnables typological and methodological pluralism throughout the process",
+    "section": "CoLRev",
+    "text": "CoLRev\n\n\n\n\n\n\n  \n\n\n\nCoLRev (Collaborative Literature Reviews) is an open-source environment for collaborative literature reviews. It integrates with different synthesis tools, takes care of the data, and facilitates Git-based collaboration. To accomplish these goals, CoLRev advances the design of review technology at the intersection of methods, design, cognition, and community building. The following features stand out:\n\nSupports all literature review steps: problem formulation, search, dedupe, (pre)screen, pdf retrieval and preparation, and synthesis\nAn open and extensible environment based on shared data and process standards\nBuilds on git and its transparent collaboration model for the entire literature review process\nOffers a self-explanatory, fault-tolerant, and configurable user workflow\nOperates a model for data quality, content curation, and reuse\nEnables typological and methodological pluralism throughout the process",
     "crumbs": [
       "Research",
       "Output",
@@ -3009,11 +3009,11 @@
     ]
   },
   {
-    "objectID": "research/software.html#search-query",
-    "href": "research/software.html#search-query",
+    "objectID": "research/software.html#searchquery",
+    "href": "research/software.html#searchquery",
     "title": "Software",
-    "section": "search-query",
-    "text": "search-query\n\n\n\n\n\n\n      \n\n\n\nsearch-query is a Python package for parsing, validating, simplifying, and serializing search queries for academic databases. It currently supports PubMed, EBSCOHost, and Web of Science, using a standardized JSON schema (Haddaway et al., 2022).\n\nProgrammatic use, CLI interface, and optional integration via pre-commit hooks\nZero dependencies: easily embeddable across environments\nExtensible parser/validator architecture\nTested on real-world queries from searchRxiv",
+    "section": "SearchQuery",
+    "text": "SearchQuery\n\n\n\n\n\n\n      \n\n\n\nSearchQuery is a Python package for parsing, validating, simplifying, and serializing search queries for academic databases. It currently supports PubMed, EBSCOHost, and Web of Science, using a standardized JSON schema (Haddaway et al., 2022).\n\nProgrammatic use, CLI interface, and optional integration via pre-commit hooks\nZero dependencies: easily embeddable across environments\nExtensible parser/validator architecture\nTested on real-world queries from searchRxiv",
     "crumbs": [
       "Research",
       "Output",
@@ -3025,7 +3025,31 @@
     "href": "research/software.html#bibdedupe",
     "title": "Software",
     "section": "BibDedupe",
-    "text": "BibDedupe\n\n\n\n\n\n\n      \n\n\n\nBibDedupe is an open-source Python library for deduplication of bibliographic records, tailored for literature reviews. Unlike traditional deduplication methods, BibDedupe focuses on entity resolution, linking duplicate records instead of simply deleting them.\n\nAutomated Duplicate Linking with Zero False Positives: BibDedupe automates the duplicate linking process with a focus on eliminating false positives.\nPreprocessing Approach: BibDedupe uses a preprocessing approach that reflects the unique error generation process in academic databases, such as author re-formatting, journal abbreviation or translations.\nEntity Resolution: BibDedupe does not simply delete duplicates, but it links duplicates to resolve the entity and integrates the data. This allows for validation, and undo operations.\nProgrammatic Access: BibDedupe is designed for seamless integration into existing research workflows, providing programmatic access for easy incorporation into scripts and applications.\nTransparent and Reproducible Rules: BibDedupe’s blocking and matching rules are transparent and easily reproducible to promote reproducibility in deduplication processes.\nContinuous Benchmarking: Continuous integration tests running on GitHub Actions ensure ongoing benchmarking, maintaining the library’s reliability and performance across datasets.\nEfficient and Parallel Computation: BibDedupe implements computations efficiently and in parallel, using appropriate data structures and functions for optimal performance.\n\nTODO: add ENLIT and DEEP-CENIC",
+    "text": "BibDedupe\n\n\n\n\n\n\n      \n\n\n\nBibDedupe is an open-source Python library for deduplication of bibliographic records, tailored for literature reviews. Unlike traditional deduplication methods, BibDedupe focuses on entity resolution, linking duplicate records instead of simply deleting them.\n\nAutomated Duplicate Linking with Zero False Positives: BibDedupe automates the duplicate linking process with a focus on eliminating false positives.\nPreprocessing Approach: BibDedupe uses a preprocessing approach that reflects the unique error generation process in academic databases, such as author re-formatting, journal abbreviation or translations.\nEntity Resolution: BibDedupe does not simply delete duplicates, but it links duplicates to resolve the entity and integrates the data. This allows for validation, and undo operations.\nProgrammatic Access: BibDedupe is designed for seamless integration into existing research workflows, providing programmatic access for easy incorporation into scripts and applications.\nTransparent and Reproducible Rules: BibDedupe’s blocking and matching rules are transparent and easily reproducible to promote reproducibility in deduplication processes.\nContinuous Benchmarking: Continuous integration tests running on GitHub Actions ensure ongoing benchmarking, maintaining the library’s reliability and performance across datasets.\nEfficient and Parallel Computation: BibDedupe implements computations efficiently and in parallel, using appropriate data structures and functions for optimal performance.",
+    "crumbs": [
+      "Research",
+      "Output",
+      "Software"
+    ]
+  },
+  {
+    "objectID": "research/software.html#enlit",
+    "href": "research/software.html#enlit",
+    "title": "Software",
+    "section": "ENLIT",
+    "text": "ENLIT\n\n\n\n\n\n\n        \n\n\nENLIT supports scholars in exploring new literature by making backward searches more efficient and by guiding how to read a literature corpus.\nWhat ENLIT does\n\nExtracts references from a literature corpus (set of PDFs) and compiles a deduplicated reference list\nProvides statistics on journals and authors that are frequently cited in the corpus\nImplements a novel exploratory reading strategy: first read the most influential papers, then skim the remaining ones\nBuilds on GROBID for robust extraction of bibliographic information",
+    "crumbs": [
+      "Research",
+      "Output",
+      "Software"
+    ]
+  },
+  {
+    "objectID": "research/software.html#deep-cenic",
+    "href": "research/software.html#deep-cenic",
+    "title": "Software",
+    "section": "Deep-CENIC",
+    "text": "Deep-CENIC\n\n\n\n\n\n\n        \n\n\n\nDeep-CENIC is a deep learning classifier that measures the ideational impact of Information Systems review articles.\nHighlights\n\nCombines citation context, sentiment, position, and semantic similarity as predictive features\n\nOffers a gold-standard coded dataset for evaluating ML and DL models\n\nReproducible pipeline using Docker and a Cookiecutter-like data structure\n\nDemonstrated in Decision Support Systems (scientometric and NLP evaluation)\n\nIncludes transparent feature engineering for citation-based impact research",
     "crumbs": [
       "Research",
       "Output",
@@ -3749,7 +3773,7 @@
     "href": "research/data.html#curations",
     "title": "Data",
     "section": "Curations",
-    "text": "Curations\n\nOrganizational Handbooks\n\n\n\n\n\n\n     \n\n\n\nThis curation collects public employee and academic handbooks from digital-by-default organizations and research labs. It enables comparative analyses of digital work practices, governance models, and organizational transparency.\nHighlights\n\nStructured inventory of repositories and open handbook resources\nIncludes organizational, community, and academic research handbooks\nBasis for qualitative and computational content analysis\n\n\n\nLiterature Reviews in Information Systems\n\n\n\n\n\n\n     \n\n\n\nThis curation compiles and maintains an evolving dataset of literature reviews in Information Systems, supported by a dedicated bibliographic database and automated update routines. It provides a foundation for literature reviews and meta-research on review practices in IS.\nHighlights\n\nCurated, extensible dataset (records.bib)\nReproducible update workflow (make update)\nFocus on evidence synthesis methods and trends in IS research",
+    "text": "Curations\n\nOrganizational Handbooks\n\n\n\n\n\n\n     \n\n\n\nThe Organizational Handbooks curation collects public employee and academic handbooks from digital-by-default organizations and research labs. It enables comparative analyses of digital work practices, governance models, and organizational transparency.\nHighlights\n\nStructured inventory of repositories and open handbook resources\nIncludes organizational, community, and academic research handbooks\nBasis for qualitative and computational content analysis\n\n\n\nLiterature Reviews\n\n\n\n\n\n\n     \n\n\n\nThe Literature Reviews in Information Systems curation (GitHub Repository) compiles and maintains an evolving dataset of literature reviews in Information Systems, supported by a dedicated bibliographic database and automated update routines. It provides a foundation for literature reviews and meta-research on review practices in IS.\nHighlights\n\nCurated, extensible dataset (records.bib)\nReproducible update workflow (make update)\nFocus on evidence synthesis methods and trends in IS research",
     "crumbs": [
       "Research",
       "Output",

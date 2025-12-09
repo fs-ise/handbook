@@ -446,9 +446,11 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collaborative-literature-reviews-colrev" id="toc-collaborative-literature-reviews-colrev" class="nav-link active" data-scroll-target="#collaborative-literature-reviews-colrev">Collaborative Literature Reviews (CoLRev)</a></li>
-  <li><a href="#search-query" id="toc-search-query" class="nav-link" data-scroll-target="#search-query">search-query</a></li>
+  <li><a href="#colrev" id="toc-colrev" class="nav-link active" data-scroll-target="#colrev">CoLRev</a></li>
+  <li><a href="#searchquery" id="toc-searchquery" class="nav-link" data-scroll-target="#searchquery">SearchQuery</a></li>
   <li><a href="#bibdedupe" id="toc-bibdedupe" class="nav-link" data-scroll-target="#bibdedupe">BibDedupe</a></li>
+  <li><a href="#enlit" id="toc-enlit" class="nav-link" data-scroll-target="#enlit">ENLIT</a></li>
+  <li><a href="#deep-cenic" id="toc-deep-cenic" class="nav-link" data-scroll-target="#deep-cenic">Deep-CENIC</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/software.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -475,9 +477,9 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 
 <p>We develop software packages, primarily for literature reviews. Our software is available in the <a href="https://github.com/CoLRev-Environment" target="_blank">CoLRev Environment</a> and the <a href="https://github.com/orgs/fs-ise/repositories" target="_blank">fs-ise</a> organization.</p>
-<section id="collaborative-literature-reviews-colrev" class="level2">
-<h2 class="anchored" data-anchor-id="collaborative-literature-reviews-colrev">Collaborative Literature Reviews (CoLRev)</h2>
-<table>
+<section id="colrev" class="level2">
+<h2 class="anchored" data-anchor-id="colrev">CoLRev</h2>
+<table class="center-table logo-grid">
 <tbody><tr>
 <td>
 <img src="https://raw.githubusercontent.com/CoLRev-Ecosystem/colrev/main/docs/figures/logo_small.png" alt="CoLRev Logo" width="300">
@@ -487,7 +489,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </td>
 </tr>
 </tbody></table>
-<p><a href="https://github.com/CoLRev-Environment/colrev" target="_blank">CoLRev</a> is an open-source environment for collaborative literature reviews. It integrates with different synthesis tools, takes care of the data, and facilitates Git-based collaboration. To accomplish these goals, CoLRev advances the design of review technology at the intersection of methods, design, cognition, and community building. The following features stand out:</p>
+<p><a href="https://github.com/CoLRev-Environment/colrev" target="_blank">CoLRev</a> (Collaborative Literature Reviews) is an open-source environment for collaborative literature reviews. It integrates with different synthesis tools, takes care of the data, and facilitates Git-based collaboration. To accomplish these goals, CoLRev advances the design of review technology at the intersection of methods, design, cognition, and community building. The following features stand out:</p>
 <ul>
 <li>Supports all literature review steps: problem formulation, search, dedupe, (pre)screen, pdf retrieval and preparation, and synthesis</li>
 <li>An open and extensible environment based on shared data and process standards</li>
@@ -497,19 +499,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Enables typological and methodological pluralism throughout the process</li>
 </ul>
 </section>
-<section id="search-query" class="level2">
-<h2 class="anchored" data-anchor-id="search-query">search-query</h2>
-<table>
+<section id="searchquery" class="level2">
+<h2 class="anchored" data-anchor-id="searchquery">SearchQuery</h2>
+<table class="center-table logo-grid">
 <tbody><tr>
 <td>
-<img src="https://raw.githubusercontent.com/CoLRev-Environment/search-query/refs/heads/main/docs/source/_static/search_query_logo.svg" alt="SearchQuery Logo" width="250">
+<img src="https://raw.githubusercontent.com/CoLRev-Environment/search-query/refs/heads/main/docs/source/_static/search_query_logo.svg" alt="SearchQuery Logo" width="180">
 </td>
 <td>
 <a href="https://github.com/CoLRev-Environment/search-query"> <img src="https://img.shields.io/github/commit-activity/t/CoLRev-Environment/search-query" alt="Total commits"> </a><br> <a href="https://github.com/CoLRev-Environment/search-query"> <img src="https://img.shields.io/github/contributors-anon/CoLRev-Environment/search-query" alt="Contributors"> </a><br> <a href="https://joss.theoj.org/papers/ea1fcafb8f80fa98bcbd857cf1cfada9"><img src="https://joss.theoj.org/papers/ea1fcafb8f80fa98bcbd857cf1cfada9/status.svg" alt="DOI"></a>
 </td>
 </tr>
 </tbody></table>
-<p><strong>search-query</strong> is a Python package for parsing, validating, simplifying, and serializing search queries for academic databases. It currently supports PubMed, EBSCOHost, and Web of Science, using a standardized JSON schema (Haddaway et al., 2022).</p>
+<p><strong>SearchQuery</strong> is a Python package for parsing, validating, simplifying, and serializing search queries for academic databases. It currently supports PubMed, EBSCOHost, and Web of Science, using a standardized JSON schema (Haddaway et al., 2022).</p>
 <ul>
 <li>Programmatic use, CLI interface, and optional integration via pre-commit hooks</li>
 <li>Zero dependencies: easily embeddable across environments</li>
@@ -519,10 +521,10 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </section>
 <section id="bibdedupe" class="level2">
 <h2 class="anchored" data-anchor-id="bibdedupe">BibDedupe</h2>
-<table>
+<table class="center-table logo-grid">
 <tbody><tr>
 <td>
-<img src="https://raw.githubusercontent.com/CoLRev-Environment/bib-dedupe/main/docs/figures/logo.png" alt="BibDedupe Logo" width="250">
+<img src="https://raw.githubusercontent.com/CoLRev-Environment/bib-dedupe/main/docs/figures/logo.png" alt="BibDedupe Logo" width="180">
 </td>
 <td>
 <a href="https://github.com/CoLRev-Environment/bib-dedupe"> <img src="https://img.shields.io/github/commit-activity/t/CoLRev-Environment/bib-dedupe" alt="Total commits"> </a><br> <a href="https://github.com/CoLRev-Environment/bib-dedupe"> <img src="https://img.shields.io/github/contributors-anon/CoLRev-Environment/bib-dedupe" alt="Contributors"> </a><br> <a href="https://joss.theoj.org/papers/b954027d06d602c106430e275fe72130"><img src="https://joss.theoj.org/papers/b954027d06d602c106430e275fe72130/status.svg" alt="DOI"></a>
@@ -539,7 +541,52 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li><strong>Continuous Benchmarking</strong>: Continuous integration tests running on GitHub Actions ensure ongoing benchmarking, maintaining the library’s reliability and performance across datasets.</li>
 <li><strong>Efficient and Parallel Computation</strong>: BibDedupe implements computations efficiently and in parallel, using appropriate data structures and functions for optimal performance.</li>
 </ul>
-<p>TODO: add ENLIT and DEEP-CENIC</p>
+</section>
+<section id="enlit" class="level2">
+<h2 class="anchored" data-anchor-id="enlit">ENLIT</h2>
+<table class="center-table logo-grid">
+<tbody><tr>
+<td>
+<img src="https://raw.githubusercontent.com/digital-work-lab/enlit/master/src/main/resources/logo.png" alt="ENLIT Logo" width="40">
+</td>
+<td>
+<a href="https://github.com/digital-work-lab/enlit"> <img src="https://img.shields.io/github/commit-activity/t/digital-work-lab/enlit" alt="Total commits"> </a><br> <a href="https://github.com/digital-work-lab/enlit"> <img src="https://img.shields.io/github/contributors-anon/digital-work-lab/enlit" alt="Contributors"> </a><br> <a href="https://aisel.aisnet.org/ecis2020_rp/44/" target="_blank"> <img src="https://img.shields.io/static/v1?label=Peer-reviewed&amp;message=ECIS2020&amp;labelColor=000000&amp;color=28a745" alt="Peer-reviewed | ECIS2020"> </a>
+</td></tr>
+</tbody></table>
+<p><a href="https://github.com/digital-work-lab/enlit">ENLIT</a> supports scholars in <strong>exploring new literature</strong> by making backward searches more efficient and by guiding how to read a literature corpus.</p>
+<p><strong>What ENLIT does</strong></p>
+<ul>
+<li>Extracts references from a literature corpus (set of PDFs) and compiles a <strong>deduplicated reference list</strong></li>
+<li>Provides <strong>statistics on journals and authors</strong> that are frequently cited in the corpus</li>
+<li>Implements a <strong>novel exploratory reading strategy</strong>: first read the most influential papers, then skim the remaining ones</li>
+<li>Builds on GROBID for robust extraction of bibliographic information</li>
+</ul>
+</section>
+<section id="deep-cenic" class="level2">
+<h2 class="anchored" data-anchor-id="deep-cenic">Deep-CENIC</h2>
+<table class="center-table logo-grid">
+<tbody><tr>
+<td>
+<img src="https://raw.githubusercontent.com/julianprester/deep-cenic/master/deep-cenic-model.png" alt="Deep-CENIC Model" width="220">
+</td>
+<td>
+<a href="https://github.com/julianprester/deep-cenic"> <img src="https://img.shields.io/github/commit-activity/t/julianprester/deep-cenic" alt="Total commits"> </a><br> <a href="https://github.com/julianprester/deep-cenic"> <img src="https://img.shields.io/github/contributors-anon/julianprester/deep-cenic" alt="Contributors"> </a><br> <a href="https://www.sciencedirect.com/science/article/pii/S0167923620301871" target="_blank"> <img src="https://img.shields.io/static/v1?label=Peer-reviewed&amp;message=DSS&amp;labelColor=000000&amp;color=28a745" alt="Peer-reviewed | Decision Support Systems"> </a>
+</td>
+</tr>
+</tbody></table>
+<p><a href="https://github.com/julianprester/deep-cenic" target="_blank">Deep-CENIC</a> is a deep learning classifier that measures the <strong>ideational impact</strong> of Information Systems review articles.</p>
+<p><strong>Highlights</strong></p>
+<ul>
+<li>Combines citation context, sentiment, position, and semantic similarity as predictive features<br>
+</li>
+<li>Offers a <strong>gold-standard coded dataset</strong> for evaluating ML and DL models<br>
+</li>
+<li>Reproducible pipeline using <strong>Docker</strong> and a Cookiecutter-like data structure<br>
+</li>
+<li>Demonstrated in <strong>Decision Support Systems</strong> (scientometric and NLP evaluation)<br>
+</li>
+<li>Includes transparent feature engineering for citation-based impact research</li>
+</ul>
 
 
 </section>
