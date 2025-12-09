@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 import yaml  # kept in case you later want to re-use paper.md parsing
 
-ORG_NAME = "fs-ise"
+ORG_NAMES = ["fs-ise", "digital-work-lab"]
 BASE_URL = "https://api.github.com"
 WORKFLOW_FILENAME = ".github/workflows/labot.yml"
 
@@ -54,7 +54,6 @@ def get_workflow_status(owner: str, repo_name: str, workflow_id: int | None) -> 
         return "no-runs"
 
     latest_run = runs[0]
-    # status = latest_run["status"]
     conclusion = latest_run.get("conclusion") or "no-conclusion"
     return conclusion
 
@@ -72,7 +71,7 @@ def get_org_repositories(org_name: str) -> list[dict]:
             params={"page": page, "per_page": 100},
         )
         if response.status_code != 200:
-            raise Exception(f"Error fetching repositories (page {page}): {response.json()}")
+            raise Exception(f"Error fetching repositories for {org_name} (page {page}): {response.json()}")
 
         repos = response.json()
         if not repos:
@@ -134,61 +133,63 @@ def classify_area(topics: list[str]) -> str:
 
 
 def main() -> None:
-    repos = get_org_repositories(ORG_NAME)
     six_months_ago = datetime.now() - timedelta(days=180)
 
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
 
     result: list[dict] = []
 
-    for repo in repos:
-        # Skip the handbook site itself
-        if repo["html_url"] in [
-            "https://github.com/fs-ise/fs-ise.github.io",
-        ]:
-            print(f"Skipping {repo['name']}")
-            continue
+    for org_name in ORG_NAMES:
+        repos = get_org_repositories(org_name)
 
-        print(f"Processing {repo['name']}...")
+        for repo in repos:
+            # Skip the GitHub Pages repo for this org (e.g., fs-ise/fs-ise.github.io)
+            pages_repo_url = f"https://github.com/{org_name}/{org_name}.github.io"
+            if repo["html_url"] == pages_repo_url:
+                print(f"Skipping {repo['full_name']} (GitHub Pages repo)")
+                continue
 
-        topics = repo.get("topics") or []
-        area = classify_area(topics)
+            print(f"Processing {repo['full_name']}...")
 
-        workflow_id = get_workflow_id_by_filename(ORG_NAME, repo["name"], WORKFLOW_FILENAME)
-        labot_workflow_status = get_workflow_status(ORG_NAME, repo["name"], workflow_id)
+            topics = repo.get("topics") or []
+            area = classify_area(topics)
 
-        # Build base record
-        repo_data: dict = {
-            "name": repo["name"],
-            "title": repo["name"],  # can be adapted later for display
-            "html_url": repo["html_url"],
-            "visibility": "Private" if repo.get("private") else "Public",
-            "description": repo.get("description") or "",
-            "area": area,
-            "topics": topics,
-            "created_at": repo.get("created_at"),
-            "archived": repo.get("archived", False),
-            "collaborators": get_repo_collaborators(ORG_NAME, repo["name"]),
-            "updated_recently": datetime.strptime(
-                repo["pushed_at"], "%Y-%m-%dT%H:%M:%SZ"
-            )
-            > six_months_ago,
-            "labot_workflow_status": labot_workflow_status,
-            "project_type": get_project_type(ORG_NAME, repo["name"]),
-        }
+            workflow_id = get_workflow_id_by_filename(org_name, repo["name"], WORKFLOW_FILENAME)
+            labot_workflow_status = get_workflow_status(org_name, repo["name"], workflow_id)
 
-        # Paper classification tweak as before
-        if "paper" in topics and "paper" not in repo_data["project_type"]:
-            repo_data["project_type"].append("paper")
+            # Build base record
+            repo_data: dict = {
+                "owner": org_name,
+                "name": repo["name"],
+                "title": repo["name"],  # can be adapted later for display
+                "html_url": repo["html_url"],
+                "visibility": "Private" if repo.get("private") else "Public",
+                "description": repo.get("description") or "",
+                "area": area,
+                "topics": topics,
+                "created_at": repo.get("created_at"),
+                "archived": repo.get("archived", False),
+                "collaborators": get_repo_collaborators(org_name, repo["name"]),
+                "updated_recently": datetime.strptime(
+                    repo["pushed_at"], "%Y-%m-%dT%H:%M:%SZ"
+                )
+                > six_months_ago,
+                "labot_workflow_status": labot_workflow_status,
+                "project_type": get_project_type(org_name, repo["name"]),
+            }
 
-        # Determine where Labot is applicable
-        if not (
-            "paper" in repo_data["project_type"]
-            or "teaching-materials" in topics
-        ):
-            repo_data["labot_workflow_status"] = "not-applicable"
+            # Paper classification tweak as before
+            if "paper" in topics and "paper" not in repo_data["project_type"]:
+                repo_data["project_type"].append("paper")
 
-        result.append(repo_data)
+            # Determine where Labot is applicable
+            if not (
+                "paper" in repo_data["project_type"]
+                or "teaching-materials" in topics
+            ):
+                repo_data["labot_workflow_status"] = "not-applicable"
+
+            result.append(repo_data)
 
     # Write everything to assets/repos.json
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
