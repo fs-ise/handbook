@@ -1,67 +1,132 @@
 ---
 title: "Repositories"
+execute:
+  echo: false
+  warning: false
 ---
 
-[![Update Repositories](https://github.com/digital-work-lab/handbook/actions/workflows/update_repositories.yaml/badge.svg)](https://github.com/digital-work-lab/handbook/actions/workflows/update_repositories.yaml){: target="_blank"} [![Create Repository](https://img.shields.io/badge/Create-New%20Repository-blue)](https://github.com/organizations/digital-work-lab/repositories/new){: target="_blank"}
+[![Update Repositories](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg)](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml){target=_blank} [![Create Repository](https://img.shields.io/badge/Create-New%20Repository-blue)](https://github.com/organizations/fs-ise/repositories/new){target=_blank}
 
 {: .highlight }
 > Labot checks are currently implemented for *active paper (research)* repositories only.
 
+::: {.callout-note}
+Labot checks are currently implemented for *active paper (research)* repositories only.
+:::
+
+```{python}
+import json
+from pathlib import Path
+
+# Adjust if this file lives elsewhere
+data_path = Path("../assets/repos.json")
+repos = json.loads(data_path.read_text(encoding="utf-8"))
+
+def status_cell(repo, show_labot=False):
+    if repo.get("archived"):
+        status = '<span style="color: red;">🔒 Archived</span>'
+    elif repo.get("updated_recently", False):
+        status = '<span style="color: green;">🟢 Active</span>'
+    else:
+        status = '<span style="color: orange;">🟠 Inactive</span>'
+
+    if show_labot:
+        labot = repo.get("labot_workflow_status", "not-applicable")
+        if labot == "not-found":
+            status += " ❓"
+        elif labot not in ("success", "not-applicable"):
+            status += f' <a href="{repo["html_url"]}/actions/workflows/labot.yml" target="_blank">🚨</a>'
+    return status
+
+def visibility_cell(repo):
+    if repo.get("visibility") == "Public":
+        return '<img src="https://img.shields.io/badge/Public-green" alt="Public">'
+    return ""
+
+def collaborators_cell(repo):
+    collabs = repo.get("collaborators") or []
+    if not collabs:
+        return "None"
+    return ", ".join(
+        f'<a href="https://github.com/{c}" target="_blank">{c}</a>'
+        for c in collabs
+    )
+
+def repo_link(repo, with_colrev_icon=False):
+    title = repo.get("title") or repo.get("name")
+    icon = ""
+    if with_colrev_icon and "colrev" in (repo.get("project_type") or []):
+        icon = " 📚"
+    return f'<a href="{repo["html_url"]}" target="_blank">{title}</a>{icon}'
+
+def access_cell():
+    return (
+        '<a href="https://github.com/fs-ise/handbook/issues/new'
+        '?assignees=geritwagner&labels=access+request'
+        '&template=request-repo-access.md'
+        '&title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank">'
+        '<img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access">'
+        '</a>'
+    )
+
+def render_rows(filtered_repos,
+                show_labot=False,
+                require_active=None,
+                archived_only=None,
+                with_colrev_icon=False):
+    rows = []
+    for repo in filtered_repos:
+        if archived_only is True and not repo.get("archived"):
+            continue
+        if archived_only is False and repo.get("archived"):
+            continue
+        if require_active is True and not repo.get("updated_recently", False):
+            continue
+        if require_active is False and repo.get("updated_recently", False):
+            continue
+
+        rows.append(f"""<tr>
+  <td>{repo_link(repo, with_colrev_icon=with_colrev_icon)}</td>
+  <td>{status_cell(repo, show_labot=show_labot)}</td>
+  <td>{visibility_cell(repo)}</td>
+  <td>{collaborators_cell(repo)}</td>
+  <td>{access_cell()}</td>
+</tr>""")
+    return "\\n".join(rows)
+
+general_repos = [r for r in repos if r.get("area") not in ("research", "teaching")]
+teaching_repos = [r for r in repos if r.get("area") == "teaching"]
+research_repos = [r for r in repos if r.get("area") == "research"]
+```
+
 ## General Repositories
 
+```{python}
+#| output: asis
+html = f'''
 <table>
   <thead>
     <tr>
-      <th style="width: 250px;">Repository</th>
-      <th style="width: 60px;">Status</th>
-      <th style="width: 60px;">Visibility</th>
-      <th>Collaborators</th>
-      <th>Access</th>
+      <th style="width: 60%;">Repository</th>
+      <th style="width: 10%;">Status</th>
+      <th style="width: 10%;">Visibility</th>
+      <th style="width: 10%;>Collaborators</th>
+      <th style="width: 10%;>Access</th>
     </tr>
   </thead>
   <tbody>
-    {% for repo in site.repos %}
-    {% if repo.area != "research" and repo.area != "teaching" %}
-    <tr>
-      <td><a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a></td>
-      <td>
-        {% if repo.archived %}
-          <span style="color: red;">🔒 Archived</span>
-        {% else %}
-          {% if repo.updated_recently %}
-            <span style="color: green;">🟢 Active</span>
-          {% else %}
-            <span style="color: orange;">🟠 Inactive</span>
-          {% endif %}
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.visibility == "Public" %}
-          <img src="https://img.shields.io/badge/Public-green" alt="Public">
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.collaborators %}
-        {% for collaborator in repo.collaborators %}
-        <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endfor %}
-        {% else %}
-        None
-        {% endif %}
-      </td>
-      <td>
-        <a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&labels=access+request&template=request-repo-access.md&title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank">
-          <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access">
-        </a>
-      </td>
-    </tr>
-    {% endif %}
-    {% endfor %}
+    {render_rows(general_repos)}
   </tbody>
 </table>
+'''
+print(html)
+```
 
 ## Teaching Repositories
 
+```{python}
+#| output: asis
+html = f'''
 <table>
   <thead>
     <tr>
@@ -73,55 +138,40 @@ title: "Repositories"
     </tr>
   </thead>
   <tbody>
-    {% for repo in site.repos %}
-    {% if repo.area == "teaching" %}
-    <tr>
-      <td><a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a></td>
-      <td>
-        {% if repo.archived %}
-          <span style="color: red;">🔒 Archived</span>
-        {% else %}
-          {% if repo.updated_recently %}
-            <span style="color: green;">🟢 Active</span>
-          {% else %}
-            <span style="color: orange;">🟠 Inactive</span>
-          {% endif %}
-        {% endif %}
-        {% if repo.labot_workflow_status == "not-applicable" %}
-        
-        {% elsif repo.labot_workflow_status == "not-found" %}
-          ❓
-        {% elsif repo.labot_workflow_status != "success" %}
-          <a href="{{ repo.html_url }}/actions/workflows/labot.yml" target="_blank">🚨</a>
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.visibility == "Public" %}
-          <img src="https://img.shields.io/badge/Public-green" alt="Public">
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.collaborators %}
-        {% for collaborator in repo.collaborators %}
-        <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endfor %}
-        {% else %}
-        None
-        {% endif %}
-      </td>
-      <td>
-        <a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&labels=access+request&template=request-repo-access.md&title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank">
-          <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access">
-        </a>
-      </td>
-    </tr>
-    {% endif %}
-    {% endfor %}
+    {render_rows(teaching_repos, show_labot=True)}
   </tbody>
 </table>
+'''
+print(html)
+```
 
 ## Research Repositories
 
+```{python}
+#| output: asis
+active_recent = render_rows(
+    research_repos,
+    show_labot=True,
+    archived_only=False,
+    require_active=True,
+    with_colrev_icon=True,
+)
+inactive = render_rows(
+    research_repos,
+    show_labot=False,
+    archived_only=False,
+    require_active=False,
+    with_colrev_icon=False,
+)
+archived = render_rows(
+    research_repos,
+    show_labot=False,
+    archived_only=True,
+    require_active=None,
+    with_colrev_icon=False,
+)
+
+html = f'''
 <table>
   <thead>
     <tr>
@@ -133,118 +183,11 @@ title: "Repositories"
     </tr>
   </thead>
   <tbody>
-    {% for repo in site.repos %}
-    {% if repo.area == "research" %}
-      {% if repo.archived == false %}
-        {% if repo.updated_recently %}
-    <tr>
-      <td>
-        <a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a>
-        {% if repo.project_type contains "colrev" %}
-           📚
-        {% endif %}
-      </td>
-      <td>
-        <span style="color: green;">🟢 Active</span>
-        {% if repo.labot_workflow_status == "not-applicable" %}
-        
-        {% elsif repo.labot_workflow_status == "not-found" %}
-          ❓
-        {% elsif repo.labot_workflow_status != "success" %}
-          <a href="{{ repo.html_url }}/actions/workflows/labot.yml" target="_blank">🚨</a>
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.visibility == "Public" %}
-          <img src="https://img.shields.io/badge/Public-green" alt="Public">
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.collaborators %}
-        {% for collaborator in repo.collaborators %}
-        <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endfor %}
-        {% else %}
-        None
-        {% endif %}
-      </td>
-      <td>
-        <a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&labels=access+request&template=request-repo-access.md&title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank">
-          <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access">
-        </a>
-      </td>
-    </tr>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-    {% endfor %}
-
-    {% for repo in site.repos %}
-    {% if repo.area == "research" %}
-      {% if repo.archived == false %}
-        {% if repo.updated_recently == false %}
-    <tr>
-      <td><a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a></td>
-      <td>
-        <span style="color: orange;">🟠 Inactive</span>
-      </td>
-      <td>
-        {% if repo.visibility == "Public" %}
-          <img src="https://img.shields.io/badge/Public-green" alt="Public">
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.collaborators %}
-        {% for collaborator in repo.collaborators %}
-        <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endfor %}
-        {% else %}
-        None
-        {% endif %}
-      </td>
-      <td>
-        <a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&labels=access+request&template=request-repo-access.md&title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank">
-          <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access">
-        </a>
-      </td>
-    </tr>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-    {% endfor %}
-
-    {% for repo in site.repos %}
-    {% if repo.area == "research" %}
-      {% if repo.archived %}
-    <tr>
-      <td><a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a></td>
-      <td>
-        <span style="color: red;">🔒 Archived</span>
-      </td>
-      <td>
-        {% if repo.visibility == "Public" %}
-          <img src="https://img.shields.io/badge/Public-green" alt="Public">
-        {% endif %}
-      </td>
-      <td>
-        {% if repo.collaborators %}
-        {% for collaborator in repo.collaborators %}
-        <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endfor %}
-        {% else %}
-        None
-        {% endif %}
-      </td>
-      <td>
-        <a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&labels=access+request&template=request-repo-access.md&title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank">
-          <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access">
-        </a>
-      </td>
-    </tr>
-      {% endif %}
-    {% endif %}
-    {% endfor %}
-
+    {active_recent}
+    {inactive}
+    {archived}
   </tbody>
 </table>
-
+'''
+print(html)
+```
