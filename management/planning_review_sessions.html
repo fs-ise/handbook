@@ -72,17 +72,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -92,6 +81,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -532,7 +532,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Making ambitious plans, ensuring the necessary resources, support, and training are in place.</li>
 </ol>
 <p>The sessions are designed as conversations, aiming for reflection and mutual understanding while also documenting specific outcomes and agreements. Use the prompts selectively—there is no requirement to cover every question.</p>
-<p>{: .highlight } &gt; <strong>Dates</strong> &gt; - First half: January 15 &gt; - Second half: August 01</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Dates</strong> - First half: January 15 - Second half: August 01</p>
+</div>
+</div>
 <section id="review" class="level2">
 <h2 class="anchored" data-anchor-id="review">1. Review</h2>
 <p><strong>Objectives (Agenda)</strong></p>
@@ -542,7 +554,23 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Have any priorities or focus areas shifted?</li>
 <li>Have new topics emerged, or have others become obsolete?</li>
 </ul>
-<p>{: .highlight } &gt; <strong>Agenda repository</strong> &gt; &gt; - Move objectives from readme.md to an <code>archive.md</code> file and rate (🟢 🟡 🔴). &gt; - Note achievements or items that could be added to the CV.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Agenda repository</strong></p>
+<ul>
+<li>Move objectives from readme.md to an <code>archive.md</code> file and rate (🟢 🟡 🔴).</li>
+<li>Note achievements or items that could be added to the CV.</li>
+</ul>
+</div>
+</div>
 <p><strong>Responsibilities</strong></p>
 <ul>
 <li>What are the current responsibilities, and how well are they being fulfilled?</li>
@@ -600,7 +628,23 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>What are the target timelines for the planned actions?</li>
 <li>Are there any systems, applications, or stakeholders that need to be involved?</li>
 </ul>
-<p>{: .highlight } &gt; <strong>Update</strong> &gt; &gt; - Agenda repository: Update the <code>readme.md</code> objectives and GANTT chart in the agenda repository. &gt; - Website: Update the profile.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Update</strong></p>
+<ul>
+<li>Agenda repository: Update the <code>readme.md</code> objectives and GANTT chart in the agenda repository.</li>
+<li>Website: Update the profile.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>

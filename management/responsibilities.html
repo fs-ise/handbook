@@ -72,17 +72,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -92,6 +81,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -535,7 +535,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>To set a meeting, check the other’s calendar and send a calendar invitation via email</li>
 <li>Use the <a href="https://digital-work-lab.github.io/handbook/docs/00.goals.html#annual-cadence" target="_blank">planning sessions</a> to discuss and document objectives and key results (OKR) in your <a href="10-lab/10_processes/10.20.agendas" target="_blank">agenda repository</a></li>
 </ul>
-<p>{: .resource } &gt; Our <a href="10-lab/10_processes/10.20.agendas" target="_blank">agenda repositories</a> on GitHub are <a href="https://github.com/orgs/digital-work-lab/repositories?q=topic%3Aagenda" target="_blank">here</a>.</p>
+<div class="callout callout-style-default callout-resource callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Resource</span>Resource
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Our <a href="10-lab/10_processes/10.20.agendas" target="_blank">agenda repositories</a> on GitHub are <a href="https://github.com/orgs/digital-work-lab/repositories?q=topic%3Aagenda" target="_blank">here</a>.</p>
+</blockquote>
 <ul>
 <li><p>Familiarize with the relevant handbook sections:</p>
 <ul>
@@ -547,6 +559,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li><a href="{{ site.baseurl }}/docs/10-lab/10_processes/10.34.development.html">10.34 Development</a></li>
 </ul></li>
 </ul>
+</div>
+</div>
 </section>
 <section id="team-assistant" class="level2">
 <h2 class="anchored" data-anchor-id="team-assistant">Team assistant</h2>
