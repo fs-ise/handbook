@@ -22,20 +22,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Quarto
-      # Note: v2 is the current major for quarto-dev actions
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          tinytex: false    # set true if you render PDFs needing LaTeX
+          tinytex: false
 
-      # Optional: Python / R setup if needed
-      # - name: Set up Python
-      #   uses: actions/setup-python@v5
-      #   with:
-      #     python-version: '3.11'
-      #
-      # - name: Install Python deps
-      #   run: |
-      #     pip install -r requirements.txt
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install nbformat jupyter
 
       - name: Render site
         run: |
