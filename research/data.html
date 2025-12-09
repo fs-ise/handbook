@@ -282,6 +282,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../research/data_sets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data sets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../research/repo_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Repo Setup</span></a>
   </div>
@@ -416,8 +422,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#curations" id="toc-curations" class="nav-link active" data-scroll-target="#curations">Curations</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#curations" id="toc-curations" class="nav-link active" data-scroll-target="#curations">Curations</a>
+  <ul class="collapse">
+  <li><a href="#organizational-handbooks" id="toc-organizational-handbooks" class="nav-link" data-scroll-target="#organizational-handbooks">Organizational Handbooks</a></li>
+  <li><a href="#literature-reviews-in-information-systems" id="toc-literature-reviews-in-information-systems" class="nav-link" data-scroll-target="#literature-reviews-in-information-systems">Literature Reviews in Information Systems</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -447,20 +456,48 @@ ul.task-list li input[type="checkbox"] {
 <p>{: .resource } &gt; Our data and analyses are available on <a href="https://github.com/orgs/digital-work-lab/repositories?q=topic%3Adataset" target="_blank">GitHub</a> &gt; Confidential data is stored on the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/20-research/23_data&amp;fileid=88094" target="_blank">Nextcloud</a>.</p>
 <section id="curations" class="level2">
 <h2 class="anchored" data-anchor-id="curations">Curations</h2>
+<section id="organizational-handbooks" class="level3">
+<h3 class="anchored" data-anchor-id="organizational-handbooks">Organizational Handbooks</h3>
+<table>
+<tbody><tr>
+<td>
+<img src="https://raw.githubusercontent.com/digital-work-lab/handbooks/main/logo.png" alt="Handbooks Logo" width="230">
+</td>
+<td>
+<a href="https://github.com/digital-work-lab/handbooks"> <img src="https://img.shields.io/github/commit-activity/t/digital-work-lab/handbooks" alt="Total commits"> </a><br> <a href="https://github.com/digital-work-lab/handbooks"> <img src="https://img.shields.io/github/contributors-anon/digital-work-lab/handbooks" alt="Contributors"> </a>
+</td>
+</tr>
+</tbody></table>
+<p>This curation collects <strong>public employee and academic handbooks</strong> from digital-by-default organizations and research labs. It enables comparative analyses of digital work practices, governance models, and organizational transparency.</p>
+<p><strong>Highlights</strong></p>
 <ul>
-<li><a href="https://github.com/digital-work-lab/literature-reviews-in-information-systems" target="_blank">literature-reviews-in-information-systems</a></li>
-<li><a href="https://github.com/digital-work-lab/handbooks" target="_blank">handbooks</a></li>
+<li>Structured inventory of repositories and open handbook resources</li>
+<li>Includes organizational, community, and academic research handbooks</li>
+<li>Basis for qualitative and computational content analysis</li>
 </ul>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<section id="literature-reviews-in-information-systems" class="level3">
+<h3 class="anchored" data-anchor-id="literature-reviews-in-information-systems">Literature Reviews in Information Systems</h3>
+<table>
+<tbody><tr>
+<td>
+<img src="https://raw.githubusercontent.com/digital-work-lab/literature-reviews-in-information-systems/main/assets/logo.png" alt="LRIS Logo" width="230">
+</td>
+<td>
+<a href="https://github.com/digital-work-lab/literature-reviews-in-information-systems"> <img src="https://img.shields.io/github/commit-activity/t/digital-work-lab/literature-reviews-in-information-systems" alt="Total commits"> </a><br> <a href="https://github.com/digital-work-lab/literature-reviews-in-information-systems"> <img src="https://img.shields.io/github/contributors-anon/digital-work-lab/literature-reviews-in-information-systems" alt="Contributors"> </a>
+</td>
+</tr>
+</tbody></table>
+<p>This curation compiles and maintains an evolving dataset of literature reviews in Information Systems, supported by a dedicated bibliographic database and automated update routines. It provides a foundation for literature reviews and meta-research on review practices in IS.</p>
+<p><strong>Highlights</strong></p>
 <ul>
-<li><a href="https://ieee-dataport.org/datasets" target="_blank">IEEEDataPortal</a></li>
-<li><a href="https://www.berd-nfdi.de/" target="_blank">BERD</a></li>
-<li><a href="https://rdm.mpdl.mpg.de/after-research/repositories/" target="_blank">Overview of repositories and data journals</a></li>
+<li>Curated, extensible dataset (<code>records.bib</code>)</li>
+<li>Reproducible update workflow (<code>make update</code>)</li>
+<li>Focus on evidence synthesis methods and trends in IS research</li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
