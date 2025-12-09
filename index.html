@@ -73,17 +73,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -93,6 +82,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -164,8 +164,14 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#areas" id="toc-areas" class="nav-link active" data-scroll-target="#areas">Areas</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -190,6 +196,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 
 
 <p>Welcome to the Information Systems Education (ISE) lab hanbook!</p>
+<p><strong>Quickstart links</strong></p>
 <div class="accordion" id="accordion-1">
   <div class="accordion-item">
     <h3 class="accordion-header m-0 p-0 anchored" id="students">
@@ -251,8 +258,34 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 - Tasks overview (e.g., simple: search IS journals for literature reviews -report them here, review our teaching materials, test search-query/bib-dedupe..., advanced: contribute to search-query, colrev, bib-dedupe)
 
 -->
+<p><br></p>
+<section id="areas" class="level2">
+<h2 class="anchored" data-anchor-id="areas">Areas</h2>
+<div class="grid">
+<section id="teaching" class="level3 g-col-6">
+<h3 class="anchored" data-anchor-id="teaching">Teaching</h3>
+<p>Principles, systems, and procedures for designing, delivering, and evaluating courses — from lectures and theses to assessments, student support, and institutional reporting. <a href="./teaching/index.html">Go to Teaching →</a></p>
+</section>
+<section id="research" class="level3 g-col-6">
+<h3 class="anchored" data-anchor-id="research">Research</h3>
+<p>Support for scholarly work — from project planning and collaboration to methods, data, writing, and publication workflows. <a href="./research/index.html">Go to Research →</a></p>
+</section>
+<section id="management" class="level3 g-col-6">
+<h3 class="anchored" data-anchor-id="management">Management</h3>
+<p>Operating procedures that keep the lab running — communication, infrastructure, teaching admin, research support, risk, procurement, and HR. <a href="./management/index.html">Go to Management →</a></p>
+</section>
+<section id="academy" class="level3 g-col-6">
+<h3 class="anchored" data-anchor-id="academy">Academy</h3>
+<p>Training and development activities that build individual and shared capabilities over time. <a href="./academy/index.html">Go to Academy →</a></p>
+</section>
+<section id="team" class="level3 g-col-6">
+<h3 class="anchored" data-anchor-id="team">Team</h3>
+<p>Roles, responsibilities, and who to contact for specific topics within the lab. <a href="./team/index.html">Go to Team →</a></p>
+</section>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -660,5 +693,5 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
