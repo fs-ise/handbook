@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../assets/styles.css">
@@ -168,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Objectives</span></a>
+ <span class="menu-text">Goals</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -176,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/goals.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Goals</span></a>
   </div>
 </li>
@@ -331,12 +334,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../management/reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reports</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/new_modules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">New modules</span></a>
   </div>
 </li>
       </ul>
@@ -531,14 +528,25 @@ Note
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
     Professor-&gt;&gt;+Reisekostenstelle: Antrag auf Genehmigung einer Dienstreise
     Reisekostenstelle-&gt;&gt;+Professor: Genehmigter Antrag
     Note over Professor: Buchen
     Note over Professor: Konferenz (Rechnungen)
     Professor-&gt;&gt;+Reisekostenstelle: Reisekostenabrechnung (inkl. Rechnungen und Antrag)
     Reisekostenstelle-&gt;&gt;+Professor: Erstattung
-</code></pre>
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section id="travel-request" class="level2">
 <h2 class="anchored" data-anchor-id="travel-request">Travel request</h2>

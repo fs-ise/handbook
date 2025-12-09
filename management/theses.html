@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../assets/styles.css">
@@ -168,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Objectives</span></a>
+ <span class="menu-text">Goals</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -176,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/goals.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Goals</span></a>
   </div>
 </li>
@@ -331,12 +334,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../management/reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reports</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/new_modules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">New modules</span></a>
   </div>
 </li>
       </ul>
@@ -532,7 +529,12 @@ Note
 </div>
 <p>{: .highlight } This page contains <strong>administration details</strong>. For students, information is available on a <a href="https://digital-work-lab.github.io/theses/" target="_blank">separate page</a>.</p>
 <p>{: .resource } &gt; Information on individual theses is recorded internally (<a href="../35_theses.html">35 Theses</a>).</p>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
     Note over Professor,Student: 1. Initial meetings to discuss the general topic
     Note over Student,Examination office: 2. Formal admission
     Student-&gt;&gt;Examination office: Apply for admission
@@ -570,7 +572,13 @@ Note
     deactivate Team Assistant
     Professor-&gt;&gt;Student: Invitation for feedback session
     deactivate Professor
-    Note over Professor,Student: 7. Feedback session</code></pre>
+    Note over Professor,Student: 7. Feedback session
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <section id="registration" class="level2">
 <h2 class="anchored" data-anchor-id="registration">Registration</h2>
 <p>The administrative process starts with formal thesis registration.</p>
