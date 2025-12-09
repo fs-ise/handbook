@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -149,6 +114,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Management</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../academy/index.html"> 
+<span class="menu-text">Academy</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../team/index.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
@@ -206,8 +175,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">management/goals.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../management/goals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Goals</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/responsibilities.html" class="sidebar-item-text sidebar-link">
@@ -286,6 +258,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/repositories.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositories</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/systems_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Systems</span></a>
   </div>
@@ -322,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/course_organization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Course Organization</span></a>
+ <span class="menu-text">Course organization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -340,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/lufv_reports.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">LUFV Reports</span></a>
+ <span class="menu-text">LUFV reports</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -364,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/new_modules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">New Modules</span></a>
+ <span class="menu-text">New modules</span></a>
   </div>
 </li>
       </ul>
@@ -393,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/research_support.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research Support</span></a>
+ <span class="menu-text">Research support</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -486,7 +464,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/sick_leave.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sick Leave</span></a>
+ <span class="menu-text">Sick leave</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -558,7 +536,7 @@ Note
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../../assets/reports/handbook_activity_over_time.png" class="img-fluid figure-img"></p>
+<p><img src="../assets/reports/handbook_activity_over_time.png" class="img-fluid figure-img"></p>
 <figcaption>Activity</figcaption>
 </figure>
 </div>
@@ -610,17 +588,19 @@ Callouts (colored boxes):
 <pre><code>{: .resource } 
 &gt; Confidential data is stored on the [Nextcloud](http://url.com){target=_blank}.</code></pre>
 <p>{: .resource } &gt; Confidential data is stored on the <a href="http://url.com" target="_blank">Nextcloud</a>.</p>
-<ul>
-<li>Avoid renaming files or changing the structure of directories. If files need to be renamed, include a redirect in the header:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> ...</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">redirect_from</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> /docs/20-research/20_processes/20.30.pre-submission.html</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<!-- 
-Note: who is responsible
+<!--
+
+
+- Avoid renaming files or changing the structure of directories. If files need to be renamed, include a redirect in the header:
+
+```yaml
+---
+layout: default
+title: ...
+redirect_from:
+  - /docs/20-research/20_processes/20.30.pre-submission.html
+---
+```
 -->
 <!--
 {: .highlight }
@@ -660,12 +640,13 @@ gitGraph
 <section id="deployment" class="level2">
 <h2 class="anchored" data-anchor-id="deployment">Deployment</h2>
 <p>The handbook is hosted on GitHub Pages. The deployment may take a few minutes to complete. You can check the status at</p>
-<p>{: .text-center} <a href="https://github.com/digital-work-lab/handbook/actions">GitHub</a>{: .btn .btn-green target=“_blank”} {: .text-center}</p>
+<div class="text-center">
+<p><a href="https://github.com/fs-ise/handbook/actions" class="btn btn-green" target="_blank">GitHub</a></p>
+</div>
 </section>
 <section id="how-to-copy-the-handbook" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-copy-the-handbook">How to copy the handbook</h2>
 <p>To create a copy of the handbook, <a href="https://github.com/digital-work-lab/handbook/fork" target="_blank">clone</a> the repository.</p>
-<p>{: .highlight } More detailed instructions and best practices will be available shortly.</p>
 </section>
 <section id="linked-resources" class="level2">
 <h2 class="anchored" data-anchor-id="linked-resources">Linked resources</h2>
