@@ -80,7 +80,7 @@ def integrate_transition_into_qmd_header(
     Ensures there is a blank line between the YAML header and the body.
     If the final transition_status == "toupdate", a Quarto callout-note using
     transition_comment is inserted at the top of the body (if not already present).
-    Also replaces '{: target="_blank"}' with '{target=_blank}' in the body.
+    Also replaces '{target=_blank}' with '{target=_blank}' in the body.
     """
     # Match QMD front matter at the top
     m = re.match(r"^---\s*\n(.*?)\n---\s*\n?(.*)$", full_text, re.DOTALL)
@@ -124,8 +124,8 @@ def integrate_transition_into_qmd_header(
     # Prepare body: ensure exactly one blank line after the header
     body_text_stripped = body_text.lstrip("\n")
 
-    # Replace Quarto link attribute syntax {: target="_blank"} -> {target=_blank}
-    body_text_stripped = body_text_stripped.replace('{: target="_blank"}', '{target=_blank}')
+    # Replace Quarto link attribute syntax {target=_blank} -> {target=_blank}
+    body_text_stripped = body_text_stripped.replace('{target=_blank}', '{target=_blank}')
 
     # If status == "toupdate", add a Quarto callout-note at the top (if not already there)
     if final_status == "toupdate" and final_comment:
@@ -157,7 +157,7 @@ def process_qmd_file(path: Path, dry_run: bool = False) -> None:
       YAML front matter and integrate them into the QMD YAML header
     - if transition_status == "toupdate", insert a Quarto callout-note with
       the transition_comment at the top of the body
-    - replace '{: target="_blank"}' with '{target=_blank}' in the body
+    - replace '{target=_blank}' with '{target=_blank}' in the body
     - delete the markdown file afterwards
     """
     original_text = path.read_text(encoding="utf-8")
@@ -226,8 +226,8 @@ def process_qmd_file(path: Path, dry_run: bool = False) -> None:
         # Remove the first Johnny-decimal heading entirely
         md_body = remove_first_johnny_decimal_heading(md_body)
 
-        # Replace {: target="_blank"} in imported content as well (redundant but explicit)
-        md_body = md_body.replace('{: target="_blank"}', '{target=_blank}')
+        # Replace {target=_blank} in imported content as well (redundant but explicit)
+        md_body = md_body.replace('{target=_blank}', '{target=_blank}')
 
         # Return only the body of the imported markdown (no YAML front matter)
         return md_body
