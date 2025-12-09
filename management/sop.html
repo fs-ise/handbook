@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../assets/styles.css">
@@ -201,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P&amp;R Sessions</span></a>
+ <span class="menu-text">P&amp;R sessions</span></a>
   </div>
 </li>
       </ul>
@@ -277,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/sys_admin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sys Admin</span></a>
+ <span class="menu-text">Systems administration</span></a>
   </div>
 </li>
       </ul>
@@ -301,12 +304,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../management/course_organization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course organization</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/course_scheduling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Course scheduling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -545,11 +542,21 @@ Each principle has one of the following states:
 <section id="work-sessions" class="level2">
 <h2 class="anchored" data-anchor-id="work-sessions">Work sessions</h2>
 <p>We balance focused and collaborative work to foster deep intellectual engagement. Focused work allows for concentrated thinking, reading, and writing, while collaboration through co-working and knowledge-sharing sessions enhances idea exchange and teamwork. Alternating between these modes helps maintain productivity and creativity.</p>
-<p>{: .text-center}</p>
-<pre class="mermaid"><code>flowchart LR
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
     A["Focused work"] &lt;--&gt; B["Goal setting"]
     B &lt;--&gt; C["Collaborative work"]
-    C &lt;--&gt; A</code></pre>
+    C &lt;--&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p><strong>Goal setting</strong></p>
 <p>Goal setting is an intentional practice to clarify what matters most, individually and as a team. In regular <a href="10.21.planning_review_sessions">planning and review sessions</a>, we reflect on our progress, define objectives, and identify key results that align with our broader mission.</p>
 <p>We encourage everyone to:</p>
@@ -580,8 +587,12 @@ Each principle has one of the following states:
 <section id="work-protocol" class="level2">
 <h2 class="anchored" data-anchor-id="work-protocol">Work protocol</h2>
 <p>Our goal is to work on shared repositories (courses, projects, agendas), which serve as a “single point of truth”. For example, there should always be a specific repository containing the current version of a research paper, along with the version history, ongoing work in branches or pull requests and open issues. We try to avoid sending direct messages and documents as much as possible. Collaborating in these repositories has many benefits: repositories provide context (clearly identifying the project, its history, ongoing work, and open issues), allow us to reduce direct messages (the cognitive effort to search for related documents and coordinate asynchronous work), and use scripts like Labot for automation.</p>
-<p>{: .text-center}</p>
-<pre class="mermaid"><code>flowchart LR
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
 
     subgraph task["III. Task"]
         U["Has it been done before?"] --&gt;|check handbook documentation, prior issues, including closed ones, and discussion| J
@@ -609,7 +620,13 @@ Each principle has one of the following states:
 
     style task fill:white,stroke:#333,stroke-width:3px
     style scope fill:white,stroke:#333,stroke-width:3px
-    style confidentiality fill:white,stroke:#333,stroke-width:3px</code></pre>
+    style confidentiality fill:white,stroke:#333,stroke-width:3px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p><strong>Principles</strong></p>
 <ul>
 <li>Use GitHub issues and <a href="10.20.agendas">agendas</a> for task management</li>

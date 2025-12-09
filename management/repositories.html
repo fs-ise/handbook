@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P&amp;R Sessions</span></a>
+ <span class="menu-text">P&amp;R sessions</span></a>
   </div>
 </li>
       </ul>
@@ -277,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/sys_admin.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sys Admin</span></a>
+ <span class="menu-text">Systems administration</span></a>
   </div>
 </li>
       </ul>
@@ -301,12 +301,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../management/course_organization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course organization</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/course_scheduling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Course scheduling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -519,59 +513,133 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://github.com/digital-work-lab/handbook/actions/workflows/update_repositories.yaml"><img src="https://github.com/digital-work-lab/handbook/actions/workflows/update_repositories.yaml/badge.svg" class="img-fluid" alt="Update Repositories"></a>{: target=“_blank”} <a href="https://github.com/organizations/digital-work-lab/repositories/new"><img src="https://img.shields.io/badge/Create-New%20Repository-blue.png" class="img-fluid" alt="Create Repository"></a>{: target=“_blank”}</p>
+<p><a href="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml" target="_blank"><img src="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg" class="img-fluid" alt="Update Repositories"></a> <a href="https://github.com/organizations/fs-ise/repositories/new" target="_blank"><img src="https://img.shields.io/badge/Create-New%20Repository-blue.png" class="img-fluid" alt="Create Repository"></a></p>
 <p>{: .highlight } &gt; Labot checks are currently implemented for <em>active paper (research)</em> repositories only.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Labot checks are currently implemented for <em>active paper (research)</em> repositories only.</p>
+</div>
+</div>
 <section id="general-repositories" class="level2">
 <h2 class="anchored" data-anchor-id="general-repositories">General Repositories</h2>
-
-{% for repo in site.repos %} {% if repo.area != “research” and repo.area != “teaching” %}
-
-{% endif %} {% endfor %}
 <table>
 <thead>
 <tr>
-<th style="width: 250px;">
+<th style="width: 60%;">
 Repository
 </th>
-<th style="width: 60px;">
+<th style="width: 10%;">
 Status
 </th>
-<th style="width: 60px;">
+<th style="width: 10%;">
 Visibility
 </th>
-<th>
-Collaborators
-</th>
-<th>
-Access
-</th>
+<th style="width: 10%;>Collaborators</th>
+      <th style=" width:="" 10%;="">Access</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>
-<a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a>
+<a href="https://github.com/fs-ise/big-data-analytics" target="_blank">big-data-analytics</a>
 </td>
 <td>
-{% if repo.archived %} <span style="color: red;">🔒 Archived</span> {% else %} {% if repo.updated_recently %} <span style="color: green;">🟢 Active</span> {% else %} <span style="color: orange;">🟠 Inactive</span> {% endif %} {% endif %}
+<span style="color: green;">🟢 Active</span>
 </td>
 <td>
-{% if repo.visibility == “Public” %} <img src="https://img.shields.io/badge/Public-green" alt="Public"> {% endif %}
+<img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-{% if repo.collaborators %} {% for collaborator in repo.collaborators %} <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %} {% endfor %} {% else %} None {% endif %}
+<a href="https://github.com/princeGT-creator" target="_blank">princeGT-creator</a>
 </td>
 <td>
-<a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"> <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"> </a>
+<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
 </td>
-</tr></tbody>
+</tr>
+
+<tr>
+<td>
+<a href="https://github.com/fs-ise/fs-ise-presentation" target="_blank">fs-ise-presentation</a>
+</td>
+<td>
+<span style="color: green;">🟢 Active</span>
+</td>
+<td>
+<img src="https://img.shields.io/badge/Public-green" alt="Public">
+</td>
+<td>
+None
+</td>
+<td>
+<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="https://github.com/fs-ise/handbook" target="_blank">handbook</a>
+</td>
+<td>
+<span style="color: green;">🟢 Active</span>
+</td>
+<td>
+<img src="https://img.shields.io/badge/Public-green" alt="Public">
+</td>
+<td>
+<a href="https://github.com/Stella1234-design" target="_blank">Stella1234-design</a>
+</td>
+<td>
+<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="https://github.com/fs-ise/quarto-template-international-conference-on-information-systems" target="_blank">quarto-template-international-conference-on-information-systems</a>
+</td>
+<td>
+<span style="color: green;">🟢 Active</span>
+</td>
+<td>
+<img src="https://img.shields.io/badge/Public-green" alt="Public">
+</td>
+<td>
+None
+</td>
+<td>
+<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="https://github.com/fs-ise/quarto-letter-template" target="_blank">quarto-letter-template</a>
+</td>
+<td>
+<span style="color: green;">🟢 Active</span>
+</td>
+<td>
+</td>
+<td>
+None
+</td>
+<td>
+<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
+</td>
+</tr>
+</tbody>
 </table>
 </section>
 <section id="teaching-repositories" class="level2">
 <h2 class="anchored" data-anchor-id="teaching-repositories">Teaching Repositories</h2>
-
-{% for repo in site.repos %} {% if repo.area == “teaching” %}
-
-{% endif %} {% endfor %}
 <table>
 <thead>
 <tr>
@@ -592,100 +660,13 @@ Access
 </th>
 </tr>
 </thead>
-<tbody><tr>
-<td>
-<a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a>
-</td>
-<td>
-<p>{% if repo.archived %} <span style="color: red;">🔒 Archived</span> {% else %} {% if repo.updated_recently %} <span style="color: green;">🟢 Active</span> {% else %} <span style="color: orange;">🟠 Inactive</span> {% endif %} {% endif %} {% if repo.labot_workflow_status == “not-applicable” %}</p>
-{% elsif repo.labot_workflow_status == “not-found” %} ❓ {% elsif repo.labot_workflow_status != “success” %} <a href="{{ repo.html_url }}/actions/workflows/labot.yml" target="_blank">🚨</a> {% endif %}
-</td>
-<td>
-{% if repo.visibility == “Public” %} <img src="https://img.shields.io/badge/Public-green" alt="Public"> {% endif %}
-</td>
-<td>
-{% if repo.collaborators %} {% for collaborator in repo.collaborators %} <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %} {% endfor %} {% else %} None {% endif %}
-</td>
-<td>
-<a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"> <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"> </a>
-</td>
-</tr></tbody>
+<tbody>
+</tbody>
 </table>
 </section>
 <section id="research-repositories" class="level2">
 <h2 class="anchored" data-anchor-id="research-repositories">Research Repositories</h2>
-
-{% for repo in site.repos %} {% if repo.area == “research” %} {% if repo.archived == false %} {% if repo.updated_recently %}
-<pre><code>{% endif %}
-  {% endif %}
-{% endif %}
-{% endfor %}
-
-{% for repo in site.repos %}
-{% if repo.area == "research" %}
-  {% if repo.archived == false %}
-    {% if repo.updated_recently == false %}
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href="{{ repo.html_url }}" target="_blank"&gt;{{ repo.title }}&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;
-    &lt;span style="color: orange;"&gt;🟠 Inactive&lt;/span&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    {% if repo.visibility == "Public" %}
-      &lt;img src="https://img.shields.io/badge/Public-green" alt="Public"&gt;
-    {% endif %}
-  &lt;/td&gt;
-  &lt;td&gt;
-    {% if repo.collaborators %}
-    {% for collaborator in repo.collaborators %}
-    &lt;a href="https://github.com/{{ collaborator }}" target="_blank"&gt;{{ collaborator }}&lt;/a&gt;{% if forloop.last == false %}, {% endif %}
-    {% endfor %}
-    {% else %}
-    None
-    {% endif %}
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"&gt;
-      &lt;img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"&gt;
-    &lt;/a&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-    {% endif %}
-  {% endif %}
-{% endif %}
-{% endfor %}
-
-{% for repo in site.repos %}
-{% if repo.area == "research" %}
-  {% if repo.archived %}
-&lt;tr&gt;
-  &lt;td&gt;&lt;a href="{{ repo.html_url }}" target="_blank"&gt;{{ repo.title }}&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;
-    &lt;span style="color: red;"&gt;🔒 Archived&lt;/span&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    {% if repo.visibility == "Public" %}
-      &lt;img src="https://img.shields.io/badge/Public-green" alt="Public"&gt;
-    {% endif %}
-  &lt;/td&gt;
-  &lt;td&gt;
-    {% if repo.collaborators %}
-    {% for collaborator in repo.collaborators %}
-    &lt;a href="https://github.com/{{ collaborator }}" target="_blank"&gt;{{ collaborator }}&lt;/a&gt;{% if forloop.last == false %}, {% endif %}
-    {% endfor %}
-    {% else %}
-    None
-    {% endif %}
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"&gt;
-      &lt;img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"&gt;
-    &lt;/a&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-  {% endif %}
-{% endif %}
-{% endfor %}</code></pre><table>
+<table>
 <thead>
 <tr>
 <th style="width: 250px;">
@@ -705,25 +686,7 @@ Access
 </th>
 </tr>
 </thead>
-<tbody><tr>
-<td>
-<a href="{{ repo.html_url }}" target="_blank">{{ repo.title }}</a> {% if repo.project_type contains “colrev” %} 📚 {% endif %}
-</td>
-<td>
-<p><span style="color: green;">🟢 Active</span> {% if repo.labot_workflow_status == “not-applicable” %}</p>
-{% elsif repo.labot_workflow_status == “not-found” %} ❓ {% elsif repo.labot_workflow_status != “success” %} <a href="{{ repo.html_url }}/actions/workflows/labot.yml" target="_blank">🚨</a> {% endif %}
-</td>
-<td>
-{% if repo.visibility == “Public” %} <img src="https://img.shields.io/badge/Public-green" alt="Public"> {% endif %}
-</td>
-<td>
-{% if repo.collaborators %} {% for collaborator in repo.collaborators %} <a href="https://github.com/{{ collaborator }}" target="_blank">{{ collaborator }}</a>{% if forloop.last == false %}, {% endif %} {% endfor %} {% else %} None {% endif %}
-</td>
-<td>
-<a href="https://github.com/digital-work-lab/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"> <img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"> </a>
-</td>
-</tr>
-
+<tbody>
 </tbody>
 </table>
 
