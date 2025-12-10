@@ -4,26 +4,29 @@ title: "Revision"
 
 ## Setup: Creating the revision sheet
 
-{: .resource } 
-> 📺 [video demo](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1066954?dir=/20-research/20_processes/32_revisions){target=_blank}
+::: resource
+📺 [video demo](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1066954?dir=/20-research/20_processes/32_revisions){target=_blank}
+:::
 
 The following explains how to create a revision document. In Git, we create revision documents as a list of comments and responses, structured according to comment IDs. This aligns with the line-based diffs of Git/GitHub and allows us to split and merge revision items effectively. When following the standard format, a revision table can be generated at the end.
 
-{: .highlight }
-> **Revision document**
->
-> \# AE1
->
-> Comment 1 provided by the AE ....
->
-> \> Our response ...
->
-> \# AE2
->
-> ...
+::: {.callout-note}
+**Revision document**
 
-{: .warning }
+\# AE1
+
+Comment 1 provided by the AE ....
+
+\> Our response ...
+
+\# AE2
+
+...
+:::
+
+::: {.callout-warning}
 Do not use public LLMs without the team's consent. **Check the results meticulously.** Large review packages may not be transferred completely.
+:::
 
 The following prompt can be used to create a revision sheet based on feedback documents (input):
 
@@ -98,14 +101,15 @@ Next (optional):
 - When comments are addressed, add `<!-- status:done -->`.
 - Export a Word table at the end:
 
-{: .highlight }
-> **Conversion to Word (revision table)**
->
-> After completing the revision sheet in Markdown, it can be transformed into a Word document (revision table) :
->
-> ```
-> labot paper --revise
-> ```
+::: {.callout-note}
+**Conversion to Word (revision table)**
+
+After completing the revision sheet in Markdown, it can be transformed into a Word document (revision table) :
+
+```
+labot paper --revise
+```
+:::
 
 To mark particular issues as closed or later, add the following marks:
 
@@ -176,10 +180,11 @@ e
    - **Schedule Activities**: Allocate specific times for revision tasks and ensure collaboration with co-authors is well-coordinated.
    - **Refine**: Dedicate time towards the end of the revision process to polish the manuscript and response document.
 
-{: .info }
-> **Contradicting review packages**
->
-> If the review panel makes contradicting suggestions and the AE does not offer guidance, it may be helpful to meet with the SE, discuss the options, make a decision and refer to that in the response (see [IS research podcast](https://www.janrecker.com/this-is-research-podcast/why-you-should-never-write-a-conceptual-paper-2-october-2024/){target=_blank}).
+::: {.callout-note}
+**Contradicting review packages**
+
+If the review panel makes contradicting suggestions and the AE does not offer guidance, it may be helpful to meet with the SE, discuss the options, make a decision and refer to that in the response (see [IS research podcast](https://www.janrecker.com/this-is-research-podcast/why-you-should-never-write-a-conceptual-paper-2-october-2024/){target=_blank}).
+:::
 
 ## Expected Outcome
 
@@ -197,11 +202,12 @@ Example of a Revision Table
 | R1.1 | However, the authors need to clarify some aspects. These aspects relate to the significance of the proposed approach against the background of the rapid evolution of generative AI tools. The authors mention that AI use is currently viewed as misconduct. What mechanisms were in place to identify such use? There is also a possibility that learners used AI not to produce answers but as a tutor to build understanding before class. Thus, generative AI could increase the baseline knowledge of those who use it. The authors need to offer ideas on how to evaluate the impact of the course on learner competency in light of AI. At present, the focus is on learner feedback. The authors might consider whether assessing baseline knowledge, teamwork aptitude, and AI usage habits is key to understanding true course effectiveness.        | We thank the reviewer for this encouraging feedback and the opportunity to revise our manuscript. As noted, it is not possible to reliably confirm AI use through output inspection alone; instead, we rely on structured rules and testing to evaluate individual understanding without AI support. We also reiterate our earlier position that AI can serve as a valuable tutor when used to support, rather than replace, learning.               |
 | R1.2 | ...        | ...                                |
 
-{: .info }
-> **References to reviewers and editors**
->
-> In the response, we can refer to the AE (short for associate editor) or SE (senior editor) or R1 (reviewer 1).
-> In addition, we may refer to specific comments, such as R2.4 (the 4th comment of reviewer 2).
+::: {.callout-note}
+**References to reviewers and editors**
+
+In the response, we can refer to the AE (short for associate editor) or SE (senior editor) or R1 (reviewer 1).
+In addition, we may refer to specific comments, such as R2.4 (the 4th comment of reviewer 2).
+:::
 
 <!--
 | R1.1 | Motivation not persuasive enough        | Enhanced the introduction to better highlight the research gap and significance.                                |
