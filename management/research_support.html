@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
 
     const options = {
-      valueNames: ['listing-author','listing-title','listing-outlet','listing-date',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-author','listing-title','listing-outlet','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-author","listing-title","listing-outlet"],
     };
@@ -149,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
 
     const options = {
-      valueNames: ['listing-author','listing-title','listing-outlet','listing-date',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-author','listing-title','listing-outlet','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-author","listing-title","listing-outlet"],
     };
@@ -170,15 +170,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -192,15 +192,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -938,6 +938,25 @@ Note
 <h3 class="anchored" data-anchor-id="year-self-archiving">1-year self-archiving</h3>
 <div id="listing-listing-1y" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-1y-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing-1y'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
@@ -946,10 +965,10 @@ Note
 <table class="quarto-listing-table table caption-top">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th">Author</th>
-<th data-quarto-table-cell-role="th">Title</th>
+<th data-quarto-table-cell-role="th"><span class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</span></th>
+<th data-quarto-table-cell-role="th"><span class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</span></th>
 <th data-quarto-table-cell-role="th">Journal / Conference</th>
-<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"><span class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</span></th>
 </tr>
 </thead>
 <tbody class="list">
@@ -962,21 +981,182 @@ Note
 <h3 class="anchored" data-anchor-id="year-self-archiving-1">2-year self-archiving</h3>
 <div id="listing-listing-2y" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-2y-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing-2y'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<table class="quarto-listing-table table caption-top">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Author</th>
-<th data-quarto-table-cell-role="th">Title</th>
-<th data-quarto-table-cell-role="th">Journal / Conference</th>
-<th data-quarto-table-cell-role="th">Date</th>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+Journal / Conference
+</th>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
 </tr>
 </thead>
 <tbody class="list">
+
+<tr data-index="0" data-categories="bGl0ZXJhdHVyZS1yZXZpZXclMkNkaWdpdGFsLWhlYWx0aA==" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1765365105216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="795" data-listing-title-sort="AI maturity in health care: An overview of 10 OECD countries" data-listing-filename-sort="CastonguayWagnerMotulskyEtAl2023.qmd">
+<td>
+<span class="listing-author">Castonguay, Alexandre and Wagner, Gerit and Motulsky, Aude and Paré, Guy</span>
+</td>
+<td>
+<a href="../research/papers/CastonguayWagnerMotulskyEtAl2023.html" class="title listing-title">AI maturity in health care: An overview of 10 OECD countries</a>
+</td>
+<td>
+<span class="listing-outlet">Health Policy</span>
+</td>
+<td>
+<span class="listing-date">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1765365105216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="898" data-listing-title-sort="A method for resolving organisation‐enterprise system misfits: An action research study in a pluralistic organisation" data-listing-filename-sort="MorquinOlogeanuTaddeiPareEtAl2023.qmd">
+<td>
+<span class="listing-author">Morquin, David and Ologeanu‐Taddei, Roxana and Paré, Guy and Wagner, Gerit</span>
+</td>
+<td>
+<a href="../research/papers/MorquinOlogeanuTaddeiPareEtAl2023.html" class="title listing-title">A method for resolving organisation‐enterprise system misfits: An action research study in a pluralistic organisation</a>
+</td>
+<td>
+<span class="listing-outlet">Information Systems Journal</span>
+</td>
+<td>
+<span class="listing-date">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="bGl0ZXJhdHVyZS1yZXZpZXclMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1765365105216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="730" data-listing-title-sort="Classifying the ideational impact of Information Systems review articles: A content-enriched deep learning approach" data-listing-filename-sort="PresterWagnerSchryenEtAl2021.qmd">
+<td>
+<span class="listing-author">Prester, Julian and Wagner, Gerit and Schryen, Guido and Hassan, Nik Rushdi</span>
+</td>
+<td>
+<a href="../research/papers/PresterWagnerSchryenEtAl2021.html" class="title listing-title">Classifying the ideational impact of Information Systems review articles: A content-enriched deep learning approach</a>
+</td>
+<td>
+<span class="listing-outlet">Decision Support Systems</span>
+</td>
+<td>
+<span class="listing-date">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="bGl0ZXJhdHVyZS1yZXZpZXclMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1765365105217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="613" data-listing-title-sort="Which factors affect the scientific impact of review papers in IS research? A scientometric study" data-listing-filename-sort="WagnerPresterRocheEtAl2021.qmd">
+<td>
+<span class="listing-author">Wagner, Gerit and Prester, Julian and Roche, Maria Patricia and Schryen, Guido and Benlian, Alexander and Paré, Guy and Templier, Mathieu</span>
+</td>
+<td>
+<a href="../research/papers/WagnerPresterRocheEtAl2021.html" class="title listing-title">Which factors affect the scientific impact of review papers in IS research? A scientometric study</a>
+</td>
+<td>
+<span class="listing-outlet">Information &amp; Management</span>
+</td>
+<td>
+<span class="listing-date">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="ZGlnaXRhbC1oZWFsdGglMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1765365105216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="401" data-listing-title-sort="Why Do People Keep Consulting Physicians Online? A Study Of Teleconsultation Continuance Intention" data-listing-filename-sort="OuimetPareWagner2020.qmd">
+<td>
+<span class="listing-author">Ouimet, A. Grenier and Paré, G. and Wagner, G.</span>
+</td>
+<td>
+<a href="../research/papers/OuimetPareWagner2020.html" class="title listing-title">Why Do People Keep Consulting Physicians Online? A Study Of Teleconsultation Continuance Intention</a>
+</td>
+<td>
+<span class="listing-outlet">Administrative Sciences Association of Canada Conference</span>
+</td>
+<td>
+<span class="listing-date">2020</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="aXQtc2VjdXJpdHk=" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1765365105217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949" data-listing-title-sort="Forecasting IT security vulnerabilities – An empirical analysis" data-listing-filename-sort="YasasinPresterWagnerEtAl2020.qmd">
+<td>
+<span class="listing-author">Yasasin, Emrah and Prester, Julian and Wagner, Gerit and Schryen, Guido</span>
+</td>
+<td>
+<a href="../research/papers/YasasinPresterWagnerEtAl2020.html" class="title listing-title">Forecasting IT security vulnerabilities – An empirical analysis</a>
+</td>
+<td>
+<span class="listing-outlet">Computers &amp; Security</span>
+</td>
+<td>
+<span class="listing-date">2020</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1765365105216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="640" data-listing-title-sort="Assessing data quality – A probability-based metric for semantic consistency" data-listing-filename-sort="HeinrichKlierSchillerEtAl2018.qmd">
+<td>
+<span class="listing-author">Heinrich, Bernd and Klier, Mathias and Schiller, Alexander and Wagner, Gerit</span>
+</td>
+<td>
+<a href="../research/papers/HeinrichKlierSchillerEtAl2018.html" class="title listing-title">Assessing data quality – A probability-based metric for semantic consistency</a>
+</td>
+<td>
+<span class="listing-outlet">Decision Support Systems</span>
+</td>
+<td>
+<span class="listing-date">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-categories="aXQtc2VjdXJpdHklMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1420070400000" data-listing-file-modified-sort="1765365105217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="594" data-listing-title-sort="Towards an Economic Approach to Identity and Access Management Systems Using Decision Theory" data-listing-filename-sort="WeishauplKunzYasasinEtAl2015.qmd">
+<td>
+<span class="listing-author">Weishäupl, Eva and Kunz, Michael and Yasasin, Emrah and Wagner, Gerit and Prester, Julian and Schryen, Guido and Pernul, Günther</span>
+</td>
+<td>
+<a href="../research/papers/WeishauplKunzYasasinEtAl2015.html" class="title listing-title">Towards an Economic Approach to Identity and Access Management Systems Using Decision Theory</a>
+</td>
+<td>
+<span class="listing-outlet">2nd International Workshop on Security in Highly Connected IT Systems</span>
+</td>
+<td>
+<span class="listing-date">2015</span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -1481,7 +1661,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Research support"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: listing-1y</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: ../research/papers</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: ../research/papers/*</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: ["author", "title", "outlet", "date"]</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    field-display-names:</span></span>
@@ -1500,7 +1680,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">      self_archiving_possible_1y: true</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: listing-2y</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: ../research/papers</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: ../research/papers/*</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: ["author", "title", "outlet", "date"]</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">    field-display-names:</span></span>
