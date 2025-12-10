@@ -2,12 +2,64 @@
 title: "Transition"
 ---
 
-TODO:
+## Handbook pages
 
-- [ ] restructure and link nextcloud!
+- [ ] Consolidate [github workflows](https://github.com/digital-work-lab/handbook/tree/main/.github/workflows){target=_blank}.
+- [ ] Imports: see new handbook (local import.py)
+- [ ] Structure: areas / processes / alphabetical (instead of johnny decimal)
+- [ ] Postprocessing:
+  - [x] remove "tocs" on pages (generated automatically)
+  - [ ] visual check (images, figures, links)
+  - [ ] check/fix links
+  - [ ] Check for self-service boxes
+- [ ] Restructure and link nextcloud
+- [ ] Search for references to the "digital work lab"
+
+
+## Repositories
+
+- Decide which repositories will remain in the old organization, and which ones will be moved.
+- Upgrades to quarto:
+
+  - [ ] theses
+  - [ ] open-source-project
+  - [ ] literature-review-seminar
+  - [ ] digital-work-lecture
+  - [ ] ... 
+
+- [ ] Change buttons from "Offered by digital work lab" to "Offered by ISE (Frankfurt School)"
+- [ ] Search for references to the "digital work lab"
+
+
+## Other
+
+- [Labot account](https://github.com/digital-work-labot){target=_blank}
+- Update affiliations and emails on [profiles](https://digital-work-lab.github.io/handbook/docs/01.team.html#gerit-wagner-professor){target=_blank}
+- Team / alumni / recommendation letters / offboarding
+- Change e-mail in submission systems
+- Return library
+- Check: returning devices (will be collected by the IT service)
+
+## Pages that require an update for the transition
+
+To mark pages that require changes, the `transition_status` and `transition_comment` fields can be added to the yaml header as follows:
+
+```markdown
+---
+title: "Resources"
+transition_status: "toupdate"
+transition_comment: "Update keys, lab access, printing/scanning, design, archive"
+---
+
+contents ....
+
+```
+
+Once the transition is implemented, the `transition_status` can be changed to `updated`.
 
 ---
 listing:
+  title: "Pages to change"
   contents: ../**
   type: table
   sort: "path"
