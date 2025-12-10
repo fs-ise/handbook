@@ -75,10 +75,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a0bcc735ad446fb36b650bba7873c153.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bcb25182caae26147be93c822f4adeea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-483d0d55dddee7a855ad9e55bc84489d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-bcb25182caae26147be93c822f4adeea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -196,7 +200,169 @@ window.Quarto = {
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -248,6 +414,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -549,6 +716,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/data.html">Output</a></li><li class="breadcrumb-item"><a href="../research/talks.html">Talks</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Talks</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
@@ -620,7 +788,7 @@ location
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-date-sort="1764374400000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Automation, AI and Data in the Conduct of Literature Reviews" data-listing-filename-sort="2025_11_28_automation_ai_data_lit_reviews.qmd">
+<tr data-index="0" data-listing-date-sort="1764374400000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Automation, AI and Data in the Conduct of Literature Reviews" data-listing-filename-sort="2025_11_28_automation_ai_data_lit_reviews.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -636,7 +804,7 @@ location
 
 </tr>
 
-<tr data-index="1" data-listing-date-sort="1752710400000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Algorithmic Organizing in Complex Ecosystems" data-listing-filename-sort="2025_07_17_algorithmic_organizing_complex_ecosystems.qmd">
+<tr data-index="1" data-listing-date-sort="1752710400000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Algorithmic Organizing in Complex Ecosystems" data-listing-filename-sort="2025_07_17_algorithmic_organizing_complex_ecosystems.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -652,7 +820,7 @@ location
 
 </tr>
 
-<tr data-index="2" data-listing-date-sort="1752624000000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Work: Current Work and Cooperation Opportunities" data-listing-filename-sort="2025_07_16_digital_work_cooperation_opportunities.qmd">
+<tr data-index="2" data-listing-date-sort="1752624000000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Work: Current Work and Cooperation Opportunities" data-listing-filename-sort="2025_07_16_digital_work_cooperation_opportunities.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -668,7 +836,7 @@ location
 
 </tr>
 
-<tr data-index="3" data-listing-date-sort="1743984000000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Artificial Intelligence in Clinical Practice" data-listing-filename-sort="2025_04_07_ai_clinical_practice.qmd">
+<tr data-index="3" data-listing-date-sort="1743984000000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Artificial Intelligence in Clinical Practice" data-listing-filename-sort="2025_04_07_ai_clinical_practice.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -684,7 +852,7 @@ location
 
 </tr>
 
-<tr data-index="4" data-listing-date-sort="1729555200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digitalization of Knowledge Work: Advancing the Dialogue Between Research and Practice" data-listing-filename-sort="2024_10_22_inaugural_lecture_digital_knowledge_work.qmd">
+<tr data-index="4" data-listing-date-sort="1729555200000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digitalization of Knowledge Work: Advancing the Dialogue Between Research and Practice" data-listing-filename-sort="2024_10_22_inaugural_lecture_digital_knowledge_work.qmd">
 <td>
 <span class="listing-date">2024</span>
 </td>
@@ -700,7 +868,7 @@ location
 
 </tr>
 
-<tr data-index="5" data-listing-date-sort="1679875200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="CoLRev: A Pipeline for Collaborative and Git-Based Literature Reviews" data-listing-filename-sort="2023_03_27_colrev_pipeline.qmd">
+<tr data-index="5" data-listing-date-sort="1679875200000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="CoLRev: A Pipeline for Collaborative and Git-Based Literature Reviews" data-listing-filename-sort="2023_03_27_colrev_pipeline.qmd">
 <td>
 <span class="listing-date">2023</span>
 </td>
@@ -716,7 +884,7 @@ location
 
 </tr>
 
-<tr data-index="6" data-listing-date-sort="1643241600000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Beyond Gig-Work: Conceptual Foundations of Digital Platforms for Knowledge Work Services" data-listing-filename-sort="2022_01_27_beyond_gig_work.qmd">
+<tr data-index="6" data-listing-date-sort="1643241600000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Beyond Gig-Work: Conceptual Foundations of Digital Platforms for Knowledge Work Services" data-listing-filename-sort="2022_01_27_beyond_gig_work.qmd">
 <td>
 <span class="listing-date">2022</span>
 </td>
@@ -732,7 +900,7 @@ location
 
 </tr>
 
-<tr data-index="7" data-listing-date-sort="1643155200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Developing the Conceptual Foundations of Digital Platforms for Knowledge Work Services: A Scoping Review" data-listing-filename-sort="2022_01_26_scoping_review_platforms.qmd">
+<tr data-index="7" data-listing-date-sort="1643155200000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Developing the Conceptual Foundations of Digital Platforms for Knowledge Work Services: A Scoping Review" data-listing-filename-sort="2022_01_26_scoping_review_platforms.qmd">
 <td>
 <span class="listing-date">2022</span>
 </td>
@@ -748,7 +916,7 @@ location
 
 </tr>
 
-<tr data-index="8" data-listing-date-sort="1639440000000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="29" data-listing-title-sort="Contracting Decisions on Digital Markets for Knowledge Work Services: A Qualitative Systematic Review" data-listing-filename-sort="2021_12_14_contracting_platform_services.qmd">
+<tr data-index="8" data-listing-date-sort="1639440000000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="29" data-listing-title-sort="Contracting Decisions on Digital Markets for Knowledge Work Services: A Qualitative Systematic Review" data-listing-filename-sort="2021_12_14_contracting_platform_services.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -764,7 +932,7 @@ location
 
 </tr>
 
-<tr data-index="9" data-listing-date-sort="1636934400000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Platforms for Knowledge Work Services: Exploring Boundaries and Processes" data-listing-filename-sort="2021_11_15_digital_platform_boundaries.qmd">
+<tr data-index="9" data-listing-date-sort="1636934400000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Platforms for Knowledge Work Services: Exploring Boundaries and Processes" data-listing-filename-sort="2021_11_15_digital_platform_boundaries.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -780,7 +948,7 @@ location
 
 </tr>
 
-<tr data-index="10" data-listing-date-sort="1635379200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Management of Digital Service Platforms: Insights from a Review Paper" data-listing-filename-sort="2021_10_28_management_platforms.qmd">
+<tr data-index="10" data-listing-date-sort="1635379200000" data-listing-file-modified-sort="1765354166291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Management of Digital Service Platforms: Insights from a Review Paper" data-listing-filename-sort="2021_10_28_management_platforms.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -796,7 +964,7 @@ location
 
 </tr>
 
-<tr data-index="11" data-listing-date-sort="1625011200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Contracting of Digital Knowledge Work Services" data-listing-filename-sort="2021_06_30_contracting_services.qmd">
+<tr data-index="11" data-listing-date-sort="1625011200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Contracting of Digital Knowledge Work Services" data-listing-filename-sort="2021_06_30_contracting_services.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -812,7 +980,7 @@ location
 
 </tr>
 
-<tr data-index="12" data-listing-date-sort="1623715200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="A Framework of Platform Design Mechanisms, Platform Congruence and Value Creation on C2C Platforms" data-listing-filename-sort="2021_06_15_c2c_platform_design.qmd">
+<tr data-index="12" data-listing-date-sort="1623715200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="A Framework of Platform Design Mechanisms, Platform Congruence and Value Creation on C2C Platforms" data-listing-filename-sort="2021_06_15_c2c_platform_design.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -828,7 +996,7 @@ location
 
 </tr>
 
-<tr data-index="13" data-listing-date-sort="1614297600000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Theory Elaboration in Management and Organizational Studies" data-listing-filename-sort="2021_02_26_theory_elaboration.qmd">
+<tr data-index="13" data-listing-date-sort="1614297600000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Theory Elaboration in Management and Organizational Studies" data-listing-filename-sort="2021_02_26_theory_elaboration.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -844,7 +1012,7 @@ location
 
 </tr>
 
-<tr data-index="14" data-listing-date-sort="1611187200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Platforms for Knowledge Work: Boundaries and Conceptual Foundations" data-listing-filename-sort="2021_01_21_digital_platforms_conceptual_foundations.qmd">
+<tr data-index="14" data-listing-date-sort="1611187200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Platforms for Knowledge Work: Boundaries and Conceptual Foundations" data-listing-filename-sort="2021_01_21_digital_platforms_conceptual_foundations.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -860,7 +1028,7 @@ location
 
 </tr>
 
-<tr data-index="15" data-listing-date-sort="1592179200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Designing a Novel Strategy for Reading and Skimming Literature Corpora" data-listing-filename-sort="2020_06_15_novel_literature_strategy.qmd">
+<tr data-index="15" data-listing-date-sort="1592179200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Designing a Novel Strategy for Reading and Skimming Literature Corpora" data-listing-filename-sort="2020_06_15_novel_literature_strategy.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -876,7 +1044,7 @@ location
 
 </tr>
 
-<tr data-index="16" data-listing-date-sort="1592179200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Seeking Out Clear and Unique Information Systems Concepts: A Natural Language Processing Approach" data-listing-filename-sort="2020_06_15_unique_is_concepts.qmd">
+<tr data-index="16" data-listing-date-sort="1592179200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Seeking Out Clear and Unique Information Systems Concepts: A Natural Language Processing Approach" data-listing-filename-sort="2020_06_15_unique_is_concepts.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -892,7 +1060,7 @@ location
 
 </tr>
 
-<tr data-index="17" data-listing-date-sort="1591574400000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Exploring the Boundaries and Processes of Digital Platforms for Knowledge Work" data-listing-filename-sort="2020_06_08_platform_boundaries_processes.qmd">
+<tr data-index="17" data-listing-date-sort="1591574400000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Exploring the Boundaries and Processes of Digital Platforms for Knowledge Work" data-listing-filename-sort="2020_06_08_platform_boundaries_processes.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -908,7 +1076,7 @@ location
 
 </tr>
 
-<tr data-index="18" data-listing-date-sort="1571961600000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Academic Recommender System Design: A Deep-Learning Approach" data-listing-filename-sort="2019_10_25_academic_recommender_design.qmd">
+<tr data-index="18" data-listing-date-sort="1571961600000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Academic Recommender System Design: A Deep-Learning Approach" data-listing-filename-sort="2019_10_25_academic_recommender_design.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -924,7 +1092,7 @@ location
 
 </tr>
 
-<tr data-index="19" data-listing-date-sort="1571875200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Data Preparation -- Principles of Tidy Data Structures" data-listing-filename-sort="2019_10_24_tidy_data_preparation.qmd">
+<tr data-index="19" data-listing-date-sort="1571875200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Data Preparation -- Principles of Tidy Data Structures" data-listing-filename-sort="2019_10_24_tidy_data_preparation.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -940,7 +1108,7 @@ location
 
 </tr>
 
-<tr data-index="20" data-listing-date-sort="1563840000000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Explaining and Distinguishing Scientific Impact in Information Systems Research" data-listing-filename-sort="2019_07_23_scientific_impact_is.qmd">
+<tr data-index="20" data-listing-date-sort="1563840000000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Explaining and Distinguishing Scientific Impact in Information Systems Research" data-listing-filename-sort="2019_07_23_scientific_impact_is.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -956,7 +1124,7 @@ location
 
 </tr>
 
-<tr data-index="21" data-listing-date-sort="1558915200000" data-listing-file-modified-sort="1765351491799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Information Systems Research on Platforms for Digital Knowledge Work" data-listing-filename-sort="2019_05_27_platforms_scoping_review.qmd">
+<tr data-index="21" data-listing-date-sort="1558915200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Information Systems Research on Platforms for Digital Knowledge Work" data-listing-filename-sort="2019_05_27_platforms_scoping_review.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -972,7 +1140,7 @@ location
 
 </tr>
 
-<tr data-index="22" data-listing-date-sort="1556150400000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Platforms Mediating Value Exchange in External Networks" data-listing-filename-sort="2019_04_25_platforms_value_exchange.qmd">
+<tr data-index="22" data-listing-date-sort="1556150400000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Digital Platforms Mediating Value Exchange in External Networks" data-listing-filename-sort="2019_04_25_platforms_value_exchange.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -988,7 +1156,7 @@ location
 
 </tr>
 
-<tr data-index="23" data-listing-date-sort="1546992000000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Classifying the Ideational Impact in IS Research" data-listing-filename-sort="2019_01_09_ideational_impact_classification.qmd">
+<tr data-index="23" data-listing-date-sort="1546992000000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Classifying the Ideational Impact in IS Research" data-listing-filename-sort="2019_01_09_ideational_impact_classification.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -1004,7 +1172,7 @@ location
 
 </tr>
 
-<tr data-index="24" data-listing-date-sort="1544745600000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Information Systems Design Science Research and Cumulative Knowledge Development" data-listing-filename-sort="2018_12_14_dsr_cumulative_knowledge.qmd">
+<tr data-index="24" data-listing-date-sort="1544745600000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Information Systems Design Science Research and Cumulative Knowledge Development" data-listing-filename-sort="2018_12_14_dsr_cumulative_knowledge.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1020,7 +1188,7 @@ location
 
 </tr>
 
-<tr data-index="25" data-listing-date-sort="1543190400000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Classifying the Ideational Impact of IS Review Articles" data-listing-filename-sort="2018_11_26_review_articles_ideational_impact.qmd">
+<tr data-index="25" data-listing-date-sort="1543190400000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Classifying the Ideational Impact of IS Review Articles" data-listing-filename-sort="2018_11_26_review_articles_ideational_impact.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1036,7 +1204,7 @@ location
 
 </tr>
 
-<tr data-index="26" data-listing-date-sort="1542931200000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Academic Recommender Systems Based on Ideational Impact" data-listing-filename-sort="2018_11_23_recommender_ideational_impact.qmd">
+<tr data-index="26" data-listing-date-sort="1542931200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Academic Recommender Systems Based on Ideational Impact" data-listing-filename-sort="2018_11_23_recommender_ideational_impact.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1052,7 +1220,7 @@ location
 
 </tr>
 
-<tr data-index="27" data-listing-date-sort="1541721600000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Design of Academic Recommender Systems for Ideational Impact" data-listing-filename-sort="2018_11_09_design_recommender_systems.qmd">
+<tr data-index="27" data-listing-date-sort="1541721600000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Design of Academic Recommender Systems for Ideational Impact" data-listing-filename-sort="2018_11_09_design_recommender_systems.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1068,7 +1236,7 @@ location
 
 </tr>
 
-<tr data-index="28" data-listing-date-sort="1528416000000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Have Information Systems Theoretical Reviews Made the Giant’s Shoulders a Little Higher?" data-listing-filename-sort="2018_06_08_is_theoretical_reviews.qmd">
+<tr data-index="28" data-listing-date-sort="1528416000000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Have Information Systems Theoretical Reviews Made the Giant’s Shoulders a Little Higher?" data-listing-filename-sort="2018_06_08_is_theoretical_reviews.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1084,7 +1252,7 @@ location
 
 </tr>
 
-<tr data-index="29" data-listing-date-sort="1513123200000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Exploring the Scientific Impact of Information Systems Design Science Research" data-listing-filename-sort="2017_12_13_dsr_scientometric_study.qmd">
+<tr data-index="29" data-listing-date-sort="1513123200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Exploring the Scientific Impact of Information Systems Design Science Research" data-listing-filename-sort="2017_12_13_dsr_scientometric_study.qmd">
 <td>
 <span class="listing-date">2017</span>
 </td>
@@ -1100,7 +1268,7 @@ location
 
 </tr>
 
-<tr data-index="30" data-listing-date-sort="1512345600000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="An Exploratory Scientometric Study on the Scientific Impact" data-listing-filename-sort="2017_12_04_exploratory_scientometric_study.qmd">
+<tr data-index="30" data-listing-date-sort="1512345600000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="An Exploratory Scientometric Study on the Scientific Impact" data-listing-filename-sort="2017_12_04_exploratory_scientometric_study.qmd">
 <td>
 <span class="listing-date">2017</span>
 </td>
@@ -1116,7 +1284,7 @@ location
 
 </tr>
 
-<tr data-index="31" data-listing-date-sort="1483920000000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Epistemological Advancements in IS Research: A Study of Selected Genres" data-listing-filename-sort="2017_01_09_epistemological_advancements.qmd">
+<tr data-index="31" data-listing-date-sort="1483920000000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Epistemological Advancements in IS Research: A Study of Selected Genres" data-listing-filename-sort="2017_01_09_epistemological_advancements.qmd">
 <td>
 <span class="listing-date">2017</span>
 </td>
@@ -1132,7 +1300,7 @@ location
 
 </tr>
 
-<tr data-index="32" data-listing-date-sort="1481587200000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Factors Affecting the Scientific Impact of Literature Reviews" data-listing-filename-sort="2016_12_13_scientific_impact_lit_reviews.qmd">
+<tr data-index="32" data-listing-date-sort="1481587200000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Factors Affecting the Scientific Impact of Literature Reviews" data-listing-filename-sort="2016_12_13_scientific_impact_lit_reviews.qmd">
 <td>
 <span class="listing-date">2016</span>
 </td>
@@ -1148,7 +1316,7 @@ location
 
 </tr>
 
-<tr data-index="33" data-listing-date-sort="1480896000000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="An Exploratory Scientometric Study on the Scientific Impact of Review Papers" data-listing-filename-sort="2016_12_05_scientometric_study_review_papers.qmd">
+<tr data-index="33" data-listing-date-sort="1480896000000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="An Exploratory Scientometric Study on the Scientific Impact of Review Papers" data-listing-filename-sort="2016_12_05_scientometric_study_review_papers.qmd">
 <td>
 <span class="listing-date">2016</span>
 </td>
@@ -1164,7 +1332,7 @@ location
 
 </tr>
 
-<tr data-index="34" data-listing-date-sort="1463616000000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Epistemology and Literature Reviews: A Synthesis" data-listing-filename-sort="2016_05_19_epistemology_lit_reviews.qmd">
+<tr data-index="34" data-listing-date-sort="1463616000000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Epistemology and Literature Reviews: A Synthesis" data-listing-filename-sort="2016_05_19_epistemology_lit_reviews.qmd">
 <td>
 <span class="listing-date">2016</span>
 </td>
@@ -1180,7 +1348,7 @@ location
 
 </tr>
 
-<tr data-index="35" data-listing-date-sort="1450137600000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Theory of Knowledge for Literature Reviews" data-listing-filename-sort="2015_12_15_theory_of_knowledge_lit_reviews.qmd">
+<tr data-index="35" data-listing-date-sort="1450137600000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Theory of Knowledge for Literature Reviews" data-listing-filename-sort="2015_12_15_theory_of_knowledge_lit_reviews.qmd">
 <td>
 <span class="listing-date">2015</span>
 </td>
@@ -1196,7 +1364,7 @@ location
 
 </tr>
 
-<tr data-index="36" data-listing-date-sort="1449446400000" data-listing-file-modified-sort="1765351491798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Philosophy of Knowledge for Review Papers" data-listing-filename-sort="2015_12_07_philosophy_reviews.qmd">
+<tr data-index="36" data-listing-date-sort="1449446400000" data-listing-file-modified-sort="1765354166290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26" data-listing-title-sort="Philosophy of Knowledge for Review Papers" data-listing-filename-sort="2015_12_07_philosophy_reviews.qmd">
 <td>
 <span class="listing-date">2015</span>
 </td>
@@ -1219,8 +1387,44 @@ location
   <ul class="pagination"></ul>
 </nav>
 </div></main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const today = new Date();
+  const dayIndex = today.getDay(); // 0 = Sunday, 6 = Saturday
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const dayName = weekdays[dayIndex];
+
+  const isWeekend = (dayIndex === 0 || dayIndex === 6);
+
+  // Current mode according to Quarto (based on body class)
+  const isCurrentlyDark = document.body.classList.contains("quarto-dark");
+
+  // If it's weekend and we're not already dark, ask Quarto to toggle
+  if (isWeekend && !isCurrentlyDark && window.quartoToggleColorScheme) {
+    window.quartoToggleColorScheme();
+    console.log(`Today is ${dayName}. Weekend detected → switched to dark mode via Quarto toggle.`);
+  } else {
+    console.log(
+      `Today is ${dayName}. isWeekend=${isWeekend}, isCurrentlyDark=${isCurrentlyDark}. No automatic switch.`
+    );
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
