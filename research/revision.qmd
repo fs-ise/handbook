@@ -2,33 +2,116 @@
 title: "Revision"
 ---
 
-## Setup: Creating the revision sheet
+**Guiding principles for the revision**
+
+1. **Embrace feedback positively**: Consider the feedback from reviewers as constructive and aimed at improving your manuscript. Avoid taking critiques personally.
+2. **Holistic understanding**: Analyze the feedback comprehensively to understand the overall sentiment and common themes among reviewers.
+3. **Strategic revision**: Develop a coherent revision strategy that addresses major issues collectively rather than in isolation.
+4. **Clear communication**: Articulate your responses clearly and professionally, ensuring that your revisions align with the reviewers' and editors' expectations.
+
+## Steps of the process
+
+### 1. Study the review package
+   - **Step back**: After receiving the review package, take a break to calm any emotional reactions. This helps in assimilating feedback more objectively.
+   - **Reflect**: Spend a few days reflecting on the feedback without making any immediate changes to the manuscript.
+   - **Create a revision sheet**: For teams collaborating in Markdown, a structured Markdown document is recommended along with corresponding branches for the revisions (see LLM prompt below). For teams collaborating in Word, a Word table is recommended. (see [creating a revision sheet](#creating-the-revision-sheet))
+
+### 2. Develop a holistic understanding of the feedback
+   - **Categorize issues**: Organize feedback into categories such as motivation, theorization, research design, analysis, and implications.
+   - **Identify disagreements**: Note areas where reviewers agree or disagree, and prioritize addressing the most critical points.
+
+::: {.callout-note title="Contradicting review packages"}
+If the review panel makes contradicting suggestions and the AE does not offer guidance, it may be helpful to meet with the SE, discuss the options, make a decision and refer to that in the response (see [IS research podcast](https://www.janrecker.com/this-is-research-podcast/why-you-should-never-write-a-conceptual-paper-2-october-2024/){target=_blank}).
+:::
+
+### 3. Formulate a revision strategy
+   - **Consider alternatives**: Think about different ways to address major issues and evaluate the implications of each approach.
+   - **Evaluate coherence**: Ensure that the revised manuscript tells a cohesive and credible story, with changes that enhance the overall plot.
+   - **Draft a strategy**: Based on the revision sheet, note which issues are connected, how and in which order they will be addressed, and by whom.
+
+### 4. Rewrite the paper
+   - **Avoid rewriting block**: Start afresh rather than tweaking the old draft to encourage rethinking and reorganization.
+   - **Iterate and present**: Alternate between thinking, writing, and presenting to gather feedback and refine your manuscript.
+
+### 5. Write the response document
+   - **Lead with the big picture**: Summarize how major issues were addressed and how the storyline has developed.
+   - **Point-by-point responses**: Explain your choices in addressing each issue and refer to specific sections in the manuscript where changes were made.
+   - **Include additional evidence**: Provide supplementary information that may not fit into the manuscript but addresses reviewers’ concerns.
+
+
+### 6. Start early and establish a timeline
+   - **Schedule activities**: Allocate specific times for revision tasks and ensure collaboration with co-authors is well-coordinated.
+   - **Refine**: Dedicate time towards the end of the revision process to polish the manuscript and response document.
+
+::: {.callout-note title="Expected outcome"}
+
+A well-revised manuscript that:
+
+- Demonstrates a comprehensive response to reviewers' feedback.
+- Presents a cohesive and enhanced storyline.
+- Communicates changes clearly and professionally.
+- Addresses major critiques holistically while considering minor comments effectively.
+- Reflects a thorough rethinking and restructuring rather than superficial adjustments.
+
+A point-by-point response to the comments (AE1, ..., R1.1, ...) explaining how the paper was revised:
+
+```markdown
+# Revision document
+
+## AE1
+
+Comment 1 provided by the AE ....
+
+> Our response ...
+
+## AE2
+
+> Our response ...
+
+...
+```
+
+The markdown document will be converted to a revision table before submission:
+
+| No | Reviewer Comment                          | Response and Action Taken                                                                                       |
+|----|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| R1.1 | However, the authors need to clarify some aspects. These aspects relate to the significance of the proposed approach...        | We thank the reviewer for this encouraging feedback and the opportunity to revise our manuscript....               |
+| R1.2 | ...        | ...                                |
+
+:::
+
+<!--
+| R1.1 | Motivation not persuasive enough        | Enhanced the introduction to better highlight the research gap and significance.                                |
+| R1.2 | Theorization lacks depth                | Incorporated additional theories and clarified the theoretical framework. (**Note**: Related to R2.4 and R3.1)  |
+| R1.3 | Research design needs more detail       | Expanded the methodology section to include more details on the research design.                                |
+| R1.4 | Analysis requires robustness checks     | Conducted additional robustness checks and included the results in the appendix.                                |
+| R1.5 | Contribution to literature not clear    | Added a section explicitly detailing the contributions to existing literature.                                  |
+| R1.6 | Writing quality needs improvement       | Revised the manuscript for clarity, coherence, and readability.                                                 |
+| R1.7 | Figures are unclear                     | Redrew all figures to improve clarity and readability.                                                          |
+| R1.8 | Missing recent literature               | Updated the literature review to include recent studies from the past three years.                              |
+-->
+
+## Creating the revision sheet
+
+The following explains how to create a revision sheet.
+In Git, we create revision documents as a list of comments and responses, structured according to comment IDs.
+This aligns with the line-based diffs of Git/GitHub and allows us to split and merge revision items effectively.
+When following the standard format, a revision table can be generated at the end.
+
 
 {: .resource } 
 > 📺 [video demo](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1066954?dir=/20-research/20_processes/32_revisions){target=_blank}
 
-The following explains how to create a revision document. In Git, we create revision documents as a list of comments and responses, structured according to comment IDs. This aligns with the line-based diffs of Git/GitHub and allows us to split and merge revision items effectively. When following the standard format, a revision table can be generated at the end.
-
-{: .highlight }
-> **Revision document**
->
-> \# AE1
->
-> Comment 1 provided by the AE ....
->
-> \> Our response ...
->
-> \# AE2
->
-> ...
-
-{: .warning }
+::: {.callout-warning}
 Do not use public LLMs without the team's consent. **Check the results meticulously.** Large review packages may not be transferred completely.
+:::
 
 The following prompt can be used to create a revision sheet based on feedback documents (input):
 
-```
-Remove unnecessary line breaks and add new lines to clarify the structure of paragraphs and reviewers. Do not add headings, and do not modify the content. Give markdown as a result.
+
+```markdown
+Remove unnecessary line breaks and add new lines to clarify the structure of paragraphs and reviewers.
+Do not add headings, and do not modify the content. Give markdown as a result.
 
 🚨 **Append review package** 🚨
 ```
@@ -40,8 +123,11 @@ Remove unnecessary line breaks and add new lines to clarify the structure of par
 
 Next prompt:
 
-```
-Structure the review package by adding markers such as "# R1.2" (for comment 2 of reviewer 1) or "# SE1" (for comment 1 of the senior editor) in separate lines (surrounded by empty lines) and adding a quote "Response ..." afterward. Do not remove or modify contents. Do not change markup. Make sure that each issue raised by the review panel has its own number (marker and response). 
+```markdown
+Structure the review package by adding markers such as "# R1.2" (for comment 2 of reviewer 1) or 
+"# SE1" (for comment 1 of the senior editor) in separate lines (surrounded by empty lines) and 
+adding a quote "Response ..." afterward. Do not remove or modify contents. Do not change markup.
+Make sure that each issue raised by the review panel has its own number (marker and response). 
 
 For example, an input like this: ""
 Reviewer 1
@@ -58,29 +144,29 @@ Thank you...
 
 Whould be transformed to:""
 
-\# R1.1
+# R1.1
 
 Thank you for the opportunity to review this paper.
 
 > Response: ...
 
-\# R1.2
+# R1.2
 
 **Clarity**. The following parts need clarification ....
 
 > Response: ...
 
-\# R1.3
+# R1.3
 
 **Contribution**. Please articulate your contribution to prior research.
 
 > Response: ...
 
-> # R1.4
+# R1.4
 
 Thank you ...
 
-\Response: ...
+> Response: ...
 ""
 
 Give markdown as a result. Review package:
@@ -90,22 +176,25 @@ Give markdown as a result. Review package:
 
 Next (optional):
 
-> Add references to related comments in the response fields:
->
-> 🚨 **Append review package from first prompt** 🚨
+```markdown
+Add references to related comments in the response fields:
+
+🚨 **Append review package from first prompt** 🚨
+```
 
 - Complete the revision and address the comments in the Markdown document.
 - When comments are addressed, add `<!-- status:done -->`.
 - Export a Word table at the end:
 
-{: .highlight }
-> **Conversion to Word (revision table)**
->
-> After completing the revision sheet in Markdown, it can be transformed into a Word document (revision table) :
->
-> ```
-> labot paper --revise
-> ```
+::: {.callout-note}
+**Conversion to Word (revision table)**
+
+After completing the revision sheet in Markdown, it can be transformed into a Word document (revision table) :
+
+```sh
+labot paper --revise
+```
+:::
 
 To mark particular issues as closed or later, add the following marks:
 
@@ -128,6 +217,12 @@ Clarify the theoretical foundation ...
 
 ```
 
+::: {.callout-note title="References to reviewers and editors"}
+In the response, we can refer to the AE (short for associate editor) or SE (senior editor) or R1 (reviewer 1).
+In addition, we may refer to specific comments, such as R2.4 (the 4th comment of reviewer 2).
+:::
+
+
 <!-- 
 > **Prompt: Create a revision sheet**
 >
@@ -140,79 +235,7 @@ Clarify the theoretical foundation ...
 > Return the table in a Word document using landscape format.
 -->
 
-## Guiding Principles
 
-1. **Embrace Feedback Positively**: Consider the feedback from reviewers as constructive and aimed at improving your manuscript. Avoid taking critiques personally.
-2. **Holistic Understanding**: Analyze the feedback comprehensively to understand the overall sentiment and common themes among reviewers.
-3. **Strategic Revision**: Develop a coherent revision strategy that addresses major issues collectively rather than in isolation.
-4. **Clear Communication**: Articulate your responses clearly and professionally, ensuring that your revisions align with the reviewers' and editors' expectations.
-
-## Steps of the Process
-
-### 1. Study the review package
-   - **Step Back**: After receiving the review package, take a break to calm any emotional reactions. This helps in assimilating feedback more objectively.
-   - **Reflect**: Spend a few days reflecting on the feedback without making any immediate changes to the manuscript.
-   - **Create a Revision Sheet**: For teams collaborating in Markdown, a structured Markdown document is recommended along with corresponding branches for the revisions (see LLM prompt below). For teams collaborating in Word, a Word table is recommended.
-
-### 2. Develop a Holistic Understanding of the Feedback
-   - **Categorize Issues**: Organize feedback into categories such as motivation, theorization, research design, analysis, and implications.
-   - **Identify Disagreements**: Note areas where reviewers agree or disagree, and prioritize addressing the most critical points.
-e
-### 3. Formulate a Revision Strategy
-   - **Consider Alternatives**: Think about different ways to address major issues and evaluate the implications of each approach.
-   - **Evaluate Coherence**: Ensure that the revised manuscript tells a cohesive and credible story, with changes that enhance the overall plot.
-   - **Draft a strategy**: Based on the revision sheet, note which issues are connected, how and in which order they will be addressed, and by whom.
-
-### 4. Rewrite the Paper
-   - **Avoid Rewriting Block**: Start afresh rather than tweaking the old draft to encourage rethinking and reorganization.
-   - **Iterate and Present**: Alternate between thinking, writing, and presenting to gather feedback and refine your manuscript.
-
-### 5. Write the Response Document
-   - **Lead with the Big Picture**: Summarize how major issues were addressed and how the storyline has developed.
-   - **Point-by-Point Responses**: Explain your choices in addressing each issue and refer to specific sections in the manuscript where changes were made.
-   - **Include Additional Evidence**: Provide supplementary information that may not fit into the manuscript but addresses reviewers’ concerns.
-
-### 6. Start Early and Establish a Timeline
-   - **Schedule Activities**: Allocate specific times for revision tasks and ensure collaboration with co-authors is well-coordinated.
-   - **Refine**: Dedicate time towards the end of the revision process to polish the manuscript and response document.
-
-{: .info }
-> **Contradicting review packages**
->
-> If the review panel makes contradicting suggestions and the AE does not offer guidance, it may be helpful to meet with the SE, discuss the options, make a decision and refer to that in the response (see [IS research podcast](https://www.janrecker.com/this-is-research-podcast/why-you-should-never-write-a-conceptual-paper-2-october-2024/){target=_blank}).
-
-## Expected Outcome
-
-A well-revised manuscript that:
-- Demonstrates a comprehensive response to reviewers' feedback.
-- Presents a cohesive and enhanced storyline.
-- Communicates changes clearly and professionally.
-- Addresses major critiques holistically while considering minor comments effectively.
-- Reflects a thorough rethinking and restructuring rather than superficial adjustments.
-
-Example of a Revision Table
-
-| No | Reviewer Comment                          | Response and Action Taken                                                                                       |
-|----|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| R1.1 | However, the authors need to clarify some aspects. These aspects relate to the significance of the proposed approach against the background of the rapid evolution of generative AI tools. The authors mention that AI use is currently viewed as misconduct. What mechanisms were in place to identify such use? There is also a possibility that learners used AI not to produce answers but as a tutor to build understanding before class. Thus, generative AI could increase the baseline knowledge of those who use it. The authors need to offer ideas on how to evaluate the impact of the course on learner competency in light of AI. At present, the focus is on learner feedback. The authors might consider whether assessing baseline knowledge, teamwork aptitude, and AI usage habits is key to understanding true course effectiveness.        | We thank the reviewer for this encouraging feedback and the opportunity to revise our manuscript. As noted, it is not possible to reliably confirm AI use through output inspection alone; instead, we rely on structured rules and testing to evaluate individual understanding without AI support. We also reiterate our earlier position that AI can serve as a valuable tutor when used to support, rather than replace, learning.               |
-| R1.2 | ...        | ...                                |
-
-{: .info }
-> **References to reviewers and editors**
->
-> In the response, we can refer to the AE (short for associate editor) or SE (senior editor) or R1 (reviewer 1).
-> In addition, we may refer to specific comments, such as R2.4 (the 4th comment of reviewer 2).
-
-<!--
-| R1.1 | Motivation not persuasive enough        | Enhanced the introduction to better highlight the research gap and significance.                                |
-| R1.2 | Theorization lacks depth                | Incorporated additional theories and clarified the theoretical framework. (**Note**: Related to R2.4 and R3.1)  |
-| R1.3 | Research design needs more detail       | Expanded the methodology section to include more details on the research design.                                |
-| R1.4 | Analysis requires robustness checks     | Conducted additional robustness checks and included the results in the appendix.                                |
-| R1.5 | Contribution to literature not clear    | Added a section explicitly detailing the contributions to existing literature.                                  |
-| R1.6 | Writing quality needs improvement       | Revised the manuscript for clarity, coherence, and readability.                                                 |
-| R1.7 | Figures are unclear                     | Redrew all figures to improve clarity and readability.                                                          |
-| R1.8 | Missing recent literature               | Updated the literature review to include recent studies from the past three years.                              |
--->
 
 ## Useful phrases
 
