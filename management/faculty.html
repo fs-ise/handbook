@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -131,6 +120,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -768,9 +768,8 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-Following: The dean’s office sends an email “Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss” with a tabl e
-<p></p>
-<p>→ the secretariat must forward this email to Hiwis with a Bachelor’s degree with the request to return it to the dean’s office and cc the secretariat.</p>
+<p>Following: The dean’s office sends an email “Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss” with a table<br>
+→ the secretariat must forward this email to Hiwis with a Bachelor’s degree with the request to return it to the dean’s office and cc the secretariat.</p>
 </div>
 </div>
 <!-- 
@@ -1328,39 +1327,40 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Emails: "Meldeformular für Aufsichtenplanung", "Meldeformular für Aufsichtenkalkulation", </span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss" with a tabl e<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span> → the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">Response:</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss" with a table  </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>→ the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">Response:</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scheinteilnehmer</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>When students register as "Scheinteilnehmer" via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="al">![Scheinteilnehmer]({{ site.baseurl }}/assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG)</span>  </span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Access: Rose Fleck</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Should contain the following dates:</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Studium &amp; Lehre:</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dezentrale schriftliche Prüfungen unter Angabe des Modulkürzels: Diese sind durch die Professuren einzutragen. Hier sind Überschneidungen zu vermeiden, d.h. zu einem konkreten Zeitpunkt darf nur eine dezentrale Prüfung liegen. Sobald zu einem Zeitpunkt eine schriftliche Prüfung liegt, muss ein anderes Modul, zumindest, wenn potenziell dieselben Studierenden betroffen sind, ein anderes Zeitfenster wählen.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Abgabe-Deadlines für Seminararbeiten und Projektleistungen unter Angabe des Modulkürzels: Diese sind durch die Professuren als „freier Ganztagestermin“ einzutragen. (Hintergrund: Hierüber wollen wir im Studiendekanat einen Überblick über die von der Studierendenvertretung vorgebrachte Kritik an vermeintlichen Häufungen von Deadlines erhalten.)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Forschung und Weiteres:</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Öffentliche Wissenschaftsvorträge (bspw. WIAI-Kolloquium, BACAI). Diese sind bitte durch die jeweiligen Veranstalter einzutragen.</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disputationen: Werden durch das Promotionsbüro eingetragen</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wesentliche universitäre und insb. fakultätsinterne Gremientermine (FR, Professorium, Lehrkonferenz etc.): Werden vom Dekanat eingetragen.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scheinteilnehmer</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>When students register as "Scheinteilnehmer" via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="al">![Scheinteilnehmer]({{ site.baseurl }}/assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG)</span>  </span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Access: Rose Fleck</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>Should contain the following dates:</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>Studium &amp; Lehre:</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dezentrale schriftliche Prüfungen unter Angabe des Modulkürzels: Diese sind durch die Professuren einzutragen. Hier sind Überschneidungen zu vermeiden, d.h. zu einem konkreten Zeitpunkt darf nur eine dezentrale Prüfung liegen. Sobald zu einem Zeitpunkt eine schriftliche Prüfung liegt, muss ein anderes Modul, zumindest, wenn potenziell dieselben Studierenden betroffen sind, ein anderes Zeitfenster wählen.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Abgabe-Deadlines für Seminararbeiten und Projektleistungen unter Angabe des Modulkürzels: Diese sind durch die Professuren als „freier Ganztagestermin“ einzutragen. (Hintergrund: Hierüber wollen wir im Studiendekanat einen Überblick über die von der Studierendenvertretung vorgebrachte Kritik an vermeintlichen Häufungen von Deadlines erhalten.)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Forschung und Weiteres:</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Öffentliche Wissenschaftsvorträge (bspw. WIAI-Kolloquium, BACAI). Diese sind bitte durch die jeweiligen Veranstalter einzutragen.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disputationen: Werden durch das Promotionsbüro eingetragen</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wesentliche universitäre und insb. fakultätsinterne Gremientermine (FR, Professorium, Lehrkonferenz etc.): Werden vom Dekanat eingetragen.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
