@@ -221,7 +221,10 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: slate
+    dark-mode-toggle: true
     css: assets/styles.css
     toc: true
     toc-depth: 3
@@ -230,6 +233,10 @@ format:
     code-tools: true 
     grid:
       body-width: 1000px
+    include-after-body: 
+      - assets/scripts/weekend-mode.js
+    highlight-style: github
+
 
 extensions:
   iconify:
