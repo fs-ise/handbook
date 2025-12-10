@@ -67,8 +67,9 @@ Resources
 | 50-80      | 30        | [Orientation in Open Source projects](#orientation-in-open-source-projects)    | Group task, discussing solutions afterwards    |
 | 80-90      | 10        | [Next steps](#next-steps)                                                      |                                                |
 
-{: .objective }
-> In this session, our goal is to .... (competencies)
+::: objective
+In this session, our goal is to .... (competencies)
+:::
 
 Summary of last session.
 
@@ -89,7 +90,8 @@ Summarize lessons learned.
 ## Terminal animations (asciinema)
 
 Installation
-```
+
+```sh
 pip install asciinema
 git clone https://github.com/asciinema/agg
 cd agg
@@ -97,7 +99,8 @@ docker build -t agg .
 ```
 
 Recording and conversion
-```
+
+```sh
 asciinema rec demo.cast
 # code ...
 # ctrl+d to quit
@@ -112,7 +115,7 @@ docker run --rm -it -u $(id -u):$(id -g) -v $PWD:/data agg demo.cast demo.gif
 
 Embedding Google Forms (anonymous responses possible):
 
-```
+```html
 <style>
 blockquote {
     border-top: 0.1em;
