@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -353,14 +388,20 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/writing.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Writing</span></a>
+  <a href="../research/literature.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literature</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/paper_templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Paper templates</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research/writing.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Writing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -466,7 +507,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/outlets.html">Writing &amp; Publication</a></li><li class="breadcrumb-item"><a href="../research/writing.html">Writing</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Writing</h1>
+<div class="quarto-title-block"><div><h1 class="title">Writing</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -698,6 +739,8 @@ Webster, J., &amp; Watson, R. T. (2002). Analyzing the past to prepare for the f
 </ul>
 
 
+<!-- -->
+
 </section>
 
 </main> <!-- /main -->
@@ -771,6 +814,57 @@ Webster, J., &amp; Watson, R. T. (2002). Analyzing the past to prepare for the f
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1100,7 +1194,286 @@ Webster, J., &amp; Watson, R. T. (2002). Analyzing the past to prepare for the f
       }
     }
   });
-  </script>
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Writing"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>{: .highlight }</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **General guidelines**</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - Revise often</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - Ask colleagues for friendly reviews</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - Spell-check</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - Avoid plagiarism</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Structure and Contents</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>The default structure outlined below may need to be adapted to the thesis or paper at hand.</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Each section has its own scope, as illustrated in the figure below.</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>It is recommended to use active voice ("I" or "We") instead of passive voice (commonly used in German).</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="al">![Anatomy of a research paper](https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/anatomy_research_paper_wang.png)</span>{target=_blank}</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>**Abstract**</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>The abstract acts as a point-of-entry for the reader, providing a first overview of the research study, namely, the motivation for the study, the methodological approach taken and a summary of the main results. In addition, the purpose of the research study should be clearly defined. Typically, an abstract consists of around 200 words.</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>**Introduction**</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>The introduction should precisely outline the purpose of the study as well as the research question that is sought to be answered. By briefly outlining the context of the study in terms of content and time, the reader acquires a quick overview. A key aspect of the introduction is the presentation of the motivation for conducting the study. This gives the reader a basic understanding of the topic and underpins the relevance and importance of the study. The relevance as well as the purpose can further be highlighted by using an appropriate quotation.</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>The building blocks of Lange an Pfarrer (2017) may be helpful:</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Common Ground**: Establishing common ground involves presenting the current state of the literature and ensuring that the reader is in agreement with the basic assumptions, boundary conditions, and key concepts. This step is crucial for gaining the reader’s interest and tacit consent, making them more receptive to the forthcoming arguments and discussions.</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Complication**: After establishing common ground, introduce a complication that challenges the current understanding or highlights a gap in the literature. This complication could be a problem, puzzle, or twist that makes the reader realize the inadequacy or incompleteness of the existing academic conversation.</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Concern**: To make the complication compelling, explain why it matters. This involves demonstrating the significance of the gap or issue identified. The concern step is about showing the practical and theoretical implications of the complication, emphasizing why it is essential to address this gap in the literature.</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Course of Action**: Describe the approach or methodology that will be used to address the identified complication. This could involve developing new constructs, modeling relationships, exploring processes, or synthesizing existing theories. The course of action should be clearly explained, logically structured, and directly aimed at resolving the complication.</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Contribution**: Finally, articulate how the research will contribute to the academic conversation. This entails explaining the novelty and significance of the findings and how they advance understanding in the field. The contribution should also suggest future theoretical exploration and practical implications for management and organizations.</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>The final paragraph of the introduction gives an outline of the structure of the study, that is, the approaches taken in each step of conducting the research study are briefly described. This gives the reader a clear picture of the composition of the study, i.e., what can and what cannot be expected of the study.</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>**Background**</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>This section (could also be named Literature Review or Conceptual Framework) sets the theoretical and conceptual context of the study and grounds the leading assumptions in theories. This is done by outlining and citing pertinent work. Here, the author can present the acquired background knowledge that is relevant for the following sections of the study. This background knowledge also helps in building the conceptual framework of the study.</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>The literature review should focus on concepts as opposed to authors and historical development (cf. Webster and Watson, 2002). It is also possible to use a conceptual framework to structure the literature synthesis. Provide precise definitions of those concepts that are central to your work, emphasize concepts rather than authors, and do not include your own judgment in the background section. Use established definitions and concepts and provide a justification when adapting them.</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>A graphical representation of the framework helps to illustrate complex theoretical constructs as well as the boundaries of the research study. The explicit statement of the conceptual framework not just informs the reader, it also guides the author in conducting the research.</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>Relevant background literature can be found in journals such as those listed in</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the <span class="co">[</span><span class="ot">AIS Senior Scholars' Basket of Journals</span><span class="co">](https://aisnet.org/general/custom.asp?page=SeniorScholarBasket)</span>{target=_blank}</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the <span class="co">[</span><span class="ot">VHB Jourqual Ranking</span><span class="co">](https://www.vhbonline.org/services/vhb-rating-2024)</span>{target=_blank}</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>or conferences such as <span class="co">[</span><span class="ot">ICIS</span><span class="co">](http://aisel.aisnet.org/icis/)</span>{target=_blank} and <span class="co">[</span><span class="ot">ECIS</span><span class="co">](https://aisel.aisnet.org/ecis)</span>{target=_blank}.</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>Papers can be accessed through the <span class="co">[</span><span class="ot">Bamberger Katalog</span><span class="co">](https://katalog.ub.uni-bamberg.de/TouchPoint/start.do?View=ubg&amp;Language=en&amp;StartPage=UserAccount)</span>{target=_blank}, a search on <span class="co">[</span><span class="ot">Researchgate</span><span class="co">](https://www.researchgate.net)</span>{target=_blank}, a search on Google, or by contacting the authors.</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>Guidelines on searching the literature are provided by Webster and Watson (2002).</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>**Methodology**</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>The methodology section describes a systematic and goal-oriented approach to answer the research question. Hence, the selection of the research method needs to be consistent with the research questions. The approach may be, for example, empirical, analytical, comparative, systematic, historic, or hermeneutic (<span class="co">[</span><span class="ot">Goethe Universität</span><span class="co">](https://www.uni-muenster.de/imperia/md/content/didaktik_der_chemie/wissenschaftlichesarbeiten/leitfaden.pdf)</span>{target=_blank}). The methodological approach needs to be described in detail; appropriate reporting standards for the research method should be considered (such as PRISMA for literature reviews); it should be possible to understand the methodological procedures based on the thesis. For example, it is necessary to provide the formulas of regression models.</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>**Results**</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>In this section, the author presents the results of the study. In case they are presented by means of figures and/or tables, the results should be clearly legible. Furthermore, in the case of figures, it is recommended to use vector graphics as this ensures good readability without the need to pre-specify the font size within the figures. An example figure and table can be found in the template contained in this repository.</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>**Discussion**</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>In this section, the author provides a discussion of the results and is thus able to draw an informed conclusion. More precisely, the discussion is an evaluative summary of the research study in relation to the research question. In general, the discussion can be divided in three parts. First, the results should be tied to the research question, thus presenting the reader a solution or improvement to the identified problem space. Here, for example, the author can draw on empirical findings introduced in the Results section to support his or her argument. Next, the author should outline the limitations of the research study by critically examining the used research approach. Limitations might comprise, for example, a limited time frame considered in the research study, or the individual refinement of a specific research method due to time constraints. Finally, suggestions for future research avenues should be provided. These suggestions may be in line with the limitations, as this allows other researchers to build on the present work by extending or analyzing it. In summary, the Discussion section presents the results in relation to the research question as well as restrictions of the study and suggestions for future research in the respective domain.</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>**Conclusion**</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>The conclusion contains a summary of the research study. In contrast to the Discussion section, in which the main results are presented, here the key contributions of the work are showcased. A well-crafted conclusion answers the research question stated in the Introduction. By so doing, the author clarifies to what extent the research study has presented a solution or improvement to the examined problem space.</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>**Declarations**</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>This section may contain an "Availability of data, materials, and code" statement (e.g., linking to a GitHub repository or a digital appendix), and acknowledgements.</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Style</span></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>The style guide of Strunk &amp; White (1999) summarizes many instructive recommendations.</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### Writing concisely</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>Write as concisely as possible, avoiding general statements, such as:</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"There is a research gap." - State what the gap is specifically and **why** it is important to address it.</span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Current knowledge is insufficient." - State for what purpose current knowledge is insufficient.</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tense</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>**Present Tense**</span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use for **general truths, facts, and accepted knowledge**  </span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>  (e.g., "Water boils at 100°C").</span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Describe what the paper **does or contains**  </span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>  (e.g., "This study investigates..." or "The results indicate...").</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Refer to **figures, tables, or conclusions** in the paper  </span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>  (e.g., "Figure 1 shows...").</span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>**Past Tense**</span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Describe **specific methods or experiments conducted**  </span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>  (e.g., "We analyzed the data using SPSS").</span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Report **specific results** or findings from the study  </span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>  (e.g., "The analysis revealed a significant correlation").</span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Refer to **prior research**  </span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>  (e.g., "Smith et al. (2020) found...").</span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="fu">### Topic sentences</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>To write in a clear manner, it is helpful to focus on **topic sentences** (first sentence of each paragraph, which gives a clear outline of what is covered in the paragraph). Good examples of topic sentences can be found in top-tier journal papers like the one of Davis (1989):</span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Perceived Usefulness and Perceived Ease of Use**</span></span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; What causes people to acceptor reject information technology? Among the many variables that may influence system use, previous research suggests two determinants that are especially important. First, people tend to use or not use an application to the extent they believe it will help them perform their job better. We refer to this first variable as perceived usefulness. Second, even if potential users believe that a given application is useful, they may, at the same time, believe that the systems is too hard to use and that the performance benefits of usage are outweighed by the effort of using the application. That is, in addition to usefulness, usage is theorized to be influenced by perceived ease of use.</span></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Perceived usefulness is defined here as "the degree to which a person believes that using a particular system would enhance his or her job performance." This follows from the definition of the word useful: "capable of being used advantageously." Within an organizational context, people are generally reinforced for good performance by raises, promotions, bonuses, and other rewards (Pfeffer, 1982; Schein,1980; Vroom,1964). A system high in perceived usefulness, in turn, is one for which a user believes in the existence of a positive use-performance relationship.</span></span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Perceived ease of use, in contrast, refers to "the degree to which a person believes that using a particular system would be free of effort." This follows from the definition of "ease": "freedom from difficulty or great effort." Effort is a finite resource that a person may allocate to the various activities for which he or she is responsible (Radner and Rothschild, 1975). All else being equal, we claim, an application perceived to be easier to use than another is more likely to be accepted by users.</span></span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a><span class="fu">### Concept-centric style</span></span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a>Especially in related work sections, it can be tempting to summarize one study after another.</span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>This *author-centric* style can be hard to read because it often fails to explain how the concepts and findings of studies are related.</span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>A *concept-centric* style can be more effective to organize prior research</span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Example of an author-centric style**</span></span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Author A (2001) has studied the acceptance of group support systems and found positive effects on group performance. Author B (2002) has studied expert systems at IBM and found mixed effects on organizational performance. Author C (2003) has surveyed executives and documented diverging views on the benefits of decision support systems.</span></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Example of a concept-centric style**</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Prior research has examined the effect of decision support systems on various outcomes. There are multiple studies reporting consistent and positive effects on organizational performance (Author A 2001, Author B 2002). In contrast, effects on individual performance were mixed. Studies that measured performance objectively tended to report positive effects (Author C 2020, Author D 2021), while studies of perceived performance did not report significant effects (Author E 2005, Author D 2006). </span></span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>Webster and Watson (2001) provide advice on constructing a concept matrix.</span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citations and reference sections</span></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>Citing allows us to make the results of others understandable and give proper recognition to the authors.</span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>There are two main reasons why we cite: firstly, to respect copyrighted works, and secondly, to adhere to the principles of good scientific practice by appropriately acknowledging the contributions of others.</span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>In information systems or computer science, indirect citation is usually used, as it is more about the theories, studies and results and not about the direct wording.</span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>The following examples use Markdown syntax.</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>For docx formats, please use a reference manager plugin (such as Zotero).</span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>Your reference manager should support the standardized citation styles of <span class="co">[</span><span class="ot">csl</span><span class="co">](https://editor.citationstyles.org/about/)</span>{target=_blank}.</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>**In-text citations**</span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>In-text citations can be parenthetical or narrative (see <span class="co">[</span><span class="ot">APA style</span><span class="co">](https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/parenthetical-versus-narrative)</span>{target=_blank}).</span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Example *parenthetical* citation: ``Fitness trackers were found to have mixed effects on sedentary behavior (Smith et al. 2006).``</span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Example *narrative* citation: ``Smith et al. (2006) analyzed the effectiveness of fitness trackers.``</span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>Word-for-word quotations (parenthetical or narrative) must be identified by quotation marks and a page number must be given:</span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Example *word-for-word quotation*: ``For fitness trackers, "a substantial degree of inaccuracy in measuring sleep quality" was found (Smith et al. 2006, p.111):``</span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>Parenthetical citations tend to be preferred over narrative citations because they put more emphasis on the content, concepts, or findings instead of the authors. </span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>In markdown, parenthetical in-text citations are created based on the ``<span class="co">[</span><span class="ot">@author2000;@author2010</span><span class="co">]</span>`` syntax while narrative in-text citations are created based on the ``@author2000`` syntax (<span class="co">[</span><span class="ot">link</span><span class="co">](https://pandoc.org/chunkedhtml-demo/8.20-citation-syntax.html)</span>{target=_blank}).</span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a>The unique IDs (e.g., ``author2000`<span class="in">`) are used to link citations to the corresponding elements in the `</span>BibTeX` file.</span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a>**In the Reference Bib**</span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>References should be as complete as possible, including the relevant fields.</span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>Each reference should be listed once (not multiple times).</span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a>Examples with relevant fields are summarized below.</span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a>{: .highlight } </span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Checklist for BibTeX files**</span></span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - </span><span class="in">`ENTRYTYPE`</span><span class="at"> set correctly (e.g., "article" or "inproceedings")</span></span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - </span><span class="in">`author`</span><span class="at"> formatted correctly (Wagner, G. and Prester, J.)</span></span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - </span><span class="in">`title`</span><span class="at"> complete and in lower case</span></span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - </span><span class="in">`journal`</span><span class="at"> field complete and in title case</span></span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - </span><span class="in">`volume`</span><span class="at">, </span><span class="in">`number`</span><span class="at">, </span><span class="in">`pages`</span><span class="at">, </span><span class="in">`doi`</span><span class="at"> fields added</span></span>
+<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Journal articles</span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a><span class="in">@article{LeeAnderson2001,</span></span>
+<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a><span class="in">    doi                = {10.1006/COGP.2000.0747},</span></span>
+<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a><span class="in">    author             = {Anderson, John R},</span></span>
+<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a><span class="in">    journal            = {Cognitive Psychology},</span></span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a><span class="in">    title              = {Does learning a complex task},</span></span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a><span class="in">    year               = {2001},</span></span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a><span class="in">    volume             = {42},</span></span>
+<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a><span class="in">    number             = {3},</span></span>
+<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a><span class="in">    pages              = {267--316},</span></span>
+<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Conference Papers</span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a><span class="in">@inproceedings{LeeAnderson2001,</span></span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a><span class="in">    author             = {Weber, Matthias and Remus, Ulrich and Pregenzer, Michael},</span></span>
+<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a><span class="in">    booktitle          = {Proceedings of the International Conference on Information Systems},</span></span>
+<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a><span class="in">    title              = {A New Era of Control: Understanding Algorithmic Control in the Gig Economy},</span></span>
+<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a><span class="in">    year               = {2022},</span></span>
+<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Books:</span>
+<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a><span class="in">@book{Kolb2014,</span></span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a><span class="in">    author             = {Kolb, David A},</span></span>
+<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a><span class="in">    title              = {Experiential learning},</span></span>
+<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a><span class="in">    year               = {2014},</span></span>
+<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a><span class="in">    publisher          = {FT press},</span></span>
+<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-215"><a href="#cb6-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Essays in collected editions:</span>
+<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a><span class="in">@incollection{Anderson1984a,</span></span>
+<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a><span class="in">    author             = {Anderson, Richard C},</span></span>
+<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a><span class="in">    booktitle          = {Theoretical models},</span></span>
+<span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a><span class="in">    title              = {Role of the reader's schema in comprehension, learning, and memory},</span></span>
+<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a><span class="in">    year               = {2018},</span></span>
+<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a><span class="in">    pages              = {136--145},</span></span>
+<span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a><span class="in">    publisher          = {Routledge},</span></span>
+<span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Websites</span>
+<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a><span class="in">@online{Microsoft2018,</span></span>
+<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a><span class="in">    author             = {Microsoft News Center},</span></span>
+<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a><span class="in">    title              = {Microsoft to acquire GitHub for $7.5 billion},</span></span>
+<span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a><span class="in">    year               = {2018},</span></span>
+<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a><span class="in">    url                = {https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/},</span></span>
+<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a>For URLs, use the complete WWW address including the transmission protocol (usually "http://") in lower case (unless upper case is mandatory for the retrieval).</span>
+<span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To cite software, datasets and other artifacts, <span class="co">[</span><span class="ot">CiteAs</span><span class="co">](https://citeas.org/)</span>{target=_blank} is useful.</span>
+<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-243"><a href="#cb6-243" aria-hidden="true" tabindex="-1"></a>Program that can be used for citation is "Zotero".</span>
+<span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a>You can find the program and how to install it <span class="co">[</span><span class="ot">here</span><span class="co">](https://www.uni-bamberg.de/ub/literaturverwaltung/)</span>{target=_blank}.</span>
+<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conceptual illustrations and plots</span></span>
+<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a>For conceptual illustrations, PowerPoint is currently recommended.</span>
+<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ensure alignment etc.</span>
+<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For PDF submissions, extract it as PDF (vector graphic with embedded text).</span>
+<span id="cb6-252"><a href="#cb6-252" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For Word submissions, extract it as EMF (vector graphic with embedded text).</span>
+<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a>To plot findings, the R package <span class="co">[</span><span class="ot">ggplot2</span><span class="co">](https://ggplot2.tidyverse.org/)</span>{target=_blank} is recommended.</span>
+<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a>Ggplot2 is a powerful library and allows us to automatically update the figures when the findings change. </span>
+<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a>{: .highlight } </span>
+<span id="cb6-258"><a href="#cb6-258" aria-hidden="true" tabindex="-1"></a>It is possible to edit ggplot2 plots with LLMs (e.g., ChatGPT).</span>
+<span id="cb6-259"><a href="#cb6-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a><span class="fu">## Proofreaders</span></span>
+<span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a>Upwork:</span>
+<span id="cb6-263"><a href="#cb6-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-264"><a href="#cb6-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zaryyab Nayab Mughal</span>
+<span id="cb6-265"><a href="#cb6-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mary Graybeal</span>
+<span id="cb6-266"><a href="#cb6-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-267"><a href="#cb6-267" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb6-268"><a href="#cb6-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-269"><a href="#cb6-269" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"publist"</span><span class="dt">&gt;</span></span>
+<span id="cb6-270"><a href="#cb6-270" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>MIS Quarterly<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 13(3), 319-340. doi:10.2307/249008<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-271"><a href="#cb6-271" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Lange, D., <span class="dv">&amp;amp;</span> Pfarrer, M. D. (2017). Editors’ comments: Sense and structure—The core building blocks of an AMR article. <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Academy of Management Review<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 42(3), 407-416. <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://journals.aom.org/doi/abs/10.5465/amr.2016.0225?journalCode=amr"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-272"><a href="#cb6-272" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Strunk, W. <span class="dv">&amp;amp;</span> White, E. B. (1999). The elements of style. <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://en.wikipedia.org/wiki/The_Elements_of_Style"</span><span class="dt">&gt;</span>Link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-273"><a href="#cb6-273" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Webster, J., <span class="dv">&amp;amp;</span> Watson, R. T. (2002). Analyzing the past to prepare for the future: Writing a literature review. <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>MIS Quarterly<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 26(2), xiii-xxiii.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-274"><a href="#cb6-274" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-275"><a href="#cb6-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-276"><a href="#cb6-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">APA Style Guide</span><span class="co">](https://apastyle.apa.org/products/publication-manual-7th-edition)</span>{target=_blank}</span>
+<span id="cb6-277"><a href="#cb6-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anatomy of a Research Paper by Blair Wang</span><span class="co">](https://figshare.com/articles/figure/Anatomy_of_a_Research_Paper/19320296)</span>{target=_blank}</span>
+<span id="cb6-278"><a href="#cb6-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Writing guidelines</span><span class="co">](https://ad-wiki.informatik.uni-freiburg.de/teaching/WritingGuidelines)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 
