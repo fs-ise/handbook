@@ -122,6 +122,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -142,17 +153,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -806,6 +806,16 @@ Zoom will be replaced by [jitsi](https://jitsi.org/){target=_blank} as a default
 <td><a href="https://nc-2272638881871040784.nextcloud-ionos.com/" target="_blank">Nextcloud</a></td>
 <td>- <a href="https://nextcloud.com/de/install/#install-clients" target="_blank">Clients</a> (use <em>Nextcloud Files</em>)<br>- Contains all <strong>confidential</strong> materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).<br>- “Anmelden”, URL: <code>https://nc-2272638881871040784.nextcloud-ionos.com/</code>, give access in Browser (pop-up), accept default settings<br>- Our preferred choice for confidential data, and binary/large files<br>- <strong>Collaborative editing of a shared document (without login)</strong>: create md-file and public link (can edit)</td>
 </tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
 <td><a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/" target="_blank">Mail</a></td>
 <td>- Every member of the university gets a mail assigned<br>- <a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/wlv/" target="_blank">Personnel</a> has the format <code>firstname.surname@uni-bamberg.de</code> while <a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/studium/" target="_blank">student</a> mail addresses have the format <code>firstname1-firstname2-firstname3-(...).surname@stud.uni-bamberg.de</code><br>- The messages are accessible via <a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/outlook/" target="_blank">Outlook</a> or any other e-mail client</td>
@@ -826,20 +836,16 @@ Zoom will be replaced by [jitsi](https://jitsi.org/){target=_blank} as a default
 <td><a href="https://nuudel.digitalcourage.de/" target="_blank">Nuudel</a></td>
 <td>- Doodle replacement</td>
 </tr>
-<tr class="even">
-<td><a href="https://zuvportal.uni-bamberg.de/" target="_blank">ZUV</a></td>
-<td>- Finance<br>- Hiring (student assistants)<br>- Ordering office supplies</td>
-</tr>
 </tbody>
 </table>
 </section>
 <section id="machine-setup" class="level2">
 <h2 class="anchored" data-anchor-id="machine-setup">Machine setup</h2>
 <ul>
-<li><p><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/wlan/eduroam/" target="_blank">Eduroam</a>: Log-in with university credentials</p></li>
-<li><p><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/" target="_blank">VPN</a>: Some Services are only available via VPN or within the university network</p></li>
-<li><p><a href="https://dataimpulse.com/#pricing" target="_blank">Proxy servers</a>: Residential proxy server service</p></li>
-<li><p><a href="https://languagetool.org/de" target="_blank">LanguageTools</a>: Free Online Spellchecker (local setup: see academy)</p></li>
+<li><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/wlan/eduroam/" target="_blank">Eduroam</a>: Log-in with university credentials</li>
+<li><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/" target="_blank">VPN</a>: Some Services are only available via VPN or within the university network</li>
+<li><a href="https://dataimpulse.com/#pricing" target="_blank">Proxy servers</a>: Residential proxy server service</li>
+<li><a href="https://languagetool.org/de" target="_blank">LanguageTools</a>: Free Online Spellchecker (local setup: see academy)</li>
 </ul>
 </section>
 <section id="outlook-calendar-permissions" class="level2">
@@ -1389,29 +1395,30 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>---|---|</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">handbook</span><span class="co">](https://digital-work-lab.github.io/handbook/)</span>{target=_blank}| - Hosted on GitHub<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- <span class="co">[</span><span class="ot">Editing guidelines</span><span class="co">](10.10.handbook.html)</span><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Distributed version control system to collaborate in software development projects, and for collaborating in writing and teaching<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Our preferred choice for manuscripts, and lecture material |</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Nextcloud</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/)</span>{target=_blank}| - <span class="co">[</span><span class="ot">Clients</span><span class="co">](https://nextcloud.com/de/install/#install-clients)</span>{target=_blank} (use *Nextcloud Files*)&lt;br&gt;- Contains all **confidential** materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).&lt;br&gt;- "Anmelden", URL: ``https://nc-2272638881871040784.nextcloud-ionos.com/``, give access in Browser (pop-up), accept default settings&lt;br&gt;- Our preferred choice for confidential data, and binary/large files&lt;br&gt;- **Collaborative editing of a shared document (without login)**: create md-file and public link (can edit) |</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Mail</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/)</span>{target=_blank}| - Every member of the university gets a mail assigned<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- <span class="co">[</span><span class="ot">Personnel</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/wlv/)</span>{target=_blank} has the format <span class="in">`firstname.surname@uni-bamberg.de`</span> while <span class="co">[</span><span class="ot">student</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/studium/)</span>{target=_blank} mail addresses have the format <span class="in">`firstname1-firstname2-firstname3-(...).surname@stud.uni-bamberg.de`</span><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- The messages are accessible via <span class="co">[</span><span class="ot">Outlook</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/outlook/)</span>{target=_blank} or any other e-mail client |</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Teams | - Platform for collaboration and organization, allowing users to create different areas called "Teams" to work together or manage part of their online teaching<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Shared chat and separate chats in different channels<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Lectures and seminars can be held as phone or video meetings with up to 250 participants<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Recording functionality<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Collaborate on files within a team |</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Zoom</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/tele/video/zoom/)</span>{target=_blank}| - Single-Sign-On-Url: ``uni-bamberg``<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Online service for web conferencing<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Teaching as Meetings or Webinars<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Recording functionality<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- For events that exclusively involve members students of our university, please use <span class="co">[</span><span class="ot">Teams</span><span class="co">](#teams)</span> because of data security and privacy concerns |</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Calendly</span><span class="co">](https://calendly.com/event_types/user/me)</span>{target=_blank}| - Allow students to book appointments, which are automatically added to the Outlook calendar<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Example: <span class="co">[</span><span class="ot">30-minute meeting</span><span class="co">](https://calendly.com/gerit-wagner/30min?month=2023-07)</span>{target=_blank} |</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Nuudel</span><span class="co">](https://nuudel.digitalcourage.de/)</span>{target=_blank}| - Doodle replacement |</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">ZUV</span><span class="co">](https://zuvportal.uni-bamberg.de/)</span>{target=_blank}| - Finance<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Hiring (student assistants)<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Ordering office supplies |</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Machine setup</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>System | Description |</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>---|---|</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Mail</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/)</span>{target=_blank}| - Every member of the university gets a mail assigned<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- <span class="co">[</span><span class="ot">Personnel</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/wlv/)</span>{target=_blank} has the format <span class="in">`firstname.surname@uni-bamberg.de`</span> while <span class="co">[</span><span class="ot">student</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/studium/)</span>{target=_blank} mail addresses have the format <span class="in">`firstname1-firstname2-firstname3-(...).surname@stud.uni-bamberg.de`</span><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- The messages are accessible via <span class="co">[</span><span class="ot">Outlook</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/outlook/)</span>{target=_blank} or any other e-mail client |</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Teams | - Platform for collaboration and organization, allowing users to create different areas called "Teams" to work together or manage part of their online teaching<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Shared chat and separate chats in different channels<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Lectures and seminars can be held as phone or video meetings with up to 250 participants<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Recording functionality<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Collaborate on files within a team |</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Zoom</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/tele/video/zoom/)</span>{target=_blank}| - Single-Sign-On-Url: ``uni-bamberg``<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Online service for web conferencing<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Teaching as Meetings or Webinars<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Recording functionality<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- For events that exclusively involve members students of our university, please use <span class="co">[</span><span class="ot">Teams</span><span class="co">](#teams)</span> because of data security and privacy concerns |</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Calendly</span><span class="co">](https://calendly.com/event_types/user/me)</span>{target=_blank}| - Allow students to book appointments, which are automatically added to the Outlook calendar<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Example: <span class="co">[</span><span class="ot">30-minute meeting</span><span class="co">](https://calendly.com/gerit-wagner/30min?month=2023-07)</span>{target=_blank} |</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Nuudel</span><span class="co">](https://nuudel.digitalcourage.de/)</span>{target=_blank}| - Doodle replacement |</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Eduroam</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/netz/wlan/eduroam/)</span>{target=_blank}: Log-in with university credentials </span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">VPN</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/)</span>{target=_blank}: Some Services are only available via VPN or within the university network</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Proxy servers</span><span class="co">](https://dataimpulse.com/#pricing)</span>{target=_blank}: Residential proxy server service</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">LanguageTools</span><span class="co">](https://languagetool.org/de)</span>{target=_blank}: Free Online Spellchecker (local setup: see academy)</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Outlook: Calendar permissions</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>Sharing calendars -&gt; You decide what the other person can see<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>Permission settings -&gt; In your own calendar, click on "Eigenschaften" -&gt; "Berechtigungen"<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Youtube procedure</span><span class="co">](https://intranet.neuro.polymtl.ca/computing-resources/youtube.html)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Machine setup</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Eduroam</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/netz/wlan/eduroam/)</span>{target=_blank}: Log-in with university credentials </span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">VPN</span><span class="co">](https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/)</span>{target=_blank}: Some Services are only available via VPN or within the university network</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Proxy servers</span><span class="co">](https://dataimpulse.com/#pricing)</span>{target=_blank}: Residential proxy server service</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">LanguageTools</span><span class="co">](https://languagetool.org/de)</span>{target=_blank}: Free Online Spellchecker (local setup: see academy)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Outlook: Calendar permissions</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>Sharing calendars -&gt; You decide what the other person can see<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>Permission settings -&gt; In your own calendar, click on "Eigenschaften" -&gt; "Berechtigungen"<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Youtube procedure</span><span class="co">](https://intranet.neuro.polymtl.ca/computing-resources/youtube.html)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
