@@ -1,71 +1,169 @@
 ---
 title: "Projects"
----
-
-[![Update Project Overview](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml/badge.svg)](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml){target=_blank} [![Create Project](https://img.shields.io/badge/Create-New%20Project-blue)]([https://github.com/organizations/digital-work-lab/repositories/new](https://github.com/digital-work-lab/handbook/tree/main/_projects){target=_blank}){target=_blank}
-
-Project pages in this section are auto-synced from repository entries tagged
-with both `research` and `paper` via [`src/sync_projects_from_repos.py`](https://github.com/digital-work-lab/handbook/blob/main/src/sync_projects_from_repos.py){target=_blank}.
-
----
-title: "Projects"
 listing:
-  contents: projects
-  type: table
-  fields: ["title", "status"]
-  sort: "status desc"
-  sort-ui: true
-  filter-ui: [title]
-  categories: true
-  page-size: 100
+  - id: projects-planned
+    contents: projects
+    type: table
+    fields: [title]
+    sort-ui: false
+    filter-ui: false
+    include:
+      status: "planned"
+
+  - id: projects-writing
+    contents: projects
+    type: table
+    fields: [title]
+    sort-ui: false
+    filter-ui: false
+    include:
+      status: "writing"
+
+  - id: projects-under-review
+    contents: projects
+    type: table
+    fields: [title]
+    sort-ui: false
+    filter-ui: false
+    include:
+      status: "under-review"
+
+  - id: projects-revising
+    contents: projects
+    type: table
+    fields: [title]
+    sort-ui: false
+    filter-ui: false
+    include:
+      status: "revising"
+
+  - id: projects-published
+    contents: projects
+    type: table
+    fields: [title]
+    sort-ui: false
+    filter-ui: false
+    include:
+      status: "published"
 ---
+
+## Project overview
+
+Projects are [here](https://github.com/fs-ise/handbook/tree/main/research/projects). 
+[![](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml/badge.svg)](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml){target=_blank} 
 
 <!--
-
-<table>
-  <thead>
-    <tr>
-      <th>Project</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for project in site.projects %}
-    {% if project.status != "published" and project.status != "revising" and project.status != "under-review" %}
-    <tr>
-      <td><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></td>
-      <td style="color: gray;">{{ project.status }}</td>
-    </tr>
-    {% endif %}
-    {% endfor %}
-
-    {% for project in site.projects %}
-    {% if project.status == "revising" %}
-    <tr>
-      <td><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></td>
-      <td style="color: orange;"><strong>{{ project.status }}</strong></td>
-    </tr>
-    {% endif %}
-    {% if project.status == "under-review" %}
-    <tr>
-      <td><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></td>
-      <td style="color: blue;">{{ project.status }}</td>
-    </tr>
-    {% endif %}
-    {% endfor %}
-
-    {% for project in site.projects %}
-    {% if project.status == "published" %}
-    <tr>
-      <td><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></td>
-      <td style="color: green;">{{ project.status }}</td>
-    </tr>
-    {% endif %}
-    {% endfor %}
-  </tbody>
-</table>
-
-{: .highlight }
-> See [Project portfolio](25-projects-gantt).
-
+Project pages in this section are auto-synced from repository entries tagged
+with both `research` and `paper` via [`src/sync_projects_from_repos.py`](https://github.com/digital-work-lab/handbook/blob/main/src/sync_projects_from_repos.py){target=_blank}.
 -->
+
+::: {.callout-note icon=false title="Planned" collapse=true}
+
+::: {#projects-planned}
+:::
+
+:::
+
+::: {.callout-note icon=false title="Writing" collapse=false}
+
+::: {#projects-writing}
+:::
+
+:::
+
+::: {.callout-note icon=false title="Revising" collapse=false}
+
+::: {#projects-revising}
+:::
+
+:::
+
+::: {.callout-note icon=false title="Under review" collapse=false}
+
+::: {#projects-under-review}
+:::
+
+:::
+
+
+::: {.callout-note icon=false title="Published" collapse=true}
+
+::: {#projects-published}
+:::
+
+:::
+
+
+### Project states
+
+Projecs and can be in the following states:
+
+::: {.text-center}
+```{mermaid}
+flowchart LR
+    subgraph Projects
+        direction TB
+        Concept(["<a href='#concept'>Concept</a>"]) -.-> Writing(["<a href='#writing'>Writing</a>"])
+        Writing --> OnHold(["<a href='#on-hold'>On Hold</a>"])
+        OnHold --> Writing
+        OnHold -.-> Abandoned(["<a href='#abandoned'>Abandoned</a>"])
+        Writing ==> UnderReview(["<a href='#under-review'>Under review</a>"])
+        Revising -.-> OnHold
+        Revising ==> UnderReview
+        UnderReview ==> Revising(["<a href='#revising'>Revising</a>"])
+        Revising ==> Published(["<a href='#published'>Published</a>"])
+    end
+    style Projects fill:white,stroke:#333,stroke-width:3px
+
+```
+:::
+
+## From ideas to projects
+
+### Ideas
+
+- Research ideas should be formulated in relatively specific concept (markdown) files.
+- Stored in a personal or shared repository (such as the [work_hub](https://github.com/digital-work-lab/work_hub){target=_blank}).
+- Yaml header:
+
+```markdown
+---
+status: concept
+...
+---
+
+Summary of the idea (in Markdown)...
+
+```
+
+### Selection
+
+- Consider concepts with `status: concept` in personal or shared repositories (such as the [work_hub](https://github.com/digital-work-lab/work_hub){target=_blank}).
+
+Can be searched in Obsidian:
+
+```markdown
+["status":concept]
+```
+
+- Consider fit with [research areas](20.01.goals)
+- Consider resources (current project workload, availability of collaborators etc.)
+
+### Creation
+
+::: {.callout-note title="TODO"}
+Create file here? https://github.com/fs-ise/handbook/tree/main/research/projects
+
+Link template
+:::
+
+[![](https://img.shields.io/badge/Create-New%20Project-blue)](repo_setup.html)
+  
+::: resource
+- All our research repositories on [GitHub](https://github.com/orgs/digital-work-lab/repositories?q=topic%3Aresearch){: target="_blank"}.
+- Projects are in [25-Projects](25-projects.html)
+:::
+
+## Resources
+
+- [Example](https://intranet.neuro.polymtl.ca/ideas-for-cool-projects.html){target=_blank}
