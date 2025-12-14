@@ -3283,353 +3283,873 @@
     ]
   },
   {
-    "objectID": "research/projects/genailr.html",
-    "href": "research/projects/genailr.html",
-    "title": "genailr",
+    "objectID": "research/projects/lab-handbooks.html",
+    "href": "research/projects/lab-handbooks.html",
+    "title": "lab-handbooks",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}\n\n\n\n{% for output in page.outputs %} - {{ output.type }} {% endfor %}\n\n\n\n{% for item in page.related %} - {{ item }} {% endfor %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
-    "objectID": "research/projects/genailr.html#resources",
-    "href": "research/projects/genailr.html#resources",
-    "title": "genailr",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "objectID": "research/projects/lab-handbooks.html#resources",
+    "href": "research/projects/lab-handbooks.html#resources",
+    "title": "lab-handbooks",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nLaureenTh\n2025-12-08"
   },
   {
-    "objectID": "research/projects/genailr.html#outputs",
-    "href": "research/projects/genailr.html#outputs",
-    "title": "genailr",
-    "section": "",
-    "text": "{% for output in page.outputs %} - {{ output.type }} {% endfor %}"
-  },
-  {
-    "objectID": "research/projects/genailr.html#related-projects",
-    "href": "research/projects/genailr.html#related-projects",
-    "title": "genailr",
-    "section": "",
-    "text": "{% for item in page.related %} - {{ item }} {% endfor %}"
-  },
-  {
-    "objectID": "research/projects/dpkw.html",
-    "href": "research/projects/dpkw.html",
-    "title": "dpkw",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/dpkw.html#resources",
-    "href": "research/projects/dpkw.html#resources",
-    "title": "dpkw",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "objectID": "research/projects/lab-handbooks.html#history",
+    "href": "research/projects/lab-handbooks.html#history",
+    "title": "lab-handbooks",
+    "section": "History",
+    "text": "History\n\n2025-01-20 — started\n2025-11-17 — submitted"
   },
   {
     "objectID": "research/projects/ailr.html",
     "href": "research/projects/ailr.html",
     "title": "ailr",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
     "objectID": "research/projects/ailr.html#resources",
     "href": "research/projects/ailr.html#resources",
     "title": "ailr",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/colrev.html",
-    "href": "research/projects/colrev.html",
-    "title": "colrev-manuscript",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/colrev.html#resources",
-    "href": "research/projects/colrev.html#resources",
-    "title": "colrev-manuscript",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/search-query-paper.html",
-    "href": "research/projects/search-query-paper.html",
-    "title": "search-query-paper",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/search-query-paper.html#resources",
-    "href": "research/projects/search-query-paper.html#resources",
-    "title": "search-query-paper",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/search-query-evaluation-paper.html",
-    "href": "research/projects/search-query-evaluation-paper.html",
-    "title": "search-query-evaluation-paper",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}"
-  },
-  {
-    "objectID": "research/projects/search-query-evaluation-paper.html#page.title",
-    "href": "research/projects/search-query-evaluation-paper.html#page.title",
-    "title": "search-query-evaluation-paper",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}"
-  },
-  {
-    "objectID": "research/projects/search-query-evaluation-paper.html#resources",
-    "href": "research/projects/search-query-evaluation-paper.html#resources",
-    "title": "search-query-evaluation-paper",
     "section": "Resources",
-    "text": "Resources\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\n—\n2025-12-08"
   },
   {
-    "objectID": "research/projects/lrs-impact-uniformity.html",
-    "href": "research/projects/lrs-impact-uniformity.html",
-    "title": "lrs-impact-uniformity",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "objectID": "research/projects/ailr.html#history",
+    "href": "research/projects/ailr.html#history",
+    "title": "ailr",
+    "section": "History",
+    "text": "History\n\n2020-11-26 — started\n2021-09-02 — completed"
   },
   {
-    "objectID": "research/projects/lrs-impact-uniformity.html#resources",
-    "href": "research/projects/lrs-impact-uniformity.html#resources",
-    "title": "lrs-impact-uniformity",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrs-theory-impact.html",
-    "href": "research/projects/lrs-theory-impact.html",
-    "title": "lrs-theory-impact",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrs-theory-impact.html#resources",
-    "href": "research/projects/lrs-theory-impact.html#resources",
-    "title": "lrs-theory-impact",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrdm.html",
-    "href": "research/projects/lrdm.html",
-    "title": "lrdm",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrdm.html#resources",
-    "href": "research/projects/lrdm.html#resources",
-    "title": "lrdm",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lr-search.html",
-    "href": "research/projects/lr-search.html",
-    "title": "lr-search",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lr-search.html#resources",
-    "href": "research/projects/lr-search.html#resources",
-    "title": "lr-search",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrnlpimpact.html",
-    "href": "research/projects/lrnlpimpact.html",
-    "title": "lrnlpimpact",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrnlpimpact.html#resources",
-    "href": "research/projects/lrnlpimpact.html#resources",
-    "title": "lrnlpimpact",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/platform-lr.html",
-    "href": "research/projects/platform-lr.html",
-    "title": "platform-lr",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/platform-lr.html#resources",
-    "href": "research/projects/platform-lr.html#resources",
-    "title": "platform-lr",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/aicompetencemed.html",
-    "href": "research/projects/aicompetencemed.html",
-    "title": "aicompetencemed",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/aicompetencemed.html#resources",
-    "href": "research/projects/aicompetencemed.html#resources",
-    "title": "aicompetencemed",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "objectID": "research/projects/ailr.html#output",
+    "href": "research/projects/ailr.html#output",
+    "title": "ailr",
+    "section": "Output",
+    "text": "Output\n\nWagnerLukyanenkoParEtAl2022"
   },
   {
     "objectID": "research/projects/beals.html",
     "href": "research/projects/beals.html",
     "title": "beals",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
     "objectID": "research/projects/beals.html#resources",
     "href": "research/projects/beals.html#resources",
     "title": "beals",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nannaglr, k-schnickmann\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/beals.html#history",
+    "href": "research/projects/beals.html#history",
+    "title": "beals",
+    "section": "History",
+    "text": "History\n\n2025-03-28 — started\n2025-11-17 — submitted"
+  },
+  {
+    "objectID": "research/projects/colrev-manuscript.html",
+    "href": "research/projects/colrev-manuscript.html",
+    "title": "colrev-manuscript",
     "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/colrev-manuscript.html#resources",
+    "href": "research/projects/colrev-manuscript.html#resources",
+    "title": "colrev-manuscript",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\njulianprester\n2025-09-19"
+  },
+  {
+    "objectID": "research/projects/colrev-manuscript.html#history",
+    "href": "research/projects/colrev-manuscript.html#history",
+    "title": "colrev-manuscript",
+    "section": "History",
+    "text": "History\n\n2021-04-15 — started"
+  },
+  {
+    "objectID": "research/projects/git-intro.html",
+    "href": "research/projects/git-intro.html",
+    "title": "git-intro",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/git-intro.html#resources",
+    "href": "research/projects/git-intro.html#resources",
+    "title": "git-intro",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nLaureenTh\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/git-intro.html#history",
+    "href": "research/projects/git-intro.html#history",
+    "title": "git-intro",
+    "section": "History",
+    "text": "History\n\n2023-04-04 — started\n2024-08-28 — completed"
+  },
+  {
+    "objectID": "research/projects/git-intro.html#output",
+    "href": "research/projects/git-intro.html#output",
+    "title": "git-intro",
+    "section": "Output",
+    "text": "Output\n\nWagnerThurner2025"
+  },
+  {
+    "objectID": "research/projects/lrdm.html",
+    "href": "research/projects/lrdm.html",
+    "title": "lrdm",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lrdm.html#resources",
+    "href": "research/projects/lrdm.html#resources",
+    "title": "lrdm",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\njulianprester\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/lrdm.html#history",
+    "href": "research/projects/lrdm.html#history",
+    "title": "lrdm",
+    "section": "History",
+    "text": "History\n\n2022-02-20 — started"
+  },
+  {
+    "objectID": "research/projects/lrs-theory-impact.html",
+    "href": "research/projects/lrs-theory-impact.html",
+    "title": "lrs-theory-impact",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lrs-theory-impact.html#resources",
+    "href": "research/projects/lrs-theory-impact.html#resources",
+    "title": "lrs-theory-impact",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\n—\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/lrs-theory-impact.html#history",
+    "href": "research/projects/lrs-theory-impact.html#history",
+    "title": "lrs-theory-impact",
+    "section": "History",
+    "text": "History\n—"
+  },
+  {
+    "objectID": "research/projects/lrnlpimpact.html",
+    "href": "research/projects/lrnlpimpact.html",
+    "title": "lrnlpimpact",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lrnlpimpact.html#resources",
+    "href": "research/projects/lrnlpimpact.html#resources",
+    "title": "lrnlpimpact",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nmanuscript\n—\n—\n\n\n\nconference_paper\n—\n—"
+  },
+  {
+    "objectID": "research/projects/lrnlpimpact.html#history",
+    "href": "research/projects/lrnlpimpact.html#history",
+    "title": "lrnlpimpact",
+    "section": "History",
+    "text": "History\n\n2016-11-27 — started\n2020-11-04 — completed"
+  },
+  {
+    "objectID": "research/projects/lrnlpimpact.html#output",
+    "href": "research/projects/lrnlpimpact.html#output",
+    "title": "lrnlpimpact",
+    "section": "Output",
+    "text": "Output\n\nPresterWagnerSchryenEtAl2021\nPresterWagnerSchryen2018\nHassanPresterWagner2020"
+  },
+  {
+    "objectID": "research/projects/lr-search.html",
+    "href": "research/projects/lr-search.html",
+    "title": "lr-search",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lr-search.html#resources",
+    "href": "research/projects/lr-search.html#resources",
+    "title": "lr-search",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\njulianprester\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/lr-search.html#history",
+    "href": "research/projects/lr-search.html#history",
+    "title": "lr-search",
+    "section": "History",
+    "text": "History\n\n2020-10-01 — started"
+  },
+  {
+    "objectID": "research/projects/theory-elaboration.html",
+    "href": "research/projects/theory-elaboration.html",
+    "title": "theory-elaboration",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/theory-elaboration.html#resources",
+    "href": "research/projects/theory-elaboration.html#resources",
+    "title": "theory-elaboration",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\n—\n2025-09-19"
+  },
+  {
+    "objectID": "research/projects/theory-elaboration.html#history",
+    "href": "research/projects/theory-elaboration.html#history",
+    "title": "theory-elaboration",
+    "section": "History",
+    "text": "History\n\n2018-01-15 — started"
+  },
+  {
+    "objectID": "research/projects/theory-elaboration.html#output",
+    "href": "research/projects/theory-elaboration.html#output",
+    "title": "theory-elaboration",
+    "section": "Output",
+    "text": "Output\n\nPareWagnerTateEtA2025"
+  },
+  {
+    "objectID": "research/projects/platform-kwork-lr.html",
+    "href": "research/projects/platform-kwork-lr.html",
+    "title": "platform-kwork-lr",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/platform-kwork-lr.html#resources",
+    "href": "research/projects/platform-kwork-lr.html#resources",
+    "title": "platform-kwork-lr",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository (review)\njulianprester\n2025-12-08\n\n\n\nGitHub repository\njulianprester\n2025-09-18"
+  },
+  {
+    "objectID": "research/projects/platform-kwork-lr.html#history",
+    "href": "research/projects/platform-kwork-lr.html#history",
+    "title": "platform-kwork-lr",
+    "section": "History",
+    "text": "History\n—"
+  },
+  {
+    "objectID": "research/projects/lrtracker.html",
+    "href": "research/projects/lrtracker.html",
+    "title": "lrtracker",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lrtracker.html#resources",
+    "href": "research/projects/lrtracker.html#resources",
+    "title": "lrtracker",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nmanuscript\n—\n—\n—"
+  },
+  {
+    "objectID": "research/projects/lrtracker.html#history",
+    "href": "research/projects/lrtracker.html#history",
+    "title": "lrtracker",
+    "section": "History",
+    "text": "History\n\n2018-07-12 — started\n2020-10-12 — completed"
+  },
+  {
+    "objectID": "research/projects/lrtracker.html#output",
+    "href": "research/projects/lrtracker.html#output",
+    "title": "lrtracker",
+    "section": "Output",
+    "text": "Output\n\nRingevalWagnerDenfordEtAl2020"
+  },
+  {
+    "objectID": "research/projects/lr-dedupe-benchmark.html",
+    "href": "research/projects/lr-dedupe-benchmark.html",
+    "title": "lr-dedupe-benchmark",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lr-dedupe-benchmark.html#resources",
+    "href": "research/projects/lr-dedupe-benchmark.html#resources",
+    "title": "lr-dedupe-benchmark",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nk-schnickmann\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/lr-dedupe-benchmark.html#history",
+    "href": "research/projects/lr-dedupe-benchmark.html#history",
+    "title": "lr-dedupe-benchmark",
+    "section": "History",
+    "text": "History\n\n2025-08-01 — started"
+  },
+  {
+    "objectID": "research/projects/aicompetencemed.html",
+    "href": "research/projects/aicompetencemed.html",
+    "title": "aicompetencemed",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/aicompetencemed.html#resources",
+    "href": "research/projects/aicompetencemed.html#resources",
+    "title": "aicompetencemed",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\n—\n2025-12-08\n\n\n\nDropbox\n—\n—\n—"
+  },
+  {
+    "objectID": "research/projects/aicompetencemed.html#history",
+    "href": "research/projects/aicompetencemed.html#history",
+    "title": "aicompetencemed",
+    "section": "History",
+    "text": "History\n\n2022-05-06 — started"
+  },
+  {
+    "objectID": "research/projects/aicompetencemed.html#output",
+    "href": "research/projects/aicompetencemed.html#output",
+    "title": "aicompetencemed",
+    "section": "Output",
+    "text": "Output\n\nPareRaymondCastonguayEtAl2023\nRingevalPareRaymondEtAl2025\nWagnerRaymondPareEtAl2023\nWagnerRingevalRaymondEtAl2025"
+  },
+  {
+    "objectID": "research/projects/dec-proc-ex.html",
+    "href": "research/projects/dec-proc-ex.html",
+    "title": "dec-proc-ex",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/dec-proc-ex.html#resources",
+    "href": "research/projects/dec-proc-ex.html#resources",
+    "title": "dec-proc-ex",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\njulianprester\n2025-12-08\n\n\n\nGitHub repository (colrev)\n—\n—"
+  },
+  {
+    "objectID": "research/projects/dec-proc-ex.html#history",
+    "href": "research/projects/dec-proc-ex.html#history",
+    "title": "dec-proc-ex",
+    "section": "History",
+    "text": "History\n\n2022-02-09 — started"
+  },
+  {
+    "objectID": "research/projects/dpkw.html",
+    "href": "research/projects/dpkw.html",
+    "title": "dpkw",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/dpkw.html#resources",
+    "href": "research/projects/dpkw.html#resources",
+    "title": "dpkw",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nmanuscript\n—\n—\n\n\n\nreview\n—\n—"
+  },
+  {
+    "objectID": "research/projects/dpkw.html#history",
+    "href": "research/projects/dpkw.html#history",
+    "title": "dpkw",
+    "section": "History",
+    "text": "History\n\n2019-04-02 — started\n2021-09-18 — completed"
+  },
+  {
+    "objectID": "research/projects/dpkw.html#output",
+    "href": "research/projects/dpkw.html#output",
+    "title": "dpkw",
+    "section": "Output",
+    "text": "Output\n\nWagnerPrester2019\nWagnerPresterPare2021"
   },
   {
     "objectID": "research/projects/teapad.html",
     "href": "research/projects/teapad.html",
     "title": "teapad",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
     "objectID": "research/projects/teapad.html#resources",
     "href": "research/projects/teapad.html#resources",
     "title": "teapad",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\ndengdenglele, LaureenTh, Stella1234-design\n2025-12-08\n\n\n\nJOSE review\n—\n—"
+  },
+  {
+    "objectID": "research/projects/teapad.html#history",
+    "href": "research/projects/teapad.html#history",
+    "title": "teapad",
+    "section": "History",
+    "text": "History\n\n2024-09-10 — started"
   },
   {
     "objectID": "research/projects/data-work.html",
     "href": "research/projects/data-work.html",
     "title": "data-work",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}"
-  },
-  {
-    "objectID": "research/projects/data-work.html#page.title",
-    "href": "research/projects/data-work.html#page.title",
-    "title": "data-work",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
     "objectID": "research/projects/data-work.html#resources",
     "href": "research/projects/data-work.html#resources",
     "title": "data-work",
     "section": "Resources",
-    "text": "Resources\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nhopfkons\n2025-12-02"
   },
   {
-    "objectID": "research/projects/bib-dedupe.html",
-    "href": "research/projects/bib-dedupe.html",
-    "title": "bib-dedupe",
+    "objectID": "research/projects/data-work.html#history",
+    "href": "research/projects/data-work.html#history",
+    "title": "data-work",
+    "section": "History",
+    "text": "History\n—"
+  },
+  {
+    "objectID": "research/presentation.html",
+    "href": "research/presentation.html",
+    "title": "Presentation",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Adapt to the audience\nPrepare a short elevator pitch\nPlan for eventualities (e.g., no Internet/WIFI connection available)\nMake slides available [TODO : link repo] and allow participants to connect/give feedback (TODO : add suggestions)\nCommunicate a clear reason why your audience should be interested in your presentation (in particular when some participants are required to attend)\nWhen appropriate: start with a bold pitch like “After this talk, you will do … differently.”\nWhen appropriate, use storytelling to make the presentation memorable",
+    "crumbs": [
+      "Research",
+      "Writing & Publication",
+      "Presentation"
+    ]
   },
   {
-    "objectID": "research/projects/bib-dedupe.html#resources",
-    "href": "research/projects/bib-dedupe.html#resources",
-    "title": "bib-dedupe",
+    "objectID": "research/presentation.html#general-guidelines",
+    "href": "research/presentation.html#general-guidelines",
+    "title": "Presentation",
     "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Adapt to the audience\nPrepare a short elevator pitch\nPlan for eventualities (e.g., no Internet/WIFI connection available)\nMake slides available [TODO : link repo] and allow participants to connect/give feedback (TODO : add suggestions)\nCommunicate a clear reason why your audience should be interested in your presentation (in particular when some participants are required to attend)\nWhen appropriate: start with a bold pitch like “After this talk, you will do … differently.”\nWhen appropriate, use storytelling to make the presentation memorable",
+    "crumbs": [
+      "Research",
+      "Writing & Publication",
+      "Presentation"
+    ]
   },
   {
-    "objectID": "research/methods.html",
-    "href": "research/methods.html",
-    "title": "Methods",
+    "objectID": "research/presentation.html#template",
+    "href": "research/presentation.html#template",
+    "title": "Presentation",
+    "section": "Template",
+    "text": "Template\n\nMarp template\n\nTo include a Mermaid diagram:\n&lt;script type=\"module\"&gt;\n  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';\n  mermaid.initialize({ startOnLoad: true });\n&lt;/script&gt;\n\n&lt;div class=\"mermaid\"&gt;\n  graph LR;\n  a --&gt; b;\n  b --&gt; c;\n  c --&gt; a;\n&lt;/div&gt;\nCallout box:\n&lt;style&gt;\n.callout {\n  border-left: 5px solid #007acc;\n  background-color: #f0f8ff;\n  padding: 10px;\n  margin: 10px 0;\n  border-radius: 5px;\n}\n&lt;/style&gt;\n\n&lt;div class=\"callout\"&gt;\n  &lt;strong&gt;Note:&lt;/strong&gt; Text\nFootnote:\n&lt;style&gt;\nblockquote {\n    border-top: 0.1em;\n    font-size: 60%;\n    margin-top: auto;\n}\n&lt;/style&gt;\n\n&gt; Note...\n\n&lt;style&gt;\nblockquote {\n    border-top: 0.1em;\n    font-size: 60%;\n    margin-top: auto;\n    padding-left: 40px;\n    text-indent: -30px;\n    text-align: justify;\n}\n&lt;/style&gt;\n\n&gt; Raymond, L., Paré, D., Doyon, O. and Wagner, G. “Understanding nurses’ intention to use artificial intelligence technologies in their clinical practice: A survey-based configurational analysis“. Under review at the *Journal of Advanced Nursing* (minor revision).\nReferences:\n&lt;span class=\"citation\"&gt;(Ringeval et al., 2020; Li et al., 2025)&lt;/span&gt;\n\n&lt;style scoped&gt;\np {\n    padding-left: 36px;\n    text-indent: -36px;\n    font-size: 75%;\n    text-align: justify;\n}\n&lt;/style&gt;\n&lt;!-- font-size: 12px; /* or any size you prefer, e.g., 12px */ --&gt;\n\nCastonguay, A., Wagner, G., Motulsky, A., and Paré, G. 2024. “AI Maturity in Health Care: An Overview of 10 OECD Countries“. *Health Policy*, 140, p.104938.",
+    "crumbs": [
+      "Research",
+      "Writing & Publication",
+      "Presentation"
+    ]
+  },
+  {
+    "objectID": "research/presentation.html#structure-and-contents",
+    "href": "research/presentation.html#structure-and-contents",
+    "title": "Presentation",
+    "section": "Structure and Contents",
+    "text": "Structure and Contents\n\nTODO",
+    "crumbs": [
+      "Research",
+      "Writing & Publication",
+      "Presentation"
+    ]
+  },
+  {
+    "objectID": "research/presentation.html#resources",
+    "href": "research/presentation.html#resources",
+    "title": "Presentation",
+    "section": "Resources",
+    "text": "Resources\n\nBetter Poster Latex Template",
+    "crumbs": [
+      "Research",
+      "Writing & Publication",
+      "Presentation"
+    ]
+  },
+  {
+    "objectID": "research/mailing_lists.html",
+    "href": "research/mailing_lists.html",
+    "title": "Mailing lists",
     "section": "",
-    "text": "This page contains an overview and links to method resources.",
+    "text": "Association for Information Systems, AIS",
     "crumbs": [
       "Research",
-      "Methods & Analysis",
-      "Methods"
+      "Projects & Collaboration",
+      "Mailing lists"
     ]
   },
   {
-    "objectID": "research/methods.html#computational-analyses",
-    "href": "research/methods.html#computational-analyses",
-    "title": "Methods",
-    "section": "Computational analyses",
-    "text": "Computational analyses\nPython: recommendation to use uv to manage dependencies or include them in a script.",
-    "crumbs": [
-      "Research",
-      "Methods & Analysis",
-      "Methods"
-    ]
-  },
-  {
-    "objectID": "research/methods.html#literature-review",
-    "href": "research/methods.html#literature-review",
-    "title": "Methods",
-    "section": "Literature review",
-    "text": "Literature review\n\nlrs_target_variable: A collection of literature reviews in IS\nlr-tools: A comprehensive overview of literature review tools\nliterature_reviews: An overview of the literature review discourse, including methods papers, editorials, etc.\n20.10: An overview of databases in IS",
-    "crumbs": [
-      "Research",
-      "Methods & Analysis",
-      "Methods"
-    ]
-  },
-  {
-    "objectID": "research/methods.html#sem",
-    "href": "research/methods.html#sem",
-    "title": "Methods",
-    "section": "SEM",
-    "text": "SEM\n\nLisrel (commercial)\nSmartPLS\nlavaan (R) with JASP or jamovi interfaces",
-    "crumbs": [
-      "Research",
-      "Methods & Analysis",
-      "Methods"
-    ]
-  },
-  {
-    "objectID": "research/methods.html#causal-inference",
-    "href": "research/methods.html#causal-inference",
-    "title": "Methods",
-    "section": "Causal inference",
-    "text": "Causal inference\n\nCausal Inference for The Brave and True",
-    "crumbs": [
-      "Research",
-      "Methods & Analysis",
-      "Methods"
-    ]
-  },
-  {
-    "objectID": "research/data.html",
-    "href": "research/data.html",
-    "title": "Data",
+    "objectID": "research/mailing_lists.html#research-community-international",
+    "href": "research/mailing_lists.html#research-community-international",
+    "title": "Mailing lists",
     "section": "",
-    "text": "We aim to provide complete data sets and analysis workflows for our studies.",
+    "text": "Association for Information Systems, AIS",
     "crumbs": [
       "Research",
-      "Output",
-      "Data"
+      "Projects & Collaboration",
+      "Mailing lists"
     ]
   },
   {
-    "objectID": "research/data.html#curations",
-    "href": "research/data.html#curations",
-    "title": "Data",
-    "section": "Curations",
-    "text": "Curations\n\nOrganizational Handbooks\n\n\n\n\n\n\n     \n\n\n\nThe Organizational Handbooks curation collects public employee and academic handbooks from digital-by-default organizations and research labs. It enables comparative analyses of digital work practices, governance models, and organizational transparency.\nHighlights\n\nStructured inventory of repositories and open handbook resources\nIncludes organizational, community, and academic research handbooks\nBasis for qualitative and computational content analysis\n\n\n\nLiterature Reviews\n\n\n\n\n\n\n     \n\n\n\nThe Literature Reviews in Information Systems curation (GitHub Repository) compiles and maintains an evolving dataset of literature reviews in Information Systems, supported by a dedicated bibliographic database and automated update routines. It provides a foundation for literature reviews and meta-research on review practices in IS.\nHighlights\n\nCurated, extensible dataset (records.bib)\nReproducible update workflow (make update)\nFocus on evidence synthesis methods and trends in IS research",
+    "objectID": "research/mailing_lists.html#research-community-national",
+    "href": "research/mailing_lists.html#research-community-national",
+    "title": "Mailing lists",
+    "section": "Research community (national)",
+    "text": "Research community (national)\n\nHochschulverband\nVHB\nWissenschaftliche Kommission Wirtschaftsinformatik, WKWI",
     "crumbs": [
       "Research",
-      "Output",
-      "Data"
+      "Projects & Collaboration",
+      "Mailing lists"
+    ]
+  },
+  {
+    "objectID": "research/mailing_lists.html#podcasts",
+    "href": "research/mailing_lists.html#podcasts",
+    "title": "Mailing lists",
+    "section": "Podcasts",
+    "text": "Podcasts\n\nOn the way to new work\nThis IS Research podcast\n10 Minute IS Paper\nDesk Reject: der PhD-Cast”\nTHE CYBERSECURITY READINESS PODCAST SERIES\nServusKI",
+    "crumbs": [
+      "Research",
+      "Projects & Collaboration",
+      "Mailing lists"
+    ]
+  },
+  {
+    "objectID": "research/mailing_lists.html#job-market",
+    "href": "research/mailing_lists.html#job-market",
+    "title": "Mailing lists",
+    "section": "Job market",
+    "text": "Job market\n\nWissenschaftliche Kommission Wirtschaftsinformatik (WKWI)\nWKWI: Ausschreibungen für wiss. Nachwuchs\nAcademics.de\nAusschreibungsdienst DHV",
+    "crumbs": [
+      "Research",
+      "Projects & Collaboration",
+      "Mailing lists"
+    ]
+  },
+  {
+    "objectID": "research/data_sets.html",
+    "href": "research/data_sets.html",
+    "title": "Data sets",
+    "section": "",
+    "text": "IEEEDataPortal\nBERD\nOverview of repositories and data journals",
+    "crumbs": [
+      "Research",
+      "Methods & Analysis",
+      "Data sets"
+    ]
+  },
+  {
+    "objectID": "academy/research_training.html",
+    "href": "academy/research_training.html",
+    "title": "Research training",
+    "section": "",
+    "text": "Categories:\n\nmethods\nwriting\nThe Bamberg Center for Empirical Studies (BACES) offers free consultation related to data management and statistical analyses\n\nSee podcast episode on phd education\nResources (to sort):\n\nThe Turing Way\nGood-enough practices in scientific computing\nHow to document your research software\nhow-to docs\nAwesome reproducible research\nAwesome open science\nInstats courses\nIDIS: International Doctoral Network in Information Systems\nVHB Prodoc\nGood Enough Practices in Scientific Computing\nTidyverse skills for Data Science\n\nBooks on philosophy of science:\n\nThomas S. Kuhn – The Structure of Scientific Revolutions (paradigms & paradigm shifts)\nKarl Popper – The Logic of Scientific Discovery (falsification)\nKarl Popper – Conjectures and Refutations (essays, very readable)\nPaul Feyerabend – Against Method (“anything goes” critique)\nAlan Chalmers – What Is This Thing Called Science? (widely used intro)\nHerbert Simon - Sciences of the Artificial (for design science)\n\nResearch and modes of reasoning\nLevallet, N., Denford, J. S., & Chan, Y. E. (2020). Following the MAP (methods, approaches, perspectives) in information systems research. Information Systems Research, 32(1), 130-146. (link).\nValidity\nBoudreau, Gefen & Straub (2001), “Validation in Information Systems Research: A State-of-the-Art Assessment,” MIS Quarterly. Shadish, Cook & Campbell (2002), Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Straub, Boudreau & Gefen (2004), “Validation Guidelines for IS Positivist Research,” CAIS.\nIS Research Podcast Episodes: - Cognitive conflict, courage, humility, and respect: Ingredients for a productive academic discourse - Every contribution can be interesting but not all of them are",
+    "crumbs": [
+      "Academy",
+      "Research training"
+    ]
+  },
+  {
+    "objectID": "academy/how_to/regex.html",
+    "href": "academy/how_to/regex.html",
+    "title": "Regex",
+    "section": "",
+    "text": "A useful tool for developing, analyzing and testing regex is regex101.com.\nPython supports named groups:\nimport re\n\ntext = \"Today's date is 2025-07-10.\"\n\npattern = r\"(?P&lt;year&gt;\\d{4})-(?P&lt;month&gt;\\d{2})-(?P&lt;day&gt;\\d{2})\"\nmatch = re.search(pattern, text)\n\nif match:\n    print(\"Year:\", match.group(\"year\"))\n    print(\"Month:\", match.group(\"month\"))\n    print(\"Day:\", match.group(\"day\"))"
+  },
+  {
+    "objectID": "academy/how_to/handbook-gpt.html",
+    "href": "academy/how_to/handbook-gpt.html",
+    "title": "Custom GPT: Handbook assistant",
+    "section": "",
+    "text": "Getting the index works.\nGetting subpages works.\nGet content of subpages works.\nTBD: subpages and conent no longer working?!?!"
+  },
+  {
+    "objectID": "academy/how_to/handbook-gpt.html#instruction",
+    "href": "academy/how_to/handbook-gpt.html#instruction",
+    "title": "Custom GPT: Handbook assistant",
+    "section": "Instruction",
+    "text": "Instruction\nThis GPT acts as the Digital Work Lab Handbook Assistant, designed to accurately retrieve and interpret content from the Digital Work Lab handbook. It uses the handbook’s RAG index to determine which documents exist and only retrieves data from valid entries listed there. \n\nWhen users ask about handbook topics such as procedures, team, research, or teaching, the assistant looks up the RAG index to find the most relevant JSON or Markdown files and fetches the corresponding content through the appropriate `raw_url` or `get_section_rag` calls. It must not send requests to arbitrary paths or inferred URLs; it only queries those explicitly listed in the RAG index. If a requested document is missing, leads to a 404 error, or is not present in the index, the assistant informs the user clearly and suggests checking or updating the handbook structure.\n\nResponses must always reflect actual content retrieved from the valid source file. When a section contains multiple related documents (for example, several process files under `10-lab/10_processes/`), the assistant selects and summarizes the relevant files based on their titles and topics, and it can suggest related entries for context. If there are ambiguities, it asks clarifying questions to determine which indexed document(s) to reference.\n\nThe assistant’s tone remains respectful, mentoring, and collaborative. It supports users in interpreting procedures, understanding lab practices, and improving the handbook by suggesting edits or additions when inconsistencies or missing information arise. It always prioritizes accuracy, transparency, and contextual insight when guiding users through the Digital Work Lab handbook."
+  },
+  {
+    "objectID": "academy/how_to/handbook-gpt.html#action",
+    "href": "academy/how_to/handbook-gpt.html#action",
+    "title": "Custom GPT: Handbook assistant",
+    "section": "Action",
+    "text": "Action\n\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Digital-Work Lab Handbook RAG\",\n    \"version\": \"1.3.4\",\n    \"description\": \"Static RAG index published via GitHub Pages. Primary entry point is /rag/index.json. JSON chunk files are served from /rag/{path}. If a JSON chunk file is missing, the client must fetch the original Markdown from https://digital-work-lab.github.io/handbook/docs/{path}.\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://digital-work-lab.github.io/handbook\"\n    }\n  ],\n  \"paths\": {\n    \"/rag/index.json\": {\n      \"get\": {\n        \"operationId\": \"getRagIndex\",\n        \"summary\": \"Get top-level RAG index generated by GitHub Actions\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"RAG index with sections or files\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"properties\": {\n                    \"generated_at\": { \"type\": \"string\" },\n                    \"model\": { \"type\": \"string\" },\n                    \"files\": {\n                      \"type\": \"array\",\n                      \"description\": \"List of files that have prebuilt embeddings\",\n                      \"items\": {\n                        \"type\": \"object\",\n                        \"required\": [\"path\", \"json_url\", \"md_url\"],\n                        \"properties\": {\n                          \"path\": {\n                            \"type\": \"string\",\n                            \"description\": \"Logical handbook path relative to docs/, e.g. 20-research/20_processes/20.11.survey.md\"\n                          },\n                          \"json_url\": {\n                            \"type\": \"string\",\n                            \"description\": \"URL to prebuilt JSON under /rag/, e.g. https://digital-work-lab.github.io/handbook/rag/20-research/20_processes/20.11.survey.json\"\n                          },\n                          \"md_url\": {\n                            \"type\": \"string\",\n                            \"description\": \"Fallback: Markdown on GitHub Pages under /docs/, e.g. https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.11.survey.md\"\n                          }\n                        }\n                      }\n                    }\n                  },\n                  \"required\": [\"files\"]\n                }\n              }\n            }\n          }\n        }\n      }\n    },\n    \"/rag/{path}\": {\n      \"get\": {\n        \"operationId\": \"getRagFile\",\n        \"summary\": \"Fetch a prebuilt RAG JSON file as published on GitHub Pages under /rag/\",\n        \"parameters\": [\n          {\n            \"name\": \"path\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"description\": \"Path to the RAG JSON file relative to /rag/, e.g. 20-research/20_processes/20.11.survey.json\",\n            \"schema\": { \"type\": \"string\" }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"RAG JSON chunk file content\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"description\": \"Standardized RAG chunk format.\",\n                  \"properties\": {\n                    \"source\": {\n                      \"type\": \"string\",\n                      \"description\": \"Original handbook source path, e.g. 20-research/20_processes/20.11.survey.md\"\n                    },\n                    \"generated_at\": {\n                      \"type\": \"string\",\n                      \"description\": \"Timestamp when this RAG JSON was generated\"\n                    },\n                    \"embedding_model\": {\n                      \"type\": \"string\",\n                      \"description\": \"Name of the embedding model used, if any\"\n                    },\n                    \"chunks\": {\n                      \"type\": \"array\",\n                      \"description\": \"List of text chunks extracted from the source\",\n                      \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                          \"id\": { \"type\": \"string\" },\n                          \"text\": {\n                            \"type\": \"string\",\n                            \"description\": \"Chunk text content\"\n                          },\n                          \"metadata\": {\n                            \"type\": \"object\",\n                            \"additionalProperties\": true\n                          },\n                          \"embedding\": {\n                            \"type\": \"array\",\n                            \"items\": { \"type\": \"number\" }\n                          }\n                        },\n                        \"required\": [\"text\"]\n                      }\n                    },\n                    \"metadata\": {\n                      \"type\": \"object\",\n                      \"additionalProperties\": true\n                    }\n                  },\n                  \"required\": [\"chunks\"]\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"RAG JSON not found under /rag/\"\n          }\n        }\n      }\n    },\n    \"/docs/{path}\": {\n      \"get\": {\n        \"operationId\": \"getHandbookFile\",\n        \"summary\": \"Fetch a raw handbook file (Markdown) from GitHub Pages under /docs/\",\n        \"parameters\": [\n          {\n            \"name\": \"path\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"description\": \"Path to the Markdown file relative to docs/, e.g. 20-research/20_processes/20.11.survey.md\",\n            \"schema\": { \"type\": \"string\" }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Raw Markdown file content from GitHub Pages under /docs/\",\n            \"content\": {\n              \"text/markdown\": {\n                \"schema\": {\n                  \"type\": \"string\",\n                  \"description\": \"Content retrieved from https://digital-work-lab.github.io/handbook/docs/{path}\"\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"File not found under /docs/ on GitHub Pages\"\n          }\n        }\n      }\n    }\n  }\n}"
+  },
+  {
+    "objectID": "academy/how_to/file_manager.html",
+    "href": "academy/how_to/file_manager.html",
+    "title": "File Manager",
+    "section": "",
+    "text": "Typeahead: no longer supported by Nautilus.\n-&gt; Nemo.\nNem: creating a symlink: ctrl+M"
+  },
+  {
+    "objectID": "academy/how_to/ocr.html",
+    "href": "academy/how_to/ocr.html",
+    "title": "OCR",
+    "section": "",
+    "text": "Optical Character Recognition (OCR) using Docker and ocrmypdf."
+  },
+  {
+    "objectID": "academy/how_to/ocr.html#single-pdf",
+    "href": "academy/how_to/ocr.html#single-pdf",
+    "title": "OCR",
+    "section": "Single PDF",
+    "text": "Single PDF\nReplace the filename.pdf:\nin=\"filename.pdf\"\ntmp=\"${in%.pdf}_ocr.pdf\"\n\ndocker run --rm -u $(id -u):$(id -g) \\\n  -v \"$(pwd)\":/mnt jbarlow83/ocrmypdf \\\n  --language eng+deu \\\n  \"/mnt/$in\" \"/mnt/$tmp\""
+  },
+  {
+    "objectID": "academy/how_to/ocr.html#pdf-batches",
+    "href": "academy/how_to/ocr.html#pdf-batches",
+    "title": "OCR",
+    "section": "PDF Batches",
+    "text": "PDF Batches\nTo OCR all PDFs in a folder:\n\nPlace your input files in a pdfs/ directory.\nRun the following shell script to OCR each file using English and German (eng+deu) language support:\n\n#!/bin/bash\n\n# Directory containing PDFs\nPDF_DIR=\"./pdfs\"\n# Output directory\nOUTPUT_DIR=\"./ocr_output\"\n\n# Create output directory if it doesn't exist\nmkdir -p \"$OUTPUT_DIR\"\n\n# Iterate over all PDF files in the directory\nfor pdf_file in \"$PDF_DIR\"/*.pdf; do\n    # Get the base filename (without path)\n    base_name=$(basename \"$pdf_file\")\n    output_file=\"$OUTPUT_DIR/$base_name\"\n\n    echo \"Processing: $pdf_file\"\n    \n    docker run --rm -u $(id -u):$(id -g) \\\n        -v \"$(pwd)\":/mnt jbarlow83/ocrmypdf \\\n        --language eng+deu \\\n        \"/mnt/${pdf_file}\" \"/mnt/${output_file}\"\n\n    echo \"Saved OCR'd file to: $output_file\"\ndone"
+  },
+  {
+    "objectID": "academy/how_to/power_point.html",
+    "href": "academy/how_to/power_point.html",
+    "title": "PowerPoint",
+    "section": "",
+    "text": "Use alignment (e.g., ctrl+d+h+l for left alignment)\nAdapt the size of the slide to the figure (ctrl+h+ö)"
+  },
+  {
+    "objectID": "academy/how_to/power_point.html#formatting",
+    "href": "academy/how_to/power_point.html#formatting",
+    "title": "PowerPoint",
+    "section": "",
+    "text": "Use alignment (e.g., ctrl+d+h+l for left alignment)\nAdapt the size of the slide to the figure (ctrl+h+ö)"
+  },
+  {
+    "objectID": "academy/how_to/power_point.html#elements",
+    "href": "academy/how_to/power_point.html#elements",
+    "title": "PowerPoint",
+    "section": "Elements",
+    "text": "Elements\n\nConsider the use of free-form shapes and editing individual points."
+  },
+  {
+    "objectID": "academy/how_to/power_point.html#export-when-embedding-figures-in-papers",
+    "href": "academy/how_to/power_point.html#export-when-embedding-figures-in-papers",
+    "title": "PowerPoint",
+    "section": "Export when embedding figures in papers",
+    "text": "Export when embedding figures in papers\n\nTo have text embedded (searchable), use PDF exports (when figures are included in Markdown/Latex) or EMF (when figures are included in Word)"
+  },
+  {
+    "objectID": "academy/how_to/conversion.html",
+    "href": "academy/how_to/conversion.html",
+    "title": "File conversion",
+    "section": "",
+    "text": "docker run --rm -v \"$PWD\":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md"
+  },
+  {
+    "objectID": "academy/how_to/conversion.html#word-to-markdown",
+    "href": "academy/how_to/conversion.html#word-to-markdown",
+    "title": "File conversion",
+    "section": "",
+    "text": "docker run --rm -v \"$PWD\":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md"
+  },
+  {
+    "objectID": "academy/how_to/conversion.html#pptx-to-markdown",
+    "href": "academy/how_to/conversion.html#pptx-to-markdown",
+    "title": "File conversion",
+    "section": "PPTX-to-Markdown",
+    "text": "PPTX-to-Markdown\npptx2md \"slides.pptx\" --output \"slides_with_notes.qmd\" --enable-slides --qmd --image-dir \"images\""
+  },
+  {
+    "objectID": "academy/how_to/conversion.html#markdown-to-word-markdown-to-docx",
+    "href": "academy/how_to/conversion.html#markdown-to-word-markdown-to-docx",
+    "title": "File conversion",
+    "section": "Markdown-to-Word / Markdown-to-docx",
+    "text": "Markdown-to-Word / Markdown-to-docx\ndocker run --rm -u \"$(id -u):$(id -g)\"  -v \"$PWD\":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx"
+  },
+  {
+    "objectID": "academy/how_to/quartz.html",
+    "href": "academy/how_to/quartz.html",
+    "title": "Quartz",
+    "section": "",
+    "text": "Quartz: Obsidian on GitHub Pages.\nQuartz is an open-source static site generator, which supports the hosting of obsidian-style vaults on GitHub pages.\nSetup:\n\nClone, rename, add remote\nAdd deploy.yaml - https://quartz.jzhao.xyz/hosting\nActivate pages in github settings\nCreate main branch\nInclude content/index.md\n\nSee test"
+  },
+  {
+    "objectID": "academy/how_to/obs-recording.html",
+    "href": "academy/how_to/obs-recording.html",
+    "title": "OBS Recording",
+    "section": "",
+    "text": "Add sources (video capture device / screen capture)\nCrop screen capture: Alt+drag edges"
+  },
+  {
+    "objectID": "academy/index.html",
+    "href": "academy/index.html",
+    "title": "How-tos",
+    "section": "",
+    "text": "Developmental resources (training)\nHow-to (e.g., markdown, quarto ??)\nToday-I-learned\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAudio transcription\n\n\n\n\n\n\n\n\n\nConvert spreadsheet coding to obsidian notes\n\n\n\n\n\n\n\n\n\nCustom GPT: Handbook assistant\n\n\n\n\n\n\n\n\n\nFile Manager\n\n\n\n\n\n\n\n\n\nFile conversion\n\n\n\n\n\n\n\n\n\nGit LFS\n\n\n\n\n\n\n\n\n\nKey management\n\n\n\n\n\n\n\n\n\nOBS Recording\n\n\n\n\n\n\n\n\n\nOCR\n\n\n\n\n\n\n\n\n\nPandoc Word Template\n\n\n\n\n\n\n\n\n\nPersonal website\n\n\n\n\n\n\n\n\n\nPhotos\n\n\n\n\n\n\n\n\n\nPowerPoint\n\n\n\n\n\n\n\n\n\nPython-LLM\n\n\n\n\n\n\n\n\n\nQuartz\n\n\n\n\n\n\n\n\n\nRegex\n\n\n\n\n\n\n\n\n\nUV (Python)\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Academy",
+      "How-tos"
+    ]
+  },
+  {
+    "objectID": "team/index.html",
+    "href": "team/index.html",
+    "title": "Team",
+    "section": "",
+    "text": "TBA\nNote: this will include SOP, Agendas, Meetings",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome to the Information Systems Education (ISE) lab hanbook!\nQuickstart links"
+  },
+  {
+    "objectID": "index.html#areas",
+    "href": "index.html#areas",
+    "title": "Home",
+    "section": "Areas",
+    "text": "Areas\n\n\nTeaching\nPrinciples, systems, and procedures for designing, delivering, and evaluating courses — from lectures and theses to assessments, student support, and institutional reporting. Go to Teaching →\n\n\nResearch\nSupport for scholarly work — from project planning and collaboration to methods, data, writing, and publication workflows. Go to Research →\n\n\nManagement\nOperating procedures that keep the lab running — communication, infrastructure, teaching admin, research support, risk, procurement, and HR. Go to Management →\n\n\nAcademy\nTraining and development activities that build individual and shared capabilities over time. Go to Academy →\n\n\nTeam\nRoles, responsibilities, and who to contact for specific topics within the lab. Go to Team →"
+  },
+  {
+    "objectID": "academy/how_to/audio_transcription.html",
+    "href": "academy/how_to/audio_transcription.html",
+    "title": "Audio transcription",
+    "section": "",
+    "text": "Transcribe audio with whisper\ndocker run --rm \\\n  -v \"$PWD\":/data \\\n  ghcr.io/ggerganov/whisper.cpp:latest \\\n  ./main -f /data/input_audio.mp3 -otxt -l en"
+  },
+  {
+    "objectID": "academy/how_to/spreadsheet_to_obsidian.html",
+    "href": "academy/how_to/spreadsheet_to_obsidian.html",
+    "title": "Convert spreadsheet coding to obsidian notes",
+    "section": "",
+    "text": "To convert tabular coding of papers (in a spreadsheet) to obsidian notes, the following script may be helpful:\nimport ezodf\nfrom pathlib import Path\n\n# Set paths\nods_file_path = \"filename.ods\"  # Replace with your ODS filename\noutput_dir = Path(\"obsidian_summaries\")\n\n\noutput_dir.mkdir(exist_ok=True)\ndoc = ezodf.opendoc(ods_file_path)\nsheet = doc.sheets[\"summary\"]\n\nrows = list(sheet.rows())\nheaders = [cell.value.strip() if cell.value else \"\" for cell in rows[0]]\n\n# Column helper\ndef get_cell_value(row, column_name):\n    try:\n        idx = headers.index(column_name)\n        return row[idx].value if idx &lt; len(row) else \"\"\n    except ValueError:\n        return \"\"\n\nfor i, row in enumerate(rows[1:], start=1):\n    citation_key = get_cell_value(row, \"citation_key\") or f\"Paper_{i}\"\n    keywords = get_cell_value(row, \"keywords\") or \"\"\n    summary = get_cell_value(row, \"summary\") or \"\"\n    quotes = get_cell_value(row, \"quotes\") or \"\"\n    if quotes:\n        quotes = f\"# Quotes\\n\\n{quotes}\"\n\n    # Skip if empty citation_key\n    if not citation_key.strip():\n        continue\n\n    file_name = f\"{citation_key.strip().replace(' ', '_')}.md\"\n    file_path = output_dir / file_name\n\n    content = f\"\"\"---\ntitle:         \"{citation_key}\"\nkeywords:      {keywords}\n\n---\n\n# Summary:\n\n{summary}\n\n{quotes}\"\"\"\n    file_path.write_text(content.strip(), encoding=\"utf-8\")\n\nprint(f\"✅ Done. Files written to {output_dir.resolve()}\")"
+  },
+  {
+    "objectID": "academy/how_to/personal_website.html",
+    "href": "academy/how_to/personal_website.html",
+    "title": "Personal website",
+    "section": "",
+    "text": "Today, more than ever, a website is like a business card… See this guide."
+  },
+  {
+    "objectID": "academy/how_to/git_lfs.html",
+    "href": "academy/how_to/git_lfs.html",
+    "title": "Git LFS",
+    "section": "",
+    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
+  },
+  {
+    "objectID": "academy/how_to/git_lfs.html#activation",
+    "href": "academy/how_to/git_lfs.html#activation",
+    "title": "Git LFS",
+    "section": "",
+    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
+  },
+  {
+    "objectID": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
+    "href": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
+    "title": "Git LFS",
+    "section": "Migration with git-filter-repo (PDFs committed without lfs)",
+    "text": "Migration with git-filter-repo (PDFs committed without lfs)\n# install git-filter-repo\nsudo apt install git-filter-repo\n\n\n# migrate pdfs\ngit lfs migrate import --include=\"*.pdf\"\n\n# list files managed by lfs\ngit lfs ls-files"
+  },
+  {
+    "objectID": "academy/how_to/key_management.html",
+    "href": "academy/how_to/key_management.html",
+    "title": "Key management",
+    "section": "",
+    "text": "Store a key in the environment (for one session):\nexport API_KEY=\"your-api-key\"\nTo store a key across sessions, add the export API_KEY=\"your-api-key\" statement to ~/.bash_profile or ~/.profile.\n{: .info } &gt; Common key variables for local setup &gt; &gt; export OPENAI_KEY=“XXX”\n&gt; export GITHUB_TOKEN=“XXX”\nAccess the key in Python:\nimport os\n\napi_key = os.environ.get('API_KEY')\n{: .info } &gt; Advantage: confidential keys are not saved in the script and not shared with others."
+  },
+  {
+    "objectID": "academy/how_to/python-llm.html",
+    "href": "academy/how_to/python-llm.html",
+    "title": "Python-LLM",
+    "section": "",
+    "text": "Reading files (PDF or MD) and using an LLM API to analyze them:\n#  pip install openai pymupdf\n#  export OPENAI_API_KEY=...\n\nimport os\nfrom pathlib import Path\nfrom typing import Iterable\nimport pymupdf\nfrom openai import OpenAI\n\nclient = OpenAI()\n\nROOT = Path(\"markdown\")\nOUT  = Path(\"findings\")\nOUT.mkdir(parents=True, exist_ok=True)\n\nMODEL = \"gpt-4o\"\n\nPROMPT_TEMPLATE = \"\"\"You are analyzing project notes and papers.\nExtract 3–5 bullet points with concrete findings or action items.\nRespond in Markdown only (no preamble), using:\n- **Summary**: one sentence\n- **Key Points**: bullets\n- **Evidence**: short quotes if available\n\"\"\"\n\n# -------- helpers --------\ndef read_text_from_md(path: Path) -&gt; str:\n    return path.read_text(encoding=\"utf-8\", errors=\"replace\")\n\ndef read_text_from_pdf(path: Path) -&gt; str:\n    text_chunks = []\n    with pymupdf.open(path) as doc:\n        for page in doc:\n            text_chunks.append(page.get_text(\"text\"))\n    return \"\\n\".join(text_chunks)\n\ndef iter_corpus(root: Path) -&gt; Iterable[Path]:\n    exts = {\".md\", \".pdf\"}\n    for p in root.rglob(\"*\"):\n        if p.is_file() and p.suffix.lower() in exts:\n            yield p\n\ndef run_llm(model: str, system: str, user: str) -&gt; str:\n    # Chat Completions API (widely supported)\n    resp = client.chat.completions.create(\n        model=model,\n        messages=[\n            {\"role\": \"system\", \"content\": system},\n            {\"role\": \"user\", \"content\": user},\n        ],\n        temperature=0.2,\n    )\n    return resp.choices[0].message.content or \"\"\n\ndef main():\n    files = list(iter_corpus(ROOT))\n    if not files:\n        print(f\"No .md or .pdf files found under {ROOT.resolve()}\")\n        return\n\n    for path in files:\n        try:\n            if path.suffix.lower() == \".md\":\n                raw_text = read_text_from_md(path)\n            elif path.suffix.lower() == \".pdf\":\n                raw_text = read_text_from_pdf(path)\n            else:\n                continue\n\n            # keep input small for demo; trim if huge\n            snippet = raw_text[:20000]\n\n            prompt = f\"{PROMPT_TEMPLATE}\\n\\n# File: {path.name}\\n\\n&lt;Content Start&gt;\\n{snippet}\\n&lt;Content End&gt;\"\n            findings_md = run_llm(MODEL, \"You are a concise research assistant.\", prompt)\n\n            out_path = OUT / f\"{path.stem}.md\"\n            out_path.write_text(findings_md.strip() + \"\\n\", encoding=\"utf-8\")\n            print(f\"✓ Saved: {out_path.relative_to(Path.cwd())}\")\n\n        except Exception as e:\n            print(f\"⚠️ {path}: {e}\")\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  {
+    "objectID": "academy/how_to/photos.html",
+    "href": "academy/how_to/photos.html",
+    "title": "Photos",
+    "section": "",
+    "text": "Photos with free licenses are available at\n\nFreepik\nUnsplash"
+  },
+  {
+    "objectID": "academy/how_to/pandoc_word_template.html",
+    "href": "academy/how_to/pandoc_word_template.html",
+    "title": "Pandoc Word Template",
+    "section": "",
+    "text": "Pandoc supports Word templates (aka reference-doc) for efficient formatting. (see docs --reference-doc=FILE|URL, DOCX).\nIt is helpful to:\n{: .highlight} &gt; Pandoc reference documents do not support every detailed formatting step(such as tables). &gt; And they don’t have to! We simply reserve some time to format the final document (once) and work in Git/Markdown.\nWe store templates for IS journals in the templates repository."
+  },
+  {
+    "objectID": "academy/how_to/pandoc_word_template.html#resources",
+    "href": "academy/how_to/pandoc_word_template.html#resources",
+    "title": "Pandoc Word Template",
+    "section": "Resources",
+    "text": "Resources\n\nGuideline for creating templates"
+  },
+  {
+    "objectID": "academy/how_to/uv.html",
+    "href": "academy/how_to/uv.html",
+    "title": "UV (Python)",
+    "section": "",
+    "text": "UV is useful for package and virtual environment management.\nIt allows users to specify dependencies at the beginning of a module and call it as a script (uv automatically installs the dependencies):\nuv run module_script.py\n# /// script\n# requires-python = \"&gt;=3.10\"\n# dependencies = [\n#     \"pandas\",\n# ]\n# ///\n\nimport pandas\n..."
+  },
+  {
+    "objectID": "academy/development.html",
+    "href": "academy/development.html",
+    "title": "Development",
+    "section": "",
+    "text": "Foundations\n\n\nTeaching\n\n\n\n\nNetworking\n\n\nResearch",
+    "crumbs": [
+      "Academy",
+      "Development"
+    ]
+  },
+  {
+    "objectID": "academy/development.html#foundations",
+    "href": "academy/development.html#foundations",
+    "title": "Development",
+    "section": "Foundations",
+    "text": "Foundations\nProductivity and collaboration\n\nTypingClub\nUsing keyboard instead of mouse (see keyboard combiner and shortcuts for windows)\n\nctrl+k in the handbook\nshortcuts to edit markdown files in github\n\nGetting-Things-Done\nDeep links\nRegular planning and review sessions (Mitarbeitendengespräch)\n\nProgramming basics\n\nMarkdown\nVersion Control\nLearn Git Branching\n\nProgramming: intermediate\n\nLearn Python - Funding for certificates is available upon request.\nLinux Essentials and book (English version available).\nCS50.",
+    "crumbs": [
+      "Academy",
+      "Development"
+    ]
+  },
+  {
+    "objectID": "academy/development.html#research",
+    "href": "academy/development.html#research",
+    "title": "Development",
+    "section": "Research",
+    "text": "Research\n\nBest practices - research\nThe Turing Way\nOpen Science and Open-Science 101\nIDIS PhD Courses\nWriting section, including the book of Strunk and White\nTODO : create a page for producing high-quality research papers (e.g., figures, tables alignment, decimals, …, references - with examples)",
+    "crumbs": [
+      "Academy",
+      "Development"
+    ]
+  },
+  {
+    "objectID": "academy/development.html#teaching",
+    "href": "academy/development.html#teaching",
+    "title": "Development",
+    "section": "Teaching",
+    "text": "Teaching\n\nZertifikate des Zentrum für Hochschuldidaktik (ZHD)\nFortbildungszentrum Hochschullehre (FBZHL)\nVirtuelle Hochschule Bayern (vhb)",
+    "crumbs": [
+      "Academy",
+      "Development"
+    ]
+  },
+  {
+    "objectID": "academy/development.html#networking",
+    "href": "academy/development.html#networking",
+    "title": "Development",
+    "section": "Networking",
+    "text": "Networking\n\nTrimberg Research Academy (trac))\nDeutscher Akademischer Austauschdienst (DAAD)\nA Survival Guide to a PhD\nFörderprogramme der Gleichstellungsbeauftragten Wissenschaft der Universität Bamberg\n\n{: .highlight } &gt; TODO &gt; Create pathways like: https://book.the-turing-way.org/#different-pathways",
+    "crumbs": [
+      "Academy",
+      "Development"
     ]
   },
   {
@@ -3705,692 +4225,473 @@
     ]
   },
   {
-    "objectID": "academy/development.html",
-    "href": "academy/development.html",
-    "title": "Development",
+    "objectID": "research/data.html",
+    "href": "research/data.html",
+    "title": "Data",
     "section": "",
-    "text": "Foundations\n\n\nTeaching\n\n\n\n\nNetworking\n\n\nResearch",
+    "text": "We aim to provide complete data sets and analysis workflows for our studies.",
     "crumbs": [
-      "Academy",
-      "Development"
+      "Research",
+      "Output",
+      "Data"
     ]
   },
   {
-    "objectID": "academy/development.html#foundations",
-    "href": "academy/development.html#foundations",
-    "title": "Development",
-    "section": "Foundations",
-    "text": "Foundations\nProductivity and collaboration\n\nTypingClub\nUsing keyboard instead of mouse (see keyboard combiner and shortcuts for windows)\n\nctrl+k in the handbook\nshortcuts to edit markdown files in github\n\nGetting-Things-Done\nDeep links\nRegular planning and review sessions (Mitarbeitendengespräch)\n\nProgramming basics\n\nMarkdown\nVersion Control\nLearn Git Branching\n\nProgramming: intermediate\n\nLearn Python - Funding for certificates is available upon request.\nLinux Essentials and book (English version available).\nCS50.",
+    "objectID": "research/data.html#curations",
+    "href": "research/data.html#curations",
+    "title": "Data",
+    "section": "Curations",
+    "text": "Curations\n\nOrganizational Handbooks\n\n\n\n\n\n\n     \n\n\n\nThe Organizational Handbooks curation collects public employee and academic handbooks from digital-by-default organizations and research labs. It enables comparative analyses of digital work practices, governance models, and organizational transparency.\nHighlights\n\nStructured inventory of repositories and open handbook resources\nIncludes organizational, community, and academic research handbooks\nBasis for qualitative and computational content analysis\n\n\n\nLiterature Reviews\n\n\n\n\n\n\n     \n\n\n\nThe Literature Reviews in Information Systems curation (GitHub Repository) compiles and maintains an evolving dataset of literature reviews in Information Systems, supported by a dedicated bibliographic database and automated update routines. It provides a foundation for literature reviews and meta-research on review practices in IS.\nHighlights\n\nCurated, extensible dataset (records.bib)\nReproducible update workflow (make update)\nFocus on evidence synthesis methods and trends in IS research",
     "crumbs": [
-      "Academy",
-      "Development"
+      "Research",
+      "Output",
+      "Data"
     ]
   },
   {
-    "objectID": "academy/development.html#research",
-    "href": "academy/development.html#research",
-    "title": "Development",
-    "section": "Research",
-    "text": "Research\n\nBest practices - research\nThe Turing Way\nOpen Science and Open-Science 101\nIDIS PhD Courses\nWriting section, including the book of Strunk and White\nTODO : create a page for producing high-quality research papers (e.g., figures, tables alignment, decimals, …, references - with examples)",
-    "crumbs": [
-      "Academy",
-      "Development"
-    ]
-  },
-  {
-    "objectID": "academy/development.html#teaching",
-    "href": "academy/development.html#teaching",
-    "title": "Development",
-    "section": "Teaching",
-    "text": "Teaching\n\nZertifikate des Zentrum für Hochschuldidaktik (ZHD)\nFortbildungszentrum Hochschullehre (FBZHL)\nVirtuelle Hochschule Bayern (vhb)",
-    "crumbs": [
-      "Academy",
-      "Development"
-    ]
-  },
-  {
-    "objectID": "academy/development.html#networking",
-    "href": "academy/development.html#networking",
-    "title": "Development",
-    "section": "Networking",
-    "text": "Networking\n\nTrimberg Research Academy (trac))\nDeutscher Akademischer Austauschdienst (DAAD)\nA Survival Guide to a PhD\nFörderprogramme der Gleichstellungsbeauftragten Wissenschaft der Universität Bamberg\n\n{: .highlight } &gt; TODO &gt; Create pathways like: https://book.the-turing-way.org/#different-pathways",
-    "crumbs": [
-      "Academy",
-      "Development"
-    ]
-  },
-  {
-    "objectID": "academy/how_to/uv.html",
-    "href": "academy/how_to/uv.html",
-    "title": "UV (Python)",
+    "objectID": "research/methods.html",
+    "href": "research/methods.html",
+    "title": "Methods",
     "section": "",
-    "text": "UV is useful for package and virtual environment management.\nIt allows users to specify dependencies at the beginning of a module and call it as a script (uv automatically installs the dependencies):\nuv run module_script.py\n# /// script\n# requires-python = \"&gt;=3.10\"\n# dependencies = [\n#     \"pandas\",\n# ]\n# ///\n\nimport pandas\n..."
-  },
-  {
-    "objectID": "academy/how_to/pandoc_word_template.html",
-    "href": "academy/how_to/pandoc_word_template.html",
-    "title": "Pandoc Word Template",
-    "section": "",
-    "text": "Pandoc supports Word templates (aka reference-doc) for efficient formatting. (see docs --reference-doc=FILE|URL, DOCX).\nIt is helpful to:\n{: .highlight} &gt; Pandoc reference documents do not support every detailed formatting step(such as tables). &gt; And they don’t have to! We simply reserve some time to format the final document (once) and work in Git/Markdown.\nWe store templates for IS journals in the templates repository."
-  },
-  {
-    "objectID": "academy/how_to/pandoc_word_template.html#resources",
-    "href": "academy/how_to/pandoc_word_template.html#resources",
-    "title": "Pandoc Word Template",
-    "section": "Resources",
-    "text": "Resources\n\nGuideline for creating templates"
-  },
-  {
-    "objectID": "academy/how_to/photos.html",
-    "href": "academy/how_to/photos.html",
-    "title": "Photos",
-    "section": "",
-    "text": "Photos with free licenses are available at\n\nFreepik\nUnsplash"
-  },
-  {
-    "objectID": "academy/how_to/python-llm.html",
-    "href": "academy/how_to/python-llm.html",
-    "title": "Python-LLM",
-    "section": "",
-    "text": "Reading files (PDF or MD) and using an LLM API to analyze them:\n#  pip install openai pymupdf\n#  export OPENAI_API_KEY=...\n\nimport os\nfrom pathlib import Path\nfrom typing import Iterable\nimport pymupdf\nfrom openai import OpenAI\n\nclient = OpenAI()\n\nROOT = Path(\"markdown\")\nOUT  = Path(\"findings\")\nOUT.mkdir(parents=True, exist_ok=True)\n\nMODEL = \"gpt-4o\"\n\nPROMPT_TEMPLATE = \"\"\"You are analyzing project notes and papers.\nExtract 3–5 bullet points with concrete findings or action items.\nRespond in Markdown only (no preamble), using:\n- **Summary**: one sentence\n- **Key Points**: bullets\n- **Evidence**: short quotes if available\n\"\"\"\n\n# -------- helpers --------\ndef read_text_from_md(path: Path) -&gt; str:\n    return path.read_text(encoding=\"utf-8\", errors=\"replace\")\n\ndef read_text_from_pdf(path: Path) -&gt; str:\n    text_chunks = []\n    with pymupdf.open(path) as doc:\n        for page in doc:\n            text_chunks.append(page.get_text(\"text\"))\n    return \"\\n\".join(text_chunks)\n\ndef iter_corpus(root: Path) -&gt; Iterable[Path]:\n    exts = {\".md\", \".pdf\"}\n    for p in root.rglob(\"*\"):\n        if p.is_file() and p.suffix.lower() in exts:\n            yield p\n\ndef run_llm(model: str, system: str, user: str) -&gt; str:\n    # Chat Completions API (widely supported)\n    resp = client.chat.completions.create(\n        model=model,\n        messages=[\n            {\"role\": \"system\", \"content\": system},\n            {\"role\": \"user\", \"content\": user},\n        ],\n        temperature=0.2,\n    )\n    return resp.choices[0].message.content or \"\"\n\ndef main():\n    files = list(iter_corpus(ROOT))\n    if not files:\n        print(f\"No .md or .pdf files found under {ROOT.resolve()}\")\n        return\n\n    for path in files:\n        try:\n            if path.suffix.lower() == \".md\":\n                raw_text = read_text_from_md(path)\n            elif path.suffix.lower() == \".pdf\":\n                raw_text = read_text_from_pdf(path)\n            else:\n                continue\n\n            # keep input small for demo; trim if huge\n            snippet = raw_text[:20000]\n\n            prompt = f\"{PROMPT_TEMPLATE}\\n\\n# File: {path.name}\\n\\n&lt;Content Start&gt;\\n{snippet}\\n&lt;Content End&gt;\"\n            findings_md = run_llm(MODEL, \"You are a concise research assistant.\", prompt)\n\n            out_path = OUT / f\"{path.stem}.md\"\n            out_path.write_text(findings_md.strip() + \"\\n\", encoding=\"utf-8\")\n            print(f\"✓ Saved: {out_path.relative_to(Path.cwd())}\")\n\n        except Exception as e:\n            print(f\"⚠️ {path}: {e}\")\n\nif __name__ == \"__main__\":\n    main()"
-  },
-  {
-    "objectID": "academy/how_to/key_management.html",
-    "href": "academy/how_to/key_management.html",
-    "title": "Key management",
-    "section": "",
-    "text": "Store a key in the environment (for one session):\nexport API_KEY=\"your-api-key\"\nTo store a key across sessions, add the export API_KEY=\"your-api-key\" statement to ~/.bash_profile or ~/.profile.\n{: .info } &gt; Common key variables for local setup &gt; &gt; export OPENAI_KEY=“XXX”\n&gt; export GITHUB_TOKEN=“XXX”\nAccess the key in Python:\nimport os\n\napi_key = os.environ.get('API_KEY')\n{: .info } &gt; Advantage: confidential keys are not saved in the script and not shared with others."
-  },
-  {
-    "objectID": "academy/how_to/git_lfs.html",
-    "href": "academy/how_to/git_lfs.html",
-    "title": "Git LFS",
-    "section": "",
-    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
-  },
-  {
-    "objectID": "academy/how_to/git_lfs.html#activation",
-    "href": "academy/how_to/git_lfs.html#activation",
-    "title": "Git LFS",
-    "section": "",
-    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
-  },
-  {
-    "objectID": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
-    "href": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
-    "title": "Git LFS",
-    "section": "Migration with git-filter-repo (PDFs committed without lfs)",
-    "text": "Migration with git-filter-repo (PDFs committed without lfs)\n# install git-filter-repo\nsudo apt install git-filter-repo\n\n\n# migrate pdfs\ngit lfs migrate import --include=\"*.pdf\"\n\n# list files managed by lfs\ngit lfs ls-files"
-  },
-  {
-    "objectID": "academy/how_to/personal_website.html",
-    "href": "academy/how_to/personal_website.html",
-    "title": "Personal website",
-    "section": "",
-    "text": "Today, more than ever, a website is like a business card… See this guide."
-  },
-  {
-    "objectID": "academy/how_to/spreadsheet_to_obsidian.html",
-    "href": "academy/how_to/spreadsheet_to_obsidian.html",
-    "title": "Convert spreadsheet coding to obsidian notes",
-    "section": "",
-    "text": "To convert tabular coding of papers (in a spreadsheet) to obsidian notes, the following script may be helpful:\nimport ezodf\nfrom pathlib import Path\n\n# Set paths\nods_file_path = \"filename.ods\"  # Replace with your ODS filename\noutput_dir = Path(\"obsidian_summaries\")\n\n\noutput_dir.mkdir(exist_ok=True)\ndoc = ezodf.opendoc(ods_file_path)\nsheet = doc.sheets[\"summary\"]\n\nrows = list(sheet.rows())\nheaders = [cell.value.strip() if cell.value else \"\" for cell in rows[0]]\n\n# Column helper\ndef get_cell_value(row, column_name):\n    try:\n        idx = headers.index(column_name)\n        return row[idx].value if idx &lt; len(row) else \"\"\n    except ValueError:\n        return \"\"\n\nfor i, row in enumerate(rows[1:], start=1):\n    citation_key = get_cell_value(row, \"citation_key\") or f\"Paper_{i}\"\n    keywords = get_cell_value(row, \"keywords\") or \"\"\n    summary = get_cell_value(row, \"summary\") or \"\"\n    quotes = get_cell_value(row, \"quotes\") or \"\"\n    if quotes:\n        quotes = f\"# Quotes\\n\\n{quotes}\"\n\n    # Skip if empty citation_key\n    if not citation_key.strip():\n        continue\n\n    file_name = f\"{citation_key.strip().replace(' ', '_')}.md\"\n    file_path = output_dir / file_name\n\n    content = f\"\"\"---\ntitle:         \"{citation_key}\"\nkeywords:      {keywords}\n\n---\n\n# Summary:\n\n{summary}\n\n{quotes}\"\"\"\n    file_path.write_text(content.strip(), encoding=\"utf-8\")\n\nprint(f\"✅ Done. Files written to {output_dir.resolve()}\")"
-  },
-  {
-    "objectID": "academy/how_to/audio_transcription.html",
-    "href": "academy/how_to/audio_transcription.html",
-    "title": "Audio transcription",
-    "section": "",
-    "text": "Transcribe audio with whisper\ndocker run --rm \\\n  -v \"$PWD\":/data \\\n  ghcr.io/ggerganov/whisper.cpp:latest \\\n  ./main -f /data/input_audio.mp3 -otxt -l en"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Welcome to the Information Systems Education (ISE) lab hanbook!\nQuickstart links"
-  },
-  {
-    "objectID": "index.html#areas",
-    "href": "index.html#areas",
-    "title": "Home",
-    "section": "Areas",
-    "text": "Areas\n\n\nTeaching\nPrinciples, systems, and procedures for designing, delivering, and evaluating courses — from lectures and theses to assessments, student support, and institutional reporting. Go to Teaching →\n\n\nResearch\nSupport for scholarly work — from project planning and collaboration to methods, data, writing, and publication workflows. Go to Research →\n\n\nManagement\nOperating procedures that keep the lab running — communication, infrastructure, teaching admin, research support, risk, procurement, and HR. Go to Management →\n\n\nAcademy\nTraining and development activities that build individual and shared capabilities over time. Go to Academy →\n\n\nTeam\nRoles, responsibilities, and who to contact for specific topics within the lab. Go to Team →"
-  },
-  {
-    "objectID": "team/index.html",
-    "href": "team/index.html",
-    "title": "Team",
-    "section": "",
-    "text": "TBA\nNote: this will include SOP, Agendas, Meetings",
-    "crumbs": [
-      "Team"
-    ]
-  },
-  {
-    "objectID": "academy/index.html",
-    "href": "academy/index.html",
-    "title": "How-tos",
-    "section": "",
-    "text": "Developmental resources (training)\nHow-to (e.g., markdown, quarto ??)\nToday-I-learned\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAudio transcription\n\n\n\n\n\n\n\n\n\nConvert spreadsheet coding to obsidian notes\n\n\n\n\n\n\n\n\n\nCustom GPT: Handbook assistant\n\n\n\n\n\n\n\n\n\nFile Manager\n\n\n\n\n\n\n\n\n\nFile conversion\n\n\n\n\n\n\n\n\n\nGit LFS\n\n\n\n\n\n\n\n\n\nKey management\n\n\n\n\n\n\n\n\n\nOBS Recording\n\n\n\n\n\n\n\n\n\nOCR\n\n\n\n\n\n\n\n\n\nPandoc Word Template\n\n\n\n\n\n\n\n\n\nPersonal website\n\n\n\n\n\n\n\n\n\nPhotos\n\n\n\n\n\n\n\n\n\nPowerPoint\n\n\n\n\n\n\n\n\n\nPython-LLM\n\n\n\n\n\n\n\n\n\nQuartz\n\n\n\n\n\n\n\n\n\nRegex\n\n\n\n\n\n\n\n\n\nUV (Python)\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Academy",
-      "How-tos"
-    ]
-  },
-  {
-    "objectID": "academy/how_to/obs-recording.html",
-    "href": "academy/how_to/obs-recording.html",
-    "title": "OBS Recording",
-    "section": "",
-    "text": "Add sources (video capture device / screen capture)\nCrop screen capture: Alt+drag edges"
-  },
-  {
-    "objectID": "academy/how_to/quartz.html",
-    "href": "academy/how_to/quartz.html",
-    "title": "Quartz",
-    "section": "",
-    "text": "Quartz: Obsidian on GitHub Pages.\nQuartz is an open-source static site generator, which supports the hosting of obsidian-style vaults on GitHub pages.\nSetup:\n\nClone, rename, add remote\nAdd deploy.yaml - https://quartz.jzhao.xyz/hosting\nActivate pages in github settings\nCreate main branch\nInclude content/index.md\n\nSee test"
-  },
-  {
-    "objectID": "academy/how_to/conversion.html",
-    "href": "academy/how_to/conversion.html",
-    "title": "File conversion",
-    "section": "",
-    "text": "docker run --rm -v \"$PWD\":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md"
-  },
-  {
-    "objectID": "academy/how_to/conversion.html#word-to-markdown",
-    "href": "academy/how_to/conversion.html#word-to-markdown",
-    "title": "File conversion",
-    "section": "",
-    "text": "docker run --rm -v \"$PWD\":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md"
-  },
-  {
-    "objectID": "academy/how_to/conversion.html#pptx-to-markdown",
-    "href": "academy/how_to/conversion.html#pptx-to-markdown",
-    "title": "File conversion",
-    "section": "PPTX-to-Markdown",
-    "text": "PPTX-to-Markdown\npptx2md \"slides.pptx\" --output \"slides_with_notes.qmd\" --enable-slides --qmd --image-dir \"images\""
-  },
-  {
-    "objectID": "academy/how_to/conversion.html#markdown-to-word-markdown-to-docx",
-    "href": "academy/how_to/conversion.html#markdown-to-word-markdown-to-docx",
-    "title": "File conversion",
-    "section": "Markdown-to-Word / Markdown-to-docx",
-    "text": "Markdown-to-Word / Markdown-to-docx\ndocker run --rm -u \"$(id -u):$(id -g)\"  -v \"$PWD\":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx"
-  },
-  {
-    "objectID": "academy/how_to/power_point.html",
-    "href": "academy/how_to/power_point.html",
-    "title": "PowerPoint",
-    "section": "",
-    "text": "Use alignment (e.g., ctrl+d+h+l for left alignment)\nAdapt the size of the slide to the figure (ctrl+h+ö)"
-  },
-  {
-    "objectID": "academy/how_to/power_point.html#formatting",
-    "href": "academy/how_to/power_point.html#formatting",
-    "title": "PowerPoint",
-    "section": "",
-    "text": "Use alignment (e.g., ctrl+d+h+l for left alignment)\nAdapt the size of the slide to the figure (ctrl+h+ö)"
-  },
-  {
-    "objectID": "academy/how_to/power_point.html#elements",
-    "href": "academy/how_to/power_point.html#elements",
-    "title": "PowerPoint",
-    "section": "Elements",
-    "text": "Elements\n\nConsider the use of free-form shapes and editing individual points."
-  },
-  {
-    "objectID": "academy/how_to/power_point.html#export-when-embedding-figures-in-papers",
-    "href": "academy/how_to/power_point.html#export-when-embedding-figures-in-papers",
-    "title": "PowerPoint",
-    "section": "Export when embedding figures in papers",
-    "text": "Export when embedding figures in papers\n\nTo have text embedded (searchable), use PDF exports (when figures are included in Markdown/Latex) or EMF (when figures are included in Word)"
-  },
-  {
-    "objectID": "academy/how_to/ocr.html",
-    "href": "academy/how_to/ocr.html",
-    "title": "OCR",
-    "section": "",
-    "text": "Optical Character Recognition (OCR) using Docker and ocrmypdf."
-  },
-  {
-    "objectID": "academy/how_to/ocr.html#single-pdf",
-    "href": "academy/how_to/ocr.html#single-pdf",
-    "title": "OCR",
-    "section": "Single PDF",
-    "text": "Single PDF\nReplace the filename.pdf:\nin=\"filename.pdf\"\ntmp=\"${in%.pdf}_ocr.pdf\"\n\ndocker run --rm -u $(id -u):$(id -g) \\\n  -v \"$(pwd)\":/mnt jbarlow83/ocrmypdf \\\n  --language eng+deu \\\n  \"/mnt/$in\" \"/mnt/$tmp\""
-  },
-  {
-    "objectID": "academy/how_to/ocr.html#pdf-batches",
-    "href": "academy/how_to/ocr.html#pdf-batches",
-    "title": "OCR",
-    "section": "PDF Batches",
-    "text": "PDF Batches\nTo OCR all PDFs in a folder:\n\nPlace your input files in a pdfs/ directory.\nRun the following shell script to OCR each file using English and German (eng+deu) language support:\n\n#!/bin/bash\n\n# Directory containing PDFs\nPDF_DIR=\"./pdfs\"\n# Output directory\nOUTPUT_DIR=\"./ocr_output\"\n\n# Create output directory if it doesn't exist\nmkdir -p \"$OUTPUT_DIR\"\n\n# Iterate over all PDF files in the directory\nfor pdf_file in \"$PDF_DIR\"/*.pdf; do\n    # Get the base filename (without path)\n    base_name=$(basename \"$pdf_file\")\n    output_file=\"$OUTPUT_DIR/$base_name\"\n\n    echo \"Processing: $pdf_file\"\n    \n    docker run --rm -u $(id -u):$(id -g) \\\n        -v \"$(pwd)\":/mnt jbarlow83/ocrmypdf \\\n        --language eng+deu \\\n        \"/mnt/${pdf_file}\" \"/mnt/${output_file}\"\n\n    echo \"Saved OCR'd file to: $output_file\"\ndone"
-  },
-  {
-    "objectID": "academy/how_to/file_manager.html",
-    "href": "academy/how_to/file_manager.html",
-    "title": "File Manager",
-    "section": "",
-    "text": "Typeahead: no longer supported by Nautilus.\n-&gt; Nemo.\nNem: creating a symlink: ctrl+M"
-  },
-  {
-    "objectID": "academy/how_to/handbook-gpt.html",
-    "href": "academy/how_to/handbook-gpt.html",
-    "title": "Custom GPT: Handbook assistant",
-    "section": "",
-    "text": "Getting the index works.\nGetting subpages works.\nGet content of subpages works.\nTBD: subpages and conent no longer working?!?!"
-  },
-  {
-    "objectID": "academy/how_to/handbook-gpt.html#instruction",
-    "href": "academy/how_to/handbook-gpt.html#instruction",
-    "title": "Custom GPT: Handbook assistant",
-    "section": "Instruction",
-    "text": "Instruction\nThis GPT acts as the Digital Work Lab Handbook Assistant, designed to accurately retrieve and interpret content from the Digital Work Lab handbook. It uses the handbook’s RAG index to determine which documents exist and only retrieves data from valid entries listed there. \n\nWhen users ask about handbook topics such as procedures, team, research, or teaching, the assistant looks up the RAG index to find the most relevant JSON or Markdown files and fetches the corresponding content through the appropriate `raw_url` or `get_section_rag` calls. It must not send requests to arbitrary paths or inferred URLs; it only queries those explicitly listed in the RAG index. If a requested document is missing, leads to a 404 error, or is not present in the index, the assistant informs the user clearly and suggests checking or updating the handbook structure.\n\nResponses must always reflect actual content retrieved from the valid source file. When a section contains multiple related documents (for example, several process files under `10-lab/10_processes/`), the assistant selects and summarizes the relevant files based on their titles and topics, and it can suggest related entries for context. If there are ambiguities, it asks clarifying questions to determine which indexed document(s) to reference.\n\nThe assistant’s tone remains respectful, mentoring, and collaborative. It supports users in interpreting procedures, understanding lab practices, and improving the handbook by suggesting edits or additions when inconsistencies or missing information arise. It always prioritizes accuracy, transparency, and contextual insight when guiding users through the Digital Work Lab handbook."
-  },
-  {
-    "objectID": "academy/how_to/handbook-gpt.html#action",
-    "href": "academy/how_to/handbook-gpt.html#action",
-    "title": "Custom GPT: Handbook assistant",
-    "section": "Action",
-    "text": "Action\n\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Digital-Work Lab Handbook RAG\",\n    \"version\": \"1.3.4\",\n    \"description\": \"Static RAG index published via GitHub Pages. Primary entry point is /rag/index.json. JSON chunk files are served from /rag/{path}. If a JSON chunk file is missing, the client must fetch the original Markdown from https://digital-work-lab.github.io/handbook/docs/{path}.\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://digital-work-lab.github.io/handbook\"\n    }\n  ],\n  \"paths\": {\n    \"/rag/index.json\": {\n      \"get\": {\n        \"operationId\": \"getRagIndex\",\n        \"summary\": \"Get top-level RAG index generated by GitHub Actions\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"RAG index with sections or files\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"properties\": {\n                    \"generated_at\": { \"type\": \"string\" },\n                    \"model\": { \"type\": \"string\" },\n                    \"files\": {\n                      \"type\": \"array\",\n                      \"description\": \"List of files that have prebuilt embeddings\",\n                      \"items\": {\n                        \"type\": \"object\",\n                        \"required\": [\"path\", \"json_url\", \"md_url\"],\n                        \"properties\": {\n                          \"path\": {\n                            \"type\": \"string\",\n                            \"description\": \"Logical handbook path relative to docs/, e.g. 20-research/20_processes/20.11.survey.md\"\n                          },\n                          \"json_url\": {\n                            \"type\": \"string\",\n                            \"description\": \"URL to prebuilt JSON under /rag/, e.g. https://digital-work-lab.github.io/handbook/rag/20-research/20_processes/20.11.survey.json\"\n                          },\n                          \"md_url\": {\n                            \"type\": \"string\",\n                            \"description\": \"Fallback: Markdown on GitHub Pages under /docs/, e.g. https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.11.survey.md\"\n                          }\n                        }\n                      }\n                    }\n                  },\n                  \"required\": [\"files\"]\n                }\n              }\n            }\n          }\n        }\n      }\n    },\n    \"/rag/{path}\": {\n      \"get\": {\n        \"operationId\": \"getRagFile\",\n        \"summary\": \"Fetch a prebuilt RAG JSON file as published on GitHub Pages under /rag/\",\n        \"parameters\": [\n          {\n            \"name\": \"path\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"description\": \"Path to the RAG JSON file relative to /rag/, e.g. 20-research/20_processes/20.11.survey.json\",\n            \"schema\": { \"type\": \"string\" }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"RAG JSON chunk file content\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"description\": \"Standardized RAG chunk format.\",\n                  \"properties\": {\n                    \"source\": {\n                      \"type\": \"string\",\n                      \"description\": \"Original handbook source path, e.g. 20-research/20_processes/20.11.survey.md\"\n                    },\n                    \"generated_at\": {\n                      \"type\": \"string\",\n                      \"description\": \"Timestamp when this RAG JSON was generated\"\n                    },\n                    \"embedding_model\": {\n                      \"type\": \"string\",\n                      \"description\": \"Name of the embedding model used, if any\"\n                    },\n                    \"chunks\": {\n                      \"type\": \"array\",\n                      \"description\": \"List of text chunks extracted from the source\",\n                      \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                          \"id\": { \"type\": \"string\" },\n                          \"text\": {\n                            \"type\": \"string\",\n                            \"description\": \"Chunk text content\"\n                          },\n                          \"metadata\": {\n                            \"type\": \"object\",\n                            \"additionalProperties\": true\n                          },\n                          \"embedding\": {\n                            \"type\": \"array\",\n                            \"items\": { \"type\": \"number\" }\n                          }\n                        },\n                        \"required\": [\"text\"]\n                      }\n                    },\n                    \"metadata\": {\n                      \"type\": \"object\",\n                      \"additionalProperties\": true\n                    }\n                  },\n                  \"required\": [\"chunks\"]\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"RAG JSON not found under /rag/\"\n          }\n        }\n      }\n    },\n    \"/docs/{path}\": {\n      \"get\": {\n        \"operationId\": \"getHandbookFile\",\n        \"summary\": \"Fetch a raw handbook file (Markdown) from GitHub Pages under /docs/\",\n        \"parameters\": [\n          {\n            \"name\": \"path\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"description\": \"Path to the Markdown file relative to docs/, e.g. 20-research/20_processes/20.11.survey.md\",\n            \"schema\": { \"type\": \"string\" }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Raw Markdown file content from GitHub Pages under /docs/\",\n            \"content\": {\n              \"text/markdown\": {\n                \"schema\": {\n                  \"type\": \"string\",\n                  \"description\": \"Content retrieved from https://digital-work-lab.github.io/handbook/docs/{path}\"\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"File not found under /docs/ on GitHub Pages\"\n          }\n        }\n      }\n    }\n  }\n}"
-  },
-  {
-    "objectID": "academy/how_to/regex.html",
-    "href": "academy/how_to/regex.html",
-    "title": "Regex",
-    "section": "",
-    "text": "A useful tool for developing, analyzing and testing regex is regex101.com.\nPython supports named groups:\nimport re\n\ntext = \"Today's date is 2025-07-10.\"\n\npattern = r\"(?P&lt;year&gt;\\d{4})-(?P&lt;month&gt;\\d{2})-(?P&lt;day&gt;\\d{2})\"\nmatch = re.search(pattern, text)\n\nif match:\n    print(\"Year:\", match.group(\"year\"))\n    print(\"Month:\", match.group(\"month\"))\n    print(\"Day:\", match.group(\"day\"))"
-  },
-  {
-    "objectID": "academy/research_training.html",
-    "href": "academy/research_training.html",
-    "title": "Research training",
-    "section": "",
-    "text": "Categories:\n\nmethods\nwriting\nThe Bamberg Center for Empirical Studies (BACES) offers free consultation related to data management and statistical analyses\n\nSee podcast episode on phd education\nResources (to sort):\n\nThe Turing Way\nGood-enough practices in scientific computing\nHow to document your research software\nhow-to docs\nAwesome reproducible research\nAwesome open science\nInstats courses\nIDIS: International Doctoral Network in Information Systems\nVHB Prodoc\nGood Enough Practices in Scientific Computing\nTidyverse skills for Data Science\n\nBooks on philosophy of science:\n\nThomas S. Kuhn – The Structure of Scientific Revolutions (paradigms & paradigm shifts)\nKarl Popper – The Logic of Scientific Discovery (falsification)\nKarl Popper – Conjectures and Refutations (essays, very readable)\nPaul Feyerabend – Against Method (“anything goes” critique)\nAlan Chalmers – What Is This Thing Called Science? (widely used intro)\nHerbert Simon - Sciences of the Artificial (for design science)\n\nResearch and modes of reasoning\nLevallet, N., Denford, J. S., & Chan, Y. E. (2020). Following the MAP (methods, approaches, perspectives) in information systems research. Information Systems Research, 32(1), 130-146. (link).\nValidity\nBoudreau, Gefen & Straub (2001), “Validation in Information Systems Research: A State-of-the-Art Assessment,” MIS Quarterly. Shadish, Cook & Campbell (2002), Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Straub, Boudreau & Gefen (2004), “Validation Guidelines for IS Positivist Research,” CAIS.\nIS Research Podcast Episodes: - Cognitive conflict, courage, humility, and respect: Ingredients for a productive academic discourse - Every contribution can be interesting but not all of them are",
-    "crumbs": [
-      "Academy",
-      "Research training"
-    ]
-  },
-  {
-    "objectID": "research/data_sets.html",
-    "href": "research/data_sets.html",
-    "title": "Data sets",
-    "section": "",
-    "text": "IEEEDataPortal\nBERD\nOverview of repositories and data journals",
+    "text": "This page contains an overview and links to method resources.",
     "crumbs": [
       "Research",
       "Methods & Analysis",
-      "Data sets"
+      "Methods"
     ]
   },
   {
-    "objectID": "research/mailing_lists.html",
-    "href": "research/mailing_lists.html",
-    "title": "Mailing lists",
-    "section": "",
-    "text": "Association for Information Systems, AIS",
+    "objectID": "research/methods.html#computational-analyses",
+    "href": "research/methods.html#computational-analyses",
+    "title": "Methods",
+    "section": "Computational analyses",
+    "text": "Computational analyses\nPython: recommendation to use uv to manage dependencies or include them in a script.",
     "crumbs": [
       "Research",
-      "Projects & Collaboration",
-      "Mailing lists"
+      "Methods & Analysis",
+      "Methods"
     ]
   },
   {
-    "objectID": "research/mailing_lists.html#research-community-international",
-    "href": "research/mailing_lists.html#research-community-international",
-    "title": "Mailing lists",
-    "section": "",
-    "text": "Association for Information Systems, AIS",
+    "objectID": "research/methods.html#literature-review",
+    "href": "research/methods.html#literature-review",
+    "title": "Methods",
+    "section": "Literature review",
+    "text": "Literature review\n\nlrs_target_variable: A collection of literature reviews in IS\nlr-tools: A comprehensive overview of literature review tools\nliterature_reviews: An overview of the literature review discourse, including methods papers, editorials, etc.\n20.10: An overview of databases in IS",
     "crumbs": [
       "Research",
-      "Projects & Collaboration",
-      "Mailing lists"
+      "Methods & Analysis",
+      "Methods"
     ]
   },
   {
-    "objectID": "research/mailing_lists.html#research-community-national",
-    "href": "research/mailing_lists.html#research-community-national",
-    "title": "Mailing lists",
-    "section": "Research community (national)",
-    "text": "Research community (national)\n\nHochschulverband\nVHB\nWissenschaftliche Kommission Wirtschaftsinformatik, WKWI",
+    "objectID": "research/methods.html#sem",
+    "href": "research/methods.html#sem",
+    "title": "Methods",
+    "section": "SEM",
+    "text": "SEM\n\nLisrel (commercial)\nSmartPLS\nlavaan (R) with JASP or jamovi interfaces",
     "crumbs": [
       "Research",
-      "Projects & Collaboration",
-      "Mailing lists"
+      "Methods & Analysis",
+      "Methods"
     ]
   },
   {
-    "objectID": "research/mailing_lists.html#podcasts",
-    "href": "research/mailing_lists.html#podcasts",
-    "title": "Mailing lists",
-    "section": "Podcasts",
-    "text": "Podcasts\n\nOn the way to new work\nThis IS Research podcast\n10 Minute IS Paper\nDesk Reject: der PhD-Cast”\nTHE CYBERSECURITY READINESS PODCAST SERIES\nServusKI",
+    "objectID": "research/methods.html#causal-inference",
+    "href": "research/methods.html#causal-inference",
+    "title": "Methods",
+    "section": "Causal inference",
+    "text": "Causal inference\n\nCausal Inference for The Brave and True",
     "crumbs": [
       "Research",
-      "Projects & Collaboration",
-      "Mailing lists"
+      "Methods & Analysis",
+      "Methods"
     ]
-  },
-  {
-    "objectID": "research/mailing_lists.html#job-market",
-    "href": "research/mailing_lists.html#job-market",
-    "title": "Mailing lists",
-    "section": "Job market",
-    "text": "Job market\n\nWissenschaftliche Kommission Wirtschaftsinformatik (WKWI)\nWKWI: Ausschreibungen für wiss. Nachwuchs\nAcademics.de\nAusschreibungsdienst DHV",
-    "crumbs": [
-      "Research",
-      "Projects & Collaboration",
-      "Mailing lists"
-    ]
-  },
-  {
-    "objectID": "research/presentation.html",
-    "href": "research/presentation.html",
-    "title": "Presentation",
-    "section": "",
-    "text": "Adapt to the audience\nPrepare a short elevator pitch\nPlan for eventualities (e.g., no Internet/WIFI connection available)\nMake slides available [TODO : link repo] and allow participants to connect/give feedback (TODO : add suggestions)\nCommunicate a clear reason why your audience should be interested in your presentation (in particular when some participants are required to attend)\nWhen appropriate: start with a bold pitch like “After this talk, you will do … differently.”\nWhen appropriate, use storytelling to make the presentation memorable",
-    "crumbs": [
-      "Research",
-      "Writing & Publication",
-      "Presentation"
-    ]
-  },
-  {
-    "objectID": "research/presentation.html#general-guidelines",
-    "href": "research/presentation.html#general-guidelines",
-    "title": "Presentation",
-    "section": "",
-    "text": "Adapt to the audience\nPrepare a short elevator pitch\nPlan for eventualities (e.g., no Internet/WIFI connection available)\nMake slides available [TODO : link repo] and allow participants to connect/give feedback (TODO : add suggestions)\nCommunicate a clear reason why your audience should be interested in your presentation (in particular when some participants are required to attend)\nWhen appropriate: start with a bold pitch like “After this talk, you will do … differently.”\nWhen appropriate, use storytelling to make the presentation memorable",
-    "crumbs": [
-      "Research",
-      "Writing & Publication",
-      "Presentation"
-    ]
-  },
-  {
-    "objectID": "research/presentation.html#template",
-    "href": "research/presentation.html#template",
-    "title": "Presentation",
-    "section": "Template",
-    "text": "Template\n\nMarp template\n\nTo include a Mermaid diagram:\n&lt;script type=\"module\"&gt;\n  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';\n  mermaid.initialize({ startOnLoad: true });\n&lt;/script&gt;\n\n&lt;div class=\"mermaid\"&gt;\n  graph LR;\n  a --&gt; b;\n  b --&gt; c;\n  c --&gt; a;\n&lt;/div&gt;\nCallout box:\n&lt;style&gt;\n.callout {\n  border-left: 5px solid #007acc;\n  background-color: #f0f8ff;\n  padding: 10px;\n  margin: 10px 0;\n  border-radius: 5px;\n}\n&lt;/style&gt;\n\n&lt;div class=\"callout\"&gt;\n  &lt;strong&gt;Note:&lt;/strong&gt; Text\nFootnote:\n&lt;style&gt;\nblockquote {\n    border-top: 0.1em;\n    font-size: 60%;\n    margin-top: auto;\n}\n&lt;/style&gt;\n\n&gt; Note...\n\n&lt;style&gt;\nblockquote {\n    border-top: 0.1em;\n    font-size: 60%;\n    margin-top: auto;\n    padding-left: 40px;\n    text-indent: -30px;\n    text-align: justify;\n}\n&lt;/style&gt;\n\n&gt; Raymond, L., Paré, D., Doyon, O. and Wagner, G. “Understanding nurses’ intention to use artificial intelligence technologies in their clinical practice: A survey-based configurational analysis“. Under review at the *Journal of Advanced Nursing* (minor revision).\nReferences:\n&lt;span class=\"citation\"&gt;(Ringeval et al., 2020; Li et al., 2025)&lt;/span&gt;\n\n&lt;style scoped&gt;\np {\n    padding-left: 36px;\n    text-indent: -36px;\n    font-size: 75%;\n    text-align: justify;\n}\n&lt;/style&gt;\n&lt;!-- font-size: 12px; /* or any size you prefer, e.g., 12px */ --&gt;\n\nCastonguay, A., Wagner, G., Motulsky, A., and Paré, G. 2024. “AI Maturity in Health Care: An Overview of 10 OECD Countries“. *Health Policy*, 140, p.104938.",
-    "crumbs": [
-      "Research",
-      "Writing & Publication",
-      "Presentation"
-    ]
-  },
-  {
-    "objectID": "research/presentation.html#structure-and-contents",
-    "href": "research/presentation.html#structure-and-contents",
-    "title": "Presentation",
-    "section": "Structure and Contents",
-    "text": "Structure and Contents\n\nTODO",
-    "crumbs": [
-      "Research",
-      "Writing & Publication",
-      "Presentation"
-    ]
-  },
-  {
-    "objectID": "research/presentation.html#resources",
-    "href": "research/presentation.html#resources",
-    "title": "Presentation",
-    "section": "Resources",
-    "text": "Resources\n\nBetter Poster Latex Template",
-    "crumbs": [
-      "Research",
-      "Writing & Publication",
-      "Presentation"
-    ]
-  },
-  {
-    "objectID": "research/projects/olm-signalling.html",
-    "href": "research/projects/olm-signalling.html",
-    "title": "olm-signalling",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\nolm-signalling\n\n\nTeam\njulianprester\n\n\nStatus\nwriting"
-  },
-  {
-    "objectID": "research/projects/olm-signalling.html#resources",
-    "href": "research/projects/olm-signalling.html#resources",
-    "title": "olm-signalling",
-    "section": "Resources",
-    "text": "Resources\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n\n&lt;a href=“https://github.com/julianprester/dpkw-signalling” target=“_blank” rel=“noopener”&gt; GitHub repository \n\n\n?meta:project_resources.1.access_display\n\n\n2025-09-19"
-  },
-  {
-    "objectID": "research/projects/healthcareai.html",
-    "href": "research/projects/healthcareai.html",
-    "title": "healthcareai",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/healthcareai.html#resources",
-    "href": "research/projects/healthcareai.html#resources",
-    "title": "healthcareai",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/git-intro.html",
-    "href": "research/projects/git-intro.html",
-    "title": "git-intro",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/git-intro.html#resources",
-    "href": "research/projects/git-intro.html#resources",
-    "title": "git-intro",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/alg-org.html",
-    "href": "research/projects/alg-org.html",
-    "title": "alg-org",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/alg-org.html#resources",
-    "href": "research/projects/alg-org.html#resources",
-    "title": "alg-org",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/platform-kwork-lr.html",
-    "href": "research/projects/platform-kwork-lr.html",
-    "title": "platform-kwork-lr",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/platform-kwork-lr.html#resources",
-    "href": "research/projects/platform-kwork-lr.html#resources",
-    "title": "platform-kwork-lr",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
   },
   {
     "objectID": "research/projects/git-collaboration.html",
     "href": "research/projects/git-collaboration.html",
     "title": "git-collaboration",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
     "objectID": "research/projects/git-collaboration.html#resources",
     "href": "research/projects/git-collaboration.html#resources",
     "title": "git-collaboration",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lab-handbooks.html",
-    "href": "research/projects/lab-handbooks.html",
-    "title": "lab-handbooks",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lab-handbooks.html#resources",
-    "href": "research/projects/lab-handbooks.html#resources",
-    "title": "lab-handbooks",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrreadingstrategy.html",
-    "href": "research/projects/lrreadingstrategy.html",
-    "title": "lrreadingstrategy",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrreadingstrategy.html#resources",
-    "href": "research/projects/lrreadingstrategy.html#resources",
-    "title": "lrreadingstrategy",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrmhealthcardiacrehab.html",
-    "href": "research/projects/lrmhealthcardiacrehab.html",
-    "title": "lrmhealthcardiacrehab",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lrmhealthcardiacrehab.html#resources",
-    "href": "research/projects/lrmhealthcardiacrehab.html#resources",
-    "title": "lrmhealthcardiacrehab",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/lr-dedupe-benchmark.html",
-    "href": "research/projects/lr-dedupe-benchmark.html",
-    "title": "lr-dedupe-benchmark",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}"
-  },
-  {
-    "objectID": "research/projects/lr-dedupe-benchmark.html#page.title",
-    "href": "research/projects/lr-dedupe-benchmark.html#page.title",
-    "title": "lr-dedupe-benchmark",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}"
-  },
-  {
-    "objectID": "research/projects/lr-dedupe-benchmark.html#resources",
-    "href": "research/projects/lr-dedupe-benchmark.html#resources",
-    "title": "lr-dedupe-benchmark",
     "section": "Resources",
-    "text": "Resources\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nLaureenTh\n2025-12-08"
   },
   {
-    "objectID": "research/projects/theory-elaboration.html",
-    "href": "research/projects/theory-elaboration.html",
-    "title": "theory-elaboration-manuscript",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "objectID": "research/projects/git-collaboration.html#history",
+    "href": "research/projects/git-collaboration.html#history",
+    "title": "git-collaboration",
+    "section": "History",
+    "text": "History\n—"
   },
   {
-    "objectID": "research/projects/theory-elaboration.html#resources",
-    "href": "research/projects/theory-elaboration.html#resources",
-    "title": "theory-elaboration-manuscript",
+    "objectID": "research/projects/alg-org.html",
+    "href": "research/projects/alg-org.html",
+    "title": "alg-org",
     "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
-    "objectID": "research/projects/lrtracker.html",
-    "href": "research/projects/lrtracker.html",
-    "title": "lrtracker",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "objectID": "research/projects/alg-org.html#resources",
+    "href": "research/projects/alg-org.html#resources",
+    "title": "alg-org",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\njulianprester, marx-uom\n2025-12-08\n\n\n\nGitHub repository/analysis\njulianprester\n2025-10-02"
   },
   {
-    "objectID": "research/projects/lrtracker.html#resources",
-    "href": "research/projects/lrtracker.html#resources",
-    "title": "lrtracker",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/dec-proc-ex.html",
-    "href": "research/projects/dec-proc-ex.html",
-    "title": "dec-proc-ex",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/dec-proc-ex.html#resources",
-    "href": "research/projects/dec-proc-ex.html#resources",
-    "title": "dec-proc-ex",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/dprelations.html",
-    "href": "research/projects/dprelations.html",
-    "title": "dprelations",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/dprelations.html#resources",
-    "href": "research/projects/dprelations.html#resources",
-    "title": "dprelations",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/ai-agents.html",
-    "href": "research/projects/ai-agents.html",
-    "title": "ai-agents",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/ai-agents.html#resources",
-    "href": "research/projects/ai-agents.html#resources",
-    "title": "ai-agents",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/edu-res.html",
-    "href": "research/projects/edu-res.html",
-    "title": "edu-res",
-    "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
-  },
-  {
-    "objectID": "research/projects/edu-res.html#resources",
-    "href": "research/projects/edu-res.html#resources",
-    "title": "edu-res",
-    "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "objectID": "research/projects/alg-org.html#history",
+    "href": "research/projects/alg-org.html#history",
+    "title": "alg-org",
+    "section": "History",
+    "text": "History\n\n2024-08-14 — started"
   },
   {
     "objectID": "research/projects/lrtoolkit.html",
     "href": "research/projects/lrtoolkit.html",
     "title": "lrtoolkit",
     "section": "",
-    "text": "Field\nValue\n\n\n\n\nAcronym\n{{ page.title }}\n\n\nTeam\n{{ page.collaborators\n\n\nStatus\n{{ page.status }}\n\n\n\n\n\n{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
   },
   {
     "objectID": "research/projects/lrtoolkit.html#resources",
     "href": "research/projects/lrtoolkit.html#resources",
     "title": "lrtoolkit",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nlibrary\n—\n—"
+  },
+  {
+    "objectID": "research/projects/lrtoolkit.html#history",
+    "href": "research/projects/lrtoolkit.html#history",
+    "title": "lrtoolkit",
+    "section": "History",
+    "text": "History\n\n2020-11-26 — started"
+  },
+  {
+    "objectID": "research/projects/edu-res.html",
+    "href": "research/projects/edu-res.html",
+    "title": "edu-res",
     "section": "",
-    "text": "{% if page.resources %}\n\n{% for res in page.resources %}\n\n{% endfor %}\n\n\n\n\nName\n\n\nAccess\n\n\nLast updated\n\n\nRequest\n\n\n\n\n\n{% if res.link %}  {{ res.name | default: res.link }}  {% else %} {{ res.name | default: “—” }} {% endif %}\n\n\n{% if res.access and res.access.size &gt; 0 %} {% for u in res.access %} {% if forloop.first == false %}, {% endif %} @{{ u }} {% endfor %} {% else %} — {% endif %}\n\n\n{% if res.last_updated %} {{ res.last_updated | date: “%Y-%m-%d” }} {% else %} — {% endif %}\n\n\n{% if res.link and res.link contains “https://github.com” %}    {% else %} — {% endif %}\n\n\n\n{% else %}\n\n—\n\n{% endif %}"
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/edu-res.html#resources",
+    "href": "research/projects/edu-res.html#resources",
+    "title": "edu-res",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nLaureenTh\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/edu-res.html#history",
+    "href": "research/projects/edu-res.html#history",
+    "title": "edu-res",
+    "section": "History",
+    "text": "History\n\n2024-10-10 — started"
+  },
+  {
+    "objectID": "research/projects/genailr.html",
+    "href": "research/projects/genailr.html",
+    "title": "genailr",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/genailr.html#resources",
+    "href": "research/projects/genailr.html#resources",
+    "title": "genailr",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\njulianprester\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/genailr.html#history",
+    "href": "research/projects/genailr.html#history",
+    "title": "genailr",
+    "section": "History",
+    "text": "History\n\n2023-12-10 — started\n2024-04-25 — submission\n2024-10-25 — decision\n2024-12-03 — revision\n2025-07-21 — revision\n2025-08-14 — submission"
+  },
+  {
+    "objectID": "research/projects/lrreadingstrategy.html",
+    "href": "research/projects/lrreadingstrategy.html",
+    "title": "lrreadingstrategy",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lrreadingstrategy.html#resources",
+    "href": "research/projects/lrreadingstrategy.html#resources",
+    "title": "lrreadingstrategy",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nmanuscript\n—\n—\n—"
+  },
+  {
+    "objectID": "research/projects/lrreadingstrategy.html#history",
+    "href": "research/projects/lrreadingstrategy.html#history",
+    "title": "lrreadingstrategy",
+    "section": "History",
+    "text": "History\n\n2017-04-22 — started\n2020-05-17 — completed"
+  },
+  {
+    "objectID": "research/projects/lrreadingstrategy.html#output",
+    "href": "research/projects/lrreadingstrategy.html#output",
+    "title": "lrreadingstrategy",
+    "section": "Output",
+    "text": "Output\n\nWagnerEmplSchryen2020"
+  },
+  {
+    "objectID": "research/projects/search-query-evaluation-paper.html",
+    "href": "research/projects/search-query-evaluation-paper.html",
+    "title": "search-query-evaluation-paper",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/search-query-evaluation-paper.html#resources",
+    "href": "research/projects/search-query-evaluation-paper.html#resources",
+    "title": "search-query-evaluation-paper",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nk-schnickmann\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/search-query-evaluation-paper.html#history",
+    "href": "research/projects/search-query-evaluation-paper.html#history",
+    "title": "search-query-evaluation-paper",
+    "section": "History",
+    "text": "History\n—"
+  },
+  {
+    "objectID": "research/projects/olm-signalling.html",
+    "href": "research/projects/olm-signalling.html",
+    "title": "olm-signalling",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/olm-signalling.html#resources",
+    "href": "research/projects/olm-signalling.html#resources",
+    "title": "olm-signalling",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\n—\n2025-09-19"
+  },
+  {
+    "objectID": "research/projects/olm-signalling.html#history",
+    "href": "research/projects/olm-signalling.html#history",
+    "title": "olm-signalling",
+    "section": "History",
+    "text": "History\n\n2023-05-04 — started"
+  },
+  {
+    "objectID": "research/projects/ai-agents.html",
+    "href": "research/projects/ai-agents.html",
+    "title": "ai-agents",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/ai-agents.html#resources",
+    "href": "research/projects/ai-agents.html#resources",
+    "title": "ai-agents",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\n—\n2025-09-19"
+  },
+  {
+    "objectID": "research/projects/ai-agents.html#history",
+    "href": "research/projects/ai-agents.html#history",
+    "title": "ai-agents",
+    "section": "History",
+    "text": "History\n\n2025-01-01 — started"
+  },
+  {
+    "objectID": "research/projects/healthcareai.html",
+    "href": "research/projects/healthcareai.html",
+    "title": "healthcareai",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/healthcareai.html#resources",
+    "href": "research/projects/healthcareai.html#resources",
+    "title": "healthcareai",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nmanuscript\n—\n—\n—"
+  },
+  {
+    "objectID": "research/projects/healthcareai.html#history",
+    "href": "research/projects/healthcareai.html#history",
+    "title": "healthcareai",
+    "section": "History",
+    "text": "History\n\n2021-02-03 — started\n2023-06-10 — completed"
+  },
+  {
+    "objectID": "research/projects/healthcareai.html#output",
+    "href": "research/projects/healthcareai.html#output",
+    "title": "healthcareai",
+    "section": "Output",
+    "text": "Output\n\nCastonguayWagnerMotulskyEtAl2023"
+  },
+  {
+    "objectID": "research/projects/search-query-paper.html",
+    "href": "research/projects/search-query-paper.html",
+    "title": "search-query-paper",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/search-query-paper.html#resources",
+    "href": "research/projects/search-query-paper.html#resources",
+    "title": "search-query-paper",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nannaglr, LaureenTh, katharinaernst, ThomasFleischmann, Peteer98, k-schnickmann\n2025-12-08\n\n\n\nJOSS review\n—\n—"
+  },
+  {
+    "objectID": "research/projects/search-query-paper.html#history",
+    "href": "research/projects/search-query-paper.html#history",
+    "title": "search-query-paper",
+    "section": "History",
+    "text": "History\n\n2023-10-04 — started"
+  },
+  {
+    "objectID": "research/projects/lrs-impact-uniformity.html",
+    "href": "research/projects/lrs-impact-uniformity.html",
+    "title": "lrs-impact-uniformity",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lrs-impact-uniformity.html#resources",
+    "href": "research/projects/lrs-impact-uniformity.html#resources",
+    "title": "lrs-impact-uniformity",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\njulianprester\n2025-12-08"
+  },
+  {
+    "objectID": "research/projects/lrs-impact-uniformity.html#history",
+    "href": "research/projects/lrs-impact-uniformity.html#history",
+    "title": "lrs-impact-uniformity",
+    "section": "History",
+    "text": "History\n—"
+  },
+  {
+    "objectID": "research/projects/lrmhealthcardiacrehab.html",
+    "href": "research/projects/lrmhealthcardiacrehab.html",
+    "title": "lrmhealthcardiacrehab",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/lrmhealthcardiacrehab.html#resources",
+    "href": "research/projects/lrmhealthcardiacrehab.html#resources",
+    "title": "lrmhealthcardiacrehab",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nmanuscript\n—\n—\n—"
+  },
+  {
+    "objectID": "research/projects/lrmhealthcardiacrehab.html#history",
+    "href": "research/projects/lrmhealthcardiacrehab.html#history",
+    "title": "lrmhealthcardiacrehab",
+    "section": "History",
+    "text": "History\n\n2023-02-26 — started"
+  },
+  {
+    "objectID": "research/projects/lrmhealthcardiacrehab.html#output",
+    "href": "research/projects/lrmhealthcardiacrehab.html#output",
+    "title": "lrmhealthcardiacrehab",
+    "section": "Output",
+    "text": "Output\n\nLiRingevalWagnerEtAl2025"
+  },
+  {
+    "objectID": "research/projects/platform-lr.html",
+    "href": "research/projects/platform-lr.html",
+    "title": "platform-lr",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/platform-lr.html#resources",
+    "href": "research/projects/platform-lr.html#resources",
+    "title": "platform-lr",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository (review)\n—\n2025-12-08\n\n\n\nGitHub repository\njulianprester\n2025-09-18"
+  },
+  {
+    "objectID": "research/projects/platform-lr.html#history",
+    "href": "research/projects/platform-lr.html#history",
+    "title": "platform-lr",
+    "section": "History",
+    "text": "History\n\n2019-03-28 — started\n2021-11-22 — completed"
+  },
+  {
+    "objectID": "research/projects/bib-dedupe.html",
+    "href": "research/projects/bib-dedupe.html",
+    "title": "bib-dedupe",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/bib-dedupe.html#resources",
+    "href": "research/projects/bib-dedupe.html#resources",
+    "title": "bib-dedupe",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\nk-schnickmann\n2025-10-19"
+  },
+  {
+    "objectID": "research/projects/bib-dedupe.html#history",
+    "href": "research/projects/bib-dedupe.html#history",
+    "title": "bib-dedupe",
+    "section": "History",
+    "text": "History\n\n2023-11-11 — started"
+  },
+  {
+    "objectID": "research/projects/bib-dedupe.html#output",
+    "href": "research/projects/bib-dedupe.html#output",
+    "title": "bib-dedupe",
+    "section": "Output",
+    "text": "Output\n\nWagner2024"
+  },
+  {
+    "objectID": "research/projects/dprelations.html",
+    "href": "research/projects/dprelations.html",
+    "title": "dprelations",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/dprelations.html#resources",
+    "href": "research/projects/dprelations.html#resources",
+    "title": "dprelations",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nDropbox\n—\n—\n—"
+  },
+  {
+    "objectID": "research/projects/dprelations.html#history",
+    "href": "research/projects/dprelations.html#history",
+    "title": "dprelations",
+    "section": "History",
+    "text": "History\n\n2023-09-01 — started"
+  },
+  {
+    "objectID": "research/projects/theory-elaboration-manuscript.html",
+    "href": "research/projects/theory-elaboration-manuscript.html",
+    "title": "theory-elaboration-manuscript",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is auto-generated. The authoritative project metadata is stored in data/projects.yml."
+  },
+  {
+    "objectID": "research/projects/theory-elaboration-manuscript.html#resources",
+    "href": "research/projects/theory-elaboration-manuscript.html#resources",
+    "title": "theory-elaboration-manuscript",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nName\nAccess\nLast updated\nRequest\n\n\n\n\nGitHub repository\n—\n2025-09-19"
+  },
+  {
+    "objectID": "research/projects/theory-elaboration-manuscript.html#history",
+    "href": "research/projects/theory-elaboration-manuscript.html#history",
+    "title": "theory-elaboration-manuscript",
+    "section": "History",
+    "text": "History\n\n2018-01-15 — started"
   },
   {
     "objectID": "research/repo_setup.html",
@@ -5636,7 +5937,7 @@
     "href": "research/projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects are here. \n\n\n\n\n\n\n\nNotePlanned\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ncolrev-manuscript\n\n\n\n\n\n\ndata-work\n\n\n\n\n\n\nedu-res\n\n\n\n\n\n\nlrtoolkit\n\n\n\n\n\n\nsearch-query-evaluation-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteWriting\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nai-agents\n\n\n\n\n\n\nalg-org\n\n\n\n\n\n\ndec-proc-ex\n\n\n\n\n\n\nlr-dedupe-benchmark\n\n\n\n\n\n\nlr-search\n\n\n\n\n\n\nlrmhealthcardiacrehab\n\n\n\n\n\n\nolm-signalling\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteRevising\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ngit-collaboration\n\n\n\n\n\n\nlrdm\n\n\n\n\n\n\nteapad\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteUnder review\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nbeals\n\n\n\n\n\n\ndprelations\n\n\n\n\n\n\ngenailr\n\n\n\n\n\n\nlab-handbooks\n\n\n\n\n\n\nsearch-query-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNotePublished\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\naicompetencemed\n\n\n\n\n\n\nailr\n\n\n\n\n\n\nbib-dedupe\n\n\n\n\n\n\ndpkw\n\n\n\n\n\n\ngit-intro\n\n\n\n\n\n\nhealthcareai\n\n\n\n\n\n\nlrnlpimpact\n\n\n\n\n\n\nlrreadingstrategy\n\n\n\n\n\n\nlrs-impact-uniformity\n\n\n\n\n\n\nlrs-theory-impact\n\n\n\n\n\n\nlrtracker\n\n\n\n\n\n\nplatform-kwork-lr\n\n\n\n\n\n\nplatform-lr\n\n\n\n\n\n\ntheory-elaboration-manuscript\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\nProjecs and can be in the following states:\n\n\n\n\n\n\nflowchart LR\n    subgraph Projects\n        direction TB\n        Concept([\"Concept\"]) -.-&gt; Writing([\"Writing\"])\n        Writing --&gt; OnHold([\"On hold\"])\n        OnHold --&gt; Writing\n        OnHold -.-&gt; Abandoned([\"Abandoned\"])\n        Writing ==&gt; UnderReview([\"Under review\"])\n        Revising -.-&gt; OnHold\n        Revising ==&gt; UnderReview\n        UnderReview ==&gt; Revising([\"Revising\"])\n        Revising ==&gt; Published([\"Published\"])\n    end\n    style Projects fill:white,stroke:#333,stroke-width:3px",
+    "text": "Projects are here. \n\n\n\n\n\n\n\nNotePlanned\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ncolrev-manuscript\n\n\n\n\n\n\ndata-work\n\n\n\n\n\n\nedu-res\n\n\n\n\n\n\nlrtoolkit\n\n\n\n\n\n\nsearch-query-evaluation-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteWriting\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nai-agents\n\n\n\n\n\n\nalg-org\n\n\n\n\n\n\ndec-proc-ex\n\n\n\n\n\n\nlr-dedupe-benchmark\n\n\n\n\n\n\nlr-search\n\n\n\n\n\n\nlrmhealthcardiacrehab\n\n\n\n\n\n\nolm-signalling\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteRevising\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ngit-collaboration\n\n\n\n\n\n\nlrdm\n\n\n\n\n\n\nteapad\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteUnder review\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nbeals\n\n\n\n\n\n\ndprelations\n\n\n\n\n\n\ngenailr\n\n\n\n\n\n\nlab-handbooks\n\n\n\n\n\n\nsearch-query-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNotePublished\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\naicompetencemed\n\n\n\n\n\n\nailr\n\n\n\n\n\n\nbib-dedupe\n\n\n\n\n\n\ndpkw\n\n\n\n\n\n\ngit-intro\n\n\n\n\n\n\nhealthcareai\n\n\n\n\n\n\nlrnlpimpact\n\n\n\n\n\n\nlrreadingstrategy\n\n\n\n\n\n\nlrs-impact-uniformity\n\n\n\n\n\n\nlrs-theory-impact\n\n\n\n\n\n\nlrtracker\n\n\n\n\n\n\nplatform-kwork-lr\n\n\n\n\n\n\nplatform-lr\n\n\n\n\n\n\ntheory-elaboration\n\n\n\n\n\n\ntheory-elaboration-manuscript\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\nProjecs and can be in the following states:\n\n\n\n\n\n\nflowchart LR\n    subgraph Projects\n        direction TB\n        Concept([\"Concept\"]) -.-&gt; Writing([\"Writing\"])\n        Writing --&gt; OnHold([\"On hold\"])\n        OnHold --&gt; Writing\n        OnHold -.-&gt; Abandoned([\"Abandoned\"])\n        Writing ==&gt; UnderReview([\"Under review\"])\n        Revising -.-&gt; OnHold\n        Revising ==&gt; UnderReview\n        UnderReview ==&gt; Revising([\"Revising\"])\n        Revising ==&gt; Published([\"Published\"])\n    end\n    style Projects fill:white,stroke:#333,stroke-width:3px",
     "crumbs": [
       "Research",
       "Projects & Collaboration",
@@ -5648,7 +5949,7 @@
     "href": "research/projects.html#project-overview",
     "title": "Projects",
     "section": "",
-    "text": "Projects are here. \n\n\n\n\n\n\n\nNotePlanned\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ncolrev-manuscript\n\n\n\n\n\n\ndata-work\n\n\n\n\n\n\nedu-res\n\n\n\n\n\n\nlrtoolkit\n\n\n\n\n\n\nsearch-query-evaluation-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteWriting\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nai-agents\n\n\n\n\n\n\nalg-org\n\n\n\n\n\n\ndec-proc-ex\n\n\n\n\n\n\nlr-dedupe-benchmark\n\n\n\n\n\n\nlr-search\n\n\n\n\n\n\nlrmhealthcardiacrehab\n\n\n\n\n\n\nolm-signalling\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteRevising\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ngit-collaboration\n\n\n\n\n\n\nlrdm\n\n\n\n\n\n\nteapad\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteUnder review\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nbeals\n\n\n\n\n\n\ndprelations\n\n\n\n\n\n\ngenailr\n\n\n\n\n\n\nlab-handbooks\n\n\n\n\n\n\nsearch-query-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNotePublished\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\naicompetencemed\n\n\n\n\n\n\nailr\n\n\n\n\n\n\nbib-dedupe\n\n\n\n\n\n\ndpkw\n\n\n\n\n\n\ngit-intro\n\n\n\n\n\n\nhealthcareai\n\n\n\n\n\n\nlrnlpimpact\n\n\n\n\n\n\nlrreadingstrategy\n\n\n\n\n\n\nlrs-impact-uniformity\n\n\n\n\n\n\nlrs-theory-impact\n\n\n\n\n\n\nlrtracker\n\n\n\n\n\n\nplatform-kwork-lr\n\n\n\n\n\n\nplatform-lr\n\n\n\n\n\n\ntheory-elaboration-manuscript\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\nProjecs and can be in the following states:\n\n\n\n\n\n\nflowchart LR\n    subgraph Projects\n        direction TB\n        Concept([\"Concept\"]) -.-&gt; Writing([\"Writing\"])\n        Writing --&gt; OnHold([\"On hold\"])\n        OnHold --&gt; Writing\n        OnHold -.-&gt; Abandoned([\"Abandoned\"])\n        Writing ==&gt; UnderReview([\"Under review\"])\n        Revising -.-&gt; OnHold\n        Revising ==&gt; UnderReview\n        UnderReview ==&gt; Revising([\"Revising\"])\n        Revising ==&gt; Published([\"Published\"])\n    end\n    style Projects fill:white,stroke:#333,stroke-width:3px",
+    "text": "Projects are here. \n\n\n\n\n\n\n\nNotePlanned\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ncolrev-manuscript\n\n\n\n\n\n\ndata-work\n\n\n\n\n\n\nedu-res\n\n\n\n\n\n\nlrtoolkit\n\n\n\n\n\n\nsearch-query-evaluation-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteWriting\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nai-agents\n\n\n\n\n\n\nalg-org\n\n\n\n\n\n\ndec-proc-ex\n\n\n\n\n\n\nlr-dedupe-benchmark\n\n\n\n\n\n\nlr-search\n\n\n\n\n\n\nlrmhealthcardiacrehab\n\n\n\n\n\n\nolm-signalling\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteRevising\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\ngit-collaboration\n\n\n\n\n\n\nlrdm\n\n\n\n\n\n\nteapad\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNoteUnder review\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nbeals\n\n\n\n\n\n\ndprelations\n\n\n\n\n\n\ngenailr\n\n\n\n\n\n\nlab-handbooks\n\n\n\n\n\n\nsearch-query-paper\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\nNotePublished\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\naicompetencemed\n\n\n\n\n\n\nailr\n\n\n\n\n\n\nbib-dedupe\n\n\n\n\n\n\ndpkw\n\n\n\n\n\n\ngit-intro\n\n\n\n\n\n\nhealthcareai\n\n\n\n\n\n\nlrnlpimpact\n\n\n\n\n\n\nlrreadingstrategy\n\n\n\n\n\n\nlrs-impact-uniformity\n\n\n\n\n\n\nlrs-theory-impact\n\n\n\n\n\n\nlrtracker\n\n\n\n\n\n\nplatform-kwork-lr\n\n\n\n\n\n\nplatform-lr\n\n\n\n\n\n\ntheory-elaboration\n\n\n\n\n\n\ntheory-elaboration-manuscript\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\nProjecs and can be in the following states:\n\n\n\n\n\n\nflowchart LR\n    subgraph Projects\n        direction TB\n        Concept([\"Concept\"]) -.-&gt; Writing([\"Writing\"])\n        Writing --&gt; OnHold([\"On hold\"])\n        OnHold --&gt; Writing\n        OnHold -.-&gt; Abandoned([\"Abandoned\"])\n        Writing ==&gt; UnderReview([\"Under review\"])\n        Revising -.-&gt; OnHold\n        Revising ==&gt; UnderReview\n        UnderReview ==&gt; Revising([\"Revising\"])\n        Revising ==&gt; Published([\"Published\"])\n    end\n    style Projects fill:white,stroke:#333,stroke-width:3px",
     "crumbs": [
       "Research",
       "Projects & Collaboration",
