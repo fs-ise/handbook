@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -142,6 +131,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -423,15 +423,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 <section id="word-to-markdown" class="level2">
 <h2 class="anchored" data-anchor-id="word-to-markdown">Word-to-Markdown</h2>
-<pre><code>docker run --rm -v "$PWD":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-v</span> <span class="st">"</span><span class="va">$PWD</span><span class="st">"</span>:/data pandoc_dockerfile input.docx <span class="at">-f</span> docx <span class="at">-t</span> markdown <span class="at">--wrap</span><span class="op">=</span>none <span class="at">-o</span> output.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="pptx-to-markdown" class="level2">
 <h2 class="anchored" data-anchor-id="pptx-to-markdown">PPTX-to-Markdown</h2>
-<pre><code>pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --image-dir "images"</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pptx2md</span> <span class="st">"slides.pptx"</span> <span class="at">--output</span> <span class="st">"slides_with_notes.qmd"</span> <span class="at">--enable-slides</span> <span class="at">--qmd</span> <span class="at">--image-dir</span> <span class="st">"images"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="markdown-to-word-markdown-to-docx" class="level2">
 <h2 class="anchored" data-anchor-id="markdown-to-word-markdown-to-docx">Markdown-to-Word / Markdown-to-docx</h2>
-<pre><code>docker run --rm -u "$(id -u):$(id -g)"  -v "$PWD":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-u</span> <span class="st">"</span><span class="va">$(</span><span class="fu">id</span> <span class="at">-u</span><span class="va">)</span><span class="st">:</span><span class="va">$(</span><span class="fu">id</span> <span class="at">-g</span><span class="va">)</span><span class="st">"</span>  <span class="at">-v</span> <span class="st">"</span><span class="va">$PWD</span><span class="st">"</span>:/data pandoc_dockerfile input.md <span class="at">-f</span> markdown <span class="at">-t</span> docx <span class="at">-o</span> output.docx</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 <!-- -->
@@ -932,22 +932,21 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Word-to-Markdown</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="in">docker run --rm -v "$PWD":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-v</span> <span class="st">"</span><span class="va">$PWD</span><span class="st">"</span>:/data pandoc_dockerfile input.docx <span class="at">-f</span> docx <span class="at">-t</span> markdown <span class="at">--wrap</span><span class="op">=</span>none <span class="at">-o</span> output.md</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## PPTX-to-Markdown</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="in">pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --image-dir "images"</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="ex">pptx2md</span> <span class="st">"slides.pptx"</span> <span class="at">--output</span> <span class="st">"slides_with_notes.qmd"</span> <span class="at">--enable-slides</span> <span class="at">--qmd</span> <span class="at">--image-dir</span> <span class="st">"images"</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Markdown-to-Word / Markdown-to-docx</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="in">docker run --rm -u "$(id -u):$(id -g)"  -v "$PWD":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Markdown-to-Word / Markdown-to-docx</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-u</span> <span class="st">"</span><span class="va">$(</span><span class="fu">id</span> <span class="at">-u</span><span class="va">)</span><span class="st">:</span><span class="va">$(</span><span class="fu">id</span> <span class="at">-g</span><span class="va">)</span><span class="st">"</span>  <span class="at">-v</span> <span class="st">"</span><span class="va">$PWD</span><span class="st">"</span>:/data pandoc_dockerfile input.md <span class="at">-f</span> markdown <span class="at">-t</span> docx <span class="at">-o</span> output.docx</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
