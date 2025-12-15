@@ -257,17 +257,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -288,6 +277,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -609,18 +609,6 @@ window.Quarto = {
  <span class="menu-text">SOP</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research/ethics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ethics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research/improvement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Improvement</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -654,6 +642,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../research/projects.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Projects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research/improvement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Improvement</span></a>
   </div>
 </li>
       </ul>
@@ -757,8 +751,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/literature.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Literature</span></a>
+  <a href="../research/pdf_collection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF collection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research/knowledge_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -850,17 +850,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project overview</a>
-  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project overview</a></li>
   <li><a href="#project-states" id="toc-project-states" class="nav-link" data-scroll-target="#project-states">Project states</a></li>
-  </ul></li>
   <li><a href="#from-ideas-to-projects" id="toc-from-ideas-to-projects" class="nav-link" data-scroll-target="#from-ideas-to-projects">From ideas to projects</a>
   <ul class="collapse">
   <li><a href="#ideas" id="toc-ideas" class="nav-link" data-scroll-target="#ideas">Ideas</a></li>
   <li><a href="#selection" id="toc-selection" class="nav-link" data-scroll-target="#selection">Selection</a></li>
   <li><a href="#creation" id="toc-creation" class="nav-link" data-scroll-target="#creation">Creation</a></li>
   </ul></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#project-management" id="toc-project-management" class="nav-link" data-scroll-target="#project-management">Project management</a>
+  <ul class="collapse">
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#project-status" id="toc-project-status" class="nav-link" data-scroll-target="#project-status">Project status</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/projects.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -887,15 +890,28 @@ window.Quarto = {
 </header>
 
 
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>TODO : udpate project documentation (REAMDE?)</p>
+</div>
+</div>
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">Project overview</h2>
-<p>Projects are <a href="https://github.com/fs-ise/handbook/tree/main/research/projects">here</a>. <a href="https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml" target="_blank"><img src="https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml/badge.svg" class="img-fluid"></a></p>
+<p><a href="https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml" target="_blank"><img src="https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml/badge.svg" class="img-fluid"></a></p>
 <!--
 Project pages in this section are auto-synced from repository entries tagged
 with both `research` and `paper` via [`src/sync_projects_from_repos.py`](https://github.com/digital-work-lab/handbook/blob/main/src/sync_projects_from_repos.py){target=_blank}.
 -->
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Planned">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -904,7 +920,7 @@ with both `research` and `paper` via [`src/sync_projects_from_repos.py`](https:/
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="listing-projects-planned" class="quarto-listing quarto-listing-container-table">
 <table class="quarto-listing-table table">
@@ -919,35 +935,35 @@ Title
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="51" data-listing-title-sort="colrev-manuscript" data-listing-filename-sort="colrev-manuscript.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="51" data-listing-title-sort="colrev-manuscript" data-listing-filename-sort="colrev-manuscript.qmd">
 <td>
 <a href="../research/projects/colrev-manuscript.html" class="title listing-title">colrev-manuscript</a>
 </td>
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="data-work" data-listing-filename-sort="data-work.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="data-work" data-listing-filename-sort="data-work.qmd">
 <td>
 <a href="../research/projects/data-work.html" class="title listing-title">data-work</a>
 </td>
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="51" data-listing-title-sort="edu-res" data-listing-filename-sort="edu-res.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="51" data-listing-title-sort="edu-res" data-listing-filename-sort="edu-res.qmd">
 <td>
 <a href="../research/projects/edu-res.html" class="title listing-title">edu-res</a>
 </td>
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrtoolkit" data-listing-filename-sort="lrtoolkit.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrtoolkit" data-listing-filename-sort="lrtoolkit.qmd">
 <td>
 <a href="../research/projects/lrtoolkit.html" class="title listing-title">lrtoolkit</a>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="search-query-evaluation-paper" data-listing-filename-sort="search-query-evaluation-paper.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="search-query-evaluation-paper" data-listing-filename-sort="search-query-evaluation-paper.qmd">
 <td>
 <a href="../research/projects/search-query-evaluation-paper.html" class="title listing-title">search-query-evaluation-paper</a>
 </td>
@@ -962,7 +978,7 @@ Title
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Writing">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -971,7 +987,7 @@ Title
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="listing-projects-writing" class="quarto-listing quarto-listing-container-table">
 <table class="quarto-listing-table table">
@@ -986,49 +1002,49 @@ Title
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="51" data-listing-title-sort="ai-agents" data-listing-filename-sort="ai-agents.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1765782742923" data-listing-reading-time-sort="1" data-listing-word-count-sort="51" data-listing-title-sort="ai-agents" data-listing-filename-sort="ai-agents.qmd">
 <td>
 <a href="../research/projects/ai-agents.html" class="title listing-title">ai-agents</a>
 </td>
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="alg-org" data-listing-filename-sort="alg-org.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="alg-org" data-listing-filename-sort="alg-org.qmd">
 <td>
 <a href="../research/projects/alg-org.html" class="title listing-title">alg-org</a>
 </td>
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="68" data-listing-title-sort="dec-proc-ex" data-listing-filename-sort="dec-proc-ex.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="68" data-listing-title-sort="dec-proc-ex" data-listing-filename-sort="dec-proc-ex.qmd">
 <td>
 <a href="../research/projects/dec-proc-ex.html" class="title listing-title">dec-proc-ex</a>
 </td>
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="52" data-listing-title-sort="lr-dedupe-benchmark" data-listing-filename-sort="lr-dedupe-benchmark.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="52" data-listing-title-sort="lr-dedupe-benchmark" data-listing-filename-sort="lr-dedupe-benchmark.qmd">
 <td>
 <a href="../research/projects/lr-dedupe-benchmark.html" class="title listing-title">lr-dedupe-benchmark</a>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="52" data-listing-title-sort="lr-search" data-listing-filename-sort="lr-search.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="52" data-listing-title-sort="lr-search" data-listing-filename-sort="lr-search.qmd">
 <td>
 <a href="../research/projects/lr-search.html" class="title listing-title">lr-search</a>
 </td>
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrmhealthcardiacrehab" data-listing-filename-sort="lrmhealthcardiacrehab.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrmhealthcardiacrehab" data-listing-filename-sort="lrmhealthcardiacrehab.qmd">
 <td>
 <a href="../research/projects/lrmhealthcardiacrehab.html" class="title listing-title">lrmhealthcardiacrehab</a>
 </td>
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="50" data-listing-title-sort="olm-signalling" data-listing-filename-sort="olm-signalling.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="50" data-listing-title-sort="olm-signalling" data-listing-filename-sort="olm-signalling.qmd">
 <td>
 <a href="../research/projects/olm-signalling.html" class="title listing-title">olm-signalling</a>
 </td>
@@ -1043,7 +1059,7 @@ Title
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Revising">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1052,7 +1068,7 @@ Title
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="listing-projects-revising" class="quarto-listing quarto-listing-container-table">
 <table class="quarto-listing-table table">
@@ -1067,21 +1083,21 @@ Title
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="git-collaboration" data-listing-filename-sort="git-collaboration.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="git-collaboration" data-listing-filename-sort="git-collaboration.qmd">
 <td>
 <a href="../research/projects/git-collaboration.html" class="title listing-title">git-collaboration</a>
 </td>
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="lrdm" data-listing-filename-sort="lrdm.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="lrdm" data-listing-filename-sort="lrdm.qmd">
 <td>
 <a href="../research/projects/lrdm.html" class="title listing-title">lrdm</a>
 </td>
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="73" data-listing-title-sort="teapad" data-listing-filename-sort="teapad.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="73" data-listing-title-sort="teapad" data-listing-filename-sort="teapad.qmd">
 <td>
 <a href="../research/projects/teapad.html" class="title listing-title">teapad</a>
 </td>
@@ -1096,7 +1112,7 @@ Title
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Under review">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1105,7 +1121,7 @@ Title
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="listing-projects-under-review" class="quarto-listing quarto-listing-container-table">
 <table class="quarto-listing-table table">
@@ -1120,35 +1136,35 @@ Title
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="57" data-listing-title-sort="beals" data-listing-filename-sort="beals.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="57" data-listing-title-sort="beals" data-listing-filename-sort="beals.qmd">
 <td>
 <a href="../research/projects/beals.html" class="title listing-title">beals</a>
 </td>
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="44" data-listing-title-sort="dprelations" data-listing-filename-sort="dprelations.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="44" data-listing-title-sort="dprelations" data-listing-filename-sort="dprelations.qmd">
 <td>
 <a href="../research/projects/dprelations.html" class="title listing-title">dprelations</a>
 </td>
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="69" data-listing-title-sort="genailr" data-listing-filename-sort="genailr.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="69" data-listing-title-sort="genailr" data-listing-filename-sort="genailr.qmd">
 <td>
 <a href="../research/projects/genailr.html" class="title listing-title">genailr</a>
 </td>
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="54" data-listing-title-sort="lab-handbooks" data-listing-filename-sort="lab-handbooks.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="54" data-listing-title-sort="lab-handbooks" data-listing-filename-sort="lab-handbooks.qmd">
 <td>
 <a href="../research/projects/lab-handbooks.html" class="title listing-title">lab-handbooks</a>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="82" data-listing-title-sort="search-query-paper" data-listing-filename-sort="search-query-paper.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="82" data-listing-title-sort="search-query-paper" data-listing-filename-sort="search-query-paper.qmd">
 <td>
 <a href="../research/projects/search-query-paper.html" class="title listing-title">search-query-paper</a>
 </td>
@@ -1163,7 +1179,7 @@ Title
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Published">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1172,7 +1188,7 @@ Title
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="listing-projects-published" class="quarto-listing quarto-listing-container-table">
 <table class="quarto-listing-table table">
@@ -1187,105 +1203,105 @@ Title
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="67" data-listing-title-sort="aicompetencemed" data-listing-filename-sort="aicompetencemed.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1765782742923" data-listing-reading-time-sort="1" data-listing-word-count-sort="67" data-listing-title-sort="aicompetencemed" data-listing-filename-sort="aicompetencemed.qmd">
 <td>
 <a href="../research/projects/aicompetencemed.html" class="title listing-title">aicompetencemed</a>
 </td>
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="57" data-listing-title-sort="ailr" data-listing-filename-sort="ailr.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1765782742923" data-listing-reading-time-sort="1" data-listing-word-count-sort="57" data-listing-title-sort="ailr" data-listing-filename-sort="ailr.qmd">
 <td>
 <a href="../research/projects/ailr.html" class="title listing-title">ailr</a>
 </td>
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1765708408100" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="bib-dedupe" data-listing-filename-sort="bib-dedupe.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="bib-dedupe" data-listing-filename-sort="bib-dedupe.qmd">
 <td>
 <a href="../research/projects/bib-dedupe.html" class="title listing-title">bib-dedupe</a>
 </td>
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="70" data-listing-title-sort="dpkw" data-listing-filename-sort="dpkw.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="70" data-listing-title-sort="dpkw" data-listing-filename-sort="dpkw.qmd">
 <td>
 <a href="../research/projects/dpkw.html" class="title listing-title">dpkw</a>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="56" data-listing-title-sort="git-intro" data-listing-filename-sort="git-intro.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="56" data-listing-title-sort="git-intro" data-listing-filename-sort="git-intro.qmd">
 <td>
 <a href="../research/projects/git-intro.html" class="title listing-title">git-intro</a>
 </td>
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="healthcareai" data-listing-filename-sort="healthcareai.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="48" data-listing-title-sort="healthcareai" data-listing-filename-sort="healthcareai.qmd">
 <td>
 <a href="../research/projects/healthcareai.html" class="title listing-title">healthcareai</a>
 </td>
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="lrnlpimpact" data-listing-filename-sort="lrnlpimpact.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="lrnlpimpact" data-listing-filename-sort="lrnlpimpact.qmd">
 <td>
 <a href="../research/projects/lrnlpimpact.html" class="title listing-title">lrnlpimpact</a>
 </td>
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrreadingstrategy" data-listing-filename-sort="lrreadingstrategy.qmd">
+<tr data-index="7" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrreadingstrategy" data-listing-filename-sort="lrreadingstrategy.qmd">
 <td>
 <a href="../research/projects/lrreadingstrategy.html" class="title listing-title">lrreadingstrategy</a>
 </td>
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="50" data-listing-title-sort="lrs-impact-uniformity" data-listing-filename-sort="lrs-impact-uniformity.qmd">
+<tr data-index="8" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="50" data-listing-title-sort="lrs-impact-uniformity" data-listing-filename-sort="lrs-impact-uniformity.qmd">
 <td>
 <a href="../research/projects/lrs-impact-uniformity.html" class="title listing-title">lrs-impact-uniformity</a>
 </td>
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="47" data-listing-title-sort="lrs-theory-impact" data-listing-filename-sort="lrs-theory-impact.qmd">
+<tr data-index="9" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="47" data-listing-title-sort="lrs-theory-impact" data-listing-filename-sort="lrs-theory-impact.qmd">
 <td>
 <a href="../research/projects/lrs-theory-impact.html" class="title listing-title">lrs-theory-impact</a>
 </td>
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrtracker" data-listing-filename-sort="lrtracker.qmd">
+<tr data-index="10" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="49" data-listing-title-sort="lrtracker" data-listing-filename-sort="lrtracker.qmd">
 <td>
 <a href="../research/projects/lrtracker.html" class="title listing-title">lrtracker</a>
 </td>
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="66" data-listing-title-sort="platform-kwork-lr" data-listing-filename-sort="platform-kwork-lr.qmd">
+<tr data-index="11" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="66" data-listing-title-sort="platform-kwork-lr" data-listing-filename-sort="platform-kwork-lr.qmd">
 <td>
 <a href="../research/projects/platform-kwork-lr.html" class="title listing-title">platform-kwork-lr</a>
 </td>
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="platform-lr" data-listing-filename-sort="platform-lr.qmd">
+<tr data-index="12" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="platform-lr" data-listing-filename-sort="platform-lr.qmd">
 <td>
 <a href="../research/projects/platform-lr.html" class="title listing-title">platform-lr</a>
 </td>
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="55" data-listing-title-sort="theory-elaboration" data-listing-filename-sort="theory-elaboration.qmd">
+<tr data-index="13" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="55" data-listing-title-sort="theory-elaboration" data-listing-filename-sort="theory-elaboration.qmd">
 <td>
 <a href="../research/projects/theory-elaboration.html" class="title listing-title">theory-elaboration</a>
 </td>
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1765708408101" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="theory-elaboration-manuscript" data-listing-filename-sort="theory-elaboration-manuscript.qmd">
+<tr data-index="14" data-listing-file-modified-sort="1765782742924" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="theory-elaboration-manuscript" data-listing-filename-sort="theory-elaboration-manuscript.qmd">
 <td>
 <a href="../research/projects/theory-elaboration-manuscript.html" class="title listing-title">theory-elaboration-manuscript</a>
 </td>
@@ -1299,8 +1315,9 @@ Title
 </div>
 </div>
 </div>
-<section id="project-states" class="level3">
-<h3 class="anchored" data-anchor-id="project-states">Project states</h3>
+</section>
+<section id="project-states" class="level2">
+<h2 class="anchored" data-anchor-id="project-states">Project states</h2>
 <p>Projecs and can be in the following states:</p>
 <div class="text-center">
 <div class="cell" data-layout-align="default">
@@ -1330,14 +1347,13 @@ Title
 </div>
 </div>
 </section>
-</section>
 <section id="from-ideas-to-projects" class="level2">
 <h2 class="anchored" data-anchor-id="from-ideas-to-projects">From ideas to projects</h2>
 <section id="ideas" class="level3">
 <h3 class="anchored" data-anchor-id="ideas">Ideas</h3>
 <ul>
 <li>Research ideas should be formulated in relatively specific concept (markdown) files.</li>
-<li>Stored in a personal or shared repository (such as the <a href="https://github.com/digital-work-lab/work_hub" target="_blank">work_hub</a>).</li>
+<li>Stored in a personal or shared repository (such as the <a href="https://github.com/digital-work-lab/work-hub" target="_blank">work-hub</a>).</li>
 <li>Yaml header:</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -1346,36 +1362,37 @@ Title
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Summary of the idea (in Markdown)...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled" title="Example: ideas">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example: ideas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://intranet.neuro.polymtl.ca/ideas-for-cool-projects.html" target="_blank">NeuroPoly</a></p>
+</div>
+</div>
+</div>
 </section>
 <section id="selection" class="level3">
 <h3 class="anchored" data-anchor-id="selection">Selection</h3>
 <ul>
-<li>Consider concepts with <code>status: concept</code> in personal or shared repositories (such as the <a href="https://github.com/digital-work-lab/work_hub" target="_blank">work_hub</a>).</li>
+<li>Consider concepts with <code>status: concept</code> in personal or shared repositories (such as the <a href="https://github.com/digital-work-lab/work-hub" target="_blank">work-hub</a>).</li>
 </ul>
 <p>Can be searched in Obsidian:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">"status":concept</span><span class="co">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>Consider fit with <a href="20.01.goals">research areas</a></li>
+<li>Consider fit with <a href="goals.html">research areas</a></li>
 <li>Consider resources (current project workload, availability of collaborators etc.)</li>
 </ul>
 </section>
 <section id="creation" class="level3">
 <h3 class="anchored" data-anchor-id="creation">Creation</h3>
-<div class="callout callout-style-default callout-note callout-titled" title="TODO">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Create file here? https://github.com/fs-ise/handbook/tree/main/research/projects</p>
-<p>Link template</p>
-</div>
-</div>
-<p><a href="repo_setup.html"><img src="https://img.shields.io/badge/Create-New%20Project-blue.png" class="img-fluid"></a></p>
 <div class="callout callout-style-default callout-resource callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1387,23 +1404,98 @@ Title
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>All our research repositories on <a href="https://github.com/orgs/digital-work-lab/repositories?q=topic%3Aresearch">GitHub</a>{: target=“_blank”}.</li>
-<li>Projects are in <a href="25-projects.html">25-Projects</a></li>
+<li>Projects are curated in the <a href="https://github.com/fs-ise/handbook/blob/main/data/projects.yml">data/projects.yml</a>.</li>
+<li>Pages are automatically generated <a href="https://github.com/fs-ise/handbook/tree/main/research/projects">here</a>.</li>
+<li>All our research repositories on <a href="https://github.com/orgs/fs-ise/repositories?q=topic%3Aresearch" target="_blank">GitHub</a>.</li>
 </ul>
 </div>
 </div>
+<div class="text-center">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  P["Project (umbrella)&lt;br/&gt;single entry in &lt;code&gt;data/projects.yml&lt;/code&gt;"] --&gt; N["Naming rule:&lt;br/&gt;&lt;b&gt;&amp;lt;project-acronym&amp;gt;&lt;/b&gt; is the prefix of all related repos&lt;br/&gt;(from &lt;code&gt;projects.yml&lt;/code&gt;)"]
+
+  N --&gt; R1["&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-paper&lt;br/&gt;(paper repo)"]
+  N --&gt; R2["&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-data&lt;br/&gt;(dataset)"]
+  N --&gt; R3["&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-software&lt;br/&gt;(software/package)"]
+  N --&gt; R4["&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-materials&lt;br/&gt;(materials, slides, website)"]
+
+  subgraph "Work continues here"
+    direction TB
+    R1
+    R2
+    R3
+    R4
+  end
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<p><a href="https://github.com/fs-ise/handbook/blob/main/data/projects.yml"><img src="https://img.shields.io/badge/Create-New%20Project-blue.png" class="img-fluid"></a></p>
+<p>Set up a <a href="repo_setup.html">repo setup</a></p>
 </section>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><a href="https://intranet.neuro.polymtl.ca/ideas-for-cool-projects.html" target="_blank">Example</a></li>
-</ul>
+<section id="project-management" class="level2">
+<h2 class="anchored" data-anchor-id="project-management">Project management</h2>
+<section id="access" class="level3">
+<h3 class="anchored" data-anchor-id="access">Access</h3>
+<p>To give access to a repository, navigate to the repository settings (collaborators).</p>
+</section>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<p>Notes on project management are added to the README.md file of the repository. Expected contributions can be specified using <a href="https://credit.niso.org/" target="_blank">CRediT</a>. The following can be used as a template:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>**Research project title (abbreviation)**</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Target: Journal A, B</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Contributors:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contributor A (initials): Conceptualization, Writing - original draft, Writing - review &amp; editing, Supervision</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contributor B (initials): Data Curation, Writing - review &amp; editing</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>Instructions for <span class="co">[</span><span class="ot">setup</span><span class="co">](link)</span> and building the paper:</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>make pdf</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Log</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>Next steps:</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> (initials): Taks A</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> (initials): Task B</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## CW1</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">X</span><span class="co">]</span> Task C</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="project-status" class="level3">
+<h3 class="anchored" data-anchor-id="project-status">Project status</h3>
+<p>To update the project status, change the <code>status</code> field in line with the <a href="#project-states">project states</a>. Add relevant project_history.</p>
 
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1894,174 +1986,236 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Projects"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-planned</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "planned"</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-writing</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "writing"</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-under-review</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "under-review"</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-revising</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "revising"</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-published</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "published"</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project overview</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>Projects are <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/research/projects)</span>. </span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml/badge.svg)</span><span class="co">](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml)</span>{target=_blank} </span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="co">Project pages in this section are auto-synced from repository entries tagged</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="co">with both `research` and `paper` via [`src/sync_projects_from_repos.py`](https://github.com/digital-work-lab/handbook/blob/main/src/sync_projects_from_repos.py){target=_blank}.</span></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Planned" collapse=true}</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>::: {#projects-planned}</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Writing" collapse=false}</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>::: {#projects-writing}</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Revising" collapse=false}</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>::: {#projects-revising}</span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Under review" collapse=false}</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>::: {#projects-under-review}</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Published" collapse=true}</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>::: {#projects-published}</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="fu">### Project states</span></span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>Projecs and can be in the following states:</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>::: {.text-center}</span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>    subgraph Projects</span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>        Concept([<span class="ot">"</span><span class="st">Concept</span><span class="ot">"</span>]) -.-&gt; Writing([<span class="ot">"</span><span class="st">Writing</span><span class="ot">"</span>])</span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>        Writing --&gt; OnHold([<span class="ot">"</span><span class="st">On hold</span><span class="ot">"</span>])</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>        OnHold --&gt; Writing</span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>        OnHold -.-&gt; Abandoned([<span class="ot">"</span><span class="st">Abandoned</span><span class="ot">"</span>])</span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>        Writing ==&gt; UnderReview([<span class="ot">"</span><span class="st">Under review</span><span class="ot">"</span>])</span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>        Revising -.-&gt; OnHold</span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>        Revising ==&gt; UnderReview</span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>        UnderReview ==&gt; Revising([<span class="ot">"</span><span class="st">Revising</span><span class="ot">"</span>])</span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>        Revising ==&gt; Published([<span class="ot">"</span><span class="st">Published</span><span class="ot">"</span>])</span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>    style Projects fill:white,stroke:<span class="co">#333,stroke-width:3px</span></span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="fu">## From ideas to projects</span></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ideas</span></span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Research ideas should be formulated in relatively specific concept (markdown) files.</span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stored in a personal or shared repository (such as the <span class="co">[</span><span class="ot">work_hub</span><span class="co">](https://github.com/digital-work-lab/work_hub)</span>{target=_blank}).</span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Yaml header:</span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>status: concept</span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>Summary of the idea (in Markdown)...</span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a><span class="fu">### Selection</span></span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider concepts with <span class="in">`status: concept`</span> in personal or shared repositories (such as the <span class="co">[</span><span class="ot">work_hub</span><span class="co">](https://github.com/digital-work-lab/work_hub)</span>{target=_blank}).</span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>Can be searched in Obsidian:</span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">"status":concept</span><span class="co">]</span></span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider fit with <span class="co">[</span><span class="ot">research areas</span><span class="co">](20.01.goals)</span></span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider resources (current project workload, availability of collaborators etc.)</span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creation</span></span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="TODO"}</span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>Create file here? https://github.com/fs-ise/handbook/tree/main/research/projects</span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>Link template</span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![](https://img.shields.io/badge/Create-New%20Project-blue)</span><span class="co">](repo_setup.html)</span></span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>::: resource</span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All our research repositories on <span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com/orgs/digital-work-lab/repositories?q=topic%3Aresearch)</span>{: target="_blank"}.</span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Projects are in <span class="co">[</span><span class="ot">25-Projects</span><span class="co">](25-projects.html)</span></span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Example</span><span class="co">](https://intranet.neuro.polymtl.ca/ideas-for-cool-projects.html)</span>{target=_blank}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Projects"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-planned</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "planned"</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-writing</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "writing"</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-under-review</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "under-review"</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-revising</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "revising"</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: projects-published</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="co">    contents: projects</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co">    type: table</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [title]</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co">    sort-ui: false</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="co">    filter-ui: false</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="co">    include:</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="co">      status: "published"</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>TODO : udpate project documentation (REAMDE?)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project overview</span></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml/badge.svg)</span><span class="co">](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml)</span>{target=_blank} </span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="co">Project pages in this section are auto-synced from repository entries tagged</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="co">with both `research` and `paper` via [`src/sync_projects_from_repos.py`](https://github.com/digital-work-lab/handbook/blob/main/src/sync_projects_from_repos.py){target=_blank}.</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Planned" collapse=true}</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>::: {#projects-planned}</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Writing" collapse=false}</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>::: {#projects-writing}</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Revising" collapse=false}</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>::: {#projects-revising}</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Under review" collapse=false}</span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>::: {#projects-under-review}</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false title="Published" collapse=true}</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>::: {#projects-published}</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project states</span></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>Projecs and can be in the following states:</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>::: {.text-center}</span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>    subgraph Projects</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>        Concept([<span class="ot">"</span><span class="st">Concept</span><span class="ot">"</span>]) -.-&gt; Writing([<span class="ot">"</span><span class="st">Writing</span><span class="ot">"</span>])</span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>        Writing --&gt; OnHold([<span class="ot">"</span><span class="st">On hold</span><span class="ot">"</span>])</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>        OnHold --&gt; Writing</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>        OnHold -.-&gt; Abandoned([<span class="ot">"</span><span class="st">Abandoned</span><span class="ot">"</span>])</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>        Writing ==&gt; UnderReview([<span class="ot">"</span><span class="st">Under review</span><span class="ot">"</span>])</span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>        Revising -.-&gt; OnHold</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>        Revising ==&gt; UnderReview</span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>        UnderReview ==&gt; Revising([<span class="ot">"</span><span class="st">Revising</span><span class="ot">"</span>])</span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>        Revising ==&gt; Published([<span class="ot">"</span><span class="st">Published</span><span class="ot">"</span>])</span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>    style Projects fill:white,stroke:<span class="co">#333,stroke-width:3px</span></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a><span class="fu">## From ideas to projects</span></span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ideas</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Research ideas should be formulated in relatively specific concept (markdown) files.</span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stored in a personal or shared repository (such as the <span class="co">[</span><span class="ot">work-hub</span><span class="co">](https://github.com/digital-work-lab/work-hub)</span>{target=_blank}).</span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Yaml header:</span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>status: concept</span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>Summary of the idea (in Markdown)...</span>
+<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Example: ideas" collapse=true}</span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">NeuroPoly</span><span class="co">](https://intranet.neuro.polymtl.ca/ideas-for-cool-projects.html)</span>{target=_blank}</span>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a><span class="fu">### Selection</span></span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider concepts with <span class="in">`status: concept`</span> in personal or shared repositories (such as the <span class="co">[</span><span class="ot">work-hub</span><span class="co">](https://github.com/digital-work-lab/work-hub)</span>{target=_blank}).</span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>Can be searched in Obsidian:</span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">"status":concept</span><span class="co">]</span></span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider fit with <span class="co">[</span><span class="ot">research areas</span><span class="co">](goals.html)</span></span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider resources (current project workload, availability of collaborators etc.)</span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creation</span></span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a>::: resource</span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Projects are curated in the <span class="co">[</span><span class="ot">data/projects.yml</span><span class="co">](https://github.com/fs-ise/handbook/blob/main/data/projects.yml)</span>.</span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pages are automatically generated <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/research/projects)</span>.</span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All our research repositories on <span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com/orgs/fs-ise/repositories?q=topic%3Aresearch)</span>{target=_blank}.</span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a>::: {.text-center}</span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>  P[<span class="ot">"</span><span class="st">Project (umbrella)&lt;br/&gt;single entry in &lt;code&gt;data/projects.yml&lt;/code&gt;</span><span class="ot">"</span>] --&gt; N[<span class="ot">"</span><span class="st">Naming rule:&lt;br/&gt;&lt;b&gt;&amp;lt;project-acronym&amp;gt;&lt;/b&gt; is the prefix of all related repos&lt;br/&gt;(from &lt;code&gt;projects.yml&lt;/code&gt;)</span><span class="ot">"</span>]</span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>  N --&gt; R1[<span class="ot">"</span><span class="st">&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-paper&lt;br/&gt;(paper repo)</span><span class="ot">"</span>]</span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>  N --&gt; R2[<span class="ot">"</span><span class="st">&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-data&lt;br/&gt;(dataset)</span><span class="ot">"</span>]</span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>  N --&gt; R3[<span class="ot">"</span><span class="st">&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-software&lt;br/&gt;(software/package)</span><span class="ot">"</span>]</span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a>  N --&gt; R4[<span class="ot">"</span><span class="st">&lt;b&gt;&amp;lt;acronym&amp;gt;&lt;/b&gt;-materials&lt;br/&gt;(materials, slides, website)</span><span class="ot">"</span>]</span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a>  subgraph <span class="ot">"</span><span class="st">Work continues here</span><span class="ot">"</span></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a>    direction TB</span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a>    R1</span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a>    R2</span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a>    R3</span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a>    R4</span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>  end</span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![](https://img.shields.io/badge/Create-New%20Project-blue)</span><span class="co">](https://github.com/fs-ise/handbook/blob/main/data/projects.yml)</span></span>
+<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a>Set up a <span class="co">[</span><span class="ot">repo setup</span><span class="co">](repo_setup.html)</span></span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project management</span></span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a><span class="fu">### Access</span></span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a>To give access to a repository, navigate to the repository settings (collaborators).</span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="fu">### Documentation</span></span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a>Notes on project management are added to the README.md file of the repository.</span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a>Expected contributions can be specified using <span class="co">[</span><span class="ot">CRediT</span><span class="co">](https://credit.niso.org/)</span>{target=_blank}.</span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>The following can be used as a template:</span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a>**Research project title (abbreviation)**</span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>Target: Journal A, B</span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>Contributors:</span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contributor A (initials): Conceptualization, Writing - original draft, Writing - review &amp; editing, Supervision</span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contributor B (initials): Data Curation, Writing - review &amp; editing</span>
+<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>Instructions for <span class="co">[</span><span class="ot">setup</span><span class="co">](link)</span> and building the paper:</span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>make pdf</span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## Log</span></span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a>Next steps:</span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> (initials): Taks A</span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> (initials): Task B</span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a><span class="fu">## CW1</span></span>
+<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">X</span><span class="co">]</span> Task C</span>
+<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a><span class="in">:::</span></span>
+<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a><span class="in">### Project status</span></span>
+<span id="cb4-233"><a href="#cb4-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a><span class="in">To update the project status, change the `status` field in line with the [project states](#project-states). Add relevant project_history.</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

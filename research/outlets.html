@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -142,17 +153,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -434,18 +434,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">SOP</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research/ethics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ethics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research/improvement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Improvement</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -479,6 +467,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <div class="sidebar-item-container"> 
   <a href="../research/projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research/improvement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Improvement</span></a>
   </div>
 </li>
       </ul>
@@ -582,8 +576,14 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/literature.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Literature</span></a>
+  <a href="../research/pdf_collection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF collection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research/knowledge_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -683,7 +683,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <li><a href="#rankings" id="toc-rankings" class="nav-link" data-scroll-target="#rankings">Rankings</a></li>
   <li><a href="#library" id="toc-library" class="nav-link" data-scroll-target="#library">Library</a></li>
   <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
-  <li><a href="#pdf-collection" id="toc-pdf-collection" class="nav-link" data-scroll-target="#pdf-collection">PDF Collection</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/outlets.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -991,10 +990,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <ul>
 <li>See <a href="https://ezb.uni-regensburg.de/ezeit/index.phtml?bibid=UBB&amp;colors=7&amp;lang=de" target="_blank">EZB Universität Bamberg</a></li>
 </ul>
-</section>
-<section id="pdf-collection" class="level2">
-<h2 class="anchored" data-anchor-id="pdf-collection">PDF Collection</h2>
-<p>See <a href="{{ site.baseurl }}/docs/20-research/22-literature#journals-and-conferences">22-literature</a>.</p>
 
 
 <!-- -->
@@ -1593,12 +1588,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access</span></span>
 <span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>See <span class="co">[</span><span class="ot">EZB Universität Bamberg</span><span class="co">](https://ezb.uni-regensburg.de/ezeit/index.phtml?bibid=UBB&amp;colors=7&amp;lang=de)</span>{target=_blank}</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="fu">## PDF Collection</span></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">22-literature</span><span class="co">]({{ site.baseurl }}/docs/20-research/22-literature#journals-and-conferences)</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>See <span class="co">[</span><span class="ot">EZB Universität Bamberg</span><span class="co">](https://ezb.uni-regensburg.de/ezeit/index.phtml?bibid=UBB&amp;colors=7&amp;lang=de)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
