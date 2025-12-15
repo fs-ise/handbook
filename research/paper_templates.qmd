@@ -54,14 +54,13 @@ Option 1: Create a new repository
 - Do not refer to papers by their target journal (e.g., "the Journal of Information Technology paper")
 - Use labot to set up the paper:
 
-```
+```sh
 labot paper --init
 ```
 
-<details>
-  <summary>Manual setup</summary>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:digital-work-lab/paper-template.git
+::: {.callout-note title="Manual setup" collapse=true}
+```sh
+git clone git@github.com:digital-work-lab/paper-template.git
 # MANUALLY rename the folder using a short project title
 # remove the .git directory containing older versions
 rm -rf .git
@@ -87,13 +86,13 @@ git push -u origin main
 # MANUALLY invite coauthors/provide access to the remote repository
 # git clone template-repository
 # git clone https://github.com/citation-style-language/styles
-# MANUALLY symlink the templates and styles repos</code></pre></div><button type="button" aria-label="Copy code to clipboard"><svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg></button></div>
-
-</details>
+# MANUALLY symlink the templates and styles repos
+```
+:::
 
 Option 2: Contribute to an existing repository
 
-```shell
+```sh
 # pull repository
 git clone git@github.com:digital-work-lab/...
 pre-commit install
@@ -101,7 +100,7 @@ pre-commit install
 
 ### 2: Set up the paper production pipeline
 
-```shell
+```sh
 # Build the Docker container
 make build
 # MANUALLY select a citation style by updating the link at the beginning of the Makefile
@@ -113,7 +112,7 @@ make build
 
 ### 3: Build the paper
 
-```shell
+```sh
 make pdf
 make docx
 ```

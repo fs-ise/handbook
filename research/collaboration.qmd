@@ -54,7 +54,7 @@ Tutorials on git are available online ([1](https://learngitbranching.js.org/){ta
 - Check the git-diff (gitk) before committing changes.
 - Use the following commit message format (do not start commit message with #3):
 
-```shell
+```sh
 git commit -m 'address limitations [iss28]'
 ```
 
@@ -62,21 +62,21 @@ git commit -m 'address limitations [iss28]'
 - Create a single branch for issues that are related (e.g., group all issues referring to the introduction in the branch `update_introduction`).
 - Example:
 
-```shell
+```sh
 git switch main
 git checkout -b iss12
 ```
 
 - While working locally on the iss12, rebase it on main when the main branch has been updated by coauthors (for better management of the history):
 
-```shell
+```sh
 git switch iss12
 git rebase main
 ```
 
 - Once the branch is ready for review, revisions, and merging, share it:
 
-```shell
+```sh
 git push iss12
 # set the upstream branch as suggested
 ```
@@ -85,7 +85,7 @@ git push iss12
 - Discuss, revise and merge on shared branches (github.com).
 - Merge when changes have been confirmed:
 
-```shell
+```sh
 git switch main
 git merge --squash iss12
 git push
@@ -95,19 +95,19 @@ git push
 
 - Check out remote branch:
 
-```shell
+```sh
 git switch -c iss12 --track origin/iss12
 ```
 
 - When your repository has local changes (commits): pull-rebase to avoid unnecessary merge commits:
 
-```shell
+```sh
 git pull --rebase
 ```
 
 - When your repository has local changes (uncommitted): stash and pull-rebase:
 
-```shell
+```sh
 git stash
 git pull --rebase
 git stash apply

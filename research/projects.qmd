@@ -47,9 +47,12 @@ listing:
       status: "published"
 ---
 
+::: callout-note
+TODO : udpate project documentation (REAMDE?)
+:::
+
 ## Project overview
 
-Projects are [here](https://github.com/fs-ise/handbook/tree/main/research/projects). 
 [![](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml/badge.svg)](https://github.com/digital-work-lab/handbook/actions/workflows/sync-projects.yml){target=_blank} 
 
 <!--
@@ -93,8 +96,7 @@ with both `research` and `paper` via [`src/sync_projects_from_repos.py`](https:/
 
 :::
 
-
-### Project states
+## Project states
 
 Projecs and can be in the following states:
 
@@ -122,7 +124,7 @@ flowchart LR
 ### Ideas
 
 - Research ideas should be formulated in relatively specific concept (markdown) files.
-- Stored in a personal or shared repository (such as the [work_hub](https://github.com/digital-work-lab/work_hub){target=_blank}).
+- Stored in a personal or shared repository (such as the [work-hub](https://github.com/digital-work-lab/work-hub){target=_blank}).
 - Yaml header:
 
 ```markdown
@@ -134,10 +136,13 @@ status: concept
 Summary of the idea (in Markdown)...
 
 ```
+::: {.callout-note title="Example: ideas" collapse=true}
+[NeuroPoly](https://intranet.neuro.polymtl.ca/ideas-for-cool-projects.html){target=_blank}
+:::
 
 ### Selection
 
-- Consider concepts with `status: concept` in personal or shared repositories (such as the [work_hub](https://github.com/digital-work-lab/work_hub){target=_blank}).
+- Consider concepts with `status: concept` in personal or shared repositories (such as the [work-hub](https://github.com/digital-work-lab/work-hub){target=_blank}).
 
 Can be searched in Obsidian:
 
@@ -145,24 +150,81 @@ Can be searched in Obsidian:
 ["status":concept]
 ```
 
-- Consider fit with [research areas](20.01.goals)
+- Consider fit with [research areas](goals.html)
 - Consider resources (current project workload, availability of collaborators etc.)
 
 ### Creation
 
-::: {.callout-note title="TODO"}
-Create file here? https://github.com/fs-ise/handbook/tree/main/research/projects
-
-Link template
-:::
-
-[![](https://img.shields.io/badge/Create-New%20Project-blue)](repo_setup.html)
-  
 ::: resource
-- All our research repositories on [GitHub](https://github.com/orgs/digital-work-lab/repositories?q=topic%3Aresearch){: target="_blank"}.
-- Projects are in [25-Projects](25-projects.html)
+- Projects are curated in the [data/projects.yml](https://github.com/fs-ise/handbook/blob/main/data/projects.yml).
+- Pages are automatically generated [here](https://github.com/fs-ise/handbook/tree/main/research/projects).
+- All our research repositories on [GitHub](https://github.com/orgs/fs-ise/repositories?q=topic%3Aresearch){target=_blank}.
 :::
 
-## Resources
+::: {.text-center}
+```{mermaid}
+flowchart TB
+  P["Project (umbrella)<br/>single entry in <code>data/projects.yml</code>"] --> N["Naming rule:<br/><b>&lt;project-acronym&gt;</b> is the prefix of all related repos<br/>(from <code>projects.yml</code>)"]
 
-- [Example](https://intranet.neuro.polymtl.ca/ideas-for-cool-projects.html){target=_blank}
+  N --> R1["<b>&lt;acronym&gt;</b>-paper<br/>(paper repo)"]
+  N --> R2["<b>&lt;acronym&gt;</b>-data<br/>(dataset)"]
+  N --> R3["<b>&lt;acronym&gt;</b>-software<br/>(software/package)"]
+  N --> R4["<b>&lt;acronym&gt;</b>-materials<br/>(materials, slides, website)"]
+
+  subgraph "Work continues here"
+    direction TB
+    R1
+    R2
+    R3
+    R4
+  end
+```
+:::
+
+[![](https://img.shields.io/badge/Create-New%20Project-blue)](https://github.com/fs-ise/handbook/blob/main/data/projects.yml)
+  
+Set up a [repo setup](repo_setup.html)
+
+## Project management
+
+### Access
+
+To give access to a repository, navigate to the repository settings (collaborators).
+
+### Documentation
+
+Notes on project management are added to the README.md file of the repository.
+Expected contributions can be specified using [CRediT](https://credit.niso.org/){target=_blank}.
+The following can be used as a template:
+
+::: callout-note
+```markdown
+**Research project title (abbreviation)**
+
+Target: Journal A, B
+
+Contributors:
+
+- Contributor A (initials): Conceptualization, Writing - original draft, Writing - review & editing, Supervision
+- Contributor B (initials): Data Curation, Writing - review & editing
+
+Instructions for [setup](link) and building the paper:
+
+make pdf
+
+## Log
+
+Next steps:
+
+- [ ] (initials): Taks A
+- [ ] (initials): Task B
+
+## CW1
+
+- [X] Task C
+```
+:::
+
+### Project status
+
+To update the project status, change the `status` field in line with the [project states](#project-states). Add relevant project_history.
