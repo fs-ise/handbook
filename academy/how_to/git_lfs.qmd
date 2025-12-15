@@ -4,7 +4,7 @@ title: "Git LFS"
 
 ## Activation
 
-```
+```sh
 # once per machine
 git lfs install
 
@@ -21,10 +21,9 @@ git push
 
 ## Migration with git-filter-repo (PDFs committed without lfs)
 
-```
+```sh
 # install git-filter-repo
 sudo apt install git-filter-repo
-
 
 # migrate pdfs
 git lfs migrate import --include="*.pdf"

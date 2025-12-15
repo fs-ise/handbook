@@ -4,19 +4,18 @@ title: "File conversion"
 
 ## Word-to-Markdown
 
-```
+```sh
 docker run --rm -v "$PWD":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md
 ```
 
 ## PPTX-to-Markdown
 
-```
+```sh
 pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --image-dir "images"
 ```
 
-
 ## Markdown-to-Word / Markdown-to-docx
 
-```
+```sh
 docker run --rm -u "$(id -u):$(id -g)"  -v "$PWD":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx
 ```

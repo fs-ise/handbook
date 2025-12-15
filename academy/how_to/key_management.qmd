@@ -4,25 +4,27 @@ title: "Key management"
 
 Store a key in the environment (for one session):
 
-```
+```sh
 export API_KEY="your-api-key"
 ```
 
 To store a key across sessions, add the `export API_KEY="your-api-key"` statement to `~/.bash_profile` or `~/.profile`.
 
-{: .info }
-> **Common key variables for local setup**
-> 
-> export OPENAI_KEY="XXX"  
-> export GITHUB_TOKEN="XXX"
+::: {.callout-note title="Common key variables for local setup"}
+```sh
+export OPENAI_KEY="XXX"  
+export GITHUB_TOKEN="XXX"
+```
+:::
 
 Access the key in Python:
 
-```
+```python
 import os
 
 api_key = os.environ.get('API_KEY')
 ```
 
-{: .info }
-> Advantage: confidential keys are not saved in the script and not shared with others.
+::: {.callout-note}
+Advantage: confidential keys are not saved in the script and not shared with others.
+:::
