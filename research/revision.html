@@ -131,17 +131,6 @@ div.csl-indent {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -153,15 +142,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -173,6 +162,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1052,7 +1052,7 @@ Note
 <section id="useful-phrases" class="level2">
 <h2 class="anchored" data-anchor-id="useful-phrases">Useful phrases</h2>
 <p>The following phrases can be useful to effectively communicate revisions and demonstrate appreciation for the reviewers’ feedback, ultimately increasing the chances of your manuscript’s acceptance.</p>
-<p><strong>Expressing Gratitude</strong></p>
+<p><strong>Expressing gratitude</strong></p>
 <ul>
 <li>We would like to thank the review team for their extensive efforts and constructive comments.</li>
 <li>We sincerely thank the AE for their always constructive, insightful, and helpful feedback.</li>
@@ -1060,56 +1060,56 @@ Note
 <li>We are grateful to the reviewer for their constructive comments.</li>
 <li>Once again, we would like to thank you so much for all your effort on our behalf.</li>
 </ul>
-<p><strong>Acknowledging Reviewers’ Positive Feedback</strong></p>
+<p><strong>Acknowledging reviewers’ positive feedback</strong></p>
 <ul>
 <li>Seeing that both reviewers and the Senior Editor were positive about the paper, we engaged in a significant revision following their guidance.</li>
 <li>We thank the reviewer for commending us on our review of the literature and for providing very constructive comments.</li>
 <li>We are delighted about the reviewer’s interest in and applause for our work.</li>
 </ul>
-<p><strong>Responding to Specific Comments</strong></p>
+<p><strong>Responding to specific comments</strong></p>
 <ul>
 <li>We carefully considered the feedback and outlined the specific changes implemented in response to each comment in this response document.</li>
 <li>We completely reworked our explanation of how …, which was not clear enough, as pointed out by R1.</li>
 <li>We aimed at a stronger grounding in extant work on … and clarifying our notion of …, as suggested by R2.</li>
 <li>We further improved our reasoning and justification for each individual aspect raised by R1.</li>
 </ul>
-<p><strong>Explaining Revisions</strong></p>
+<p><strong>Explaining r</strong></p>
 <ul>
 <li>We now include …, which provides an overview of our overall approach, explaining how our main concepts were developed and what sources were considered in each step.</li>
 <li>We further justified the exclusion of … from the scope, which is consistent with the Senior Editor’s recommendation.</li>
 <li>We updated the search for recent papers published in YYYY and extended the search parameters.</li>
 </ul>
-<p><strong>Justifying Changes</strong></p>
+<p><strong>Justifying changes</strong></p>
 <ul>
 <li>We believe there is a strong need for a clear conceptual/… understanding of ….</li>
 <li>We concur that our focus on XXX warrants stronger justification.</li>
 <li>To address this, we further emphasize that ….</li>
 </ul>
-<p><strong>Addressing Specific Issues</strong></p>
+<p><strong>Addressing specific issues</strong></p>
 <ul>
 <li>We agree that the process of … was not clear enough, creating confusion concerning ….</li>
 <li>We solve this puzzle by …</li>
 <li>We revised the XXX paragraph of the YYYY section as follows.</li>
 </ul>
-<p><strong>Emphasizing Improvements</strong></p>
+<p><strong>Emphasizing improvements</strong></p>
 <ul>
 <li>We updated the manuscript to explicitly justify our focus on IS journals and conferences (in the introduction and the methodology section).</li>
 <li>We double-checked the manuscript to drop unnecessary synonyms and define key terms.</li>
 <li>We polished all figures for better readability and addressed the remaining comments.</li>
 </ul>
-<p><strong>Highlighting Research Relevance</strong></p>
+<p><strong>Highlighting research relevance</strong></p>
 <ul>
 <li>Since we focus on an emergent topic with research output expected to grow significantly, we updated the search for recent papers.</li>
 <li>The main purpose of our literature review is to conceptualize XXX based on existing IS literature.</li>
 <li>To some degree, we offset the lag effect of research publication by including conference papers in our review.</li>
 </ul>
-<p><strong>Encouraging Positive Reception</strong></p>
+<p><strong>Encouraging positive reception</strong></p>
 <ul>
 <li>We hope that you share our understanding that we addressed all comments in a positive manner and remain committed to meeting the standards of Journal XXX.</li>
 <li>We hope the revised version of our paper resolves the concerns raised.</li>
 <li>We hope that you see some merit in these changes as well.</li>
 </ul>
-<p><strong>Alternative Phrases</strong></p>
+<p><strong>Alternative phrases</strong></p>
 <ul>
 <li>To reduce the length of our manuscript by about XXX pages, we scrutinized every section.</li>
 <li>It was a pleasure to see how much the paper has developed with the constructive feedback of the review team.</li>
@@ -1121,21 +1121,21 @@ Note
 <ul>
 <li><a href="../../../assets/Revision-Sheet.docx">Word template</a> for revisions in non-Git-based projects.</li>
 </ul>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+
+
+<!-- -->
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-PangThatcher2023" class="csl-entry" role="listitem">
 Pang, M. S., &amp; Thatcher, J. B. (2023). A practical guide for successful revisions and engagements with reviewers. <em>Journal of the Association for Information Systems</em>, <em>24</em>(2), 317–327. <a href="https://doi.org/10.17705/1jais.00797">https://doi.org/10.17705/1jais.00797</a>
 </div>
 <div id="ref-Rai2019" class="csl-entry" role="listitem">
 Rai, A. (2019). Editor’s comments: The first revision. <em>MIS Quarterly</em>, <em>43</em>(3), iii–viii. <a href="https://aisel.aisnet.org/misq/vol43/iss3/2/">https://aisel.aisnet.org/misq/vol43/iss3/2/</a>
 </div>
-</div>
-
-
-<!-- -->
-
-</section>
-
-</main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const today = new Date();
@@ -1870,7 +1870,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb7-245"><a href="#cb7-245" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-246"><a href="#cb7-246" aria-hidden="true" tabindex="-1"></a>The following phrases can be useful to effectively communicate revisions and demonstrate appreciation for the reviewers' feedback, ultimately increasing the chances of your manuscript's acceptance.</span>
 <span id="cb7-247"><a href="#cb7-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-248"><a href="#cb7-248" aria-hidden="true" tabindex="-1"></a>**Expressing Gratitude**</span>
+<span id="cb7-248"><a href="#cb7-248" aria-hidden="true" tabindex="-1"></a>**Expressing gratitude**</span>
 <span id="cb7-249"><a href="#cb7-249" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-250"><a href="#cb7-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We would like to thank the review team for their extensive efforts and constructive comments.</span>
 <span id="cb7-251"><a href="#cb7-251" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We sincerely thank the AE for their always constructive, insightful, and helpful feedback.</span>
@@ -1878,56 +1878,56 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb7-253"><a href="#cb7-253" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We are grateful to the reviewer for their constructive comments.</span>
 <span id="cb7-254"><a href="#cb7-254" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Once again, we would like to thank you so much for all your effort on our behalf.</span>
 <span id="cb7-255"><a href="#cb7-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-256"><a href="#cb7-256" aria-hidden="true" tabindex="-1"></a>**Acknowledging Reviewers' Positive Feedback**</span>
+<span id="cb7-256"><a href="#cb7-256" aria-hidden="true" tabindex="-1"></a>**Acknowledging reviewers' positive feedback**</span>
 <span id="cb7-257"><a href="#cb7-257" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-258"><a href="#cb7-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Seeing that both reviewers and the Senior Editor were positive about the paper, we engaged in a significant revision following their guidance.</span>
 <span id="cb7-259"><a href="#cb7-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We thank the reviewer for commending us on our review of the literature and for providing very constructive comments.</span>
 <span id="cb7-260"><a href="#cb7-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We are delighted about the reviewer's interest in and applause for our work.</span>
 <span id="cb7-261"><a href="#cb7-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-262"><a href="#cb7-262" aria-hidden="true" tabindex="-1"></a>**Responding to Specific Comments**</span>
+<span id="cb7-262"><a href="#cb7-262" aria-hidden="true" tabindex="-1"></a>**Responding to specific comments**</span>
 <span id="cb7-263"><a href="#cb7-263" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-264"><a href="#cb7-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We carefully considered the feedback and outlined the specific changes implemented in response to each comment in this response document.</span>
 <span id="cb7-265"><a href="#cb7-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We completely reworked our explanation of how ..., which was not clear enough, as pointed out by R1.</span>
 <span id="cb7-266"><a href="#cb7-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We aimed at a stronger grounding in extant work on ... and clarifying our notion of ..., as suggested by R2.</span>
 <span id="cb7-267"><a href="#cb7-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We further improved our reasoning and justification for each individual aspect raised by R1.</span>
 <span id="cb7-268"><a href="#cb7-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a>**Explaining Revisions**</span>
+<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a>**Explaining r**</span>
 <span id="cb7-270"><a href="#cb7-270" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-271"><a href="#cb7-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We now include ..., which provides an overview of our overall approach, explaining how our main concepts were developed and what sources were considered in each step.</span>
 <span id="cb7-272"><a href="#cb7-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We further justified the exclusion of ... from the scope, which is consistent with the Senior Editor’s recommendation.</span>
 <span id="cb7-273"><a href="#cb7-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We updated the search for recent papers published in YYYY and extended the search parameters.</span>
 <span id="cb7-274"><a href="#cb7-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-275"><a href="#cb7-275" aria-hidden="true" tabindex="-1"></a>**Justifying Changes**</span>
+<span id="cb7-275"><a href="#cb7-275" aria-hidden="true" tabindex="-1"></a>**Justifying changes**</span>
 <span id="cb7-276"><a href="#cb7-276" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-277"><a href="#cb7-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We believe there is a strong need for a clear conceptual/... understanding of ....</span>
 <span id="cb7-278"><a href="#cb7-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We concur that our focus on XXX warrants stronger justification.</span>
 <span id="cb7-279"><a href="#cb7-279" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To address this, we further emphasize that ....</span>
 <span id="cb7-280"><a href="#cb7-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-281"><a href="#cb7-281" aria-hidden="true" tabindex="-1"></a>**Addressing Specific Issues**</span>
+<span id="cb7-281"><a href="#cb7-281" aria-hidden="true" tabindex="-1"></a>**Addressing specific issues**</span>
 <span id="cb7-282"><a href="#cb7-282" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-283"><a href="#cb7-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We agree that the process of ... was not clear enough, creating confusion concerning ....</span>
 <span id="cb7-284"><a href="#cb7-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We solve this puzzle by ...</span>
 <span id="cb7-285"><a href="#cb7-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We revised the XXX paragraph of the YYYY section as follows.</span>
 <span id="cb7-286"><a href="#cb7-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-287"><a href="#cb7-287" aria-hidden="true" tabindex="-1"></a>**Emphasizing Improvements**</span>
+<span id="cb7-287"><a href="#cb7-287" aria-hidden="true" tabindex="-1"></a>**Emphasizing improvements**</span>
 <span id="cb7-288"><a href="#cb7-288" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-289"><a href="#cb7-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We updated the manuscript to explicitly justify our focus on IS journals and conferences (in the introduction and the methodology section).</span>
 <span id="cb7-290"><a href="#cb7-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We double-checked the manuscript to drop unnecessary synonyms and define key terms.</span>
 <span id="cb7-291"><a href="#cb7-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We polished all figures for better readability and addressed the remaining comments.</span>
 <span id="cb7-292"><a href="#cb7-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-293"><a href="#cb7-293" aria-hidden="true" tabindex="-1"></a>**Highlighting Research Relevance**</span>
+<span id="cb7-293"><a href="#cb7-293" aria-hidden="true" tabindex="-1"></a>**Highlighting research relevance**</span>
 <span id="cb7-294"><a href="#cb7-294" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-295"><a href="#cb7-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since we focus on an emergent topic with research output expected to grow significantly, we updated the search for recent papers.</span>
 <span id="cb7-296"><a href="#cb7-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The main purpose of our literature review is to conceptualize XXX based on existing IS literature.</span>
 <span id="cb7-297"><a href="#cb7-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To some degree, we offset the lag effect of research publication by including conference papers in our review.</span>
 <span id="cb7-298"><a href="#cb7-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-299"><a href="#cb7-299" aria-hidden="true" tabindex="-1"></a>**Encouraging Positive Reception**</span>
+<span id="cb7-299"><a href="#cb7-299" aria-hidden="true" tabindex="-1"></a>**Encouraging positive reception**</span>
 <span id="cb7-300"><a href="#cb7-300" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-301"><a href="#cb7-301" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We hope that you share our understanding that we addressed all comments in a positive manner and remain committed to meeting the standards of Journal XXX.</span>
 <span id="cb7-302"><a href="#cb7-302" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We hope the revised version of our paper resolves the concerns raised.</span>
 <span id="cb7-303"><a href="#cb7-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We hope that you see some merit in these changes as well.</span>
 <span id="cb7-304"><a href="#cb7-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-305"><a href="#cb7-305" aria-hidden="true" tabindex="-1"></a>**Alternative Phrases**</span>
+<span id="cb7-305"><a href="#cb7-305" aria-hidden="true" tabindex="-1"></a>**Alternative phrases**</span>
 <span id="cb7-306"><a href="#cb7-306" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-307"><a href="#cb7-307" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To reduce the length of our manuscript by about XXX pages, we scrutinized every section.</span>
 <span id="cb7-308"><a href="#cb7-308" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It was a pleasure to see how much the paper has developed with the constructive feedback of the review team.</span>
@@ -1935,11 +1935,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb7-310"><a href="#cb7-310" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-311"><a href="#cb7-311" aria-hidden="true" tabindex="-1"></a><span class="fu"># Links and materials</span></span>
 <span id="cb7-312"><a href="#cb7-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-313"><a href="#cb7-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Word template</span><span class="co">](../../../assets/Revision-Sheet.docx)</span> for revisions in non-Git-based projects.</span>
-<span id="cb7-314"><a href="#cb7-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-315"><a href="#cb7-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-316"><a href="#cb7-316" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb7-317"><a href="#cb7-317" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb7-313"><a href="#cb7-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Word template</span><span class="co">](../../../assets/Revision-Sheet.docx)</span> for revisions in non-Git-based projects.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

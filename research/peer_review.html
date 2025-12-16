@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -111,15 +131,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -144,15 +164,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -698,10 +718,10 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#review-structure" id="toc-review-structure" class="nav-link active" data-scroll-target="#review-structure">Review Structure</a></li>
-  <li><a href="#step-1-invitation-to-review" id="toc-step-1-invitation-to-review" class="nav-link" data-scroll-target="#step-1-invitation-to-review">Step 1: Invitation to Review</a></li>
-  <li><a href="#step-2-first-overview" id="toc-step-2-first-overview" class="nav-link" data-scroll-target="#step-2-first-overview">Step 2: First Overview</a></li>
-  <li><a href="#step-3-full-read" id="toc-step-3-full-read" class="nav-link" data-scroll-target="#step-3-full-read">Step 3: Full Read</a></li>
+  <li><a href="#review-structure" id="toc-review-structure" class="nav-link active" data-scroll-target="#review-structure">Review structure</a></li>
+  <li><a href="#step-1-invitation-to-review" id="toc-step-1-invitation-to-review" class="nav-link" data-scroll-target="#step-1-invitation-to-review">Step 1: Invitation to review</a></li>
+  <li><a href="#step-2-first-overview" id="toc-step-2-first-overview" class="nav-link" data-scroll-target="#step-2-first-overview">Step 2: First overview</a></li>
+  <li><a href="#step-3-full-read" id="toc-step-3-full-read" class="nav-link" data-scroll-target="#step-3-full-read">Step 3: Full read</a></li>
   <li><a href="#step-4-writing" id="toc-step-4-writing" class="nav-link" data-scroll-target="#step-4-writing">Step 4: Writing</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
@@ -744,8 +764,8 @@ Warning
 </div>
 </div>
 <section id="review-structure" class="level2">
-<h2 class="anchored" data-anchor-id="review-structure">Review Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 0: Review Details</span></span>
+<h2 class="anchored" data-anchor-id="review-structure">Review structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 0: Review details</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 1: Introduction (3 paragraphs)</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -753,12 +773,12 @@ Warning
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 2:** Contribution to the journal, ideally with reference to prior work.</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 3:** Publishability evaluation and recommendation.</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 2: Major Issues (numbered items)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 2: Major issues (numbered items)</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 3: Minor Issues (indicate line, figure, table numbers)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 3: Minor issues (indicate line, figure, table numbers)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="step-1-invitation-to-review" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-invitation-to-review">Step 1: Invitation to Review</h2>
+<h2 class="anchored" data-anchor-id="step-1-invitation-to-review">Step 1: Invitation to review</h2>
 <ul class="task-list">
 <li><label><input type="checkbox">Read the abstract.</label></li>
 <li><label><input type="checkbox">Assess if your expertise qualifies you to critically evaluate the manuscript.</label></li>
@@ -769,7 +789,7 @@ Warning
 </ul>
 </section>
 <section id="step-2-first-overview" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-first-overview">Step 2: First Overview</h2>
+<h2 class="anchored" data-anchor-id="step-2-first-overview">Step 2: First overview</h2>
 <ul class="task-list">
 <li><p><label><input type="checkbox">Prepare a text file with the <a href="#review-structure">review structure</a>.</label></p></li>
 <li><p><label><input type="checkbox">Read the entire paper, noting motivation, approach, results, and conclusions.</label></p></li>
@@ -790,7 +810,7 @@ Warning
 </ul>
 </section>
 <section id="step-3-full-read" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-full-read">Step 3: Full Read</h2>
+<h2 class="anchored" data-anchor-id="step-3-full-read">Step 3: Full read</h2>
 <ul class="task-list">
 <li><p><label><input type="checkbox">Take detailed notes with references to section, line, figure, and table numbers.</label></p></li>
 <li><p><label><input type="checkbox">Read the manuscript in detail, section by section (Introduction, Methods, Results, etc.).</label></p></li>
@@ -834,37 +854,22 @@ Note
 <li><p><label><input type="checkbox">Include optional remarks to the editor.</label></p></li>
 <li><p><label><input type="checkbox">Submit the review using the provided platform.</label></p></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-note callout-titled" title="Constructive tone">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Constructive tone
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Constructive Tone</strong></p>
 <p>Always adopt a constructive tone when providing feedback during peer review. Frame comments in a way that helps the authors refine their work, offering actionable suggestions rather than vague criticisms. A respectful and supportive approach fosters collaboration and enhances the quality of academic discourse.</p>
 </div>
 </div>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<div class="references">
-<p>
-Sarker, S., Whitley, E. A., Goh, K. Y., Hong, Y., Mähring, M., Sanyal, P., … &amp; Zhao, H. (2023). Some thoughts on reviewing for Information Systems Research and other leading information systems journals. <i>Information Systems Research</i>, 34(4), 1321-1338. <a href="https://pubsonline.informs.org/doi/full/10.1287/isre.2023.editorial.v34.n4">link</a>
-</p>
-<p>
-Ragins, B. R. (2017). Editor’s comments: Raising the bar for developmental reviewing. <i>Academy of Management Review</i>, 42(4), 573-576. <a href="https://psycnet.apa.org/record/2017-47161-001">link</a>
-</p>
-<p>
-Davison, R. M. (2015). Editorial‐The Art of Constructive Reviewing. <i>Information Systems Journal</i>, 25(5), 429-432. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/isj.12083">link</a>
-</p>
-<p>
-Rai, A. (2016). Editor’s comments: writing a virtuous review. <i>MIS Quarterly</i>, 40(3), iii-x. <a href="https://dl.acm.org/doi/abs/10.5555/3177634.3177635">link</a>
-</p>
-</div>
 <ul>
 <li><a href="https://drive.google.com/file/d/1-cyLPxpK2R1K_HV4TeA9NeE9GHro126K/view" target="_blank">MISQ Open Report</a></li>
 </ul>
@@ -872,9 +877,23 @@ Rai, A. (2016). Editor’s comments: writing a virtuous review. <i>MIS Quarterly
 
 <!-- -->
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Davison2015" class="csl-entry" role="listitem">
+Davison, R. M. (2015). Editorial—the art of constructive reviewing. <em>Information Systems Journal</em>, <em>25</em>(5), 429–432. <a href="https://doi.org/10.1111/isj.12083">https://doi.org/10.1111/isj.12083</a>
+</div>
+<div id="ref-Ragins2017" class="csl-entry" role="listitem">
+Ragins, B. R. (2017). Editor’s comments: Raising the bar for developmental reviewing. <em>Academy of Management Review</em>, <em>42</em>(4), 573–576. <a href="https://doi.org/10.5465/amr.2017.0464">https://doi.org/10.5465/amr.2017.0464</a>
+</div>
+<div id="ref-Rai2016" class="csl-entry" role="listitem">
+Rai, A. (2016). Editor’s comments: Writing a virtuous review. <em>MIS Quarterly</em>, <em>40</em>(3), iii–x. <a href="https://doi.org/10.5555/3177634.3177635">https://doi.org/10.5555/3177634.3177635</a>
+</div>
+<div id="ref-Sarker2023" class="csl-entry" role="listitem">
+Sarker, S., Whitley, E. A., Goh, K. Y., Hong, Y., Mähring, M., Sanyal, P., Su, N., Xu, J., Zhang, J., &amp; Zhao, H. (2023). Some thoughts on reviewing for <span>I</span>nformation <span>S</span>ystems <span>R</span>esearch and other leading information systems journals. <em>Information Systems Research</em>, <em>34</em>(4), 1321–1338. <a href="https://doi.org/10.1287/isre.2023.editorial.v34.n4">https://doi.org/10.1287/isre.2023.editorial.v34.n4</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const today = new Date();
@@ -1364,109 +1383,107 @@ document.addEventListener("DOMContentLoaded", function () {
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Peer review"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>When using this checklist, remember that the peer review process is strictly confidential.</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>The manuscript and your review comments must not be shared, distributed, or discussed outside the formal review process.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Always maintain professionalism and provide constructive, unbiased feedback.</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Review Structure</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 0: Review Details</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 1: Introduction (3 paragraphs)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> ../assets/complementary-references.bib</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> ../assets/apa.csl</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">nocite:</span><span class="co"> |</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">  @Sarker2023</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">  @Ragins2017</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">  @Davison2015</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">  @Rai2016</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>When using this checklist, remember that the peer review process is strictly confidential.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>The manuscript and your review comments must not be shared, distributed, or discussed outside the formal review process.</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>Always maintain professionalism and provide constructive, unbiased feedback.</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 1:** Main question, goals, approach, and conclusions.</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 2:** Contribution to the journal, ideally with reference to prior work.</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 3:** Publishability evaluation and recommendation.</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 2: Major Issues (numbered items)</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 3: Minor Issues (indicate line, figure, table numbers)</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 1: Invitation to Review</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Read the abstract.</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Assess if your expertise qualifies you to critically evaluate the manuscript.</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check for conflicts of interest.</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Confirm time availability to complete the review.</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Review journal guidelines and adjust workflow accordingly.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Respond promptly to the invitation (Accept/Decline and provide reasons, if applicable).</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Review structure</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 0: Review details</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 1: Introduction (3 paragraphs)</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 1:** Main question, goals, approach, and conclusions.</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 2:** Contribution to the journal, ideally with reference to prior work.</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 3:** Publishability evaluation and recommendation.</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 2: Major issues (numbered items)</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 3: Minor issues (indicate line, figure, table numbers)</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 1: Invitation to review</span></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2: First Overview</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Prepare a text file with the <span class="co">[</span><span class="ot">review structure</span><span class="co">](#review-structure)</span>.</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Read the entire paper, noting motivation, approach, results, and conclusions.</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Examine figures and tables to ensure they complement the results.</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Assess readability; notify the editor if the manuscript is incomprehensible.</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Identify key aspects:</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Main question addressed by the research.</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Relevance and contribution to the field.</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Clarity and justification of the Abstract and Introduction.</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Appropriateness of the methods.</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Presentation and justification of results.</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Clear and described figures.</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Conclusions aligned with the main questions.</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Scope and publishability of the paper.</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Write introductory paragraphs (Section 1)</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3: Full Read</span></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Take detailed notes with references to section, line, figure, and table numbers.</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Read the manuscript in detail, section by section (Introduction, Methods, Results, etc.).</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Validate:</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Methods, including reproducibility and rationale for non-reproducible methods.</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Figures, ensuring clarity and reflection of the main text.</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> References and supplementary materials.</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Compliance with journal guidelines and data policy.</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Identify issues:</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Major Issues (Section 2):** Use numbered paragraphs for clarity.</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Minor Issues (Section 3):** Detail line, figure, and table numbers.</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>When reviewing conference papers, point to issues that would make for a fruitful discussion.</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 4: Writing</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check organization and flow of arguments:</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Ensure clarity and logical flow of paragraphs.</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Minimize excessive jargon and confusing acronyms.</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Read the abstract.</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Assess if your expertise qualifies you to critically evaluate the manuscript.</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check for conflicts of interest.</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Confirm time availability to complete the review.</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Review journal guidelines and adjust workflow accordingly.</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Respond promptly to the invitation (Accept/Decline and provide reasons, if applicable).</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2: First overview</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Prepare a text file with the <span class="co">[</span><span class="ot">review structure</span><span class="co">](#review-structure)</span>.</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Read the entire paper, noting motivation, approach, results, and conclusions.</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Examine figures and tables to ensure they complement the results.</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Assess readability; notify the editor if the manuscript is incomprehensible.</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Identify key aspects:</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Main question addressed by the research.</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Relevance and contribution to the field.</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Clarity and justification of the Abstract and Introduction.</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Appropriateness of the methods.</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Presentation and justification of results.</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Clear and described figures.</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Conclusions aligned with the main questions.</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Scope and publishability of the paper.</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Write introductory paragraphs (Section 1)</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3: Full read</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Take detailed notes with references to section, line, figure, and table numbers.</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Read the manuscript in detail, section by section (Introduction, Methods, Results, etc.).</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Validate:</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Methods, including reproducibility and rationale for non-reproducible methods.</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Figures, ensuring clarity and reflection of the main text.</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> References and supplementary materials.</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Compliance with journal guidelines and data policy.</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Identify issues:</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Major Issues (Section 2):** Use numbered paragraphs for clarity.</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Minor Issues (Section 3):** Detail line, figure, and table numbers.</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>When reviewing conference papers, point to issues that would make for a fruitful discussion.</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Polish the review for tone and clarity.</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Address specific questions from the journal.</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Include optional remarks to the editor.</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Submit the review using the provided platform.</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>**Constructive Tone**</span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>Always adopt a constructive tone when providing feedback during peer review.</span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>Frame comments in a way that helps the authors refine their work, offering actionable suggestions rather than vague criticisms.</span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>A respectful and supportive approach fosters collaboration and enhances the quality of academic discourse.</span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"references"</span><span class="dt">&gt;</span></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Sarker, S., Whitley, E. A., Goh, K. Y., Hong, Y., Mähring, M., Sanyal, P., ... &amp; Zhao, H. (2023). Some thoughts on reviewing for Information Systems Research and other leading information systems journals. <span class="dt">&lt;</span><span class="kw">i</span><span class="dt">&gt;</span>Information Systems Research<span class="dt">&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>, 34(4), 1321-1338. <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://pubsonline.informs.org/doi/full/10.1287/isre.2023.editorial.v34.n4"</span><span class="dt">&gt;</span>link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Ragins, B. R. (2017). Editor’s comments: Raising the bar for developmental reviewing. <span class="dt">&lt;</span><span class="kw">i</span><span class="dt">&gt;</span>Academy of Management Review<span class="dt">&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>, 42(4), 573-576. <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://psycnet.apa.org/record/2017-47161-001"</span><span class="dt">&gt;</span>link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Davison, R. M. (2015). Editorial‐The Art of Constructive Reviewing. <span class="dt">&lt;</span><span class="kw">i</span><span class="dt">&gt;</span>Information Systems Journal<span class="dt">&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>, 25(5), 429-432. <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://onlinelibrary.wiley.com/doi/full/10.1111/isj.12083"</span><span class="dt">&gt;</span>link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Rai, A. (2016). Editor's comments: writing a virtuous review. <span class="dt">&lt;</span><span class="kw">i</span><span class="dt">&gt;</span>MIS Quarterly<span class="dt">&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>, 40(3), iii-x. <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://dl.acm.org/doi/abs/10.5555/3177634.3177635"</span><span class="dt">&gt;</span>link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">MISQ Open Report</span><span class="co">](https://drive.google.com/file/d/1-cyLPxpK2R1K_HV4TeA9NeE9GHro126K/view)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 4: Writing</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check organization and flow of arguments:</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Ensure clarity and logical flow of paragraphs.</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Minimize excessive jargon and confusing acronyms.</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Polish the review for tone and clarity.</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Address specific questions from the journal.</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Include optional remarks to the editor.</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Submit the review using the provided platform.</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Constructive tone"}</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>Always adopt a constructive tone when providing feedback during peer review.</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>Frame comments in a way that helps the authors refine their work, offering actionable suggestions rather than vague criticisms.</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>A respectful and supportive approach fosters collaboration and enhances the quality of academic discourse.</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">MISQ Open Report</span><span class="co">](https://drive.google.com/file/d/1-cyLPxpK2R1K_HV4TeA9NeE9GHro126K/view)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -122,6 +122,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -142,17 +153,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -712,7 +712,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   </ul></li>
   <li><a href="#markdown-hints" id="toc-markdown-hints" class="nav-link" data-scroll-target="#markdown-hints">Markdown hints</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#todo-integrate-this" id="toc-todo-integrate-this" class="nav-link" data-scroll-target="#todo-integrate-this">TODO: integrate this:</a></li>
+  <li><a href="#todo-integrate-this-should-it-be-paper-template-or-project-repository-setup" id="toc-todo-integrate-this-should-it-be-paper-template-or-project-repository-setup" class="nav-link" data-scroll-target="#todo-integrate-this-should-it-be-paper-template-or-project-repository-setup">TODO: integrate this (should it be paper (template) or project (repository setup)?):</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/paper_templates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1005,10 +1005,10 @@ Note
 <li><a href="https://github.com/sachsmc/pandoc-journal-templates" target="_blank">pandoc journal templates</a></li>
 </ul>
 </section>
-<section id="todo-integrate-this" class="level2">
-<h2 class="anchored" data-anchor-id="todo-integrate-this">TODO: integrate this:</h2>
-<p>Papers are cited using the citation keys in the <code>references.bib</code> file and the citation syntax <span class="citation" data-cites="Webster2002">(<a href="#ref-Webster2002" role="doc-biblioref"><strong>Webster2002?</strong></a>)</span> or <span class="citation" data-cites="Webster2002">(<a href="#ref-Webster2002" role="doc-biblioref"><strong>Webster2002?</strong></a>)</span>. Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use <span class="citation" data-cites="Bacharach1989 Gregor2006a">(e.g., <a href="#ref-Bacharach1989" role="doc-biblioref"><strong>Bacharach1989?</strong></a>; <a href="#ref-Gregor2006a" role="doc-biblioref"><strong>Gregor2006a?</strong></a>)</span> instead of <span class="citation" data-cites="Gregor2006a Bacharach1989">(e.g., <a href="#ref-Gregor2006a" role="doc-biblioref"><strong>Gregor2006a?</strong></a>; <a href="#ref-Bacharach1989" role="doc-biblioref"><strong>Bacharach1989?</strong></a>)</span>.</p>
-<p>The syntax is based on the <a href="https://pandoc.org/MANUAL.html#citation-syntax">citation syntax</a>{: target=“_blank”} (see <a href="https://citationstyles.org/">CSL</a>{: target=“_blank”}).</p>
+<section id="todo-integrate-this-should-it-be-paper-template-or-project-repository-setup" class="level2">
+<h2 class="anchored" data-anchor-id="todo-integrate-this-should-it-be-paper-template-or-project-repository-setup">TODO: integrate this (should it be paper (template) or project (repository setup)?):</h2>
+<p>Papers are cited using the citation keys in the <code>references.bib</code> file and the citation syntax <code>@Webster2002</code> or <code>[@Webster2002]</code>. Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use <code>[e.g., @Bacharach1989; @Gregor2006a]</code> instead of <code>[e.g., @Gregor2006a; @Bacharach1989]</code>.</p>
+<p>The syntax is based on the <a href="https://pandoc.org/MANUAL.html#citation-syntax" target="_blank">citation syntax</a> (see <a href="https://citationstyles.org/" target="_blank">CSL</a>).</p>
 <p>To add papers that are cited in the figure to the reference section, include the following in the YAML header of paper.md:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> ...</span></span>
@@ -1016,33 +1016,33 @@ Note
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="an">nocite:</span><span class="co"> |</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">  @citation_key</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Further Information on the <a href="https://pandoc.org/MANUAL.html#citation-syntax">citation syntax</a>{: target=“_blank”} is available in the pandoc manual.</p>
-<p>Figures can be included as follows and referred to as <span class="citation" data-cites="fig:distribution">(<a href="#ref-fig:distribution" role="doc-biblioref"><strong>fig:distribution?</strong></a>)</span>. Further information on <a href="https://lierdakil.github.io/pandoc-crossref/">pandoc-crossref</a>{: target=“_blank”} is available online.</p>
+<p>Further Information on the <a href="https://pandoc.org/MANUAL.html#citation-syntax" target="_blank">citation syntax</a> is available in the pandoc manual.</p>
+<p>Figures can be included as follows and referred to as <code>@fig:distribution</code>. Further information on <a href="https://lierdakil.github.io/pandoc-crossref/" target="_blank">pandoc-crossref</a> is available online.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure Caption](figures/figure.jpg)</span>{#fig:distribution width=300px}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To ensure compatibility with pandoc word and latex conversion, figures should be included as jpg/png. For the final versions, vector graphics (PDF, EMF) should be included for Latex/Word respectively.</p>
 <p>Formulas can be included as follows:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$ P_i(x) = </span><span class="sc">\sum</span><span class="ss">_i a_i x^i $$</span> {#eq:eqn1}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Tables can be created with <a href="https://pandoc.org/MANUAL.html#extension-grid_tables">GridTables</a>{: target=“_blank”} (which is displayed in PDF and Word documents):</p>
-<pre class="text"><code>+---------------------+----------+
-| Property            | Earth    |
-+=============+=======+==========+
-|             | min   | -89.2 °C |
-| Temperature +-------+----------+
-| 1961-1990   | mean  | 14 °C    |
-|             +-------+----------+
-|             | max   | 56.7 °C  |
-+-------------+-------+----------+
-
-Table: Findings {#tbl:findings}
-
-We show the findings in @tbl:findings.</code></pre>
-<p>{: .text-center} <a href="https://www.tablesgenerator.com/markdown_tables">Markdown table editor</a>{: .btn .btn-green target=“_blank”}</p>
+<p>Tables can be created with <a href="https://pandoc.org/MANUAL.html#extension-grid_tables" target="_blank">GridTables</a> (which is displayed in PDF and Word documents):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>+---------------------+----------+</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Property            <span class="pp">|</span> Earth    <span class="pp">|</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>+===========<span class="al">==+=======+==</span>========+</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> min   <span class="pp">|</span> -89.2 °C <span class="pp">|</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Temperature +-------+----------+</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1961-1990   <span class="pp">|</span> mean  <span class="pp">|</span> 14 °C    <span class="pp">|</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             +-------+----------+</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> max   <span class="pp">|</span> 56.7 °C  <span class="pp">|</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>+-------------+-------+----------+</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>Table: Findings {#tbl:findings}</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>We show the findings in @tbl:findings.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><a href="https://www.tablesgenerator.com/markdown_tables" target="_blank">Markdown table editor</a></p>
 <p>Footnotes:</p>
-<pre class="text"><code>Text with a footnote [^1].
-
-  [^1]: Example footnote.</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Text with a footnote <span class="ot">[^1]</span>.</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="ot">[^1]: </span>Example footnote.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Information on references and citations is in <a href="../../20-research/20_processes/20.29.writing.html">editing-markdown-paper</a> section.</p>
-<p>Books: <a href="https://bookdown.org/yihui/bookdown/">bookdown</a>{: target=“_blank”} project.</p>
+<p>Books: <a href="https://bookdown.org/yihui/bookdown/" target="_blank">bookdown</a> project.</p>
 
 
 <!-- -->
@@ -1752,16 +1752,16 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pandoc journal templates</span><span class="co">](https://github.com/sachsmc/pandoc-journal-templates)</span>{target=_blank}</span>
 <span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="fu">## TODO: integrate this:</span></span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="fu">## TODO: integrate this (should it be paper (template) or project (repository setup)?):</span></span>
 <span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>Papers are cited using the citation keys in the <span class="in">`references.bib`</span> file and the citation syntax @Webster2002 or <span class="co">[</span><span class="ot">@Webster2002</span><span class="co">]</span>.</span>
-<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use <span class="co">[</span><span class="ot">e.g., @Bacharach1989; @Gregor2006a</span><span class="co">]</span> instead of <span class="co">[</span><span class="ot">e.g., @Gregor2006a; @Bacharach1989</span><span class="co">]</span>.</span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>Papers are cited using the citation keys in the <span class="in">`references.bib`</span> file and the citation syntax <span class="in">`@Webster2002`</span> or <span class="in">`[@Webster2002]`</span>.</span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use <span class="in">`[e.g., @Bacharach1989; @Gregor2006a]`</span> instead of <span class="in">`[e.g., @Gregor2006a; @Bacharach1989]`</span>.</span>
 <span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>The syntax is based on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{: target="_blank"} (see <span class="co">[</span><span class="ot">CSL</span><span class="co">](https://citationstyles.org/)</span>{: target="_blank"}).</span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>The syntax is based on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{target=_blank} (see <span class="co">[</span><span class="ot">CSL</span><span class="co">](https://citationstyles.org/)</span>{target=_blank}).</span>
 <span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>To add papers that are cited in the figure to the reference section, include the following in the YAML header of paper.md:</span>
 <span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
 <span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a>title: ...</span>
 <span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>author: ...</span>
@@ -1770,12 +1770,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a>Further Information on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{: target="_blank"} is available in the pandoc manual.</span>
+<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a>Further Information on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{target=_blank} is available in the pandoc manual.</span>
 <span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>Figures can be included as follows and referred to as @fig:distribution.</span>
-<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a>Further information on <span class="co">[</span><span class="ot">pandoc-crossref</span><span class="co">](https://lierdakil.github.io/pandoc-crossref/)</span>{: target="_blank"} is available online.</span>
+<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>Figures can be included as follows and referred to as <span class="in">`@fig:distribution`</span>.</span>
+<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a>Further information on <span class="co">[</span><span class="ot">pandoc-crossref</span><span class="co">](https://lierdakil.github.io/pandoc-crossref/)</span>{target=_blank} is available online.</span>
 <span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
 <span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure Caption](figures/figure.jpg)</span>{#fig:distribution width=300px}</span>
 <span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a></span>
@@ -1788,38 +1788,37 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="in">$$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}</span></span>
 <span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a>Tables can be created with <span class="co">[</span><span class="ot">GridTables</span><span class="co">](https://pandoc.org/MANUAL.html#extension-grid_tables)</span>{: target="_blank"} (which is displayed in PDF and Word documents):</span>
+<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a>Tables can be created with <span class="co">[</span><span class="ot">GridTables</span><span class="co">](https://pandoc.org/MANUAL.html#extension-grid_tables)</span>{target=_blank} (which is displayed in PDF and Word documents):</span>
 <span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
-<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a><span class="in">+---------------------+----------+</span></span>
-<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a><span class="in">| Property            | Earth    |</span></span>
-<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a><span class="in">+=============+=======+==========+</span></span>
-<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a><span class="in">|             | min   | -89.2 °C |</span></span>
-<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="in">| Temperature +-------+----------+</span></span>
-<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a><span class="in">| 1961-1990   | mean  | 14 °C    |</span></span>
-<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="in">|             +-------+----------+</span></span>
-<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a><span class="in">|             | max   | 56.7 °C  |</span></span>
-<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------+-------+----------+</span></span>
+<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>+---------------------+----------+</span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Property            <span class="pp">|</span> Earth    <span class="pp">|</span></span>
+<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a>+===========<span class="al">==+=======+==</span>========+</span>
+<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> min   <span class="pp">|</span> -89.2 °C <span class="pp">|</span></span>
+<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Temperature +-------+----------+</span>
+<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1961-1990   <span class="pp">|</span> mean  <span class="pp">|</span> 14 °C    <span class="pp">|</span></span>
+<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             +-------+----------+</span>
+<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> max   <span class="pp">|</span> 56.7 °C  <span class="pp">|</span></span>
+<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a>+-------------+-------+----------+</span>
 <span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a><span class="in">Table: Findings {#tbl:findings}</span></span>
+<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a>Table: Findings {#tbl:findings}</span>
 <span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a><span class="in">We show the findings in @tbl:findings.</span></span>
+<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a>We show the findings in @tbl:findings.</span>
 <span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a>{: .text-center}</span>
-<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Markdown table editor</span><span class="co">](https://www.tablesgenerator.com/markdown_tables)</span>{: .btn .btn-green target="_blank"}</span>
-<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a>Footnotes:</span>
-<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
-<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a><span class="in">Text with a footnote [^1].</span></span>
-<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a><span class="in">  [^1]: Example footnote.</span></span>
-<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a>Information on references and citations is in <span class="co">[</span><span class="ot">editing-markdown-paper</span><span class="co">](../../20-research/20_processes/20.29.writing.html)</span> section.</span>
-<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-283"><a href="#cb12-283" aria-hidden="true" tabindex="-1"></a>Books: <span class="co">[</span><span class="ot">bookdown</span><span class="co">](https://bookdown.org/yihui/bookdown/)</span>{: target="_blank"} project.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Markdown table editor</span><span class="co">](https://www.tablesgenerator.com/markdown_tables)</span>{target=_blank}</span>
+<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a>Footnotes:</span>
+<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a>Text with a footnote <span class="ot">[^1]</span>.</span>
+<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a>  <span class="ot">[^1]: </span>Example footnote.</span>
+<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a>Information on references and citations is in <span class="co">[</span><span class="ot">editing-markdown-paper</span><span class="co">](../../20-research/20_processes/20.29.writing.html)</span> section.</span>
+<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a>Books: <span class="co">[</span><span class="ot">bookdown</span><span class="co">](https://bookdown.org/yihui/bookdown/)</span>{target=_blank} project.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
