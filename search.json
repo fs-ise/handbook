@@ -1596,7 +1596,7 @@
     "href": "teaching/platforms_degree_programs_courses.html",
     "title": "Academic programs",
     "section": "",
-    "text": "Note\n\n\n\nThis section is marked as “toupdate”: update Platforms & University of Bamberg",
+    "text": "Note\n\n\n\nThis section is marked as “toupdate”: Create an overview of modules x study programs (WI/AI/I/…)",
     "crumbs": [
       "Teaching",
       "Institutional",
@@ -3919,7 +3919,7 @@
     "href": "academy/how_tos.html",
     "title": "How-tos",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nAudio transcription\n\n\n\n\n\n\nConvert spreadsheet coding to obsidian notes\n\n\n\n\n\n\nCustom GPT: Handbook assistant\n\n\n\n\n\n\nFile Manager\n\n\n\n\n\n\nFile conversion\n\n\n\n\n\n\nGit LFS\n\n\n\n\n\n\nKey management\n\n\n\n\n\n\nOBS Recording\n\n\n\n\n\n\nOCR\n\n\n\n\n\n\nPandoc Word Template\n\n\n\n\n\n\nPersonal website\n\n\n\n\n\n\nPhotos\n\n\n\n\n\n\nPowerPoint\n\n\n\n\n\n\nPython-LLM\n\n\n\n\n\n\nQuartz\n\n\n\n\n\n\nRegex\n\n\n\n\n\n\nUV (Python)\n\n\n\n\n\n\nWorkstation setup\n\n\n\n\n\n\nNo matching items",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nAudio transcription\n\n\n\n\n\n\nCalendar conversion\n\n\n\n\n\n\nConvert spreadsheet coding to obsidian notes\n\n\n\n\n\n\nCustom GPT: Handbook assistant\n\n\n\n\n\n\nFile Manager\n\n\n\n\n\n\nFile conversion\n\n\n\n\n\n\nGit LFS\n\n\n\n\n\n\nKey management\n\n\n\n\n\n\nOBS Recording\n\n\n\n\n\n\nOCR\n\n\n\n\n\n\nPandoc Word Template\n\n\n\n\n\n\nPersonal website\n\n\n\n\n\n\nPhotos\n\n\n\n\n\n\nPowerPoint\n\n\n\n\n\n\nPython-LLM\n\n\n\n\n\n\nQuartz\n\n\n\n\n\n\nRegex\n\n\n\n\n\n\nUV (Python)\n\n\n\n\n\n\nWorkstation setup\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Academy",
       "How-tos"
@@ -4021,6 +4021,121 @@
     "text": "Export when embedding figures in papers\n\nTo have text embedded (searchable), use PDF exports (when figures are included in Markdown/Latex) or EMF (when figures are included in Word)"
   },
   {
+    "objectID": "academy/how_to/git_lfs.html",
+    "href": "academy/how_to/git_lfs.html",
+    "title": "Git LFS",
+    "section": "",
+    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
+  },
+  {
+    "objectID": "academy/how_to/git_lfs.html#activation",
+    "href": "academy/how_to/git_lfs.html#activation",
+    "title": "Git LFS",
+    "section": "",
+    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
+  },
+  {
+    "objectID": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
+    "href": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
+    "title": "Git LFS",
+    "section": "Migration with git-filter-repo (PDFs committed without lfs)",
+    "text": "Migration with git-filter-repo (PDFs committed without lfs)\n# install git-filter-repo\nsudo apt install git-filter-repo\n\n# migrate pdfs\ngit lfs migrate import --include=\"*.pdf\"\n\n# list files managed by lfs\ngit lfs ls-files"
+  },
+  {
+    "objectID": "academy/how_to/personal_website.html",
+    "href": "academy/how_to/personal_website.html",
+    "title": "Personal website",
+    "section": "",
+    "text": "Today, more than ever, a website is like a business card… See this guide."
+  },
+  {
+    "objectID": "academy/how_to/spreadsheet_to_obsidian.html",
+    "href": "academy/how_to/spreadsheet_to_obsidian.html",
+    "title": "Convert spreadsheet coding to obsidian notes",
+    "section": "",
+    "text": "To convert tabular coding of papers (in a spreadsheet) to obsidian notes, the following script may be helpful:\nimport ezodf\nfrom pathlib import Path\n\n# Set paths\nods_file_path = \"filename.ods\"  # Replace with your ODS filename\noutput_dir = Path(\"obsidian_summaries\")\n\n\noutput_dir.mkdir(exist_ok=True)\ndoc = ezodf.opendoc(ods_file_path)\nsheet = doc.sheets[\"summary\"]\n\nrows = list(sheet.rows())\nheaders = [cell.value.strip() if cell.value else \"\" for cell in rows[0]]\n\n# Column helper\ndef get_cell_value(row, column_name):\n    try:\n        idx = headers.index(column_name)\n        return row[idx].value if idx &lt; len(row) else \"\"\n    except ValueError:\n        return \"\"\n\nfor i, row in enumerate(rows[1:], start=1):\n    citation_key = get_cell_value(row, \"citation_key\") or f\"Paper_{i}\"\n    keywords = get_cell_value(row, \"keywords\") or \"\"\n    summary = get_cell_value(row, \"summary\") or \"\"\n    quotes = get_cell_value(row, \"quotes\") or \"\"\n    if quotes:\n        quotes = f\"# Quotes\\n\\n{quotes}\"\n\n    # Skip if empty citation_key\n    if not citation_key.strip():\n        continue\n\n    file_name = f\"{citation_key.strip().replace(' ', '_')}.md\"\n    file_path = output_dir / file_name\n\n    content = f\"\"\"---\ntitle:         \"{citation_key}\"\nkeywords:      {keywords}\n\n---\n\n# Summary:\n\n{summary}\n\n{quotes}\"\"\"\n    file_path.write_text(content.strip(), encoding=\"utf-8\")\n\nprint(f\"✅ Done. Files written to {output_dir.resolve()}\")"
+  },
+  {
+    "objectID": "academy/how_to/audio_transcription.html",
+    "href": "academy/how_to/audio_transcription.html",
+    "title": "Audio transcription",
+    "section": "",
+    "text": "Transcribe audio with whisper\ndocker run --rm \\\n  -v \"$PWD\":/data \\\n  ghcr.io/ggerganov/whisper.cpp:latest \\\n  ./main -f /data/input_audio.mp3 -otxt -l en"
+  },
+  {
+    "objectID": "academy/index.html",
+    "href": "academy/index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Developmental resources (training)\nHow-to (e.g., markdown, quarto ??)\nToday-I-learned",
+    "crumbs": [
+      "Academy",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "team/index.html",
+    "href": "team/index.html",
+    "title": "Team",
+    "section": "",
+    "text": "E-Mail: gerit.wagner@uni-bamberg.de\nORCID: 0000-0003-3926-7717\nProfiles: SSRN, ResearchGate, GoogleScholar\nGitHub: geritwagner\nWorking days: Monday - Friday (Office: Monday - Thursday, Remote: Friday)\nWorking hours: I start early, but prefer to schedule meetings in the evening.\nMeetings (online or in-person): Via calendly\nVacation and remote work: Available in our calendar.",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "team/index.html#gerit-wagner-professor",
+    "href": "team/index.html#gerit-wagner-professor",
+    "title": "Team",
+    "section": "",
+    "text": "E-Mail: gerit.wagner@uni-bamberg.de\nORCID: 0000-0003-3926-7717\nProfiles: SSRN, ResearchGate, GoogleScholar\nGitHub: geritwagner\nWorking days: Monday - Friday (Office: Monday - Thursday, Remote: Friday)\nWorking hours: I start early, but prefer to schedule meetings in the evening.\nMeetings (online or in-person): Via calendly\nVacation and remote work: Available in our calendar.",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome to the Information Systems Education (ISE) lab hanbook!\nQuickstart links"
+  },
+  {
+    "objectID": "index.html#areas",
+    "href": "index.html#areas",
+    "title": "Home",
+    "section": "Areas",
+    "text": "Areas\n\n\nTeaching\nPrinciples, systems, and procedures for designing, delivering, and evaluating courses — from lectures and theses to assessments, student support, and institutional reporting. Go to Teaching →\n\n\nResearch\nSupport for scholarly work — from project planning and collaboration to methods, data, writing, and publication workflows. Go to Research →\n\n\nManagement\nOperating procedures that keep the lab running — communication, infrastructure, teaching admin, research support, risk, procurement, and HR. Go to Management →\n\n\nAcademy\nTraining and development activities that build individual and shared capabilities over time. Go to Academy →\n\n\nTeam\nRoles, responsibilities, and who to contact for specific topics within the lab. Go to Team →\n\n\n\n\n\n\n\n\nNoteCalendar\n\n\n\n\n\nOur shared public calendar has dates for upcoming events in the lab. It contains mostly public events that are of interest to the team and students.\n\n\n\nTo subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.\nhttps://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise_cal.ical\nTo add or modify events, edit the events.yaml file here."
+  },
+  {
+    "objectID": "academy/how_to/workstation.html",
+    "href": "academy/how_to/workstation.html",
+    "title": "Workstation setup",
+    "section": "",
+    "text": "Note\n\n\n\nWork-in-progress\nThis page is currently under development.\nThe setup for a typical workstation includes the following:\nThe following apps are pre-installed based on a shell script:\nShell script:"
+  },
+  {
+    "objectID": "academy/how_to/workstation.html#resources",
+    "href": "academy/how_to/workstation.html#resources",
+    "title": "Workstation setup",
+    "section": "Resources",
+    "text": "Resources\n\nExample"
+  },
+  {
+    "objectID": "academy/how_to/obs-recording.html",
+    "href": "academy/how_to/obs-recording.html",
+    "title": "OBS Recording",
+    "section": "",
+    "text": "Add sources (video capture device / screen capture)\nCrop screen capture: Alt+drag edges"
+  },
+  {
+    "objectID": "academy/how_to/quartz.html",
+    "href": "academy/how_to/quartz.html",
+    "title": "Quartz",
+    "section": "",
+    "text": "Quartz: Obsidian on GitHub Pages.\nQuartz is an open-source static site generator, which supports the hosting of obsidian-style vaults on GitHub pages.\nSetup:\n\nClone, rename, add remote\nAdd deploy.yaml - https://quartz.jzhao.xyz/hosting\nActivate pages in github settings\nCreate main branch\nInclude content/index.md\n\nSee test"
+  },
+  {
     "objectID": "academy/how_to/conversion.html",
     "href": "academy/how_to/conversion.html",
     "title": "File conversion",
@@ -4049,119 +4164,11 @@
     "text": "Markdown-to-Word / Markdown-to-docx\ndocker run --rm -u \"$(id -u):$(id -g)\"  -v \"$PWD\":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx"
   },
   {
-    "objectID": "academy/how_to/quartz.html",
-    "href": "academy/how_to/quartz.html",
-    "title": "Quartz",
+    "objectID": "academy/how_to/calendar_conversion.html",
+    "href": "academy/how_to/calendar_conversion.html",
+    "title": "Calendar conversion",
     "section": "",
-    "text": "Quartz: Obsidian on GitHub Pages.\nQuartz is an open-source static site generator, which supports the hosting of obsidian-style vaults on GitHub pages.\nSetup:\n\nClone, rename, add remote\nAdd deploy.yaml - https://quartz.jzhao.xyz/hosting\nActivate pages in github settings\nCreate main branch\nInclude content/index.md\n\nSee test"
-  },
-  {
-    "objectID": "academy/how_to/obs-recording.html",
-    "href": "academy/how_to/obs-recording.html",
-    "title": "OBS Recording",
-    "section": "",
-    "text": "Add sources (video capture device / screen capture)\nCrop screen capture: Alt+drag edges"
-  },
-  {
-    "objectID": "academy/how_to/workstation.html",
-    "href": "academy/how_to/workstation.html",
-    "title": "Workstation setup",
-    "section": "",
-    "text": "Note\n\n\n\nWork-in-progress\nThis page is currently under development.\nThe setup for a typical workstation includes the following:\nThe following apps are pre-installed based on a shell script:\nShell script:"
-  },
-  {
-    "objectID": "academy/how_to/workstation.html#resources",
-    "href": "academy/how_to/workstation.html#resources",
-    "title": "Workstation setup",
-    "section": "Resources",
-    "text": "Resources\n\nExample"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Welcome to the Information Systems Education (ISE) lab hanbook!\nQuickstart links"
-  },
-  {
-    "objectID": "index.html#areas",
-    "href": "index.html#areas",
-    "title": "Home",
-    "section": "Areas",
-    "text": "Areas\n\n\nTeaching\nPrinciples, systems, and procedures for designing, delivering, and evaluating courses — from lectures and theses to assessments, student support, and institutional reporting. Go to Teaching →\n\n\nResearch\nSupport for scholarly work — from project planning and collaboration to methods, data, writing, and publication workflows. Go to Research →\n\n\nManagement\nOperating procedures that keep the lab running — communication, infrastructure, teaching admin, research support, risk, procurement, and HR. Go to Management →\n\n\nAcademy\nTraining and development activities that build individual and shared capabilities over time. Go to Academy →\n\n\nTeam\nRoles, responsibilities, and who to contact for specific topics within the lab. Go to Team →\n\n\n\n\n\n\n\n\nNoteCalendar\n\n\n\n\n\nOur shared public calendar has dates for upcoming events in the lab. It contains mostly public events that are of interest to the team and students.\n\n\n\nTo subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.\nhttps://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise_cal.ical\nTo add or modify events, edit the events.yaml file here."
-  },
-  {
-    "objectID": "team/index.html",
-    "href": "team/index.html",
-    "title": "Team",
-    "section": "",
-    "text": "E-Mail: gerit.wagner@uni-bamberg.de\nORCID: 0000-0003-3926-7717\nProfiles: SSRN, ResearchGate, GoogleScholar\nGitHub: geritwagner\nWorking days: Monday - Friday (Office: Monday - Thursday, Remote: Friday)\nWorking hours: I start early, but prefer to schedule meetings in the evening.\nMeetings (online or in-person): Via calendly\nVacation and remote work: Available in our calendar.",
-    "crumbs": [
-      "Team"
-    ]
-  },
-  {
-    "objectID": "team/index.html#gerit-wagner-professor",
-    "href": "team/index.html#gerit-wagner-professor",
-    "title": "Team",
-    "section": "",
-    "text": "E-Mail: gerit.wagner@uni-bamberg.de\nORCID: 0000-0003-3926-7717\nProfiles: SSRN, ResearchGate, GoogleScholar\nGitHub: geritwagner\nWorking days: Monday - Friday (Office: Monday - Thursday, Remote: Friday)\nWorking hours: I start early, but prefer to schedule meetings in the evening.\nMeetings (online or in-person): Via calendly\nVacation and remote work: Available in our calendar.",
-    "crumbs": [
-      "Team"
-    ]
-  },
-  {
-    "objectID": "academy/index.html",
-    "href": "academy/index.html",
-    "title": "Overview",
-    "section": "",
-    "text": "Developmental resources (training)\nHow-to (e.g., markdown, quarto ??)\nToday-I-learned",
-    "crumbs": [
-      "Academy",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "academy/how_to/audio_transcription.html",
-    "href": "academy/how_to/audio_transcription.html",
-    "title": "Audio transcription",
-    "section": "",
-    "text": "Transcribe audio with whisper\ndocker run --rm \\\n  -v \"$PWD\":/data \\\n  ghcr.io/ggerganov/whisper.cpp:latest \\\n  ./main -f /data/input_audio.mp3 -otxt -l en"
-  },
-  {
-    "objectID": "academy/how_to/spreadsheet_to_obsidian.html",
-    "href": "academy/how_to/spreadsheet_to_obsidian.html",
-    "title": "Convert spreadsheet coding to obsidian notes",
-    "section": "",
-    "text": "To convert tabular coding of papers (in a spreadsheet) to obsidian notes, the following script may be helpful:\nimport ezodf\nfrom pathlib import Path\n\n# Set paths\nods_file_path = \"filename.ods\"  # Replace with your ODS filename\noutput_dir = Path(\"obsidian_summaries\")\n\n\noutput_dir.mkdir(exist_ok=True)\ndoc = ezodf.opendoc(ods_file_path)\nsheet = doc.sheets[\"summary\"]\n\nrows = list(sheet.rows())\nheaders = [cell.value.strip() if cell.value else \"\" for cell in rows[0]]\n\n# Column helper\ndef get_cell_value(row, column_name):\n    try:\n        idx = headers.index(column_name)\n        return row[idx].value if idx &lt; len(row) else \"\"\n    except ValueError:\n        return \"\"\n\nfor i, row in enumerate(rows[1:], start=1):\n    citation_key = get_cell_value(row, \"citation_key\") or f\"Paper_{i}\"\n    keywords = get_cell_value(row, \"keywords\") or \"\"\n    summary = get_cell_value(row, \"summary\") or \"\"\n    quotes = get_cell_value(row, \"quotes\") or \"\"\n    if quotes:\n        quotes = f\"# Quotes\\n\\n{quotes}\"\n\n    # Skip if empty citation_key\n    if not citation_key.strip():\n        continue\n\n    file_name = f\"{citation_key.strip().replace(' ', '_')}.md\"\n    file_path = output_dir / file_name\n\n    content = f\"\"\"---\ntitle:         \"{citation_key}\"\nkeywords:      {keywords}\n\n---\n\n# Summary:\n\n{summary}\n\n{quotes}\"\"\"\n    file_path.write_text(content.strip(), encoding=\"utf-8\")\n\nprint(f\"✅ Done. Files written to {output_dir.resolve()}\")"
-  },
-  {
-    "objectID": "academy/how_to/personal_website.html",
-    "href": "academy/how_to/personal_website.html",
-    "title": "Personal website",
-    "section": "",
-    "text": "Today, more than ever, a website is like a business card… See this guide."
-  },
-  {
-    "objectID": "academy/how_to/git_lfs.html",
-    "href": "academy/how_to/git_lfs.html",
-    "title": "Git LFS",
-    "section": "",
-    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
-  },
-  {
-    "objectID": "academy/how_to/git_lfs.html#activation",
-    "href": "academy/how_to/git_lfs.html#activation",
-    "title": "Git LFS",
-    "section": "",
-    "text": "# once per machine\ngit lfs install\n\n# activate\ngit lfs track \"*.pdf\"\ngit add .gitattributes\ngit commit -m \"Track PDFs via Git LFS\"\n\n# add PDFs as usual\ngit add path/to/file.pdf\ngit commit -m \"Add PDF (LFS)\"\ngit push"
-  },
-  {
-    "objectID": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
-    "href": "academy/how_to/git_lfs.html#migration-with-git-filter-repo-pdfs-committed-without-lfs",
-    "title": "Git LFS",
-    "section": "Migration with git-filter-repo (PDFs committed without lfs)",
-    "text": "Migration with git-filter-repo (PDFs committed without lfs)\n# install git-filter-repo\nsudo apt install git-filter-repo\n\n# migrate pdfs\ngit lfs migrate import --include=\"*.pdf\"\n\n# list files managed by lfs\ngit lfs ls-files"
+    "text": "To convert an Excel file to the events.yaml format, the following Python script is useful (TODO: associate with email-trigger or export from system):\n#!/usr/bin/env python3\n\"\"\"\nRead the XLSX via pandas and save YAML events to a file.\n\nUsage:\n  python xlsx_to_yaml_pandas.py input.xlsx output.yml\n  python xlsx_to_yaml_pandas.py input.xlsx output.yml --sheet 0\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport re\nfrom datetime import datetime\nfrom typing import Any, Dict\n\nimport pandas as pd\n\n\nDATE_IN = \"%d.%m.%Y\"\n\n\ndef norm_str(v: Any) -&gt; str:\n    if v is None or (isinstance(v, float) and pd.isna(v)):\n        return \"\"\n    return str(v).strip()\n\n\ndef norm_hhmm(v: Any) -&gt; str:\n    if v is None or (isinstance(v, float) and pd.isna(v)):\n        raise ValueError(\"missing time\")\n\n    if isinstance(v, datetime):\n        return v.strftime(\"%H:%M\")\n\n    s = norm_str(v)\n    m = re.fullmatch(r\"(\\d{1,2}):(\\d{2})\", s)\n    if m:\n        return f\"{int(m.group(1)):02d}:{int(m.group(2)):02d}\"\n\n    # Excel time as fraction of day\n    try:\n        fv = float(v)\n        if 0 &lt;= fv &lt; 1:\n            total_minutes = int(round(fv * 24 * 60))\n            hh = total_minutes // 60\n            mm = total_minutes % 60\n            return f\"{hh:02d}:{mm:02d}\"\n    except Exception:\n        pass\n\n    raise ValueError(f\"unrecognized time value: {v!r}\")\n\n\ndef norm_ymd(date_val: Any) -&gt; str:\n    if date_val is None or (isinstance(date_val, float) and pd.isna(date_val)):\n        raise ValueError(\"missing date\")\n\n    if isinstance(date_val, datetime):\n        return date_val.strftime(\"%Y-%m-%d\")\n\n    s = norm_str(date_val)\n    return datetime.strptime(s, DATE_IN).strftime(\"%Y-%m-%d\")\n\n\ndef yaml_escape(s: str) -&gt; str:\n    return s.replace(\"\\\\\", \"\\\\\\\\\").replace('\"', '\\\\\"')\n\n\ndef status_to_color(status: str) -&gt; str:\n    status_l = status.strip().lower()\n    return {\n        \"planned\": \"lightyellow\",\n        \"confirmed\": \"lightgreen\",\n        \"cancelled\": \"lightcoral\",\n        \"canceled\": \"lightcoral\",\n        \"tentative\": \"gold\",\n    }.get(status_l, \"lightyellow\")\n\n\ndef build_title(row: Dict[str, Any]) -&gt; str:\n    section = norm_str(row.get(\"Section\"))\n    module = norm_str(row.get(\"Module\"))\n    lecturer = norm_str(row.get(\"Lecturer, Tutor, Guest lecturer\"))\n\n    if section and module:\n        title = f\"{section}: {module}\"\n    else:\n        title = section or module or \"Event\"\n\n    if lecturer:\n        title = f\"{title} — {lecturer}\"\n\n    return title\n\n\ndef main() -&gt; None:\n    ap = argparse.ArgumentParser()\n    ap.add_argument(\"xlsx\", help=\"Path to input .xlsx\")\n    ap.add_argument(\"output\", help=\"Path to output .yml/.yaml\")\n    ap.add_argument(\"--sheet\", default=0, help=\"Sheet name or index (default: 0)\")\n    args = ap.parse_args()\n\n    try:\n        sheet: Any = int(args.sheet)\n    except ValueError:\n        sheet = args.sheet\n\n    df = pd.read_excel(args.xlsx, sheet_name=sheet, dtype=object)\n\n    required = [\"Begin date\", \"Begin time\", \"End date\", \"End time\"]\n    missing = [c for c in required if c not in df.columns]\n    if missing:\n        raise SystemExit(\n            f\"Missing required columns: {missing}\\nFound columns: {list(df.columns)}\"\n        )\n\n    df = df.dropna(subset=required, how=\"any\")\n\n    lines: list[str] = []\n    for _, r in df.iterrows():\n        row = r.to_dict()\n\n        start = f'{norm_ymd(row[\"Begin date\"])} {norm_hhmm(row[\"Begin time\"])}'\n        end = f'{norm_ymd(row[\"End date\"])} {norm_hhmm(row[\"End time\"])}'\n\n        title = build_title(row)\n        location = norm_str(row.get(\"Room\"))\n        status = norm_str(row.get(\"Status\"))\n        color = status_to_color(status) if status else \"lightyellow\"\n\n        lines.append(f'- title: \"{yaml_escape(title)}\"')\n        lines.append(f'  start: \"{start}\"')\n        lines.append(f'  end: \"{end}\"')\n        lines.append(f'  color: \"{color}\"')\n        if location:\n            lines.append(f'  location: \"{yaml_escape(location)}\"')\n\n    yaml_text = \"\\n\".join(lines) + (\"\\n\" if lines else \"\")\n    with open(args.output, \"w\", encoding=\"utf-8\") as f:\n        f.write(yaml_text)\n\n    print(f\"Wrote {len(df)} events to {args.output}\")\n\n\nif __name__ == \"__main__\":\n    main()"
   },
   {
     "objectID": "academy/how_to/key_management.html",
@@ -6723,7 +6730,7 @@
     "href": "teaching/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "TODO: Create an overview of modules x study programs (WI/AI/I/…)",
+    "text": "Note\n\n\n\nThis section is marked as “toupdate”: Create an overview of modules x study programs (WI/AI/I/…)",
     "crumbs": [
       "Teaching"
     ]

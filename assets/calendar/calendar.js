@@ -38,7 +38,7 @@ async function initCalendar() {
 // Parse events from iCal file
 async function loadEventsFromICal() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/digital-work-lab/handbook/main/docs/calendar/digital_work_cal.ical');
+        const response = await fetch('https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical');
         if (!response.ok) {
             throw new Error("Network response was not ok: " + response.statusText);
         }
