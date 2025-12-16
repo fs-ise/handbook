@@ -1,0 +1,155 @@
+---
+title: "Calendar conversion"
+---
+
+To convert an Excel file to the events.yaml format, the following Python script is useful (TODO: associate with email-trigger or export from system):
+
+```python
+#!/usr/bin/env python3
+"""
+Read the XLSX via pandas and save YAML events to a file.
+
+Usage:
+  python xlsx_to_yaml_pandas.py input.xlsx output.yml
+  python xlsx_to_yaml_pandas.py input.xlsx output.yml --sheet 0
+"""
+
+from __future__ import annotations
+
+import argparse
+import re
+from datetime import datetime
+from typing import Any, Dict
+
+import pandas as pd
+
+
+DATE_IN = "%d.%m.%Y"
+
+
+def norm_str(v: Any) -> str:
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        return ""
+    return str(v).strip()
+
+
+def norm_hhmm(v: Any) -> str:
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        raise ValueError("missing time")
+
+    if isinstance(v, datetime):
+        return v.strftime("%H:%M")
+
+    s = norm_str(v)
+    m = re.fullmatch(r"(\d{1,2}):(\d{2})", s)
+    if m:
+        return f"{int(m.group(1)):02d}:{int(m.group(2)):02d}"
+
+    # Excel time as fraction of day
+    try:
+        fv = float(v)
+        if 0 <= fv < 1:
+            total_minutes = int(round(fv * 24 * 60))
+            hh = total_minutes // 60
+            mm = total_minutes % 60
+            return f"{hh:02d}:{mm:02d}"
+    except Exception:
+        pass
+
+    raise ValueError(f"unrecognized time value: {v!r}")
+
+
+def norm_ymd(date_val: Any) -> str:
+    if date_val is None or (isinstance(date_val, float) and pd.isna(date_val)):
+        raise ValueError("missing date")
+
+    if isinstance(date_val, datetime):
+        return date_val.strftime("%Y-%m-%d")
+
+    s = norm_str(date_val)
+    return datetime.strptime(s, DATE_IN).strftime("%Y-%m-%d")
+
+
+def yaml_escape(s: str) -> str:
+    return s.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def status_to_color(status: str) -> str:
+    status_l = status.strip().lower()
+    return {
+        "planned": "lightyellow",
+        "confirmed": "lightgreen",
+        "cancelled": "lightcoral",
+        "canceled": "lightcoral",
+        "tentative": "gold",
+    }.get(status_l, "lightyellow")
+
+
+def build_title(row: Dict[str, Any]) -> str:
+    section = norm_str(row.get("Section"))
+    module = norm_str(row.get("Module"))
+    lecturer = norm_str(row.get("Lecturer, Tutor, Guest lecturer"))
+
+    if section and module:
+        title = f"{section}: {module}"
+    else:
+        title = section or module or "Event"
+
+    if lecturer:
+        title = f"{title} — {lecturer}"
+
+    return title
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("xlsx", help="Path to input .xlsx")
+    ap.add_argument("output", help="Path to output .yml/.yaml")
+    ap.add_argument("--sheet", default=0, help="Sheet name or index (default: 0)")
+    args = ap.parse_args()
+
+    try:
+        sheet: Any = int(args.sheet)
+    except ValueError:
+        sheet = args.sheet
+
+    df = pd.read_excel(args.xlsx, sheet_name=sheet, dtype=object)
+
+    required = ["Begin date", "Begin time", "End date", "End time"]
+    missing = [c for c in required if c not in df.columns]
+    if missing:
+        raise SystemExit(
+            f"Missing required columns: {missing}\nFound columns: {list(df.columns)}"
+        )
+
+    df = df.dropna(subset=required, how="any")
+
+    lines: list[str] = []
+    for _, r in df.iterrows():
+        row = r.to_dict()
+
+        start = f'{norm_ymd(row["Begin date"])} {norm_hhmm(row["Begin time"])}'
+        end = f'{norm_ymd(row["End date"])} {norm_hhmm(row["End time"])}'
+
+        title = build_title(row)
+        location = norm_str(row.get("Room"))
+        status = norm_str(row.get("Status"))
+        color = status_to_color(status) if status else "lightyellow"
+
+        lines.append(f'- title: "{yaml_escape(title)}"')
+        lines.append(f'  start: "{start}"')
+        lines.append(f'  end: "{end}"')
+        lines.append(f'  color: "{color}"')
+        if location:
+            lines.append(f'  location: "{yaml_escape(location)}"')
+
+    yaml_text = "\n".join(lines) + ("\n" if lines else "")
+    with open(args.output, "w", encoding="utf-8") as f:
+        f.write(yaml_text)
+
+    print(f"Wrote {len(df)} events to {args.output}")
+
+
+if __name__ == "__main__":
+    main()
+```
