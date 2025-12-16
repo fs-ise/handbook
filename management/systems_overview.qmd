@@ -25,7 +25,16 @@ We prefer open-source tools and open-data formats:
 - **[Markdown](https://www.markdownguide.org/){target=_blank}**, a markup language, which allows us to creating formatted documents, papers, websites, presentations using plain text (formatting such as headings, lists, bold, italics, and links). It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank}. Citations can be included via the [CSL](https://citationstyles.org/){target=_blank} project.
 - **[Git](https://git-scm.com/){target=_blank}**, a distributed version control system to collaborate on software development projects, data analyses, paper writing, and teaching materials. It allows users to work on the same file, to track changes, to merge different versions or branches, and revert to any previous state.
 
-The structure of the handbook is used to to organize files on nextcloud. Projects are structured as [follows](LINK).
+::: {.callout-note title="Markdown" collapse=true}
+**[Markdown](https://www.markdownguide.org/){target=_blank}** is our preferred open-data format for the documentation (website), for writing papers and theses, managing knowledge, and creating slides. It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank}.
+
+```{mermaid}
+graph LR
+    A[Edit Markdown Handbook pages on GitHub] -->|triggers:GitHub Actions| B[Live Website]
+    C[Edit Markdown Slides on GitHub] -->|triggers:GitHub Actions| D[HTML slides]
+    E[Edit Markdown Paper on GitHub] -->|triggers:GitHub Actions| F[Paper PDF/DOX]
+```
+:::
 
 - [Systems for teaching](../../30-teaching/30_processes/30.03.systems.html)
 - [Systems for research](../../20-research/20_processes/20.03.systems.html)

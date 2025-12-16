@@ -1,20 +1,44 @@
 ---
 title: "Lectures"
+
 listing:
   id: lecture-listing
   contents: courses
   type: table
-  fields: ["title", "semester"]
+  fields: ["semester", "title", "status"]
   sort: "date desc"
   sort-ui: false
   categories: false
   page-size: 10
 ---
 
+## TODO: state model
+
+Consolidate with process overview in [courses](courses/2026-SuSe-BDA.html#process)
+
+<!--
+Status
+
+⟳ in-preparation
+▶ in-progress
+📋 grade / review / repeat exams
+✔️ completed
+-->
+
+```{mermaid}
+flowchart
+    direction LR
+    InPreparation(["<a href='#in-preparation'>In preparation</a>"]) --> InProgress(["<a href='#in-progress'>In progress</a>"])
+    InProgress --> GradeReviewRepeat(["<a href='#grade-review-repeat'>Grade, review, repeat</a>"])
+    GradeReviewRepeat --> Completed(["<a href='#completed'>Completed</a>"])
+```
+
 Courses are [here](https://github.com/fs-ise/handbook/tree/main/teaching/courses).
 
 ::: {#lecture-listing}
 :::
+
+➕ [Create a new course](new.html)
 
 ## Repositories
 
@@ -23,3 +47,4 @@ Courses are [here](https://github.com/fs-ise/handbook/tree/main/teaching/courses
 - Materials: [repository](https://github.com/fs-ise/big-data-analytics)
 - Exams: TODO
 - Grades: TODO
+

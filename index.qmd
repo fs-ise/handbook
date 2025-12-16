@@ -1,8 +1,12 @@
+
 ---
 title: "Home"
 filters:
   - panel-accordion
 format: html
+format:
+  html:
+    include-in-header: assets/calendar/calendar-head.html
 ---
 
 Welcome to the Information Systems Education (ISE) lab hanbook!
@@ -92,3 +96,21 @@ Roles, responsibilities, and who to contact for specific topics within the lab. 
 
 :::
 
+
+::: {.callout-note title="Calendar" collapse=true}
+Our shared public calendar has dates for upcoming events in the lab.
+It contains mostly public events that are of interest to the team and students.
+
+<div id="ec"></div>
+
+To subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.
+
+```sh
+https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise_cal.ical
+```
+
+To add or modify events, edit the `events.yaml` file [here](https://github.com/fs-ise/handbook/edit/main/assets/calendar/events.yaml){target=_blank}.
+
+:::
+
+<script src="assets/calendar/calendar.js"></script>

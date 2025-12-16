@@ -38,6 +38,10 @@ By documenting what works, we make everyday tasks simpler and leave more room fo
 ::: {.callout-note collapse="true"}
 ## Example page
 
+::: {.callout-important}
+Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){: target="_blank"}).
+:::
+
 ```markdown
 ---
 title: "Title of the page"
@@ -48,6 +52,15 @@ Text with illustrations/figures/screenshots:
 ![Caption](assets/images/Beispiel_Scheinteilnehmer-Excel.JPG)
 
 Note: copy and adapt the path as needed.
+
+A [Link](https://website.com){target=_blank} that open in a separate window.
+
+<!-- Comment can be used to add further explanations, links to references/resources, or to keep parts of the paper that were shortened -->
+
+# References
+<div class="references">
+  <p>Author, A. A. (Year). Title of work: Capital letter also for subtitle. Publisher.</p>
+</div>
 
 Callouts (colored boxes, as illustrated below):
 
@@ -76,6 +89,9 @@ Confidential data is stored on the [Nextcloud](http://url.com){target=_blank}.
 ::: callout-important
 An important callout.
 :::
+
+Graphs can be included as [Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html){target=_blank}
+( see[Mermaid live editor](https://mermaid.live/edit){target=_blank}).
 
 :::
 
