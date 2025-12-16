@@ -1,0 +1,43 @@
+name: Generate iCal File
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/calendar/calendar.js'
+      - 'assets/calendar/events.yaml'
+
+jobs:
+  generate-ical:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install js-yaml ics luxon rrule
+
+    - name: Generate iCal File
+      run: node .github/workflows/generate_ical.js
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+        git add assets/calendar/fs-ise.ical
+
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "Update fs-ise.cal"
+          git push
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
