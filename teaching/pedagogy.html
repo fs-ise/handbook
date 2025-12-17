@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -111,17 +131,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -131,6 +140,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -705,7 +725,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <section id="main-pedagogical-framework" class="level2">
 <h2 class="anchored" data-anchor-id="main-pedagogical-framework">Main Pedagogical Framework</h2>
 <p><a href="https://www.hul.uni-hamburg.de/selbstlernmaterialien.html#lehrpfad" target="_blank">Gestaltung von Hochschullehre</a>, <a href="https://www.hul.uni-hamburg.de/selbstlernmaterialien/action-design-pattern.html" target="_blank">Action Design Patterns</a></p>
-<p>Curriculum development according to Thomas et al.&nbsp;(2022):</p>
+<p>Curriculum development according to <span class="citation" data-cites="ThomasEtAl2022">Thomas et al. (<a href="#ref-ThomasEtAl2022" role="doc-biblioref">2022</a>)</span>:</p>
 <ul>
 <li>Step 1 Problem Identification and General Needs Assessment</li>
 <li>Step 2 Needs Assessment for Targeted Learners</li>
@@ -721,7 +741,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </section>
 <section id="evidence-based-practice" class="level2">
 <h2 class="anchored" data-anchor-id="evidence-based-practice">Evidence-based practice</h2>
-<p>Hattie (2009) aggregates evidence from over 800 meta-analyses on learning and teaching, offering a substantive knowledge base to guide our teaching efforts (<a href="https://inspirasifoundation.org/wp-content/uploads/2020/05/John-Hattie-Visible-Learning_-A-synthesis-of-over-800-meta-analyses-relating-to-achievement-2008.pdf" target="_blank">PDF</a>).</p>
+<p><span class="citation" data-cites="Hattie2008">Hattie (<a href="#ref-Hattie2008" role="doc-biblioref">2008</a>)</span> aggregates evidence from over 800 meta-analyses on learning and teaching, offering a substantive knowledge base to guide our teaching efforts (<a href="https://inspirasifoundation.org/wp-content/uploads/2020/05/John-Hattie-Visible-Learning_-A-synthesis-of-over-800-meta-analyses-relating-to-achievement-2008.pdf" target="_blank">PDF</a>).</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -807,28 +827,27 @@ Note
 <li><a href="https://hochschulforumdigitalisierung.de/" target="_blank">Hochschulforum Digitalisierung</a></li>
 <li><a href="https://bokcenter.harvard.edu/syllabus-design" target="_blank">Syllabus design</a></li>
 </ul>
-<p><strong>Books</strong></p>
-<div class="publist">
-<p>
-Bain, K. (2004). What the best college teachers do. <em>Harvard University Press</em>.
-</p>
-<p>
-Keller, M. M., Hoy, A. W., Goetz, T., &amp; Frenzel, A. C. (2016). Teacher enthusiasm: Reviewing and redefining a complex construct. <em>Educational Psychology Review</em>, 28, 743-769.
-</p>
-<p>
-Thomas, P. A., Kern, D. E., Hughes, M. T., Tackett, S. A., &amp; Chen, B. Y. (Eds.). (2022). Curriculum development for medical education: a six-step approach. JHU press.
-</p>
-<p>
-Hattie, J. (2008). Visible learning: A synthesis of over 800 meta-analyses relating to achievement. Routledge. (<a href="https://digital-work-lab.github.io/handbook/docs/10-lab/18_resources/18.01.library.html">library</a>)
-</p>
-</div>
 
 
 <!-- -->
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Bain2004" class="csl-entry" role="listitem">
+Bain, K. (2004). <em>What the best college teachers do</em>. Harvard University Press.
+</div>
+<div id="ref-Hattie2008" class="csl-entry" role="listitem">
+Hattie, J. (2008). <em>Visible learning: A synthesis of over 800 meta-analyses relating to achievement</em>. Routledge.
+</div>
+<div id="ref-KellerEtAl2016" class="csl-entry" role="listitem">
+Keller, M. M., Hoy, A. W., Goetz, T., &amp; Frenzel, A. C. (2016). Teacher enthusiasm: Reviewing and redefining a complex construct. <em>Educational Psychology Review</em>, <em>28</em>, 743–769. <a href="https://doi.org/10.1007/s10648-015-9354-y">https://doi.org/10.1007/s10648-015-9354-y</a>
+</div>
+<div id="ref-ThomasEtAl2022" class="csl-entry" role="listitem">
+Thomas, P. A., Kern, D. E., Hughes, M. T., Tackett, S. A., &amp; Chen, B. Y. (Eds.). (2022). <em>Curriculum development for medical education: A six-step approach</em>. Johns Hopkins University Press.
+</div>
+</div></section></div></main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const today = new Date();
@@ -1318,109 +1337,107 @@ document.addEventListener("DOMContentLoaded", function () {
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Pedagogy"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>This page summarizes pedagogical resources and evidence-based teaching strategies.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Main Pedagogical Framework</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gestaltung von Hochschullehre</span><span class="co">](https://www.hul.uni-hamburg.de/selbstlernmaterialien.html#lehrpfad)</span>{target=_blank}, <span class="co">[</span><span class="ot">Action Design Patterns</span><span class="co">](https://www.hul.uni-hamburg.de/selbstlernmaterialien/action-design-pattern.html)</span>{target=_blank}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Curriculum development according to Thomas et al. (2022):</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 1 Problem Identification and General Needs Assessment </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 2 Needs Assessment for Targeted Learners </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 3 Goals and Objectives</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 4 Educational Strategies </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 5 Implementation</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 6 Evaluation and Feedback </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> ../assets/complementary-references.bib</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> ../assets/apa.csl</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">nocite:</span><span class="co"> |</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  @Bain2004</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  @KellerEtAl2016</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  @ThomasEtAl2022</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  @Hattie2008</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>This page summarizes pedagogical resources and evidence-based teaching strategies.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Main Pedagogical Framework</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gestaltung von Hochschullehre</span><span class="co">](https://www.hul.uni-hamburg.de/selbstlernmaterialien.html#lehrpfad)</span>{target=_blank}, <span class="co">[</span><span class="ot">Action Design Patterns</span><span class="co">](https://www.hul.uni-hamburg.de/selbstlernmaterialien/action-design-pattern.html)</span>{target=_blank}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Curriculum development according to @ThomasEtAl2022:</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Rahmenempfehlungen WI</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">v2017</span><span class="co">](https://www.uni-regensburg.de/assets/wirtschaftswissenschaften/wi-pernul/empfehlung-wirtschaftsinformatik2017.pdf)</span>{target=_blank}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evidence-based practice</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Hattie (2009) aggregates evidence from over 800 meta-analyses on learning and teaching, offering a substantive knowledge base to guide our teaching efforts (<span class="co">[</span><span class="ot">PDF</span><span class="co">](https://inspirasifoundation.org/wp-content/uploads/2020/05/John-Hattie-Visible-Learning_-A-synthesis-of-over-800-meta-analyses-relating-to-achievement-2008.pdf)</span>{target=_blank}).</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>**TODO : a summary will follow**</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Syllabus Design</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Basic information (Instructor, contact and availability, dates, degree, prerequisites, format online/in person, state whether/when attendance is mandatory)</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Course description with teaching philosophy (link to pedagogical foundations, include safety and inclusiveness statement)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Goal and learning objectives</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Course outline: contents in a timeline</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Assessment (Grading) and student responsibilities (possibly a "how to succeed" section)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materials (access) and resources</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 1 Problem Identification and General Needs Assessment </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 2 Needs Assessment for Targeted Learners </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 3 Goals and Objectives</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 4 Educational Strategies </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 5 Implementation</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 6 Evaluation and Feedback </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Rahmenempfehlungen WI</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">v2017</span><span class="co">](https://www.uni-regensburg.de/assets/wirtschaftswissenschaften/wi-pernul/empfehlung-wirtschaftsinformatik2017.pdf)</span>{target=_blank}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evidence-based practice</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>@Hattie2008 aggregates evidence from over 800 meta-analyses on learning and teaching, offering a substantive knowledge base to guide our teaching efforts (<span class="co">[</span><span class="ot">PDF</span><span class="co">](https://inspirasifoundation.org/wp-content/uploads/2020/05/John-Hattie-Visible-Learning_-A-synthesis-of-over-800-meta-analyses-relating-to-achievement-2008.pdf)</span>{target=_blank}).</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>**TODO : a summary will follow**</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Syllabus Design</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Examples:</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">NYU/JS</span><span class="co">](https://github.com/advanced-js/syllabus)</span>{target=_blank}</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">NYU/Data science</span><span class="co">](https://github.com/data-science-in-ed/Syllabus)</span>{target=_blank}</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">NYU/Java</span><span class="co">](https://github.com/NYU-CS9053/Syllabus)</span>{target=_blank}</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">UCF/Systems software</span><span class="co">](https://github.com/cop3402spring19/syllabus)</span>{target=_blank}</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hertie School of Governance Introduction to Collaborative Social Science Data Analysis</span><span class="co">](https://github.com/HertieDataScience/SyllabusAndLectures)</span>{target=_blank}</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Bamberg/PSI</span><span class="co">](https://www.uni-bamberg.de/fileadmin/psi/www.psi/teaching/docs/introsp-syllabus-2021.html)</span>{target=_blank}</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Basic information (Instructor, contact and availability, dates, degree, prerequisites, format online/in person, state whether/when attendance is mandatory)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Course description with teaching philosophy (link to pedagogical foundations, include safety and inclusiveness statement)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Goal and learning objectives</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Course outline: contents in a timeline</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Assessment (Grading) and student responsibilities (possibly a "how to succeed" section)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materials (access) and resources</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>Examples:</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rules and Classroom Management</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Rules affect student behavior and teaching conditions. Strict rules can have several advantages, such as (1) setting clear expectations, (2) reducing free-riding, or (3) allowing instructors to be more supportive instead of disciplining students. For example:</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In the open-source project, the rule is that students only participate if they contribute actual code to the group project. Students know that they are expected to contribute code before a predefined deadline and that the contributions will be checked.</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  Given that students are not assigned to a group and do not receive a grade without contributing code, free-riding (having the others work without putting in much effort) is limited.</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  In addition, students may take proactive ownership of their work, and ask instructors and teaching assistants for help. This allows us to play a more supportive role, instead of trying to discipline students towards the end of the project.</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- it is easier to control risks proactively instead of trying to fix them reactively --&gt;</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Formative feedback</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>It is essential to collect formative feedback ("how well students are able to understand/follow the contents during the course") and adapt accordingly (see Hattie 2009).</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>We collect feedback using (embedded) <span class="co">[</span><span class="ot">Rustpads</span><span class="co">](https://rustpad.io/)</span>{target=_blank} for anonymous open questions, and <span class="co">[</span><span class="ot">Google Forms</span><span class="co">](https://docs.google.com/forms)</span>{target=_blank} for structured (anonymous) feedback. Another option is <span class="co">[</span><span class="ot">Pingo</span><span class="co">](https://pingo.coactum.de/)</span>{target=_blank}.</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>These tools are preferred to paid solutions like <span class="co">[</span><span class="ot">Mentimeter</span><span class="co">](https://www.mentimeter.com/)</span>{target=_blank} or <span class="co">[</span><span class="ot">Tweedback</span><span class="co">](https://tweedback.de/)</span>{target=_blank}.</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## General student feedback</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create opportunities for students to meet and form study groups</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider student workload</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">NYU/JS</span><span class="co">](https://github.com/advanced-js/syllabus)</span>{target=_blank}</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">NYU/Data science</span><span class="co">](https://github.com/data-science-in-ed/Syllabus)</span>{target=_blank}</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">NYU/Java</span><span class="co">](https://github.com/NYU-CS9053/Syllabus)</span>{target=_blank}</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">UCF/Systems software</span><span class="co">](https://github.com/cop3402spring19/syllabus)</span>{target=_blank}</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hertie School of Governance Introduction to Collaborative Social Science Data Analysis</span><span class="co">](https://github.com/HertieDataScience/SyllabusAndLectures)</span>{target=_blank}</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Bamberg/PSI</span><span class="co">](https://www.uni-bamberg.de/fileadmin/psi/www.psi/teaching/docs/introsp-syllabus-2021.html)</span>{target=_blank}</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rules and Classroom Management</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>Rules affect student behavior and teaching conditions. Strict rules can have several advantages, such as (1) setting clear expectations, (2) reducing free-riding, or (3) allowing instructors to be more supportive instead of disciplining students. For example:</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In the open-source project, the rule is that students only participate if they contribute actual code to the group project. Students know that they are expected to contribute code before a predefined deadline and that the contributions will be checked.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  Given that students are not assigned to a group and do not receive a grade without contributing code, free-riding (having the others work without putting in much effort) is limited.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  In addition, students may take proactive ownership of their work, and ask instructors and teaching assistants for help. This allows us to play a more supportive role, instead of trying to discipline students towards the end of the project.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- it is easier to control risks proactively instead of trying to fix them reactively --&gt;</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Formative feedback</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>It is essential to collect formative feedback ("how well students are able to understand/follow the contents during the course") and adapt accordingly (see Hattie 2009).</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>We collect feedback using (embedded) <span class="co">[</span><span class="ot">Rustpads</span><span class="co">](https://rustpad.io/)</span>{target=_blank} for anonymous open questions, and <span class="co">[</span><span class="ot">Google Forms</span><span class="co">](https://docs.google.com/forms)</span>{target=_blank} for structured (anonymous) feedback. Another option is <span class="co">[</span><span class="ot">Pingo</span><span class="co">](https://pingo.coactum.de/)</span>{target=_blank}.</span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="al">![workload](https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/workload_2024.png)</span>{target=_blank}</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>These tools are preferred to paid solutions like <span class="co">[</span><span class="ot">Mentimeter</span><span class="co">](https://www.mentimeter.com/)</span>{target=_blank} or <span class="co">[</span><span class="ot">Tweedback</span><span class="co">](https://tweedback.de/)</span>{target=_blank}.</span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Projects and Publications</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## General student feedback</span></span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">git-intro</span><span class="co">](https://github.com/digital-work-lab/git-intro)</span>{target=_blank}</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">git-collaboration</span><span class="co">](https://github.com/digital-work-lab/git-collaboration)</span>{target=_blank}</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">teapad</span><span class="co">](https://github.com/digital-work-lab/teapad)</span>{target=_blank}</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>**Journals/Materials**</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Journal of Information Systems Education</span><span class="co">](https://jise.org/archives.html)</span>{target=_blank}</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ACM SIG CSE - Computer Science Education</span><span class="co">](https://sigcse.org/)</span>{target=_blank}</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">CAIS - IS pedagogy and teaching case section</span><span class="co">](https://aisel.aisnet.org/cais/)</span>{target=_blank}</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Journal of Information Technology Teaching Cases</span><span class="co">](https://journals.sagepub.com/home/TTC)</span>{target=_blank}</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create opportunities for students to meet and form study groups</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider student workload</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="al">![workload](https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/workload_2024.png)</span>{target=_blank}</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## Projects and Publications</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">git-intro</span><span class="co">](https://github.com/digital-work-lab/git-intro)</span>{target=_blank}</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">git-collaboration</span><span class="co">](https://github.com/digital-work-lab/git-collaboration)</span>{target=_blank}</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">teapad</span><span class="co">](https://github.com/digital-work-lab/teapad)</span>{target=_blank}</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">knowledge management</span><span class="co">](knowledge_management.html)</span>.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>**Journals/Materials**</span>
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>**Courses**</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ProfiLehre Seminarprogramm</span><span class="co">](https://profilehreplus.de/seminare)</span>{target=_blank}</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hochschulforum Digitalisierung</span><span class="co">](https://hochschulforumdigitalisierung.de/)</span>{target=_blank}</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Syllabus design</span><span class="co">](https://bokcenter.harvard.edu/syllabus-design)</span>{target=_blank}</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>**Books**</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"publist"</span><span class="dt">&gt;</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Bain, K. (2004). What the best college teachers do. <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Harvard University Press<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Keller, M. M., Hoy, A. W., Goetz, T., &amp; Frenzel, A. C. (2016). Teacher enthusiasm: Reviewing and redefining a complex construct. <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Educational Psychology Review<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 28, 743-769.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Thomas, P. A., Kern, D. E., Hughes, M. T., Tackett, S. A., &amp; Chen, B. Y. (Eds.). (2022). Curriculum development for medical education: a six-step approach. JHU press.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Hattie, J. (2008). Visible learning: A synthesis of over 800 meta-analyses relating to achievement. Routledge. (<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://digital-work-lab.github.io/handbook/docs/10-lab/18_resources/18.01.library.html"</span><span class="dt">&gt;</span>library<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>)<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Journal of Information Systems Education</span><span class="co">](https://jise.org/archives.html)</span>{target=_blank}</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ACM SIG CSE - Computer Science Education</span><span class="co">](https://sigcse.org/)</span>{target=_blank}</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">CAIS - IS pedagogy and teaching case section</span><span class="co">](https://aisel.aisnet.org/cais/)</span>{target=_blank}</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Journal of Information Technology Teaching Cases</span><span class="co">](https://journals.sagepub.com/home/TTC)</span>{target=_blank}</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">knowledge management</span><span class="co">](knowledge_management.html)</span>.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>**Courses**</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ProfiLehre Seminarprogramm</span><span class="co">](https://profilehreplus.de/seminare)</span>{target=_blank}</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hochschulforum Digitalisierung</span><span class="co">](https://hochschulforumdigitalisierung.de/)</span>{target=_blank}</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Syllabus design</span><span class="co">](https://bokcenter.harvard.edu/syllabus-design)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
