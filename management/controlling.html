@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -142,17 +153,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -769,8 +769,9 @@ Note
 <ul>
 <li><a href="https://github.com/settings/billing/summary" target="_blank">GitHub / LFS</a></li>
 <li>OpenAI API: <a href="https://platform.openai.com/settings/organization/usage" target="_blank">Usage</a> and <a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank">balance/billing</a> (<code>insufficient_quota</code>: go to billing, increase credit balance)</li>
-<li><a href="https://mein.ionos.de/product-overview" target="_blank">NextCloud / IONOS</a></li>
-<li><a href="https://fly.io/dashboard" target="_blank">Fly.io</a></li>
+<li><a href="https://mein.ionos.de/product-overview" target="_blank">NextCloud / IONOS</a> <!--
+- [Fly.io](https://fly.io/dashboard){target=_blank}
+--></li>
 </ul>
 </section>
 <section id="access-to-shared-files" class="level2">
@@ -1313,24 +1314,26 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">GitHub / LFS</span><span class="co">](https://github.com/settings/billing/summary)</span>{target=_blank}</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OpenAI API: <span class="co">[</span><span class="ot">Usage</span><span class="co">](https://platform.openai.com/settings/organization/usage)</span>{target=_blank} and <span class="co">[</span><span class="ot">balance/billing</span><span class="co">](https://platform.openai.com/settings/organization/billing/overview)</span>{target=_blank} (<span class="in">`insufficient_quota`</span>: go to billing, increase credit balance)</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">NextCloud / IONOS</span><span class="co">](https://mein.ionos.de/product-overview)</span>{target=_blank}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Fly.io</span><span class="co">](https://fly.io/dashboard)</span>{target=_blank}</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access to shared files</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">- [Fly.io](https://fly.io/dashboard){target=_blank}</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Nextcloud: shared dirs</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/sharingout)</span>{target=_blank}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Nextcloud: shared links</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/sharinglinks)</span>{target=_blank}</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Budget</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access to shared files</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Nextcloud: shared dirs</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/sharingout)</span>{target=_blank}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Nextcloud: shared links</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/sharinglinks)</span>{target=_blank}</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>An overview of the current budget is available via <span class="co">[</span><span class="ot">ZUV Portal</span><span class="co">](https://zuvportal.uni-bamberg.de/)</span>{target=_blank}.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Budget</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>::: resource</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>An internal overview of our budget and projections is available <span class="co">[</span><span class="ot">here</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/486375?dir=/10-lab/10_processes/70_controlling)</span>{target=_blank}.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inventory</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>An overview of the current budget is available via <span class="co">[</span><span class="ot">ZUV Portal</span><span class="co">](https://zuvportal.uni-bamberg.de/)</span>{target=_blank}.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>::: resource</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>An internal overview of our budget and projections is available <span class="co">[</span><span class="ot">here</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/486375?dir=/10-lab/10_processes/70_controlling)</span>{target=_blank}.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Regularly update the inventory via <span class="co">[</span><span class="ot">ZUV Portal/Kontoauszüge</span><span class="co">](https://zuvportal.uni-bamberg.de/)</span>{target=_blank}.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inventory</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Regularly update the inventory via <span class="co">[</span><span class="ot">ZUV Portal/Kontoauszüge</span><span class="co">](https://zuvportal.uni-bamberg.de/)</span>{target=_blank}.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
