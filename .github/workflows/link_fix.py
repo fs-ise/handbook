@@ -4,8 +4,9 @@ from pathlib import Path
 import re
 from typing import Iterable
 import os
-repo = os.getenv("GITHUB_REPOSITORY")          # e.g., "fs-ise/handbook"
-sha = os.getenv("GITHUB_SHA")                 # commit being checked
+
+repo = os.getenv("GITHUB_REPOSITORY")  # e.g., "fs-ise/handbook"
+sha = os.getenv("GITHUB_SHA")         # commit being checked
 server = os.getenv("GITHUB_SERVER_URL", "https://github.com")
 
 
@@ -19,6 +20,7 @@ MARKDOWN_HTTP_LINK_PATTERN = re.compile(
 
 # Match internal .html links:
 #   [text](relative/path/file.html)
+#   [text](/site/root/path/file.html)
 HTML_LINK_PATTERN = re.compile(r"\[([^\]]+)\]\(([^h][^\)]+\.html)\)")
 
 
@@ -98,15 +100,26 @@ def append_target_blank_to_http_links(file_path: Path) -> bool:
     return False
 
 
-def candidates_for_quarto_source(file_path: Path, html_link: str) -> list[Path]:
+def candidates_for_quarto_source(file_path: Path, html_link: str, repo_root: Path) -> list[Path]:
     """
     Given a link to something.html, return plausible Quarto source candidates:
     - something.qmd / something.md
     - something/index.qmd / something/index.md  (pretty URLs)
+
+    Handles:
+    - relative links:  research/writing.html
+    - site-root links: /research/writing.html   (Quarto absolute-to-site-root)
     """
     clean = html_link.split("#", 1)[0].split("?", 1)[0]
     rel_no_ext = clean[:-5]  # remove ".html"
-    base = file_path.parent / rel_no_ext
+
+    # Quarto site-root paths begin with "/". Don't let pathlib treat them
+    # as OS-absolute paths; resolve them from repo_root instead.
+    if rel_no_ext.startswith("/"):
+        rel_no_ext = rel_no_ext.lstrip("/")
+        base = repo_root / rel_no_ext
+    else:
+        base = file_path.parent / rel_no_ext
 
     return [
         Path(str(base) + ".qmd"),
@@ -116,7 +129,7 @@ def candidates_for_quarto_source(file_path: Path, html_link: str) -> list[Path]:
     ]
 
 
-def check_internal_html_links(file_path: Path) -> list[tuple[str, list[Path]]]:
+def check_internal_html_links(file_path: Path, repo_root: Path) -> list[tuple[str, list[Path]]]:
     """
     For each [..](..html) link, verify at least one plausible source exists.
     Returns list of (html_link, candidates) for broken ones.
@@ -132,7 +145,7 @@ def check_internal_html_links(file_path: Path) -> list[tuple[str, list[Path]]]:
         if "_news" in html_link:
             continue
 
-        cands = candidates_for_quarto_source(file_path, html_link)
+        cands = candidates_for_quarto_source(file_path, html_link, repo_root=repo_root)
         if not any(p.exists() for p in cands):
             broken.append((html_link, cands))
 
@@ -170,7 +183,6 @@ def write_broken_links_report(
             f.write("\n")
 
 
-
 def main() -> None:
     root = Path.cwd()
 
@@ -181,7 +193,7 @@ def main() -> None:
     # 2) Check internal .html links against plausible Quarto sources (.qmd/.md/index.*)
     broken: dict[Path, list[tuple[str, list[Path]]]] = {}
     for fp in iter_content_files(root):
-        b = check_internal_html_links(fp)
+        b = check_internal_html_links(fp, repo_root=root)
         if b:
             broken[fp] = b
 
