@@ -178,13 +178,13 @@ def write_broken_links_report(
                 f.write(f"## In `{rel}`\n\n")
 
             for html_link, cands in items:
-                f.write(f"- `{html_link}`\n")
-                f.write("  - expected one of:\n")
-                for c in cands:
-                    try:
-                        f.write(f"    - `{c.relative_to(repo_root)}`\n")
-                    except ValueError:
-                        f.write(f"    - `{c}`\n")
+                f.write(f"This link is broken: `{html_link}`\n")
+                # f.write("  - expected one of:\n")
+                # for c in cands:
+                #     try:
+                #         f.write(f"    - `{c.relative_to(repo_root)}`\n")
+                #     except ValueError:
+                #         f.write(f"    - `{c}`\n")
             f.write("\n")
 
 
