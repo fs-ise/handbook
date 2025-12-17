@@ -3,6 +3,10 @@ from __future__ import annotations
 from pathlib import Path
 import re
 from typing import Iterable
+import os
+repo = os.getenv("GITHUB_REPOSITORY")          # e.g., "fs-ise/handbook"
+sha = os.getenv("GITHUB_SHA")                 # commit being checked
+server = os.getenv("GITHUB_SERVER_URL", "https://github.com")
 
 
 # Match inline markdown links:
@@ -135,7 +139,10 @@ def check_internal_html_links(file_path: Path) -> list[tuple[str, list[Path]]]:
     return broken
 
 
-def write_broken_links_report(broken: dict[Path, list[tuple[str, list[Path]]]]) -> None:
+def write_broken_links_report(
+    broken: dict[Path, list[tuple[str, list[Path]]]],
+    repo_root: Path,
+) -> None:
     report_path = Path("broken_links.md")
     if not broken:
         if report_path.exists():
@@ -146,15 +153,22 @@ def write_broken_links_report(broken: dict[Path, list[tuple[str, list[Path]]]]) 
     with report_path.open("w", encoding="utf-8") as f:
         f.write("# Broken internal .html links\n\n")
         for src_file, items in sorted(broken.items(), key=lambda x: str(x[0])):
-            f.write(f"## In `{src_file}`\n\n")
+            rel = src_file.relative_to(repo_root).as_posix()
+            if repo and sha:
+                url = f"{server}/{repo}/blob/{sha}/{rel}"
+                f.write(f"## In [{rel}]({url})\n\n")
+            else:
+                f.write(f"## In `{rel}`\n\n")
             for html_link, cands in items:
                 f.write(f"- `{html_link}`\n")
                 f.write("  - expected one of:\n")
                 for c in cands:
-                    f.write(f"    - `{c}`\n")
+                    try:
+                        f.write(f"    - `{c.relative_to(repo_root)}`\n")
+                    except ValueError:
+                        f.write(f"    - `{c}`\n")
             f.write("\n")
 
-    print(f"Wrote report to {report_path}")
 
 
 def main() -> None:
@@ -171,7 +185,7 @@ def main() -> None:
         if b:
             broken[fp] = b
 
-    write_broken_links_report(broken)
+    write_broken_links_report(broken, repo_root=root)
 
 
 if __name__ == "__main__":
