@@ -8,14 +8,73 @@ title: "File conversion"
 docker run --rm -v "$PWD":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md
 ```
 
+
+## Markdown-to-Word / Markdown-to-docx
+
+```sh
+docker run --rm -u "$(id -u):$(id -g)"  -v "$PWD":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx
+```
+
 ## PPTX-to-Markdown
 
 ```sh
 pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --image-dir "images"
 ```
 
-## Markdown-to-Word / Markdown-to-docx
+Prompt to polish:
 
-```sh
-docker run --rm -u "$(id -u):$(id -g)"  -v "$PWD":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx
+```Markdown
+You are a formatter for Reveal.js / Quarto slides.
+
+Task: Convert the input into plain Markdown suitable for Reveal.js with Quarto.
+
+Rules:
+- Keep the existing YAML header exactly as it is.
+- Remove ALL HTML tags and inline CSS (e.g., <div>, <h3>, <ul>, <li>, <p>, style=...).
+- Preserve the slide structure:
+  - Keep slide titles as "## ...".
+- Ensure there is a blank newline **before every list**.
+- Convert lists to Markdown bullets ("- ...").
+- Convert quoted statements into Markdown blockquotes ("> ...").
+- Put all sources / attributions into a Quarto aside block in this exact form:
+
+  ::: aside
+  — Source
+  :::
+
+- Actively remove all figure captions.
+- Do NOT add new content and do NOT remove semantic content; only reformat.
+
+Image and layout rules (apply automatically):
+- If a slide contains **one image only**, format it as:
+  
+  `![](path){fig-align="center" width="50%"}`
+
+- If a slide contains **two images only**, place them in a two-column layout:
+
+  ::: columns
+  ::: column
+  ![](path1)
+  :::
+  ::: column
+  ![](path2)
+  :::
+  :::
+
+- If a slide contains **text and one image**, place the text in the **left column** and the image in the **right column**:
+
+  ::: columns
+  ::: column
+  [text content]
+  :::
+  ::: column
+  ![](path){width="300px"}
+  :::
+  :::
+
+- If images are present without explicit widths, use **40%** by default, unless overridden by the rules above.
+- Preserve existing explicit image widths when they do not conflict with these rules.
+
+- Output ONLY the converted Markdown.
+- Do not explain anything.
 ```
