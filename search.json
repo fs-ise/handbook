@@ -4116,18 +4116,18 @@
     "text": "docker run --rm -v \"$PWD\":/data pandoc_dockerfile input.docx -f docx -t markdown --wrap=none -o output.md"
   },
   {
-    "objectID": "academy/how_to/conversion.html#pptx-to-markdown",
-    "href": "academy/how_to/conversion.html#pptx-to-markdown",
-    "title": "File conversion",
-    "section": "PPTX-to-Markdown",
-    "text": "PPTX-to-Markdown\npptx2md \"slides.pptx\" --output \"slides_with_notes.qmd\" --enable-slides --qmd --image-dir \"images\""
-  },
-  {
     "objectID": "academy/how_to/conversion.html#markdown-to-word-markdown-to-docx",
     "href": "academy/how_to/conversion.html#markdown-to-word-markdown-to-docx",
     "title": "File conversion",
     "section": "Markdown-to-Word / Markdown-to-docx",
     "text": "Markdown-to-Word / Markdown-to-docx\ndocker run --rm -u \"$(id -u):$(id -g)\"  -v \"$PWD\":/data pandoc_dockerfile input.md -f markdown -t docx -o output.docx"
+  },
+  {
+    "objectID": "academy/how_to/conversion.html#pptx-to-markdown",
+    "href": "academy/how_to/conversion.html#pptx-to-markdown",
+    "title": "File conversion",
+    "section": "PPTX-to-Markdown",
+    "text": "PPTX-to-Markdown\npptx2md \"slides.pptx\" --output \"slides_with_notes.qmd\" --enable-slides --qmd --image-dir \"images\"\nPrompt to polish:\nYou are a formatter for Reveal.js / Quarto slides.\n\nTask: Convert the input into plain Markdown suitable for Reveal.js with Quarto.\n\nRules:\n- Keep the existing YAML header exactly as it is.\n- Remove ALL HTML tags and inline CSS (e.g., &lt;div&gt;, &lt;h3&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;p&gt;, style=...).\n- Preserve the slide structure:\n  - Keep slide titles as \"## ...\".\n- Ensure there is a blank newline **before every list**.\n- Convert lists to Markdown bullets (\"- ...\").\n- Convert quoted statements into Markdown blockquotes (\"&gt; ...\").\n- Put all sources / attributions into a Quarto aside block in this exact form:\n\n  ::: aside\n  — Source\n  :::\n\n- Actively remove all figure captions.\n- Do NOT add new content and do NOT remove semantic content; only reformat.\n\nImage and layout rules (apply automatically):\n- If a slide contains **one image only**, format it as:\n  \n  `![](path){fig-align=\"center\" width=\"50%\"}`\n\n- If a slide contains **two images only**, place them in a two-column layout:\n\n  ::: columns\n  ::: column\n  ![](path1)\n  :::\n  ::: column\n  ![](path2)\n  :::\n  :::\n\n- If a slide contains **text and one image**, place the text in the **left column** and the image in the **right column**:\n\n  ::: columns\n  ::: column\n  [text content]\n  :::\n  ::: column\n  ![](path){width=\"300px\"}\n  :::\n  :::\n\n- If images are present without explicit widths, use **40%** by default, unless overridden by the rules above.\n- Preserve existing explicit image widths when they do not conflict with these rules.\n\n- Output ONLY the converted Markdown.\n- Do not explain anything."
   },
   {
     "objectID": "academy/how_to/calendar_conversion.html",
