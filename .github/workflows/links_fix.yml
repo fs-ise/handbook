@@ -8,6 +8,10 @@ on:
   schedule:
     - cron: '10 2 * * 3'
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   externalLinkChecker:
     runs-on: ubuntu-latest
