@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -131,17 +142,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -784,7 +784,7 @@ Before your first day at work, you could explore Bamberg and get to know a few n
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To join, please <a href="https://github.com/signup" target="_blank">create a GitHub account</a> (if you do not have one yet) and start the onboarding process here: <a href="https://github.com/digital-work-lab/handbook/issues/new?template=request-onboarding.md">Open Onboarding Issue</a>.</p>
+<p>To join, please <a href="https://github.com/signup" target="_blank">create a GitHub account</a> (if you do not have one yet) and start the onboarding process here: <a href="https://github.com/digital-work-lab/handbook/issues/new?template=request-onboarding.md" target="_blank">Open Onboarding Issue</a>.</p>
 </div>
 </div>
 <p>Take a look at the <a href="systems">systems</a> page to get a first overview.</p>
@@ -1357,7 +1357,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>::: self-service</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>To join, please <span class="co">[</span><span class="ot">create a GitHub account</span><span class="co">](https://github.com/signup)</span>{target=_blank} (if you do not have one yet) and start the onboarding process here: <span class="co">[</span><span class="ot">Open Onboarding Issue</span><span class="co">](https://github.com/digital-work-lab/handbook/issues/new?template=request-onboarding.md)</span>.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>To join, please <span class="co">[</span><span class="ot">create a GitHub account</span><span class="co">](https://github.com/signup)</span>{target=_blank} (if you do not have one yet) and start the onboarding process here: <span class="co">[</span><span class="ot">Open Onboarding Issue</span><span class="co">](https://github.com/digital-work-lab/handbook/issues/new?template=request-onboarding.md)</span>{target=_blank}.</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Take a look at the <span class="co">[</span><span class="ot">systems</span><span class="co">](systems)</span> page to get a first overview.</span>

@@ -145,17 +145,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -176,6 +165,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -798,7 +798,7 @@ Important
 <section id="publishing-to-github-pages" class="level2">
 <h2 class="anchored" data-anchor-id="publishing-to-github-pages">Publishing to github pages</h2>
 <p>For <code>quarto publish gh-pages</code> : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).</p>
-<p>See <a href="https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html">tutorial</a></p>
+<p>See <a href="https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html" target="_blank">tutorial</a></p>
 </section>
 <section id="creating-extensions" class="level2">
 <h2 class="anchored" data-anchor-id="creating-extensions">Creating extensions</h2>
@@ -819,7 +819,7 @@ Example of a brand extension used: https://github.com/mcanouil/mickael.canouil.f
 <h3 class="anchored" data-anchor-id="timer">Timer</h3>
 <p>quarto add gadenbuie/countdown/quarto</p>
 <pre class="text"><code>{{&lt; countdown minutes=5 seconds=32 top=10 left=0 &gt;}}</code></pre>
-<p>Code annotation (for slides!) (see <a href="https://quarto.org/docs/authoring/code-annotation.html">link</a>)</p>
+<p>Code annotation (for slides!) (see <a href="https://quarto.org/docs/authoring/code-annotation.html" target="_blank">link</a>)</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-6"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="annotated-cell-6-2"><a href="#annotated-cell-6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-6-3" class="code-annotation-target"><a href="#annotated-cell-6-3" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
@@ -854,7 +854,7 @@ Example of a brand extension used: https://github.com/mcanouil/mickael.canouil.f
 </div>
 </div>
 </div>
-<p>Icons: <a href="https://icons.getbootstrap.com/">Bootstrap</a></p>
+<p>Icons: <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap</a></p>
 <p>{{icon=“mortarboard-fill”}}</p>
 <p>Native page break:</p>
 <p>{{&lt; pagebreak &gt;}}</p>
@@ -1501,7 +1501,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>For <span class="in">`quarto publish gh-pages`</span> : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).</span>
 <span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">tutorial</span><span class="co">](https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html)</span></span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">tutorial</span><span class="co">](https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html)</span>{target=_blank}</span>
 <span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Creating extensions</span></span>
 <span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a></span>
@@ -1535,7 +1535,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a><span class="in">{{&lt; countdown minutes=5 seconds=32 top=10 left=0 &gt;}}</span></span>
 <span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>Code annotation (for slides!) (see <span class="co">[</span><span class="ot">link</span><span class="co">](https://quarto.org/docs/authoring/code-annotation.html)</span>)</span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>Code annotation (for slides!) (see <span class="co">[</span><span class="ot">link</span><span class="co">](https://quarto.org/docs/authoring/code-annotation.html)</span>{target=_blank})</span>
 <span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
 <span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -1562,7 +1562,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span>
 <span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>Icons: <span class="co">[</span><span class="ot">Bootstrap</span><span class="co">](https://icons.getbootstrap.com/)</span></span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>Icons: <span class="co">[</span><span class="ot">Bootstrap</span><span class="co">](https://icons.getbootstrap.com/)</span>{target=_blank}</span>
 <span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a><span class="sc">\{\{</span>icon="mortarboard-fill"<span class="sc">\}\}</span></span>
 <span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a></span>
