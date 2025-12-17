@@ -68,7 +68,6 @@ docker compose run --rm quarto quarto add gadenbuie/countdown/quarto
 docker compose run --rm quarto quarto add martinomagnifico/quarto-simplemenu
 ```
 
-
 ## Publishing to github pages
 
 For `quarto publish gh-pages` : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).
@@ -85,7 +84,6 @@ quarto list extensions
 
 https://quarto.org/docs/extensions/creating.html
 
-
 <!--
 https://posit-dev.github.io/brand-yml/
 See branded shiny app for creating brand extensions: https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/
@@ -100,7 +98,6 @@ Shortcuts:
 - b
 - d
 
-
 ### Timer
 
 quarto add gadenbuie/countdown/quarto
@@ -109,9 +106,7 @@ quarto add gadenbuie/countdown/quarto
 {{< countdown minutes=5 seconds=32 top=10 left=0 >}}
 ```
 
-
 Code annotation (for slides!) (see [link](https://quarto.org/docs/authoring/code-annotation.html))
-
 
 ```r
 library(tidyverse)
@@ -155,9 +150,7 @@ Note that there are five types of callouts, including:
 
 @CastonguayWagnerMotulskyEtAl2023 is useful.
 
-
 Handbook: navigation is updated in `_quarto.yml`.
-
 
 Convert PowerPoint to quarto:
 
@@ -165,9 +158,7 @@ Convert PowerPoint to quarto:
 pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --image-dir "images"
 ```
 
-
 ## TODO : integrate the following
-
 
 ## Slides
 
@@ -177,17 +168,17 @@ pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --i
 - Speaker notes and presenter view during presentations
 - CSS styling for customization
 - Good integration with Git
-- Template is available [here](https://github.com/digital-work-lab/slides){: target="_blank"}
+- Template is available [here](https://github.com/digital-work-lab/slides){target=_blank}
 
 Centered text:
 
-```
+```Markdown
 <!-- _class: centered -->
 ```
 
 Format references:
 
-```
+```Markdown
 <style scoped>
 p {
     padding-left: 36px;
@@ -197,7 +188,7 @@ p {
 
 # References
 
-Weritz, P. (2022). Hey leaders, It’s time to train the workforce: Critical skills in the digital workplace. *Administrative Sciences*, 12(3), 94. doi: [10.3390/admsci12030094](https://doi.org/10.3390/admsci12030094){: target="_blank"}.
+Weritz, P. (2022). Hey leaders, It’s time to train the workforce: Critical skills in the digital workplace. *Administrative Sciences*, 12(3), 94. doi: [10.3390/admsci12030094](https://doi.org/10.3390/admsci12030094){target=_blank}.
 
 ```
 
@@ -206,7 +197,7 @@ Weritz, P. (2022). Hey leaders, It’s time to train the workforce: Critical ski
 Jupyter notebooks are useful to create exercise sheets, combining Markdown with Python or R.
 
 ::: {.callout-important}
-Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){: target="_blank"}).
+Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){target=_blank}).
 :::
 
 ```Markdown

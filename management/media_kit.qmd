@@ -11,3 +11,97 @@ title: "Media kit"
  - Needed for creating presentations and papers
  - Templates and guidelines for designing
  - Schemes like the university colors, the university-badge, the university-font and more
+
+## Minibook for advertising (paper)
+
+- [tutorial](https://www.minibooks.ch/faltanleitung.cfm), [video](https://www.youtube.com/watch?v=74JNo16IDW8)
+- May include QR codes (e.g., for materials, or surveys/feedback)
+
+
+::: {.callout-note title="Template collapse=true}
+
+`minibook.qmd`
+
+```Markdown
+---
+title: "My Minibook"
+author: "Your Name"
+format:
+  pdf:
+    # A6 pages (8 pages total), later imposed onto A4 with pdfjam
+    geometry:
+      - paperwidth=105mm
+      - paperheight=148mm
+      - margin=10mm
+    classoption:
+      - twoside
+---
+
+# Page 1 (Cover)
+
+Put your cover content here.
+
+\newpage
+
+# Page 2 (Program)
+
+8.00 Welcome reception
+10.00 Lunch
+12.00 Talks
+14.00 Coffee
+
+\newpage
+
+# Page 3 (Materials)
+
+Slides: 
+
+{{< qrcode https://digital-work-lab.github.io/open-source-project/ >}}
+
+\newpage
+
+# Page 4
+
+Content for page 4.
+
+\newpage
+
+# Page 5
+
+Content for page 5.
+
+\newpage
+
+# Page 6
+
+Content for page 6.
+
+\newpage
+
+# Page 7 (Feedback)
+
+Survey
+
+{{< qrcode google-forms... >}}
+
+\newpage
+
+# Page 8 (Back)
+
+Back cover / credits / contact.
+
+```
+
+Building the PDF:
+
+```sh
+quarto render minibook.qmd
+
+pdfjam --angle 180 --outfile temp_top.pdf -- minibook.pdf "7,6,5,4"
+pdfjam --outfile temp_bottom.pdf -- minibook.pdf "8,1,2,3"
+pdfjam --nup 4x2 --frame true --landscape --a4paper --outfile minibook-a4.pdf -- temp_top.pdf temp_bottom.pdf
+rm temp_top.pdf temp_bottom.pdf
+```
+
+:::
+
