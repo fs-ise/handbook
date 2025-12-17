@@ -170,16 +170,7 @@ In local setups, several editors are available for markdown documents, for examp
 - [Panwriter](https://panwriter.com/){target=_blank}
  -->
 
-The bibliography is stored as a bib file (typically `references.bib`) and versioned by git.
-<!-- It can be edited using tools like [JabRef](https://github.com/JabRef/jabref){target=_blank}. -->
-It is recommended to configure save actions to [store titles as sentence case](https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#sentence-case){target=_blank}, [normalize names of persons for author fields](https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#normalize-names-of-persons){target=_blank}, and to [normalize page numbers](https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#normalize-page-numbers){target=_blank}.
-Changes in the bib-file should be checked before committing and adding {} to protect cases when necessary (e.g., `{J}ab{R}ef`).
-
-Formatting the bibliography (*.bib file)
-
-- Title field: use sentence case (e.g., "On the origin of species", not "On the Origin of Species"). CSL styles that require title case will use an automatic title-case conversion ([1](https://citationstyles.org/authors/#/titles-in-sentence-and-title-case){target=_blank}).
-- Journal field: use long version (e.g., "Journal of Information Technology", not "JIT"). For CSL styles that require abbreviations, temporarily replace the journal field in the bib-file since CSL does not handle style-specific journal abbreviations ([1](https://citationstyles.org/authors/#/csl-limitations){target=_blank}). JSON-files containing journal abbreviations can be passed to pandoc using the [citation-abbreviations](https://pandoc.org/MANUAL.html#option--citation-abbreviations){target=_blank} field.
-- Inproceedings: when using crossrefs (e.g., `crossref = {icis2010}`) for conference papers, the year and month field should _not_ be set, only the original \@Proceedings entry should include the date formatted as follows: `date    = {2015-12-13/2015-12-16}`.
+See [citations and reference sections](writing.html#citations-and-reference-sections)
 
 ::: callout-note
 **Literature summaries: Obsidian**
