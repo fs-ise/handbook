@@ -111,28 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -144,6 +122,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -153,6 +142,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -961,13 +961,7 @@ In local setups, several editors are available for markdown documents, for examp
 - [Atom](https://shd101wyy.github.io/markdown-preview-enhanced/#/){target=_blank} with [markdown-preview-enhanced](https://github.com/shd101wyy/markdown-preview-enhanced){target=_blank}
 - [Panwriter](https://panwriter.com/){target=_blank}
  -->
-<p>The bibliography is stored as a bib file (typically <code>references.bib</code>) and versioned by git. <!-- It can be edited using tools like [JabRef](https://github.com/JabRef/jabref){target=_blank}. --> It is recommended to configure save actions to <a href="https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#sentence-case" target="_blank">store titles as sentence case</a>, <a href="https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#normalize-names-of-persons" target="_blank">normalize names of persons for author fields</a>, and to <a href="https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#normalize-page-numbers" target="_blank">normalize page numbers</a>. Changes in the bib-file should be checked before committing and adding {} to protect cases when necessary (e.g., <code>{J}ab{R}ef</code>).</p>
-<p>Formatting the bibliography (*.bib file)</p>
-<ul>
-<li>Title field: use sentence case (e.g., “On the origin of species”, not “On the Origin of Species”). CSL styles that require title case will use an automatic title-case conversion (<a href="https://citationstyles.org/authors/#/titles-in-sentence-and-title-case" target="_blank">1</a>).</li>
-<li>Journal field: use long version (e.g., “Journal of Information Technology”, not “JIT”). For CSL styles that require abbreviations, temporarily replace the journal field in the bib-file since CSL does not handle style-specific journal abbreviations (<a href="https://citationstyles.org/authors/#/csl-limitations" target="_blank">1</a>). JSON-files containing journal abbreviations can be passed to pandoc using the <a href="https://pandoc.org/MANUAL.html#option--citation-abbreviations" target="_blank">citation-abbreviations</a> field.</li>
-<li>Inproceedings: when using crossrefs (e.g., <code>crossref = {icis2010}</code>) for conference papers, the year and month field should <em>not</em> be set, only the original @Proceedings entry should include the date formatted as follows: <code>date    = {2015-12-13/2015-12-16}</code>.</li>
-</ul>
+<p>See <a href="writing.html#citations-and-reference-sections">citations and reference sections</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1709,116 +1703,107 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a><span class="co">- [Panwriter](https://panwriter.com/){target=_blank}</span></span>
 <span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a><span class="co"> --&gt;</span></span>
 <span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>The bibliography is stored as a bib file (typically <span class="in">`references.bib`</span>) and versioned by git.</span>
-<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- It can be edited using tools like [JabRef](https://github.com/JabRef/jabref){target=_blank}. --&gt;</span></span>
-<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>It is recommended to configure save actions to <span class="co">[</span><span class="ot">store titles as sentence case</span><span class="co">](https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#sentence-case)</span>{target=_blank}, <span class="co">[</span><span class="ot">normalize names of persons for author fields</span><span class="co">](https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#normalize-names-of-persons)</span>{target=_blank}, and to <span class="co">[</span><span class="ot">normalize page numbers</span><span class="co">](https://docs.jabref.org/finding-sorting-and-cleaning-entries/saveactions#normalize-page-numbers)</span>{target=_blank}.</span>
-<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a>Changes in the bib-file should be checked before committing and adding {} to protect cases when necessary (e.g., <span class="in">`{J}ab{R}ef`</span>).</span>
+<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">citations and reference sections</span><span class="co">](writing.html#citations-and-reference-sections)</span></span>
+<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a>**Literature summaries: Obsidian**</span>
 <span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a>Formatting the bibliography (*.bib file)</span>
-<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Title field: use sentence case (e.g., "On the origin of species", not "On the Origin of Species"). CSL styles that require title case will use an automatic title-case conversion (<span class="co">[</span><span class="ot">1</span><span class="co">](https://citationstyles.org/authors/#/titles-in-sentence-and-title-case)</span>{target=_blank}).</span>
-<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Journal field: use long version (e.g., "Journal of Information Technology", not "JIT"). For CSL styles that require abbreviations, temporarily replace the journal field in the bib-file since CSL does not handle style-specific journal abbreviations (<span class="co">[</span><span class="ot">1</span><span class="co">](https://citationstyles.org/authors/#/csl-limitations)</span>{target=_blank}). JSON-files containing journal abbreviations can be passed to pandoc using the <span class="co">[</span><span class="ot">citation-abbreviations</span><span class="co">](https://pandoc.org/MANUAL.html#option--citation-abbreviations)</span>{target=_blank} field.</span>
-<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Inproceedings: when using crossrefs (e.g., <span class="in">`crossref = {icis2010}`</span>) for conference papers, the year and month field should _not_ be set, only the original \@Proceedings entry should include the date formatted as follows: <span class="in">`date    = {2015-12-13/2015-12-16}`</span>.</span>
-<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a>**Literature summaries: Obsidian**</span>
-<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a>Literature summaries for each paper are stored in Obsidian format in the <span class="in">`literature`</span> directory.</span>
-<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>The paper-template is based on the following underlying architectural principles and considerations.</span>
-<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Minimal functionality: the most frequent use cases (writing, citing, creating submission files in docx/latex format with different templates and citation styles) must be supported in a highly efficient way.</span>
-<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a>More complex functionality (such as tables with merged cells and detailed formatting) is used less frequently (requiring less effort if not supported in an efficient way).</span>
-<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a>It may also create fewer problems (e.g., merging complex tables - as in Word/comparisons of tables)</span>
-<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a>Advantages of the markdown/pandoc workflow:</span>
-<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Separation of content and format</span>
-<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Collaboration and versioning of text with Git</span>
-<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Relying on active open source projects such as the <span class="co">[</span><span class="ot">CSL</span><span class="co">](https://citationstyles.org/)</span>{target=_blank} standard</span>
-<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Flexibility regarding the bibliography type (pandoc supports .bib, .enl, ...)</span>
-<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Combined writing and comments in the same document</span>
-<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reproducibility across platforms</span>
-<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Generating docx/tex/pdf as output</span>
-<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a>Since the underlying open source projects (especially CSL, pandoc, pandoc-citeproc) evolve constantly, it is recommended to work with the latest versions.</span>
-<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a>This is a limitation of the popular <span class="co">[</span><span class="ot">manubot project</span><span class="co">](https://github.com/manubot/rootstock)</span>{target=_blank} or <span class="co">[</span><span class="ot">pandoc scholar</span><span class="co">](https://github.com/pandoc-scholar/pandoc-scholar)</span>{target=_blank}, which work with old versions of pandoc (which may be hard to update).</span>
-<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a>Possible extensions (lua-filters): <span class="co">[</span><span class="ot">bibexport</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/bibexport)</span>{target=_blank}, <span class="co">[</span><span class="ot">abstract-to-meta</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/abstract-to-meta)</span>{target=_blank}, <span class="co">[</span><span class="ot">spellcheck</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/spellcheck)</span>{target=_blank}, <span class="co">[</span><span class="ot">wordcount</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/wordcount)</span>{target=_blank}.</span>
-<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pandoc journal templates</span><span class="co">](https://github.com/sachsmc/pandoc-journal-templates)</span>{target=_blank}</span>
-<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a>Literature summaries for each paper are stored in Obsidian format in the <span class="in">`literature`</span> directory.</span>
+<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a>The paper-template is based on the following underlying architectural principles and considerations.</span>
+<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Minimal functionality: the most frequent use cases (writing, citing, creating submission files in docx/latex format with different templates and citation styles) must be supported in a highly efficient way.</span>
+<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a>More complex functionality (such as tables with merged cells and detailed formatting) is used less frequently (requiring less effort if not supported in an efficient way).</span>
+<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a>It may also create fewer problems (e.g., merging complex tables - as in Word/comparisons of tables)</span>
+<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a>Advantages of the markdown/pandoc workflow:</span>
+<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Separation of content and format</span>
+<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Collaboration and versioning of text with Git</span>
+<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Relying on active open source projects such as the <span class="co">[</span><span class="ot">CSL</span><span class="co">](https://citationstyles.org/)</span>{target=_blank} standard</span>
+<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Flexibility regarding the bibliography type (pandoc supports .bib, .enl, ...)</span>
+<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Combined writing and comments in the same document</span>
+<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reproducibility across platforms</span>
+<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Generating docx/tex/pdf as output</span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a>Since the underlying open source projects (especially CSL, pandoc, pandoc-citeproc) evolve constantly, it is recommended to work with the latest versions.</span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a>This is a limitation of the popular <span class="co">[</span><span class="ot">manubot project</span><span class="co">](https://github.com/manubot/rootstock)</span>{target=_blank} or <span class="co">[</span><span class="ot">pandoc scholar</span><span class="co">](https://github.com/pandoc-scholar/pandoc-scholar)</span>{target=_blank}, which work with old versions of pandoc (which may be hard to update).</span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>Possible extensions (lua-filters): <span class="co">[</span><span class="ot">bibexport</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/bibexport)</span>{target=_blank}, <span class="co">[</span><span class="ot">abstract-to-meta</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/abstract-to-meta)</span>{target=_blank}, <span class="co">[</span><span class="ot">spellcheck</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/spellcheck)</span>{target=_blank}, <span class="co">[</span><span class="ot">wordcount</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/wordcount)</span>{target=_blank}.</span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pandoc journal templates</span><span class="co">](https://github.com/sachsmc/pandoc-journal-templates)</span>{target=_blank}</span>
+<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a><span class="fu">## TODO: integrate this (should it be paper (template) or project (repository setup)?):</span></span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a>Papers are cited using the citation keys in the <span class="in">`references.bib`</span> file and the citation syntax <span class="in">`@Webster2002`</span> or <span class="in">`[@Webster2002]`</span>.</span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a>Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use <span class="in">`[e.g., @Bacharach1989; @Gregor2006a]`</span> instead of <span class="in">`[e.g., @Gregor2006a; @Bacharach1989]`</span>.</span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a>The syntax is based on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{target=_blank} (see <span class="co">[</span><span class="ot">CSL</span><span class="co">](https://citationstyles.org/)</span>{target=_blank}).</span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a>To add papers that are cited in the figure to the reference section, include the following in the YAML header of paper.md:</span>
 <span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="fu">## TODO: integrate this (should it be paper (template) or project (repository setup)?):</span></span>
-<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>Papers are cited using the citation keys in the <span class="in">`references.bib`</span> file and the citation syntax <span class="in">`@Webster2002`</span> or <span class="in">`[@Webster2002]`</span>.</span>
-<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use <span class="in">`[e.g., @Bacharach1989; @Gregor2006a]`</span> instead of <span class="in">`[e.g., @Gregor2006a; @Bacharach1989]`</span>.</span>
-<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>The syntax is based on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{target=_blank} (see <span class="co">[</span><span class="ot">CSL</span><span class="co">](https://citationstyles.org/)</span>{target=_blank}).</span>
-<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>To add papers that are cited in the figure to the reference section, include the following in the YAML header of paper.md:</span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>title: ...</span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>author: ...</span>
+<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a>nocite: |</span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>  @citation_key</span>
+<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a>title: ...</span>
-<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>author: ...</span>
-<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a>nocite: |</span>
-<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a>  @citation_key</span>
-<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a>Further Information on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{target=_blank} is available in the pandoc manual.</span>
+<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a>Figures can be included as follows and referred to as <span class="in">`@fig:distribution`</span>.</span>
+<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>Further information on <span class="co">[</span><span class="ot">pandoc-crossref</span><span class="co">](https://lierdakil.github.io/pandoc-crossref/)</span>{target=_blank} is available online.</span>
+<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure Caption](figures/figure.jpg)</span>{#fig:distribution width=300px}</span>
 <span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a>Further Information on the <span class="co">[</span><span class="ot">citation syntax</span><span class="co">](https://pandoc.org/MANUAL.html#citation-syntax)</span>{target=_blank} is available in the pandoc manual.</span>
-<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>Figures can be included as follows and referred to as <span class="in">`@fig:distribution`</span>.</span>
-<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a>Further information on <span class="co">[</span><span class="ot">pandoc-crossref</span><span class="co">](https://lierdakil.github.io/pandoc-crossref/)</span>{target=_blank} is available online.</span>
+<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a>To ensure compatibility with pandoc word and latex conversion, figures should be included as jpg/png.</span>
+<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a>For the final versions, vector graphics (PDF, EMF) should be included for Latex/Word respectively.</span>
+<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a>Formulas can be included as follows:</span>
 <span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure Caption](figures/figure.jpg)</span>{#fig:distribution width=300px}</span>
+<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a><span class="in">```latex</span></span>
+<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="in">$$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}</span></span>
 <span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a>To ensure compatibility with pandoc word and latex conversion, figures should be included as jpg/png.</span>
-<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a>For the final versions, vector graphics (PDF, EMF) should be included for Latex/Word respectively.</span>
-<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a>Formulas can be included as follows:</span>
-<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a><span class="in">```latex</span></span>
-<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="in">$$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}</span></span>
-<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a>Tables can be created with <span class="co">[</span><span class="ot">GridTables</span><span class="co">](https://pandoc.org/MANUAL.html#extension-grid_tables)</span>{target=_blank} (which is displayed in PDF and Word documents):</span>
-<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>+---------------------+----------+</span>
-<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Property            <span class="pp">|</span> Earth    <span class="pp">|</span></span>
-<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a>+===========<span class="al">==+=======+==</span>========+</span>
-<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> min   <span class="pp">|</span> -89.2 °C <span class="pp">|</span></span>
-<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Temperature +-------+----------+</span>
-<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1961-1990   <span class="pp">|</span> mean  <span class="pp">|</span> 14 °C    <span class="pp">|</span></span>
-<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             +-------+----------+</span>
-<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> max   <span class="pp">|</span> 56.7 °C  <span class="pp">|</span></span>
-<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a>+-------------+-------+----------+</span>
+<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a>Tables can be created with <span class="co">[</span><span class="ot">GridTables</span><span class="co">](https://pandoc.org/MANUAL.html#extension-grid_tables)</span>{target=_blank} (which is displayed in PDF and Word documents):</span>
+<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a>+---------------------+----------+</span>
+<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Property            <span class="pp">|</span> Earth    <span class="pp">|</span></span>
+<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a>+===========<span class="al">==+=======+==</span>========+</span>
+<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> min   <span class="pp">|</span> -89.2 °C <span class="pp">|</span></span>
+<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Temperature +-------+----------+</span>
+<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1961-1990   <span class="pp">|</span> mean  <span class="pp">|</span> 14 °C    <span class="pp">|</span></span>
+<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             +-------+----------+</span>
+<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>             <span class="pp">|</span> max   <span class="pp">|</span> 56.7 °C  <span class="pp">|</span></span>
+<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a>+-------------+-------+----------+</span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a>Table: Findings {#tbl:findings}</span>
+<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a>We show the findings in @tbl:findings.</span>
+<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Markdown table editor</span><span class="co">](https://www.tablesgenerator.com/markdown_tables)</span>{target=_blank}</span>
+<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a>Footnotes:</span>
 <span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a>Table: Findings {#tbl:findings}</span>
-<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a>We show the findings in @tbl:findings.</span>
-<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Markdown table editor</span><span class="co">](https://www.tablesgenerator.com/markdown_tables)</span>{target=_blank}</span>
-<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a>Footnotes:</span>
-<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a>Text with a footnote <span class="ot">[^1]</span>.</span>
-<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a>  <span class="ot">[^1]: </span>Example footnote.</span>
-<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a>Information on references and citations is in <span class="co">[</span><span class="ot">editing-markdown-paper</span><span class="co">](../../20-research/20_processes/20.29.writing.html)</span> section.</span>
-<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a>Books: <span class="co">[</span><span class="ot">bookdown</span><span class="co">](https://bookdown.org/yihui/bookdown/)</span>{target=_blank} project.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a>Text with a footnote <span class="ot">[^1]</span>.</span>
+<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a>  <span class="ot">[^1]: </span>Example footnote.</span>
+<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a>Information on references and citations is in <span class="co">[</span><span class="ot">editing-markdown-paper</span><span class="co">](../../20-research/20_processes/20.29.writing.html)</span> section.</span>
+<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a>Books: <span class="co">[</span><span class="ot">bookdown</span><span class="co">](https://bookdown.org/yihui/bookdown/)</span>{target=_blank} project.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
