@@ -166,7 +166,6 @@ def write_broken_links_report(
     edit_branch = os.getenv("GITHUB_EDIT_BRANCH", "revisions")
 
     with report_path.open("w", encoding="utf-8") as f:
-        f.write("# Broken internal .html links\n\n")
         for src_file, items in sorted(broken.items(), key=lambda x: str(x[0])):
             rel = src_file.relative_to(repo_root).as_posix()
 
@@ -177,14 +176,9 @@ def write_broken_links_report(
             else:
                 f.write(f"## In `{rel}`\n\n")
 
+            f.write("The following links are broken:")
             for html_link, cands in items:
-                f.write(f"This link is broken: `{html_link}`\n")
-                # f.write("  - expected one of:\n")
-                # for c in cands:
-                #     try:
-                #         f.write(f"    - `{c.relative_to(repo_root)}`\n")
-                #     except ValueError:
-                #         f.write(f"    - `{c}`\n")
+                f.write(f"\n```sh\n{html_link}\n```\n")
             f.write("\n")
 
 
