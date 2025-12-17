@@ -22,6 +22,10 @@ jobs:
       - name: Link Checker
         id: lychee
         uses: lycheeverse/lychee-action@v1
+        with:
+          args: >
+            --verbose --no-progress
+            "_site/**/*.html"
 
       - name: Create or Update Link Checker Issue
         if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0
