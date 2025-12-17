@@ -9,8 +9,9 @@ on:
     - cron: '10 2 * * 3'
 
 permissions:
-  contents: read
+  contents: write
   issues: write
+  pull-requests: write
 
 jobs:
   externalLinkChecker:
@@ -23,7 +24,7 @@ jobs:
         uses: lycheeverse/lychee-action@v1
 
       - name: Create or Update Link Checker Issue
-        if: env.lychee_exit_code != 0
+        if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v5
         with:
           issue-number: 1
@@ -34,41 +35,34 @@ jobs:
   internalLinkChecker:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
       - name: Setup git
         run: |
           git config --global user.name "Links Fixer"
           git config --global user.email "actions@users.noreply.github.com"
           git config --global url.https://github.com/.insteadOf git://github.com/
+
       - name: Set branch name
         run: |
           echo "BRANCH_NAME=link-fix-$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
-          echo ${{ env.BRANCH_NAME }}
-      - name: Switch to branch ${{ env.BRANCH_NAME }}
-        run: |
-          git checkout -b ${{ env.BRANCH_NAME }}
-      - name: Fix links
-        run: |
-          python .github/workflows/link_fix.py
-        continue-on-error: false
 
-      # Check if broken_links.md exists before creating the issue
+      - name: Switch to branch
+        run: git checkout -b ${{ env.BRANCH_NAME }}
+
+      - name: Fix links
+        run: python .github/workflows/link_fix.py
+
       - name: Check for broken links file
-        id: broken_links
         run: |
           if [ -f ./broken_links.md ]; then
-            echo "Broken links file found"
             echo "found=true" >> $GITHUB_ENV
           else
-            echo "Broken links file not found"
             echo "found=false" >> $GITHUB_ENV
           fi
-        continue-on-error: false
 
-      # Create issue if the broken_links.md file exists
       - name: Create Issue From File
-        if: env.found == 'true'
+        if: github.event_name != 'pull_request' && env.found == 'true'
         uses: peter-evans/create-issue-from-file@v5
         with:
           issue-number: 2
@@ -81,8 +75,7 @@ jobs:
         run: |
           rm -f broken_links.md
           echo "has_changes=$(git status --porcelain | wc -l | awk '{print $1}')" >> $GITHUB_OUTPUT
-        continue-on-error: false
-        
+
       - name: Commit changes if any
         if: steps.changed.outputs.has_changes != '0'
         run: |
@@ -103,4 +96,3 @@ jobs:
           pr_title: "Fix links"
           pr_body: |
             *Fixed links*
-
