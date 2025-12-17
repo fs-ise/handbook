@@ -1,126 +1,178 @@
+from __future__ import annotations
+
 from pathlib import Path
 import re
+from typing import Iterable
 
 
-# Regular expression to match markdown links that start with http and may or may not have a {...} block
-markdown_link_pattern = re.compile(r"(\[([^\]]+)\]\((http[^\)]+)\))(\{[^}]*\})?")
-
-
-def append_target_blank_to_links(file_path):
-    # Read the content of the file
-    content = file_path.read_text(encoding="utf-8")
-
-    # Function to modify the markdown link and add target="_blank"
-    def add_target_blank(match):
-        link = match.group(1)  # Full markdown link [text](url)
-        url = match.group(3)  # Extracted URL from the link
-        existing_attrs = match.group(4)  # Existing {...} attributes block
-
-        # Skip the modification if the link contains "img.shields.io" (indicating a badge)
-        if "img.shields.io" in url or url.endswith(".png") or url.endswith(".svg"):
-            return match.group(0)  # Return the original match without modification
-
-        # If there's already a {...} block, append target="_blank" if not present
-        if existing_attrs:
-            if 'target="_blank"' not in existing_attrs:
-                # Add target="_blank" within the existing {...} block
-                updated_attrs = existing_attrs.rstrip(" }") + ' target="_blank" }'
-                return link + updated_attrs
-            else:
-                return link + existing_attrs
-        else:
-            # If no {...} block exists, add one with target="_blank"
-            return link + '{: target="_blank"}'
-
-    # Apply the function to all matches found in the file content
-    updated_content = markdown_link_pattern.sub(add_target_blank, content)
-
-    # Write back the updated content if changes were made
-    if updated_content != content:
-        file_path.write_text(updated_content, encoding="utf-8")
-        print(f"Updated links in {file_path}")
-    else:
-        print(f"No changes needed in {file_path}")
-
-
-def link_check():
-    directory = Path.cwd()
-    for file_path in directory.glob("**/*.md"):
-        # Ignore first-level markdown files by checking the depth of the path
-        if len(file_path.relative_to(directory).parts) == 1:
-            continue
-
-        append_target_blank_to_links(file_path)
-
-
-# Regular expression to match internal .html links in markdown files
-# This looks for markdown links [text](relative/path/file.html)
-html_link_pattern = re.compile(r"\[([^\]]+)\]\(([^http][^\)]+\.html)\)")
-baseurl_link_pattern = re.compile(
-    r"\[([^\]]+)\]\(\{\{ ?site\.baseurl ?\}\}([^\)]+\.html)\)"
+# Match inline markdown links:
+#   [text](http...)
+# optionally followed by an attribute block:
+#   { ... }  (we will add/extend this form)
+MARKDOWN_HTTP_LINK_PATTERN = re.compile(
+    r"(\[([^\]]+)\]\((http[^\)]+)\))(\{[^}]*\})?"
 )
 
+# Match internal .html links:
+#   [text](relative/path/file.html)
+HTML_LINK_PATTERN = re.compile(r"\[([^\]]+)\]\(([^h][^\)]+\.html)\)")
 
-def check_html_links(file_path):
-    base_dir = Path.cwd()
-    # Read the content of the file
+
+SKIP_URL_SUBSTRINGS = ("img.shields.io",)
+SKIP_URL_SUFFIXES = (".png", ".svg")
+
+
+def iter_content_files(root: Path) -> Iterable[Path]:
+    """Yield .md and .qmd files (skip root-level files)."""
+    for p in root.rglob("*"):
+        if not p.is_file():
+            continue
+        if p.suffix not in {".md", ".qmd"}:
+            continue
+        if len(p.relative_to(root).parts) == 1:
+            continue
+        yield p
+
+
+def should_skip_external(url: str) -> bool:
+    return any(s in url for s in SKIP_URL_SUBSTRINGS) or url.endswith(SKIP_URL_SUFFIXES)
+
+
+def attrs_already_have_target_blank(attrs: str) -> bool:
+    """
+    True if the attribute block already sets target blank in either form:
+      - target="_blank"
+      - target=_blank
+    """
+    return bool(re.search(r'target\s*=\s*("_blank"|_blank)', attrs))
+
+
+def normalize_to_brace_attrs(existing_attrs: str) -> str:
+    """
+    Convert an attribute block to the plain brace form:
+      "{ ... }"
+    If it's "{: ... }", drop the leading ":" while keeping the content.
+    """
+    inner = existing_attrs.strip()[1:-1].strip()  # remove outer braces
+    if inner.startswith(":"):
+        inner = inner[1:].strip()
+    return inner
+
+
+def append_target_blank_to_http_links(file_path: Path) -> bool:
+    """Add {target=_blank} to http(s) links unless already present (any form)."""
     content = file_path.read_text(encoding="utf-8")
 
-    # Find all matches of regular .html links
-    matches = html_link_pattern.findall(content)
+    def add_target_blank(match: re.Match) -> str:
+        link = match.group(1)            # [text](url)
+        url = match.group(3)             # url
+        existing_attrs = match.group(4)  # {..} or {: ..} or None
 
-    # List to store missing .md files
-    missing_md_files = []
+        if should_skip_external(url):
+            return match.group(0)
 
-    # Check normal .html links (relative to current file)
-    for match in matches:
-        html_link = match[1]  # Extracted .html link from the markdown
-        # Replace .html with .md
-        md_link = html_link.replace(".html", ".md")
+        if existing_attrs:
+            if attrs_already_have_target_blank(existing_attrs):
+                # Keep exactly as-is if it already has target blank
+                return link + existing_attrs
 
-        if "{{ site.baseurl }}/" in md_link:
-            md_file_path = base_dir / Path(md_link.replace("{{ site.baseurl }}/", ""))
-        else:
-            # Create the corresponding .md file path relative to the current file
-            md_file_path = file_path.parent / md_link
+            inner = normalize_to_brace_attrs(existing_attrs)
+            if inner:
+                return link + "{ " + inner + " target=_blank }"
+            return link + "{ target=_blank }"
 
-        if "_news" in str(md_file_path):
-            # Skip checking for _news directory
+        return link + "{target=_blank}"
+
+    updated = MARKDOWN_HTTP_LINK_PATTERN.sub(add_target_blank, content)
+
+    if updated != content:
+        file_path.write_text(updated, encoding="utf-8")
+        print(f"Updated external links in {file_path}")
+        return True
+
+    print(f"No changes needed in {file_path}")
+    return False
+
+
+def candidates_for_quarto_source(file_path: Path, html_link: str) -> list[Path]:
+    """
+    Given a link to something.html, return plausible Quarto source candidates:
+    - something.qmd / something.md
+    - something/index.qmd / something/index.md  (pretty URLs)
+    """
+    clean = html_link.split("#", 1)[0].split("?", 1)[0]
+    rel_no_ext = clean[:-5]  # remove ".html"
+    base = file_path.parent / rel_no_ext
+
+    return [
+        Path(str(base) + ".qmd"),
+        Path(str(base) + ".md"),
+        base / "index.qmd",
+        base / "index.md",
+    ]
+
+
+def check_internal_html_links(file_path: Path) -> list[tuple[str, list[Path]]]:
+    """
+    For each [..](..html) link, verify at least one plausible source exists.
+    Returns list of (html_link, candidates) for broken ones.
+    """
+    content = file_path.read_text(encoding="utf-8")
+    matches = HTML_LINK_PATTERN.findall(content)
+
+    broken: list[tuple[str, list[Path]]] = []
+
+    for _, html_link in matches:
+        if html_link.startswith(("http://", "https://", "mailto:", "#")):
             continue
-        # Check if the corresponding .md file exists
-        if not md_file_path.exists():
-            missing_md_files.append(md_file_path)
+        if "_news" in html_link:
+            continue
 
-    return missing_md_files
+        cands = candidates_for_quarto_source(file_path, html_link)
+        if not any(p.exists() for p in cands):
+            broken.append((html_link, cands))
+
+    return broken
 
 
-def relative_link_check():
-    directory = Path.cwd()  # Current directory
-    all_missing_files = []
-    broken_links_file = Path("broken_links.md")  # File to store broken links
+def write_broken_links_report(broken: dict[Path, list[tuple[str, list[Path]]]]) -> None:
+    report_path = Path("broken_links.md")
+    if not broken:
+        if report_path.exists():
+            report_path.unlink()
+        print("No broken internal .html links found.")
+        return
 
-    with broken_links_file.open("w", encoding="utf-8") as f:
-        # Iterate over all markdown files recursively
-        for file_path in directory.glob("**/*.md"):
-            # Check for .html links and corresponding .md files
-            missing_files = check_html_links(file_path)
-            if missing_files:
-                all_missing_files.extend(missing_files)
-                f.write(f"## Missing .md files for links in `{file_path}`:\n")
-                print(f"Missing .md files for links in {file_path}:")
-                for missing in missing_files:
-                    f.write(f"- `{missing}`\n")
-                    print(f"  - {missing}")
-                f.write("\n")  # Add a blank line for separation
+    with report_path.open("w", encoding="utf-8") as f:
+        f.write("# Broken internal .html links\n\n")
+        for src_file, items in sorted(broken.items(), key=lambda x: str(x[0])):
+            f.write(f"## In `{src_file}`\n\n")
+            for html_link, cands in items:
+                f.write(f"- `{html_link}`\n")
+                f.write("  - expected one of:\n")
+                for c in cands:
+                    f.write(f"    - `{c}`\n")
+            f.write("\n")
 
-    # Remove broken_links_file if it is empty
-    if broken_links_file.exists() and broken_links_file.stat().st_size == 0:
-        broken_links_file.unlink()
+    print(f"Wrote report to {report_path}")
 
-    if not all_missing_files:
-        print("All .html links have corresponding .md files.")
+
+def main() -> None:
+    root = Path.cwd()
+
+    # 1) Add {target=_blank} to external links in .md/.qmd (excluding root-level files)
+    for fp in iter_content_files(root):
+        append_target_blank_to_http_links(fp)
+
+    # 2) Check internal .html links against plausible Quarto sources (.qmd/.md/index.*)
+    broken: dict[Path, list[tuple[str, list[Path]]]] = {}
+    for fp in iter_content_files(root):
+        b = check_internal_html_links(fp)
+        if b:
+            broken[fp] = b
+
+    write_broken_links_report(broken)
 
 
 if __name__ == "__main__":
-    link_check()
-    relative_link_check()
+    main()
