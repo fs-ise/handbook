@@ -114,17 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -134,6 +123,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -147,15 +147,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -803,15 +803,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 How we implement the values and goals
 </summary>
 <ol type="1">
-<li>What we emphasize during <a href="{{ site.baseurl }}/docs/10-lab/10_processes/10.32.onboarding.html">onboarding</a></li>
-<li>All of our teaching efforts follow the <a href="{{ site.baseurl }}/docs/30-teaching/"><em>plan-do-check-adjust</em> cycle</a>. Our <a href="{{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html">teaching evaluations</a> and <a href="{{ site.baseurl }}/docs/30-teaching/30_processes/30.22.improvements.html">improvements</a> are available publicly.</li>
+<li>What we emphasize during <a href="../management/onboarding.html">onboarding</a></li>
+<li>All of our teaching efforts follow the <a href="{{ site.baseurl }}/docs/30-teaching/"><em>plan-do-check-adjust</em> cycle</a>. Our <a href="../teaching/evaluations.html">teaching evaluations</a> and <a href="../research/improvement.html">improvements</a> are available publicly.</li>
 <li>We choose a rigorous manuscript production system, based on Git and Markdown. This allows us to involve students and research assistants in our most important projects, giving them the opportunity to learn and contribute from day one. Without the transparent versioning, reliable control, and effective contribution mechanisms of Git, we would probably “protect the manuscript” and restrict access to our work (e.g., when working with Word).</li>
 </ol>
 </details>
 <p>We pursue goals in the following areas:</p>
 <ul>
-<li><a href="{{ site.baseurl }}/docs/30-teaching/30_processes/30.01.goals.html">Teaching</a></li>
-<li><a href="{{ site.baseurl }}/docs/20-research/20_processes/20.01.goals.html">Research</a></li>
+<li><a href="../teaching/statement.html">Teaching</a></li>
+<li><a href="../research/statement.html">Research</a></li>
 <li><a href="{{ site.baseurl }}/docs/40-funding">Funding</a></li>
 <li><a href="{{ site.baseurl }}/docs/50-service">Service</a></li>
 </ul>
@@ -1461,15 +1461,15 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="ot"> markdown</span><span class="op">=</span><span class="st">"block"</span><span class="dt">&gt;</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>How we implement the values and goals<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>What we emphasize during <span class="co">[</span><span class="ot">onboarding</span><span class="co">]({{ site.baseurl }}/docs/10-lab/10_processes/10.32.onboarding.html)</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>All of our teaching efforts follow the <span class="co">[</span><span class="ot">*plan-do-check-adjust* cycle</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/)</span>. Our <span class="co">[</span><span class="ot">teaching evaluations</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)</span> and <span class="co">[</span><span class="ot">improvements</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/30_processes/30.22.improvements.html)</span> are available publicly.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>What we emphasize during <span class="co">[</span><span class="ot">onboarding</span><span class="co">](/management/onboarding.html)</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>All of our teaching efforts follow the <span class="co">[</span><span class="ot">*plan-do-check-adjust* cycle</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/)</span>. Our <span class="co">[</span><span class="ot">teaching evaluations</span><span class="co">](/teaching/evaluations.html)</span> and <span class="co">[</span><span class="ot">improvements</span><span class="co">](/research/improvement.html)</span> are available publicly.</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">  3. </span>We choose a rigorous manuscript production system, based on Git and Markdown. This allows us to involve students and research assistants in our most important projects, giving them the opportunity to learn and contribute from day one. Without the transparent versioning, reliable control, and effective contribution mechanisms of Git, we would probably "protect the manuscript" and restrict access to our work (e.g., when working with Word).</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>We pursue goals in the following areas:</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Teaching</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/30_processes/30.01.goals.html)</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Research</span><span class="co">]({{ site.baseurl }}/docs/20-research/20_processes/20.01.goals.html)</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Teaching</span><span class="co">](/teaching/statement.html)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Research</span><span class="co">](/research/statement.html)</span></span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Funding</span><span class="co">]({{ site.baseurl }}/docs/40-funding)</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Service</span><span class="co">]({{ site.baseurl }}/docs/50-service)</span></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>

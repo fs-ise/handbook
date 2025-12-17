@@ -114,17 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -145,6 +134,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -814,8 +814,8 @@ This manual will serve as resource for navigating the digital environment, from 
 </div>
 </div>
 <ul>
-<li><a href="../../30-teaching/30_processes/30.03.systems.html">Systems for teaching</a></li>
-<li><a href="../../20-research/20_processes/20.03.systems.html">Systems for research</a></li>
+<li><a href="../teaching/systems.html">Systems for teaching</a></li>
+<li><a href="../research/systems.html">Systems for research</a></li>
 </ul>
 <section id="general-systems" class="level2">
 <h2 class="anchored" data-anchor-id="general-systems">General systems</h2>
@@ -834,7 +834,7 @@ Zoom will be replaced by [jitsi](https://jitsi.org/){target=_blank} as a default
 <tbody>
 <tr class="odd">
 <td><a href="https://digital-work-lab.github.io/handbook/" target="_blank">handbook</a></td>
-<td>- Hosted on GitHub<br>- <a href="10.10.handbook.html">Editing guidelines</a><br>- Distributed version control system to collaborate in software development projects, and for collaborating in writing and teaching<br>- Our preferred choice for manuscripts, and lecture material</td>
+<td>- Hosted on GitHub<br>- <a href="../management/handbook.html">Editing guidelines</a><br>- Distributed version control system to collaborate in software development projects, and for collaborating in writing and teaching<br>- Our preferred choice for manuscripts, and lecture material</td>
 </tr>
 <tr class="even">
 <td><a href="https://nc-2272638881871040784.nextcloud-ionos.com/" target="_blank">Nextcloud</a></td>
@@ -1424,8 +1424,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Systems for teaching</span><span class="co">](../../30-teaching/30_processes/30.03.systems.html)</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Systems for research</span><span class="co">](../../20-research/20_processes/20.03.systems.html)</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Systems for teaching</span><span class="co">](/teaching/systems.html)</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Systems for research</span><span class="co">](/research/systems.html)</span></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## General systems</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
@@ -1437,7 +1437,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>System | Description |</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>---|---|</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">handbook</span><span class="co">](https://digital-work-lab.github.io/handbook/)</span>{target=_blank}| - Hosted on GitHub<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- <span class="co">[</span><span class="ot">Editing guidelines</span><span class="co">](10.10.handbook.html)</span><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Distributed version control system to collaborate in software development projects, and for collaborating in writing and teaching<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Our preferred choice for manuscripts, and lecture material |</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">handbook</span><span class="co">](https://digital-work-lab.github.io/handbook/)</span>{target=_blank}| - Hosted on GitHub<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- <span class="co">[</span><span class="ot">Editing guidelines</span><span class="co">](/management/handbook.html)</span><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Distributed version control system to collaborate in software development projects, and for collaborating in writing and teaching<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Our preferred choice for manuscripts, and lecture material |</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Nextcloud</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/)</span>{target=_blank}| - <span class="co">[</span><span class="ot">Clients</span><span class="co">](https://nextcloud.com/de/install/#install-clients)</span>{target=_blank} (use *Nextcloud Files*)&lt;br&gt;- Contains all **confidential** materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).&lt;br&gt;- "Anmelden", URL: ``https://nc-2272638881871040784.nextcloud-ionos.com/``, give access in Browser (pop-up), accept default settings&lt;br&gt;- Our preferred choice for confidential data, and binary/large files&lt;br&gt;- **Collaborative editing of a shared document (without login)**: create md-file and public link (can edit) |</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>System | Description |</span>
