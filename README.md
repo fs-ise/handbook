@@ -14,11 +14,6 @@
 - Available at [fs-ise.github.io/handbook/](https://fs-ise.github.io/handbook/).
 - Information to [clone and reuse](https://fs-ise.github.io/handbook/management/handbook).
 
-```
-cd src
-python3 stats.py
-```
-
 The handbook is based on [Quarto](https://quarto.org/) and GitHub pages.
 
 ## License
