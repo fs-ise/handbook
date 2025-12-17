@@ -31,7 +31,7 @@ jobs:
         if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v5
         with:
-          issue-number: 1
+          issue-number: 4
           title: Link Checker Report
           content-filepath: ./lychee/out.md
           labels: report, automated issue
@@ -69,7 +69,7 @@ jobs:
         if: github.event_name != 'pull_request' && env.found == 'true'
         uses: peter-evans/create-issue-from-file@v5
         with:
-          issue-number: 2
+          issue-number: 5
           title: Broken internal links report
           content-filepath: ./broken_links.md
           labels: report, automated issue
