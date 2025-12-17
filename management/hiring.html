@@ -122,17 +122,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -142,6 +131,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1457,9 +1457,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Announcements</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create new section in <span class="co">[</span><span class="ot">11-hr</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/11_hr&amp;fileid=58)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create new section in <span class="co">[</span><span class="ot">11-hr</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/11_hr&amp;fileid=58)</span>{target=_blank}</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check available budget</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create position announcement based on the template for <span class="co">[</span><span class="ot">student assistant positions (HIWI)</span><span class="co">](https://github.com/digital-work-lab/handbook/raw/main/assets/docs/Ausschreibung-HIWI-Stellen.docx)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create position announcement based on the template for <span class="co">[</span><span class="ot">student assistant positions (HIWI)</span><span class="co">](https://github.com/digital-work-lab/handbook/raw/main/assets/docs/Ausschreibung-HIWI-Stellen.docx)</span>{target=_blank}</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Promote open job position via several channels:</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Post on website and update monthly (highlight or make it stick on top)</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Inform Fachschaft fachschaft-wiai.stuve<span class="co">[</span><span class="ot">at</span><span class="co">]</span>uni-bamberg.de</span>
@@ -1483,11 +1483,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Contracts: PhD students" collapse=true}</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Submit documents at least 4 weeks before start of work to <span class="co">[</span><span class="ot">HR</span><span class="co">](https://www.uni-bamberg.de/abt-personal/personal3-3/team-zustaendigkeiten/)</span>{ target="_blank target=_blank }:</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Submit documents at least 4 weeks before start of work to <span class="co">[</span><span class="ot">HR</span><span class="co">](https://www.uni-bamberg.de/abt-personal/personal3-3/team-zustaendigkeiten/)</span>{target=_blank}:</span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Application form</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsantraege_Weiterbeschaeftigungsantraege/Einstellungsantrag_wissenschaftliche_Beschaeftigte.docx)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Application form</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsantraege_Weiterbeschaeftigungsantraege/Einstellungsantrag_wissenschaftliche_Beschaeftigte.docx)</span>{target=_blank}</span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Besch_wiss.zip)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Besch_wiss.zip)</span>{target=_blank}</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Send to **Referat III/2 (Dienstvertrag/vertraulich)** via internal mail.</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -1495,16 +1495,16 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Contracts: student assistants" collapse=true}</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>Submit documents at least 4 weeks before start of work to <span class="co">[</span><span class="ot">HR</span><span class="co">](https://www.uni-bamberg.de/abt-personal/personal3-3/team-zustaendigkeiten/)</span>{ target="_blank target=_blank }:</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>Submit documents at least 4 weeks before start of work to <span class="co">[</span><span class="ot">HR</span><span class="co">](https://www.uni-bamberg.de/abt-personal/personal3-3/team-zustaendigkeiten/)</span>{target=_blank}:</span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>The ZUV template raises validation errors when the browser language is English. Switch to German or use another browser.</span>
 <span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>Forms to hire student assistants are available via <span class="co">[</span><span class="ot">ZUV Portal</span><span class="co">](https://zuvportal.uni-bamberg.de/)</span>{ target="_blank target=_blank }.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>Forms to hire student assistants are available via <span class="co">[</span><span class="ot">ZUV Portal</span><span class="co">](https://zuvportal.uni-bamberg.de/)</span>{target=_blank}.</span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Hilfskraefte.zip)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Hilfskraefte.zip)</span>{target=_blank}</span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>**Mindestvertragslaufzeit**: Mit dem Tarifabschluss TV-L vom 09.12.2023 ist eine Mindestvertragslaufzeit für Hilfskräfte von mindestens 1 Jahr beschlossen worden. Nur in begründeten Einzelfällen kann von dieser Vorgabe abgewichen werden. Als Universität haben wir folgende Sachverhalte als Ausnahme definiert:</span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
@@ -1514,7 +1514,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tätigkeiten als Tutor:in</span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Begleitung von Tagungen</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>Jedem Ausnahmefall ist eine formlose Begründung zuzufügen, die vom direkten Vorgesetzten abzuzeichnen ist (<span class="co">[</span><span class="ot">Formular zum Download</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Hilfskraefte/Begr%C3%BCndung_Vertragslaufzeit.pdf?utm_source=chatgpt.com)</span>{ target="_blank target=_blank }). Sofern der Grund für die verkürzte Vertragslaufzeit in der Person der Hilfskraft liegt, muss auch diese unterschreiben.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>Jedem Ausnahmefall ist eine formlose Begründung zuzufügen, die vom direkten Vorgesetzten abzuzeichnen ist (<span class="co">[</span><span class="ot">Formular zum Download</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Hilfskraefte/Begr%C3%BCndung_Vertragslaufzeit.pdf?utm_source=chatgpt.com)</span>{target=_blank}). Sofern der Grund für die verkürzte Vertragslaufzeit in der Person der Hilfskraft liegt, muss auch diese unterschreiben.</span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## Student assistants: After completing the Bachelor/Master</span></span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
@@ -1528,11 +1528,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Contracts: staff" collapse=true}</span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>Submit documents at least 4 weeks before start of work to <span class="co">[</span><span class="ot">HR</span><span class="co">](https://www.uni-bamberg.de/abt-personal/personal3-2/team-zustaendigkeiten/)</span>{ target="_blank target=_blank }:</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>Submit documents at least 4 weeks before start of work to <span class="co">[</span><span class="ot">HR</span><span class="co">](https://www.uni-bamberg.de/abt-personal/personal3-2/team-zustaendigkeiten/)</span>{target=_blank}:</span>
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Application form</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsantraege_Weiterbeschaeftigungsantraege/Einstellungsantrag_nichtwissenschaftliche_Beschaeftigte.docx)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Application form</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsantraege_Weiterbeschaeftigungsantraege/Einstellungsantrag_nichtwissenschaftliche_Beschaeftigte.docx)</span>{target=_blank}</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Besch_nichtwiss.zip)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Besch_nichtwiss.zip)</span>{target=_blank}</span>
 <span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>Send to **Referat III/2 (Dienstvertrag/vertraulich)** via internal mail.</span>
 <span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -1541,9 +1541,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>Submit application form to deanery (until deadline sent by deanery via e-mail to professors and secretaries) and after the application was granted sent all other necessary contract documents to deanery: </span>
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Application form</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsantraege_Weiterbeschaeftigungsantraege/Antrag_Erteilung_Lehrauftrag.docx)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Application form</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsantraege_Weiterbeschaeftigungsantraege/Antrag_Erteilung_Lehrauftrag.docx)</span>{target=_blank}</span>
 <span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Lehrbeauftragte.zip)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Necessary contract documents</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Einstellungsunterlagen/Einstellungsunterl_Lehrbeauftragte.zip)</span>{target=_blank}</span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>Send to **Referat III/2 (vertraulich)** via internal mail.</span>
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -1556,8 +1556,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## Links</span></span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Checkliste Einstellung der Personalabteilung</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Checklisten_bei_Einstellung_und_Beendigung/Checkliste_Einstellung.pdf)</span>{ target="_blank target=_blank }</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">HR: information and forms</span><span class="co">](https://www.uni-bamberg.de/abt-personal/formulare-infos-und-merkblaetter/)</span>{ target="_blank target=_blank }</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Checkliste Einstellung der Personalabteilung</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Checklisten_bei_Einstellung_und_Beendigung/Checkliste_Einstellung.pdf)</span>{target=_blank}</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">HR: information and forms</span><span class="co">](https://www.uni-bamberg.de/abt-personal/formulare-infos-und-merkblaetter/)</span>{target=_blank}</span>
 <span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="TODO"}</span>
 <span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>Create "applicant page" and share with candidates (maybe instead of the PDF)?</span>
