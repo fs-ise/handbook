@@ -163,15 +163,20 @@ def write_broken_links_report(
         print("No broken internal .html links found.")
         return
 
+    edit_branch = os.getenv("GITHUB_EDIT_BRANCH", "revisions")
+
     with report_path.open("w", encoding="utf-8") as f:
         f.write("# Broken internal .html links\n\n")
         for src_file, items in sorted(broken.items(), key=lambda x: str(x[0])):
             rel = src_file.relative_to(repo_root).as_posix()
-            if repo and sha:
-                url = f"{server}/{repo}/blob/{sha}/{rel}"
-                f.write(f"## In [{rel}]({url})\n\n")
+
+            if repo:
+                # Direct link to GitHub's editor on the chosen branch
+                edit_url = f"{server}/{repo}/edit/{edit_branch}/{rel}"
+                f.write(f"## In [{rel}]({edit_url})\n\n")
             else:
                 f.write(f"## In `{rel}`\n\n")
+
             for html_link, cands in items:
                 f.write(f"- `{html_link}`\n")
                 f.write("  - expected one of:\n")
