@@ -11,21 +11,36 @@ sha = os.getenv("GITHUB_SHA")         # commit being checked
 server = os.getenv("GITHUB_SERVER_URL", "https://github.com")
 
 
-# Match inline markdown http(s) links:
+# Match inline markdown http(s) links (but NOT images):
 #   [text](http...)
 # optionally followed by an attribute block:
 #   { ... }
+#
+# The (?<!\!) prevents matching image syntax: ![alt](...)
 MARKDOWN_HTTP_LINK_PATTERN = re.compile(
-    r"(\[([^\]]+)\]\((http[^\)]+)\))(\{[^}]*\})?"
+    r'(?<!\!)\[(?P<text>[^\]]+)\]\((?P<url>http[^\)]+)\)(?P<attrs>\{[^}]*\})?'
 )
 
-# Match ANY inline markdown link:
+# Match ANY inline markdown link (but NOT images):
 #   [text](dest)
-MARKDOWN_LINK_PATTERN = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+MARKDOWN_LINK_PATTERN = re.compile(
+    r'(?<!\!)\[(?P<text>[^\]]+)\]\((?P<dest>[^)]+)\)'
+)
 
 
 SKIP_URL_SUBSTRINGS = ("img.shields.io",)
-SKIP_URL_SUFFIXES = (".png", ".svg")
+
+# Treat these as "assets", not pages (skip in internal-link checking;
+# also don't add target=_blank to external asset URLs).
+ASSET_SUFFIXES = (
+    ".png",
+    ".svg",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".webp",
+    ".pdf",
+)
 
 
 def iter_content_files(root: Path) -> Iterable[Path]:
@@ -40,8 +55,23 @@ def iter_content_files(root: Path) -> Iterable[Path]:
         yield p
 
 
+def strip_fragment_and_query(url: str) -> str:
+    """Remove #fragment and ?query for suffix checks, keeping the path-ish portion."""
+    return url.split("#", 1)[0].split("?", 1)[0].strip()
+
+
+def is_asset_link(url: str) -> bool:
+    """
+    True if the link target looks like a static asset.
+    Handles query strings like foo.png?raw=1 by stripping ?...
+    """
+    clean = strip_fragment_and_query(url).lower()
+    return clean.endswith(ASSET_SUFFIXES)
+
+
 def should_skip_external(url: str) -> bool:
-    return any(s in url for s in SKIP_URL_SUBSTRINGS) or url.endswith(SKIP_URL_SUFFIXES)
+    # External "skip": shields + assets
+    return any(s in url for s in SKIP_URL_SUBSTRINGS) or is_asset_link(url)
 
 
 def strip_chatgpt_utm(url: str) -> str:
@@ -91,9 +121,9 @@ def append_target_blank_to_http_links(file_path: Path) -> bool:
     content = file_path.read_text(encoding="utf-8")
 
     def add_target_blank(match: re.Match) -> str:
-        text = match.group(2)            # link text
-        url = match.group(3)             # url
-        existing_attrs = match.group(4)  # {..} or {: ..} or None
+        text = match.group("text")
+        url = match.group("url")
+        existing_attrs = match.group("attrs")  # {..} or {: ..} or None
 
         url = strip_chatgpt_utm(url)
 
@@ -181,19 +211,19 @@ def check_internal_links(file_path: Path, repo_root: Path) -> list[tuple[str, li
     Returns list of (link, candidates) for broken ones.
     """
     content = file_path.read_text(encoding="utf-8")
-    matches = MARKDOWN_LINK_PATTERN.findall(content)
-
     broken: list[tuple[str, list[Path]]] = []
 
-    for _, link in matches:
-        link = strip_chatgpt_utm(link.strip())
+    for m in MARKDOWN_LINK_PATTERN.finditer(content):
+        link = strip_chatgpt_utm(m.group("dest").strip())
 
         # Skip external and non-file links
         if link.startswith(("http://", "https://", "mailto:", "#", "tel:")):
             continue
 
-        # Skip things we consider "external-ish" or assets
-        if should_skip_external(link):
+        # Skip assets (png/jpg/etc.), shields, etc.
+        if any(s in link for s in SKIP_URL_SUBSTRINGS):
+            continue
+        if is_asset_link(link):
             continue
 
         # Keep your existing exception
