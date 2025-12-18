@@ -4,6 +4,7 @@ from pathlib import Path
 import re
 from typing import Iterable
 import os
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 repo = os.getenv("GITHUB_REPOSITORY")  # e.g., "fs-ise/handbook"
 sha = os.getenv("GITHUB_SHA")         # commit being checked
@@ -43,6 +44,27 @@ def should_skip_external(url: str) -> bool:
     return any(s in url for s in SKIP_URL_SUBSTRINGS) or url.endswith(SKIP_URL_SUFFIXES)
 
 
+def strip_chatgpt_utm(url: str) -> str:
+    """
+    Remove utm_source=chatgpt.com from URLs while preserving all other query params.
+    Works for absolute URLs and relative links alike.
+    """
+    if "utm_source=chatgpt.com" not in url:
+        return url
+
+    parts = urlsplit(url)
+    query_pairs = parse_qsl(parts.query, keep_blank_values=True)
+
+    filtered = [
+        (k, v)
+        for (k, v) in query_pairs
+        if not (k == "utm_source" and v == "chatgpt.com")
+    ]
+
+    new_query = urlencode(filtered, doseq=True)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, new_query, parts.fragment))
+
+
 def attrs_already_have_target_blank(attrs: str) -> bool:
     """
     True if the attribute block already sets target blank in either form:
@@ -69,12 +91,18 @@ def append_target_blank_to_http_links(file_path: Path) -> bool:
     content = file_path.read_text(encoding="utf-8")
 
     def add_target_blank(match: re.Match) -> str:
-        link = match.group(1)            # [text](url)
+        text = match.group(2)            # link text
         url = match.group(3)             # url
         existing_attrs = match.group(4)  # {..} or {: ..} or None
 
+        url = strip_chatgpt_utm(url)
+
+        # Rebuild the [text](url) part with the cleaned URL
+        link = f"[{text}]({url})"
+
         if should_skip_external(url):
-            return match.group(0)
+            # Keep attrs if any, but do not add target=_blank
+            return link + (existing_attrs or "")
 
         if existing_attrs:
             if attrs_already_have_target_blank(existing_attrs):
@@ -158,7 +186,7 @@ def check_internal_links(file_path: Path, repo_root: Path) -> list[tuple[str, li
     broken: list[tuple[str, list[Path]]] = []
 
     for _, link in matches:
-        link = link.strip()
+        link = strip_chatgpt_utm(link.strip())
 
         # Skip external and non-file links
         if link.startswith(("http://", "https://", "mailto:", "#", "tel:")):
@@ -211,10 +239,12 @@ def main() -> None:
     root = Path.cwd()
 
     # 1) Add {target=_blank} to external links in .md/.qmd (excluding root-level files)
+    #    and remove ?utm_source=chatgpt.com from those URLs
     for fp in iter_content_files(root):
         append_target_blank_to_http_links(fp)
 
     # 2) Check internal links (pretty URLs, .html, etc.) against plausible Quarto sources
+    #    (and ignore/remove utm_source=chatgpt.com when evaluating)
     broken: dict[Path, list[tuple[str, list[Path]]]] = {}
     for fp in iter_content_files(root):
         b = check_internal_links(fp, repo_root=root)
