@@ -1,0 +1,233 @@
+---
+title: "Resources"
+
+listing:
+  - id: listing-resources
+    contents: resources/*
+    type: table
+    fields: ["title", "category", "ownership", "lifecycle_status", "location"]
+    sort: "lifecycle_status"
+    sort-ui: false
+    filter-ui: true
+    categories: true
+    feed:
+      items: 10
+
+transition_status: "updated"
+transition_comment: "Resource inventory is under active development"
+---
+
+## Resource inventory
+
+The table below lists all documented resources.
+Each row links to a **dedicated resource page** with access rules, location, lifecycle status, and documentation.
+
+::: {#listing-resources}
+:::
+
+### Included resources
+
+**Tracked assets**
+
+- Personal working devices provided by the lab
+- Research infrastructure (e.g., servers, networking equipment)
+- Teaching equipment (e.g., tablets, sensors, VR devices)
+- Shared peripherals and tools
+
+**Also documented (not owned by us)**
+
+- Accessible labs or rooms
+- Virtual machines and shared services
+- Infrastructure operated by central IT or partners
+
+**Not tracked here**
+
+- Consumables (cables, batteries, paper, etc.)
+- Software licenses (managed elsewhere)
+
+
+## Expected returns
+
+Some resources are borrowed or temporarily assigned.
+
+- Resources with an **expected return date** are marked on their individual pages.
+- A dedicated overview page can be generated based on:
+  - `borrowing != no`
+  - `expected_return_date` in YAML
+
+## Lifecycle model
+
+All resources follow a lightweight lifecycle:
+
+1. **Ordered**
+2. **In use**
+3. **Not in use**
+4. **Inactive**
+5. **Broken**
+6. **Returned**
+7. **Retired**
+
+Lifecycle status is stored in the resource YAML and shown in the listing.
+
+## Access, locations, and maintenance
+
+- **Access & borrowing rules:** see individual resource pages
+- **Locations:** link to location pages explaining how to get there
+- **Maintenance tasks:** documented per resource (if applicable)
+- **Support:** listed per resource (person, role, or channel)
+- **Booking:** links to external calendars or systems where required
+
+## QR codes
+
+Each physical resource should have a QR code pointing to its **resource page**.
+
+QR labels should include:
+```
+<RESOURCE_ID> · <RESOURCE_NAME>
+```
+
+## How to add a resource
+
+1. Create a new file in `resources/`
+2. Use the template below
+3. Fill in required metadata
+4. Commit via Git (preferred) or open a PR
+
+::: {.callout-note title="Resource page template" collapse=true}
+
+```Markdown
+---
+# ======================================================
+# Identity & classification (required)
+# ======================================================
+title: "TODO"
+summary: "TODO"
+category: "TODO"        # Printer | Workstation | VM | Room | Tool
+ownership: "TODO"            # lab-owned | institution-owned | external | personal
+
+# ======================================================
+# Location & responsibility (required)
+# ======================================================
+location: "TODO"                     # Canonical location name
+current_user: "TODO"         # If different from responsible_person
+
+# ======================================================
+# Access & lifecycle
+# ======================================================
+borrowing: "TODO"                     # no | lab | institution
+lifecycle_status: "TODO"         # ordered | in_use | not_in_use | inactive | broken | retired | returned
+
+# ======================================================
+# Dates (optional)
+# ======================================================
+# expected_return_date: "YYYY-MM-DD"
+# purchase_date: "YYYY-MM-DD"
+# warranty_information: "text or date range"
+---
+
+:::{.callout-note title="At a glance"}
+| Field | Value |
+|------|-------|
+| **Title** | {{< meta title >}} |
+| **Description** | {{< meta summary >}} |
+| **Type** | {{< meta category >}} |
+| **Ownership** | {{< meta ownership >}} |
+| **Current user** | {{< meta current_user >}} |
+| **Lifecycle status** | {{< meta lifecycle_status >}} |
+| **Location** | {{< meta location >}} |
+| **Access / borrowing** | {{< meta borrowing >}} |
+:::
+
+<!--
+========================================================================
+RESOURCE PAGE TEMPLATE (COMMENTED CONTENT)
+========================================================================
+
+Use this page to document a single resource (tracked or not tracked).
+All sections below are OPTIONAL and can be removed if not applicable.
+This file intentionally contains guidance as HTML comments so it does
+not render in the final handbook page.
+
+-----------------------------------------------------------------------
+PURPOSE
+-----------------------------------------------------------------------
+Describe what this resource is for and typical use cases.
+Also mention when it should NOT be used.
+
+-----------------------------------------------------------------------
+ACCESS & BORROWING
+-----------------------------------------------------------------------
+Who can use it?
+- Lab members
+- Students
+- Collaborators
+- By exception (describe process)
+
+Modalities:
+- On-site use
+- Borrow / checkout
+- Restricted actions
+
+Quick start:
+1. Step one
+2. Step two
+3. Step three
+
+-----------------------------------------------------------------------
+LOCATION
+-----------------------------------------------------------------------
+- Building / room / remote
+- Exact position (desk, rack, shelf)
+- Directions or access notes
+
+-----------------------------------------------------------------------
+BOOKING
+-----------------------------------------------------------------------
+When booking is required.
+How to book (calendar link, naming convention).
+Conflict resolution rules.
+
+-----------------------------------------------------------------------
+MAINTENANCE
+-----------------------------------------------------------------------
+Routine tasks:
+- Frequency
+- Responsible person
+- Checklist
+
+Known issues / troubleshooting.
+
+Service / vendor details if applicable.
+
+-----------------------------------------------------------------------
+DOCUMENTATION & LINKS
+-----------------------------------------------------------------------
+- Homebox item link
+- Manual or vendor documentation
+- Internal handbook pages
+- External systems (IT, booking, procurement)
+
+-----------------------------------------------------------------------
+QR CODE
+-----------------------------------------------------------------------
+What the QR code points to:
+- Homebox item page OR
+- This handbook page
+
+Label text suggestion:
+{{RESOURCE_ID}} · {{RESOURCE_NAME}}
+
+-----------------------------------------------------------------------
+CHANGE LOG
+-----------------------------------------------------------------------
+YYYY-MM-DD — description of change (who)
+
+========================================================================
+END OF TEMPLATE
+========================================================================
+-->
+
+
+```
+
+:::
