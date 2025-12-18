@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -144,15 +144,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -773,7 +773,7 @@ Note
 <li>To take vacation, coordinate your responsibilities (such as teaching and project work), decide when to take vacation, and <em>inform</em> Gerit in advance via e-mail (ideally, at least 2 weeks in advance)</li>
 <li>If there are any additional scheduling constraints, Gerit will respond and ask for a meeting to discuss possible adjustments</li>
 <li>If you do not receive a response within <strong>3 days</strong>, the request is approved (following the principle of “<a href="https://openoffice.apache.org/docs/governance/lazyConsensus.html" target="_blank">lazy consensus</a>”).</li>
-<li>Add your vacation to the agenda repository and/or internal shared calendar (<strong>TODO</strong>). If students need to know about your availability, you may add your vacation to the <a href="../../02.calendar.html">Calendar</a>.</li>
+<li>Add your vacation to the agenda repository and/or internal shared calendar (<strong>TODO</strong>). If students need to know about your availability, you may add your vacation to the <a href="index.html">Calendar</a>.</li>
 </ul>
 <p><strong>E-Mail template:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">Subject:</span><span class="co"> Vacation Notice</span></span>
@@ -1388,7 +1388,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To take vacation, coordinate your responsibilities (such as teaching and project work), decide when to take vacation, and *inform* Gerit in advance via e-mail (ideally, at least 2 weeks in advance)</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If there are any additional scheduling constraints, Gerit will respond and ask for a meeting to discuss possible adjustments</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you do not receive a response within **3 days**, the request is approved (following the principle of "<span class="co">[</span><span class="ot">lazy consensus</span><span class="co">](https://openoffice.apache.org/docs/governance/lazyConsensus.html)</span>{target=_blank}").</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add your vacation to the agenda repository and/or internal shared calendar (**TODO**). If students need to know about your availability, you may add your vacation to the <span class="co">[</span><span class="ot">Calendar</span><span class="co">](../../02.calendar.html)</span>.</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add your vacation to the agenda repository and/or internal shared calendar (**TODO**). If students need to know about your availability, you may add your vacation to the <span class="co">[</span><span class="ot">Calendar</span><span class="co">](index.html)</span>.</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>**E-Mail template:**</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
