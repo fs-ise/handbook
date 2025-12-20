@@ -2,6 +2,16 @@
 title: "Evaluations"
 transition_status: "toupdate"
 transition_comment: "update"
+
+listing:
+  id: course-evaluations
+  contents: courses
+  type: table
+  fields: ["semester", "title", "student_evaluations"]
+  sort: "semester desc"
+  sort-ui: false
+  categories: false
+  page-size: 20
 ---
 
 ::: callout-note
@@ -55,32 +65,11 @@ Order an evaluation: [RZ intern](https://www.uni-bamberg.de/its/lehrevaluation/)
 
 ## Evaluation results
 
-<table>
-  <thead>
-    <tr>
-      <th>Semester</th>
-      <th>Course</th>
-      <th>Evaluation / Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for course in site.courses %}
-    <tr>
-      <td>{{ course.semester }}</td>
-      <td><a href="{{ course.url }}">{{ course.title }}</a></td>
-      <td>
-        {% if course.student_evaluations and course.student_evaluations != "" %}
-          <a href="/assets/evaluations/{{ course.student_evaluations }}">PDF</a>
-        {% else %}
-            N/A
-        {% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+::: {#lecture-listing}
+:::
 
 ## Applicable regulations
 
 - [Evaluation der Lehre (§5 and §6)](https://www.uni-bamberg.de/fileadmin/www.abt-studium/Rechtsvorschriften/1Organisation/Evaluation%20Lehre%20Studium/180305-O-Sicherung-Qualitaet-Lehre-Studium.pdf){target=_blank}
 - [Overview: Goals, procedure, data protection etc.](https://www.uni-bamberg.de/qm/evaluation/lehrveranstaltungsevaluation/schriftliche-lehrveranstaltungsevaluation/){target=_blank}
+
