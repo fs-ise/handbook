@@ -11,16 +11,16 @@ improvement_status: in-progress
 # IDW 2024 SoSe
 
 Field               | Value
-------------------- | -------------------------------------------------
-Title               | {{ page.title_long }}
-Level               | Bachelor
+------------------- | -----
+Title               | {{< meta title >}}
+Semester            | {{< meta semester >}}
 Lecturer            | Gerit Wagner
-Link: VC            | [Course](https://vc.uni-bamberg.de/course/view.php?id=68000){: target="_blank"}
-Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){: target="_blank"}
-Status              | {{ page.status }}
-Student Evaluations | {% if page.student_evaluations != "" %} <a href="{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}" target="_blank">PDF</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Improvement Issue   | {% if page.improvement_issue != "" %} <a href="{{ page.improvement_issue }}" target="_blank">Issue Link</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Status of Revisions | {{ page.improvement_status }}
+Link: LMS           | [Cavas](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
+Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){target="_blank"}
+Status              | {{< meta status >}}
+Student Evaluations | {{< meta student_evaluations >}}
+Improvement Issue   | {{< meta improvement_issue >}}
+Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
@@ -53,7 +53,7 @@ Start: April (summer term), October (winter term)
 - [x] Professor: Schedule evaluations in the pen-ultimate week ([30.21.evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
 - [x] Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).
 - [x] Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the [exam checklist](30.59.exams.html#preparing-the-exam).
-- [x] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){: target="_blank"}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
+- [x] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
 
 ## 4. Exam grading and documentation
 
@@ -75,4 +75,4 @@ Students have the possibility to repeat the exam in the following term (even if 
 - [x] Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.
 - [x] Repeat relevant steps of *Exams and documentation* (step 4) 
 
-Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office ([link](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/){: target="_blank"}).
+Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office ([link](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/){target=_blank}).

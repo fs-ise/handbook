@@ -11,15 +11,16 @@ improvement_status: in-progress
 # LRSem 2024 WiSe
 
 Field               | Value
-------------------- | -------------------
-Title               | {{ page.title_long }}
+------------------- | -----
+Title               | {{< meta title >}}
+Semester            | {{< meta semester >}}
 Lecturer            | Gerit Wagner
-Link: VC            | [VC](https://vc.uni-bamberg.de/course/view.php?id=70990){: target="_blank"}
-Link: Website       | [the-literature-review-seminar](https://digital-work-lab.github.io/literature-review-seminar/){: target="_blank"}
-Status              | {{ page.status }}
-Student Evaluations | {% if page.student_evaluations != "" %} <a href="{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}" target="_blank">PDF</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Improvement Issue   | {% if page.improvement_issue != "" %} <a href="{{ page.improvement_issue }}" target="_blank">Issue Link</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Status of Revisions | {{ page.improvement_status }}
+Link: LMS           | [Cavas](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
+Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){target="_blank"}
+Status              | {{< meta status >}}
+Student Evaluations | {{< meta student_evaluations >}}
+Improvement Issue   | {{< meta improvement_issue >}}
+Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
@@ -35,7 +36,7 @@ Start: December (summer term), May (winter term)
 - [x] Professor: Announce seminar on the website for the next semester (without dates/rooms).
 - [x] Team Assistant: Create the course in FlexNow.
 - [x] Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.
-- Note: If the course is mentioned on the website, it should automatically be announced in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){: target="_blank"}{: target="_blank"}
+- Note: If the course is mentioned on the website, it should automatically be announced in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){target=_blank}{target=_blank}
 
 Deadline: mid-May (summer term), December/January (winter term)
 
@@ -63,12 +64,12 @@ Start: April (summer term), October (winter term)
 Grading
 
 - [x] Create reminder for the deadline.
-- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){: target="_blank"} to assign grades and prepare FlexNow import
+- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){: target="_blank"})).
-- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) at [14.03](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/03_seminars&fileid=72){: target="_blank"}.
+- [x] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) at [14.03](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/03_seminars&fileid=72){target=_blank}.
 
 Documentation
 

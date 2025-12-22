@@ -4,12 +4,13 @@ transition_status: "toupdate"
 transition_comment: "update"
 ---
 
+
 ::: callout-note
 This section is marked as "toupdate": completely update
 
 ```{mermaid}
 flowchart
-    direction LR
+direction LR
     Announced(["<a href='#announced'>Announced</a>"]) --> Registered(["<a href='#registered'>Registered</a>"])
     Registered --> Submitted(["<a href='#submitted'>Submitted</a>"])
     Submitted --> Archived(["<a href='#archived'>Archived</a>"])

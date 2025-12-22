@@ -11,15 +11,16 @@ improvement_status: N/A
 # OSP 2025 SoSe
 
 Field               | Value
-------------------- | -------------------
-Title               | {{ page.title_long }}
+------------------- | -----
+Title               | {{< meta title >}}
+Semester            | {{< meta semester >}}
 Lecturer            | Gerit Wagner
-Link: VC            | [VC](https://vc.uni-bamberg.de/course/view.php?id=71962){: target="_blank"}
-Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/wi-projekt-open-source-projekt/){: target="_blank"}
-Status              | {{ page.status }}
-Student Evaluations | {% if page.student_evaluations != "" %} <a href="{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}" target="_blank">PDF</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Improvement Issue   | {% if page.improvement_issue != "" %} <a href="{{ page.improvement_issue }}" target="_blank">Issue Link</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Status of Revisions | {{ page.improvement_status }}
+Link: LMS           | [Cavas](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
+Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){target="_blank"}
+Status              | {{< meta status >}}
+Student Evaluations | {{< meta student_evaluations >}}
+Improvement Issue   | {{< meta improvement_issue >}}
+Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
@@ -54,7 +55,7 @@ Start: March (summer term), September (winter term)
 
 - [x] Team Assistant and Professor: Announce dates/rooms on the websites, add to calendar.
 - [x] IT department: Create the VC course, two weeks before the semester starts (automatically based on UnivIS).
-- [x] Professor: The project should be announced on [Instagram](https://www.instagram.com/informatik_unibamberg/){: target="_blank"} and in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){: target="_blank"}
+- [x] Professor: The project should be announced on [Instagram](https://www.instagram.com/informatik_unibamberg/){target=_blank} and in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){target=_blank}
 - [x] Professor: Create a reminder for the evaluations.
 - [x] Team Assistant: Add moderator and session dates in VC.
 - [x] Professor: Summarize the feedback from the last course and explain how it was addressed.
@@ -71,19 +72,19 @@ Start: April (summer term), October (winter term)
 - [x] Professor: Set the date for the code review session.
 - [x] Professor: Add the code review session to the [calendar](../../calendar/events.yaml)
 - [x] Professor: Schedule evaluations in the pen-ultimate week ([30.21.evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
-- [ ] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){: target="_blank"}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
+- [ ] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
 
 ## 4. Grading and documentation
 
 Grading
 
 - [x] Create reminder for the deadline.
-- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){: target="_blank"} to assign grades and prepare FlexNow import
+- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){: target="_blank"})).
-- [ ] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [14.02](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&fileid=69){: target="_blank"}.
+- [x] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [ ] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [14.02](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&fileid=69){target=_blank}.
 
 Documentation
 

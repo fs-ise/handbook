@@ -1,50 +1,22 @@
 ---
 title: "Improvements"
+
+listing:
+  id: improvements
+  contents: courses
+  type: table
+  fields: ["semester", "title", "student_evaluations", "improvement_issue", "improvement_status"]
+  field-links: ["semester", "title"]
+  sort: "semester desc"
+  page-size: 25
+  categories: false
+
 ---
 
 In the following, we document our efforts to improve in teaching lectures, projects, seminars, and theses.
 
-<table>
-  <thead>
-    <tr>
-      <th>Semester</th>
-      <th>Course</th>
-      <th>Student Evaluations</th>
-      <th>Issue</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for course in site.courses %}
-    <tr>
-      <td>{{ course.semester }}</td>
-      <td><a href="{{ course.url }}">{{ course.title }}</a></td>
-      <td>
-        {% if course.student_evaluations and course.student_evaluations != "" %}
-          <a href="/assets/evaluations/{{ course.student_evaluations }}">PDF</a>
-        {% else %}
-          N/A
-        {% endif %}
-      </td>
-      <td>
-        {% if course.improvement_issue and course.improvement_issue != "" %}
-          <a href="{{ course.improvement_issue }}" target="_blank">Issue</a>
-        {% else %}
-          N/A
-        {% endif %}
-      </td>
-      <td>
-        {% if course.improvement_status %}
-          {{ course.improvement_status }}
-        {% else %}
-          N/A
-        {% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
+::: {#improvements}
+:::
 
 ## Theses
 

@@ -11,12 +11,13 @@ improvement_status: completed
 # OSP 2023 SoSe
 
 Field               | Value
-------------------- | ------------------------------------------------
-Title               | {{ page.title_long }}
+------------------- | -----
+Title               | {{< meta title >}}
+Semester            | {{< meta semester >}}
 Lecturer            | Gerit Wagner
-Link: VC            | [VC](https://vc.uni-bamberg.de/enrol/index.php?id=61245){: target="_blank"}
-Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/wi-projekt-open-source-projekt/){: target="_blank"}
-Status              | {{ page.status }}
-Student Evaluations | {% if page.student_evaluations != "" %} <a href="{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}" target="_blank">PDF</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Improvement Issue   | {% if page.improvement_issue != "" %} <a href="{{ page.improvement_issue }}" target="_blank">Issue Link</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}
-Status of Revisions | {{ page.improvement_status }}
+Link: LMS           | [Cavas](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
+Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){target="_blank"}
+Status              | {{< meta status >}}
+Student Evaluations | {{< meta student_evaluations >}}
+Improvement Issue   | {{< meta improvement_issue >}}
+Status of Revisions | {{< meta improvement_status >}}
