@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -131,6 +120,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -511,6 +511,12 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../research/systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../research/literature_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literature review</span></a>
   </div>
@@ -543,12 +549,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   <div class="sidebar-item-container"> 
   <a href="../research/analysis_templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analysis templates</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research/systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Systems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -792,7 +792,6 @@ Note
 <li>Use <a href="https://zenodo.org/" target="_blank">Zenodo</a> to assign a DOI to the repo and make it citable: <a href="https://zenodo.org/account/settings/github/" target="_blank">link</a> (<a href="https://coderefinery.github.io/github-without-command-line/doi/" target="_blank">instructions</a>)</li>
 <li>Add <code>dataset</code> tag to GitHub repository (see <a href="https://github.com/orgs/digital-work-lab/repositories?q=topic%3Adataset" target="_blank">overview</a>)</li>
 </ul></li>
-<li><p>Check <a href="https://openpolicyfinder.jisc.ac.uk/" target="_blank">self-archiving policies</a></p></li>
 </ul>
 
 
@@ -1344,9 +1343,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check whether PDFs and primary data can be made available, if so:</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Use <span class="co">[</span><span class="ot">Zenodo</span><span class="co">](https://zenodo.org/)</span>{target=_blank} to assign a DOI to the repo and make it citable: <span class="co">[</span><span class="ot">link</span><span class="co">](https://zenodo.org/account/settings/github/)</span>{target=_blank} (<span class="co">[</span><span class="ot">instructions</span><span class="co">](https://coderefinery.github.io/github-without-command-line/doi/)</span>{target=_blank})</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Add <span class="in">`dataset`</span> tag to GitHub repository (see <span class="co">[</span><span class="ot">overview</span><span class="co">](https://github.com/orgs/digital-work-lab/repositories?q=topic%3Adataset)</span>{target=_blank})</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check <span class="co">[</span><span class="ot">self-archiving policies</span><span class="co">](https://openpolicyfinder.jisc.ac.uk/)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Add <span class="in">`dataset`</span> tag to GitHub repository (see <span class="co">[</span><span class="ot">overview</span><span class="co">](https://github.com/orgs/digital-work-lab/repositories?q=topic%3Adataset)</span>{target=_blank})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
