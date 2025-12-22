@@ -43,14 +43,17 @@ Latex tables may be missing when converting Markdown to Word.
 - Check page limit
 - Tone (using an LLM): Identify any statements that could sound dismissive
 
-> **Prompt:**
-> Review the following text for tone and inclusivity. Identify any statements that may sound dismissive, overly judgmental, or casual for an academic context. Also flag potentially insensitive language, such as:
-> 
-> - terms implying hierarchy or superiority (e.g., “master”),
-> - labels that frame individuals or groups as deficient (e.g., “struggling students”),
-> - wording that could reinforce stereotypes (e.g., gendered roles, cultural assumptions).
-> 
-> For each flagged case, explain why it might be problematic and suggest a more neutral, context-sensitive alternative phrasing that maintains academic precision while being inclusive. 
+::: {.callout-note title="Prompt"}
+
+```Markdonw
+Review the following text for tone and inclusivity. Identify any statements that may sound dismissive, overly judgmental, or casual for an academic context. Also flag potentially insensitive language, such as:
+
+- terms implying hierarchy or superiority (e.g., “master”),
+- labels that frame individuals or groups as deficient (e.g., “struggling students”),
+- wording that could reinforce stereotypes (e.g., gendered roles, cultural assumptions).
+
+For each flagged case, explain why it might be problematic and suggest a more neutral, context-sensitive alternative phrasing that maintains academic precision while being inclusive. 
+```
 
 - Spell-check (e.g., in Word)
   - Check tempus (methodology: simple past)
