@@ -157,17 +157,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -177,6 +166,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -731,12 +731,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#todo-state-model" id="toc-todo-state-model" class="nav-link active" data-scroll-target="#todo-state-model">TODO: state model</a></li>
-  <li><a href="#repositories" id="toc-repositories" class="nav-link" data-scroll-target="#repositories">Repositories</a>
+  <li><a href="#repositories" id="toc-repositories" class="nav-link active" data-scroll-target="#repositories">Repositories</a>
   <ul class="collapse">
   <li><a href="#big-data-and-analytics-bda" id="toc-big-data-and-analytics-bda" class="nav-link" data-scroll-target="#big-data-and-analytics-bda">Big Data and Analytics (BDA)</a></li>
   <li><a href="#it-security-management-itsecm" id="toc-it-security-management-itsecm" class="nav-link" data-scroll-target="#it-security-management-itsecm">IT Security Management (ITSecM)</a></li>
   </ul></li>
+  <li><a href="#state-model" id="toc-state-model" class="nav-link" data-scroll-target="#state-model">State model</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/course_overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -763,33 +763,6 @@ window.Quarto = {
 </header>
 
 
-<section id="todo-state-model" class="level2">
-<h2 class="anchored" data-anchor-id="todo-state-model">TODO: state model</h2>
-<p>Consolidate with process overview in <a href="courses/2026-SuSe-BDA.html#process">courses</a></p>
-<!--
-Status
-
-⟳ in-preparation
-▶ in-progress
-📋 grade / review / repeat exams
-✔️ completed
--->
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart
-    direction LR
-    InPreparation(["&lt;a href='#in-preparation'&gt;In preparation&lt;/a&gt;"]) --&gt; InProgress(["&lt;a href='#in-progress'&gt;In progress&lt;/a&gt;"])
-    InProgress --&gt; GradeReviewRepeat(["&lt;a href='#grade-review-repeat'&gt;Grade, review, repeat&lt;/a&gt;"])
-    GradeReviewRepeat --&gt; Completed(["&lt;a href='#completed'&gt;Completed&lt;/a&gt;"])
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
 <p>Courses are <a href="https://github.com/fs-ise/handbook/tree/main/teaching/courses" target="_blank">here</a>.</p>
 <div id="listing-lecture-listing" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
@@ -841,7 +814,7 @@ Status
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Big Data and Analytics" data-listing-filename-sort="2026-SuSe-BDA.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Big Data and Analytics" data-listing-filename-sort="2026-SuSe-BDA.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -857,7 +830,7 @@ Status
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -873,7 +846,7 @@ Status
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
+<tr data-index="2" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-WiSe</span>
 </td>
@@ -889,7 +862,7 @@ Status
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="579" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
+<tr data-index="3" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="579" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -905,7 +878,7 @@ Status
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="4" data-listing-word-count-sort="718" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
+<tr data-index="4" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="4" data-listing-word-count-sort="718" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -921,7 +894,7 @@ Status
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="422" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
+<tr data-index="5" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="422" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -937,7 +910,7 @@ Status
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="557" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
+<tr data-index="6" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="557" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -953,7 +926,7 @@ Status
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="427" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
+<tr data-index="7" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="427" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -969,7 +942,7 @@ Status
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="470" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
+<tr data-index="8" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="470" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -985,7 +958,7 @@ Status
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="4" data-listing-word-count-sort="708" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
+<tr data-index="9" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="4" data-listing-word-count-sort="708" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1001,7 +974,7 @@ Status
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="463" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
+<tr data-index="10" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="463" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1017,7 +990,7 @@ Status
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="501" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
+<tr data-index="11" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="501" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1033,7 +1006,7 @@ Status
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="572" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
+<tr data-index="12" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="572" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1049,7 +1022,7 @@ Status
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="4" data-listing-word-count-sort="619" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
+<tr data-index="13" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="4" data-listing-word-count-sort="619" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1065,7 +1038,7 @@ Status
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="599" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
+<tr data-index="14" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="599" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1081,7 +1054,7 @@ Status
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="3" data-listing-word-count-sort="583" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
+<tr data-index="15" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="583" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1097,7 +1070,7 @@ Status
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="1" data-listing-word-count-sort="149" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
+<tr data-index="16" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="1" data-listing-word-count-sort="149" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1113,7 +1086,7 @@ Status
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="1" data-listing-word-count-sort="148" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
+<tr data-index="17" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="1" data-listing-word-count-sort="148" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1129,7 +1102,7 @@ Status
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1766432364329" data-listing-reading-time-sort="1" data-listing-word-count-sort="151" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
+<tr data-index="18" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="1" data-listing-word-count-sort="151" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2022-WiSe</span>
 </td>
@@ -1153,7 +1126,6 @@ Status
 </nav>
 </div>
 <p>➕ <a href="new.html">Create a new course</a></p>
-</section>
 <section id="repositories" class="level2">
 <h2 class="anchored" data-anchor-id="repositories">Repositories</h2>
 <section id="big-data-and-analytics-bda" class="level3">
@@ -1169,12 +1141,31 @@ Status
 <li>Materials: <a href="https://github.com/fs-ise/it-security-management" target="_blank">repository</a></li>
 <li>Exams: <a href="https://github.com/fs-ise/it-security-management-exams" target="_blank">repository</a></li>
 </ul>
+</section>
+</section>
+<section id="state-model" class="level2">
+<h2 class="anchored" data-anchor-id="state-model">State model</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart
+    direction LR
+    Upcoming(["upcoming"]) --&gt; InProgress(["in-progress"])
+    InProgress --&gt; Grade(["grading"])
+    Grade --&gt; Completed(["completed"])
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1668,56 +1659,45 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Course overview"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  id: lecture-listing</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: courses</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  type: table</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: ["semester", "title", "status", "student_evaluations"]</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "semester desc"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  sort-ui: ["semester", "title", "status", "student_evaluations"]</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: false</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  page-size: 10</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## TODO: state model</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  id: lecture-listing</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: courses</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  type: table</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: ["semester", "title", "status", "student_evaluations"]</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "semester desc"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  sort-ui: ["semester", "title", "status", "student_evaluations"]</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: false</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  page-size: 10</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Courses are <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/teaching/courses)</span>{target=_blank}.</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Consolidate with process overview in <span class="co">[</span><span class="ot">courses</span><span class="co">](courses/2026-SuSe-BDA.html#process)</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">Status</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>::: {#lecture-listing}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>➕ <span class="co">[</span><span class="ot">Create a new course</span><span class="co">](new.html)</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">⟳ in-preparation</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">▶ in-progress</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">📋 grade / review / repeat exams</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">✔️ completed</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>flowchart</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    direction LR</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    InPreparation([<span class="ot">"</span><span class="st">&lt;a href='#in-preparation'&gt;In preparation&lt;/a&gt;</span><span class="ot">"</span>]) --&gt; InProgress([<span class="ot">"</span><span class="st">&lt;a href='#in-progress'&gt;In progress&lt;/a&gt;</span><span class="ot">"</span>])</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    InProgress --&gt; GradeReviewRepeat([<span class="ot">"</span><span class="st">&lt;a href='#grade-review-repeat'&gt;Grade, review, repeat&lt;/a&gt;</span><span class="ot">"</span>])</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    GradeReviewRepeat --&gt; Completed([<span class="ot">"</span><span class="st">&lt;a href='#completed'&gt;Completed&lt;/a&gt;</span><span class="ot">"</span>])</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Courses are <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/teaching/courses)</span>{target=_blank}.</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>::: {#lecture-listing}</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>➕ <span class="co">[</span><span class="ot">Create a new course</span><span class="co">](new.html)</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repositories</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Big Data and Analytics (BDA)</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materials: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics)</span>{target=_blank}</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exams: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics-exams)</span>{target=_blank}</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### IT Security Management (ITSecM)</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materials: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management)</span>{target=_blank}</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exams: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management-exams)</span>{target=_blank}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repositories</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### Big Data and Analytics (BDA)</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materials: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics)</span>{target=_blank}</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exams: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics-exams)</span>{target=_blank}</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### IT Security Management (ITSecM)</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materials: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management)</span>{target=_blank}</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exams: <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management-exams)</span>{target=_blank}</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## State model</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>flowchart</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    direction LR</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    Upcoming([<span class="ot">"</span><span class="st">upcoming</span><span class="ot">"</span>]) --&gt; InProgress([<span class="ot">"</span><span class="st">in-progress</span><span class="ot">"</span>])</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    InProgress --&gt; Grade([<span class="ot">"</span><span class="st">grading</span><span class="ot">"</span>])</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    Grade --&gt; Completed([<span class="ot">"</span><span class="st">completed</span><span class="ot">"</span>])</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
