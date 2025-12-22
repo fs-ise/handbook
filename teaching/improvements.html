@@ -66,6 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../assets/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -109,6 +111,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-improvements .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-semester','listing-title','listing-student_evaluations','listing-improvement_issue','listing-improvement_status',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-improvements'] = new List('listing-improvements', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
 div.callout-objective.callout {
@@ -120,17 +151,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -155,8 +175,48 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -545,11 +605,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../teaching/flexnow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FlexNow</span></a>
-  </div>
-</li>
+ <span class="menu-text">teaching/flexnow.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../teaching/exams.html" class="sidebar-item-text sidebar-link">
@@ -695,53 +752,422 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 
 <p>In the following, we document our efforts to improve in teaching lectures, projects, seminars, and theses.</p>
-
-{% for course in site.courses %}
-
-{% endfor %}
-<table>
+<div id="listing-improvements" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-improvements-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-improvements'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
 <thead>
 <tr>
+
 <th>
-Semester
+semester
 </th>
+
 <th>
-Course
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
+
 <th>
-Student Evaluations
+student_evaluations
 </th>
+
 <th>
-Issue
+improvement_issue
 </th>
+
 <th>
-Status
+improvement_status
 </th>
+
 </tr>
 </thead>
-<tbody><tr>
+<tbody class="list">
+
+<tr data-index="0" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-semester-sort="2026-SuSe" data-listing-title-sort="Big Data and Analytics">
 <td>
-{{ course.semester }}
+<a href="../teaching/courses/2026-SuSe-BDA.html" class="semester listing-semester">2026-SuSe</a>
 </td>
 <td>
-<a href="{{ course.url }}">{{ course.title }}</a>
+<a href="../teaching/courses/2026-SuSe-BDA.html" class="title listing-title">Big Data and Analytics</a>
 </td>
 <td>
-{% if course.student_evaluations and course.student_evaluations != “” %} <a href="../assets/evaluations/{{ course.student_evaluations }}">PDF</a> {% else %} N/A {% endif %}
+<span class="listing-student_evaluations">&nbsp;</span>
 </td>
 <td>
-{% if course.improvement_issue and course.improvement_issue != “” %} <a href="{{ course.improvement_issue }}" target="_blank">Issue</a> {% else %} N/A {% endif %}
+<span class="listing-improvement_issue">&nbsp;</span>
 </td>
 <td>
-{% if course.improvement_status %} {{ course.improvement_status }} {% else %} N/A {% endif %}
+<span class="listing-improvement_status">N/A</span>
 </td>
-</tr></tbody>
+
+</tr>
+
+<tr data-index="1" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-semester-sort="2026-SuSe" data-listing-title-sort="IT Security Management">
+<td>
+<a href="../teaching/courses/2026-SuSe-ITSecM.html" class="semester listing-semester">2026-SuSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2026-SuSe-ITSecM.html" class="title listing-title">IT Security Management</a>
+</td>
+<td>
+<span class="listing-student_evaluations">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_issue">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_status">N/A</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="544" data-listing-semester-sort="2025-WiSe" data-listing-title-sort="The Literature Review Seminar">
+<td>
+<a href="../teaching/courses/2025-WiSe-LRSem.html" class="semester listing-semester">2025-WiSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2025-WiSe-LRSem.html" class="title listing-title">The Literature Review Seminar</a>
+</td>
+<td>
+<span class="listing-student_evaluations">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_issue">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_status">N/A</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="554" data-listing-semester-sort="2025-SoSe" data-listing-title-sort="Open-Source Projekt (WI-Projekt)">
+<td>
+<a href="../teaching/courses/2025-SoSe-OSP.html" class="semester listing-semester">2025-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2025-SoSe-OSP.html" class="title listing-title">Open-Source Projekt (WI-Projekt)</a>
+</td>
+<td>
+<span class="listing-student_evaluations">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/open-source-project/issues/189</span>
+</td>
+<td>
+<span class="listing-improvement_status">N/A</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="693" data-listing-semester-sort="2025-SoSe" data-listing-title-sort="Introduction to Digital Work">
+<td>
+<a href="../teaching/courses/2025-SoSe-IDW.html" class="semester listing-semester">2025-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2025-SoSe-IDW.html" class="title listing-title">Introduction to Digital Work</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000135_20250719_SS25_IDW.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/digital-work-lecture/issues/121</span>
+</td>
+<td>
+<span class="listing-improvement_status">N/A</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="411" data-listing-semester-sort="2025-SoSe" data-listing-title-sort="The Literature Review Seminar (HWR)">
+<td>
+<a href="../teaching/courses/2025-SoSe-LRSemHWR.html" class="semester listing-semester">2025-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2025-SoSe-LRSemHWR.html" class="title listing-title">The Literature Review Seminar (HWR)</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000130_20250807_SS25_LRSem_HWR_Berlin.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/literature-review-seminar/issues/220</span>
+</td>
+<td>
+<span class="listing-improvement_status">N/A</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="530" data-listing-semester-sort="2025-SoSe" data-listing-title-sort="The Literature Review Seminar">
+<td>
+<a href="../teaching/courses/2025-SoSe-LRSem.html" class="semester listing-semester">2025-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2025-SoSe-LRSem.html" class="title listing-title">The Literature Review Seminar</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000141_20250802_SS25-LRSem.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/literature-review-seminar/issues/199</span>
+</td>
+<td>
+<span class="listing-improvement_status">N/A</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="416" data-listing-semester-sort="2025-SoSe" data-listing-title-sort="The Literature Review Seminar (IDIS)">
+<td>
+<a href="../teaching/courses/2025-SoSe-LRSemIDIS.html" class="semester listing-semester">2025-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2025-SoSe-LRSemIDIS.html" class="title listing-title">The Literature Review Seminar (IDIS)</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000131_20250708_SS25_LRSem_IDIS.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/literature-review-seminar/issues/221</span>
+</td>
+<td>
+<span class="listing-improvement_status">N/A</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="446" data-listing-semester-sort="2024-WiSe" data-listing-title-sort="The Literature Review Seminar">
+<td>
+<a href="../teaching/courses/2024-WiSe-LRSem.html" class="semester listing-semester">2024-WiSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2024-WiSe-LRSem.html" class="title listing-title">The Literature Review Seminar</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000109_20250126_WS24_25-DW-Sem-M__Literature_Review_Seminar.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/literature-review-seminar/issues/31</span>
+</td>
+<td>
+<span class="listing-improvement_status">in-progress</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="668" data-listing-semester-sort="2024-WiSe" data-listing-title-sort="Einführung in die Wirtschaftsinformatik">
+<td>
+<a href="../teaching/courses/2024-WiSe-EidWI.html" class="semester listing-semester">2024-WiSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2024-WiSe-EidWI.html" class="title listing-title">Einführung in die Wirtschaftsinformatik</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000108_20250126_WS24_25-ISM-EidWI-B__Einführung_in_die_Wirtschaftsinformatik_Vorlesung.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="439" data-listing-semester-sort="2024-WiSe" data-listing-title-sort="Open-Source Projekt (WI-Projekt)">
+<td>
+<a href="../teaching/courses/2024-WiSe-OSP.html" class="semester listing-semester">2024-WiSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2024-WiSe-OSP.html" class="title listing-title">Open-Source Projekt (WI-Projekt)</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000110_20250126_WS24_25-Digital-Work-Projekt-B__Bachelorprojekt_aus_der_Fächergruppe_Wirtschaftsinformatik.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/open-source-project/issues/10</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="464" data-listing-semester-sort="2024-SoSe" data-listing-title-sort="Introduction to Digital Work">
+<td>
+<a href="../teaching/courses/2024-SoSe-IDW.html" class="semester listing-semester">2024-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2024-SoSe-IDW.html" class="title listing-title">Introduction to Digital Work</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000088_20240721_SS24-Digital-Work-EDW-B_Introduction_Digital_Work.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/digital-work-lecture/issues/8</span>
+</td>
+<td>
+<span class="listing-improvement_status">in-progress</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="546" data-listing-semester-sort="2024-SoSe" data-listing-title-sort="Open-Source Projekt (WI-Projekt)">
+<td>
+<a href="../teaching/courses/2024-SoSe-OSP.html" class="semester listing-semester">2024-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2024-SoSe-OSP.html" class="title listing-title">Open-Source Projekt (WI-Projekt)</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000074_20240715_SS24-Digital-Work-Projekt-B.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/open-source-project/issues/8</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="592" data-listing-semester-sort="2024-SoSe" data-listing-title-sort="The Literature Review Seminar">
+<td>
+<a href="../teaching/courses/2024-SoSe-LRSem.html" class="semester listing-semester">2024-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2024-SoSe-LRSem.html" class="title listing-title">The Literature Review Seminar</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000087_20240719_SS24-DW-Sem-M__Literature_review_seminar.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/literature-review-seminar/issues/6</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="571" data-listing-semester-sort="2023-WiSe" data-listing-title-sort="The Literature Review Seminar">
+<td>
+<a href="../teaching/courses/2023-WiSe-LRSem.html" class="semester listing-semester">2023-WiSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2023-WiSe-LRSem.html" class="title listing-title">The Literature Review Seminar</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000062_20240130_WS2324_Evaluation_LRSeminar.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/literature-review-seminar/issues/1</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="554" data-listing-semester-sort="2023-WiSe" data-listing-title-sort="Open-Source Projekt (WI-Projekt)">
+<td>
+<a href="../teaching/courses/2023-WiSe-OSP.html" class="semester listing-semester">2023-WiSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2023-WiSe-OSP.html" class="title listing-title">Open-Source Projekt (WI-Projekt)</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000061_20240130_WS2324_Evaluation_WI-Projekt.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/open-source-project/issues/3</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-semester-sort="2023-SoSe" data-listing-title-sort="Introduction to Digital Work">
+<td>
+<a href="../teaching/courses/2023-SoSe-IDW.html" class="semester listing-semester">2023-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2023-SoSe-IDW.html" class="title listing-title">Introduction to Digital Work</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000032_20230709_SS23-Evaluation-Digital-Work-EDW-B.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/digital-work-lecture/issues/7</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-semester-sort="2023-SoSe" data-listing-title-sort="Open-Source Projekt (WI-Projekt)">
+<td>
+<a href="../teaching/courses/2023-SoSe-OSP.html" class="semester listing-semester">2023-SoSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2023-SoSe-OSP.html" class="title listing-title">Open-Source Projekt (WI-Projekt)</a>
+</td>
+<td>
+<span class="listing-student_evaluations"><a href="../assets/student_evaluations/000033_20230723_SS23-Evaluation-Digital-Work-Projekt-B.pdf">student_evaluations</a></span>
+</td>
+<td>
+<span class="listing-improvement_issue">https://github.com/digital-work-lab/open-source-project/issues/9</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-semester-sort="2022-WiSe" data-listing-title-sort="The Literature Review Seminar">
+<td>
+<a href="../teaching/courses/2022-WiSe-LRSem.html" class="semester listing-semester">2022-WiSe</a>
+</td>
+<td>
+<a href="../teaching/courses/2022-WiSe-LRSem.html" class="title listing-title">The Literature Review Seminar</a>
+</td>
+<td>
+<span class="listing-student_evaluations">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_issue">&nbsp;</span>
+</td>
+<td>
+<span class="listing-improvement_status">completed</span>
+</td>
+
+</tr>
+
+</tbody>
 </table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 <section id="theses" class="level2">
 <h2 class="anchored" data-anchor-id="theses">Theses</h2>
 <ul>
 <li>Updates of our <a href="https://github.com/digital-work-lab/theses/commits/main/" target="_blank">documentation</a>, including the new hall-of-fame page and information on the Exposé.</li>
 </ul>
+
 
 
 <!-- -->
@@ -1238,55 +1664,27 @@ document.addEventListener("DOMContentLoaded", function () {
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Improvements"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>In the following, we document our efforts to improve in teaching lectures, projects, seminars, and theses.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">table</span><span class="dt">&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">thead</span><span class="dt">&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>Semester<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>Course<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>Student Evaluations<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>Issue<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>Status<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">thead</span><span class="dt">&gt;</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">tbody</span><span class="dt">&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    {% for course in site.courses %}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>{{ course.semester }}<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ course.url }}"</span><span class="dt">&gt;</span>{{ course.title }}<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        {% if course.student_evaluations and course.student_evaluations != "" %}</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/assets/evaluations/{{ course.student_evaluations }}"</span><span class="dt">&gt;</span>PDF<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        {% else %}</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>          N/A</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        {% endif %}</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        {% if course.improvement_issue and course.improvement_issue != "" %}</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ course.improvement_issue }}"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>Issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        {% else %}</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>          N/A</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        {% endif %}</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        {% if course.improvement_status %}</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>          {{ course.improvement_status }}</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        {% else %}</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>          N/A</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        {% endif %}</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    {% endfor %}</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">tbody</span><span class="dt">&gt;</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">table</span><span class="dt">&gt;</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theses</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Updates of our <span class="co">[</span><span class="ot">documentation</span><span class="co">](https://github.com/digital-work-lab/theses/commits/main/)</span>{target=_blank}, including the new hall-of-fame page and information on the Exposé.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  id: improvements</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: courses</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  type: table</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: ["semester", "title", "student_evaluations", "improvement_issue", "improvement_status"]</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  field-links: ["semester", "title"]</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "semester desc"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  page-size: 25</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: false</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>In the following, we document our efforts to improve in teaching lectures, projects, seminars, and theses.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>::: {#improvements}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theses</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Updates of our <span class="co">[</span><span class="ot">documentation</span><span class="co">](https://github.com/digital-work-lab/theses/commits/main/)</span>{target=_blank}, including the new hall-of-fame page and information on the Exposé.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

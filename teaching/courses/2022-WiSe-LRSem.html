@@ -111,6 +111,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -131,28 +153,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -431,35 +431,39 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <tbody>
 <tr class="odd">
 <td>Title</td>
-<td>{{ page.title_long }}</td>
+<td><p>The Literature Review Seminar</p></td>
 </tr>
 <tr class="even">
+<td>Semester</td>
+<td><p>2022-WiSe</p></td>
+</tr>
+<tr class="odd">
 <td>Lecturer</td>
 <td>Gerit Wagner</td>
 </tr>
-<tr class="odd">
-<td>Link: VC</td>
-<td><a href="https://vc.uni-bamberg.de/course/view.php?id=58270">VC</a>{: target=“_blank”}</td>
-</tr>
 <tr class="even">
+<td>Link: LMS</td>
+<td><a href="https://vc.uni-bamberg.de/course/view.php?id=71961" target="_blank">Cavas</a></td>
+</tr>
+<tr class="odd">
 <td>Link: Website</td>
-<td><a href="https://digital-work-lab.github.io/literature-review-seminar/">the-literature-review-seminar</a>{: target=“_blank”}, <a href="https://www.uni-bamberg.de/digital-work/studium/bachelor/seminar-digital-work/">Website</a>{: target=“_blank”}</td>
+<td><a href="https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/" target="_blank">Website</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Status</td>
-<td>{{ page.status }}</td>
-</tr>
-<tr class="even">
-<td>Student Evaluations</td>
-<td>{% if page.student_evaluations != “” %} <a href="{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}" target="_blank">PDF</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}</td>
+<td><p>completed</p></td>
 </tr>
 <tr class="odd">
-<td>Improvement Issue</td>
-<td>{% if page.improvement_issue != “” %} <a href="{{ page.improvement_issue }}" target="_blank">Issue Link</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}</td>
+<td>Student Evaluations</td>
+<td><p></p></td>
 </tr>
 <tr class="even">
+<td>Improvement Issue</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td>Status of Revisions</td>
-<td>{{ page.improvement_status }}</td>
+<td><p>completed</p></td>
 </tr>
 </tbody>
 </table>
@@ -971,17 +975,18 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># LR-Sem 2022 WiSe</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Field               | Value</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>------------------- | ----------------------------------</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Title               | {{ page.title_long }}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Lecturer            | Gerit Wagner</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Link: VC            | <span class="co">[</span><span class="ot">VC</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=58270)</span>{: target="_blank"}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Link: Website       | <span class="co">[</span><span class="ot">the-literature-review-seminar</span><span class="co">](https://digital-work-lab.github.io/literature-review-seminar/)</span>{: target="_blank"}, <span class="co">[</span><span class="ot">Website</span><span class="co">](https://www.uni-bamberg.de/digital-work/studium/bachelor/seminar-digital-work/)</span>{: target="_blank"}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Status              | {{ page.status }}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Student Evaluations | {% if page.student_evaluations != "" %} <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>PDF<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> {% else %} <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"label label-yellow"</span><span class="dt">&gt;</span>Pending<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> {% endif %}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Improvement Issue   | {% if page.improvement_issue != "" %} <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ page.improvement_issue }}"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>Issue Link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> {% else %} <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"label label-yellow"</span><span class="dt">&gt;</span>Pending<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> {% endif %}</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Status of Revisions | {{ page.improvement_status }}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Seminar (Bachelor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>------------------- | -----</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Title               | {{&lt; meta title &gt;}}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Semester            | {{&lt; meta semester &gt;}}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Lecturer            | Gerit Wagner</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Link: LMS           | <span class="co">[</span><span class="ot">Cavas</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=71961)</span>{target="_blank"}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Link: Website       | <span class="co">[</span><span class="ot">Website</span><span class="co">](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/)</span>{target="_blank"}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Status              | {{&lt; meta status &gt;}}</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Student Evaluations | {{&lt; meta student_evaluations &gt;}}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Improvement Issue   | {{&lt; meta improvement_issue &gt;}}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Status of Revisions | {{&lt; meta improvement_status &gt;}}</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Seminar (Bachelor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

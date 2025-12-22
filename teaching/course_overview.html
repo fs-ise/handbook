@@ -146,28 +146,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -179,6 +157,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -188,6 +177,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -609,11 +609,8 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../teaching/flexnow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FlexNow</span></a>
-  </div>
-</li>
+ <span class="menu-text">teaching/flexnow.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../teaching/exams.html" class="sidebar-item-text sidebar-link">
@@ -731,7 +728,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#repositories" id="toc-repositories" class="nav-link active" data-scroll-target="#repositories">Repositories</a>
+  <li><a href="#data-and-materials" id="toc-data-and-materials" class="nav-link active" data-scroll-target="#data-and-materials">Data and materials</a>
   <ul class="collapse">
   <li><a href="#big-data-and-analytics-bda" id="toc-big-data-and-analytics-bda" class="nav-link" data-scroll-target="#big-data-and-analytics-bda">Big Data and Analytics (BDA)</a></li>
   <li><a href="#it-security-management-itsecm" id="toc-it-security-management-itsecm" class="nav-link" data-scroll-target="#it-security-management-itsecm">IT Security Management (ITSecM)</a></li>
@@ -763,7 +760,6 @@ window.Quarto = {
 </header>
 
 
-<p>Courses are <a href="https://github.com/fs-ise/handbook/tree/main/teaching/courses" target="_blank">here</a>.</p>
 <div id="listing-lecture-listing" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
@@ -814,7 +810,7 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Big Data and Analytics" data-listing-filename-sort="2026-SuSe-BDA.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Big Data and Analytics" data-listing-filename-sort="2026-SuSe-BDA.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -830,7 +826,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -846,7 +842,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
+<tr data-index="2" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="544" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-WiSe</span>
 </td>
@@ -862,7 +858,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="579" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
+<tr data-index="3" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="554" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -878,7 +874,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="4" data-listing-word-count-sort="718" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
+<tr data-index="4" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="693" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -894,7 +890,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="422" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
+<tr data-index="5" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="411" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -910,7 +906,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="557" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
+<tr data-index="6" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="530" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -926,7 +922,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="427" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
+<tr data-index="7" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="416" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -942,7 +938,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="470" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
+<tr data-index="8" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="446" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -958,7 +954,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="4" data-listing-word-count-sort="708" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
+<tr data-index="9" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="4" data-listing-word-count-sort="668" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -974,7 +970,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1766434197745" data-listing-reading-time-sort="3" data-listing-word-count-sort="463" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
+<tr data-index="10" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="439" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -990,7 +986,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="501" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
+<tr data-index="11" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="464" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1006,7 +1002,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="572" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
+<tr data-index="12" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="546" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1022,7 +1018,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="4" data-listing-word-count-sort="619" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
+<tr data-index="13" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="592" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1038,7 +1034,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="599" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
+<tr data-index="14" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="571" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1054,7 +1050,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="3" data-listing-word-count-sort="583" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
+<tr data-index="15" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="3" data-listing-word-count-sort="554" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1070,7 +1066,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="1" data-listing-word-count-sort="149" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
+<tr data-index="16" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1086,7 +1082,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="1" data-listing-word-count-sort="148" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
+<tr data-index="17" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1102,7 +1098,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1766434197744" data-listing-reading-time-sort="1" data-listing-word-count-sort="151" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
+<tr data-index="18" data-listing-file-modified-sort="1766436744361" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2022-WiSe</span>
 </td>
@@ -1126,8 +1122,9 @@ window.Quarto = {
 </nav>
 </div>
 <p>➕ <a href="new.html">Create a new course</a></p>
-<section id="repositories" class="level2">
-<h2 class="anchored" data-anchor-id="repositories">Repositories</h2>
+<section id="data-and-materials" class="level2">
+<h2 class="anchored" data-anchor-id="data-and-materials">Data and materials</h2>
+<p>Courses are <a href="https://github.com/fs-ise/handbook/tree/main/teaching/courses" target="_blank">here</a>.</p>
 <section id="big-data-and-analytics-bda" class="level3">
 <h3 class="anchored" data-anchor-id="big-data-and-analytics-bda">Big Data and Analytics (BDA)</h3>
 <ul>
@@ -1151,7 +1148,7 @@ window.Quarto = {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart
-    direction LR
+direction LR
     Upcoming(["upcoming"]) --&gt; InProgress(["in-progress"])
     InProgress --&gt; Grade(["grading"])
     Grade --&gt; Completed(["completed"])
@@ -1670,14 +1667,14 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  page-size: 10</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Courses are <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/teaching/courses)</span>{target=_blank}.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>::: {#lecture-listing}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>::: {#lecture-listing}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>➕ <span class="co">[</span><span class="ot">Create a new course</span><span class="co">](new.html)</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>➕ <span class="co">[</span><span class="ot">Create a new course</span><span class="co">](new.html)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data and materials</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repositories</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Courses are <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/teaching/courses)</span>{target=_blank}.</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### Big Data and Analytics (BDA)</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
@@ -1693,7 +1690,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>flowchart</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    direction LR</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>direction LR</span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    Upcoming([<span class="ot">"</span><span class="st">upcoming</span><span class="ot">"</span>]) --&gt; InProgress([<span class="ot">"</span><span class="st">in-progress</span><span class="ot">"</span>])</span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    InProgress --&gt; Grade([<span class="ot">"</span><span class="st">grading</span><span class="ot">"</span>])</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    Grade --&gt; Completed([<span class="ot">"</span><span class="st">completed</span><span class="ot">"</span>])</span>

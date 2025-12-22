@@ -133,17 +133,6 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -153,6 +142,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -439,39 +439,39 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <tbody>
 <tr class="odd">
 <td>Title</td>
-<td>{{ page.title_long }}</td>
+<td><p>Introduction to Digital Work</p></td>
 </tr>
 <tr class="even">
-<td>Level</td>
-<td>Bachelor</td>
+<td>Semester</td>
+<td><p>2024-SoSe</p></td>
 </tr>
 <tr class="odd">
 <td>Lecturer</td>
 <td>Gerit Wagner</td>
 </tr>
 <tr class="even">
-<td>Link: VC</td>
-<td><a href="https://vc.uni-bamberg.de/course/view.php?id=68000">Course</a>{: target=“_blank”}</td>
+<td>Link: LMS</td>
+<td><a href="https://vc.uni-bamberg.de/course/view.php?id=71961" target="_blank">Cavas</a></td>
 </tr>
 <tr class="odd">
 <td>Link: Website</td>
-<td><a href="https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/">Website</a>{: target=“_blank”}</td>
+<td><a href="https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/" target="_blank">Website</a></td>
 </tr>
 <tr class="even">
 <td>Status</td>
-<td>{{ page.status }}</td>
+<td><p>completed</p></td>
 </tr>
 <tr class="odd">
 <td>Student Evaluations</td>
-<td>{% if page.student_evaluations != “” %} <a href="{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}" target="_blank">PDF</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}</td>
+<td><p><a href="../../assets/student_evaluations/000088_20240721_SS24-Digital-Work-EDW-B_Introduction_Digital_Work.pdf">student_evaluations</a></p></td>
 </tr>
 <tr class="even">
 <td>Improvement Issue</td>
-<td>{% if page.improvement_issue != “” %} <a href="{{ page.improvement_issue }}" target="_blank">Issue Link</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}</td>
+<td><p>https://github.com/digital-work-lab/digital-work-lecture/issues/8</p></td>
 </tr>
 <tr class="odd">
 <td>Status of Revisions</td>
-<td>{{ page.improvement_status }}</td>
+<td><p>in-progress</p></td>
 </tr>
 </tbody>
 </table>
@@ -507,7 +507,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <li><label><input type="checkbox" checked="">Professor: Schedule evaluations in the pen-ultimate week (<a href="{{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html">30.21.evaluations</a>).</label></li>
 <li><label><input type="checkbox" checked="">Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</label></li>
 <li><label><input type="checkbox" checked="">Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: “Prüferbestellung”). Use the <a href="30.59.exams.html#preparing-the-exam">exam checklist</a>.</label></li>
-<li><label><input type="checkbox" checked="">Scheine (<a href="https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/">Formular</a>{: target=“_blank”}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</label></li>
+<li><label><input type="checkbox" checked="">Scheine (<a href="https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/" target="_blank">Formular</a>), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</label></li>
 </ul>
 </section>
 <section id="exam-grading-and-documentation" class="level2">
@@ -530,7 +530,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <li><label><input type="checkbox" checked="">Professor: Upon notification by the examination office (E-Mail: “Prüferbestellung”), create the repeat exam. Student registrations are available in FlexNow.</label></li>
 <li><label><input type="checkbox" checked="">Repeat relevant steps of <em>Exams and documentation</em> (step 4)</label></li>
 </ul>
-<p>Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (<a href="https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/">link</a>{: target=“_blank”}).</p>
+<p>Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (<a href="https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/" target="_blank">link</a>).</p>
 
 
 <!-- -->
@@ -1039,16 +1039,16 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># IDW 2024 SoSe</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Field               | Value</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>------------------- | -------------------------------------------------</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Title               | {{ page.title_long }}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Level               | Bachelor</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>------------------- | -----</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Title               | {{&lt; meta title &gt;}}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Semester            | {{&lt; meta semester &gt;}}</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Lecturer            | Gerit Wagner</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Link: VC            | <span class="co">[</span><span class="ot">Course</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=68000)</span>{: target="_blank"}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Link: Website       | <span class="co">[</span><span class="ot">Website</span><span class="co">](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/)</span>{: target="_blank"}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Status              | {{ page.status }}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Student Evaluations | {% if page.student_evaluations != "" %} <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>PDF<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> {% else %} <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"label label-yellow"</span><span class="dt">&gt;</span>Pending<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> {% endif %}</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Improvement Issue   | {% if page.improvement_issue != "" %} <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ page.improvement_issue }}"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>Issue Link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> {% else %} <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"label label-yellow"</span><span class="dt">&gt;</span>Pending<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> {% endif %}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Status of Revisions | {{ page.improvement_status }}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Link: LMS           | <span class="co">[</span><span class="ot">Cavas</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=71961)</span>{target="_blank"}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Link: Website       | <span class="co">[</span><span class="ot">Website</span><span class="co">](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/)</span>{target="_blank"}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Status              | {{&lt; meta status &gt;}}</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Student Evaluations | {{&lt; meta student_evaluations &gt;}}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Improvement Issue   | {{&lt; meta improvement_issue &gt;}}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Status of Revisions | {{&lt; meta improvement_status &gt;}}</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Process</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
@@ -1081,7 +1081,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">30.21.evaluations</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)</span>).</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](30.59.exams.html#preparing-the-exam)</span>.</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{: target="_blank"}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Exam grading and documentation</span></span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
@@ -1103,7 +1103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.</span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Repeat relevant steps of *Exams and documentation* (step 4) </span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (<span class="co">[</span><span class="ot">link</span><span class="co">](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/)</span>{: target="_blank"}).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (<span class="co">[</span><span class="ot">link</span><span class="co">](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/)</span>{target=_blank}).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

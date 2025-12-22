@@ -431,35 +431,39 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <tbody>
 <tr class="odd">
 <td>Title</td>
-<td>{{ page.title_long }}</td>
+<td><p>Open-Source Projekt (WI-Projekt)</p></td>
 </tr>
 <tr class="even">
+<td>Semester</td>
+<td><p>2023-SoSe</p></td>
+</tr>
+<tr class="odd">
 <td>Lecturer</td>
 <td>Gerit Wagner</td>
 </tr>
-<tr class="odd">
-<td>Link: VC</td>
-<td><a href="https://vc.uni-bamberg.de/enrol/index.php?id=61245">VC</a>{: target=“_blank”}</td>
-</tr>
 <tr class="even">
+<td>Link: LMS</td>
+<td><a href="https://vc.uni-bamberg.de/course/view.php?id=71961" target="_blank">Cavas</a></td>
+</tr>
+<tr class="odd">
 <td>Link: Website</td>
-<td><a href="https://www.uni-bamberg.de/digital-work/studium/bachelor/wi-projekt-open-source-projekt/">Website</a>{: target=“_blank”}</td>
+<td><a href="https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/" target="_blank">Website</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Status</td>
-<td>{{ page.status }}</td>
-</tr>
-<tr class="even">
-<td>Student Evaluations</td>
-<td>{% if page.student_evaluations != “” %} <a href="{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}" target="_blank">PDF</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}</td>
+<td><p>completed</p></td>
 </tr>
 <tr class="odd">
-<td>Improvement Issue</td>
-<td>{% if page.improvement_issue != “” %} <a href="{{ page.improvement_issue }}" target="_blank">Issue Link</a> {% else %} <span class="label label-yellow">Pending</span> {% endif %}</td>
+<td>Student Evaluations</td>
+<td><p><a href="../../assets/student_evaluations/000033_20230723_SS23-Evaluation-Digital-Work-Projekt-B.pdf">student_evaluations</a></p></td>
 </tr>
 <tr class="even">
+<td>Improvement Issue</td>
+<td><p>https://github.com/digital-work-lab/open-source-project/issues/9</p></td>
+</tr>
+<tr class="odd">
 <td>Status of Revisions</td>
-<td>{{ page.improvement_status }}</td>
+<td><p>completed</p></td>
 </tr>
 </tbody>
 </table>
@@ -970,15 +974,16 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># OSP 2023 SoSe</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Field               | Value</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>------------------- | ------------------------------------------------</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Title               | {{ page.title_long }}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Lecturer            | Gerit Wagner</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Link: VC            | <span class="co">[</span><span class="ot">VC</span><span class="co">](https://vc.uni-bamberg.de/enrol/index.php?id=61245)</span>{: target="_blank"}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Link: Website       | <span class="co">[</span><span class="ot">Website</span><span class="co">](https://www.uni-bamberg.de/digital-work/studium/bachelor/wi-projekt-open-source-projekt/)</span>{: target="_blank"}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Status              | {{ page.status }}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Student Evaluations | {% if page.student_evaluations != "" %} <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ site.baseurl }}/assets/evaluations/{{ page.student_evaluations }}"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>PDF<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> {% else %} <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"label label-yellow"</span><span class="dt">&gt;</span>Pending<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> {% endif %}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Improvement Issue   | {% if page.improvement_issue != "" %} <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ page.improvement_issue }}"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>Issue Link<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> {% else %} <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"label label-yellow"</span><span class="dt">&gt;</span>Pending<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> {% endif %}</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Status of Revisions | {{ page.improvement_status }}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>------------------- | -----</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Title               | {{&lt; meta title &gt;}}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Semester            | {{&lt; meta semester &gt;}}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Lecturer            | Gerit Wagner</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Link: LMS           | <span class="co">[</span><span class="ot">Cavas</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=71961)</span>{target="_blank"}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Link: Website       | <span class="co">[</span><span class="ot">Website</span><span class="co">](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/)</span>{target="_blank"}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Status              | {{&lt; meta status &gt;}}</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Student Evaluations | {{&lt; meta student_evaluations &gt;}}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Improvement Issue   | {{&lt; meta improvement_issue &gt;}}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Status of Revisions | {{&lt; meta improvement_status &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
