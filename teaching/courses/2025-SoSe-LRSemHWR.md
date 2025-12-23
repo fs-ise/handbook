@@ -77,7 +77,7 @@ Note: no grading.
 
 Documentation
 
-- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
-- [ ] ~~Professor: [Report]({{ site.baseurl }}/docs/30-teaching/30_processes/30.20.reports.html) teaching efforts at the end of the semester.~~
+- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
+- [ ] ~~Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.~~
 
 Deadline: End of August (summer term), March (winter term)

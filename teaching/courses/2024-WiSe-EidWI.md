@@ -50,7 +50,7 @@ Deadline: April (summer term), October (winter term)
 
 Start: April (summer term), October (winter term)
 
-- [x] Professor: Schedule evaluations in the pen-ultimate week ([30.21.evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
+- [x] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
 - [x] Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).
 - [x] Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the [exam checklist](30.59.exams.html#preparing-the-exam).
 - [x] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
@@ -74,7 +74,7 @@ Grading
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: [Enter grades in FlexNow](/management/exams.html#enter-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
 - [x] Professor: Archive bonus exercises (if any).
 
 Sending exams to the examination office
@@ -83,8 +83,8 @@ Sending exams to the examination office
 
 Documentation
 
-- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
-- [x] Professor: [Report]({{ site.baseurl }}/docs/30-teaching/30_processes/30.20.reports.html) teaching efforts at the end of the semester.
+- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
+- [x] Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.
 
 Deadline: End of August (summer term), March (winter term)
 

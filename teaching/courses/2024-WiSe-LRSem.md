@@ -56,7 +56,7 @@ Deadline: April (summer term), October (winter term)
 
 Start: April (summer term), October (winter term)
 
-- [x] Professor: Schedule evaluations in the pen-ultimate week ([30.21.evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
+- [x] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
 - [x] Professor: Set the date for the presentation. Add the date to the calendar.
 
 ## 4. Grading and documentation
@@ -68,12 +68,12 @@ Grading
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: [Enter grades in FlexNow](/management/exams.html#enter-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
 - [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) at [14.03](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/03_seminars&fileid=72){target=_blank}.
 
 Documentation
 
-- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
-- [x] Professor: [Report]({{ site.baseurl }}/docs/30-teaching/30_processes/30.20.reports.html) teaching efforts at the end of the semester.
+- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
+- [x] Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.
 
 Deadline: End of August (summer term), March (winter term)

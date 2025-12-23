@@ -70,8 +70,8 @@ Start: April (summer term), October (winter term)
 - [x] Team Assistant: Add the presentation (exam) dates to the department calendar
 - [x] Professor: Set deadline for pull-request evaluation.
 - [x] Professor: Set the date for the code review session.
-- [x] Professor: Add the code review session to the [calendar](../../calendar/events.yaml)
-- [x] Professor: Schedule evaluations in the pen-ultimate week ([30.21.evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
+- [x] Professor: Add the code review session to the [calendar](/index.html)
+- [x] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
 - [ ] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
 
 ## 4. Grading and documentation
@@ -83,12 +83,12 @@ Grading
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](../30_processes/30.15.flexnow.html#entering-grades) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: [Enter grades in FlexNow](/management/exams.html#enter-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
 - [ ] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [14.02](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&fileid=69){target=_blank}.
 
 Documentation
 
-- [ ] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
-- [ ] Professor: [Report]({{ site.baseurl }}/docs/30-teaching/30_processes/30.20.reports.html) teaching efforts at the end of the semester.
+- [ ] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
+- [ ] Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.
 
 Deadline: End of August (summer term), March (winter term)

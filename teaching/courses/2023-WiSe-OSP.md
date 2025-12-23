@@ -51,7 +51,7 @@ Deadline: April (summer term), October (winter term)
 
 Start: April (summer term), October (winter term)
 
-- [x] Professor: Schedule evaluations in the pen-ultimate week ([30.21.evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
+- [x] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
 - [x] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
 
 ## 4. Grading and documentation
@@ -82,8 +82,8 @@ Sending exams to the examination office
 
 Documentation
 
-- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)).
-- [x] Professor: [Report]({{ site.baseurl }}/docs/30-teaching/30_processes/30.20.reports.html) teaching efforts at the end of the semester.
+- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
+- [x] Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.
 - [x] Professor: Archive presentation protocols (projects and seminars: digital is sufficient).
 
 Deadline: End of August (summer term), March (winter term)
