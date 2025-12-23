@@ -122,17 +122,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -142,6 +131,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -515,8 +515,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li><label><input type="checkbox" checked="">Team Assistant: Add the presentation (exam) dates to the department calendar</label></li>
 <li><label><input type="checkbox" checked="">Professor: Set deadline for pull-request evaluation.</label></li>
 <li><label><input type="checkbox" checked="">Professor: Set the date for the code review session.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Add the code review session to the <a href="../../calendar/events.yaml">calendar</a></label></li>
-<li><label><input type="checkbox" checked="">Professor: Schedule evaluations in the pen-ultimate week (<a href="{{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html">30.21.evaluations</a>).</label></li>
+<li><label><input type="checkbox" checked="">Professor: Add the code review session to the <a href="../../index.html">calendar</a></label></li>
+<li><label><input type="checkbox" checked="">Professor: Schedule evaluations in the pen-ultimate week (<a href="../../teaching/evaluations.html">evaluations</a>).</label></li>
 <li><label><input type="checkbox">Scheine (<a href="https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/" target="_blank">Formular</a>), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</label></li>
 </ul>
 </section>
@@ -529,13 +529,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p>Entering Grades into FlexNow</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Team Assistant: <a href="../30_processes/30.15.flexnow.html#entering-grades">Enter grades in FlexNow</a> (or create certificates if exam is not yet available in FlexNow (<a href="https://github.com/digital-work-lab/handbook/tree/main/src/scheine" target="_blank">script</a>)).</label></li>
+<li><label><input type="checkbox" checked="">Team Assistant: <a href="../../management/exams.html#enter-grades-in-flexnow">Enter grades in FlexNow</a> (or create certificates if exam is not yet available in FlexNow (<a href="https://github.com/digital-work-lab/handbook/tree/main/src/scheine" target="_blank">script</a>)).</label></li>
 <li><label><input type="checkbox">Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&amp;fileid=69" target="_blank">14.02</a>.</label></li>
 </ul>
 <p>Documentation</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Professor: Analyse the evaluations, store the files, and document the improvements (see <a href="{{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html">evaluations</a>).</label></li>
-<li><label><input type="checkbox">Professor: <a href="{{ site.baseurl }}/docs/30-teaching/30_processes/30.20.reports.html">Report</a> teaching efforts at the end of the semester.</label></li>
+<li><label><input type="checkbox">Professor: Analyse the evaluations, store the files, and document the improvements (see <a href="../../teaching/evaluations.html">evaluations</a>).</label></li>
+<li><label><input type="checkbox">Professor: <a href="../../management/reports.html">Report</a> teaching efforts at the end of the semester.</label></li>
 </ul>
 <p>Deadline: End of August (summer term), March (winter term)</p>
 
@@ -1105,8 +1105,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Set deadline for pull-request evaluation.</span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Set the date for the code review session.</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">](../../calendar/events.yaml)</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">30.21.evaluations</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)</span>).</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">](/index.html)</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Grading and documentation</span></span>
@@ -1118,13 +1118,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](../30_processes/30.15.flexnow.html#entering-grades)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/management/exams.html#enter-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">14.02</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&amp;fileid=69)</span>{target=_blank}.</span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/30_processes/30.21.evaluations.html)</span>).</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">]({{ site.baseurl }}/docs/30-teaching/30_processes/30.20.reports.html)</span> teaching efforts at the end of the semester.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/reports.html)</span> teaching efforts at the end of the semester.</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>Deadline: End of August (summer term), March (winter term)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
