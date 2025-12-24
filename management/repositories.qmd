@@ -25,6 +25,7 @@ from pathlib import Path
 # Adjust if this file lives elsewhere
 data_path = Path("../assets/repos.json")
 repos = json.loads(data_path.read_text(encoding="utf-8"))
+repos = [r for r in repos if r.get("name") != ".github"]
 
 def status_cell(repo, show_labot=False):
     if repo.get("archived"):
@@ -73,12 +74,16 @@ def access_cell():
         '</a>'
     )
 
+def repo_sort_key(repo):
+    # Sort by what users see in the table
+    return (repo.get("title") or repo.get("name") or "").casefold()
+
 def render_rows(filtered_repos,
                 show_labot=False,
                 require_active=None,
                 archived_only=None,
                 with_colrev_icon=False):
-    rows = []
+    candidates = []
     for repo in filtered_repos:
         if archived_only is True and not repo.get("archived"):
             continue
@@ -88,7 +93,13 @@ def render_rows(filtered_repos,
             continue
         if require_active is False and repo.get("updated_recently", False):
             continue
+        candidates.append(repo)
 
+    # Alphabetical within each category/group
+    candidates.sort(key=repo_sort_key)
+
+    rows = []
+    for repo in candidates:
         rows.append(f"""<tr>
   <td>{repo_link(repo, with_colrev_icon=with_colrev_icon)}</td>
   <td>{status_cell(repo, show_labot=show_labot)}</td>
