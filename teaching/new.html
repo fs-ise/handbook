@@ -133,17 +133,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -153,6 +142,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -715,7 +715,7 @@ Note
 <p>To set up a new lecture, seminar, or project:</p>
 <ul>
 <li>Add a <a href="#new-module">new module</a> if necessary.</li>
-<li>Announcement and scheduling is documented <a href="../management/course_organization.html">here</a></li>
+<li>Announcement and scheduling is documented <a href="../teaching/course_organization.html">here</a></li>
 <li>Create a <a href="https://github.com/digital-work-lab/handbook/new/main/_courses" target="_blank">new lecture, seminar, or project</a> with this filename pattern: <code>2023-SuSe-IDW.md</code> based on the right template:</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lecture template">
@@ -789,7 +789,7 @@ Note
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/management/exams.html#preparing-the-exam)</span>.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">](/assets/calendar/events.yaml)</span></span>
 <span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
@@ -813,7 +813,7 @@ Note
 <span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/flexnow.html#entering-grades)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive bonus exercises (if any).</span>
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>Sending exams to the examination office</span>
@@ -934,13 +934,13 @@ Note
 <span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/flexnow.html#entering-grades)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">14.03</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/03_seminars&amp;fileid=72)</span>{target=_blank}.</span>
 <span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/reports.html)</span> teaching efforts at the end of the semester.</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/teaching_reports.html)</span> teaching efforts at the end of the semester.</span>
 <span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>Deadline: End of August (summer term), March (winter term)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1043,13 +1043,13 @@ Note
 <span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/flexnow.html#entering-grades)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">14.02</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&amp;fileid=69)</span>{target=_blank}.</span>
 <span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/reports.html)</span> teaching efforts at the end of the semester.</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/teaching_reports.html)</span> teaching efforts at the end of the semester.</span>
 <span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>Deadline: End of August (summer term), March (winter term)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1057,7 +1057,7 @@ Note
 </div>
 <ul>
 <li>Update yaml-header information.</li>
-<li>The <a href="lectures.html">overview</a>, <a href="../teaching/evaluations.html">evaluation</a> and <a href="../teaching/improvements.html">improvements</a> are updated automatically.</li>
+<li>The <a href="../teaching/course_overview.html">overview</a>, <a href="../teaching/evaluations.html">evaluation</a> and <a href="../teaching/improvements.html">improvements</a> are updated automatically.</li>
 <li>Update github pages, e.g., dates on the <a href="https://digital-work-lab.github.io/open-source-project/" target="_blank">project page</a>.</li>
 </ul>
 </section>
@@ -1584,7 +1584,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>To set up a new lecture, seminar, or project:</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add a <span class="co">[</span><span class="ot">new module</span><span class="co">](#new-module)</span> if necessary.</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Announcement and scheduling is documented <span class="co">[</span><span class="ot">here</span><span class="co">](../management/course_organization.html)</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Announcement and scheduling is documented <span class="co">[</span><span class="ot">here</span><span class="co">](/teaching/course_organization.html)</span></span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a <span class="co">[</span><span class="ot">new lecture, seminar, or project</span><span class="co">](https://github.com/digital-work-lab/handbook/new/main/_courses)</span>{target=_blank} with this filename pattern: <span class="in">`2023-SuSe-IDW.md`</span> based on the right template:</span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Lecture template" collapse=true}</span>
@@ -1649,7 +1649,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/management/exams.html#preparing-the-exam)</span>.</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
 <span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">](/assets/calendar/events.yaml)</span></span>
 <span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
@@ -1673,7 +1673,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/flexnow.html#entering-grades)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive bonus exercises (if any).</span>
 <span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>Sending exams to the examination office</span>
@@ -1785,13 +1785,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/flexnow.html#entering-grades)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">14.03</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/03_seminars&amp;fileid=72)</span>{target=_blank}.</span>
 <span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
-<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/reports.html)</span> teaching efforts at the end of the semester.</span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/teaching_reports.html)</span> teaching efforts at the end of the semester.</span>
 <span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a>Deadline: End of August (summer term), March (winter term)</span>
 <span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a></span>
@@ -1887,20 +1887,20 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/flexnow.html#entering-grades)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">14.02</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&amp;fileid=69)</span>{target=_blank}.</span>
 <span id="cb4-323"><a href="#cb4-323" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
-<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/reports.html)</span> teaching efforts at the end of the semester.</span>
+<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: <span class="co">[</span><span class="ot">Report</span><span class="co">](/management/teaching_reports.html)</span> teaching efforts at the end of the semester.</span>
 <span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a>Deadline: End of August (summer term), March (winter term)</span>
 <span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-333"><a href="#cb4-333" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update yaml-header information.</span>
-<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">overview</span><span class="co">](lectures.html)</span>, <span class="co">[</span><span class="ot">evaluation</span><span class="co">](/teaching/evaluations.html)</span> and <span class="co">[</span><span class="ot">improvements</span><span class="co">](/teaching/improvements.html)</span> are updated automatically.</span>
+<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">overview</span><span class="co">](/teaching/course_overview.html)</span>, <span class="co">[</span><span class="ot">evaluation</span><span class="co">](/teaching/evaluations.html)</span> and <span class="co">[</span><span class="ot">improvements</span><span class="co">](/teaching/improvements.html)</span> are updated automatically.</span>
 <span id="cb4-335"><a href="#cb4-335" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update github pages, e.g., dates on the <span class="co">[</span><span class="ot">project page</span><span class="co">](https://digital-work-lab.github.io/open-source-project/)</span>{target=_blank}.</span>
 <span id="cb4-336"><a href="#cb4-336" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-337"><a href="#cb4-337" aria-hidden="true" tabindex="-1"></a><span class="fu">## New module</span></span>
