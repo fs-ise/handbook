@@ -80,7 +80,7 @@ Grading
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](/management/exams.html#enter-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
 - [x] Professor: Archive bonus exercises (if any).
 
 Sending exams to the examination office
