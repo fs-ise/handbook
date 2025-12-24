@@ -4,17 +4,16 @@ transition_status: "toupdate"
 transition_comment: "update"
 ---
 
-
 ::: callout-note
-This section is marked as "toupdate": completely update
+This section is marked as "toupdate": update completely
+:::
 
-```{mermaid}
-flowchart
-direction LR
-    Announced(["<a href='#announced'>Announced</a>"]) --> Registered(["<a href='#registered'>Registered</a>"])
-    Registered --> Submitted(["<a href='#submitted'>Submitted</a>"])
-    Submitted --> Archived(["<a href='#archived'>Archived</a>"])
-```
+::: callout-tip
+This page contains **administration details**. For students, information is available on a [separate page](https://digital-work-lab.github.io/theses/){target=_blank}.
+:::
+
+::: confidential
+Information on individual theses is recorded internally ([35 Theses](/teaching/theses.html)).
 :::
 
 ```{mermaid}
@@ -81,7 +80,7 @@ It is important that we receive **two paper versions with original signatures**:
 
 To **complete the registration**, the thesis advisor
 
-```
+```bash
 # Save topic confirmation (docx) in this repository and run
 labot thesis --register
 # check and merge pull request
@@ -144,7 +143,7 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 
 ::: callout-note
 To start grading the thesis and to create the review run
-
+ 
 ```
 labot thesis --grade
 ```
@@ -219,6 +218,7 @@ A confirmation for passing the thesis (Bestehensbescheinigung) can be issued upo
 
 We provide [feedback](https://digital-work-lab.github.io/theses/docs/feedback.html){target=_blank} on the thesis and explain the grading.
 
+
 ::: callout-note
 Ask students whether we can make their thesis available online for other students.
 :::
@@ -238,4 +238,3 @@ Ask students whether we can make their thesis available online for other student
  -->
 
 - [Prüfungs- und Studienordnungen](https://www.uni-bamberg.de/abt-studium/aufgaben/pruefungs-studienordnungen/){target=_blank}, insbes. Modulhandbücher
-
