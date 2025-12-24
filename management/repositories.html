@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -133,17 +133,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -153,6 +142,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -551,59 +551,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Teaching</span></a>
+ <span class="menu-text">Support</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/course_organization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Course organization</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/certificates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Certificates</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/exams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exams</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/theses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Theses</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/reports.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reports (LUFV)</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Research</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Travel</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/research_support.html" class="sidebar-item-text sidebar-link">
@@ -612,21 +565,27 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/visitors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Visitors</span></a>
+  <a href="../management/teaching_support.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching support</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/teaching_reports.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reports (LUFV)</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Risk management</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/compliance.html" class="sidebar-item-text sidebar-link">
@@ -649,13 +608,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Procurement</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/orders.html" class="sidebar-item-text sidebar-link">
@@ -672,13 +631,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">HR</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../management/hiring.html" class="sidebar-item-text sidebar-link">
@@ -689,6 +648,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   <div class="sidebar-item-container"> 
   <a href="../management/onboarding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Onboarding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Travel</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -751,7 +716,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 
 <p><a href="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml" target="_blank"><img src="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg" class="img-fluid" alt="Update Repositories"></a> <a href="https://github.com/organizations/fs-ise/repositories/new" target="_blank"><img src="https://img.shields.io/badge/Create-New%20Repository-blue.png" class="img-fluid" alt="Create Repository"></a></p>
-<p>TODO: link to <a href="../research/repo_setup.html">new research repository</a>, <a href="...">new teaching repository</a>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</p>
+<p>TODO: link to <a href="../research/repo_setup.html">new research repository</a>, <a href="TODO">new teaching repository</a>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -812,7 +777,7 @@ Access
 <img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-None
+<a href="https://github.com/Access Denied: Requires admin rights" target="_blank">Access Denied: Requires admin rights</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
@@ -830,75 +795,7 @@ None
 <img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-<a href="https://github.com/Stella1234-design" target="_blank">Stella1234-design</a>
-</td>
-<td>
-<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
-</td>
-</tr>
-
-<tr>
-<td>
-<a href="https://github.com/fs-ise/quarto-letter-template" target="_blank">quarto-letter-template</a>
-</td>
-<td>
-<span style="color: green;">🟢 Active</span>
-</td>
-<td>
-</td>
-<td>
-None
-</td>
-<td>
-<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
-</td>
-</tr>
-
-<tr>
-<td>
-<a href="https://github.com/fs-ise/big-data-analytics-exams" target="_blank">big-data-analytics-exams</a>
-</td>
-<td>
-<span style="color: green;">🟢 Active</span>
-</td>
-<td>
-</td>
-<td>
-None
-</td>
-<td>
-<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
-</td>
-</tr>
-
-<tr>
-<td>
-<a href="https://github.com/fs-ise/it-security-management" target="_blank">it-security-management</a>
-</td>
-<td>
-<span style="color: green;">🟢 Active</span>
-</td>
-<td>
-</td>
-<td>
-None
-</td>
-<td>
-<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
-</td>
-</tr>
-
-<tr>
-<td>
-<a href="https://github.com/fs-ise/it-security-management-exams" target="_blank">it-security-management-exams</a>
-</td>
-<td>
-<span style="color: green;">🟢 Active</span>
-</td>
-<td>
-</td>
-<td>
-None
+<a href="https://github.com/Access Denied: Requires admin rights" target="_blank">Access Denied: Requires admin rights</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
@@ -1132,7 +1029,7 @@ Access
 <img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-<a href="https://github.com/princeGT-creator" target="_blank">princeGT-creator</a>
+<a href="https://github.com/Access Denied: Requires admin rights" target="_blank">Access Denied: Requires admin rights</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
@@ -1352,7 +1249,7 @@ Access
 <img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-None
+<a href="https://github.com/Access Denied: Requires admin rights" target="_blank">Access Denied: Requires admin rights</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
@@ -1370,7 +1267,7 @@ None
 <img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-None
+<a href="https://github.com/Access Denied: Requires admin rights" target="_blank">Access Denied: Requires admin rights</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
@@ -1388,7 +1285,7 @@ None
 <img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-None
+<a href="https://github.com/Access Denied: Requires admin rights" target="_blank">Access Denied: Requires admin rights</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
@@ -2829,7 +2726,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Update Repositories](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg)</span><span class="co">](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml)</span>{target=_blank} <span class="co">[</span><span class="al">![Create Repository](https://img.shields.io/badge/Create-New%20Repository-blue)</span><span class="co">](https://github.com/organizations/fs-ise/repositories/new)</span>{target=_blank}</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>TODO: link to <span class="co">[</span><span class="ot">new research repository</span><span class="co">](../research/repo_setup.html)</span>, <span class="co">[</span><span class="ot">new teaching repository</span><span class="co">](...)</span>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>TODO: link to <span class="co">[</span><span class="ot">new research repository</span><span class="co">](../research/repo_setup.html)</span>, <span class="co">[</span><span class="ot">new teaching repository</span><span class="co">](TODO)</span>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Labot checks are currently implemented for *active paper (research)* repositories only.</span>

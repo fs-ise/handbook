@@ -133,17 +133,6 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -153,6 +142,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -443,6 +443,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <div class="sidebar-item-container"> 
   <a href="../teaching/course_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/course_organization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course organization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -808,20 +814,32 @@ Important
 <li>Add bonus points if any and <strong>if exam is passed</strong>. Otherwise, note the bonus points and add a note “kann nicht angerechnet werden”.</li>
 <li>Do not dispose of empty exams</li>
 <li>Use the <a href="https://github.com/digital-work-lab/handbook/tree/main/src/grading" target="_blank">grading scripts</a> to assign grades and prepare FlexNow import</li>
+<li>Have failed exams reviewed by a second professor</li>
 </ul>
 </section>
 <section id="entering-grades-in-flexnow" class="level2">
 <h2 class="anchored" data-anchor-id="entering-grades-in-flexnow">Entering grades (in FlexNow)</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Certificates can be issued if exams are not (yet) available in FlexNow (see <a href="certificates.html">process</a>)</p>
+</div>
+</div>
 <ul>
-<li><p>Have failed exams reviewed by a second professor</p></li>
-<li><p>Certificates can be issued if exams are not (yet) available in FlexNow (see <a href="certificates.html">process</a>)</p></li>
-<li><p><a href="https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login" target="_blank">Login: FlexNow</a> - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</p></li>
-<li><p>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</p></li>
-<li><p>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</p></li>
-<li><p>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester: “Noten endgültig freischalten und verbuchen” (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71" target="_blank">14.01</a>). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</p></li>
-<li><p>Only store grades as PDF (not as csv)?</p></li>
-<li><p>Klausuren entsprechend der Reihenfolge im PDF sortieren.</p></li>
-<li><p>The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.</p></li>
+<li><a href="https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login" target="_blank">Login: FlexNow</a> - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</li>
+<li>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</li>
+<li>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</li>
+<li>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester: “Noten endgültig freischalten und verbuchen” (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71" target="_blank">14.01</a>). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</li>
+<li>Only store grades as PDF (not as csv)?</li>
+<li>Klausuren entsprechend der Reihenfolge im PDF sortieren.</li>
+<li>The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.</li>
 </ul>
 <p>Projekt:</p>
 <ul>
@@ -1443,60 +1461,62 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".</span>
 <span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do not dispose of empty exams</span>
 <span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Entering grades (in FlexNow)</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Have failed exams reviewed by a second professor</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Certificates can be issued if exams are not (yet) available in FlexNow (see <span class="co">[</span><span class="ot">process</span><span class="co">](certificates.html)</span>)</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Login: FlexNow</span><span class="co">](https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login)</span>{target=_blank} - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester:</span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>"Noten endgültig freischalten und verbuchen" (<span class="co">[</span><span class="ot">14.01</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71)</span>{target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Only store grades as PDF (not as csv)?</span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Klausuren entsprechend der Reihenfolge im PDF sortieren.</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.</span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>Projekt:</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Have failed exams reviewed by a second professor</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Entering grades (in FlexNow)</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>Certificates can be issued if exams are not (yet) available in FlexNow (see <span class="co">[</span><span class="ot">process</span><span class="co">](certificates.html)</span>)</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Login: FlexNow</span><span class="co">](https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login)</span>{target=_blank} - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester:</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>"Noten endgültig freischalten und verbuchen" (<span class="co">[</span><span class="ot">14.01</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71)</span>{target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Only store grades as PDF (not as csv)?</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Klausuren entsprechend der Reihenfolge im PDF sortieren.</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.</span>
 <span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dezentral</span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Teilnehmer hinzufügen"</span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten eintragen</span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten freigeben</span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten als PDF in 14.02 ablegen (ggf. Excel-Datei löschen)</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>If grades cannot be entered, reach out to the FlexNow team via e-mail: <span class="co">[</span><span class="ot">flexnow@uni-bamberg.de</span><span class="co">](mailto:flexnow@uni-bamberg.de&gt;)</span>.</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## ERASMUS students</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>Projekt:</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dezentral</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Teilnehmer hinzufügen"</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten eintragen</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten freigeben</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten als PDF in 14.02 ablegen (ggf. Excel-Datei löschen)</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>If grades cannot be entered, reach out to the FlexNow team via e-mail: <span class="co">[</span><span class="ot">flexnow@uni-bamberg.de</span><span class="co">](mailto:flexnow@uni-bamberg.de&gt;)</span>.</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>For ERASMUS students, the FlexNow team has to assign students to modules. Use the following e-mail template:</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="fu">## ERASMUS students</span></span>
 <span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>Betreff: Anlage eines Moduls für ERASMUS Studierende</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>Liebe Kolleginnen und Kollegen des FlexNow-Teams,</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>For ERASMUS students, the FlexNow team has to assign students to modules. Use the following e-mail template:</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>Betreff: Anlage eines Moduls für ERASMUS Studierende</span>
 <span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>Darf ich Sie bitten, in FlexNow das nachstehende Modul für die unten genannten ERASMUS-Studierenden anzulegen:</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>Liebe Kolleginnen und Kollegen des FlexNow-Teams,</span>
 <span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Modulhandbuch:** Modulhandbuch Bachelor Wirtschaftsinformatik – Studienbeginn ab dem WS 2024/2025</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Modultitel:** LV<span class="sc">\_</span>721<span class="sc">\_</span>114387<span class="sc">\_</span>1<span class="sc">\_</span>81<span class="sc">\_</span>1 – Digital-Work-Projekt-B: Bachelorprojekt aus der Fächergruppe Wirtschaftsinformatik (Wagner)</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>Für folgende Studierende:</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>Darf ich Sie bitten, in FlexNow das nachstehende Modul für die unten genannten ERASMUS-Studierenden anzulegen:</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Modulhandbuch:** Modulhandbuch Bachelor Wirtschaftsinformatik – Studienbeginn ab dem WS 2024/2025</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Modultitel:** LV<span class="sc">\_</span>721<span class="sc">\_</span>114387<span class="sc">\_</span>1<span class="sc">\_</span>81<span class="sc">\_</span>1 – Digital-Work-Projekt-B: Bachelorprojekt aus der Fächergruppe Wirtschaftsinformatik (Wagner)</span>
 <span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Student name (student ID)</span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Student name (student ID)</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>Für folgende Studierende:</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Student name (student ID)</span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>Vielen Dank im Voraus!</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Student name (student ID)</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Student name (student ID)</span>
 <span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>Mit freundlichen Grüßen</span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>Gerit Wagner</span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>Once students can be selected, double-check the number of ECTS before submitting grades.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>Vielen Dank im Voraus!</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>Mit freundlichen Grüßen</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>Gerit Wagner</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>Once students can be selected, double-check the number of ECTS before submitting grades.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

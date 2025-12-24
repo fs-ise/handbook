@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -133,17 +122,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -153,6 +131,28 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -349,7 +349,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../teaching/index.html"> 
+    <a class="nav-link active" href="../teaching/index.html" aria-current="page"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
@@ -357,7 +357,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../management/index.html" aria-current="page"> 
+    <a class="nav-link" href="../management/index.html"> 
 <span class="menu-text">Management</span></a>
   </li>  
   <li class="nav-item">
@@ -384,7 +384,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/course_organization.html">Teaching</a></li><li class="breadcrumb-item"><a href="../management/course_organization.html">Course organization</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../teaching/course_overview.html">Courses</a></li><li class="breadcrumb-item"><a href="../teaching/course_organization.html">Course organization</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -409,14 +409,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Management</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/transition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Transition</span></a>
+  <a href="../teaching/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -430,32 +424,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/statement.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/responsibilities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Responsibilities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/sop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SOP</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/agendas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Agendas</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P&amp;R sessions</span></a>
   </div>
 </li>
       </ul>
@@ -463,7 +433,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Communication</span></a>
+ <span class="menu-text">Courses</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -471,26 +441,20 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/mail.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mail</span></a>
+  <a href="../teaching/course_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/website.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Website</span></a>
+  <a href="../teaching/course_organization.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Course organization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/faculty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Faculty</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/media_kit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Media kit</span></a>
+  <a href="../teaching/theses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theses</span></a>
   </div>
 </li>
       </ul>
@@ -498,7 +462,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Infrastructure</span></a>
+ <span class="menu-text">Design</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -506,44 +470,44 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/handbook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Handbook</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/repositories.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Repositories</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/systems_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Systems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/controlling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlling</span></a>
+  <a href="../teaching/new.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">New course</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/systems_administration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Systems administration</span></a>
+  <a href="../teaching/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resources</span></a>
+  <a href="../teaching/pedagogy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pedagogy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/archive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archive</span></a>
+  <a href="../teaching/teaching_materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching materials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/knowledge_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/improvements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Improvements</span></a>
   </div>
 </li>
       </ul>
@@ -551,7 +515,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Teaching</span></a>
+ <span class="menu-text">Delivery</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -559,32 +523,20 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/course_organization.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Course organization</span></a>
+  <a href="../teaching/lms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LMS (Canvas)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/certificates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Certificates</span></a>
+  <a href="../teaching/evaluations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/exams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exams</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/theses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Theses</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/reports.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reports (LUFV)</span></a>
+  <a href="../teaching/advertising.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Advertising</span></a>
   </div>
 </li>
       </ul>
@@ -592,7 +544,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Research</span></a>
+ <span class="menu-text">Assessment</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -600,20 +552,26 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Travel</span></a>
+  <a href="../teaching/exams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exams</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/research_support.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research support</span></a>
+  <a href="../teaching/certificates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Certificates (Scheine)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/visitors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Visitors</span></a>
+  <a href="../teaching/plagiarism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plagiarism</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/reviews.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reviews</span></a>
   </div>
 </li>
       </ul>
@@ -621,7 +579,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Risk management</span></a>
+ <span class="menu-text">Student Support</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -629,20 +587,20 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/compliance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Compliance</span></a>
+  <a href="../teaching/counselling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Counselling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/emergencies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Emergencies</span></a>
+  <a href="../teaching/recommendations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recommendations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/security.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Security</span></a>
+  <a href="../teaching/stipends_and_awards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stipends &amp; awards</span></a>
   </div>
 </li>
       </ul>
@@ -650,7 +608,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Procurement</span></a>
+ <span class="menu-text">Institutional</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -658,14 +616,20 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/orders.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Orders</span></a>
+  <a href="../teaching/platforms_degree_programs_courses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Academic programs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/reimbursements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reimbursements</span></a>
+  <a href="../teaching/department.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Department</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/rankings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rankings</span></a>
   </div>
 </li>
       </ul>
@@ -673,7 +637,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">HR</span></a>
+ <span class="menu-text">Output</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -681,32 +645,14 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/hiring.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hiring</span></a>
+  <a href="../teaching/publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publications</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/onboarding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Onboarding</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/sick_leave.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sick leave</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/vacation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vacation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/offboarding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Offboarding</span></a>
+  <a href="../teaching/oer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OER</span></a>
   </div>
 </li>
       </ul>
@@ -725,13 +671,13 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   <li><a href="#scheduling-of-courses" id="toc-scheduling-of-courses" class="nav-link" data-scroll-target="#scheduling-of-courses">Scheduling of courses</a></li>
   <li><a href="#coordination" id="toc-coordination" class="nav-link" data-scroll-target="#coordination">Coordination</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/course_organization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/course_organization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/course_organization.html">Teaching</a></li><li class="breadcrumb-item"><a href="../management/course_organization.html">Course organization</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../teaching/course_overview.html">Courses</a></li><li class="breadcrumb-item"><a href="../teaching/course_organization.html">Course organization</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Course organization</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
@@ -1306,5 +1252,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/course_organization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/course_organization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
