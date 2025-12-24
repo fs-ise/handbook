@@ -13,9 +13,9 @@ WORKFLOW_FILENAME = ".github/workflows/labot.yml"
 cwd = Path.cwd()
 OUTPUT_JSON = cwd / "assets" / "repos.json"
 
-GITHUB_TOKEN = os.getenv("LABOT_PAT_TOKEN")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 if not GITHUB_TOKEN:
-    raise EnvironmentError("The LABOT_PAT_TOKEN environment variable is not set or empty.")
+    raise EnvironmentError("The GITHUB_TOKEN environment variable is not set or empty.")
 
 HEADERS = {
     "Authorization": f"Bearer {GITHUB_TOKEN}",
