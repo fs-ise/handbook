@@ -127,7 +127,7 @@ def classify_area(topics: list[str]) -> str:
     """Classify a repository into research/teaching/other based on topics."""
     if "research" in topics:
         return "research"
-    if "teaching" in topics:
+    if "teaching-materials" in topics:
         return "teaching"
     return "other"
 
