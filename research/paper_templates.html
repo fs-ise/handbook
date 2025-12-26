@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -131,17 +142,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -791,7 +791,7 @@ Note
 └── .gitignore    &lt;- Contains a list of files that are excluded from git
                      versioning (e.g., paper.pdf, which would create conflicts
                      when merging changes)</code></pre>
-<p>Templates (*.docx, *.tex) and styles (*.csl) are versioned in the paper repository. This can be accomplished by using the code in comments at the beginning of the <a href="Makefile">Makefile</a>.</p>
+<p>Templates (*.docx, *.tex) and styles (*.csl) are versioned in the paper repository. This can be accomplished by using the code in comments at the beginning of the Makefile.</p>
 <section id="set-up-the-repository" class="level3">
 <h3 class="anchored" data-anchor-id="set-up-the-repository">1: Set up the repository</h3>
 <p>Option 1: Create a new repository</p>
@@ -867,7 +867,7 @@ Note
 </section>
 <section id="edit-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="edit-the-paper">Edit the paper</h2>
-<p>The <a href="paper.md">paper</a> is written in markdown. There are three ways to edit a paper:</p>
+<p>The <code>paper.md</code> is written in markdown. There are three ways to edit a paper:</p>
 <section id="github-edit" class="level3">
 <h3 class="anchored" data-anchor-id="github-edit">GitHub Edit</h3>
 <ul>
@@ -1588,7 +1588,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>Templates (<span class="sc">\*</span>.docx, <span class="sc">\*</span>.tex) and styles (<span class="sc">\*</span>.csl) are versioned in the paper repository.</span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>This can be accomplished by using the code in comments at the beginning of the <span class="co">[</span><span class="ot">Makefile</span><span class="co">](Makefile)</span>.</span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>This can be accomplished by using the code in comments at the beginning of the Makefile.</span>
 <span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1: Set up the repository</span></span>
 <span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a></span>
@@ -1662,7 +1662,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a><span class="fu">## Edit the paper</span></span>
 <span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">paper</span><span class="co">](paper.md)</span> is written in markdown.</span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a>The <span class="in">`paper.md`</span> is written in markdown.</span>
 <span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>There are three ways to edit a paper:</span>
 <span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### GitHub Edit</span></span>
