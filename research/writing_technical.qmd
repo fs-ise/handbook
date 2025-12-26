@@ -1,5 +1,5 @@
 ---
-title: "Paper writing system"
+title: "Writing - technical"
 ---
 
 ::: callout-note
@@ -7,6 +7,202 @@ If you would like to contribute to an existing project, jump to the [edit-the-pa
 
 TODO: create an overview (quarto, Markdown, references, paper templates, file structure, practices)
 
+:::
+
+
+## Templates
+
+TODO: refer to paper templates, explain Markdown/BiBTex/Git/CSL setup
+
+## Citations and reference sections
+
+Citing allows us to make the results of others understandable and give proper recognition to the authors.
+There are two main reasons why we cite: firstly, to respect copyrighted works, and secondly, to adhere to the principles of good scientific practice by appropriately acknowledging the contributions of others.
+The following examples use Markdown syntax (used by Pandoc converters and Quarto).
+
+::: {.callout-note title="Word/Zotero" collapse=true}
+For `docx ` formats, use a reference manager plugin (such as Zotero).
+The reference manager should support the standardized citation styles of [csl](https://editor.citationstyles.org/about/){target=_blank}.
+:::
+
+To include citations,
+
+- Add them to the [references](#bib-file)
+- [Cite](#citing) them in the text, and 
+- Generate the [bibliography](#bibliography).
+
+#### References (BibTeX file){#bib-file}
+
+The bibliography is stored as a bib file (typically `references.bib`) and versioned by git.
+
+
+- Changes in the bib-file should be checked before committing.
+- References should be as complete as possible, including the relevant fields.
+- Each reference should be listed once (not multiple times).
+- Examples with relevant fields are summarized below.
+
+::: {.callout-note title="Formatting guidelines"}
+
+**Fields**
+
+- `ENTRYTYPE` set correctly (e.g., "article" or "inproceedings")
+- `author` formatted correctly (Wagner, G. and Prester, J.)
+- `title` complete and in Sentence case (e.g., "On the origin of species", not "On the Origin of Species")
+- `journal` field complete and in Title Case (e.g., "Journal of Information Technology", not "JIT")
+- `volume`, `number`, `pages`, `doi` fields added
+
+To update references based on Crossref, the `colrev-sync` package can be used:
+
+```sh
+colrev-sync sync
+```
+
+**Notes**
+
+- Add `{}` to protect cases when necessary (e.g., `{J}ab{R}ef`) because CSL styles that require title case will use an automatic title-case conversion ([1](https://citationstyles.org/authors/#/titles-in-sentence-and-title-case){target=_blank}).
+- To cite software, datasets and other artifacts, [CiteAs](https://citeas.org/){target=_blank} is useful.
+- Journal fields: Some CSL styles require abbreviations.
+  Temporarily replace the journal field in the bib-file since CSL does not handle style-specific journal abbreviations ([1](https://citationstyles.org/authors/#/csl-limitations){target=_blank}).
+  JSON-files containing journal abbreviations can be passed to pandoc using the [citation-abbreviations](https://pandoc.org/MANUAL.html#option--citation-abbreviations){target=_blank} field.
+
+:::
+
+- Journal articles
+
+```bibtex
+@article{LeeAnderson2001,
+    doi                = {10.1006/COGP.2000.0747},
+    author             = {Anderson, John R},
+    journal            = {Cognitive Psychology},
+    title              = {Does learning a complex task},
+    year               = {2001},
+    volume             = {42},
+    number             = {3},
+    pages              = {267--316},
+}
+```
+
+- Conference Papers
+
+```bibtex
+@inproceedings{LeeAnderson2001,
+    author             = {Weber, Matthias and Remus, Ulrich and Pregenzer, Michael},
+    booktitle          = {Proceedings of the International Conference on Information Systems},
+    title              = {A New Era of Control: Understanding Algorithmic Control in the Gig Economy},
+    year               = {2022},
+}
+```
+
+- Books:
+
+```bibtex
+@book{Kolb2014,
+    author             = {Kolb, David A},
+    title              = {Experiential learning},
+    year               = {2014},
+    publisher          = {FT press},
+}
+```
+
+- Essays in collected editions:
+
+```bibtex
+@incollection{Anderson1984a,
+    author             = {Anderson, Richard C},
+    booktitle          = {Theoretical models},
+    title              = {Role of the reader's schema in comprehension, learning, and memory},
+    year               = {2018},
+    pages              = {136--145},
+    publisher          = {Routledge},
+}
+```
+
+- Websites
+
+```bibtex
+@online{Microsoft2018,
+    author             = {Microsoft News Center},
+    title              = {Microsoft to acquire GitHub for $7.5 billion},
+    year               = {2018},
+    url                = {https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/},
+}
+```
+
+<!--
+Program that can be used for citation is "Zotero".
+You can find the program and how to install it [here](https://www.uni-bamberg.de/ub/literaturverwaltung/){target=_blank}.
+-->
+
+#### In-text citations{#citing}
+
+In-text citations can be parenthetical or narrative (see [APA style](https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/parenthetical-versus-narrative){target=_blank}).
+In word-for-word quotations (parenthetical or narrative) must be identified by quotation marks and a page number must be given.
+Parenthetical citations tend to be preferred over narrative citations because they put more emphasis on the content, concepts, or findings instead of the authors. 
+
+The following example illustrates the citation syntax of Markdown (or the Pandoc converters used by Quarto) ([link](https://pandoc.org/demo/example33/8.20-citation-syntax.html){target=_blank}).
+The unique IDs (e.g., ``SmithEtAl2006``) are used to link citations to the corresponding elements in the `BibTeX` file.
+
+```Markdown
+<!-- Example *parenthetical* citation: -->
+
+Fitness trackers were found to have mixed effects on sedentary behavior [@SmithEtAl2006].
+
+<!-- Example *narrative* citation: -->
+
+@SmithEtAl2006 analyzed the effectiveness of fitness trackers.
+
+<!-- Example *word-for-word quotation*: -->
+
+For fitness trackers, "measures of sleep quality are inaccurate" [@SmithEtAl2006, p. 111].
+```
+
+When rendered with Quarto and the APA citation style, this will be displayed as:
+
+> Fitness trackers were found to have mixed effects on sedentary behavior (Smith et al. 2006).
+> 
+> Smith et al. (2006) analyzed the effectiveness of fitness trackers.
+> 
+> For fitness trackers, "measures of sleep quality are inaccurate" (Smith et al. 2006, p.111):
+
+#### Bibliography{#bibliography}
+
+In Markdown document, the bibliography (aka. references section) is created automatically based on the bib-file and [CSL](https://citationstyles.org/){target=_blank} specified in the YAML header.
+The `nocite` field can be used to add references that are cited in figures/tables but not in the text.
+
+```Markdown
+---
+title: "Writing"
+bibliography: path_to_/references.bib
+csl: path_to/apa.csl
+nocite: |
+  @Davis1989
+  @LangePfarrer2017
+  @StrunkWhite1999
+  @WebsterWatson2002
+---
+
+... text with citations
+
+
+# References
+
+<!-- References will be generated in the specified csl-style after this heading. -->
+
+```
+
+## Conceptual illustrations and plots
+
+For conceptual illustrations, PowerPoint is currently recommended.
+
+- Ensure alignment etc.
+- For PDF submissions, extract it as PDF (vector graphic with embedded text).
+- For Word submissions, extract it as EMF (vector graphic with embedded text).
+
+To plot findings, the R package [ggplot2](https://ggplot2.tidyverse.org/){target=_blank} is recommended.
+Ggplot2 is a powerful library and allows us to automatically update the figures when the findings change. 
+
+::: callout-note
+It is possible to edit ggplot2 plots with LLMs (e.g., ChatGPT).
 :::
 
 The paper development process is based on markdown, git, Docker, pandoc, and csl.
@@ -172,7 +368,7 @@ In local setups, several editors are available for markdown documents, for examp
 - [Panwriter](https://panwriter.com/){target=_blank}
  -->
 
-See [citations and reference sections](writing.html#citations-and-reference-sections)
+See [citations and reference sections](TODO)
 
 ::: callout-note
 **Literature summaries: Obsidian**
