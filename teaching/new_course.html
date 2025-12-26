@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
+div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
-div.callout-resource.callout-style-default > .callout-header {
+div.callout-objective.callout-style-default > .callout-header {
   background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -133,15 +133,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-objective.callout {
+div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
-div.callout-objective.callout-style-default > .callout-header {
+div.callout-resource.callout-style-default > .callout-header {
   background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1032,7 +1032,7 @@ Note
 <span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for pull-request evaluation.</span>
 <span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the code review session.</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main{{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
@@ -1898,7 +1898,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-306"><a href="#cb4-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb4-307"><a href="#cb4-307" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for pull-request evaluation.</span>
 <span id="cb4-308"><a href="#cb4-308" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the code review session.</span>
-<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main{{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb4-310"><a href="#cb4-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-311"><a href="#cb4-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a></span>
