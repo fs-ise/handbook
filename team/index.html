@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -133,15 +122,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -153,6 +142,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -482,7 +482,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Laureen Thurner (Student Assistant). ORCID: <a href="https://orcid.org/0009-0000-5716-5816" target="_blank">0009-0000-5716-5816</a>. <a href="https://github.com/digital-work-lab/agenda-gerit-laureen" target="_blank">Agenda</a>.</li>
 <li>Karl Schnickmann (Student Assistant). ORCID: <a href="https://orcid.org/0009-0008-7763-7276" target="_blank">0009-0008-7763-7276</a>. <a href="https://github.com/digital-work-lab/agenda_gerit_k-schnickmann" target="_blank">Agenda</a>.</li>
 <li>Alexa Steinheimer (Student Assistant). ORCID: <a href="https://orcid.org/0009-0005-2628-2522" target="_blank">0009-0005-2628-2522</a>. <a href="https://github.com/digital-work-lab/agenda_gerit_Alexa-St" target="_blank">Agenda</a>.</li>
-<li>Carlo Tang (<a href="https://github.com/dengdenglele" target="_blank">dengdenglele</a>)</li>
+<li>Carlo Tang (Student Assistant). GitHub: <a href="https://github.com/dengdenglele" target="_blank">dengdenglele</a>.</li>
 </ul>
 <!--
 Availabilities are shared on a voluntary basis.
@@ -1036,7 +1036,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Laureen Thurner (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0000-5716-5816</span><span class="co">](https://orcid.org/0009-0000-5716-5816)</span>{target=_blank}. <span class="co">[</span><span class="ot">Agenda</span><span class="co">](https://github.com/digital-work-lab/agenda-gerit-laureen)</span>{target=_blank}.</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Karl Schnickmann (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0008-7763-7276</span><span class="co">](https://orcid.org/0009-0008-7763-7276)</span>{target=_blank}. <span class="co">[</span><span class="ot">Agenda</span><span class="co">](https://github.com/digital-work-lab/agenda_gerit_k-schnickmann)</span>{target=_blank}.</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Alexa Steinheimer (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0005-2628-2522</span><span class="co">](https://orcid.org/0009-0005-2628-2522)</span>{target=_blank}. <span class="co">[</span><span class="ot">Agenda</span><span class="co">](https://github.com/digital-work-lab/agenda_gerit_Alexa-St)</span>{target=_blank}.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Carlo Tang (<span class="co">[</span><span class="ot">dengdenglele</span><span class="co">](https://github.com/dengdenglele)</span>{target=_blank})</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Carlo Tang (Student Assistant). GitHub: <span class="co">[</span><span class="ot">dengdenglele</span><span class="co">](https://github.com/dengdenglele)</span>{target=_blank}.</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co">Availabilities are shared on a voluntary basis.</span></span>

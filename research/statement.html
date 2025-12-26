@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Goals – ISE Lab Handbook</title>
+<title>Statement – ISE Lab Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -122,15 +142,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -144,15 +164,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -384,7 +404,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/statement.html">Objectives</a></li><li class="breadcrumb-item"><a href="../research/statement.html">Goals</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/statement.html">Objectives</a></li><li class="breadcrumb-item"><a href="../research/statement.html">Statement</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -425,7 +445,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/statement.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Goals</span></a>
+ <span class="menu-text">Statement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -644,7 +664,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Peer review</span></a>
+ <span class="menu-text">Community service</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -709,13 +729,9 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#research-statement-digital-knowledge-work" id="toc-research-statement-digital-knowledge-work" class="nav-link active" data-scroll-target="#research-statement-digital-knowledge-work">Research Statement: Digital knowledge work</a>
-  <ul class="collapse">
-  <li><a href="#research-stream-1-digital-work-practices" id="toc-research-stream-1-digital-work-practices" class="nav-link" data-scroll-target="#research-stream-1-digital-work-practices">Research stream 1: Digital work practices</a></li>
-  <li><a href="#research-stream-2-organizing-distributed-work" id="toc-research-stream-2-organizing-distributed-work" class="nav-link" data-scroll-target="#research-stream-2-organizing-distributed-work">Research stream 2: Organizing distributed work</a></li>
-  <li><a href="#research-stream-3-knowledge-synthesis" id="toc-research-stream-3-knowledge-synthesis" class="nav-link" data-scroll-target="#research-stream-3-knowledge-synthesis">Research stream 3: Knowledge synthesis</a></li>
-  </ul></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#digital-work-practices" id="toc-digital-work-practices" class="nav-link active" data-scroll-target="#digital-work-practices">1. Digital work practices</a></li>
+  <li><a href="#organizing-distributed-work" id="toc-organizing-distributed-work" class="nav-link" data-scroll-target="#organizing-distributed-work">2. Organizing distributed work</a></li>
+  <li><a href="#knowledge-synthesis" id="toc-knowledge-synthesis" class="nav-link" data-scroll-target="#knowledge-synthesis">3. Knowledge synthesis</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/statement.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -723,9 +739,9 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/statement.html">Objectives</a></li><li class="breadcrumb-item"><a href="../research/statement.html">Goals</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/statement.html">Objectives</a></li><li class="breadcrumb-item"><a href="../research/statement.html">Statement</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Goals</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Statement</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -742,18 +758,11 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<style>
-  p {
-    text-align: justify;
-  }
-</style>
-<section id="research-statement-digital-knowledge-work" class="level2">
-<h2 class="anchored" data-anchor-id="research-statement-digital-knowledge-work">Research Statement: Digital knowledge work</h2>
-<p>The digitalization of knowledge work is reshaping how tasks are performed across various industries, with significant implications for individual workers and organizations. This transformation is driven by the adoption of digital work practices, distributed organizing models, powerful AI capabilities, and advancements in knowledge synthesis. These shifts are creating new opportunities and challenges for knowledge workers, as traditional practices are reconfigured by emerging technologies.</p>
+<p>The digitalization of knowledge work is reshaping how tasks are performed across various industries, with significant implications for individual workers and organizations. This transformation is driven by the adoption of digital work practices, distributed organizing models, AI capabilities, and advancements in knowledge synthesis. These shifts are creating new opportunities and challenges for knowledge workers, as traditional practices are reconfigured by emerging technologies.</p>
 <p><strong>Our focus is on understanding these shifts at the intersection of digital work, distributed organizing, and knowledge synthesis, identifying effective practices, and designing tools to meet the evolving demands of knowledge workers.</strong></p>
 <p>Our work builds on literature review methods, design science research, and empirical research. We work on projects in collaboration with researchers from institutions like HEC Montréal, Sydney University, the University of Virginia, Bamberg University, and Dortmund University. These joint efforts enable us to combine expertise across disciplines and leverage synergies between different research streams, allowing us to tackle both practical applications and foundational questions. This integrated approach helps us address key challenges in digital knowledge work while driving advancements that benefit both academic research and industry practices.</p>
-<section id="research-stream-1-digital-work-practices" class="level3">
-<h3 class="anchored" data-anchor-id="research-stream-1-digital-work-practices">Research stream 1: Digital work practices</h3>
+<section id="digital-work-practices" class="level3">
+<h3 class="anchored" data-anchor-id="digital-work-practices">1. Digital work practices</h3>
 <p><strong>Summary</strong> This research stream explores the evolving role of individual knowledge workers, such as physicians, data scientists, developers, and innovative thinkers, whose work is characterized by agility, innovation, and emergent practices driven by experience and expertise rather than formalized procedures. It focuses on how digital technologies, particularly AI, are reconfiguring these work practices. Key areas of inquiry include the adoption of AI in professional settings, the interaction between AI and evidence-based practices, and how expert knowledge can be leveraged to adapt and improve enterprise systems. At the core, the goal of this research stream is to understand how knowledge work practices are reconfigured by digital technology and to provide actionable insights for leaders in knowledge-intensive fields, enabling them to capitalize on opportunities emerging from the digitalization of work, optimize the integration of new technologies, and enhance the effectiveness of digital work environments.</p>
 <p>Exemplary research questions</p>
 <ul>
@@ -761,45 +770,20 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li><strong>Interaction of AI with traditional evidence-based practices</strong> Do new AI capabilities reduce or reinforce evidence-based practices?</li>
 <li><strong>Leveraging expertise to adapt enterprise systems</strong> How can the expertise of clinical experts be used to resolve misfits in enterprise systems?</li>
 </ul>
-<p>Selected publications</p>
-<div class="publist">
-<p>
-Wagner, G., Raymond, L., and Paré, G. (2023). “Understanding prospective physicians’ intention to use artificial intelligence in their future medical practice: A configurational analysis”. <em>JMIR Medical Education</em>, 9, e45631. doi:<a href="https://doi.org/10.2196/45631" target="_blank">10.2196/45631</a>
-</p>
-<p>
-Morquin, D., Ologeanu-Taddei, R., Paré, G., and Wagner, G. (2023). “Design and Evaluation of a Method to Solve Organization-Enterprise System Misfits in the Post-Implementation Phase: An Action Research”. <em>Information Systems Journal</em>, 33(5), 1–34. doi:<a href="https://doi.org/10.1111/isj.12345" target="_blank">10.1111/isj.12345</a>
-</p>
-<p>
-Paré, G., Raymond, L., Castonguay, A., and Wagner, G. (2023). “Prospective Physicians’ Intention to Adopt Artificial Intelligence: A Configurational Perspective”. in Proceedings of the <em>Hawaii International Conference on System Sciences</em>. doi:<a href="https://doi.org/10.24251/HICSS.2023.123" target="_blank">10.24251/HICSS.2023.123</a>
-</p>
-<p>
-Wagner, G., Ringeval, M., Raymond, L., and Paré, G. (2025). “Digital Health Competences and AI Beliefs as Conditions for the Practice of Evidence-Based Medicine: A Study of Prospective Physicians in Canada”. <em>Medical Education Online</em>, 30(1), 1–13. doi:<a href="https://doi.org/10.1080/10872981.2025.2459910" target="_blank">10.1080/10872981.2025.2459910</a>
-</p>
-</div>
+<p>Selected publications: <span class="citation" data-cites="WagnerRaymondPareEtAl2023">Wagner et al. (<a href="#ref-WagnerRaymondPareEtAl2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="MorquinOlogeanuTaddeiPareEtAl2023">Morquin et al. (<a href="#ref-MorquinOlogeanuTaddeiPareEtAl2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="PareRaymondCastonguayEtAl2023">Paré et al. (<a href="#ref-PareRaymondCastonguayEtAl2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="WagnerRingevalRaymondEtAl2025">Wagner et al. (<a href="#ref-WagnerRingevalRaymondEtAl2025" role="doc-biblioref">2025</a>)</span></p>
 </section>
-<section id="research-stream-2-organizing-distributed-work" class="level3">
-<h3 class="anchored" data-anchor-id="research-stream-2-organizing-distributed-work">Research stream 2: Organizing distributed work</h3>
+<section id="organizing-distributed-work" class="level3">
+<h3 class="anchored" data-anchor-id="organizing-distributed-work">2. Organizing distributed work</h3>
 <p><strong>Summary</strong> This research stream investigates how traditional organizational hierarchies—characterized by strict control and large, monolithic structures—are evolving alongside new, more flexible forms of work organization. These include distributed (Git-based) knowledge work, open-source communities, online labor markets, and open strategy initiatives such as open employee handbooks in all-remote organizations. These models are widely used in large tech companies, knowledge-intensive industries, and academia. The primary goal is to understand how distributed work practices can be organized effectively and how to manage these work arrangements for maximum productivity. This includes informing stakeholders about best practices for integrating these models with existing organizational frameworks.</p>
 <p>Exemplary research questions</p>
 <ul>
 <li><strong>Processes of knowledge-intensive crowd work</strong> How can online marketplaces for knowledge-intensive service work be distinguished? How can the micro-and macro-level processes be organized?</li>
 <li><strong>Effective sourcing of knowledge work in online labor markets</strong> What explains the successful sourcing of knowledge work from online labor markets at the level of individual workers and projects?</li>
 </ul>
-<p>Selected publications</p>
-<div class="publist">
-<p>
-Wagner, G., Prester, J., and Paré, G. (2021). “Exploring the Boundaries and Processes of Digital Platforms for Knowledge Work: A Review of Information Systems Research”. <em>The Journal of Strategic Information Systems</em>, 30(4), 101694. doi:<a href="https://doi.org/10.1016/j.jsis.2021.101694" target="_blank">10.1016/j.jsis.2021.101694</a>
-</p>
-<p>
-Wagner, G. and Prester, J. (2021). “A Framework of Platform Design Mechanisms, Platform Congruence and Value Creation on C2C Platforms”. in Proceedings of the <em>29th European Conference on Information Systems (ECIS 2021)</em>, Marrakech, Morocco.
-</p>
-<p>
-Wagner, G. and Prester, J. (2019). “Information Systems Research on Digital Platforms for Knowledge Work: A Scoping Review”. in Proceedings of the <em>40th International Conference on Information Systems (ICIS 2019)</em>, Munich, Germany.
-</p>
-</div>
+<p>Selected publications: <span class="citation" data-cites="WagnerPresterPare2021">Wagner, Prester, &amp; Paré (<a href="#ref-WagnerPresterPare2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="WagnerPrester2021">Wagner &amp; Prester (<a href="#ref-WagnerPrester2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="WagnerPrester2019">Wagner &amp; Prester (<a href="#ref-WagnerPrester2019" role="doc-biblioref">2019</a>)</span></p>
 </section>
-<section id="research-stream-3-knowledge-synthesis" class="level3">
-<h3 class="anchored" data-anchor-id="research-stream-3-knowledge-synthesis">Research stream 3: Knowledge synthesis</h3>
+<section id="knowledge-synthesis" class="level3">
+<h3 class="anchored" data-anchor-id="knowledge-synthesis">3. Knowledge synthesis</h3>
 <p><strong>Summary</strong> This research stream addresses the critical need for more efficient and effective knowledge synthesis in response to the vast and rapidly growing body of research. While the volume of available knowledge continues to increase, methods for synthesizing this research—particularly in the context of open and reproducible literature reviews—are falling behind. Key areas needing improvement include search query construction, validation, knowledge record matching, emergent concept analyses, and enhancing transparency and validation through AI and generative AI (GenAI) tools. These challenges are crucial across many fields, particularly for professions like medicine, where synthesizing the best available evidence is essential. At the core, the goal of this research stream is to design tools that make knowledge synthesis processes more efficient, transparent, and reliable, benefiting practitioners, policymakers, researchers, and students who navigate both academic and industry perspectives.</p>
 <p>Exemplary research questions</p>
 <ul>
@@ -807,36 +791,55 @@ Wagner, G. and Prester, J. (2019). “Information Systems Research on Digital Pl
 <li><strong>Understanding quality and impact of review papers</strong> What makes a literature review successful in terms of scientific impact?</li>
 <li><strong>Design of open and reproducible research synthesis platforms</strong> How can tools make literature reviews and knowledge synthesis more efficient, transparent, and reliable?</li>
 </ul>
-<p>Selected publications</p>
-<div class="publist">
-<p>
-Wagner, G. (2024). “BibDedupe: An Open-Source Python Library for Bibliographic Record Deduplication”. <em>Journal of Open Source Software</em>, 9(97), 6318. doi:<a href="https://doi.org/10.21105/joss.06318" target="_blank">10.21105/joss.06318</a>
-</p>
-<p>
-Wagner, G., Lukyanenko, R., and Paré, G. (2022). “Artificial Intelligence and the Conduct of Literature Reviews”. <em>Journal of Information Technology (JIT)</em>, 37(2), 209–226. doi:<a href="https://doi.org/10.1177/02683962211048201" target="_blank">10.1177/02683962211048201</a>
-</p>
-<p>
-Wagner, G., Prester, J., Roche, M. P., Schryen, G., Benlian, A., Paré, G., and Templier, M. (2021). “Which Factors Affect the Scientific Impact of Review Papers in IS Research? A Scientometric Study”. <em>Information &amp; Management (I&amp;M)</em>, 58(3), 103427. doi:<a href="https://doi.org/10.1016/j.im.2021.103427" target="_blank">10.1016/j.im.2021.103427</a>
-</p>
-<p>
-Wagner, G. and Prester, J. (2024). “CoLRev - An Open-Source Environment for Collaborative Literature Reviews”. Available at <a href="https://github.com/CoLRev-Environment/colrev" target="_blank">https://github.com/CoLRev-Environment/colrev</a>. doi:<a href="https://doi.org/10.5281/zenodo.11668338" target="_blank">10.5281/zenodo.11668338</a>
-</p>
-</div>
-</section>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><a href="https://sdgs.un.org/goals/goal4" target="_blank">United Nations Goals: 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</a></li>
-<li><a href="https://sdgs.un.org/goals/goal8" target="_blank">United Nations Goals: 8. Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all</a></li>
-</ul>
+<p>Selected publications: <span class="citation" data-cites="Wagner2024">Wagner (<a href="#ref-Wagner2024" role="doc-biblioref">2024</a>)</span>, <span class="citation" data-cites="WagnerLukyanenkoParEtAl2022">Wagner et al. (<a href="#ref-WagnerLukyanenkoParEtAl2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="WagnerPresterRocheEtAl2021">Wagner, Prester, Roche, et al. (<a href="#ref-WagnerPresterRocheEtAl2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="WagnerPrester2025">Wagner &amp; Prester (<a href="#ref-WagnerPrester2025" role="doc-biblioref">2025</a>)</span></p>
+<!--
+## Resources
+
+- [United Nations Goals: 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all](https://sdgs.un.org/goals/goal4){target=_blank}
+- [United Nations Goals: 8. Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all](https://sdgs.un.org/goals/goal8){target=_blank}
+-->
 
 
 <!-- -->
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-MorquinOlogeanuTaddeiPareEtAl2023" class="csl-entry" role="listitem">
+Morquin, D., Ologeanu‐Taddei, R., Paré, G., &amp; Wagner, G. (2023). A method for resolving organisation‐enterprise system misfits: An action research study in a pluralistic organisation. <em>Information Systems Journal</em>, <em>33</em>(5), 995–1028. <a href="https://doi.org/10.1111/ISJ.12433">https://doi.org/10.1111/ISJ.12433</a>
+</div>
+<div id="ref-PareRaymondCastonguayEtAl2023" class="csl-entry" role="listitem">
+Paré, G., Raymond, L., Castonguay, A., &amp; Wagner, G. (2023). Prospective physicians’ intention to adopt artificial intelligence: A configurational perspective. <em>Hawaii International Conference on System Sciences</em>, 1–10. <a href="https://hdl.handle.net/10125/103000">https://hdl.handle.net/10125/103000</a>
+</div>
+<div id="ref-Wagner2024" class="csl-entry" role="listitem">
+Wagner, G. (2024). BibDedupe: An open-source python library for bibliographic record deduplication. <em>Journal of Open Source Software</em>, <em>9</em>(97), 6318. <a href="https://doi.org/10.21105/JOSS.06318">https://doi.org/10.21105/JOSS.06318</a>
+</div>
+<div id="ref-WagnerLukyanenkoParEtAl2022" class="csl-entry" role="listitem">
+Wagner, G., Lukyanenko, R., &amp; Paré, G. (2022). Artificial intelligence and the conduct of literature reviews. <em>Journal of Information Technology</em>, <em>37</em>(2), 209–226. <a href="https://doi.org/10.1177/02683962211048201">https://doi.org/10.1177/02683962211048201</a>
+</div>
+<div id="ref-WagnerPrester2019" class="csl-entry" role="listitem">
+Wagner, G., &amp; Prester, J. (2019). Information systems research on digital platforms for knowledge work - a scoping review. <em>International Conference on Information Systems</em>, 1–17. <a href="https://aisel.aisnet.org/icis2019/future_of_work/future_work/2">https://aisel.aisnet.org/icis2019/future_of_work/future_work/2</a>
+</div>
+<div id="ref-WagnerPrester2021" class="csl-entry" role="listitem">
+Wagner, G., &amp; Prester, J. (2021). A framework of platform design mechanisms, platform congruence and value creation on C2C platforms. <em>European Conference on Information Systems</em>, 1–19. <a href="https://aisel.aisnet.org/ecis2021_rp/49">https://aisel.aisnet.org/ecis2021_rp/49</a>
+</div>
+<div id="ref-WagnerPrester2025" class="csl-entry" role="listitem">
+Wagner, G., &amp; Prester, J. (2025). <em><span class="nocase">CoLRev: An open-source environment for collaborative reviews</span></em> (Version 0.14.0) [Computer software]. <a href="https://github.com/CoLRev-Environment/colrev">https://github.com/CoLRev-Environment/colrev</a>
+</div>
+<div id="ref-WagnerPresterPare2021" class="csl-entry" role="listitem">
+Wagner, G., Prester, J., &amp; Paré, G. (2021). Exploring the boundaries and processes of digital platforms for knowledge work: A review of information systems research. <em>The Journal of Strategic Information Systems</em>, <em>30</em>(4), 101694. <a href="https://doi.org/10.1016/J.JSIS.2021.101694">https://doi.org/10.1016/J.JSIS.2021.101694</a>
+</div>
+<div id="ref-WagnerPresterRocheEtAl2021" class="csl-entry" role="listitem">
+Wagner, G., Prester, J., Roche, M. P., Schryen, G., Benlian, A., Paré, G., &amp; Templier, M. (2021). Which factors affect the scientific impact of review papers in IS research? A scientometric study. <em>Information &amp; Management</em>, <em>58</em>(3), 103427. <a href="https://doi.org/10.1016/J.IM.2021.103427">https://doi.org/10.1016/J.IM.2021.103427</a>
+</div>
+<div id="ref-WagnerRaymondPareEtAl2023" class="csl-entry" role="listitem">
+Wagner, G., Raymond, L., &amp; Paré, G. (2023). Understanding prospective physicians’ intention to use artificial intelligence in their future medical practice: Configurational analysis. <em>JMIR Medical Education</em>, <em>9</em>, e45631. <a href="https://doi.org/10.2196/45631">https://doi.org/10.2196/45631</a>
+</div>
+<div id="ref-WagnerRingevalRaymondEtAl2025" class="csl-entry" role="listitem">
+Wagner, G., Ringeval, M., Raymond, L., &amp; Paré, G. (2025). Digital health competences and AI beliefs as conditions for the practice of evidence-based medicine: A study of prospective physicians in canada. <em>Medical Education Online</em>, <em>30</em>(1). <a href="https://doi.org/10.1080/10872981.2025.2459910">https://doi.org/10.1080/10872981.2025.2459910</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const today = new Date();
@@ -1325,99 +1328,74 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Goals"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  p {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">justify</span><span class="op">;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Statement"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> ../assets/references.bib</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> ../assets/apa.csl</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>The digitalization of knowledge work is reshaping how tasks are performed across various industries, with significant implications for individual workers and organizations.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This transformation is driven by the adoption of digital work practices, distributed organizing models, AI capabilities, and advancements in knowledge synthesis.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>These shifts are creating new opportunities and challenges for knowledge workers, as traditional practices are reconfigured by emerging technologies.</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Statement: Digital knowledge work</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>**Our focus is on understanding these shifts at the intersection of digital work, distributed organizing, and knowledge synthesis, identifying effective practices, and designing tools to meet the evolving demands of knowledge workers.**</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>The digitalization of knowledge work is reshaping how tasks are performed across various industries, with significant implications for individual workers and organizations.</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>This transformation is driven by the adoption of digital work practices, distributed organizing models, powerful AI capabilities, and advancements in knowledge synthesis.</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>These shifts are creating new opportunities and challenges for knowledge workers, as traditional practices are reconfigured by emerging technologies.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>**Our focus is on understanding these shifts at the intersection of digital work, distributed organizing, and knowledge synthesis, identifying effective practices, and designing tools to meet the evolving demands of knowledge workers.**</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Our work builds on literature review methods, design science research, and empirical research.</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>We work on projects in collaboration with researchers from institutions like HEC Montréal, Sydney University, the University of Virginia, Bamberg University, and Dortmund University.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>These joint efforts enable us to combine expertise across disciplines and leverage synergies between different research streams, allowing us to tackle both practical applications and foundational questions.</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>This integrated approach helps us address key challenges in digital knowledge work while driving advancements that benefit both academic research and industry practices.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research stream 1: Digital work practices</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>**Summary** This research stream explores the evolving role of individual knowledge workers, such as physicians, data scientists, developers, and innovative thinkers, whose work is characterized by agility, innovation, and emergent practices driven by experience and expertise rather than formalized procedures.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>It focuses on how digital technologies, particularly AI, are reconfiguring these work practices.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Key areas of inquiry include the adoption of AI in professional settings, the interaction between AI and evidence-based practices, and how expert knowledge can be leveraged to adapt and improve enterprise systems.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>At the core, the goal of this research stream is to understand how knowledge work practices are reconfigured by digital technology and to provide actionable insights for leaders in knowledge-intensive fields, enabling them to capitalize on opportunities emerging from the digitalization of work, optimize the integration of new technologies, and enhance the effectiveness of digital work environments.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Our work builds on literature review methods, design science research, and empirical research.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>We work on projects in collaboration with researchers from institutions like HEC Montréal, Sydney University, the University of Virginia, Bamberg University, and Dortmund University.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>These joint efforts enable us to combine expertise across disciplines and leverage synergies between different research streams, allowing us to tackle both practical applications and foundational questions.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>This integrated approach helps us address key challenges in digital knowledge work while driving advancements that benefit both academic research and industry practices.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Digital work practices</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>**Summary** This research stream explores the evolving role of individual knowledge workers, such as physicians, data scientists, developers, and innovative thinkers, whose work is characterized by agility, innovation, and emergent practices driven by experience and expertise rather than formalized procedures.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>It focuses on how digital technologies, particularly AI, are reconfiguring these work practices.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Key areas of inquiry include the adoption of AI in professional settings, the interaction between AI and evidence-based practices, and how expert knowledge can be leveraged to adapt and improve enterprise systems.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>At the core, the goal of this research stream is to understand how knowledge work practices are reconfigured by digital technology and to provide actionable insights for leaders in knowledge-intensive fields, enabling them to capitalize on opportunities emerging from the digitalization of work, optimize the integration of new technologies, and enhance the effectiveness of digital work environments.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Exemplary research questions</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Adoption of AI** What are the AI profiles of prospective physicians associated with a strong intention to use AIHT in their future medical practice?</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Interaction of AI with traditional evidence-based practices** Do new AI capabilities reduce or reinforce evidence-based practices?</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Leveraging expertise to adapt enterprise systems** How can the expertise of clinical experts be used to resolve misfits in enterprise systems? </span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Exemplary research questions</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Selected publications: @WagnerRaymondPareEtAl2023, @MorquinOlogeanuTaddeiPareEtAl2023, @PareRaymondCastonguayEtAl2023, @WagnerRingevalRaymondEtAl2025</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Adoption of AI** What are the AI profiles of prospective physicians associated with a strong intention to use AIHT in their future medical practice?</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Interaction of AI with traditional evidence-based practices** Do new AI capabilities reduce or reinforce evidence-based practices?</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Leveraging expertise to adapt enterprise systems** How can the expertise of clinical experts be used to resolve misfits in enterprise systems? </span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Selected publications</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"publist"</span><span class="dt">&gt;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G., Raymond, L., and Paré, G. (2023). "Understanding prospective physicians’ intention to use artificial intelligence in their future medical practice: A configurational analysis". <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>JMIR Medical Education<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 9, e45631. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.2196/45631"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.2196/45631<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Morquin, D., Ologeanu-Taddei, R., Paré, G., and Wagner, G. (2023). "Design and Evaluation of a Method to Solve Organization-Enterprise System Misfits in the Post-Implementation Phase: An Action Research". <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Information Systems Journal<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 33(5), 1–34. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.1111/isj.12345"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.1111/isj.12345<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Paré, G., Raymond, L., Castonguay, A., and Wagner, G. (2023). "Prospective Physicians’ Intention to Adopt Artificial Intelligence: A Configurational Perspective". in Proceedings of the <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Hawaii International Conference on System Sciences<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.24251/HICSS.2023.123"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.24251/HICSS.2023.123<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G., Ringeval, M., Raymond, L., and Paré, G. (2025). "Digital Health Competences and AI Beliefs as Conditions for the Practice of Evidence-Based Medicine: A Study of Prospective Physicians in Canada". <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Medical Education Online<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 30(1), 1–13. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.1080/10872981.2025.2459910"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.1080/10872981.2025.2459910<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research stream 2: Organizing distributed work</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**Summary** This research stream investigates how traditional organizational hierarchies—characterized by strict control and large, monolithic structures—are evolving alongside new, more flexible forms of work organization.</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>These include distributed (Git-based) knowledge work, open-source communities, online labor markets, and open strategy initiatives such as open employee handbooks in all-remote organizations.</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>These models are widely used in large tech companies, knowledge-intensive industries, and academia.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>The primary goal is to understand how distributed work practices can be organized effectively and how to manage these work arrangements for maximum productivity.</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>This includes informing stakeholders about best practices for integrating these models with existing organizational frameworks.</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Exemplary research questions</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Processes of knowledge-intensive crowd work** How can online marketplaces for knowledge-intensive service work be distinguished? How can the micro-and macro-level processes be organized?</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Effective sourcing of knowledge work in online labor markets** What explains the successful sourcing of knowledge work from online labor markets at the level of individual workers and projects?</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>Selected publications</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Organizing distributed work</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>**Summary** This research stream investigates how traditional organizational hierarchies—characterized by strict control and large, monolithic structures—are evolving alongside new, more flexible forms of work organization.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>These include distributed (Git-based) knowledge work, open-source communities, online labor markets, and open strategy initiatives such as open employee handbooks in all-remote organizations.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>These models are widely used in large tech companies, knowledge-intensive industries, and academia.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>The primary goal is to understand how distributed work practices can be organized effectively and how to manage these work arrangements for maximum productivity.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>This includes informing stakeholders about best practices for integrating these models with existing organizational frameworks.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Exemplary research questions</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Processes of knowledge-intensive crowd work** How can online marketplaces for knowledge-intensive service work be distinguished? How can the micro-and macro-level processes be organized?</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Effective sourcing of knowledge work in online labor markets** What explains the successful sourcing of knowledge work from online labor markets at the level of individual workers and projects?</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Selected publications: @WagnerPresterPare2021, @WagnerPrester2021, @WagnerPrester2019</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Knowledge synthesis</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>**Summary** This research stream addresses the critical need for more efficient and effective knowledge synthesis in response to the vast and rapidly growing body of research.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>While the volume of available knowledge continues to increase, methods for synthesizing this research—particularly in the context of open and reproducible literature reviews—are falling behind.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Key areas needing improvement include search query construction, validation, knowledge record matching, emergent concept analyses, and enhancing transparency and validation through AI and generative AI (GenAI) tools.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>These challenges are crucial across many fields, particularly for professions like medicine, where synthesizing the best available evidence is essential.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>At the core, the goal of this research stream is to design tools that make knowledge synthesis processes more efficient, transparent, and reliable, benefiting practitioners, policymakers, researchers, and students who navigate both academic and industry perspectives.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Exemplary research questions</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI/LLM-supported literature reviews** How can AI and LLM capabilities support the individual steps of the literature review process?</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Understanding quality and impact of review papers** What makes a literature review successful in terms of scientific impact?</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Design of open and reproducible research synthesis platforms** How can tools make literature reviews and knowledge synthesis more efficient, transparent, and reliable?</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"publist"</span><span class="dt">&gt;</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G., Prester, J., and Paré, G. (2021). "Exploring the Boundaries and Processes of Digital Platforms for Knowledge Work: A Review of Information Systems Research". <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>The Journal of Strategic Information Systems<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 30(4), 101694. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.1016/j.jsis.2021.101694"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.1016/j.jsis.2021.101694<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. and Prester, J. (2021). "A Framework of Platform Design Mechanisms, Platform Congruence and Value Creation on C2C Platforms". in Proceedings of the <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>29th European Conference on Information Systems (ECIS 2021)<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, Marrakech, Morocco.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. and Prester, J. (2019). "Information Systems Research on Digital Platforms for Knowledge Work: A Scoping Review". in Proceedings of the <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>40th International Conference on Information Systems (ICIS 2019)<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, Munich, Germany.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research stream 3: Knowledge synthesis</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>**Summary** This research stream addresses the critical need for more efficient and effective knowledge synthesis in response to the vast and rapidly growing body of research.</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>While the volume of available knowledge continues to increase, methods for synthesizing this research—particularly in the context of open and reproducible literature reviews—are falling behind.</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Key areas needing improvement include search query construction, validation, knowledge record matching, emergent concept analyses, and enhancing transparency and validation through AI and generative AI (GenAI) tools.</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>These challenges are crucial across many fields, particularly for professions like medicine, where synthesizing the best available evidence is essential.</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>At the core, the goal of this research stream is to design tools that make knowledge synthesis processes more efficient, transparent, and reliable, benefiting practitioners, policymakers, researchers, and students who navigate both academic and industry perspectives.</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>Exemplary research questions</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI/LLM-supported literature reviews** How can AI and LLM capabilities support the individual steps of the literature review process?</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Understanding quality and impact of review papers** What makes a literature review successful in terms of scientific impact?</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Design of open and reproducible research synthesis platforms** How can tools make literature reviews and knowledge synthesis more efficient, transparent, and reliable?</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>Selected publications</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"publist"</span><span class="dt">&gt;</span></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. (2024). "BibDedupe: An Open-Source Python Library for Bibliographic Record Deduplication". <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Journal of Open Source Software<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 9(97), 6318. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.21105/joss.06318"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.21105/joss.06318<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G., Lukyanenko, R., and Paré, G. (2022). "Artificial Intelligence and the Conduct of Literature Reviews". <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Journal of Information Technology (JIT)<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 37(2), 209–226. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.1177/02683962211048201"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.1177/02683962211048201<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G., Prester, J., Roche, M. P., Schryen, G., Benlian, A., Paré, G., and Templier, M. (2021). "Which Factors Affect the Scientific Impact of Review Papers in IS Research? A Scientometric Study". <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Information &amp; Management (I&amp;M)<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span>, 58(3), 103427. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.1016/j.im.2021.103427"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.1016/j.im.2021.103427<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. and Prester, J. (2024). "CoLRev - An Open-Source Environment for Collaborative Literature Reviews". Available at <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://github.com/CoLRev-Environment/colrev"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://github.com/CoLRev-Environment/colrev<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>. doi:<span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.5281/zenodo.11668338"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>10.5281/zenodo.11668338<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">United Nations Goals: 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</span><span class="co">](https://sdgs.un.org/goals/goal4)</span>{target=_blank}</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">United Nations Goals: 8. Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all</span><span class="co">](https://sdgs.un.org/goals/goal8)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>Selected publications: @Wagner2024, @WagnerLukyanenkoParEtAl2022, @WagnerPresterRocheEtAl2021, @WagnerPrester2025</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">## Resources</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">- [United Nations Goals: 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all](https://sdgs.un.org/goals/goal4){target=_blank}</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="co">- [United Nations Goals: 8. Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all](https://sdgs.un.org/goals/goal8){target=_blank}</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
