@@ -87,7 +87,7 @@ Sending exams to the examination office
 Documentation
 
 - [ ] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
-- [x] Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.
+- [x] Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.
 - [x] Professor: Archive presentation protocols (projects and seminars: digital is sufficient).
 
 Deadline: End of August (summer term), March (winter term)

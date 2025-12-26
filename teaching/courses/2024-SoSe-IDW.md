@@ -52,7 +52,7 @@ Start: April (summer term), October (winter term)
 
 - [x] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
 - [x] Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).
-- [x] Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the [exam checklist](30.59.exams.html#preparing-the-exam).
+- [x] Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the [exam checklist](/teaching/exams.html#preparing-the-exam).
 - [x] Scheine ([Formular](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/){target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen
 
 ## 4. Exam grading and documentation
@@ -64,7 +64,7 @@ Grading
 Documentation
 
 - [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
-- [x] Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.
+- [x] Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.
 
 Deadline: End of August (summer term), March (winter term)
 

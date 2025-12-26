@@ -78,6 +78,6 @@ Note: no grading.
 Documentation
 
 - [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
-- [ ] ~~Professor: [Report](/management/reports.html) teaching efforts at the end of the semester.~~
+- [ ] ~~Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.~~
 
 Deadline: End of August (summer term), March (winter term)
