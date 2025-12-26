@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -142,17 +153,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -871,7 +871,7 @@ Note
 <section id="final-checks" class="level2">
 <h2 class="anchored" data-anchor-id="final-checks">Final checks</h2>
 <ul>
-<li>Make sure that the paper is anonymous (remove authors from <a href="paper.md">paper.md</a> before creating the docx/pdf, <a href="https://support.microsoft.com/en-us/topic/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks-356b7b5d-77af-44fe-a07f-9aa4d085966f" target="_blank">inspect word document for personal information</a>)</li>
+<li>Make sure that the paper is anonymous (remove authors from <code>paper.md</code> before creating the docx/pdf, <a href="https://support.microsoft.com/en-us/topic/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks-356b7b5d-77af-44fe-a07f-9aa4d085966f" target="_blank">inspect word document for personal information</a>)</li>
 <li>Compare with the previous version to catch accidental changes (Word: Check, Compare documents)</li>
 <li>Check the PDF. There might be problems when creating the PDF from the Word document.</li>
 <li>Update abstract in the submission system?</li>
@@ -879,7 +879,7 @@ Note
 <p>For the revision of conference papers:</p>
 <ul>
 <li>Acknowledge support by a funding body, acknowledge colleagues, and reviewers (e.g., “The authors are grateful to the three expert reviewers for their exceptional comments.”)</li>
-<li>Include the keywords and abstract in the yaml header of <a href="paper.md">paper.md</a>.</li>
+<li>Include the keywords and abstract in the yaml header of <code>paper.md</code>.</li>
 <li>Check and update metadata (authors, title, …)</li>
 <li>Latex: Check if .tex writes metadata to PDF (final version, not for submissions/revisions):</li>
 </ul>
@@ -1654,7 +1654,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## Final checks</span></span>
 <span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Make sure that the paper is anonymous (remove authors from <span class="co">[</span><span class="ot">paper.md</span><span class="co">](paper.md)</span> before creating the docx/pdf, <span class="co">[</span><span class="ot">inspect word document for personal information</span><span class="co">](https://support.microsoft.com/en-us/topic/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks-356b7b5d-77af-44fe-a07f-9aa4d085966f)</span>{target=_blank})</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Make sure that the paper is anonymous (remove authors from <span class="in">`paper.md`</span> before creating the docx/pdf, <span class="co">[</span><span class="ot">inspect word document for personal information</span><span class="co">](https://support.microsoft.com/en-us/topic/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks-356b7b5d-77af-44fe-a07f-9aa4d085966f)</span>{target=_blank})</span>
 <span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compare with the previous version to catch accidental changes (Word: Check, Compare documents)</span>
 <span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check the PDF. There might be problems when creating the PDF from the Word document.</span>
 <span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update abstract in the submission system?</span>
@@ -1662,7 +1662,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>For the revision of conference papers:</span>
 <span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Acknowledge support by a funding body, acknowledge colleagues, and reviewers (e.g., "The authors are grateful to the three expert reviewers for their exceptional comments.")</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Include the keywords and abstract in the yaml header of <span class="co">[</span><span class="ot">paper.md</span><span class="co">](paper.md)</span>.</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Include the keywords and abstract in the yaml header of <span class="in">`paper.md`</span>.</span>
 <span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check and update metadata (authors, title, ...)</span>
 <span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Latex: Check if .tex writes metadata to PDF (final version, not for submissions/revisions):</span>
 <span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a></span>
