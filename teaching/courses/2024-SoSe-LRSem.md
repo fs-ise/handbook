@@ -1,6 +1,8 @@
 ---
 title_short: LRSem
 title: "The Literature Review Seminar"
+degree_program:
+  - "Master of Science: Information Systems"
 semester: 2024-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000087_20240719_SS24-DW-Sem-M__Literature_review_seminar.pdf)"

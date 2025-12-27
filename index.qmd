@@ -9,21 +9,110 @@ format:
     include-in-header: assets/calendar/calendar-head.html
 ---
 
-Welcome to the Information Systems Education (ISE) lab hanbook!
+Welcome to the Information Systems Education (ISE) lab handbook!
 
-**Quickstart links**
+This handbook documents how the ISE Lab works — how we teach, research, collaborate, and support students and colleagues in a transparent, reproducible way.
+It is a public resource written for students, teaching staff, and collaborators who interact with the lab.
+To propose changes or contribute, see [How to contribute to the handbook](/management/handbook.html).
+
+**Start here — by role**
 
 ::: {.panel-accordion}
 ### Students {icon="mortarboard-fill"}
 
-- [Teaching section](teaching)
-- TBA: theses etc.
+- Courses:
+
+```{python}
+#| label: course-table
+#| echo: false
+
+from pathlib import Path
+import re
+
+try:
+    import yaml  # PyYAML
+except ImportError as e:
+    raise RuntimeError("Missing dependency: PyYAML. Install with `pip install pyyaml`.") from e
+
+from IPython.display import Markdown, display
+
+COURSE_DIR = Path("teaching/courses")
+
+def read_front_matter(qmd_path: Path) -> dict:
+    text = qmd_path.read_text(encoding="utf-8")
+    m = re.match(r"^\s*---\s*\n(.*?)\n---\s*\n", text, flags=re.DOTALL)
+    if not m:
+        return {}
+    return yaml.safe_load(m.group(1)) or {}
+
+def semester_label(semester: str) -> str:
+    if not semester or "-" not in semester:
+        return semester or ""
+    year, term = semester.split("-", 1)
+    return f"{term} {year}"
+
+def normalize_degree_program(value) -> list[str]:
+    if value is None:
+        return []
+    if isinstance(value, str):
+        return [value.strip()] if value.strip() else []
+    if isinstance(value, list):
+        return [str(v).strip() for v in value if str(v).strip()]
+    return [str(value).strip()] if str(value).strip() else []
+
+rows = []
+for qmd in sorted(COURSE_DIR.glob("*.qmd")):
+    meta = read_front_matter(qmd)
+    if not meta:
+        continue
+    if str(meta.get("status", "")).strip().lower() != "upcoming":
+        continue
+
+    lecture = (meta.get("title") or "").strip()
+    upcoming = semester_label((meta.get("semester") or "").strip())
+    degree_list = normalize_degree_program(meta.get("degree_program"))
+
+    if degree_list:
+        for degree in degree_list:
+            rows.append({
+                "Degree Program": degree,
+                "Lecture": lecture,
+                "Upcoming Semester": upcoming,
+            })
+    else:
+        rows.append({
+            "Degree Program": "",
+            "Lecture": lecture,
+            "Upcoming Semester": upcoming,
+        })
+
+headers = ["Degree Program", "Lecture", "Upcoming Semester"]
+
+if not rows:
+    display(Markdown("_No upcoming courses found._"))
+else:
+    rows.sort(key=lambda r: (r["Degree Program"], r["Upcoming Semester"], r["Lecture"]))
+
+    widths = {h: max(len(h), *(len(str(r.get(h, ""))) for r in rows)) for h in headers}
+
+    def fmt_row(d):
+        return "| " + " | ".join(str(d.get(h, "")).ljust(widths[h]) for h in headers) + " |"
+
+    md_lines = []
+    md_lines.append("| " + " | ".join(h.ljust(widths[h]) for h in headers) + " |")
+    md_lines.append("| " + " | ".join("-" * widths[h] for h in headers) + " |")
+    for r in rows:
+        md_lines.append(fmt_row(r))
+
+    display(Markdown("\n".join(md_lines)))
+```
+
+- Coming soon: theses
 - [FAQ](teaching/faq.html)
 
 ### Admin {icon="person-gear"}
 
 - [Repositories](management/repositories.html)
-- TBA
 
 :::
 
@@ -61,6 +150,8 @@ Welcome to the Information Systems Education (ISE) lab hanbook!
 <br>
 
 ## Areas
+
+The handbook is organized around five core areas that reflect how the lab operates over time.
 
 ::: {.grid}
 

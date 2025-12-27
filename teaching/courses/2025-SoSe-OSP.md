@@ -1,6 +1,8 @@
 ---
 title_short: OSP
 title: "Open-Source Projekt (WI-Projekt)"
+degree_program:
+  - "Bachelor of Science: Information Systems"
 semester: 2025-SoSe
 status: completed
 student_evaluations: ""

@@ -1,6 +1,8 @@
 ---
 title_short: LRSem
 title: "The Literature Review Seminar"
+degree_program:
+  - "Bachelor of Science: Information Systems"
 semester: 2022-WiSe
 status: completed
 student_evaluations: ""

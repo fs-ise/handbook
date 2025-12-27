@@ -1,6 +1,8 @@
 ---
 title_short: IDW
 title: "Introduction to Digital Work"
+degree_program:
+  - "Bachelor of Science: Information Systems"
 semester: 2024-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000088_20240721_SS24-Digital-Work-EDW-B_Introduction_Digital_Work.pdf)"

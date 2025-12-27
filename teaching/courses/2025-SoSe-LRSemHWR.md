@@ -1,6 +1,8 @@
 ---
 title_short: LRSemHWR
 title: "The Literature Review Seminar (HWR)"
+degree_program:
+  - "Ph.D."
 semester: 2025-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000130_20250807_SS25_LRSem_HWR_Berlin.pdf)"

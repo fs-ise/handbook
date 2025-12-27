@@ -1,6 +1,8 @@
 ---
 title_short: LRSem
 title: "The Literature Review Seminar"
+degree_program:
+  - "Master of Science: Information Systems"
 semester: 2025-WiSe
 status: in-progress
 student_evaluations: ""

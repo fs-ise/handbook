@@ -1,6 +1,8 @@
 ---
 title_short: OSP
 title: "Open-Source Projekt (WI-Projekt)"
+degree_program:
+  - "Bachelor of Science: Information Systems"
 semester: 2024-WiSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000110_20250126_WS24_25-Digital-Work-Projekt-B__Bachelorprojekt_aus_der_Fächergruppe_Wirtschaftsinformatik.pdf)"

@@ -1,6 +1,8 @@
 ---
 title_short: LRSemIDIS
 title: "The Literature Review Seminar (IDIS)"
+degree_program:
+  - "Ph.D."
 semester: 2025-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000131_20250708_SS25_LRSem_IDIS.pdf)"
