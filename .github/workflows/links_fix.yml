@@ -108,6 +108,7 @@ jobs:
         if: steps.changed.outputs.has_changes != '0'
         uses: repo-sync/pull-request@v2
         with:
+          github_token: ${{ secrets.LABOT_TOKEN }}
           source_branch: "${{ env.BRANCH_NAME }}"
           destination_branch: "main"
           pr_title: "Fix links"
