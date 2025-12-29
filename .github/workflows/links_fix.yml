@@ -42,7 +42,6 @@ jobs:
         # if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v5
         with:
-          token: ${{ secrets.LABOT_TOKEN }}
           issue-number: 4
           title: "Report: broken links (external)"
           content-filepath: ./lychee/out.md
@@ -81,7 +80,6 @@ jobs:
         if: github.event_name != 'pull_request' && env.found == 'true'
         uses: peter-evans/create-issue-from-file@v5
         with:
-          token: ${{ secrets.LABOT_TOKEN }}
           issue-number: 5
           title: "Report: broken links (internal)"
           content-filepath: ./broken_links.md
@@ -108,7 +106,6 @@ jobs:
         if: steps.changed.outputs.has_changes != '0'
         uses: repo-sync/pull-request@v2
         with:
-          github_token: ${{ secrets.LABOT_TOKEN }}
           source_branch: "${{ env.BRANCH_NAME }}"
           destination_branch: "main"
           pr_title: "Fix links"
