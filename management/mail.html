@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -131,17 +142,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -729,7 +729,7 @@ Note
 <ul>
 <li>E-Mail is handled by the Team Assistant (e-mail: see team website).</li>
 <li>Physical mail is retrieved from the mailroom on a regular basis (Postfach Nr.: 44).</li>
-<li>Incoming physical mail is tracked in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856" target="_blank">10.51 Ausgangspost _Eingangspost.xlsx</a>.</li>
+<li>Incoming physical mail is tracked in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856" target="_blank">Ausgangspost _Eingangspost.xlsx</a>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -772,7 +772,7 @@ Scanned and added to <a href="https://nc-2272638881871040784.nextcloud-ionos.com
 <h2 class="anchored" data-anchor-id="outgoing">Outgoing</h2>
 <p><strong>TODO: add letter template here</strong></p>
 <ul>
-<li>Outgoing physical mail is tracked in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856" target="_blank">10.51 Ausgangspost _Eingangspost.xlsx</a>.</li>
+<li>Outgoing physical mail is tracked in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856" target="_blank">Ausgangspost _Eingangspost.xlsx</a>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1296,7 +1296,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>E-Mail is handled by the Team Assistant (e-mail: see team website).</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Physical mail is retrieved from the mailroom on a regular basis (Postfach Nr.: 44).</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Incoming physical mail is tracked in <span class="co">[</span><span class="ot">10.51 Ausgangspost _Eingangspost.xlsx</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856)</span>{target=_blank}.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Incoming physical mail is tracked in <span class="co">[</span><span class="ot">Ausgangspost _Eingangspost.xlsx</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856)</span>{target=_blank}.</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="al">![Excel](/assets/images/Screenshotexcel.jpg)</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
@@ -1327,7 +1327,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>**TODO: add letter template here**</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Outgoing physical mail is tracked in <span class="co">[</span><span class="ot">10.51 Ausgangspost _Eingangspost.xlsx</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856)</span>{target=_blank}.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Outgoing physical mail is tracked in <span class="co">[</span><span class="ot">Ausgangspost _Eingangspost.xlsx</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/10_processes/51_mail&amp;fileid=8856)</span>{target=_blank}.</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="al">![Screenshot Ausgangspost](/assets/images/Screenshot Ausgangspost.jpg)</span></span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>

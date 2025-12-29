@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -131,17 +142,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -396,7 +396,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   <li><a href="#our-team-how-we-work-10-min" id="toc-our-team-how-we-work-10-min" class="nav-link" data-scroll-target="#our-team-how-we-work-10-min">2. Our Team &amp; How We Work (10 min)</a>
   <ul class="collapse">
   <li><a href="#vision-mission-00-goals" id="toc-vision-mission-00-goals" class="nav-link" data-scroll-target="#vision-mission-00-goals">🌍 Vision &amp; Mission: 00 Goals</a></li>
-  <li><a href="#operating-principles-10.04-sop" id="toc-operating-principles-10.04-sop" class="nav-link" data-scroll-target="#operating-principles-10.04-sop">🧭 Operating Principles: 10.04 SOP</a></li>
+  <li><a href="#operating-principles-sop" id="toc-operating-principles-sop" class="nav-link" data-scroll-target="#operating-principles-sop">🧭 Operating Principles: SOP</a></li>
   </ul></li>
   <li><a href="#expectations-role-10-min" id="toc-expectations-role-10-min" class="nav-link" data-scroll-target="#expectations-role-10-min">3. Expectations &amp; Role (10 min)</a>
   <ul class="collapse">
@@ -464,8 +464,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li>We strive for impact in <strong>research, teaching, and practice</strong>, based on openness, rigor, and support.</li>
 </ul>
 </section>
-<section id="operating-principles-10.04-sop" class="level3">
-<h3 class="anchored" data-anchor-id="operating-principles-10.04-sop">🧭 Operating Principles: 10.04 SOP</h3>
+<section id="operating-principles-sop" class="level3">
+<h3 class="anchored" data-anchor-id="operating-principles-sop">🧭 Operating Principles: SOP</h3>
 <ul>
 <li>Focused work (deep work, blocking time, Pomodoro, etc.) - Discuss what focused work means for us (when/where/how)</li>
 <li>Collaborative work (co-working, knowledge-sharing, review sessions)</li>
@@ -1124,7 +1124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Digital technologies transform how work is organized and designed.</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We strive for impact in **research, teaching, and practice**, based on openness, rigor, and support.</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🧭 Operating Principles: 10.04 SOP</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🧭 Operating Principles: SOP</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Focused work (deep work, blocking time, Pomodoro, etc.) - Discuss what focused work means for us (when/where/how)</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Collaborative work (co-working, knowledge-sharing, review sessions)</span>
