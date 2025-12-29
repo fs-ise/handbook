@@ -62,15 +62,15 @@ The assistant’s tone remains respectful, mentoring, and collaborative. It supp
                         "properties": {
                           "path": {
                             "type": "string",
-                            "description": "Logical handbook path relative to docs/, e.g. 20-research/20_processes/20.11.survey.md"
+                            "description": "Logical handbook path relative to docs/, e.g. /research/survey.qmd"
                           },
                           "json_url": {
                             "type": "string",
-                            "description": "URL to prebuilt JSON under /rag/, e.g. https://digital-work-lab.github.io/handbook/rag/20-research/20_processes/20.11.survey.json"
+                            "description": "URL to prebuilt JSON under /rag/, e.g. https://digital-work-lab.github.io/handbook/rag/research/survey.json"
                           },
                           "md_url": {
                             "type": "string",
-                            "description": "Fallback: Markdown on GitHub Pages under /docs/, e.g. https://digital-work-lab.github.io/handbook/docs/20-research/20_processes/20.11.survey.md"
+                            "description": "Fallback: Markdown on GitHub Pages under /docs/, e.g. https://digital-work-lab.github.io/handbook/docs/research/survey.qmd"
                           }
                         }
                       }
@@ -93,7 +93,7 @@ The assistant’s tone remains respectful, mentoring, and collaborative. It supp
             "name": "path",
             "in": "path",
             "required": true,
-            "description": "Path to the RAG JSON file relative to /rag/, e.g. 20-research/20_processes/20.11.survey.json",
+            "description": "Path to the RAG JSON file relative to /rag/, e.g. research/survey.json",
             "schema": { "type": "string" }
           }
         ],
@@ -108,7 +108,7 @@ The assistant’s tone remains respectful, mentoring, and collaborative. It supp
                   "properties": {
                     "source": {
                       "type": "string",
-                      "description": "Original handbook source path, e.g. 20-research/20_processes/20.11.survey.md"
+                      "description": "Original handbook source path, e.g. research/survey.qmd"
                     },
                     "generated_at": {
                       "type": "string",
@@ -166,7 +166,7 @@ The assistant’s tone remains respectful, mentoring, and collaborative. It supp
             "name": "path",
             "in": "path",
             "required": true,
-            "description": "Path to the Markdown file relative to docs/, e.g. 20-research/20_processes/20.11.survey.md",
+            "description": "Path to the Markdown file relative to docs/, e.g. research/survey.qmd",
             "schema": { "type": "string" }
           }
         ],
