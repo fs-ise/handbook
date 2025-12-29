@@ -111,28 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -144,6 +122,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -153,6 +142,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -680,16 +680,16 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#conflicts-of-interest-secondary-employment-and-anti-corruption" id="toc-conflicts-of-interest-secondary-employment-and-anti-corruption" class="nav-link active" data-scroll-target="#conflicts-of-interest-secondary-employment-and-anti-corruption">Conflicts of Interest, Secondary Employment, and Anti-Corruption</a></li>
+  <li><a href="#conflicts-of-interest-secondary-employment-and-anti-corruption" id="toc-conflicts-of-interest-secondary-employment-and-anti-corruption" class="nav-link active" data-scroll-target="#conflicts-of-interest-secondary-employment-and-anti-corruption">Conflicts of interest, secondary employment, and anti-corruption</a></li>
   <li><a href="#safety-sicherheitsunterweisung" id="toc-safety-sicherheitsunterweisung" class="nav-link" data-scroll-target="#safety-sicherheitsunterweisung">Safety (Sicherheitsunterweisung)</a></li>
   <li><a href="#documentation-of-working-hours" id="toc-documentation-of-working-hours" class="nav-link" data-scroll-target="#documentation-of-working-hours">Documentation of working hours</a></li>
   <li><a href="#data-protection" id="toc-data-protection" class="nav-link" data-scroll-target="#data-protection">Data protection</a></li>
   <li><a href="#copyright-laws" id="toc-copyright-laws" class="nav-link" data-scroll-target="#copyright-laws">Copyright laws</a></li>
   <li><a href="#risk-assessment" id="toc-risk-assessment" class="nav-link" data-scroll-target="#risk-assessment">Risk assessment</a></li>
-  <li><a href="#diversity-and-gender-sensitive-language" id="toc-diversity-and-gender-sensitive-language" class="nav-link" data-scroll-target="#diversity-and-gender-sensitive-language">Diversity and gender sensitive language</a></li>
+  <li><a href="#diversity-and-gender-sensitive-language" id="toc-diversity-and-gender-sensitive-language" class="nav-link" data-scroll-target="#diversity-and-gender-sensitive-language">Diversity and gender-sensitive language</a></li>
   <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
   <li><a href="#research" id="toc-research" class="nav-link" data-scroll-target="#research">Research</a></li>
-  <li><a href="#whistleblower-and-complaint-procedures" id="toc-whistleblower-and-complaint-procedures" class="nav-link" data-scroll-target="#whistleblower-and-complaint-procedures">Whistleblower and Complaint Procedures</a></li>
+  <li><a href="#whistleblower-and-complaint-procedures" id="toc-whistleblower-and-complaint-procedures" class="nav-link" data-scroll-target="#whistleblower-and-complaint-procedures">Whistleblower and complaint procedures</a></li>
   <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/compliance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -731,7 +731,7 @@ Note
 </div>
 </div>
 <section id="conflicts-of-interest-secondary-employment-and-anti-corruption" class="level2">
-<h2 class="anchored" data-anchor-id="conflicts-of-interest-secondary-employment-and-anti-corruption">Conflicts of Interest, Secondary Employment, and Anti-Corruption</h2>
+<h2 class="anchored" data-anchor-id="conflicts-of-interest-secondary-employment-and-anti-corruption">Conflicts of interest, secondary employment, and anti-corruption</h2>
 <p>All staff must disclose any <strong>secondary employment</strong> or professional activities outside the university that could interfere with their university duties or present a <strong>conflict of interest</strong>, in accordance with applicable university and state regulations (e.g., Art. 81 BayBG, BayHIG).</p>
 <p>Staff are also required to comply with applicable <strong>anti-bribery and anti-corruption laws</strong>. It is prohibited to accept gifts, benefits, or favors in connection with university duties unless explicitly permitted under public service regulations. Even minor gifts or invitations must be reported and approved according to the university’s compliance guidelines.</p>
 <p>Relevant legal bases include: - <strong>BayBG Art. 81</strong> – Nebentätigkeit (Secondary employment) - <strong>StGB §331–§335</strong> – Vorteilsannahme, Bestechlichkeit (Acceptance of benefits, bribery)</p>
@@ -764,7 +764,7 @@ Note
 <h2 class="anchored" data-anchor-id="data-protection">Data protection</h2>
 <ul>
 <li><a href="https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32016R0679" target="_blank">DSGVO</a>: Rechtmäßigkeit, Datensparsamkeit, Zweckbindung, Datensicherheit, Transparenz</li>
-<li>Handle sensitive data, such as student names, student-id and grades, with the utmost care and respect for privacy.</li>
+<li>Handle sensitive data, such as student names, student IDs, and grades, with the utmost care and respect for privacy.</li>
 <li>Only collect, store, and share sensitive data when necessary and in compliance with applicable privacy laws and regulations.</li>
 <li>Limit access to sensitive data to authorized individuals who need it for legitimate purposes.</li>
 <li>Encrypt or protect sensitive data using appropriate security measures to prevent unauthorized access or disclosure.</li>
@@ -773,21 +773,21 @@ Note
 <section id="copyright-laws" class="level2">
 <h2 class="anchored" data-anchor-id="copyright-laws">Copyright laws</h2>
 <ul>
-<li>TODO : add links</li>
+<li>TODO: add links</li>
 </ul>
 </section>
 <section id="risk-assessment" class="level2">
 <h2 class="anchored" data-anchor-id="risk-assessment">Risk assessment</h2>
 <ul>
-<li>Assessments of workplace risks are conducted annually by the Professor based on 19.000015 and 19.000016.</li>
+<li>Assessments of workplace risks are conducted annually by the professor based on 19.000015 and 19.000016.</li>
 <li>Any updates are noted in 19.000015 and 19.000016.</li>
 </ul>
 </section>
 <section id="diversity-and-gender-sensitive-language" class="level2">
-<h2 class="anchored" data-anchor-id="diversity-and-gender-sensitive-language">Diversity and gender sensitive language</h2>
+<h2 class="anchored" data-anchor-id="diversity-and-gender-sensitive-language">Diversity and gender-sensitive language</h2>
 <ul>
-<li>Aufgabe aller bayerischen Universitäten ist, Diversität und Geschlechtergleichstellung zu fördern sowie Diskriminierungen entgegenzuwirken (vgl. Art. 2 Abs. 5 und Art. 25 Abs. 2 BayHIG). Denn das Diskriminierungsverbot aufgrund von Geschlecht ist im Grundgesetz verankert (Art. 3 Abs. 3 Satz 1 GG) und die Universität in ihrer Funktion als Arbeitgeberin zum Diskriminierungsschutz verpflichtet.</li>
-<li>Bayerische Staatsregierung hat laut Kabinettsbericht am Dienstag, den 19.3.2024, eine Änderung der Allgemeinen Geschäftsordnung für die Behörden des Freistaates Bayern (AGO) beschlossen. Sie besagt, dass im dienstlichen Schriftverkehr künftig Wortbinnenzeichen zur Geschlechterumschreibung (Gender-Gap, Genderstern, Doppelpunkt oder Mediopunkt) ausdrücklich unzulässig sind.</li>
+<li>The task of all Bavarian universities is to promote diversity and gender equality and to counteract discrimination (cf.&nbsp;Art. 2 Abs. 5 and Art. 25 Abs. 2 BayHIG). The prohibition of discrimination based on gender is enshrined in the Basic Law (Art. 3 Abs. 3 Satz 1 GG), and the university, in its capacity as an employer, is obligated to protect against discrimination.</li>
+<li>The Bavarian State Government has decided, according to the cabinet report on Tuesday, March 19, 2024, to amend the General Administrative Regulation for the authorities of the Free State of Bavaria (AGO). It states that the use of gender-neutral language (Gender Gap, Gender Star, colon, or mediopoint) in official correspondence is expressly prohibited.</li>
 </ul>
 </section>
 <section id="teaching" class="level2">
@@ -808,10 +808,10 @@ Note
 </ul>
 </section>
 <section id="whistleblower-and-complaint-procedures" class="level2">
-<h2 class="anchored" data-anchor-id="whistleblower-and-complaint-procedures">Whistleblower and Complaint Procedures</h2>
+<h2 class="anchored" data-anchor-id="whistleblower-and-complaint-procedures">Whistleblower and complaint procedures</h2>
 <p>For confidential reporting of <em>ethical violations</em>, <em>harassment</em>, <em>discrimination</em>, or other misconduct:</p>
 <ul>
-<li>For Scientific Misconduct (Wissenschaftliches Fehlverhalten), reports can be made to the <em>Ombudsperson(s)</em> or the <em>Permanent Commission for Investigating Allegations of Scientific Misconduct</em> at University of Bamberg.</li>
+<li>For scientific misconduct (Wissenschaftliches Fehlverhalten), reports can be made to the <em>Ombudsperson(s)</em> or the <em>Permanent Commission for Investigating Allegations of Scientific Misconduct</em> at the University of Bamberg.</li>
 <li>For suspected legal violations at work (HinSchG), use the secure internal reporting system: https://uni-bamberg.hinweis.digital</li>
 <li>For discrimination or harassment (AGG), contact antidiskriminierung@uni‑bamberg.de; formal complaints are handled by the Complaints Unit as per § 13 AGG.<br>
 </li>
@@ -1327,90 +1327,87 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This section is marked as "toupdate": update complete process</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conflicts of Interest, Secondary Employment, and Anti-Corruption</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conflicts of interest, secondary employment, and anti-corruption</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>All staff must disclose any **secondary employment** or professional activities outside the university that could interfere with their university duties or present a **conflict of interest**,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>in accordance with applicable university and state regulations (e.g., Art. 81 BayBG, BayHIG).</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Staff are also required to comply with applicable **anti-bribery and anti-corruption laws**.</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>It is prohibited to accept gifts, benefits, or favors in connection with university duties unless explicitly permitted under public service regulations.</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Even minor gifts or invitations must be reported and approved according to the university’s compliance guidelines.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Relevant legal bases include:</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**BayBG Art. 81** – Nebentätigkeit (Secondary employment)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**StGB §331–§335** – Vorteilsannahme, Bestechlichkeit (Acceptance of benefits, bribery)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Safety (Sicherheitsunterweisung)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Annually, at <span class="co">[</span><span class="ot">sicherheitswesen.uni-bamberg.de</span><span class="co">](https://sicherheitswesen.uni-bamberg.de/)</span>{target=_blank}.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Notes:</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Injuries (including minor ones) must be reported in a notebook.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Documentation of working hours</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>::: {.columns align="center"}</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>::: {.column width="220px"}</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="al">![](/assets/images/Doku.pflicht.jpg)</span>{width=220px}</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>::: {.column}</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Student research assistants are required to document their working hours using the  </span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="co">[</span><span class="ot">report sheet</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Hilfskraefte/Musterformular_Dokumentationspflicht_MiLoG.pdf)</span>.</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reports are submitted to the Team Assistant's office on a monthly basis (no later than the 7th).</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reports are signed by the student assistant and the professor.</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They are archived in 19.XXXXXX.</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data protection</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">DSGVO</span><span class="co">](https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32016R0679)</span>{target=_blank}: Rechtmäßigkeit, Datensparsamkeit, Zweckbindung, Datensicherheit, Transparenz</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Handle sensitive data, such as student names, student-id and grades, with the utmost care and respect for privacy.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Only collect, store, and share sensitive data when necessary and in compliance with applicable privacy laws and regulations.</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Limit access to sensitive data to authorized individuals who need it for legitimate purposes.</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Encrypt or protect sensitive data using appropriate security measures to prevent unauthorized access or disclosure.</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## Copyright laws</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TODO : add links</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Risk assessment</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>All staff must disclose any **secondary employment** or professional activities outside the university that could interfere with their university duties or present a **conflict of interest**, in accordance with applicable university and state regulations (e.g., Art. 81 BayBG, BayHIG).</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Staff are also required to comply with applicable **anti-bribery and anti-corruption laws**. It is prohibited to accept gifts, benefits, or favors in connection with university duties unless explicitly permitted under public service regulations. Even minor gifts or invitations must be reported and approved according to the university’s compliance guidelines.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Relevant legal bases include:</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**BayBG Art. 81** – Nebentätigkeit (Secondary employment)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**StGB §331–§335** – Vorteilsannahme, Bestechlichkeit (Acceptance of benefits, bribery)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Safety (Sicherheitsunterweisung)</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Annually, at <span class="co">[</span><span class="ot">sicherheitswesen.uni-bamberg.de</span><span class="co">](https://sicherheitswesen.uni-bamberg.de/)</span>{target=_blank}.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Notes:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Injuries (including minor ones) must be reported in a notebook.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Documentation of working hours</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>::: {.columns align="center"}</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>::: {.column width="220px"}</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="al">![](/assets/images/Doku.pflicht.jpg)</span>{width=220px}</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>::: {.column}</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Student research assistants are required to document their working hours using the  </span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="co">[</span><span class="ot">report sheet</span><span class="co">](https://www.uni-bamberg.de/fileadmin/abt-personal/Homepage_ab_2016-03/11_Formulare_Infos_Merkblaetter/Hilfskraefte/Musterformular_Dokumentationspflicht_MiLoG.pdf)</span>.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reports are submitted to the Team Assistant's office on a monthly basis (no later than the 7th).</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reports are signed by the student assistant and the professor.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They are archived in 19.XXXXXX.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data protection</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">DSGVO</span><span class="co">](https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32016R0679)</span>{target=_blank}: Rechtmäßigkeit, Datensparsamkeit, Zweckbindung, Datensicherheit, Transparenz</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Handle sensitive data, such as student names, student IDs, and grades, with the utmost care and respect for privacy.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Only collect, store, and share sensitive data when necessary and in compliance with applicable privacy laws and regulations.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Limit access to sensitive data to authorized individuals who need it for legitimate purposes.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Encrypt or protect sensitive data using appropriate security measures to prevent unauthorized access or disclosure.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Copyright laws</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TODO: add links</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## Risk assessment</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Assessments of workplace risks are conducted annually by the professor based on 19.000015 and 19.000016.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Any updates are noted in 19.000015 and 19.000016.</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Assessments of workplace risks are conducted annually by the Professor based on 19.000015 and 19.000016.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Any updates are noted in 19.000015 and 19.000016.</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## Diversity and gender sensitive language</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## Diversity and gender-sensitive language</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The task of all Bavarian universities is to promote diversity and gender equality and to counteract discrimination (cf. Art. 2 Abs. 5 and Art. 25 Abs. 2 BayHIG). The prohibition of discrimination based on gender is enshrined in the Basic Law (Art. 3 Abs. 3 Satz 1 GG), and the university, in its capacity as an employer, is obligated to protect against discrimination.</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Bavarian State Government has decided, according to the cabinet report on Tuesday, March 19, 2024, to amend the General Administrative Regulation for the authorities of the Free State of Bavaria (AGO). It states that the use of gender-neutral language (Gender Gap, Gender Star, colon, or mediopoint) in official correspondence is expressly prohibited.</span>
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Aufgabe aller bayerischen Universitäten ist, Diversität und Geschlechtergleichstellung zu fördern sowie Diskriminierungen entgegenzuwirken (vgl. Art. 2 Abs. 5 und Art. 25 Abs. 2 BayHIG). Denn das Diskriminierungsverbot aufgrund von Geschlecht ist im Grundgesetz verankert (Art. 3 Abs. 3 Satz 1 GG) und die Universität in ihrer Funktion als Arbeitgeberin zum Diskriminierungsschutz verpflichtet.</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bayerische Staatsregierung hat laut Kabinettsbericht am Dienstag, den 19.3.2024, eine Änderung der Allgemeinen Geschäftsordnung für die Behörden des Freistaates Bayern (AGO) beschlossen. Sie besagt, dass im dienstlichen Schriftverkehr künftig Wortbinnenzeichen zur Geschlechterumschreibung (Gender-Gap, Genderstern, Doppelpunkt oder Mediopunkt) ausdrücklich unzulässig sind.</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teaching</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Teaching is reported as per <span class="co">[</span><span class="ot">reports</span><span class="co">](/teaching/reports.html)</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Teaching is evaluated as per <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sensitive data must be stored and processed confidentially.</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Research is conducted in line with the applicable ethics and code of conduct guidelines (<span class="co">[</span><span class="ot">ethics</span><span class="co">](/research/SOP.html#ethics)</span>).</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Storage of raw and processed research data: see <span class="co">[</span><span class="ot">data management</span><span class="co">](/research/data_management.html)</span>.</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sensitive data must be stored and processed confidentially.</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Options for <span class="co">[</span><span class="ot">open-access publishing</span><span class="co">](/research/publication.html)</span> should be considered whenever possible.</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Whistleblower and Complaint Procedures</span></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>For confidential reporting of *ethical violations*, *harassment*, *discrimination*, or other misconduct:</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For Scientific Misconduct (Wissenschaftliches Fehlverhalten), reports can be made to the *Ombudsperson(s)* or the *Permanent Commission for Investigating Allegations of Scientific Misconduct* at University of Bamberg.</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For suspected legal violations at work (HinSchG), use the secure internal reporting system: https://uni-bamberg.hinweis.digital</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For discrimination or harassment (AGG), contact antidiskriminierung@uni‑bamberg.de; formal complaints are handled by the Complaints Unit as per § 13 AGG.  </span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For all types of harassment, bullying, and sexual boundary violations: follow the “Grenzen Wahren” guidelines and reach out to your faculty’s Equal Opportunity Officer, the Personnel Council, Justiziariat, or Anti-Discrimination Office. All procedures guarantee confidentiality and impartial handling.</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## Links</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Rechtsvorschriften der Universität</span><span class="co">](https://www.uni-bamberg.de/justitiariat/rechtsvorschriften-der-universitaet/)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teaching</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Teaching is reported as per <span class="co">[</span><span class="ot">reports</span><span class="co">](/teaching/reports.html)</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Teaching is evaluated as per <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sensitive data must be stored and processed confidentially.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Research is conducted in line with the applicable ethics and code of conduct guidelines (<span class="co">[</span><span class="ot">ethics</span><span class="co">](/research/SOP.html#ethics)</span>).</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Storage of raw and processed research data: see <span class="co">[</span><span class="ot">data management</span><span class="co">](/research/data_management.html)</span>.</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sensitive data must be stored and processed confidentially.</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Options for <span class="co">[</span><span class="ot">open-access publishing</span><span class="co">](/research/publication.html)</span> should be considered whenever possible.</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Whistleblower and complaint procedures</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>For confidential reporting of *ethical violations*, *harassment*, *discrimination*, or other misconduct:</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For scientific misconduct (Wissenschaftliches Fehlverhalten), reports can be made to the *Ombudsperson(s)* or the *Permanent Commission for Investigating Allegations of Scientific Misconduct* at the University of Bamberg.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For suspected legal violations at work (HinSchG), use the secure internal reporting system: https://uni-bamberg.hinweis.digital</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For discrimination or harassment (AGG), contact antidiskriminierung@uni‑bamberg.de; formal complaints are handled by the Complaints Unit as per § 13 AGG.  </span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For all types of harassment, bullying, and sexual boundary violations: follow the “Grenzen Wahren” guidelines and reach out to your faculty’s Equal Opportunity Officer, the Personnel Council, Justiziariat, or Anti-Discrimination Office. All procedures guarantee confidentiality and impartial handling.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## Links</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Rechtsvorschriften der Universität</span><span class="co">](https://www.uni-bamberg.de/justitiariat/rechtsvorschriften-der-universitaet/)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
