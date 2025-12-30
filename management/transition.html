@@ -142,15 +142,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
+div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
-div.callout-objective.callout-style-default > .callout-header {
+div.callout-resource.callout-style-default > .callout-header {
   background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -164,6 +164,17 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -173,17 +184,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -773,15 +773,18 @@ window.Quarto = {
 <section id="handbook-pages" class="level2">
 <h2 class="anchored" data-anchor-id="handbook-pages">Handbook pages</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Consolidate <a href="https://github.com/digital-work-lab/handbook/tree/main/.github/workflows" target="_blank">github workflows</a>.</label></li>
+<li><label><input type="checkbox">Consolidate <a href="https://github.com/digital-work-lab/handbook/tree/main/.github/workflows" target="_blank">github workflows</a>.</label>
+<ul class="task-list">
+<li><label><input type="checkbox">regularly run generate-projects-pages.py</label></li>
+</ul></li>
 <li><label><input type="checkbox" checked="">Set repository secrets for actions (e.g., <code>LABOT_PAT_TOKEN</code>).</label></li>
 <li><label><input type="checkbox" checked="">Imports: see new handbook (local import.py)</label></li>
 <li><label><input type="checkbox" checked="">Structure: areas / processes / alphabetical (instead of johnny decimal)</label></li>
 <li><label><input type="checkbox">Postprocessing:</label>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">remove “tocs” on pages (generated automatically)</label></li>
-<li><label><input type="checkbox">visual check (images, figures, links)</label></li>
-<li><label><input type="checkbox">check/fix links</label></li>
+<li><label><input type="checkbox" checked="">visual check (images, figures, links)</label></li>
+<li><label><input type="checkbox" checked="">check/fix links</label></li>
 <li><label><input type="checkbox">Check for self-service boxes</label></li>
 <li><label><input type="checkbox">Check for Johnny-Decimal references (10.10, Section 20, …)</label></li>
 </ul></li>
@@ -873,7 +876,7 @@ transition_comment
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="1" data-listing-word-count-sort="37" data-listing-title-sort="Archive" data-listing-filename-sort="archive.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="1" data-listing-word-count-sort="37" data-listing-title-sort="Archive" data-listing-filename-sort="archive.qmd">
 <td>
 <span class="listing-path">/management/archive.qmd</span>
 </td>
@@ -886,7 +889,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="3" data-listing-word-count-sort="592" data-listing-title-sort="Compliance" data-listing-filename-sort="compliance.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="3" data-listing-word-count-sort="592" data-listing-title-sort="Compliance" data-listing-filename-sort="compliance.qmd">
 <td>
 <span class="listing-path">/management/compliance.qmd</span>
 </td>
@@ -899,7 +902,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="Controlling" data-listing-filename-sort="controlling.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-title-sort="Controlling" data-listing-filename-sort="controlling.qmd">
 <td>
 <span class="listing-path">/management/controlling.qmd</span>
 </td>
@@ -912,7 +915,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="1" data-listing-word-count-sort="58" data-listing-title-sort="Emergencies" data-listing-filename-sort="emergencies.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="1" data-listing-word-count-sort="58" data-listing-title-sort="Emergencies" data-listing-filename-sort="emergencies.qmd">
 <td>
 <span class="listing-path">/management/emergencies.qmd</span>
 </td>
@@ -925,7 +928,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="2" data-listing-word-count-sort="331" data-listing-title-sort="Faculty" data-listing-filename-sort="faculty.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="2" data-listing-word-count-sort="331" data-listing-title-sort="Faculty" data-listing-filename-sort="faculty.qmd">
 <td>
 <span class="listing-path">/management/faculty.qmd</span>
 </td>
@@ -938,7 +941,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="4" data-listing-word-count-sort="602" data-listing-title-sort="Hiring" data-listing-filename-sort="hiring.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="4" data-listing-word-count-sort="602" data-listing-title-sort="Hiring" data-listing-filename-sort="hiring.qmd">
 <td>
 <span class="listing-path">/management/hiring.qmd</span>
 </td>
@@ -951,7 +954,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="2" data-listing-word-count-sort="308" data-listing-title-sort="Mail" data-listing-filename-sort="mail.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="2" data-listing-word-count-sort="308" data-listing-title-sort="Mail" data-listing-filename-sort="mail.qmd">
 <td>
 <span class="listing-path">/management/mail.qmd</span>
 </td>
@@ -964,7 +967,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="Offboarding" data-listing-filename-sort="offboarding.qmd">
+<tr data-index="7" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="1" data-listing-word-count-sort="53" data-listing-title-sort="Offboarding" data-listing-filename-sort="offboarding.qmd">
 <td>
 <span class="listing-path">/management/offboarding.qmd</span>
 </td>
@@ -977,7 +980,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Onboarding" data-listing-filename-sort="onboarding.qmd">
+<tr data-index="8" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Onboarding" data-listing-filename-sort="onboarding.qmd">
 <td>
 <span class="listing-path">/management/onboarding.qmd</span>
 </td>
@@ -990,7 +993,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="1" data-listing-word-count-sort="153" data-listing-title-sort="Orders" data-listing-filename-sort="orders.qmd">
+<tr data-index="9" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="1" data-listing-word-count-sort="153" data-listing-title-sort="Orders" data-listing-filename-sort="orders.qmd">
 <td>
 <span class="listing-path">/management/orders.qmd</span>
 </td>
@@ -1003,7 +1006,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1767085291340" data-listing-reading-time-sort="2" data-listing-word-count-sort="237" data-listing-title-sort="Reimbursements" data-listing-filename-sort="reimbursements.qmd">
+<tr data-index="10" data-listing-file-modified-sort="1767099896111" data-listing-reading-time-sort="2" data-listing-word-count-sort="237" data-listing-title-sort="Reimbursements" data-listing-filename-sort="reimbursements.qmd">
 <td>
 <span class="listing-path">/management/reimbursements.qmd</span>
 </td>
@@ -1016,7 +1019,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="1" data-listing-word-count-sort="79" data-listing-title-sort="Sick leave" data-listing-filename-sort="sick_leave.qmd">
+<tr data-index="11" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="1" data-listing-word-count-sort="79" data-listing-title-sort="Sick leave" data-listing-filename-sort="sick_leave.qmd">
 <td>
 <span class="listing-path">/management/sick_leave.qmd</span>
 </td>
@@ -1029,7 +1032,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="1" data-listing-word-count-sort="89" data-listing-title-sort="Systems administration" data-listing-filename-sort="systems_administration.qmd">
+<tr data-index="12" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="1" data-listing-word-count-sort="89" data-listing-title-sort="Systems administration" data-listing-filename-sort="systems_administration.qmd">
 <td>
 <span class="listing-path">/management/systems_administration.qmd</span>
 </td>
@@ -1042,7 +1045,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="4" data-listing-word-count-sort="640" data-listing-title-sort="Systems" data-listing-filename-sort="systems_overview.qmd">
+<tr data-index="13" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="4" data-listing-word-count-sort="640" data-listing-title-sort="Systems" data-listing-filename-sort="systems_overview.qmd">
 <td>
 <span class="listing-path">/management/systems_overview.qmd</span>
 </td>
@@ -1055,7 +1058,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="1" data-listing-word-count-sort="17" data-listing-title-sort="Teaching support" data-listing-filename-sort="teaching_support.qmd">
+<tr data-index="14" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="1" data-listing-word-count-sort="17" data-listing-title-sort="Teaching support" data-listing-filename-sort="teaching_support.qmd">
 <td>
 <span class="listing-path">/management/teaching_support.qmd</span>
 </td>
@@ -1068,7 +1071,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="2" data-listing-word-count-sort="235" data-listing-title-sort="Travel" data-listing-filename-sort="travel.qmd">
+<tr data-index="15" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="2" data-listing-word-count-sort="235" data-listing-title-sort="Travel" data-listing-filename-sort="travel.qmd">
 <td>
 <span class="listing-path">/management/travel.qmd</span>
 </td>
@@ -1081,7 +1084,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="5" data-listing-word-count-sort="816" data-listing-title-sort="Vacation" data-listing-filename-sort="vacation.qmd">
+<tr data-index="16" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="5" data-listing-word-count-sort="816" data-listing-title-sort="Vacation" data-listing-filename-sort="vacation.qmd">
 <td>
 <span class="listing-path">/management/vacation.qmd</span>
 </td>
@@ -1094,7 +1097,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="1" data-listing-word-count-sort="61" data-listing-title-sort="Website" data-listing-filename-sort="website.qmd">
+<tr data-index="17" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="1" data-listing-word-count-sort="61" data-listing-title-sort="Website" data-listing-filename-sort="website.qmd">
 <td>
 <span class="listing-path">/management/website.qmd</span>
 </td>
@@ -1107,7 +1110,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1767085291341" data-listing-reading-time-sort="1" data-listing-word-count-sort="146" data-listing-title-sort="Funding overview" data-listing-filename-sort="funding_overview.qmd">
+<tr data-index="18" data-listing-file-modified-sort="1767099896112" data-listing-reading-time-sort="1" data-listing-word-count-sort="146" data-listing-title-sort="Funding overview" data-listing-filename-sort="funding_overview.qmd">
 <td>
 <span class="listing-path">/research/funding_overview.qmd</span>
 </td>
@@ -1120,7 +1123,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="19" data-listing-file-modified-sort="1767085291345" data-listing-reading-time-sort="2" data-listing-word-count-sort="350" data-listing-title-sort="Publication" data-listing-filename-sort="publication.qmd">
+<tr data-index="19" data-listing-file-modified-sort="1767099896116" data-listing-reading-time-sort="2" data-listing-word-count-sort="350" data-listing-title-sort="Publication" data-listing-filename-sort="publication.qmd">
 <td>
 <span class="listing-path">/research/publication.qmd</span>
 </td>
@@ -1133,7 +1136,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="20" data-listing-file-modified-sort="1767085291347" data-listing-reading-time-sort="3" data-listing-word-count-sort="420" data-listing-title-sort="Advertising" data-listing-filename-sort="advertising.qmd">
+<tr data-index="20" data-listing-file-modified-sort="1767099896119" data-listing-reading-time-sort="3" data-listing-word-count-sort="420" data-listing-title-sort="Advertising" data-listing-filename-sort="advertising.qmd">
 <td>
 <span class="listing-path">/teaching/advertising.qmd</span>
 </td>
@@ -1146,7 +1149,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="21" data-listing-file-modified-sort="1767085291347" data-listing-reading-time-sort="1" data-listing-word-count-sort="80" data-listing-title-sort="Certificates (Scheine)" data-listing-filename-sort="certificates.qmd">
+<tr data-index="21" data-listing-file-modified-sort="1767099896119" data-listing-reading-time-sort="1" data-listing-word-count-sort="80" data-listing-title-sort="Certificates (Scheine)" data-listing-filename-sort="certificates.qmd">
 <td>
 <span class="listing-path">/teaching/certificates.qmd</span>
 </td>
@@ -1159,7 +1162,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="22" data-listing-file-modified-sort="1767085291347" data-listing-reading-time-sort="1" data-listing-word-count-sort="180" data-listing-title-sort="Counselling" data-listing-filename-sort="counselling.qmd">
+<tr data-index="22" data-listing-file-modified-sort="1767099896119" data-listing-reading-time-sort="1" data-listing-word-count-sort="180" data-listing-title-sort="Counselling" data-listing-filename-sort="counselling.qmd">
 <td>
 <span class="listing-path">/teaching/counselling.qmd</span>
 </td>
@@ -1172,7 +1175,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="23" data-listing-file-modified-sort="1767085291348" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Department" data-listing-filename-sort="department.qmd">
+<tr data-index="23" data-listing-file-modified-sort="1767099896119" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Department" data-listing-filename-sort="department.qmd">
 <td>
 <span class="listing-path">/teaching/department.qmd</span>
 </td>
@@ -1185,7 +1188,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="24" data-listing-file-modified-sort="1767085291348" data-listing-reading-time-sort="2" data-listing-word-count-sort="325" data-listing-title-sort="Evaluations" data-listing-filename-sort="evaluations.qmd">
+<tr data-index="24" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="2" data-listing-word-count-sort="325" data-listing-title-sort="Evaluations" data-listing-filename-sort="evaluations.qmd">
 <td>
 <span class="listing-path">/teaching/evaluations.qmd</span>
 </td>
@@ -1198,7 +1201,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="25" data-listing-file-modified-sort="1767085291348" data-listing-reading-time-sort="4" data-listing-word-count-sort="725" data-listing-title-sort="Exams" data-listing-filename-sort="exams.qmd">
+<tr data-index="25" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="4" data-listing-word-count-sort="725" data-listing-title-sort="Exams" data-listing-filename-sort="exams.qmd">
 <td>
 <span class="listing-path">/teaching/exams.qmd</span>
 </td>
@@ -1211,7 +1214,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="26" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="1" data-listing-word-count-sort="189" data-listing-title-sort="LMS (Canvas)" data-listing-filename-sort="lms.qmd">
+<tr data-index="26" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="1" data-listing-word-count-sort="189" data-listing-title-sort="LMS (Canvas)" data-listing-filename-sort="lms.qmd">
 <td>
 <span class="listing-path">/teaching/lms.qmd</span>
 </td>
@@ -1224,7 +1227,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="27" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="5" data-listing-word-count-sort="859" data-listing-title-sort="Materials" data-listing-filename-sort="materials.qmd">
+<tr data-index="27" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="5" data-listing-word-count-sort="862" data-listing-title-sort="Materials" data-listing-filename-sort="materials.qmd">
 <td>
 <span class="listing-path">/teaching/materials.qmd</span>
 </td>
@@ -1237,7 +1240,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="28" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="12" data-listing-word-count-sort="2213" data-listing-title-sort="New course" data-listing-filename-sort="new_course.qmd">
+<tr data-index="28" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="12" data-listing-word-count-sort="2213" data-listing-title-sort="New course" data-listing-filename-sort="new_course.qmd">
 <td>
 <span class="listing-path">/teaching/new_course.qmd</span>
 </td>
@@ -1250,7 +1253,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="29" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Plagiarism" data-listing-filename-sort="plagiarism.qmd">
+<tr data-index="29" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Plagiarism" data-listing-filename-sort="plagiarism.qmd">
 <td>
 <span class="listing-path">/teaching/plagiarism.qmd</span>
 </td>
@@ -1263,7 +1266,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="30" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="2" data-listing-word-count-sort="287" data-listing-title-sort="Academic programs" data-listing-filename-sort="platforms_degree_programs_courses.qmd">
+<tr data-index="30" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="2" data-listing-word-count-sort="287" data-listing-title-sort="Academic programs" data-listing-filename-sort="platforms_degree_programs_courses.qmd">
 <td>
 <span class="listing-path">/teaching/platforms_degree_programs_courses.qmd</span>
 </td>
@@ -1276,7 +1279,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="31" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="1" data-listing-word-count-sort="106" data-listing-title-sort="Recommendations" data-listing-filename-sort="recommendations.qmd">
+<tr data-index="31" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="1" data-listing-word-count-sort="106" data-listing-title-sort="Recommendations" data-listing-filename-sort="recommendations.qmd">
 <td>
 <span class="listing-path">/teaching/recommendations.qmd</span>
 </td>
@@ -1289,7 +1292,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="32" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="2" data-listing-word-count-sort="321" data-listing-title-sort="Teaching reports (LUFV)" data-listing-filename-sort="reports.qmd">
+<tr data-index="32" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="2" data-listing-word-count-sort="321" data-listing-title-sort="Teaching reports (LUFV)" data-listing-filename-sort="reports.qmd">
 <td>
 <span class="listing-path">/teaching/reports.qmd</span>
 </td>
@@ -1302,7 +1305,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="33" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="2" data-listing-word-count-sort="294" data-listing-title-sort="Reviews" data-listing-filename-sort="reviews.qmd">
+<tr data-index="33" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="2" data-listing-word-count-sort="294" data-listing-title-sort="Reviews" data-listing-filename-sort="reviews.qmd">
 <td>
 <span class="listing-path">/teaching/reviews.qmd</span>
 </td>
@@ -1315,7 +1318,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="34" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="10" data-listing-word-count-sort="1802" data-listing-title-sort="Statement" data-listing-filename-sort="statement.qmd">
+<tr data-index="34" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="10" data-listing-word-count-sort="1802" data-listing-title-sort="Statement" data-listing-filename-sort="statement.qmd">
 <td>
 <span class="listing-path">/teaching/statement.qmd</span>
 </td>
@@ -1328,7 +1331,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="35" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="1" data-listing-word-count-sort="19" data-listing-title-sort="Stipends &amp; awards" data-listing-filename-sort="stipends_and_awards.qmd">
+<tr data-index="35" data-listing-file-modified-sort="1767099896120" data-listing-reading-time-sort="1" data-listing-word-count-sort="19" data-listing-title-sort="Stipends &amp; awards" data-listing-filename-sort="stipends_and_awards.qmd">
 <td>
 <span class="listing-path">/teaching/stipends_and_awards.qmd</span>
 </td>
@@ -1341,7 +1344,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="36" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="2" data-listing-word-count-sort="323" data-listing-title-sort="Systems for teaching" data-listing-filename-sort="systems.qmd">
+<tr data-index="36" data-listing-file-modified-sort="1767099896121" data-listing-reading-time-sort="2" data-listing-word-count-sort="323" data-listing-title-sort="Systems for teaching" data-listing-filename-sort="systems.qmd">
 <td>
 <span class="listing-path">/teaching/systems.qmd</span>
 </td>
@@ -1354,7 +1357,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="37" data-listing-file-modified-sort="1767085291349" data-listing-reading-time-sort="8" data-listing-word-count-sort="1582" data-listing-title-sort="Theses" data-listing-filename-sort="theses.qmd">
+<tr data-index="37" data-listing-file-modified-sort="1767099896121" data-listing-reading-time-sort="8" data-listing-word-count-sort="1582" data-listing-title-sort="Theses" data-listing-filename-sort="theses.qmd">
 <td>
 <span class="listing-path">/teaching/theses.qmd</span>
 </td>
@@ -1367,7 +1370,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="38" data-listing-file-modified-sort="1767085291350" data-listing-reading-time-sort="2" data-listing-word-count-sort="221" data-listing-title-sort="Team" data-listing-filename-sort="index.qmd">
+<tr data-index="38" data-listing-file-modified-sort="1767099896121" data-listing-reading-time-sort="2" data-listing-word-count-sort="221" data-listing-title-sort="Team" data-listing-filename-sort="index.qmd">
 <td>
 <span class="listing-path">/team/index.qmd</span>
 </td>
@@ -1878,71 +1881,72 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Handbook pages</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Consolidate <span class="co">[</span><span class="ot">github workflows</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/.github/workflows)</span>{target=_blank}.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Set repository secrets for actions (e.g., <span class="in">`LABOT_PAT_TOKEN`</span>).</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Imports: see new handbook (local import.py)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Structure: areas / processes / alphabetical (instead of johnny decimal)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Postprocessing:</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[x]</span> remove "tocs" on pages (generated automatically)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> visual check (images, figures, links)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> check/fix links</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Check for self-service boxes</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Check for Johnny-Decimal references (10.10, Section 20, ...)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Restructure and link nextcloud (e.g., confidential links to grades: lectures, theses, ...; archive; hr)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Search for references to the "digital work lab"</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Consolidate <span class="co">[</span><span class="ot">state model</span><span class="co">](/teaching/course_overview.html)</span> with process overview in <span class="co">[</span><span class="ot">courses</span><span class="co">](/courses/2026-SuSe-BDA.html#process)</span> - also add validation script</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Regular updates of the <span class="co">[</span><span class="ot">timeline</span><span class="co">](/management/statement.html#annual-cadence)</span> and <span class="co">[</span><span class="ot">here</span><span class="co">](/teaching/index.html)</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repositories</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Decide which repositories will remain in the old organization, and which ones will be moved.</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Upgrades to quarto:</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> theses</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> open-source-project</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> literature-review-seminar</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> digital-work-lecture</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> ... </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Change buttons from "Offered by digital work lab" to "Offered by ISE (Frankfurt School)"</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Search for references to the "digital work lab"</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Other</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> <span class="co">[</span><span class="ot">Labot account</span><span class="co">](https://github.com/digital-work-labot)</span>{target=_blank}</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Update affiliations and emails on <span class="co">[</span><span class="ot">profiles</span><span class="co">](https://digital-work-lab.github.io/handbook/docs/01.team.html#gerit-wagner-professor)</span>{target=_blank}</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team / alumni / recommendation letters / offboarding</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Change e-mail in submission systems</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Return library</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check: returning devices (will be collected by the IT service)</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pages that require an update for the transition</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>To mark pages that require changes, the <span class="in">`transition_status`</span> and <span class="in">`transition_comment`</span> fields can be added to the yaml header as follows:</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>title: "Resources"</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>transition_status: "toupdate"</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>transition_comment: "Update keys, lab access, printing/scanning, design, archive"</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>contents ....</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>Once the transition is implemented, the <span class="in">`transition_status`</span> can be changed to <span class="in">`updated`</span>.</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>listing:</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  title: "Pages to change"</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  contents: ../**</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>  type: table</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  sort: "path"</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  fields: <span class="co">[</span><span class="ot">path, title, transition_comment</span><span class="co">]</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  include:</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    transition_status: "toupdate"</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  page-size: 200</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> regularly run generate-projects-pages.py</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Set repository secrets for actions (e.g., <span class="in">`LABOT_PAT_TOKEN`</span>).</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Imports: see new handbook (local import.py)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Structure: areas / processes / alphabetical (instead of johnny decimal)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Postprocessing:</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[x]</span> remove "tocs" on pages (generated automatically)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[x]</span> visual check (images, figures, links)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[x]</span> check/fix links</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Check for self-service boxes</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Check for Johnny-Decimal references (10.10, Section 20, ...)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Restructure and link nextcloud (e.g., confidential links to grades: lectures, theses, ...; archive; hr)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Search for references to the "digital work lab"</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Consolidate <span class="co">[</span><span class="ot">state model</span><span class="co">](/teaching/course_overview.html)</span> with process overview in <span class="co">[</span><span class="ot">courses</span><span class="co">](/courses/2026-SuSe-BDA.html#process)</span> - also add validation script</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Regular updates of the <span class="co">[</span><span class="ot">timeline</span><span class="co">](/management/statement.html#annual-cadence)</span> and <span class="co">[</span><span class="ot">here</span><span class="co">](/teaching/index.html)</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repositories</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Decide which repositories will remain in the old organization, and which ones will be moved.</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Upgrades to quarto:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> theses</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> open-source-project</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> literature-review-seminar</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> digital-work-lecture</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> ... </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Change buttons from "Offered by digital work lab" to "Offered by ISE (Frankfurt School)"</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Search for references to the "digital work lab"</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Other</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> <span class="co">[</span><span class="ot">Labot account</span><span class="co">](https://github.com/digital-work-labot)</span>{target=_blank}</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Update affiliations and emails on <span class="co">[</span><span class="ot">profiles</span><span class="co">](https://digital-work-lab.github.io/handbook/docs/01.team.html#gerit-wagner-professor)</span>{target=_blank}</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team / alumni / recommendation letters / offboarding</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Change e-mail in submission systems</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Return library</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check: returning devices (will be collected by the IT service)</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pages that require an update for the transition</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>To mark pages that require changes, the <span class="in">`transition_status`</span> and <span class="in">`transition_comment`</span> fields can be added to the yaml header as follows:</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>title: "Resources"</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>transition_status: "toupdate"</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>transition_comment: "Update keys, lab access, printing/scanning, design, archive"</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>contents ....</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Once the transition is implemented, the <span class="in">`transition_status`</span> can be changed to <span class="in">`updated`</span>.</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>listing:</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  title: "Pages to change"</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>  contents: ../**</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  type: table</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  sort: "path"</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  fields: <span class="co">[</span><span class="ot">path, title, transition_comment</span><span class="co">]</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  include:</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    transition_status: "toupdate"</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  page-size: 200</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

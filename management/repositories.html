@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -133,15 +133,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -710,7 +710,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 
 
 <p><a href="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml" target="_blank"><img src="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg" class="img-fluid" alt="Update Repositories"></a> <a href="https://github.com/organizations/fs-ise/repositories/new" target="_blank"><img src="https://img.shields.io/badge/Create-New%20Repository-blue.png" class="img-fluid" alt="Create Repository"></a></p>
-<p>TODO: link to <a href="../research/repo_setup.html">new research repository</a>, <a href="TODO">new teaching repository</a>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</p>
+<p>TODO: link to <a href="../research/repo_setup.html">new research repository</a>, <a href="../teaching/materials.html">new teaching repository</a>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2702,7 +2702,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Update Repositories](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg)</span><span class="co">](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml)</span>{target=_blank} <span class="co">[</span><span class="al">![Create Repository](https://img.shields.io/badge/Create-New%20Repository-blue)</span><span class="co">](https://github.com/organizations/fs-ise/repositories/new)</span>{target=_blank}</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>TODO: link to <span class="co">[</span><span class="ot">new research repository</span><span class="co">](../research/repo_setup.html)</span>, <span class="co">[</span><span class="ot">new teaching repository</span><span class="co">](TODO)</span>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>TODO: link to <span class="co">[</span><span class="ot">new research repository</span><span class="co">](/research/repo_setup.html)</span>, <span class="co">[</span><span class="ot">new teaching repository</span><span class="co">](/teaching/materials.html)</span>, etc. (showing pages explaining the use of templates instead of linking directly to new github repository)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Labot checks are currently implemented for *active paper (research)* repositories only.</span>
