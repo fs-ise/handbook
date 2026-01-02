@@ -138,7 +138,7 @@ def render_project_page(project: Dict[str, Any]) -> str:
     info_callout = f"""
 ::: {{.callout-note icon=false}}
 This page is auto-generated. The authoritative project metadata is stored in
-[`data/projects.yml`](https://github.com/fs-ise/handbook/tree/main/{L_PATH.as_posix()}).
+[`data/projects.yml`](https://github.com/fs-ise/handbook/tree/main/{L_PATH.as_posix()}){{target=_blank}}.
 :::
 """.strip()
 
