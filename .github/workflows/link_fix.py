@@ -207,11 +207,7 @@ def candidates_for_quarto_source(file_path: Path, link: str, repo_root: Path) ->
 
 def is_templated_link(dest: str) -> bool:
     d = dest.strip()
-    # Hugo shortcode: {{< ... >}} or {{% ... %}}
-    if d.startswith(("{{<", "{{%")) and d.endswith((">}}", "%}}")):
-        return True
-    # Some people also use plain mustache templates
-    if d.startswith("{{") and d.endswith("}}"):
+    if d.startswith(("{{<", "{{%")):
         return True
     return False
 
