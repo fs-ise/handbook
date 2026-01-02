@@ -205,6 +205,17 @@ def candidates_for_quarto_source(file_path: Path, link: str, repo_root: Path) ->
     ]
 
 
+def is_templated_link(dest: str) -> bool:
+    d = dest.strip()
+    # Hugo shortcode: {{< ... >}} or {{% ... %}}
+    if d.startswith(("{{<", "{{%")) and d.endswith((">}}", "%}}")):
+        return True
+    # Some people also use plain mustache templates
+    if d.startswith("{{") and d.endswith("}}"):
+        return True
+    return False
+
+
 def check_internal_links(file_path: Path, repo_root: Path) -> list[tuple[str, list[Path]]]:
     """
     For each internal markdown link target, verify at least one plausible source exists.
@@ -215,6 +226,9 @@ def check_internal_links(file_path: Path, repo_root: Path) -> list[tuple[str, li
 
     for m in MARKDOWN_LINK_PATTERN.finditer(content):
         link = strip_chatgpt_utm(m.group("dest").strip())
+
+        if is_templated_link(link):
+            continue
 
         # Skip external and non-file links
         if link.startswith(("http://", "https://", "mailto:", "#", "tel:")):
