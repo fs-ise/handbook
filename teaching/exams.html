@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -131,6 +120,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -836,7 +836,7 @@ Note
 <li><a href="https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login" target="_blank">Login: FlexNow</a> - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</li>
 <li>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</li>
 <li>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</li>
-<li>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester: “Noten endgültig freischalten und verbuchen” (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71" target="_blank">14.01</a>). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</li>
+<li>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester: “Noten endgültig freischalten und verbuchen” (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71" target="_blank">Nextcloud</a>). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</li>
 <li>Only store grades as PDF (not as csv)?</li>
 <li>Klausuren entsprechend der Reihenfolge im PDF sortieren.</li>
 <li>The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.</li>
@@ -847,7 +847,7 @@ Note
 <li>“Teilnehmer hinzufügen”</li>
 <li>Noten eintragen</li>
 <li>Noten freigeben</li>
-<li>Noten als PDF in 14.02 ablegen (ggf. Excel-Datei löschen)</li>
+<li>Noten als PDF in Nextcloud ablegen (ggf. Excel-Datei löschen)</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1473,7 +1473,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</span>
 <span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</span>
 <span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester:</span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>"Noten endgültig freischalten und verbuchen" (<span class="co">[</span><span class="ot">14.01</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71)</span>{target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>"Noten endgültig freischalten und verbuchen" (<span class="co">[</span><span class="ot">Nextcloud</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&amp;fileid=71)</span>{target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</span>
 <span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Only store grades as PDF (not as csv)?</span>
 <span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Klausuren entsprechend der Reihenfolge im PDF sortieren.</span>
 <span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.</span>
@@ -1484,7 +1484,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Teilnehmer hinzufügen"</span>
 <span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten eintragen</span>
 <span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten freigeben</span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten als PDF in 14.02 ablegen (ggf. Excel-Datei löschen)</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Noten als PDF in Nextcloud ablegen (ggf. Excel-Datei löschen)</span>
 <span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
 <span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>If grades cannot be entered, reach out to the FlexNow team via e-mail: <span class="co">[</span><span class="ot">flexnow@uni-bamberg.de</span><span class="co">](mailto:flexnow@uni-bamberg.de&gt;)</span>.</span>

@@ -122,6 +122,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -142,17 +153,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -732,7 +732,7 @@ Note
 <ul>
 <li>The <a href="https://formulare.uni-bamberg.de/lip/action/invoke.do?id=AUMeldung" target="_blank">sick leave form</a> must be filled out</li>
 <li>Doctor’s certificates must be sent to HR (contact person according to your employment type: <a href="https://www.uni-bamberg.de/abt-personal/" target="_blank">link</a>, e.g., Rosmarie Pielenhofer for student assistants)</li>
-<li>Student assistants must consult with their supervisor to reduce the <a href="https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.71.compliance.html#documentation-of-working-hours" target="_blank">working hours documented</a>, and add a note to the report</li>
+<li>Student assistants must consult with their supervisor to reduce the <a href="../management/compliance.html#documentation-of-working-hours" target="_blank">working hours documented</a>, and add a note to the report</li>
 <li>Upon returning to work, the <a href="https://formulare.uni-bamberg.de/lip/action/invoke.do?id=AUMeldung" target="_blank">AU form</a> must be filled out again</li>
 </ul>
 
@@ -1247,7 +1247,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">sick leave form</span><span class="co">](https://formulare.uni-bamberg.de/lip/action/invoke.do?id=AUMeldung)</span>{target=_blank} must be filled out</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Doctor's certificates must be sent to HR (contact person according to your employment type: <span class="co">[</span><span class="ot">link</span><span class="co">](https://www.uni-bamberg.de/abt-personal/)</span>{target=_blank}, e.g., Rosmarie Pielenhofer for student assistants)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Student assistants must consult with their supervisor to reduce the <span class="co">[</span><span class="ot">working hours documented</span><span class="co">](https://digital-work-lab.github.io/handbook/docs/10-lab/10_processes/10.71.compliance.html#documentation-of-working-hours)</span>{target=_blank}, and add a note to the report</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Student assistants must consult with their supervisor to reduce the <span class="co">[</span><span class="ot">working hours documented</span><span class="co">](/management/compliance.html#documentation-of-working-hours)</span>{target=_blank}, and add a note to the report</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Upon returning to work, the <span class="co">[</span><span class="ot">AU form</span><span class="co">](https://formulare.uni-bamberg.de/lip/action/invoke.do?id=AUMeldung)</span>{target=_blank} must be filled out again</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
