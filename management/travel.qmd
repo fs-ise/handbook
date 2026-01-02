@@ -10,24 +10,24 @@ This section is marked as "toupdate": completely update
 
 ```{mermaid}
 sequenceDiagram
-    Professor->>+Reisekostenstelle: Antrag auf Genehmigung einer Dienstreise
-    Reisekostenstelle->>+Professor: Genehmigter Antrag
-    Note over Professor: Buchen
-    Note over Professor: Konferenz (Rechnungen)
-    Professor->>+Reisekostenstelle: Reisekostenabrechnung (inkl. Rechnungen und Antrag)
-    Reisekostenstelle->>+Professor: Erstattung
-
+    Professor->>+Travel Expenses Office: Request for approval of a business trip
+    Travel Expenses Office->>+Professor: Approved request
+    Note over Professor: Booking
+    Note over Professor: Conference (receipts)
+    Professor->>+Travel Expenses Office: Travel expense reimbursement claim (including receipts and request)
+    Travel Expenses Office->>+Professor: Reimbursement
 ```
 
 ## Travel request
 
-- Create a new folder in [13 travel](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/13_travel&fileid=61){target=_blank} with a new ID (range: 13.001-13.999).
+- Create a new folder on [Nextcloud]({{< meta nextcloud.travel >}}){target=_blank} with a new ID.
 - Travel request via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
 
 ![Reisekostenmanagement](/assets/images/Screenshot_Reisekostenmanagement.JPG)
  
   - Select "Reisemanagement" -> "Neuer Genehmigungsantrag"
   - Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.
+
 - Air travel restrictions must be considered, in particular for short flights (2024-03-07_Rundschreiben Genehmigung von Flugreisen.pdf)
 
 ## Confirmation
@@ -35,18 +35,22 @@ sequenceDiagram
 - The applicant will receive the approval by email
 
 ## Travel
+
 - Collect receipts for expenses
   
 ## Hotel list 2025/2026
+
 [PDF](https://www.intranet.uni-bayreuth.de/pool/dokumente/personal-formulare/dr-hotel-hotelliste_freistaat_bybn_2024_inland.pdf){target=_blank}
 
 ## Reimbursement of expenses
 
-- via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
+- Via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
+
   - Select "Neuer Abrechnungsantrag"
   - Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.
+
 - Don’t forget to attach receipts, till vouchers, etc., as PDF
-- Save the complete PDF in the 13.XXX folder
+- Save the complete PDF in the travel folder on Nextcloud ([here]({{< meta nextcloud.travel >}}){target=_blank}).
 
 ::: callout-note
 > At the end of the settlement, all receipts/invoices must be attached to the "File Upload" section; otherwise, payment cannot be made! All original receipts must be retained by the traveler according to the statutory retention period (6 years / exception for projects: 10 years after the end of the project).

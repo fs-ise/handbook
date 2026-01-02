@@ -85,7 +85,7 @@ Grading
 Entering Grades into FlexNow
 
 - [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
-- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/03_seminars&fileid=72){target=_blank}.
+- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
 
 Documentation
 

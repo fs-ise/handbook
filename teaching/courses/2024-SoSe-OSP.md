@@ -73,11 +73,11 @@ Entering Grades into FlexNow
     - Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter
     - Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)
         - Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester:
-    "Noten endgültig freischalten und verbuchen" ([Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/01_lectures&fileid=71){target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)
+    "Noten endgültig freischalten und verbuchen" ([Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)
     - Only store grades as PDF (not as csv)?
     - Klausuren entsprechend der Reihenfolge im PDF sortieren.
 
-Grades are archived at [Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/02_projects&fileid=69){target=_blank}.
+Grades are archived at [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
 
 Sending exams to the examination office
 
