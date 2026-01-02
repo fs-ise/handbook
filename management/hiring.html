@@ -133,17 +133,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -153,6 +142,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -737,7 +737,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Confidential data is stored on the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/58?dir=/10-lab/11_hr" target="_blank">Nextcloud</a>.</p>
+<p>Confidential data is stored on the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files?dir=/10-lab/11_hr&amp;fileid=58" target="_blank">Nextcloud</a>.</p>
 </div>
 </div>
 <section id="processes" class="level2">
@@ -745,7 +745,7 @@ Note
 <section id="announcements" class="level3">
 <h3 class="anchored" data-anchor-id="announcements">Announcements</h3>
 <ul>
-<li>Create new section in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/11_hr&amp;fileid=58" target="_blank">hiring</a></li>
+<li>Create new section in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files?dir=/10-lab/11_hr&amp;fileid=58" target="_blank">hiring</a></li>
 <li>Check available budget</li>
 <li>Create position announcement based on the template for <a href="https://github.com/digital-work-lab/handbook/raw/main/assets/docs/Ausschreibung-HIWI-Stellen.docx" target="_blank">student assistant positions (HIWI)</a></li>
 <li>Promote open job position via several channels:
@@ -1415,14 +1415,14 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>::: resource</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Confidential data is stored on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/58?dir=/10-lab/11_hr)</span>{target=_blank}.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Confidential data is stored on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.hiring &gt;}})</span>{target=_blank}.</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Processes</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Announcements</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create new section in <span class="co">[</span><span class="ot">hiring</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/11_hr&amp;fileid=58)</span>{target=_blank}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create new section in <span class="co">[</span><span class="ot">hiring</span><span class="co">]({{&lt; meta nextcloud.hiring &gt;}})</span>{target=_blank}</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check available budget</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create position announcement based on the template for <span class="co">[</span><span class="ot">student assistant positions (HIWI)</span><span class="co">](https://github.com/digital-work-lab/handbook/raw/main/assets/docs/Ausschreibung-HIWI-Stellen.docx)</span>{target=_blank}</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Promote open job position via several channels:</span>

@@ -114,6 +114,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -134,17 +145,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -733,13 +733,12 @@ Note
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">sequenceDiagram
-    Professor-&gt;&gt;+Reisekostenstelle: Antrag auf Genehmigung einer Dienstreise
-    Reisekostenstelle-&gt;&gt;+Professor: Genehmigter Antrag
-    Note over Professor: Buchen
-    Note over Professor: Konferenz (Rechnungen)
-    Professor-&gt;&gt;+Reisekostenstelle: Reisekostenabrechnung (inkl. Rechnungen und Antrag)
-    Reisekostenstelle-&gt;&gt;+Professor: Erstattung
-
+    Professor-&gt;&gt;+Travel Expenses Office: Request for approval of a business trip
+    Travel Expenses Office-&gt;&gt;+Professor: Approved request
+    Note over Professor: Booking
+    Note over Professor: Conference (receipts)
+    Professor-&gt;&gt;+Travel Expenses Office: Travel expense reimbursement claim (including receipts and request)
+    Travel Expenses Office-&gt;&gt;+Professor: Reimbursement
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -749,7 +748,7 @@ Note
 <section id="travel-request" class="level2">
 <h2 class="anchored" data-anchor-id="travel-request">Travel request</h2>
 <ul>
-<li>Create a new folder in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/13_travel&amp;fileid=61" target="_blank">13 travel</a> with a new ID (range: 13.001-13.999).</li>
+<li>Create a new folder on <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/13_travel&amp;fileid=61" target="_blank">Nextcloud</a> with a new ID.</li>
 <li>Travel request via <a href="https://www.mitarbeiterservice.bayern.de/" target="_blank">Mitarbeiterservice Bayern</a></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -759,9 +758,9 @@ Note
 </figure>
 </div>
 <ul>
-<li>Select “Reisemanagement” -&gt; “Neuer Genehmigungsantrag”</li>
-<li>Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.</li>
-<li>Air travel restrictions must be considered, in particular for short flights (2024-03-07_Rundschreiben Genehmigung von Flugreisen.pdf)</li>
+<li><p>Select “Reisemanagement” -&gt; “Neuer Genehmigungsantrag”</p></li>
+<li><p>Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.</p></li>
+<li><p>Air travel restrictions must be considered, in particular for short flights (2024-03-07_Rundschreiben Genehmigung von Flugreisen.pdf)</p></li>
 </ul>
 </section>
 <section id="confirmation" class="level2">
@@ -783,13 +782,13 @@ Note
 <section id="reimbursement-of-expenses" class="level2">
 <h2 class="anchored" data-anchor-id="reimbursement-of-expenses">Reimbursement of expenses</h2>
 <ul>
-<li>via <a href="https://www.mitarbeiterservice.bayern.de/" target="_blank">Mitarbeiterservice Bayern</a>
+<li><p>Via <a href="https://www.mitarbeiterservice.bayern.de/" target="_blank">Mitarbeiterservice Bayern</a></p>
 <ul>
 <li>Select “Neuer Abrechnungsantrag”</li>
 <li>Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.</li>
 </ul></li>
-<li>Don’t forget to attach receipts, till vouchers, etc., as PDF</li>
-<li>Save the complete PDF in the 13.XXX folder</li>
+<li><p>Don’t forget to attach receipts, till vouchers, etc., as PDF</p></li>
+<li><p>Save the complete PDF in the travel folder on Nextcloud (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/13_travel&amp;fileid=61" target="_blank">here</a>).</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1312,24 +1311,24 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>sequenceDiagram</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    Professor-&gt;&gt;+Reisekostenstelle: Antrag auf Genehmigung einer Dienstreise</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    Reisekostenstelle-&gt;&gt;+Professor: Genehmigter Antrag</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    Note over Professor: Buchen</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    Note over Professor: Konferenz (Rechnungen)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    Professor-&gt;&gt;+Reisekostenstelle: Reisekostenabrechnung (inkl. Rechnungen und Antrag)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    Reisekostenstelle-&gt;&gt;+Professor: Erstattung</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Travel request</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a new folder in <span class="co">[</span><span class="ot">13 travel</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/13_travel&amp;fileid=61)</span>{target=_blank} with a new ID (range: 13.001-13.999).</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Travel request via <span class="co">[</span><span class="ot">Mitarbeiterservice Bayern</span><span class="co">](https://www.mitarbeiterservice.bayern.de/)</span>{target=_blank}</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="al">![Reisekostenmanagement](/assets/images/Screenshot_Reisekostenmanagement.JPG)</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Select "Reisemanagement" -&gt; "Neuer Genehmigungsantrag"</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    Professor-&gt;&gt;+Travel Expenses Office: Request <span class="kw">for</span> approval of a business trip</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    Travel Expenses Office-&gt;&gt;+Professor: Approved request</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    Note over Professor: Booking</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    Note over Professor: Conference (receipts)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    Professor-&gt;&gt;+Travel Expenses Office: Travel expense reimbursement claim (including receipts <span class="ot">and</span> request)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    Travel Expenses Office-&gt;&gt;+Professor: Reimbursement</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Travel request</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a new folder on <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.travel &gt;}})</span>{target=_blank} with a new ID.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Travel request via <span class="co">[</span><span class="ot">Mitarbeiterservice Bayern</span><span class="co">](https://www.mitarbeiterservice.bayern.de/)</span>{target=_blank}</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="al">![Reisekostenmanagement](/assets/images/Screenshot_Reisekostenmanagement.JPG)</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Select "Reisemanagement" -&gt; "Neuer Genehmigungsantrag"</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Air travel restrictions must be considered, in particular for short flights (2024-03-07_Rundschreiben Genehmigung von Flugreisen.pdf)</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confirmation</span></span>
@@ -1337,22 +1336,26 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The applicant will receive the approval by email</span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Travel</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Collect receipts for expenses</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hotel list 2025/2026</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">PDF</span><span class="co">](https://www.intranet.uni-bayreuth.de/pool/dokumente/personal-formulare/dr-hotel-hotelliste_freistaat_bybn_2024_inland.pdf)</span>{target=_blank}</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Collect receipts for expenses</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hotel list 2025/2026</span></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reimbursement of expenses</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">PDF</span><span class="co">](https://www.intranet.uni-bayreuth.de/pool/dokumente/personal-formulare/dr-hotel-hotelliste_freistaat_bybn_2024_inland.pdf)</span>{target=_blank}</span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>via <span class="co">[</span><span class="ot">Mitarbeiterservice Bayern</span><span class="co">](https://www.mitarbeiterservice.bayern.de/)</span>{target=_blank}</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Select "Neuer Abrechnungsantrag"</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don’t forget to attach receipts, till vouchers, etc., as PDF</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Save the complete PDF in the 13.XXX folder</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; At the end of the settlement, all receipts/invoices must be attached to the "File Upload" section; otherwise, payment cannot be made! All original receipts must be retained by the traveler according to the statutory retention period (6 years / exception for projects: 10 years after the end of the project).</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="at">:::</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reimbursement of expenses</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Via <span class="co">[</span><span class="ot">Mitarbeiterservice Bayern</span><span class="co">](https://www.mitarbeiterservice.bayern.de/)</span>{target=_blank}</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Select "Neuer Abrechnungsantrag"</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don’t forget to attach receipts, till vouchers, etc., as PDF</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Save the complete PDF in the travel folder on Nextcloud (<span class="co">[</span><span class="ot">here</span><span class="co">]({{&lt; meta nextcloud.travel &gt;}})</span>{target=_blank}).</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; At the end of the settlement, all receipts/invoices must be attached to the "File Upload" section; otherwise, payment cannot be made! All original receipts must be retained by the traveler according to the statutory retention period (6 years / exception for projects: 10 years after the end of the project).</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="at">:::</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

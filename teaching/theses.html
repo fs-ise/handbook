@@ -114,6 +114,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -123,17 +134,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -147,15 +147,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -801,7 +801,7 @@ Tip
 <p>The student and thesis advisor schedule a meeting to determine the topic and <strong>sign the topic confirmation</strong>. If the appointment is online, students can print and sign the confirmation, and send it to our <a href="https://www.uni-bamberg.de/digital-work/team/prof-dr-gerit-wagner/" target="_blank">postal address</a>. It is important that we receive <strong>two paper versions with original signatures</strong>:</p>
 <ul>
 <li>1 original with the signature of the professor and the student <strong>for the student</strong>.</li>
-<li>1 original with the signature of the professor and the student <strong>for archiving at the chair</strong> (added to the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files?dir=/10-lab/19_archive&amp;fileid=62" target="_blank">19-archive</a>).</li>
+<li>1 original with the signature of the professor and the student <strong>for archiving at the chair</strong> (added to the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/69?dir=/10-lab/14_grades" target="_blank">archive</a>).</li>
 </ul>
 <p>To <strong>complete the registration</strong>, the thesis advisor</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save topic confirmation (docx) in this repository and run</span></span>
@@ -809,7 +809,7 @@ Tip
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check and merge pull request</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>The script creates a folder in the <a href="https://github.com/digital-work-lab/theses-confidential/" target="_blank">theses overview</a>.</li>
-<li>Moves the documents to <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/30-30-teaching/35_theses&amp;fileid=124" target="_blank">35 - theses</a>.</li>
+<li>Moves the documents to <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/30-teaching/35_theses" target="_blank">Nextcloud</a>.</li>
 <li>Enters the <strong>topic</strong> of the thesis and <strong>date</strong> of the topic issue in the Word document (the date of the topic issue cannot be before the date of enrollment in the Word document; if the Word document cannot be found in the E-Mail history, students can share it):</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -832,7 +832,7 @@ Tip
 </section>
 <section id="advising" class="level2">
 <h2 class="anchored" data-anchor-id="advising">Advising</h2>
-<p>Notes on thesis advising and process are stored internally in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/30-30-teaching/35_theses&amp;fileid=124" target="_blank">35 - theses</a>.</p>
+<p>Notes on thesis advising and process are stored internally on <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/30-teaching/35_theses" target="_blank">Nextcloud</a>.</p>
 <p>Supervising principles</p>
 <ul>
 <li>Tell students that the exposé is completed (avoid a lengthy process before the actual thesis work starts)</li>
@@ -907,7 +907,7 @@ Note
 <li><p>The deadline is given by the examination office. Our goal is to grade theses within two weeks (the official deadline allows up to 4 months).</p></li>
 <li><p>Spell-check the review.</p></li>
 <li><p>The review and grade in paper form (signed by the professor) are sent to the examination office by the Team Assistant (no cover letter, Hauspost: Ref II/3).</p></li>
-<li><p>The review (PDF) is archived at <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/04_theses&amp;fileid=73" target="_blank">Nextcloud</a>. Materials in 35.XXX should be consolidated.</p></li>
+<li><p>The review (PDF) is archived at <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/69?dir=/10-lab/14_grades" target="_blank">Nextcloud</a>. Materials in 35.XXX should be consolidated.</p></li>
 <li><p>Grades are entered by the examination office.</p></li>
 <li><p>Students can check the grade via FlexNow.</p></li>
 <li><p>Invite the student to a feedback session using the following template:</p></li>
@@ -1545,7 +1545,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>It is important that we receive **two paper versions with original signatures**:</span>
 <span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 original with the signature of the professor and the student **for the student**.</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 original with the signature of the professor and the student **for archiving at the chair** (added to the <span class="co">[</span><span class="ot">19-archive</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files?dir=/10-lab/19_archive&amp;fileid=62)</span>{target=_blank}).</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 original with the signature of the professor and the student **for archiving at the chair** (added to the <span class="co">[</span><span class="ot">archive</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}).</span>
 <span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>To **complete the registration**, the thesis advisor</span>
 <span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
@@ -1556,7 +1556,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The script creates a folder in the <span class="co">[</span><span class="ot">theses overview</span><span class="co">](https://github.com/digital-work-lab/theses-confidential/)</span>{target=_blank}.</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Moves the documents to <span class="co">[</span><span class="ot">35 - theses</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/30-30-teaching/35_theses&amp;fileid=124)</span>{target=_blank}.</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Moves the documents to <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.theses &gt;}})</span>{target=_blank}.</span>
 <span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enters the **topic** of the thesis and **date** of the topic issue in the Word document (the date of the topic issue cannot be before the date of enrollment in the Word document; if the Word document cannot be found in the E-Mail history, students can share it):</span>
 <span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="al">![Registration](https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/thesis-registration.png)</span>{target=_blank}</span>
@@ -1577,7 +1577,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advising</span></span>
 <span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>Notes on thesis advising and process are stored internally in <span class="co">[</span><span class="ot">35 - theses</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/30-30-teaching/35_theses&amp;fileid=124)</span>{target=_blank}.</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>Notes on thesis advising and process are stored internally on <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.theses &gt;}})</span>{target=_blank}.</span>
 <span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>Supervising principles</span>
 <span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
@@ -1635,7 +1635,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The deadline is given by the examination office. Our goal is to grade theses within two weeks (the official deadline allows up to 4 months).</span>
 <span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spell-check the review.</span>
 <span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The review and grade in paper form (signed by the professor) are sent to the examination office by the Team Assistant (no cover letter, Hauspost: Ref II/3).</span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The review (PDF) is archived at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/?dir=/10-lab/14_grades/04_theses&amp;fileid=73)</span>{target=_blank}. Materials in 35.XXX should be consolidated.</span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The review (PDF) is archived at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}. Materials in 35.XXX should be consolidated.</span>
 <span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Grades are entered by the examination office.</span>
 <span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Students can check the grade via FlexNow.</span>
 <span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Invite the student to a feedback session using the following template:</span>
