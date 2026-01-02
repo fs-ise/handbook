@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -133,15 +122,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -153,6 +142,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -742,14 +742,14 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <p>This page contains an overview and links to method resources.</p>
 <section id="computational-analyses" class="level2">
 <h2 class="anchored" data-anchor-id="computational-analyses">Computational analyses</h2>
-<p>Python: recommendation to use <a href="https://fs-ise.github.io/handbook/docs/10-lab/17_today-i-learned/uv.html" target="_blank">uv</a> to manage dependencies or include them in a script.</p>
+<p>Python: recommendation to use <a href="../academy/how_to/uv.html" target="_blank">uv</a> to manage dependencies or include them in a script.</p>
 </section>
 <section id="literature-review" class="level2">
 <h2 class="anchored" data-anchor-id="literature-review">Literature review</h2>
 <ul>
-<li><a href="https://github.com/digital-work-lab/lrs_target_variable" target="_blank">lrs_target_variable</a>: A collection of literature reviews in IS</li>
-<li><a href="https://github.com/digital-work-lab/lr_tools" target="_blank">lr-tools</a>: A comprehensive overview of literature review tools</li>
-<li><a href="https://github.com/digital-work-lab/literature_reviews" target="_blank">literature_reviews</a>: An overview of the literature review discourse, including methods papers, editorials, etc.</li>
+<li><a href="https://fs-ise.github.io/literature-reviews-in-information-systems/" target="_blank">literature-reviews-in-information-systems</a>: A collection of literature reviews in IS</li>
+<li><a href="https://github.com/fs-ise/lr-tools" target="_blank">lr-tools</a>: A comprehensive overview of literature review tools</li>
+<li><a href="https://github.com/fs-ise/literature_reviews" target="_blank">literature_reviews</a>: An overview of the literature review discourse, including methods papers, editorials, etc.</li>
 <li><a href="literature_review.html">literature-review</a>: An overview of databases in IS</li>
 </ul>
 </section>
@@ -1268,13 +1268,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Computational analyses</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Python: recommendation to use <span class="co">[</span><span class="ot">uv</span><span class="co">](https://fs-ise.github.io/handbook/docs/10-lab/17_today-i-learned/uv.html)</span>{target=_blank} to manage dependencies or include them in a script.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Python: recommendation to use <span class="co">[</span><span class="ot">uv</span><span class="co">](/academy/how_to/uv.html)</span>{target=_blank} to manage dependencies or include them in a script.</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Literature review</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">lrs_target_variable</span><span class="co">](https://github.com/digital-work-lab/lrs_target_variable)</span>{target=_blank}: A collection of literature reviews in IS</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">lr-tools</span><span class="co">](https://github.com/digital-work-lab/lr_tools)</span>{target=_blank}: A comprehensive overview of literature review tools</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">literature_reviews</span><span class="co">](https://github.com/digital-work-lab/literature_reviews)</span>{target=_blank}: An overview of the literature review discourse, including methods papers, editorials, etc.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">literature-reviews-in-information-systems</span><span class="co">](https://fs-ise.github.io/literature-reviews-in-information-systems/)</span>{target=_blank}: A collection of literature reviews in IS</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">lr-tools</span><span class="co">](https://github.com/fs-ise/lr-tools)</span>{target=_blank}: A comprehensive overview of literature review tools</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">literature_reviews</span><span class="co">](https://github.com/fs-ise/literature_reviews)</span>{target=_blank}: An overview of the literature review discourse, including methods papers, editorials, etc.</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">literature-review</span><span class="co">](literature_review.html)</span>: An overview of databases in IS</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## SEM</span></span>
