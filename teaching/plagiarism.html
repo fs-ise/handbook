@@ -111,6 +111,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -131,28 +153,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -730,7 +730,7 @@ Note
 <h2 class="anchored" data-anchor-id="process">Process</h2>
 <ul>
 <li>Theses and seminar papers are checked for plagiarism using Turnitin.</li>
-<li>If plagiarism or an attempt at deception is detected, the grade will be “5.0” (not sufficient). The <a href="https://digital-work-lab.github.io/theses/docs/digital_tools.html" target="_blank">Guideline for the Use of Digital Tools</a> provides more details.</li>
+<li>If plagiarism or an attempt at deception is detected, the grade will be “5.0” (not sufficient). The <a href="https://fs-ise.github.io/theses/docs/digital_tools.html" target="_blank">Guideline for the Use of Digital Tools</a> provides more details.</li>
 <li>Cases of plagiarism are reported to the examination office (<a href="https://univis.uni-bamberg.de/formbot/dsc_3Danew_2Ftel_26dir_3Dzuv_2Fabtlg2_2Fref3a_26collection_3D2009w_2Fhuman_2Fpaeda_2Feleme_2Fbeglei_26ref_3Dtel" target="_blank">Benjamin Gödicke</a>, wiai.pruefungen@uni-bamberg.de), along with a summary and an assessment (extent and significance).</li>
 <li>Students are given the possibility to explain their case to the examination office.</li>
 </ul>
@@ -1261,7 +1261,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Process</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theses and seminar papers are checked for plagiarism using Turnitin.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If plagiarism or an attempt at deception is detected, the grade will be "5.0" (not sufficient). The <span class="co">[</span><span class="ot">Guideline for the Use of Digital Tools</span><span class="co">](https://digital-work-lab.github.io/theses/docs/digital_tools.html)</span>{target=_blank} provides more details.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If plagiarism or an attempt at deception is detected, the grade will be "5.0" (not sufficient). The <span class="co">[</span><span class="ot">Guideline for the Use of Digital Tools</span><span class="co">](https://fs-ise.github.io/theses/docs/digital_tools.html)</span>{target=_blank} provides more details.</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cases of plagiarism are reported to the examination office (<span class="co">[</span><span class="ot">Benjamin Gödicke</span><span class="co">](https://univis.uni-bamberg.de/formbot/dsc_3Danew_2Ftel_26dir_3Dzuv_2Fabtlg2_2Fref3a_26collection_3D2009w_2Fhuman_2Fpaeda_2Feleme_2Fbeglei_26ref_3Dtel)</span>{target=_blank},     wiai.pruefungen@uni-bamberg.de), along with a summary and an assessment (extent and significance).</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Students are given the possibility to explain their case to the examination office.</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
