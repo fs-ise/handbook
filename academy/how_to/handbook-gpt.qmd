@@ -31,11 +31,11 @@ The assistant’s tone remains respectful, mentoring, and collaborative. It supp
   "info": {
     "title": "Digital-Work Lab Handbook RAG",
     "version": "1.3.4",
-    "description": "Static RAG index published via GitHub Pages. Primary entry point is /rag/index.json. JSON chunk files are served from /rag/{path}. If a JSON chunk file is missing, the client must fetch the original Markdown from https://digital-work-lab.github.io/handbook/docs/{path}."
+    "description": "Static RAG index published via GitHub Pages. Primary entry point is /rag/index.json. JSON chunk files are served from /rag/{path}. If a JSON chunk file is missing, the client must fetch the original Markdown from https://fs-ise.github.io/handbook/docs/{path}."
   },
   "servers": [
     {
-      "url": "https://digital-work-lab.github.io/handbook"
+      "url": "https://fs-ise.github.io/handbook"
     }
   ],
   "paths": {
@@ -66,11 +66,11 @@ The assistant’s tone remains respectful, mentoring, and collaborative. It supp
                           },
                           "json_url": {
                             "type": "string",
-                            "description": "URL to prebuilt JSON under /rag/, e.g. https://digital-work-lab.github.io/handbook/rag/research/survey.json"
+                            "description": "URL to prebuilt JSON under /rag/, e.g. https://fs-ise.github.io/handbook/rag/research/survey.json"
                           },
                           "md_url": {
                             "type": "string",
-                            "description": "Fallback: Markdown on GitHub Pages under /docs/, e.g. https://digital-work-lab.github.io/handbook/docs/research/survey.qmd"
+                            "description": "Fallback: Markdown on GitHub Pages under /docs/, e.g. https://fs-ise.github.io/handbook/docs/research/survey.qmd"
                           }
                         }
                       }
@@ -177,7 +177,7 @@ The assistant’s tone remains respectful, mentoring, and collaborative. It supp
               "text/markdown": {
                 "schema": {
                   "type": "string",
-                  "description": "Content retrieved from https://digital-work-lab.github.io/handbook/docs/{path}"
+                  "description": "Content retrieved from https://fs-ise.github.io/handbook/docs/{path}"
                 }
               }
             }

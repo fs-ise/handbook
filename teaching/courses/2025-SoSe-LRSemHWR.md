@@ -29,7 +29,7 @@ Status of Revisions | {{< meta improvement_status >}}
 {: .info }
 > Offered as part of HWR : [registration](https://lets-meet.org/reg/cdba4cb7f7742b71e7){target=_blank}
 > 
-> Website: [here](https://digital-work-lab.github.io/literature-review-seminar/2025_HWR/){target=_blank}.
+> Website: [here](https://fs-ise.github.io/literature-review-seminar/2025_HWR/){target=_blank}.
 
 ## 1. Announce the seminar (4 months before)
  
