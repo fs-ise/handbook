@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -131,6 +120,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -748,7 +748,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <li>Visibility may initially be set to private. It is essential <strong>not to publish confidential or copyright protected data</strong> (this may include primary data from surveys, or PDF documents with copyrights owned by publishers)</li>
 <li>Once published, the team decides to switch to public visibility.</li>
 <li>Appropriate linters should be activated.</li>
-<li>See <a href="https://github.com/digital-work-lab/repo_example" target="_blank">repo-example</a>, or <a href="https://github.com/julianprester/deep-cenic" target="_blank">deep-cenic</a> example.</li>
+<li>See <a href="https://github.com/fs-ise/repo-example" target="_blank">repo-example</a>, or <a href="https://github.com/julianprester/deep-cenic" target="_blank">deep-cenic</a> example.</li>
 </ul>
 </section>
 <section id="directory-structure" class="level2">
@@ -786,7 +786,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </section>
 <section id="docker" class="level2">
 <h2 class="anchored" data-anchor-id="docker">Docker</h2>
-<p>TODO : summarize the use of Docker containers <a href="https://github.com/digital-work-lab/repo_example" target="_blank">see analysis directory</a></p>
+<p>TODO : summarize the use of Docker containers <a href="https://github.com/fs-ise/repo-example" target="_blank">see analysis directory</a></p>
 </section>
 <section id="useful-links-and-textbooks" class="level2">
 <h2 class="anchored" data-anchor-id="useful-links-and-textbooks">Useful links and textbooks</h2>
@@ -1323,7 +1323,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visibility may initially be set to private. It is essential **not to publish confidential or copyright protected data** (this may include primary data from surveys, or PDF documents with copyrights owned by publishers)</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Once published, the team decides to switch to public visibility.</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Appropriate linters should be activated.</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>See <span class="co">[</span><span class="ot">repo-example</span><span class="co">](https://github.com/digital-work-lab/repo_example)</span>{target=_blank}, or <span class="co">[</span><span class="ot">deep-cenic</span><span class="co">](https://github.com/julianprester/deep-cenic)</span>{target=_blank} example.</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>See <span class="co">[</span><span class="ot">repo-example</span><span class="co">](https://github.com/fs-ise/repo-example)</span>{target=_blank}, or <span class="co">[</span><span class="ot">deep-cenic</span><span class="co">](https://github.com/julianprester/deep-cenic)</span>{target=_blank} example.</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Directory structure</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
@@ -1360,7 +1360,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Docker</span></span>
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>TODO : summarize the use of Docker containers <span class="co">[</span><span class="ot">see analysis directory</span><span class="co">](https://github.com/digital-work-lab/repo_example)</span>{target=_blank}</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>TODO : summarize the use of Docker containers <span class="co">[</span><span class="ot">see analysis directory</span><span class="co">](https://github.com/fs-ise/repo-example)</span>{target=_blank}</span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Useful links and textbooks</span></span>
 <span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
