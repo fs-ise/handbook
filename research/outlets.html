@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -131,6 +120,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -960,7 +960,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li><a href="https://www.sciencedirect.com/journal/european-journal-of-operational-research" target="_blank">European Journal of Operational Research (EJOR)</a></li>
 <li><a href="http://www.nowpublishers.com/ISY" target="_blank">Foundations and Trends in Information Systems (FTIS)</a></li>
 <li><a href="https://hbr.org/" target="_blank">Harvard Business Review (HBR)</a></li>
-<li><a href="https://ieeeaccess.ieee.org/about-ieee-access/learn-more-about-ieee-access/" target="_blank">IEEE Access</a></li>
+<li><a href="https://ieeeaccess.ieee.org/" target="_blank">IEEE Access</a></li>
 </ul>
 </section>
 <section id="conferences" class="level2">
@@ -1016,7 +1016,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <section id="library" class="level2">
 <h2 class="anchored" data-anchor-id="library">Library</h2>
 <ul>
-<li><a href="https://katalog.ub.uni-bamberg.de/TouchPoint/start.do?Language=de&amp;View=ubg&amp;Branch=6" target="_blank">Bamberger Katalog</a></li>
+<li><a href="https://katalog.ub.uni-bamberg.de/vufind/" target="_blank">Bamberger Katalog</a></li>
 </ul>
 </section>
 <section id="access" class="level2">
@@ -1574,7 +1574,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">European Journal of Operational Research (EJOR)</span><span class="co">](https://www.sciencedirect.com/journal/european-journal-of-operational-research)</span>{target=_blank}</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Foundations and Trends in Information Systems (FTIS)</span><span class="co">](http://www.nowpublishers.com/ISY)</span>{target=_blank}</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Harvard Business Review (HBR)</span><span class="co">](https://hbr.org/)</span>{target=_blank}</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">IEEE Access</span><span class="co">](https://ieeeaccess.ieee.org/about-ieee-access/learn-more-about-ieee-access/)</span>{target=_blank}</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">IEEE Access</span><span class="co">](https://ieeeaccess.ieee.org/)</span>{target=_blank}</span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conferences</span></span>
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
@@ -1618,7 +1618,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Library</span></span>
 <span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Bamberger Katalog</span><span class="co">](https://katalog.ub.uni-bamberg.de/TouchPoint/start.do?Language=de&amp;View=ubg&amp;Branch=6)</span>{target=_blank}</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Bamberger Katalog</span><span class="co">](https://katalog.ub.uni-bamberg.de/vufind/)</span>{target=_blank}</span>
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access</span></span>
 <span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
