@@ -6,7 +6,7 @@ degree_program:
 semester: 2024-WiSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000109_20250126_WS24_25-DW-Sem-M__Literature_Review_Seminar.pdf)"
-improvement_issue: "https://github.com/digital-work-lab/literature-review-seminar/issues/31"
+improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/31"
 improvement_status: in-progress
 ---
 
@@ -66,11 +66,11 @@ Start: April (summer term), October (winter term)
 Grading
 
 - [x] Create reminder for the deadline.
-- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
+- [x] Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
 - [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
 
 Documentation

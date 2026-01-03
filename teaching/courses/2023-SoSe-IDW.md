@@ -6,7 +6,7 @@ degree_program:
 semester: 2023-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000032_20230709_SS23-Evaluation-Digital-Work-EDW-B.pdf)"
-improvement_issue: "https://github.com/digital-work-lab/digital-work-lecture/issues/7"
+improvement_issue: "https://github.com/fs-ise/digital-work-lecture/issues/7"
 improvement_status: completed
 ---
 

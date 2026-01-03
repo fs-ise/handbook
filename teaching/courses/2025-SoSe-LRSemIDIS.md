@@ -6,7 +6,7 @@ degree_program:
 semester: 2025-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000131_20250708_SS25_LRSem_IDIS.pdf)"
-improvement_issue: "https://github.com/digital-work-lab/literature-review-seminar/issues/221"
+improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/221"
 improvement_status: N/A
 ---
 

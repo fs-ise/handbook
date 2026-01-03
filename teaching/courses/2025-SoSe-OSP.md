@@ -6,7 +6,7 @@ degree_program:
 semester: 2025-SoSe
 status: completed
 student_evaluations: ""
-improvement_issue: "https://github.com/digital-work-lab/open-source-project/issues/189"
+improvement_issue: "https://github.com/fs-ise/open-source-project/issues/189"
 improvement_status: N/A
 ---
 
@@ -81,11 +81,11 @@ Start: April (summer term), October (winter term)
 Grading
 
 - [x] Create reminder for the deadline.
-- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
+- [x] Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
 - [ ] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
 
 Documentation

@@ -6,7 +6,7 @@ degree_program:
 semester: 2024-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000087_20240719_SS24-DW-Sem-M__Literature_review_seminar.pdf)"
-improvement_issue: "https://github.com/digital-work-lab/literature-review-seminar/issues/6"
+improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/6"
 improvement_status: completed
 ---
 
@@ -65,12 +65,12 @@ Start: April (summer term), October (winter term)
 Grading
 
 - [x] Create reminder for the deadline.
-- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
+- [x] Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
 - [x] Have failed exams reviewed by a second professor (?)
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
 
     - [Login: FlexNow](https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login){target=_blank} - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden
     - Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter

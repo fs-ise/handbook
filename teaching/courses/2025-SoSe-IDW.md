@@ -6,7 +6,7 @@ degree_program:
 semester: 2025-SoSe
 status: completed
 student_evaluations: "[student_evaluations](/assets/student_evaluations/000135_20250719_SS25_IDW.pdf)"
-improvement_issue: "https://github.com/digital-work-lab/digital-work-lecture/issues/121"
+improvement_issue: "https://github.com/fs-ise/digital-work-lecture/issues/121"
 improvement_status: N/A
 ---
 
@@ -77,12 +77,12 @@ Grading
 - [x] Create reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).
 - [x] Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".
 - [x] Do not dispose of empty exams
-- [x] Use the [grading scripts](https://github.com/digital-work-lab/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
+- [x] Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
 - [x] Have failed exams reviewed by a second professor
 
 Entering Grades into FlexNow
 
-- [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/digital-work-lab/handbook/tree/main/src/scheine){target=_blank})).
+- [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
 - [x] Professor: Archive bonus exercises (if any).
 
 Sending exams to the examination office

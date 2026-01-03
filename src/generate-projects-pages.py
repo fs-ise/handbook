@@ -31,7 +31,7 @@ def _request_access_html(link: Optional[str]) -> str:
     if not _is_github(link):
         return "—"
     url = (
-        "https://github.com/digital-work-lab/handbook/issues/new"
+        "https://github.com/fs-ise/handbook/issues/new"
         "?assignees=geritwagner"
         "&labels=access+request"
         "&template=request-repo-access.md"
