@@ -1,15 +1,14 @@
 from __future__ import annotations
 
-from pathlib import Path
-import re
-from typing import Iterable
 import os
-from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
+import re
+from pathlib import Path
+from typing import Iterable
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 repo = os.getenv("GITHUB_REPOSITORY")  # e.g., "fs-ise/handbook"
-sha = os.getenv("GITHUB_SHA")         # commit being checked
+sha = os.getenv("GITHUB_SHA")  # commit being checked
 server = os.getenv("GITHUB_SERVER_URL", "https://github.com")
-
 
 # Match inline markdown http(s) links (but NOT images):
 #   [text](http...)
@@ -18,15 +17,12 @@ server = os.getenv("GITHUB_SERVER_URL", "https://github.com")
 #
 # The (?<!\!) prevents matching image syntax: ![alt](...)
 MARKDOWN_HTTP_LINK_PATTERN = re.compile(
-    r'(?<!\!)\[(?P<text>[^\]]+)\]\((?P<url>http[^\)]+)\)(?P<attrs>\{[^}]*\})?'
+    r"(?<!\!)\[(?P<text>[^\]]+)\]\((?P<url>http[^\)]+)\)(?P<attrs>\{[^}]*\})?"
 )
 
 # Match ANY inline markdown link (but NOT images):
 #   [text](dest)
-MARKDOWN_LINK_PATTERN = re.compile(
-    r'(?<!\!)\[(?P<text>[^\]]+)\]\((?P<dest>[^)]+)\)'
-)
-
+MARKDOWN_LINK_PATTERN = re.compile(r"(?<!\!)\[(?P<text>[^\]]+)\]\((?P<dest>[^)]+)\)")
 
 SKIP_URL_SUBSTRINGS = ("img.shields.io",)
 
@@ -207,9 +203,7 @@ def candidates_for_quarto_source(file_path: Path, link: str, repo_root: Path) ->
 
 def is_templated_link(dest: str) -> bool:
     d = dest.strip()
-    if d.startswith(("{{<", "{{%")):
-        return True
-    return False
+    return d.startswith(("{{<", "{{%"))
 
 
 def check_internal_links(file_path: Path, repo_root: Path) -> list[tuple[str, list[Path]]]:
@@ -275,6 +269,61 @@ def write_broken_links_report(
             f.write("\n")
 
 
+def sort_lycheeignore_file(path: Path) -> bool:
+    """
+    Sort a lychee ignore file alphabetically (removing duplicates).
+
+    - Keeps comment lines (starting with '#') in their original order, at the top.
+    - Keeps a single blank line between comments and the sorted block (if comments exist).
+    - Dedupes and sorts non-empty, non-comment lines case-insensitively.
+    """
+    if not path.exists():
+        return False
+
+    original = path.read_text(encoding="utf-8").splitlines()
+
+    comments: list[str] = []
+    entries: list[str] = []
+
+    for line in original:
+        s = line.strip()
+        if not s:
+            continue
+        if s.startswith("#"):
+            comments.append(line.rstrip())
+        else:
+            entries.append(s)
+
+    # Dedupe while preserving first-seen casing
+    seen_lower: set[str] = set()
+    deduped: list[str] = []
+    for e in entries:
+        key = e.lower()
+        if key in seen_lower:
+            continue
+        seen_lower.add(key)
+        deduped.append(e)
+
+    deduped_sorted = sorted(deduped, key=lambda x: x.lower())
+
+    out_lines: list[str] = []
+    if comments:
+        out_lines.extend(comments)
+        out_lines.append("")  # separator
+
+    out_lines.extend(deduped_sorted)
+    out_text = "\n".join(out_lines).rstrip() + "\n"
+
+    before = path.read_text(encoding="utf-8")
+    if before != out_text:
+        path.write_text(out_text, encoding="utf-8")
+        print(f"Sorted {path}")
+        return True
+
+    print(f"No changes needed in {path}")
+    return False
+
+
 def main() -> None:
     root = Path.cwd()
 
@@ -292,6 +341,11 @@ def main() -> None:
             broken[fp] = b
 
     write_broken_links_report(broken, repo_root=root)
+
+    # 3) Sort lychee ignore file alphabetically (remove duplicates)
+    #    Lychee typically uses ".lycheeignore", but we handle "lycheeignore" too.
+    sort_lycheeignore_file(root / ".lycheeignore")
+    sort_lycheeignore_file(root / "lycheeignore")
 
 
 if __name__ == "__main__":
