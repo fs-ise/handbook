@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -133,17 +133,6 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -153,6 +142,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -783,7 +783,7 @@ Note
 </div>
 </div>
 <p>The paper development process is based on Markdown, Git, Docker, Pandoc, and CSL. The goal is to support the collaborative writing process effectively, building on powerful open-source tools and facilitating the efficient production of documents for submission.</p>
-<p>Start your manuscript development by using the <a href="https://github.com/digital-work-lab/paper-template" target="_blank">Markdown template</a>. This template provides a structured format for your initial drafts, helping to organize content efficiently.</p>
+<p>Start your manuscript development by using the <a href="https://github.com/fs-ise/paper-template" target="_blank">Markdown template</a>. This template provides a structured format for your initial drafts, helping to organize content efficiently.</p>
 </section>
 <section id="initial-setup" class="level2">
 <h2 class="anchored" data-anchor-id="initial-setup">Initial setup</h2>
@@ -833,7 +833,7 @@ Note
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:digital-work-lab/paper-template.git</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:fs-ise/paper-template.git</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># MANUALLY rename the folder using a short project title</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the .git directory containing older versions</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> .git</span>
@@ -865,7 +865,7 @@ Note
 </div>
 <p>Option 2: Contribute to an existing repository</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull repository</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:digital-work-lab/...</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:fs-ise/...</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pre-commit</span> install</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="set-up-the-paper-production-pipeline" class="level3">
@@ -876,7 +876,7 @@ Note
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MANUALLY select templates for DOCX/TeX by updating the link at the beginning of the Makefile</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Citation styles can be selected <a href="https://github.com/citation-style-language/styles" target="_blank">here</a>.</li>
-<li>Templates are available <a href="https://github.com/digital-work-lab/templates" target="_blank">here</a>.</li>
+<li>Templates are available <a href="https://github.com/fs-ise/templates" target="_blank">here</a>.</li>
 </ul>
 </section>
 <section id="build-the-paper" class="level3">
@@ -910,7 +910,7 @@ Note
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/edit-paper-github.gif" class="img-fluid figure-img" target="_blank"></p>
+<p><img src="https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-github.gif" class="img-fluid figure-img" target="_blank"></p>
 <figcaption>Illustration</figcaption>
 </figure>
 </div>
@@ -940,7 +940,7 @@ Note
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/edit-paper-codespaces.gif" class="img-fluid figure-img" target="_blank"></p>
+<p><img src="https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-codespaces.gif" class="img-fluid figure-img" target="_blank"></p>
 <figcaption>Illustration</figcaption>
 </figure>
 </div>
@@ -970,7 +970,7 @@ Note
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/edit-paper-local.gif" class="img-fluid figure-img" target="_blank"></p>
+<p><img src="https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-local.gif" class="img-fluid figure-img" target="_blank"></p>
 <figcaption>Illustration</figcaption>
 </figure>
 </div>
@@ -1757,7 +1757,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>The paper development process is based on Markdown, Git, Docker, Pandoc, and CSL. The goal is to support the collaborative writing process effectively, building on powerful open-source tools and facilitating the efficient production of documents for submission.</span>
 <span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>Start your manuscript development by using the <span class="co">[</span><span class="ot">Markdown template</span><span class="co">](https://github.com/digital-work-lab/paper-template)</span>{target=_blank}. This template provides a structured format for your initial drafts, helping to organize content efficiently.</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>Start your manuscript development by using the <span class="co">[</span><span class="ot">Markdown template</span><span class="co">](https://github.com/fs-ise/paper-template)</span>{target=_blank}. This template provides a structured format for your initial drafts, helping to organize content efficiently.</span>
 <span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Initial setup</span></span>
 <span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a></span>
@@ -1805,7 +1805,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Manual setup" collapse=true}</span>
 <span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
-<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:digital-work-lab/paper-template.git</span>
+<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:fs-ise/paper-template.git</span>
 <span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a><span class="co"># MANUALLY rename the folder using a short project title</span></span>
 <span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the .git directory containing older versions</span></span>
 <span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> .git</span>
@@ -1839,7 +1839,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
 <span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a><span class="co"># pull repository</span></span>
-<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:digital-work-lab/...</span>
+<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:fs-ise/...</span>
 <span id="cb19-106"><a href="#cb19-106" aria-hidden="true" tabindex="-1"></a><span class="ex">pre-commit</span> install</span>
 <span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a></span>
@@ -1853,7 +1853,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb19-116"><a href="#cb19-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-117"><a href="#cb19-117" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-118"><a href="#cb19-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Citation styles can be selected <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/citation-style-language/styles)</span>{target=_blank}.</span>
-<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Templates are available <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/digital-work-lab/templates)</span>{target=_blank}.</span>
+<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Templates are available <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/templates)</span>{target=_blank}.</span>
 <span id="cb19-120"><a href="#cb19-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-121"><a href="#cb19-121" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3: Build the paper</span></span>
 <span id="cb19-122"><a href="#cb19-122" aria-hidden="true" tabindex="-1"></a></span>
@@ -1874,7 +1874,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb19-137"><a href="#cb19-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No setup required.</span>
 <span id="cb19-138"><a href="#cb19-138" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-139"><a href="#cb19-139" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Short illustration" collapse=true}</span>
-<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration](https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/edit-paper-github.gif)</span>{target=_blank}</span>
+<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-github.gif)</span>{target=_blank}</span>
 <span id="cb19-141"><a href="#cb19-141" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb19-142"><a href="#cb19-142" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-143"><a href="#cb19-143" aria-hidden="true" tabindex="-1"></a><span class="fu">### Codespace edit</span></span>
@@ -1885,7 +1885,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb19-148"><a href="#cb19-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No setup required.</span>
 <span id="cb19-149"><a href="#cb19-149" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-150"><a href="#cb19-150" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Short illustration" collapse=true}</span>
-<span id="cb19-151"><a href="#cb19-151" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration](https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/edit-paper-codespaces.gif)</span>{target=_blank}</span>
+<span id="cb19-151"><a href="#cb19-151" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-codespaces.gif)</span>{target=_blank}</span>
 <span id="cb19-152"><a href="#cb19-152" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb19-153"><a href="#cb19-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-154"><a href="#cb19-154" aria-hidden="true" tabindex="-1"></a><span class="fu">### Local edit</span></span>
@@ -1896,7 +1896,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb19-159"><a href="#cb19-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requires some setup.</span>
 <span id="cb19-160"><a href="#cb19-160" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-161"><a href="#cb19-161" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Short illustration" collapse=true}</span>
-<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration](https://raw.githubusercontent.com/digital-work-lab/handbook/main/assets/images/edit-paper-local.gif)</span>{target=_blank}</span>
+<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-local.gif)</span>{target=_blank}</span>
 <span id="cb19-163"><a href="#cb19-163" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb19-164"><a href="#cb19-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-165"><a href="#cb19-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## Markdown hints {#markdown}</span></span>

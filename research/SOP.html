@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -144,15 +144,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -744,7 +744,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Use <a href="../research/writing_technical.html">Markdown</a> for manuscripts, presentations, and knowledge management.</li>
 <li>Use Git to version, collaborate, and share.</li>
 </ul>
-<p>The principles are reflected in the <a href="../research/writing_technical.html">paper template</a>, the <a href="../research/presentation.html">presentation template</a>, and the <a href="https://github.com/digital-work-lab/thesis-template" target="_blank">thesis template</a>.</p>
+<p>The principles are reflected in the <a href="../research/writing_technical.html">paper template</a>, the <a href="../research/presentation.html">presentation template</a>, and the <a href="https://github.com/fs-ise/thesis-template" target="_blank">thesis template</a>.</p>
 </section>
 <section id="ethics" class="level2">
 <h2 class="anchored" data-anchor-id="ethics">Ethics</h2>
@@ -1257,7 +1257,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use Git to version, collaborate, and share.</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>The principles are reflected in the <span class="co">[</span><span class="ot">paper template</span><span class="co">](/research/writing_technical.html)</span>, the <span class="co">[</span><span class="ot">presentation template</span><span class="co">](/research/presentation.html)</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>and the <span class="co">[</span><span class="ot">thesis template</span><span class="co">](https://github.com/digital-work-lab/thesis-template)</span>{target=_blank}.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>and the <span class="co">[</span><span class="ot">thesis template</span><span class="co">](https://github.com/fs-ise/thesis-template)</span>{target=_blank}.</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ethics</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
