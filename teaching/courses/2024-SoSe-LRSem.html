@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -131,17 +142,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -466,7 +466,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </tr>
 <tr class="even">
 <td>Improvement Issue</td>
-<td><p>https://github.com/digital-work-lab/literature-review-seminar/issues/6</p></td>
+<td><p>https://github.com/fs-ise/literature-review-seminar/issues/6</p></td>
 </tr>
 <tr class="odd">
 <td>Status of Revisions</td>
@@ -518,12 +518,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <p>Grading</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Create reminder for the deadline.</label></li>
-<li><label><input type="checkbox" checked="">Use the <a href="https://github.com/digital-work-lab/handbook/tree/main/src/grading" target="_blank">grading scripts</a> to assign grades and prepare FlexNow import</label></li>
+<li><label><input type="checkbox" checked="">Use the <a href="https://github.com/fs-ise/handbook/tree/main/src/grading" target="_blank">grading scripts</a> to assign grades and prepare FlexNow import</label></li>
 <li><label><input type="checkbox" checked="">Have failed exams reviewed by a second professor (?)</label></li>
 </ul>
 <p>Entering Grades into FlexNow</p>
 <ul>
-<li><p><label><input type="checkbox" checked="">Team Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow (<a href="https://github.com/digital-work-lab/handbook/tree/main/src/scheine" target="_blank">script</a>)).</label></p>
+<li><p><label><input type="checkbox" checked="">Team Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow (<a href="https://github.com/fs-ise/handbook/tree/main/src/scheine" target="_blank">script</a>)).</label></p>
 <ul>
 <li><a href="https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login" target="_blank">Login: FlexNow</a> - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</li>
 <li>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</li>
@@ -1048,7 +1048,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">semester:</span><span class="co"> 2024-SoSe</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">status:</span><span class="co"> completed</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">student_evaluations:</span><span class="co"> "[student_evaluations](/assets/student_evaluations/000087_20240719_SS24-DW-Sem-M__Literature_review_seminar.pdf)"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">improvement_issue:</span><span class="co"> "https://github.com/digital-work-lab/literature-review-seminar/issues/6"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">improvement_issue:</span><span class="co"> "https://github.com/fs-ise/literature-review-seminar/issues/6"</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">improvement_status:</span><span class="co"> completed</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
@@ -1107,12 +1107,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>Grading</span>
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Create reminder for the deadline.</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Have failed exams reviewed by a second professor (?)</span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/digital-work-lab/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="co">[</span><span class="ot">Login: FlexNow</span><span class="co">](https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login)</span>{target=_blank} - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</span>
