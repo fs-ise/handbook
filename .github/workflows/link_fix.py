@@ -223,6 +223,8 @@ def check_internal_links(file_path: Path, repo_root: Path) -> list[tuple[str, li
         # Skip external and non-file links
         if link.startswith(("http://", "https://", "mailto:", "#", "tel:")):
             continue
+        if link in ["{nc[k]}"]:
+            continue
 
         # Skip assets (png/jpg/etc.), shields, etc.
         if any(s in link for s in SKIP_URL_SUBSTRINGS):
