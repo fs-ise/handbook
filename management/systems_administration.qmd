@@ -19,7 +19,22 @@ Access to shared files:
 - [Nextcloud: shared dirs](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/sharingout){target=_blank}
 - [Nextcloud: shared links](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/sharinglinks){target=_blank}
 
-<!-- 
+Nextcloud directories:
+
+```{python}
+#| echo: false
+#| output: asis
+from pathlib import Path
+import yaml
+
+cfg = yaml.safe_load(Path("../_quarto.yml").read_text(encoding="utf-8"))
+nc = cfg.get("nextcloud", {})
+
+for k in sorted(nc):
+  print(f"- [{k}]({nc[k]})")
+
+```
+
 ## GitHub
 
 - Accounts are created [here](https://github.com/join){target=_blank}
