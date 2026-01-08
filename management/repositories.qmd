@@ -5,35 +5,46 @@ execute:
   warning: false
 ---
 
-[![Update Repositories](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg)](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml){target=_blank} [![Create Repository](https://img.shields.io/badge/Create-New%20Repository-blue)](https://github.com/organizations/fs-ise/repositories/new){target=_blank}
-
-TODO: link to [new research repository](/research/repo_setup.html), [new teaching repository](/teaching/materials.html), etc. (showing pages explaining the use of templates instead of linking directly to new github repository)
-
-::: callout-note
-Labot checks are currently implemented for *active paper (research)* repositories only.
-:::
+[![](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg)](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml){target=_blank}
 
 ::: self-service
 To request access, click on the button next to the relevant repository.
 To create a new repository, create an [issue](https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&labels=repo+creation&template=request-repository-creation.md&title=%5BRepository+Request%5D+Request+for+new+repository){target=_blank}.
+
+[![](https://img.shields.io/badge/Create-New%20Repository-blue)](https://github.com/organizations/fs-ise/repositories/new){target=_blank}
+
+Resources: 
+
+- [new research repository](/research/repo_setup.html)
+- [new teaching repository](/teaching/materials.html)
+:::
+
+::: {.callout-note title="Legend"}
+🟢 active · 🟠 inactive · 🗄️ archived (archive). Public repositories show a <img src="https://img.shields.io/badge/Public-green" alt="Public"> badge.
+
+Labot checks (currently implemented for *active paper* repositories only): 🚨 Labot checks failing · ❓ Labot checks not found.
 :::
 
 ```{python}
 import json
 from pathlib import Path
 
-# Adjust if this file lives elsewhere
 data_path = Path("../assets/repos.json")
 repos = json.loads(data_path.read_text(encoding="utf-8"))
 repos = [r for r in repos if r.get("name") != ".github"]
 
+def visibility_badge(repo):
+    if repo.get("visibility") == "Public":
+        return '<img src="https://img.shields.io/badge/Public-green" alt="Public">'
+    return ""
+
 def status_cell(repo, show_labot=False):
     if repo.get("archived"):
-        status = '<span style="color: red;">🔒 Archived</span>'
+        status = '<span style="color: red;">🗄️</span>'
     elif repo.get("updated_recently", False):
-        status = '<span style="color: green;">🟢 Active</span>'
+        status = '<span style="color: green;">🟢</span>'
     else:
-        status = '<span style="color: orange;">🟠 Inactive</span>'
+        status = '<span style="color: orange;">🟠</span>'
 
     if show_labot:
         labot = repo.get("labot_workflow_status", "not-applicable")
@@ -41,17 +52,16 @@ def status_cell(repo, show_labot=False):
             status += " ❓"
         elif labot not in ("success", "not-applicable"):
             status += f' <a href="{repo["html_url"]}/actions/workflows/labot.yml" target="_blank">🚨</a>'
-    return status
 
-def visibility_cell(repo):
-    if repo.get("visibility") == "Public":
-        return '<img src="https://img.shields.io/badge/Public-green" alt="Public">'
-    return ""
+    badge = visibility_badge(repo)
+    if badge:
+        status += f" {badge}"
+    return status
 
 def collaborators_cell(repo):
     collabs = repo.get("collaborators") or []
     if not collabs:
-        return "None"
+        return ""
     return ", ".join(
         f'<a href="https://github.com/{c}" target="_blank">{c}</a>'
         for c in collabs
@@ -75,7 +85,6 @@ def access_cell():
     )
 
 def repo_sort_key(repo):
-    # Sort by what users see in the table
     return (repo.get("title") or repo.get("name") or "").casefold()
 
 def render_rows(filtered_repos,
@@ -95,7 +104,6 @@ def render_rows(filtered_repos,
             continue
         candidates.append(repo)
 
-    # Alphabetical within each category/group
     candidates.sort(key=repo_sort_key)
 
     rows = []
@@ -103,11 +111,10 @@ def render_rows(filtered_repos,
         rows.append(f"""<tr>
   <td>{repo_link(repo, with_colrev_icon=with_colrev_icon)}</td>
   <td>{status_cell(repo, show_labot=show_labot)}</td>
-  <td>{visibility_cell(repo)}</td>
   <td>{collaborators_cell(repo)}</td>
   <td>{access_cell()}</td>
 </tr>""")
-    return "\\n".join(rows)
+    return "\n".join(rows)
 
 general_repos = [r for r in repos if r.get("area") not in ("research", "teaching")]
 teaching_repos = [r for r in repos if r.get("area") == "teaching"]
@@ -124,7 +131,6 @@ html = f'''
     <tr>
       <th style="width: 50%;">Repository</th>
       <th style="width: 10%;">Status</th>
-      <th style="width: 10%;">Visibility</th>
       <th style="width: 20%;">Collaborators</th>
       <th style="width: 10%;">Access</th>
     </tr>
@@ -147,7 +153,6 @@ html = f'''
     <tr>
       <th style="width: 50%;">Repository</th>
       <th style="width: 10%;">Status</th>
-      <th style="width: 10%;">Visibility</th>
       <th style="width: 20%;">Collaborators</th>
       <th style="width: 10%;">Access</th>
     </tr>
@@ -192,7 +197,6 @@ html = f'''
     <tr>
       <th style="width: 50%;">Repository</th>
       <th style="width: 10%;">Status</th>
-      <th style="width: 10%;">Visibility</th>
       <th style="width: 20%;">Collaborators</th>
       <th style="width: 10%;">Access</th>
     </tr>
