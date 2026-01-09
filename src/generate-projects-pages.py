@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+import shutil
 
 import yaml
 
@@ -11,7 +12,6 @@ ROOT = Path(__file__).resolve().parents[1]
 L_PATH = Path("data/projects.yml")
 DATA_FILE = ROOT / L_PATH
 OUT_DIR = ROOT / "research/projects"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Internal paper pages (site-relative, avoids 0.0.0.0:4200)
 PAPERS_BASE_PATH = "/research/papers"
@@ -165,7 +165,22 @@ Status | `{status}`
     return _frontmatter(project) + "\n" + body
 
 
+def _clear_out_dir(out_dir: Path) -> None:
+    """Remove all files/subdirs in research/projects before regenerating pages."""
+    if not out_dir.exists():
+        return
+    for p in out_dir.iterdir():
+        if p.is_file() or p.is_symlink():
+            p.unlink()
+        elif p.is_dir():
+            shutil.rmtree(p)
+
+
 def main() -> None:
+    # Start by removing all files in research/projects
+    _clear_out_dir(OUT_DIR)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+
     projects = yaml.safe_load(DATA_FILE.read_text(encoding="utf-8"))
     if not isinstance(projects, list):
         raise SystemExit("projects.yml must be a list of project entries")
