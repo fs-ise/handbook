@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -133,6 +133,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -142,17 +153,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 </style>
@@ -794,7 +794,7 @@ Note
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</span>
 <span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Exam grading and documentation</span></span>
@@ -811,13 +811,13 @@ Note
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).</span>
 <span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".</span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Do not dispose of empty exams</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
 <span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students</span>
 <span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Have failed exams reviewed by a second professor (must be completed before entering grades in FlexNow)</span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive bonus exercises (if any).</span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>Sending exams to the examination office</span>
@@ -928,7 +928,7 @@ Note
 <span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for protocol submissions (upload in VC).</span>
 <span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the presentation.</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Grading and documentation</span></span>
@@ -936,11 +936,11 @@ Note
 <span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>Grading</span>
 <span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline.</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
 <span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>Documentation</span>
@@ -1038,7 +1038,7 @@ Note
 <span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for pull-request evaluation.</span>
 <span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the code review session.</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
@@ -1047,11 +1047,11 @@ Note
 <span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>Grading</span>
 <span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline.</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
 <span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>Documentation</span>
@@ -1609,13 +1609,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>Courses are <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/teaching/courses)</span>{target=_blank}.</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>Courses are <span class="co">[</span><span class="ot">here</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/teaching/courses)</span>{target=_blank}.</span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>To set up a new lecture, seminar, or project:</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add a <span class="co">[</span><span class="ot">new module</span><span class="co">](#new-module)</span> if necessary.</span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Announcement and scheduling is documented <span class="co">[</span><span class="ot">here</span><span class="co">](/teaching/new_course.html)</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a <span class="co">[</span><span class="ot">new lecture, seminar, or project</span><span class="co">](https://github.com/fs-ise/handbook/new/main/_courses)</span>{target=_blank} with this filename pattern: <span class="in">`2023-SuSe-IDW.md`</span> based on the right template:</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a <span class="co">[</span><span class="ot">new lecture, seminar, or project</span><span class="co">]({{&lt; meta handbook.url &gt;}}/new/main/_courses)</span>{target=_blank} with this filename pattern: <span class="in">`2023-SuSe-IDW.md`</span> based on the right template:</span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Lecture template" collapse=true}</span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
@@ -1682,7 +1682,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</span>
 <span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Exam grading and documentation</span></span>
@@ -1699,13 +1699,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).</span>
 <span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".</span>
 <span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Do not dispose of empty exams</span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
 <span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students</span>
 <span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Have failed exams reviewed by a second professor (must be completed before entering grades in FlexNow)</span>
 <span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive bonus exercises (if any).</span>
 <span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>Sending exams to the examination office</span>
@@ -1807,7 +1807,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for protocol submissions (upload in VC).</span>
 <span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the presentation.</span>
-<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Grading and documentation</span></span>
@@ -1815,11 +1815,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>Grading</span>
 <span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline.</span>
-<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
 <span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a>Documentation</span>
@@ -1910,7 +1910,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb4-313"><a href="#cb4-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for pull-request evaluation.</span>
 <span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the code review session.</span>
-<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
 <span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a></span>
@@ -1919,11 +1919,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a>Grading</span>
 <span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-323"><a href="#cb4-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline.</span>
-<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
+<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use the <span class="co">[</span><span class="ot">grading scripts</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/grading)</span>{target=_blank} to assign grades and prepare FlexNow import</span>
 <span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">](https://github.com/fs-ise/handbook/tree/main/src/scheine)</span>{target=_blank})).</span>
+<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
 <span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a>Documentation</span>

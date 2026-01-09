@@ -120,17 +120,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="https://cdn.jsdelivr.net/npm/rrule/dist/es5/rrule.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -142,17 +131,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -162,6 +140,28 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -579,7 +579,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </div>
 <p>To subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise_cal.ical</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To add or modify events, edit the <code>events.yaml</code> file <a href="?meta:repo-url-main/edit/main/assets/calendar/events.yaml" target="_blank">here</a>.</p>
+<p>To add or modify events, edit the <code>events.yaml</code> file <a href="https://github.com/fs-ise/handbook/edit/main/assets/calendar/events.yaml" target="_blank">here</a>.</p>
 </div>
 </div>
 </div>
@@ -1279,11 +1279,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise_cal.ical</span></span>
 <span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>To add or modify events, edit the <span class="in">`events.yaml`</span> file <span class="co">[</span><span class="ot">here</span><span class="co">]({{&lt; meta repo-url-main &gt;}}/edit/main/assets/calendar/events.yaml)</span>{target=_blank}.</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>To add or modify events, edit the <span class="in">`events.yaml`</span> file <span class="co">[</span><span class="ot">here</span><span class="co">]({{&lt; meta handbook.url &gt;}}/edit/main/assets/calendar/events.yaml)</span>{target=_blank}.</span>
 <span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"assets/calendar/calendar.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"assets/calendar/calendar.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

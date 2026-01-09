@@ -131,15 +131,15 @@ div.csl-indent {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -153,6 +153,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -162,17 +173,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -1135,10 +1135,10 @@ Note
 <li>We are excited about the possibility of publishing it in Journal XXX.</li>
 </ul>
 </section>
-<section id="links-and-materials" class="level1">
-<h1>Links and materials</h1>
+<section id="links-and-materials" class="level2">
+<h2 class="anchored" data-anchor-id="links-and-materials">Links and materials</h2>
 <ul>
-<li><a href="?meta:repo-url-main/tree/main/assets/Revision-Sheet.docx">Word template</a> for revisions in non-Git-based projects.</li>
+<li><a href="https://github.com/fs-ise/handbook/tree/main/assets/Revision-Sheet.docx">Word template</a> for revisions in non-Git-based projects.</li>
 </ul>
 
 
@@ -1663,7 +1663,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Admin</span></span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Forward decision to coauthors and clarify who leads the revision</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update status and history in <span class="co">[</span><span class="ot">data/projects.yaml</span><span class="co">](https://github.com/fs-ise/handbook/blob/main/data/projects.yml)</span>{target=_blank}.</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update status and history in <span class="co">[</span><span class="ot">data/projects.yaml</span><span class="co">]({{&lt; meta handbook.url &gt;}}/blob/main/data/projects.yml)</span>{target=_blank}.</span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Study the review package</span></span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Step back**: After receiving the review package, take a break to calm any emotional reactions. This helps in assimilating feedback more objectively.</span>
@@ -1955,9 +1955,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb7-311"><a href="#cb7-311" aria-hidden="true" tabindex="-1"></a><span class="in">- It was a pleasure to see how much the paper has developed with the constructive feedback of the review team.</span></span>
 <span id="cb7-312"><a href="#cb7-312" aria-hidden="true" tabindex="-1"></a><span class="in">- We are excited about the possibility of publishing it in Journal XXX.</span></span>
 <span id="cb7-313"><a href="#cb7-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-314"><a href="#cb7-314" aria-hidden="true" tabindex="-1"></a><span class="in"># Links and materials</span></span>
+<span id="cb7-314"><a href="#cb7-314" aria-hidden="true" tabindex="-1"></a><span class="in">## Links and materials</span></span>
 <span id="cb7-315"><a href="#cb7-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-316"><a href="#cb7-316" aria-hidden="true" tabindex="-1"></a><span class="in">- [Word template]({{&lt; meta repo-url-main &gt;}}/tree/main/assets/Revision-Sheet.docx) for revisions in non-Git-based projects.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb7-316"><a href="#cb7-316" aria-hidden="true" tabindex="-1"></a><span class="in">- [Word template]({{&lt; meta handbook.url &gt;}}/tree/main/assets/Revision-Sheet.docx) for revisions in non-Git-based projects.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
