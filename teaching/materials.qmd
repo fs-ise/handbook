@@ -1,17 +1,12 @@
 ---
 title: "Materials"
-transition_status: "toupdate"
-transition_comment: "update 'Additionals checks (VC)"
 ---
-
-::: callout-note
-This section is marked as "toupdate": update 'Additionals checks (VC)
-:::
 
 Best practices and resources for preparing teaching materials.
 
 ## Repositories (materials)
 
+<!--
 ### Big Data and Analytics (BDA)
 
 - Materials: [repository](https://github.com/fs-ise/big-data-analytics){target=_blank}
@@ -34,18 +29,25 @@ Best practices and resources for preparing teaching materials.
 ### Literature Review Seminar (LRSem)
 
 - Materials: [repository](https://github.com/fs-ise/literature-review-seminar){target=_blank}
+-->
+
+| Course                               | Materials Repository                                                                 | Exams Repository                                                                     |
+|--------------------------------------|----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| **Big Data and Analytics (BDA)**     | [repository](https://github.com/fs-ise/big-data-analytics)                             | [repository](https://github.com/fs-ise/big-data-analytics-exams)                     |
+| **IT Security Management (ITSecM)**  | [repository](https://github.com/fs-ise/it-security-management)                         | [repository](https://github.com/fs-ise/it-security-management-exams)                 |
+| **Introduction to Digital Work (IDW)** | [repository](https://github.com/fs-ise/digital-work-lecture)                         | [repository](https://github.com/fs-ise/digital-work-lecture-exam)                    |
+| **Open Source Project (OSP)**        | [repository](https://github.com/fs-ise/open-source-project)                            | —                                                                                     |
+| **Literature Review Seminar (LRSem)** | [repository](https://github.com/fs-ise/literature-review-seminar)                    | —                                                                                     |
+
 
 ## Input
 
 - Check other courses [here](platforms_degree_programs_courses.html)
 - Create an overview of related courses in the REAMDE.md file.
 
-## Page
-
-- Each course should have a separate repository and page. 
-- Options to provide feedback should be linked on the first page.
-
 ## Repository setup
+
+We use [Quarto](https://quarto.org/) for our teaching materials.
 
 A teaching repository contains
 
@@ -53,12 +55,29 @@ A teaching repository contains
 - Detailed teaching notes allow teaching assistants to replicate it quickly.
 - Links related to continuous improvement: **feedback**, **evaluations**, **improvement**.
 - Add branch protection rule for `main`: restrict deletions and block force pushes
+- Each course should have a separate repository and page. 
+- Options to provide feedback should be linked on the first page.
 
 Additional checks:
 
 - Dates, rooms, and links should be in one place to prevent inconsistent information.
 - VC links never point to a specific course but to a search in VC (e.g., for the [project](https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B){target=_blank}).
 - Teaching contents are licensed under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/deed.en){target=_blank} per default.
+
+## Slides
+
+- Slides are in reveal-js.
+- HTML and PDF versions are automatically generated (e.g., GitHub actions).
+- Learning objectives should be on all slides (verifiable outcomes).
+- Use markers for tasks/questions (see [example](https://fs-ise.github.io/literature-review-seminar/output/01-goals.html#4){target=_blank})
+
+- [simplemenu](https://github.com/martinomagnifico/quarto-simplemenu)
+- [pointer](https://github.com/quarto-ext/pointer)
+- [custom callouts](https://quarto.thecoatlessprofessor.com/custom-callout/)
+- [downloadthis](https://github.com/shafayetShafee/downloadthis)
+- [code animations](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)
+- [countdown timer](https://github.com/gadenbuie/countdown) (link exercise sheets on slides)
+- [flashcards for quick questions with solutions displayed on pressing `q`](https://github.com/parmsam/quarto-webcam)
 
 ## Notebooks and exercises
 
@@ -69,19 +88,17 @@ Resources
 - [CodeRefinery on Jupyter Notebooks](https://coderefinery.github.io/jupyter/){target=_blank}
 - [Exercise worksheets with Jupyter notebooks](https://www.epfl.ch/education/educational-initiatives/jupyter-notebooks-for-education/teaching-and-learning-with-jupyter-notebooks/exercise-worksheets-with-jupyter-notebooks/){target=_blank}
 - [Example 1](https://github.com/yaozeliang/Python-100-exercises-notebook){target=_blank}
-- [Example 2](https://github.com/jerry-git/learn-python3?tab=readme-ov-file){target=_blank}
+- [Example 2](https://github.com/jerry-git/learn-python3){target=_blank}
+- [Live code running](https://r-wasm.github.io/quarto-live/)
+- [assign](https://github.com/coatless-quarto/assign)
+- [downloadthis](https://github.com/shafayetShafee/downloadthis)
 
-## Slides
-
-- Slides are in Markdown.
-- HTML and PDF versions are automatically generated (e.g., GitHub actions).
-- Learning objectives should be on all slides (verifiable outcomes).
-- Use markers for tasks/questions (see [example](https://fs-ise.github.io/literature-review-seminar/output/01-goals.html#4){target=_blank})
 
 ## Teaching notes
 
 - Teaching notes are shared and updated regularly.
 
+```Markdown
 ### Week 1: Topics (Teaching notes)
 
 | Time (min) | Duration  | Topic                                                                          | Additional materials                           |
@@ -111,25 +128,6 @@ Summarize lessons learned.
 
 &lt;div class=&quot;page-break&quot;&gt;&lt;/div&gt;
 :::
-## Terminal animations (asciinema)
-
-Installation
-
-```sh
-pip install asciinema
-git clone https://github.com/asciinema/agg
-cd agg
-docker build -t agg .
-```
-
-Recording and conversion
-
-```sh
-asciinema rec demo.cast
-# code ...
-# ctrl+d to quit
-# convert:
-docker run --rm -it -u $(id -u):$(id -g) -v $PWD:/data agg demo.cast demo.gif
 ```
 
 ## Feedback
@@ -159,6 +157,62 @@ blockquote {
 - Setup of exercises
 - Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)
 
+::: {.callout-note title="Quarto extensions" collapse=true}
+https://github.com/jmbuhr/quarto-qrcode
+
+https://github.com/fradav/quarto-revealjs-animate
+https://github.com/ofkoru/quarto-animate-graph
+
+https://github.com/parmsam/quarto-excalidraw
+
+https://github.com/gadenbuie/quarto-now
+https://github.com/parmsam/quarto-subtitles
+https://github.com/EmilHvitfeldt/quarto-revealjs-highlightword
+https://github.com/produnis/quarto-cheatsheet
+https://github.com/ofkoru/quarto-leader-line
+
+https://github.com/parmsam/quarto-quizdown (interactive - incompatible with PDF export)
+
+https://github.com/shafayetShafee/interactive-sql
+
+https://github.com/peter-gy/quarto-gradio
+https://quarto.thecoatlessprofessor.com/pyodide/
+https://github.com/coatless-quarto/pyodide
+https://github.com/quarto-ext/shinylive
+https://github.com/coatless/quarto-webr?tab=readme-ov-file
+
+https://github.com/EmilHvitfeldt/quarto-snow
+
+https://github.com/quarto-ext/fontawesome
+
+https://parmsam.github.io/quarto-github-corner/
+:::
+
 ## Resources
 
 - [Instructor guide](https://coderefinery.github.io/documentation/guide/){target=_blank}
+- [awesome quarto](https://github.com/mcanouil/awesome-quarto)
+- [Slidecrafting: Making beautiful slides with reveal.js and Quarto](https://slidecrafting-book.com/)
+- revealjs editor (slides.com): ai prompts limited (generating many slides, or changing text fields) - cannot do animations with it. limited import/export (for quarto/revealjs) - only complex/full htm.
+
+::: {.callout-note title="Terminal animations (asciinema)" collapse=true}
+
+Installation
+
+```sh
+pip install asciinema
+git clone https://github.com/asciinema/agg
+cd agg
+docker build -t agg .
+```
+
+Recording and conversion
+
+```sh
+asciinema rec demo.cast
+# code ...
+# ctrl+d to quit
+# convert:
+docker run --rm -it -u $(id -u):$(id -g) -v $PWD:/data agg demo.cast demo.gif
+```
+:::
