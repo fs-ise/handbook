@@ -1214,7 +1214,7 @@
     "href": "teaching/materials.html#repository-setup",
     "title": "Materials",
     "section": "Repository setup",
-    "text": "Repository setup\nWe use Quarto for our teaching materials.\nA teaching repository contains\n\nA syllabus (example)\nDetailed teaching notes allow teaching assistants to replicate it quickly.\nLinks related to continuous improvement: feedback, evaluations, improvement.\nAdd branch protection rule for main: restrict deletions and block force pushes\nEach course should have a separate repository and page.\nOptions to provide feedback should be linked on the first page.\n\nAdditional checks:\n\nDates, rooms, and links should be in one place to prevent inconsistent information.\nVC links never point to a specific course but to a search in VC (e.g., for the project).\nTeaching contents are licensed under the CC-BY license per default.",
+    "text": "Repository setup\nWe use Quarto for our teaching materials.\nA teaching repository contains\n\nPDFs should be generated through make pdfs (a make -&gt; quarto render -&gt; decktape chain, as in bda).\nA syllabus (example)\nDetailed teaching notes allow teaching assistants to replicate it quickly.\nLinks related to continuous improvement: feedback, evaluations, improvement.\nAdd branch protection rule for main: restrict deletions and block force pushes\nEach course should have a separate repository and page.\nOptions to provide feedback should be linked on the first page.\n\nAdditional checks:\n\nDates, rooms, and links should be in one place to prevent inconsistent information.\nVC links never point to a specific course but to a search in VC (e.g., for the project).\nTeaching contents are licensed under the CC-BY license per default.",
     "crumbs": [
       "Teaching",
       "Design",
@@ -1238,7 +1238,7 @@
     "href": "teaching/materials.html#notebooks-and-exercises",
     "title": "Materials",
     "section": "Notebooks and exercises",
-    "text": "Notebooks and exercises\nWe use Jupyter notebooks for exercises.\nResources:\n\nCodeRefinery on Jupyter Notebooks\nExercise worksheets with Jupyter notebooks\nExample 1\nExample 2\nLive code running\nassign\ndownloadthis",
+    "text": "Notebooks and exercises\nWe use Jupyter notebooks for exercises. The benefits of Jupyter notebooks are summarized by Vial & Negoita (2018):\n\nNo separation between code and pedagogical materials, no need to switch attention between materials for students.\nInteractive Python: re-running parts of the code (instead of the entire program) with variables and objects staying in memory.\nOption to include short problems for students.\n\nIdeally, Jupyter notebooks should be delivered through GitHub Codespaces to avoid individual setup problems (see Malan, 2024).\nResources:\n\nCodeRefinery on Jupyter Notebooks\nExercise worksheets with Jupyter notebooks\nExample 1\nExample 2\nLive code running\nassign\ndownloadthis",
     "crumbs": [
       "Teaching",
       "Design",
