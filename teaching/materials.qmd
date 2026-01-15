@@ -1,19 +1,21 @@
 ---
 title: "Materials"
+bibliography: ../assets/references.bib
+csl: ../assets/apa.csl
 ---
 
 Best practices and resources for preparing teaching materials.
 
 ## Repositories
 
-|        | Course                       | Materials Repository                                               | Exams Repository                                                         |
-|--------|------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------------|
+|        | Course                       | Materials Repository                                                              | Exams Repository                                                                        |
+|--------|------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | BDA    | Big Data and Analytics       | [repository](https://github.com/fs-ise/big-data-analytics){target=_blank}         | [repository](https://github.com/fs-ise/big-data-analytics-exams){target=_blank}         |
 | ITSecM | IT Security Management       | [repository](https://github.com/fs-ise/it-security-management){target=_blank}     | [repository](https://github.com/fs-ise/it-security-management-exams){target=_blank}     |
 | IDW    | Introduction to Digital Work | [repository](https://github.com/fs-ise/digital-work-lecture){target=_blank}       | [repository](https://github.com/fs-ise/digital-work-lecture-exam){target=_blank}        |
-| OSP    | Open Source Project          | [repository](https://github.com/fs-ise/open-source-project){target=_blank}        | —                                                                        |
-| LRSem  | Literature Review Seminar    | [repository](https://github.com/fs-ise/literature-review-seminar){target=_blank}  | —                                                                        |
-| Theses | Theses                       | [repository](https://github.com/fs-ise/theses){target=_blank}                     | —                                                                        |
+| OSP    | Open Source Project          | [repository](https://github.com/fs-ise/open-source-project){target=_blank}        | —                                                                                       |
+| LRSem  | Literature Review Seminar    | [repository](https://github.com/fs-ise/literature-review-seminar){target=_blank}  | —                                                                                       |
+| Theses | Theses                       | [repository](https://github.com/fs-ise/theses){target=_blank}                     | —                                                                                       |
 
 ## Input
 
@@ -26,6 +28,7 @@ We use [Quarto](https://quarto.org/){target=_blank} for our teaching materials.
 
 A teaching repository contains
 
+- PDFs should be generated through `make pdfs` (a `make` -> `quarto render` -> `decktape` chain, as in [bda](https://github.com/fs-ise/big-data-analytics){target=_blank}).
 - A syllabus ([example](https://fs-ise.github.io/open-source-project/docs/syllabus.html){target=_blank})
 - Detailed teaching notes allow teaching assistants to replicate it quickly.
 - Links related to continuous improvement: **feedback**, **evaluations**, **improvement**.
@@ -80,6 +83,13 @@ blockquote {
 ## Notebooks and exercises
 
 We use Jupyter notebooks for exercises.
+The benefits of Jupyter notebooks are summarized by @VialNegoita2018:
+
+- No separation between code and pedagogical materials, no need to switch attention between materials for students.
+- Interactive Python: re-running parts of the code (instead of the entire program) with variables and objects staying in memory.
+- Option to include short problems for students.
+
+Ideally, Jupyter notebooks should be delivered through GitHub Codespaces to avoid individual setup problems [see @Malan2024].
 
 Resources:
 
