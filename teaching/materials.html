@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -142,17 +153,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -716,37 +716,37 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <tr class="odd">
 <td>BDA</td>
 <td>Big Data and Analytics</td>
-<td><a href="https://github.com/fs-ise/big-data-analytics">repository</a></td>
-<td><a href="https://github.com/fs-ise/big-data-analytics-exams">repository</a></td>
+<td><a href="https://github.com/fs-ise/big-data-analytics" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/big-data-analytics-exams" target="_blank">repository</a></td>
 </tr>
 <tr class="even">
 <td>ITSecM</td>
 <td>IT Security Management</td>
-<td><a href="https://github.com/fs-ise/it-security-management">repository</a></td>
-<td><a href="https://github.com/fs-ise/it-security-management-exams">repository</a></td>
+<td><a href="https://github.com/fs-ise/it-security-management" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/it-security-management-exams" target="_blank">repository</a></td>
 </tr>
 <tr class="odd">
 <td>IDW</td>
 <td>Introduction to Digital Work</td>
-<td><a href="https://github.com/fs-ise/digital-work-lecture">repository</a></td>
-<td><a href="https://github.com/fs-ise/digital-work-lecture-exam">repository</a></td>
+<td><a href="https://github.com/fs-ise/digital-work-lecture" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/digital-work-lecture-exam" target="_blank">repository</a></td>
 </tr>
 <tr class="even">
 <td>OSP</td>
 <td>Open Source Project</td>
-<td><a href="https://github.com/fs-ise/open-source-project">repository</a></td>
+<td><a href="https://github.com/fs-ise/open-source-project" target="_blank">repository</a></td>
 <td>—</td>
 </tr>
 <tr class="odd">
 <td>LRSem</td>
 <td>Literature Review Seminar</td>
-<td><a href="https://github.com/fs-ise/literature-review-seminar">repository</a></td>
+<td><a href="https://github.com/fs-ise/literature-review-seminar" target="_blank">repository</a></td>
 <td>—</td>
 </tr>
 <tr class="even">
 <td>Theses</td>
 <td>Theses</td>
-<td><a href="https://github.com/fs-ise/theses">repository</a></td>
+<td><a href="https://github.com/fs-ise/theses" target="_blank">repository</a></td>
 <td>—</td>
 </tr>
 </tbody>
@@ -761,7 +761,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </section>
 <section id="repository-setup" class="level2">
 <h2 class="anchored" data-anchor-id="repository-setup">Repository setup</h2>
-<p>We use <a href="https://quarto.org/">Quarto</a> for our teaching materials.</p>
+<p>We use <a href="https://quarto.org/" target="_blank">Quarto</a> for our teaching materials.</p>
 <p>A teaching repository contains</p>
 <ul>
 <li>A syllabus (<a href="https://fs-ise.github.io/open-source-project/docs/syllabus.html" target="_blank">example</a>)</li>
@@ -788,13 +788,13 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p>Quarto extensions:</p>
 <ul>
-<li><a href="https://github.com/martinomagnifico/quarto-simplemenu">simplemenu</a></li>
-<li><a href="https://github.com/quarto-ext/pointer">pointer</a></li>
-<li><a href="https://quarto.thecoatlessprofessor.com/custom-callout/">custom callouts</a></li>
-<li><a href="https://github.com/shafayetShafee/downloadthis">downloadthis</a></li>
-<li><a href="https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations">code animations</a></li>
-<li><a href="https://github.com/gadenbuie/countdown">countdown timer</a> (link exercise sheets on slides)</li>
-<li><a href="https://github.com/parmsam/quarto-webcam">flashcards for quick questions with solutions displayed on pressing <code>q</code></a></li>
+<li><a href="https://github.com/martinomagnifico/quarto-simplemenu" target="_blank">simplemenu</a></li>
+<li><a href="https://github.com/quarto-ext/pointer" target="_blank">pointer</a></li>
+<li><a href="https://quarto.thecoatlessprofessor.com/custom-callout/" target="_blank">custom callouts</a></li>
+<li><a href="https://github.com/shafayetShafee/downloadthis" target="_blank">downloadthis</a></li>
+<li><a href="https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations" target="_blank">code animations</a></li>
+<li><a href="https://github.com/gadenbuie/countdown" target="_blank">countdown timer</a> (link exercise sheets on slides)</li>
+<li><a href="https://github.com/parmsam/quarto-webcam" target="_blank">flashcards for quick questions with solutions displayed on pressing <code>q</code></a></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Feedback">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -837,9 +837,9 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <li><a href="https://www.epfl.ch/education/educational-initiatives/jupyter-notebooks-for-education/teaching-and-learning-with-jupyter-notebooks/exercise-worksheets-with-jupyter-notebooks/" target="_blank">Exercise worksheets with Jupyter notebooks</a></li>
 <li><a href="https://github.com/yaozeliang/Python-100-exercises-notebook" target="_blank">Example 1</a></li>
 <li><a href="https://github.com/jerry-git/learn-python3" target="_blank">Example 2</a></li>
-<li><a href="https://r-wasm.github.io/quarto-live/">Live code running</a></li>
-<li><a href="https://github.com/coatless-quarto/assign">assign</a></li>
-<li><a href="https://github.com/shafayetShafee/downloadthis">downloadthis</a></li>
+<li><a href="https://r-wasm.github.io/quarto-live/" target="_blank">Live code running</a></li>
+<li><a href="https://github.com/coatless-quarto/assign" target="_blank">assign</a></li>
+<li><a href="https://github.com/shafayetShafee/downloadthis" target="_blank">downloadthis</a></li>
 </ul>
 </section>
 <section id="teaching-notes" class="level2">
@@ -900,8 +900,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
 <li><a href="https://coderefinery.github.io/documentation/guide/" target="_blank">Instructor guide</a></li>
-<li><a href="https://github.com/mcanouil/awesome-quarto">awesome quarto</a></li>
-<li><a href="https://slidecrafting-book.com/">Slidecrafting: Making beautiful slides with reveal.js and Quarto</a></li>
+<li><a href="https://github.com/mcanouil/awesome-quarto" target="_blank">awesome quarto</a></li>
+<li><a href="https://slidecrafting-book.com/" target="_blank">Slidecrafting: Making beautiful slides with reveal.js and Quarto</a></li>
 <li>revealjs editor (slides.com): ai prompts limited (generating many slides, or changing text fields) - cannot do animations with it. limited import/export (for quarto/revealjs) - only complex/full htm.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Terminal animations (asciinema)">
@@ -1476,12 +1476,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>        <span class="pp">|</span> Course                       <span class="pp">|</span> Materials Repository                                               <span class="pp">|</span> Exams Repository                                                         <span class="pp">|</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------------|</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> BDA    <span class="pp">|</span> Big Data and Analytics       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics)</span>         <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics-exams)</span>         <span class="pp">|</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ITSecM <span class="pp">|</span> IT Security Management       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management)</span>     <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management-exams)</span>     <span class="pp">|</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> IDW    <span class="pp">|</span> Introduction to Digital Work <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/digital-work-lecture)</span>       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/digital-work-lecture-exam)</span>        <span class="pp">|</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> OSP    <span class="pp">|</span> Open Source Project          <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/open-source-project)</span>        <span class="pp">|</span> —                                                                        <span class="pp">|</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LRSem  <span class="pp">|</span> Literature Review Seminar    <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/literature-review-seminar)</span>  <span class="pp">|</span> —                                                                        <span class="pp">|</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Theses <span class="pp">|</span> Theses                       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/theses)</span>                     <span class="pp">|</span> —                                                                        <span class="pp">|</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> BDA    <span class="pp">|</span> Big Data and Analytics       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics)</span>{target=_blank}         <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/big-data-analytics-exams)</span>{target=_blank}         <span class="pp">|</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ITSecM <span class="pp">|</span> IT Security Management       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management)</span>{target=_blank}     <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/it-security-management-exams)</span>{target=_blank}     <span class="pp">|</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> IDW    <span class="pp">|</span> Introduction to Digital Work <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/digital-work-lecture)</span>{target=_blank}       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/digital-work-lecture-exam)</span>{target=_blank}        <span class="pp">|</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> OSP    <span class="pp">|</span> Open Source Project          <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/open-source-project)</span>{target=_blank}        <span class="pp">|</span> —                                                                        <span class="pp">|</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LRSem  <span class="pp">|</span> Literature Review Seminar    <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/literature-review-seminar)</span>{target=_blank}  <span class="pp">|</span> —                                                                        <span class="pp">|</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Theses <span class="pp">|</span> Theses                       <span class="pp">|</span> <span class="co">[</span><span class="ot">repository</span><span class="co">](https://github.com/fs-ise/theses)</span>{target=_blank}                     <span class="pp">|</span> —                                                                        <span class="pp">|</span></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Input</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
@@ -1490,7 +1490,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repository setup</span></span>
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>We use <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> for our teaching materials.</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>We use <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span>{target=_blank} for our teaching materials.</span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>A teaching repository contains</span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
@@ -1516,13 +1516,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>Quarto extensions:</span>
 <span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">simplemenu</span><span class="co">](https://github.com/martinomagnifico/quarto-simplemenu)</span></span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pointer</span><span class="co">](https://github.com/quarto-ext/pointer)</span></span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">custom callouts</span><span class="co">](https://quarto.thecoatlessprofessor.com/custom-callout/)</span></span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">downloadthis</span><span class="co">](https://github.com/shafayetShafee/downloadthis)</span></span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">code animations</span><span class="co">](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)</span></span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">countdown timer</span><span class="co">](https://github.com/gadenbuie/countdown)</span> (link exercise sheets on slides)</span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">flashcards for quick questions with solutions displayed on pressing `q`</span><span class="co">](https://github.com/parmsam/quarto-webcam)</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">simplemenu</span><span class="co">](https://github.com/martinomagnifico/quarto-simplemenu)</span>{target=_blank}</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pointer</span><span class="co">](https://github.com/quarto-ext/pointer)</span>{target=_blank}</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">custom callouts</span><span class="co">](https://quarto.thecoatlessprofessor.com/custom-callout/)</span>{target=_blank}</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">downloadthis</span><span class="co">](https://github.com/shafayetShafee/downloadthis)</span>{target=_blank}</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">code animations</span><span class="co">](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)</span>{target=_blank}</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">countdown timer</span><span class="co">](https://github.com/gadenbuie/countdown)</span>{target=_blank} (link exercise sheets on slides)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">flashcards for quick questions with solutions displayed on pressing `q`</span><span class="co">](https://github.com/parmsam/quarto-webcam)</span>{target=_blank}</span>
 <span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Feedback" collapse=true}</span>
 <span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Limesurvey</span>
@@ -1555,9 +1555,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise worksheets with Jupyter notebooks</span><span class="co">](https://www.epfl.ch/education/educational-initiatives/jupyter-notebooks-for-education/teaching-and-learning-with-jupyter-notebooks/exercise-worksheets-with-jupyter-notebooks/)</span>{target=_blank}</span>
 <span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Example 1</span><span class="co">](https://github.com/yaozeliang/Python-100-exercises-notebook)</span>{target=_blank}</span>
 <span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Example 2</span><span class="co">](https://github.com/jerry-git/learn-python3)</span>{target=_blank}</span>
-<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Live code running</span><span class="co">](https://r-wasm.github.io/quarto-live/)</span></span>
-<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">assign</span><span class="co">](https://github.com/coatless-quarto/assign)</span></span>
-<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">downloadthis</span><span class="co">](https://github.com/shafayetShafee/downloadthis)</span></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Live code running</span><span class="co">](https://r-wasm.github.io/quarto-live/)</span>{target=_blank}</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">assign</span><span class="co">](https://github.com/coatless-quarto/assign)</span>{target=_blank}</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">downloadthis</span><span class="co">](https://github.com/shafayetShafee/downloadthis)</span>{target=_blank}</span>
 <span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teaching notes</span></span>
 <span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a></span>
@@ -1605,8 +1605,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
 <span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Instructor guide</span><span class="co">](https://coderefinery.github.io/documentation/guide/)</span>{target=_blank}</span>
-<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">awesome quarto</span><span class="co">](https://github.com/mcanouil/awesome-quarto)</span></span>
-<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Slidecrafting: Making beautiful slides with reveal.js and Quarto</span><span class="co">](https://slidecrafting-book.com/)</span></span>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">awesome quarto</span><span class="co">](https://github.com/mcanouil/awesome-quarto)</span>{target=_blank}</span>
+<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Slidecrafting: Making beautiful slides with reveal.js and Quarto</span><span class="co">](https://slidecrafting-book.com/)</span>{target=_blank}</span>
 <span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>revealjs editor (slides.com): ai prompts limited (generating many slides, or changing text fields) - cannot do animations with it. limited import/export (for quarto/revealjs) - only complex/full htm.</span>
 <span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Terminal animations (asciinema)" collapse=true}</span>

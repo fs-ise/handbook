@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -131,17 +142,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -489,7 +489,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li><label><input type="checkbox" checked="">Professor: Announce seminar on the website for the next semester (without dates/rooms).</label></li>
 <li><label><input type="checkbox" checked="">Team Assistant: Create the course in FlexNow.</label></li>
 <li><label><input type="checkbox" checked="">Team Assistant: Update information in UnivIS (<strong>add keywords „WI-Seminar“ and „WI-Seminare“</strong>), check information on the website.</label></li>
-<li>Note: If the course is mentioned on the website, it should automatically be announced in the <a href="https://vc.uni-bamberg.de/course/view.php?id=284" target="_blank">Fachschaft WIAI newsletter</a>{target=_blank}</li>
+<li>Note: If the course is mentioned on the website, it should automatically be announced in the <a href="https://vc.uni-bamberg.de/course/view.php?id=284" target="_blank">Fachschaft WIAI newsletter</a></li>
 </ul>
 <p>Deadline: mid-May (summer term), December/January (winter term)</p>
 </section>
@@ -1066,7 +1066,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Professor: Announce seminar on the website for the next semester (without dates/rooms).</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: Create the course in FlexNow.</span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Note: If the course is mentioned on the website, it should automatically be announced in the <span class="co">[</span><span class="ot">Fachschaft WIAI newsletter</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=284)</span>{target=_blank}{target=_blank}</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Note: If the course is mentioned on the website, it should automatically be announced in the <span class="co">[</span><span class="ot">Fachschaft WIAI newsletter</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=284)</span>{target=_blank}</span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>Deadline: mid-May (summer term), December/January (winter term)</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
