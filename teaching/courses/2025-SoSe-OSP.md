@@ -34,15 +34,16 @@ Start: December (summer term), May (winter term)
 
 - [x] Team Assistant: Create the project in FlexNow.
 
-{: .highlight }
->  Check public holidays
->
-> Flexnow: Besonderheiten bei Ausstattung/Hinweise:
-> 
-> - 2h in Semesterwoche 1, Tag und Zeit egal
-> - 4h in Semesterwoche 2, Freitag, Uhrzeit egal, CIP-Pool
-> - 2 x 4h in Semesterwoche 3, Donnerstag und Freitag, Uhrzeit egal, CIP-Pool
-> - 2h in Semesterwoche 5, Donnerstag oder Freitag, Uhrzeit egal, CIP-Pool
+::: .callout-note
+Check public holidays
+
+Flexnow: Besonderheiten bei Ausstattung/Hinweise:
+ 
+- 2h in Semesterwoche 1, Tag und Zeit egal
+- 4h in Semesterwoche 2, Freitag, Uhrzeit egal, CIP-Pool
+- 2 x 4h in Semesterwoche 3, Donnerstag und Freitag, Uhrzeit egal, CIP-Pool
+- 2h in Semesterwoche 5, Donnerstag oder Freitag, Uhrzeit egal, CIP-Pool
+:::
 
 At the end of the semester: 
 

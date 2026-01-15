@@ -38,7 +38,7 @@ Start: December (summer term), May (winter term)
 - [x] Professor: Announce seminar on the website for the next semester (without dates/rooms).
 - [x] Team Assistant: Create the course in FlexNow.
 - [x] Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.
-- Note: If the course is mentioned on the website, it should automatically be announced in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){target=_blank}{target=_blank}
+- Note: If the course is mentioned on the website, it should automatically be announced in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){target=_blank}
 
 Deadline: mid-May (summer term), December/January (winter term)
 

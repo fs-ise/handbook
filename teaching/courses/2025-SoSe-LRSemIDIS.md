@@ -37,19 +37,20 @@ Start: December (summer term), May (winter term)
 
 - [x] Team Assistant: Create the course in FlexNow.
 
-{: .highlight }
->  Check public holidays
->
-> Flexnow: Besonderheiten bei Ausstattung/Hinweise:
-> 
-> - 8h Semesterwoche 5, Freitag, Blocktermin, Seminarraum
-> - 8h Semesterwoche 6, Freitag, Blocktermin, Seminarraum
+::: .callout-note
+ Check public holidays
+
+Flexnow: Besonderheiten bei Ausstattung/Hinweise:
+ 
+- 8h Semesterwoche 5, Freitag, Blocktermin, Seminarraum
+- 8h Semesterwoche 6, Freitag, Blocktermin, Seminarraum
+:::
 
 At the end of the semester: 
 
 - [x] Professor: Announce the seminar on the website for the next semester (without dates/rooms).
 - [x] Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.
-- Note: If the course is mentioned on the website, it should automatically be in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){target=_blank}{target=_blank}
+- Note: If the course is mentioned on the website, it should automatically be in the [Fachschaft WIAI newsletter](https://vc.uni-bamberg.de/course/view.php?id=284){target=_blank}
 
 Deadline: mid-May (summer term), December/January (winter term)
 
