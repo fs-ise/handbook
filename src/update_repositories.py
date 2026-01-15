@@ -23,6 +23,12 @@ HEADERS = {
     "Accept": "application/vnd.github.mercy-preview+json",
 }
 
+# --- Display-title overrides for handbook site ---
+# Keep repo "name" unchanged (for URLs and API calls), but customize the "title" shown on the site.
+REPO_TITLE_OVERRIDES: dict[tuple[str, str], str] = {
+    ("digital-work-lab", "handbook"): "handbook (digital-work-lab)",
+}
+
 
 def get_workflow_id_by_filename(owner: str, repo_name: str, workflow_filename: str) -> int | None:
     """Gets the workflow ID for a specific workflow file in the repository."""
@@ -132,6 +138,11 @@ def classify_area(topics: list[str]) -> str:
     return "other"
 
 
+def get_display_title(owner: str, repo_name: str) -> str:
+    """Return a custom display title if configured; otherwise use repo name."""
+    return REPO_TITLE_OVERRIDES.get((owner, repo_name), repo_name)
+
+
 def main() -> None:
     six_months_ago = datetime.now() - timedelta(days=180)
 
@@ -161,7 +172,7 @@ def main() -> None:
             repo_data: dict = {
                 "owner": org_name,
                 "name": repo["name"],
-                "title": repo["name"],  # can be adapted later for display
+                "title": get_display_title(org_name, repo["name"]),  # <-- updated
                 "html_url": repo["html_url"],
                 "visibility": "Private" if repo.get("private") else "Public",
                 "description": repo.get("description") or "",
