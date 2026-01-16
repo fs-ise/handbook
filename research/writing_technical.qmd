@@ -215,10 +215,8 @@ Citing allows us to make the results of others understandable and give proper re
 There are two main reasons why we cite: firstly, to respect copyrighted works, and secondly, to adhere to the principles of good scientific practice by appropriately acknowledging the contributions of others.
 The following examples use Markdown syntax (used by Pandoc converters and Quarto).
 
-::: {.callout-note title="Word/Zotero" collapse=true}
-For `DOCX` formats, use a reference manager plugin (such as Zotero).
-The reference manager should support the standardized citation styles of [CSL](https://editor.citationstyles.org/about/){target=_blank}.
-:::
+The syntax is based on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} (see [CSL](https://citationstyles.org/){target=_blank}).
+Further information on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} is available in the Pandoc manual.
 
 To include citations:
 
@@ -234,32 +232,6 @@ The bibliography is stored as a BibTeX file (typically `references.bib`) and ver
 - References should be as complete as possible, including the relevant fields.
 - Each reference should be listed once (not multiple times).
 - Examples with relevant fields are summarized below.
-
-::: {.callout-note title="Formatting guidelines"}
-
-**Fields**
-
-- `ENTRYTYPE` set correctly (e.g., "article" or "inproceedings").
-- `author` formatted correctly (Wagner, G. and Prester, J.).
-- `title` complete and in sentence case (e.g., "On the origin of species," not "On the Origin of Species").
-- `journal` field complete and in title case (e.g., "Journal of Information Technology," not "JIT").
-- `volume`, `number`, `pages`, `doi` fields added.
-
-To update references based on Crossref, the `colrev-sync` package can be used:
-
-```sh
-colrev-sync sync
-```
-
-**Notes**
-
-- Add `{}` to protect cases when necessary (e.g., `{J}ab{R}ef`) because CSL styles that require title case will use an automatic title-case conversion ([1](https://citationstyles.org/authors/#/titles-in-sentence-and-title-case){target=_blank}).
-- To cite software, datasets, and other artifacts, [CiteAs](https://citeas.org/){target=_blank} is useful.
-- Journal fields: Some CSL styles require abbreviations.
-  Temporarily replace the journal field in the BibTeX file since CSL does not handle style-specific journal abbreviations ([1](https://citationstyles.org/authors/#/csl-limitations){target=_blank}).
-  JSON files containing journal abbreviations can be passed to Pandoc using the [citation-abbreviations](https://pandoc.org/MANUAL.html#option--citation-abbreviations){target=_blank} field.
-
-:::
 
 - Journal articles
 
@@ -353,6 +325,33 @@ When rendered with Quarto and the APA citation style, this will be displayed as:
 > 
 > For fitness trackers, "measures of sleep quality are inaccurate" (Smith et al. 2006, p. 111).
 
+::: {.callout-note title="Formatting guidelines"}
+
+**Fields**
+
+- `ENTRYTYPE` set correctly (e.g., "article" or "inproceedings").
+- `author` formatted correctly (Wagner, G. and Prester, J.).
+- `title` complete and in sentence case (e.g., "On the origin of species," not "On the Origin of Species").
+- `journal` field complete and in title case (e.g., "Journal of Information Technology," not "JIT").
+- `volume`, `number`, `pages`, `doi` fields added.
+
+To update references based on Crossref, the `colrev-sync` package can be used:
+
+```sh
+colrev-sync sync
+```
+
+**Notes**
+
+- Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use `[e.g., @Bacharach1989; @Gregor2006a]` instead of `[e.g., @Gregor2006a; @Bacharach1989]`.
+- Add `{}` to protect cases when necessary (e.g., `{J}ab{R}ef`) because CSL styles that require title case will use an automatic title-case conversion ([1](https://citationstyles.org/authors/#/titles-in-sentence-and-title-case){target=_blank}).
+- To cite software, datasets, and other artifacts, [CiteAs](https://citeas.org/){target=_blank} is useful.
+- Journal fields: Some CSL styles require abbreviations.
+  Temporarily replace the journal field in the BibTeX file since CSL does not handle style-specific journal abbreviations ([1](https://citationstyles.org/authors/#/csl-limitations){target=_blank}).
+  JSON files containing journal abbreviations can be passed to Pandoc using the [citation-abbreviations](https://pandoc.org/MANUAL.html#option--citation-abbreviations){target=_blank} field.
+
+:::
+
 #### Bibliography{#bibliography}
 
 In a Markdown document, the bibliography (also known as the references section) is created automatically based on the BibTeX file and [CSL](https://citationstyles.org/){target=_blank} specified in the YAML header.
@@ -377,11 +376,10 @@ nocite: |
 <!-- References will be generated in the specified CSL style after this heading. -->
 ```
 
-Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use `[e.g., @Bacharach1989; @Gregor2006a]` instead of `[e.g., @Gregor2006a; @Bacharach1989]`.
-
-The syntax is based on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} (see [CSL](https://citationstyles.org/){target=_blank}).
-
-Further information on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} is available in the Pandoc manual.
+::: {.callout-note title="Word/Zotero" collapse=true}
+For `DOCX` formats, use a reference manager plugin (such as Zotero).
+The reference manager should support the standardized citation styles of [CSL](https://editor.citationstyles.org/about/){target=_blank}.
+:::
 
 ### Conceptual illustrations and plots
 
