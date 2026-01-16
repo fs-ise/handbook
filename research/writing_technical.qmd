@@ -2,40 +2,51 @@
 title: "Writing - technical"
 ---
 
-::: callout-note
-If you would like to contribute to an existing project, jump to the [edit-the-paper](#edit-the-paper) section.
+This guide explains how we write papers in a reproducible, collaboration-friendly way using Quarto.
+You edit the manuscript in `paper.qmd` (Quarto Markdown) and manage references in `references.bib` (CSL controls the citation style).
+Quarto renders the project to submission formats (PDF/DOCX/LaTeX), while Git tracks changes and supports collaboration (PRs, reviews, history).
+Most contributors only need two commands: `quarto preview` while writing, and `quarto render` for final output.
 
-TODO: create an overview (Quarto, Markdown, references, paper templates, file structure, practices)
 
+::: {.callout-note title="Rationale" collapse=true}
+
+The paper development process is based on Quarto, Markdown, Git, Docker, Pandoc, and CSL.
+The goal is to support the collaborative writing process effectively, building on powerful open-source tools and facilitating the efficient production of documents for submission.
+Advantages of this workflow:
+
+- Separation of content and format.
+- Collaboration and versioning of text with Git.
+- Relying on active open-source projects such as the [CSL](https://citationstyles.org/){target=_blank} standard.
+- Combined writing and comments in the same document.
+- Reproducibility across platforms.
+- Generating DOCX/TeX/PDF as output.
+
+Since the underlying open-source projects (especially CSL, Pandoc, pandoc-citeproc) evolve constantly, it is recommended to work with the latest versions.
+
+The paper template is based on the following underlying architectural principles and considerations:
+
+- Minimal functionality: the most frequent use cases (writing, citing, creating submission files in DOCX/TeX/PDF format with different templates and citation styles) must be supported in a highly efficient way.
+  More complex functionality (such as tables with merged cells and detailed formatting) is used less frequently, requiring less effort if not supported efficiently.
+  It may also create fewer problems (e.g., merging complex tables, as in Word/comparisons of tables).
 :::
 
+## Setup
 
-## Templates
-
-TODO: refer to paper templates, explain Markdown/BibTeX/Git/CSL setup
-
-::: callout-note
-It is possible to edit ggplot2 plots with LLMs (e.g., ChatGPT).
-:::
-
-The paper development process is based on Markdown, Git, Docker, Pandoc, and CSL. The goal is to support the collaborative writing process effectively, building on powerful open-source tools and facilitating the efficient production of documents for submission.
-
-Start your manuscript development by using the [Markdown template](https://github.com/fs-ise/paper-template){target=_blank}. This template provides a structured format for your initial drafts, helping to organize content efficiently.
-
-## Initial setup
-
-This section explains how to install the environment and build the paper. [Git](https://git-scm.com/){target=_blank}, [Docker](https://www.docker.com/){target=_blank}, and Make are required. The following steps describe how to:
+This section explains how to install the environment and build the paper.
+[Quarto](https://quarto.org/){target=_blank} is required.
+[Git](https://git-scm.com/){target=_blank}, [Docker](https://www.docker.com/){target=_blank}, and Make are recommended.
+The following steps describe how to:
 
 1. Set up the repository (create a new one or contribute to an existing one),
-2. Set up the paper production pipeline, and
+2. Edit the paper, and
 3. Build the paper.
 
-The manuscript template creates the following files (additional [files for the analysis](/research/analysis_templates.html) can be added):
+The paper template creates the following files (additional [files for the analysis](/research/analysis_templates.html) can be added):
 
 ```text
-├── README.md     <- Readme containing summaries of the paper's revisions (completed
+├── README.md     <- README containing summaries of the paper's revisions (completed
 │                    and ongoing). Revision sheets are created from this document.
-├── paper.md      <- Contains the paper
+├── paper.qmd     <- Contains the paper
 ├── Makefile      <- Contains instructions to build the paper (as PDF or DOCX),
 │                    and run the analyses (if a Makefile exists in the analysis
 │                    directory)
@@ -52,51 +63,32 @@ The manuscript template creates the following files (additional [files for the a
                      when merging changes)
 ```
 
-Templates (\*.docx, \*.tex) and styles (\*.csl) are versioned in the paper repository. This can be accomplished by using the code in comments at the beginning of the Makefile.
+Templates (\*.docx, \*.tex) and styles (\*.csl) are versioned in the paper repository.
+This can be accomplished by using the code in comments at the beginning of the Makefile.
 
-### 1: Set up the repository
+### Step 1: Set up the repository
+
+Start your manuscript development by using the [Quarto template](https://github.com/fs-ise/paper-template){target=_blank}.
+This template provides a structured format for your initial drafts, helping to organize content efficiently.
 
 Option 1: Create a new repository
 
 - Select a short and pronounceable title for the paper.
 - Do not refer to papers by their target journal (e.g., "the Journal of Information Technology paper").
-- Use labot to set up the paper:
+- Use our quarto template:
 
 ```sh
-labot paper --init
-```
-
-::: {.callout-note title="Manual setup" collapse=true}
-```sh
-git clone git@github.com:fs-ise/paper-template.git
-# MANUALLY rename the folder using a short project title
-# remove the .git directory containing older versions
-rm -rf .git
-# repo setup:
 git init
-# MANUALLY create paper (update titles etc.)
-mkdir analysis data figures output
-pre-commit install
-cd .git/hooks
-cp ../../post-xxx-sample.txt post-checkout
-cp post-checkout post-merge
-cp post-checkout post-commit
-rm ../../post-xxx-sample.txt
-cd ../..
-git add .
-git commit -m 'initial commit'
-make pdf
-# connect to git remote
-# MANUALLY update url in the following line
-git remote add origin https://github.com/....
-git branch -M main
-git push -u origin main
-# MANUALLY invite coauthors/provide access to the remote repository
-# git clone template-repository
-# git clone https://github.com/citation-style-language/styles
-# MANUALLY symlink the templates and styles repos
+quarto use template fs-ise/paper-template
+# change title etc.
+# git add . 
+# git commit ...
+# etc.
+# git remote add origin https://github.com/....
+# git branch -M main
+# git push -u origin main
+quarto preview
 ```
-:::
 
 Option 2: Contribute to an existing repository
 
@@ -106,32 +98,13 @@ git clone git@github.com:fs-ise/...
 pre-commit install
 ```
 
-### 2: Set up the paper production pipeline
+### Step 2: Edit the paper
 
-```sh
-# Build the Docker container
-make build
-# MANUALLY select a citation style by updating the link at the beginning of the Makefile
-# MANUALLY select templates for DOCX/TeX by updating the link at the beginning of the Makefile
-```
+The `paper.qmd` is written in Markdown. There are three ways to edit a paper:
 
-- Citation styles can be selected [here](https://github.com/citation-style-language/styles){target=_blank}.
-- Templates are available [here](https://github.com/fs-ise/templates){target=_blank}.
+#### GitHub edit
 
-### 3: Build the paper
-
-```sh
-make pdf
-make docx
-```
-
-## Edit the paper
-
-The `paper.md` is written in Markdown. There are three ways to edit a paper:
-
-### GitHub edit
-
-- Does not support PDF/DOCX generation.
+- Does not support DOCX/TeX/PDF generation.
 - Does not support commits changing multiple files.
 - Requires an Internet connection.
 - No setup required.
@@ -140,9 +113,9 @@ The `paper.md` is written in Markdown. There are three ways to edit a paper:
 ![Illustration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-github.gif){target=_blank}
 :::
 
-### Codespace edit
+#### Codespace edit
 
-- Supports PDF/DOCX generation.
+- Supports DOCX/TeX/PDF generation.
 - Supports all types of commits.
 - Requires an Internet connection.
 - No setup required.
@@ -151,9 +124,9 @@ The `paper.md` is written in Markdown. There are three ways to edit a paper:
 ![Illustration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-codespaces.gif){target=_blank}
 :::
 
-### Local edit
+#### Local edit
 
-- Supports PDF/DOCX generation.
+- Supports DOCX/TeX/PDF generation.
 - Supports all types of commits.
 - Does not require an Internet connection.
 - Requires some setup.
@@ -161,6 +134,18 @@ The `paper.md` is written in Markdown. There are three ways to edit a paper:
 ::: {.callout-note title="Short illustration" collapse=true}
 ![Illustration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/edit-paper-local.gif){target=_blank}
 :::
+
+### Step 3: Build the paper
+
+```sh
+quarto preview
+# MANUALLY select a citation style by updating the link at the beginning of the Makefile
+# MANUALLY select templates for DOCX/TeX/PDF by updating the link at the beginning of the Makefile
+```
+
+- Citation styles can be selected [here](https://github.com/citation-style-language/styles){target=_blank}.
+- Templates are available [here](https://github.com/fs-ise/templates){target=_blank}.
+- See [Pandoc journal templates](https://github.com/sachsmc/pandoc-journal-templates){target=_blank}.
 
 ## Markdown hints {#markdown}
 
@@ -177,45 +162,17 @@ In local setups, several editors are available for Markdown documents, for examp
 - [Panwriter](https://panwriter.com/){target=_blank}
  -->
 
-See [citations and reference sections](#citations-and-reference-sections).
+Figures can be included as follows and referred to as `@fig:distribution`.
+Further information on [pandoc-crossref](https://lierdakil.github.io/pandoc-crossref/){target=_blank} is available online.
 
-::: callout-note
-**Literature summaries: Obsidian**
-
-Literature summaries for each paper are stored in Obsidian format in the `literature` directory.
-:::
-
-## Resources
-
-The paper template is based on the following underlying architectural principles and considerations:
-
-- Minimal functionality: the most frequent use cases (writing, citing, creating submission files in DOCX/LaTeX format with different templates and citation styles) must be supported in a highly efficient way. More complex functionality (such as tables with merged cells and detailed formatting) is used less frequently, requiring less effort if not supported efficiently. It may also create fewer problems (e.g., merging complex tables, as in Word/comparisons of tables).
-
-Advantages of the Markdown/Pandoc workflow:
-
-- Separation of content and format.
-- Collaboration and versioning of text with Git.
-- Relying on active open-source projects such as the [CSL](https://citationstyles.org/){target=_blank} standard.
-- Flexibility regarding the bibliography type (Pandoc supports .bib, .enl, ...).
-- Combined writing and comments in the same document.
-- Reproducibility across platforms.
-- Generating DOCX/TeX/PDF as output.
-
-Since the underlying open-source projects (especially CSL, Pandoc, pandoc-citeproc) evolve constantly, it is recommended to work with the latest versions. This is a limitation of the popular [Manubot project](https://github.com/manubot/rootstock){target=_blank} or [Pandoc Scholar](https://github.com/pandoc-scholar/pandoc-scholar){target=_blank}, which work with old versions of Pandoc (which may be hard to update).
-
-Possible extensions (Lua filters): [bibexport](https://github.com/pandoc/lua-filters/tree/master/bibexport){target=_blank}, [abstract-to-meta](https://github.com/pandoc/lua-filters/tree/master/abstract-to-meta){target=_blank}, [spellcheck](https://github.com/pandoc/lua-filters/tree/master/spellcheck){target=_blank}, [wordcount](https://github.com/pandoc/lua-filters/tree/master/wordcount){target=_blank}.
-
-- [Pandoc journal templates](https://github.com/sachsmc/pandoc-journal-templates){target=_blank}.
-
-Figures can be included as follows and referred to as `@fig:distribution`. Further information on [pandoc-crossref](https://lierdakil.github.io/pandoc-crossref/){target=_blank} is available online.
-
-```Markdown
+```markdown
 ![Figure Caption](figures/figure.jpg){#fig:distribution width=300px}
 
 We show the findings in @fig:distribution.
 ```
 
-To ensure compatibility with Pandoc Word and LaTeX conversion, figures should be included as JPG/PNG. For the final versions, vector graphics (PDF, EMF) should be included for LaTeX/Word, respectively.
+To ensure compatibility with Pandoc Word and LaTeX conversion, figures should be included as JPG/PNG.
+For the final versions, vector graphics (PDF, EMF) should be included for LaTeX/Word, respectively.
 
 Formulas can be included as follows:
 
@@ -225,7 +182,7 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 
 Tables can be created with [GridTables](https://pandoc.org/MANUAL.html#extension-grid_tables){target=_blank} (which is displayed in PDF and Word documents):
 
-```Markdown
+```markdown
 +---------------------+----------+
 | Property            | Earth    |
 +=============+=======+==========+
@@ -245,7 +202,7 @@ We show the findings in @tbl:findings.
 
 Footnotes:
 
-```Markdown
+```markdown
 Text with a footnote [^1].
 
   [^1]: Example footnote.
@@ -253,14 +210,21 @@ Text with a footnote [^1].
 
 Information on references and citations is in the [editing-markdown-paper](/research/writing_conceptual.html) section.
 
-Books: [Bookdown](https://bookdown.org/yihui/bookdown/){target=_blank} project.
+::: callout-note
+**Literature summaries: Obsidian**
 
-## Citations and reference sections
+Literature summaries for each paper are stored in Obsidian format in the `literature` directory.
+:::
 
-Citing allows us to make the results of others understandable and give proper recognition to the authors. There are two main reasons why we cite: firstly, to respect copyrighted works, and secondly, to adhere to the principles of good scientific practice by appropriately acknowledging the contributions of others. The following examples use Markdown syntax (used by Pandoc converters and Quarto).
+### Citations and reference sections
+
+Citing allows us to make the results of others understandable and give proper recognition to the authors.
+There are two main reasons why we cite: firstly, to respect copyrighted works, and secondly, to adhere to the principles of good scientific practice by appropriately acknowledging the contributions of others.
+The following examples use Markdown syntax (used by Pandoc converters and Quarto).
 
 ::: {.callout-note title="Word/Zotero" collapse=true}
-For `DOCX` formats, use a reference manager plugin (such as Zotero). The reference manager should support the standardized citation styles of [CSL](https://editor.citationstyles.org/about/){target=_blank}.
+For `DOCX` formats, use a reference manager plugin (such as Zotero).
+The reference manager should support the standardized citation styles of [CSL](https://editor.citationstyles.org/about/){target=_blank}.
 :::
 
 To include citations:
@@ -298,7 +262,9 @@ colrev-sync sync
 
 - Add `{}` to protect cases when necessary (e.g., `{J}ab{R}ef`) because CSL styles that require title case will use an automatic title-case conversion ([1](https://citationstyles.org/authors/#/titles-in-sentence-and-title-case){target=_blank}).
 - To cite software, datasets, and other artifacts, [CiteAs](https://citeas.org/){target=_blank} is useful.
-- Journal fields: Some CSL styles require abbreviations. Temporarily replace the journal field in the BibTeX file since CSL does not handle style-specific journal abbreviations ([1](https://citationstyles.org/authors/#/csl-limitations){target=_blank}). JSON files containing journal abbreviations can be passed to Pandoc using the [citation-abbreviations](https://pandoc.org/MANUAL.html#option--citation-abbreviations){target=_blank} field.
+- Journal fields: Some CSL styles require abbreviations.
+  Temporarily replace the journal field in the BibTeX file since CSL does not handle style-specific journal abbreviations ([1](https://citationstyles.org/authors/#/csl-limitations){target=_blank}).
+  JSON files containing journal abbreviations can be passed to Pandoc using the [citation-abbreviations](https://pandoc.org/MANUAL.html#option--citation-abbreviations){target=_blank} field.
 
 :::
 
@@ -370,11 +336,14 @@ You can find the program and how to install it [here](https://www.uni-bamberg.de
 
 #### In-text citations{#citing}
 
-In-text citations can be parenthetical or narrative (see [APA style](https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/parenthetical-versus-narrative){target=_blank}). Word-for-word quotations (parenthetical or narrative) must be identified by quotation marks, and a page number must be given. Parenthetical citations tend to be preferred over narrative citations because they put more emphasis on the content, concepts, or findings instead of the authors.
+In-text citations can be parenthetical or narrative (see [APA style](https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/parenthetical-versus-narrative){target=_blank}).
+Word-for-word quotations (parenthetical or narrative) must be identified by quotation marks, and a page number must be given.
+Parenthetical citations tend to be preferred over narrative citations because they put more emphasis on the content, concepts, or findings instead of the authors.
 
-The following example illustrates the citation syntax of Markdown (or the Pandoc converters used by Quarto) ([link](https://pandoc.org/demo/example33/8.20-citation-syntax.html){target=_blank}). The unique IDs (e.g., ``SmithEtAl2006``) are used to link citations to the corresponding elements in the BibTeX file.
+The following example illustrates the citation syntax of Markdown (or the Pandoc converters used by Quarto) ([link](https://pandoc.org/demo/example33/8.20-citation-syntax.html){target=_blank}).
+The unique IDs (e.g., ``SmithEtAl2006``) are used to link citations to the corresponding elements in the BibTeX file.
 
-```Markdown
+```markdown
 <!-- Example *parenthetical* citation: -->
 
 Fitness trackers were found to have mixed effects on sedentary behavior [@SmithEtAl2006].
@@ -398,9 +367,10 @@ When rendered with Quarto and the APA citation style, this will be displayed as:
 
 #### Bibliography{#bibliography}
 
-In a Markdown document, the bibliography (aka. references section) is created automatically based on the BibTeX file and [CSL](https://citationstyles.org/){target=_blank} specified in the YAML header. The `nocite` field can be used to add references that are cited in figures/tables but not in the text.
+In a Markdown document, the bibliography (aka. references section) is created automatically based on the BibTeX file and [CSL](https://citationstyles.org/){target=_blank} specified in the YAML header.
+The `nocite` field can be used to add references that are cited in figures/tables but not in the text.
 
-```Markdown
+```markdown
 ---
 title: "Writing"
 bibliography: path_to_/references.bib
@@ -419,16 +389,13 @@ nocite: |
 <!-- References will be generated in the specified CSL style after this heading. -->
 ```
 
-::: {.callout-note title="TODO"}
-
 Groups of in-text citations should be sorted alphabetically (especially if a prefix is used), i.e., use `[e.g., @Bacharach1989; @Gregor2006a]` instead of `[e.g., @Gregor2006a; @Bacharach1989]`.
 
 The syntax is based on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} (see [CSL](https://citationstyles.org/){target=_blank}).
 
 Further information on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} is available in the Pandoc manual.
-:::
 
-## Conceptual illustrations and plots
+### Conceptual illustrations and plots
 
 For conceptual illustrations, PowerPoint is currently recommended.
 
@@ -436,10 +403,17 @@ For conceptual illustrations, PowerPoint is currently recommended.
 - For PDF submissions, extract it as PDF (vector graphic with embedded text).
 - For Word submissions, extract it as EMF (vector graphic with embedded text).
 
-To plot findings, the R package [ggplot2](https://ggplot2.tidyverse.org/){target=_blank} is recommended. ggplot2 is a powerful library and allows us to automatically update the figures when the findings change.
+To plot findings, the R package [ggplot2](https://ggplot2.tidyverse.org/){target=_blank} is recommended.
+ggplot2 is a powerful library and allows us to automatically update the figures when the findings change.
 
+::: callout-note
+It is possible to edit ggplot2 plots with LLMs (e.g., ChatGPT).
+:::
 
 ::: {.callout-note title="Quarto extensions" collapse=true}
+- Books: [Bookdown](https://bookdown.org/yihui/bookdown/){target=_blank} project.
+- Possible extensions (Lua filters): [bibexport](https://github.com/pandoc/lua-filters/tree/master/bibexport){target=_blank}, [abstract-to-meta](https://github.com/pandoc/lua-filters/tree/master/abstract-to-meta){target=_blank}, [spellcheck](https://github.com/pandoc/lua-filters/tree/master/spellcheck){target=_blank}, [wordcount](https://github.com/pandoc/lua-filters/tree/master/wordcount){target=_blank}.
+
 https://github.com/kapsner/authors-block
 https://github.com/jmgirard/embedpdf
 https://github.com/andrewheiss/quarto-wordcount
