@@ -7,7 +7,6 @@ You edit the manuscript in `paper.qmd` (Quarto Markdown) and manage references i
 Quarto renders the project to submission formats (PDF/DOCX/LaTeX), while Git tracks changes and supports collaboration (PRs, reviews, history).
 Most contributors only need two commands: `quarto preview` while writing, and `quarto render` for final output.
 
-
 ::: {.callout-note title="Rationale" collapse=true}
 
 The paper development process is based on Quarto, Markdown, Git, Docker, Pandoc, and CSL.
@@ -75,7 +74,7 @@ Option 1: Create a new repository
 
 - Select a short and pronounceable title for the paper.
 - Do not refer to papers by their target journal (e.g., "the Journal of Information Technology paper").
-- Use our quarto template:
+- Use our Quarto template:
 
 ```sh
 git init
@@ -100,7 +99,8 @@ pre-commit install
 
 ### Step 2: Edit the paper
 
-The `paper.qmd` is written in Markdown. There are three ways to edit a paper:
+The `paper.qmd` is written in Markdown.
+There are three ways to edit a paper:
 
 #### GitHub edit
 
@@ -154,13 +154,6 @@ Useful guides on Markdown are available online ([1](https://bookdown.org/yihui/r
 It is good practice to:
 
 - Begin **each sentence on a new line** to make the history more readable and to facilitate merging (see [semantic line breaks](https://sembr.org/){target=_blank}).
-
-<!-- 
-In local setups, several editors are available for Markdown documents, for example:
-
-- [Atom](https://shd101wyy.github.io/markdown-preview-enhanced/#/){target=_blank} with [markdown-preview-enhanced](https://github.com/shd101wyy/markdown-preview-enhanced){target=_blank}
-- [Panwriter](https://panwriter.com/){target=_blank}
- -->
 
 Figures can be included as follows and referred to as `@fig:distribution`.
 Further information on [pandoc-crossref](https://lierdakil.github.io/pandoc-crossref/){target=_blank} is available online.
@@ -329,11 +322,6 @@ colrev-sync sync
 }
 ```
 
-<!--
-Program that can be used for citation is "Zotero".
-You can find the program and how to install it [here](https://www.uni-bamberg.de/ub/literaturverwaltung/){target=_blank}.
--->
-
 #### In-text citations{#citing}
 
 In-text citations can be parenthetical or narrative (see [APA style](https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/parenthetical-versus-narrative){target=_blank}).
@@ -367,7 +355,7 @@ When rendered with Quarto and the APA citation style, this will be displayed as:
 
 #### Bibliography{#bibliography}
 
-In a Markdown document, the bibliography (aka. references section) is created automatically based on the BibTeX file and [CSL](https://citationstyles.org/){target=_blank} specified in the YAML header.
+In a Markdown document, the bibliography (also known as the references section) is created automatically based on the BibTeX file and [CSL](https://citationstyles.org/){target=_blank} specified in the YAML header.
 The `nocite` field can be used to add references that are cited in figures/tables but not in the text.
 
 ```markdown
