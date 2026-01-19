@@ -23,6 +23,59 @@ transition_comment: "Update email office etc."
 - Meetings (online or in-person): Via [calendly](https://calendly.com/gerit-wagner/30min?month=2023-07){target=_blank}
 - Vacation and remote work: Available in our [calendar](/index.html).
 
+## Address
+
+**Mail:** TBA.
+
+**Office:** TBA.
+
+<div id="map" style="height: 500px; margin-top: 1em;"></div>
+
+<link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var center = [50.132848752595365, 8.680411577224731];
+    var map = L.map("map").setView(center, 17);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors",
+    }).addTo(map);
+
+    var emojiIcon = L.divIcon({
+      html: "🔴",
+      className: "",
+      iconSize: [32, 32],
+      iconAnchor: [16, 8],
+      popupAnchor: [-8, -8],
+    });
+
+    L.marker(center, { icon: emojiIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+        <strong>Frankfurt School</strong><br>
+        <a href="https://www.openstreetmap.org/?mlat=50.132848752595365&mlon=8.680411577224731#map=18/50.132848752595365/8.680411577224731" target="_blank" rel="noopener">
+          Open in OpenStreetMap
+        </a><br>
+        <a href="https://www.google.com/maps/search/?api=1&query=50.132848752595365,8.680411577224731" target="_blank" rel="noopener">
+          Open in Google Maps
+        </a>
+      `
+      )
+      .openPopup();
+
+    var bbox = [
+      [50.13040037545383, 8.675154447555544],
+      [50.13529700446773, 8.685668706893923],
+    ];
+    map.fitBounds(bbox);
+    map.zoomOut(4);
+  });
+</script>
+
+
 <div style="clear: both;"></div>
 
 # Alumni
