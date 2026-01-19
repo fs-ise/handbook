@@ -26,6 +26,18 @@ Best practices and resources for preparing teaching materials.
 
 We use [Quarto](https://quarto.org/){target=_blank} for our teaching materials.
 
+::: callout-important
+Do not create quarto brand extension or use the revealjs seminar plugin (complexity).
+:::
+
+Principles
+
+- Dates, rooms, and links should be in one place to prevent inconsistent information.
+- VC links never point to a specific course but to a search in VC (e.g., for the [project](https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B){target=_blank}).
+- Teaching contents are licensed under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/deed.en){target=_blank} per default.
+- Design contents in such a way that students can learn them (after the session, pdf, making comments)
+- Add dynamic illustrations only as an extra (link them in the offline version)
+
 A teaching repository contains
 
 - PDFs should be generated through `make pdfs` (a `make` -> `quarto render` -> `decktape` chain, as in [bda](https://github.com/fs-ise/big-data-analytics){target=_blank}).
@@ -35,19 +47,32 @@ A teaching repository contains
 - Add branch protection rule for `main`: restrict deletions and block force pushes
 - Each course should have a separate repository and page. 
 - Options to provide feedback should be linked on the first page.
+- Optional: surveys to collect feedback for individual sessions (Google Forms?)
+- Optional: ask students how they learn (PDF, ...) whether they use a knowledge management system (which one), and adapt accordingly
 
-Additional checks:
-
-- Dates, rooms, and links should be in one place to prevent inconsistent information.
-- VC links never point to a specific course but to a search in VC (e.g., for the [project](https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B){target=_blank}).
-- Teaching contents are licensed under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/deed.en){target=_blank} per default.
 
 ## Slides
+
+Template is available [here](https://github.com/fs-ise/fs-ise-presentation){target=_blank}
 
 - Slides are in reveal-js.
 - HTML and PDF versions are automatically generated (e.g., GitHub actions).
 - Learning objectives should be on all slides (verifiable outcomes).
 - Use markers for tasks/questions (see [example](https://fs-ise.github.io/literature-review-seminar/output/01-goals.html#4){target=_blank})
+
+
+Publishing to GitHub pages
+
+For `quarto publish gh-pages` : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).
+
+See [tutorial](https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html){target=_blank}
+
+Adding extensions
+
+```bash
+docker compose run --rm quarto quarto add gadenbuie/countdown/quarto
+docker compose run --rm quarto quarto add martinomagnifico/quarto-simplemenu
+```
 
 Quarto extensions:
 
@@ -80,6 +105,93 @@ blockquote {
 ```
 :::
 
+Typography defaults:
+
+```css
+  --font-family: "Source Sans Pro", sans-serif;
+```
+
+Adding headings to the navigation
+
+```Markdown
+## Heading {data-menu-title="I. Overview"}
+
+### Will not be in the navigation
+
+```
+
+Shortcuts:
+
+- g : goto slide
+- b
+- d
+
+### Timer
+
+quarto add gadenbuie/countdown/quarto
+
+```text
+{{< countdown minutes=5 seconds=32 top=10 left=0 >}}
+```
+
+Code annotation (for slides!) (see [link](https://quarto.org/docs/authoring/code-annotation.html){target=_blank})
+
+```r
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  )                                              # <2>
+```
+
+1. Take `penguins`, and then,
+2. add new columns for the bill ratio and bill area.
+
+
+Your content here… [^1]
+
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+Icons: [Bootstrap](https://icons.getbootstrap.com/){target=_blank}
+
+\{\{icon="mortarboard-fill"\}\}
+
+Native page break:
+
+\{\{< pagebreak >\}\}
+
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+[^1]: A url and further information.
+
+@CastonguayWagnerMotulskyEtAl2023 is useful.
+
+Centered text:
+
+```Markdown
+<!-- _class: centered -->
+```
+
+Handbook: navigation is updated in `_quarto.yml`.
+
+Convert PowerPoint to quarto:
+
+```sh
+pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --image-dir "images"
+```
+
 ## Notebooks and exercises
 
 We use Jupyter notebooks for exercises.
@@ -90,6 +202,14 @@ The benefits of Jupyter notebooks are summarized by @VialNegoita2018:
 - Option to include short problems for students.
 
 Ideally, Jupyter notebooks should be delivered through GitHub Codespaces to avoid individual setup problems [see @Malan2024].
+
+::: {.callout-important}
+Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){target=_blank}).
+:::
+
+```Markdown
+<!-- Comment can be used to add further explanations, links to references/resources, or to keep parts of the paper that were shortened -->
+```
 
 Resources:
 
