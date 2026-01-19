@@ -73,6 +73,10 @@ Each sentence should be on a new line (to ensure that the git diff is readable).
 ```markdown
 ---
 title: "Title of the page"
+bibliography: ../assets/references.bib
+csl: ../assets/apa.csl
+nocite: |
+  @WagnerPrester2025
 ---
 
 Text with illustrations/figures/screenshots:
@@ -85,10 +89,7 @@ A [Link](https://website.com){target=_blank} that opens in a separate window.
 
 <!-- Comments can be used to add further explanations, links to references/resources, or to keep parts of the paper that were shortened -->
 
-# References
-<div class="references">
-  <p>Author, A. A. (Year). Title of work: Capital letter also for subtitle. Publisher.</p>
-</div>
+An in-text citation: @Webster2002 (the BibTeX entry must be added to assets/references.bib and the yaml header updated accordingly). 
 
 Callouts (colored boxes, as illustrated below):
 
