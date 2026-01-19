@@ -158,7 +158,7 @@ It is good practice to:
 Figures can be included as follows and referred to as `@fig:distribution`.
 Further information on [pandoc-crossref](https://lierdakil.github.io/pandoc-crossref/){target=_blank} is available online.
 
-```markdown
+```Markdown
 ![Figure Caption](figures/figure.jpg){#fig:distribution width=300px}
 
 We show the findings in @fig:distribution.
@@ -175,7 +175,7 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 
 Tables can be created with [GridTables](https://pandoc.org/MANUAL.html#extension-grid_tables){target=_blank} (which is displayed in PDF and Word documents):
 
-```markdown
+```Markdown
 +---------------------+----------+
 | Property            | Earth    |
 +=============+=======+==========+
@@ -195,10 +195,19 @@ We show the findings in @tbl:findings.
 
 Footnotes:
 
-```markdown
+```Markdown
 Text with a footnote [^1].
 
   [^1]: Example footnote.
+```
+
+Comments:
+
+```Markdown
+<!--
+Comments can be used to add further explanations, links to references/resources,
+or to keep parts of the paper that were shortened
+-->
 ```
 
 Information on references and citations is in the [editing-markdown-paper](/research/writing_conceptual.html) section.
@@ -303,7 +312,7 @@ Parenthetical citations tend to be preferred over narrative citations because th
 The following example illustrates the citation syntax of Markdown (or the Pandoc converters used by Quarto) ([link](https://pandoc.org/demo/example33/8.20-citation-syntax.html){target=_blank}).
 The unique IDs (e.g., ``SmithEtAl2006``) are used to link citations to the corresponding elements in the BibTeX file.
 
-```markdown
+```Markdown
 <!-- Example *parenthetical* citation: -->
 
 Fitness trackers were found to have mixed effects on sedentary behavior [@SmithEtAl2006].
@@ -357,7 +366,7 @@ colrev-sync sync
 In a Markdown document, the bibliography (also known as the references section) is created automatically based on the BibTeX file and [CSL](https://citationstyles.org/){target=_blank} specified in the YAML header.
 The `nocite` field can be used to add references that are cited in figures/tables but not in the text.
 
-```markdown
+```Markdown
 ---
 title: "Writing"
 bibliography: path_to_/references.bib
