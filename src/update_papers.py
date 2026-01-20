@@ -2,9 +2,6 @@
 """
 Generate Quarto .qmd paper files from a records.bib file using CoLRev.
 
-- Reads records.bib from the configured RECORDS_BIB path
-- Creates a cleaned assets/references.bib using CoLRev's writer utils
-  (removing colrev_status, origin, OA/file fields, etc.)
 - Removes all existing files in research/papers before generation
 - For each record, creates research/papers/<ID>.qmd
 - If research/papers/<ID>.qmd already exists (after cleanup), it is skipped
@@ -37,9 +34,6 @@ import colrev.loader.load_utils as load_utils
 import colrev.writer.write_utils as write_utils
 
 
-RECORDS_BIB = Path(
-    "/home/gerit/ownCloud/data/publications/my-papers-colrev/data/records.bib"
-)
 OUTPUT_DIR = Path("research/papers")
 ASSETS_REFERENCES = Path("assets/references.bib")
 
@@ -846,16 +840,9 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
 
 
 def main():
-    if not RECORDS_BIB.is_file():
-        raise FileNotFoundError(f"Records file not found: {RECORDS_BIB}")
-
-    # --- Build cleaned references.bib using CoLRev writer utils ----------
-    clean_records = build_clean_references(RECORDS_BIB)
-    ASSETS_REFERENCES.parent.mkdir(parents=True, exist_ok=True)
-    write_utils.write_file(records_dict=clean_records, filename=str(ASSETS_REFERENCES))
 
     # --- Generate paper .qmd files ---------------------------------------
-    records_iter = load_records(RECORDS_BIB)
+    records_iter = load_records(ASSETS_REFERENCES)
 
     # Ensure output dir exists and is empty before generation
     if OUTPUT_DIR.exists():
