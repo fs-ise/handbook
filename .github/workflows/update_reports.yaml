@@ -1,4 +1,4 @@
-name: Update repository overview
+name: Update reports (weekly)
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -28,12 +28,30 @@ jobs:
       - name: Change to Repo Directory
         run: cd ${{ github.workspace }}
 
-      - name: Run update script
+      - name: Update repositories
         env:
           GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
         run: |
           python src/update_repositories.py
+
+      - name: Update projects pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
+        run: |
+          python src/generate-projects-pages.py
       
+      - name: Update talks pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
+        run: |
+          python src/update_talks.py    
+
+      - name: Update papers
+        env:
+          GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
+        run: |
+          python src/update_papers.py
+
       - name: Commit and Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}

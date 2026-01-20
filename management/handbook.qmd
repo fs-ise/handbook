@@ -19,9 +19,19 @@ It reduces friction and helps us focus on the work that matters most. Key advant
 By documenting what works, we make everyday tasks simpler and leave more room for creativity, collaboration, and discovery.
 
 ::: {.callout-note title="Single source of truth"collapse="true"}
-For anything that must be correct and consistent over time (e.g., **course offerings**, **teaching dates**, **presentations**, **paper lists**, **lab processes**), the handbook should be the **single source of truth**.
+For anything that must be correct and consistent over time (e.g., **course offerings**, **teaching dates**, **presentations**, **research projects**, **paper lists**, **lab processes**), the handbook should be the **single source of truth**.
 
 **Rule of thumb:** if a date, decision, or list appears in multiple places, we should consolidate it here (or have one canonical source and link to it from here).
+:::
+
+::: {.callout-note title="Emergence"collapse="true"}
+Our handbook follows an **emergent** logic: we improve it continuously through small contributions, iteration, and learning-by-doing.
+
+A good reference point is *The Turing Way*’s framing of [emergent strategy and living guidance](https://book.the-turing-way.org/foreword/emergent-strategy/).
+
+**How our handbook evolves**
+
+![Activity](../assets/reports/handbook_activity_over_time.png)
 :::
 
 ::: {.callout-note title="Linking" collapse="true"}
@@ -34,15 +44,42 @@ This handbook is most useful when it works like a **map**:
 We also maintain **automated link checks** and quality controls (linters/statistics) to reduce link rot and make sure references remain usable.
 :::
 
-::: {.callout-note title="Emergence"collapse="true"}
-Our handbook follows an **emergent** logic: we improve it continuously through small contributions, iteration, and learning-by-doing.
+::: {.callout-note title="Reports and automation" collapse="true"}
+We keep key parts of the handbook **up-to-date automatically** using GitHub Actions workflows and Python scripts.
 
-A good reference point is *The Turing Way*’s framing of [emergent strategy and living guidance](https://book.the-turing-way.org/foreword/emergent-strategy/).
+- Workflows: https://github.com/fs-ise/handbook/tree/main/.github/workflows
+- Scripts: https://github.com/fs-ise/handbook/tree/main/src
 
-**How our handbook evolves**
+These jobs retrieve externaal data to regenerate report artifacts (tables, pages, figures) and commit updates back to the repository.
 
-![Activity](../assets/reports/handbook_activity_over_time.png)
+```{mermaid}
+flowchart TD
+
+  subgraph RUN[GitHub-hosted Actions]
+    WR[Weekly workflow]
+    MR[Monthly workflow]
+  end
+
+  subgraph SCRIPTS[src/ scripts]
+    R1[update_repositories.py]
+    R2[generate-projects-pages.py]
+    R3[update_talks.py]
+    R4[...]
+  end
+
+  subgraph OUT[Handbook outputs]
+    O1[Pages and data updated]
+    O2[assets/reports regenerated]
+  end
+
+  WR --> R1 --> OUT
+  WR --> R2 --> OUT
+  WR --> R3 --> OUT
+  WR --> R4 --> OUT
+```
 :::
+
+
 
 ## How to suggest changes
 
