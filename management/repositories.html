@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -133,15 +133,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -709,7 +709,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </header>
 
 
-<p><a href="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml" target="_blank"><img src="https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg" class="img-fluid"></a></p>
+<p><a href="https://github.com/fs-ise/handbook/actions/workflows/update_reports.yaml" target="_blank"><img src="https://github.com/fs-ise/handbook/actions/workflows/update_reports.yaml/badge.svg" class="img-fluid"></a></p>
 <div class="callout callout-style-default callout-self-service callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1161,19 +1161,6 @@ Access
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
-<a href="https://github.com/fs-ise/aicompetencemed" target="_blank">aicompetencemed</a>
-</td>
-<td>
-<span style="color: green;">🟢</span> <a href="https://github.com/fs-ise/aicompetencemed/actions/workflows/labot.yml" target="_blank">🚨</a>
-</td>
-<td>
-</td>
-<td>
-<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
-</td>
-</tr>
 <tr>
 <td>
 <a href="https://github.com/fs-ise/alg-org" target="_blank">alg-org</a>
@@ -1648,6 +1635,19 @@ Access
 </td>
 <td>
 <span style="color: orange;">🟠</span>
+</td>
+<td>
+</td>
+<td>
+<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/fs-ise/aicompetencemed" target="_blank">aicompetencemed</a>
+</td>
+<td>
+<span style="color: red;">🗄️</span>
 </td>
 <td>
 </td>
@@ -2333,7 +2333,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml/badge.svg)</span><span class="co">](https://github.com/fs-ise/handbook/actions/workflows/update_repositories.yaml)</span>{target=_blank}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![](https://github.com/fs-ise/handbook/actions/workflows/update_reports.yaml/badge.svg)</span><span class="co">](https://github.com/fs-ise/handbook/actions/workflows/update_reports.yaml)</span>{target=_blank}</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>::: {.self-service collapse=true}</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>To request access, click on the <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://img.shields.io/badge/Request-Access-blue"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"Request Access"</span><span class="dt">&gt;</span> button next to the relevant repository below.</span>
