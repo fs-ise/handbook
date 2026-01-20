@@ -1,7 +1,7 @@
 name: Update reports (monthly)
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 1 * *'
   workflow_dispatch:
 
 permissions:
@@ -42,7 +42,7 @@ jobs:
           git config --global user.name "digital-work-labot"
           if [[ -n "$(git status --porcelain)" ]]; then
             git add .
-            git commit -m "Update repository overview"
+            git commit -m "Update reports (monthly)"
             git push
           else
             echo "No changes to commit"

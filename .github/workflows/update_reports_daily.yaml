@@ -1,4 +1,4 @@
-name: Update reports (weekly)
+name: Update reports (daily)
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -60,7 +60,7 @@ jobs:
           git config --global user.name "digital-work-labot"
           if [[ -n "$(git status --porcelain)" ]]; then
             git add .
-            git commit -m "Update repository overview"
+            git commit -m "Update reports (weekly)"
             git push
           else
             echo "No changes to commit"
