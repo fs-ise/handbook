@@ -111,17 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -131,6 +120,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -144,15 +144,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -721,7 +721,7 @@ Note
 </tr>
 <tr class="odd">
 <td><a href="https://quarto.org/" target="_blank">Quarto</a></td>
-<td><a href="../teaching/quarto.html">Quarto, Markdown, revealjs</a></td>
+<td>Quarto, Markdown, revealjs (see <a href="../teaching/materials.html">materials</a>)</td>
 </tr>
 <tr class="even">
 <td><a href="https://www.uni-bamberg.de/its/turnitin" target="_blank">Turnitin Similarity Checker</a></td>
@@ -1254,7 +1254,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">FlexNow</span><span class="co">](https://www.uni-bamberg.de/pruefungsamt/FlexNow/)</span>{target=_blank}| - Planning courses and examinations is important for students as well as teachers&lt;br&gt;- [Documentation](../../../assets/docs/2023-04-28-Bamberg-FlexNow_ FN2LM.pdf)<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Creating and editing courses and exams<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Enrolling and withdrawing participants from courses and exams<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Entering grades for exam participants<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Creating of module handbooks and modules |</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">UnivIS</span><span class="co">](https://univis.uni-bamberg.de/)</span>{target=_blank}| - Customize and printing schedules<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Search for <span class="co">[</span><span class="ot">courses</span><span class="co">](https://univis.uni-bamberg.de/form?dsc=anew/lecture&amp;anonymous=1&amp;dir=guk&amp;ref=room&amp;sem=2023s)</span>{target=_blank}<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Directory of all and <span class="co">[</span><span class="ot">personnel and facilities</span><span class="co">](https://univis.uni-bamberg.de/form?dsc=anew/pande&amp;anonymous=1&amp;dir=guk&amp;ref=room&amp;sem=2023s)</span>{target=_blank}<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Directory of all <span class="co">[</span><span class="ot">facilities, their rooms, and their respective equipment</span><span class="co">](https://univis.uni-bamberg.de/form?dsc=anew/room:&amp;dir=&amp;anonymous=1&amp;ref=room&amp;sem=2023s)</span>{target=_blank}<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Event calendar of the university<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- <span class="co">[</span><span class="ot">VC resources</span><span class="co">](https://vc.uni-bamberg.de/enrol/index.php?id=266)</span>{target=_blank}<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Administrator / Support: Guntram Förster. Tel.: 0951/863 1127, Mail: info.UnivIS@uni-bamberg.de |</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Opencast | - Record and edit videos<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- See <span class="co">[</span><span class="ot">how-to/vc</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=68429)</span>{target=_blank} |</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span>{target=_blank}| <span class="co">[</span><span class="ot">Quarto, Markdown, revealjs</span><span class="co">](/teaching/quarto.html)</span> |</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span>{target=_blank}| Quarto, Markdown, revealjs (see <span class="co">[</span><span class="ot">materials</span><span class="co">](/teaching/materials.html)</span>) |</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Turnitin Similarity Checker</span><span class="co">](https://www.uni-bamberg.de/its/turnitin)</span>{target=_blank}| - Used to identify potential plagiarism by automatically checking texts for copied passages<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Available as a feature within the <span class="co">[</span><span class="ot">Virtual Campus</span><span class="co">](#virtual-campus-powered-by-moodle)</span><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Teachers can also utilize the <span class="co">[</span><span class="ot">web portal</span><span class="co">](https://www.uni-bamberg.de/its/turnitin)</span>{target=_blank} of Turnitin<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Checking process is performed on servers located within the EU<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Internal verification index through sources previously checked from our university in addition to Turnitin's sources|</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">OBS</span><span class="co">](https://obsproject.com/)</span>{target=_blank}| - Open-source software for video recording and live streaming<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Capture and mix audio and video sources<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Customizable transitions and effects<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Supports multiple scenes and sources<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Advanced settings for audio and video encoding<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Available for Windows, macOS, and Linux|</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">OpenShot</span><span class="co">](https://www.openshot.org/)</span>{target=_blank}| - Open-source video editing software<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- User-friendly interface<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Trim, slice, and arrange video clips<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Add transitions, effects, and animations<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Adjust video speed and audio volume<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Support for multiple tracks and layers<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>- Cross-platform compatibility (Windows, macOS, and Linux)|</span>
