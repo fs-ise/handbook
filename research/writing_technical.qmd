@@ -176,22 +176,20 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 Tables can be created with [GridTables](https://pandoc.org/MANUAL.html#extension-grid_tables){target=_blank} (which is displayed in PDF and Word documents):
 
 ```Markdown
-+---------------------+----------+
-| Property            | Earth    |
-+=============+=======+==========+
-|             | min   | -89.2 °C |
-| Temperature +-------+----------+
-| 1961-1990   | mean  | 14 °C    |
-|             +-------+----------+
-|             | max   | 56.7 °C  |
-+-------------+-------+----------+
+| fruit  | price  |
+|:--------|:--------:|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
 
-Table: Findings {#tbl:findings}
+Table: Findings {#tbl-findings tbl-colwidths="[75,25]"}
 
-We show the findings in @tbl:findings.
+We show the findings in @tbl-findings.
+
+<!-- note: colons ":" below headings for alignment: left, center, ... -->
 ```
 
-[Markdown table editor](https://www.tablesgenerator.com/markdown_tables){target=_blank}.
+See [Quarto tables](https://quarto.org/docs/authoring/tables.html){target=_blank} and [Markdown table editor](https://www.tablesgenerator.com/markdown_tables){target=_blank}.
 
 Footnotes:
 
