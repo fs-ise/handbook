@@ -114,17 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -134,6 +123,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -147,15 +147,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -423,7 +423,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Wagner, Gerit <a href="https://orcid.org/0000-0003-3926-7717" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p>Wagner, Gerit </p>
           </div>
   </div>
     
@@ -1002,60 +1002,59 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Wagner, Gerit"</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="an">authors:</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: "Wagner, Gerit"</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: "0000-0003-3926-7717"</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="an">citation_key:</span><span class="co"> "Wagner2019"</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="an">free_fulltext:</span><span class="co"> true</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="an">self_archiving_possible_1y:</span><span class="co"> false</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="an">self_archiving_possible_2y:</span><span class="co"> false</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">    include-after-body: ../../assets/metrics-scripts.html</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="an">citation_key:</span><span class="co"> "Wagner2019"</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="an">free_fulltext:</span><span class="co"> false</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="an">self_archiving_possible_1y:</span><span class="co"> false</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="an">self_archiving_possible_2y:</span><span class="co"> true</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">    include-after-body: ../../assets/metrics-scripts.html</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>::: { .justify }</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>Since its inception, the Information Systems discipline has been striving to develop impactful papers that contribute to cumulative knowledge development. Yet, there is a surprising lack of insights on how scientific impact can be accomplished and to which extent this impact represents a substantial engagement with, and extension of the knowledge contributions of the original papers. Especially for review articles and design science research, there are both competing conceptions of what makes these papers impactful and a lack of empirical evidence that would inform this debate. Furthermore, there is a latent skepticism as to whether this sometimes staggering impact of review articles actually represents knowledge development. In a similar way, it is unclear how and to which extent design science research has stimulated meaningful, cumulative knowledge development in information systems. The goal of this thesis is therefore to (1) explain and to (2) distinguish the scientific impact of review articles and design science research. Specifically, the first goal considers overall scientific impact as the dependent variable whose association with antecedent factors is analyzed by regression methodologies. The second goal zooms in on the concept of scientific impact and considers it as a relation between citing and cited papers that is explored through methodologies of manual content analysis and machine- learning classification.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>With Paper 1, I develop the foundation of knowledge development through review articles by crystallizing their contributions and aligning them with their underlying knowledge conver- sion processes in an overarching framework. This framework is based on the abstraction and codification of knowledge and thereby integrates two essential dimensions of knowledge devel- opment. Overall, the foundation developed in the first paper informs the underlying conception of knowledge development of both review articles and citing papers.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Addressing the first goal, Papers 2 and 3 develop and test scientometric impact models ex- plaining the scientific impact of review articles and design science research, respectively. Beyond common control variables related to the journal and author level, they offer distinct insights for each type of paper. For review articles, I identify strong effects related to methodological transparency and the development of a research agenda, which vary depending on the type of review. For design science research, I show that theorization and novelty drive scientific impact.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Concerning the second goal, Papers 4 and 5 distinguish different types of scientific impact of review articles and design science research, respectively. To analyze the different types of impact that review articles have on their overwhelming number of citing papers, I develop machine learning classifiers. Specifically, I distinguish ideational impact, which corresponds to a substantial engagement with and development of the knowledge contributions of the review article, from perfunctory impact, which corresponds to more trivial connections to the review article. In a similar, though not automated way, I analyze the types of impact of information systems design theories, a particular type of design science research. These analyses primarily focus on whether follow-up research tests and extends these theories. Based on our content analysis, I identify an alarming paucity of follow-up research in this area and develop specific guidelines for the design science community to address this challenge.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>The thesis concludes with an overview of the research contributions, implications for research practice, future research opportunities, and final remarks.</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>::: { .justify }</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>Since its inception, the Information Systems discipline has been striving to develop impactful papers that contribute to cumulative knowledge development. Yet, there is a surprising lack of insights on how scientific impact can be accomplished and to which extent this impact represents a substantial engagement with, and extension of the knowledge contributions of the original papers. Especially for review articles and design science research, there are both competing conceptions of what makes these papers impactful and a lack of empirical evidence that would inform this debate. Furthermore, there is a latent skepticism as to whether this sometimes staggering impact of review articles actually represents knowledge development. In a similar way, it is unclear how and to which extent design science research has stimulated meaningful, cumulative knowledge development in information systems. The goal of this thesis is therefore to (1) explain and to (2) distinguish the scientific impact of review articles and design science research. Specifically, the first goal considers overall scientific impact as the dependent variable whose association with antecedent factors is analyzed by regression methodologies. The second goal zooms in on the concept of scientific impact and considers it as a relation between citing and cited papers that is explored through methodologies of manual content analysis and machine- learning classification.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>With Paper 1, I develop the foundation of knowledge development through review articles by crystallizing their contributions and aligning them with their underlying knowledge conver- sion processes in an overarching framework. This framework is based on the abstraction and codification of knowledge and thereby integrates two essential dimensions of knowledge devel- opment. Overall, the foundation developed in the first paper informs the underlying conception of knowledge development of both review articles and citing papers.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Addressing the first goal, Papers 2 and 3 develop and test scientometric impact models ex- plaining the scientific impact of review articles and design science research, respectively. Beyond common control variables related to the journal and author level, they offer distinct insights for each type of paper. For review articles, I identify strong effects related to methodological transparency and the development of a research agenda, which vary depending on the type of review. For design science research, I show that theorization and novelty drive scientific impact.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Concerning the second goal, Papers 4 and 5 distinguish different types of scientific impact of review articles and design science research, respectively. To analyze the different types of impact that review articles have on their overwhelming number of citing papers, I develop machine learning classifiers. Specifically, I distinguish ideational impact, which corresponds to a substantial engagement with and development of the knowledge contributions of the review article, from perfunctory impact, which corresponds to more trivial connections to the review article. In a similar, though not automated way, I analyze the types of impact of information systems design theories, a particular type of design science research. These analyses primarily focus on whether follow-up research tests and extends these theories. Based on our content analysis, I identify an alarming paucity of follow-up research in this area and develop specific guidelines for the design science community to address this challenge.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>The thesis concludes with an overview of the research contributions, implications for research practice, future research opportunities, and final remarks.</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation (APA style)</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"apa-citation"</span><span class="dt">&gt;</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-indent:-2.5em; margin-left:2.5em;"</span><span class="dt">&gt;</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>Wagner, G. (2019). Explaining and Distinguishing Scientific Impact in Information Systems Research. 1--217.</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation (APA style)</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"apa-citation"</span><span class="dt">&gt;</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-indent:-2.5em; margin-left:2.5em;"</span><span class="dt">&gt;</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>Wagner, G. (2019). Explaining and Distinguishing Scientific Impact in Information Systems Research. 1--217.</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: BibTeX</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="in">@phdthesis{Wagner2019,</span></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="in">  author     = {Wagner, Gerit},</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="in">  title      = {Explaining and Distinguishing Scientific Impact in Information Systems Research},</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="in">  year       = {2019},</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="in">  pages      = {1--217},</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="in">  abstract   = {Since its inception, the Information Systems discipline has been striving to develop impactful papers that contribute to cumulative knowledge development. Yet, there is a surprising lack of insights on how scientific impact can be accomplished and to which extent this impact represents a substantial engagement with, and extension of the knowledge contributions of the original papers. Especially for review articles and design science research, there are both competing conceptions of what makes these papers impactful and a lack of empirical evidence that would inform this debate. Furthermore, there is a latent skepticism as to whether this sometimes staggering impact of review articles actually represents knowledge development. In a similar way, it is unclear how and to which extent design science research has stimulated meaningful, cumulative knowledge development in information systems. The goal of this thesis is therefore to (1) explain and to (2) distinguish the scientific impact of review articles and design science research. Specifically, the first goal considers overall scientific impact as the dependent variable whose association with antecedent factors is analyzed by regression methodologies. The second goal zooms in on the concept of scientific impact and considers it as a relation between citing and cited papers that is explored through methodologies of manual content analysis and machine- learning classification.&lt;br&gt;With Paper 1, I develop the foundation of knowledge development through review articles by crystallizing their contributions and aligning them with their underlying knowledge conver- sion processes in an overarching framework. This framework is based on the abstraction and codification of knowledge and thereby integrates two essential dimensions of knowledge devel- opment. Overall, the foundation developed in the first paper informs the underlying conception of knowledge development of both review articles and citing papers.&lt;br&gt;Addressing the first goal, Papers 2 and 3 develop and test scientometric impact models ex- plaining the scientific impact of review articles and design science research, respectively. Beyond common control variables related to the journal and author level, they offer distinct insights for each type of paper. For review articles, I identify strong effects related to methodological transparency and the development of a research agenda, which vary depending on the type of review. For design science research, I show that theorization and novelty drive scientific impact.&lt;br&gt;Concerning the second goal, Papers 4 and 5 distinguish different types of scientific impact of review articles and design science research, respectively. To analyze the different types of impact that review articles have on their overwhelming number of citing papers, I develop machine learning classifiers. Specifically, I distinguish ideational impact, which corresponds to a substantial engagement with and development of the knowledge contributions of the review article, from perfunctory impact, which corresponds to more trivial connections to the review article. In a similar, though not automated way, I analyze the types of impact of information systems design theories, a particular type of design science research. These analyses primarily focus on whether follow-up research tests and extends these theories. Based on our content analysis, I identify an alarming paucity of follow-up research in this area and develop specific guidelines for the design science community to address this challenge.&lt;br&gt;The thesis concludes with an overview of the research contributions, implications for research practice, future research opportunities, and final remarks.},</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="in">  school     = {Universität Regensburg}</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: BibTeX</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="in">@phdthesis{Wagner2019,</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="in">  author     = {Wagner, Gerit},</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="in">  title      = {Explaining and Distinguishing Scientific Impact in Information Systems Research},</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="in">  year       = {2019},</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="in">  pages      = {1--217},</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="in">  abstract   = {Since its inception, the Information Systems discipline has been striving to develop impactful papers that contribute to cumulative knowledge development. Yet, there is a surprising lack of insights on how scientific impact can be accomplished and to which extent this impact represents a substantial engagement with, and extension of the knowledge contributions of the original papers. Especially for review articles and design science research, there are both competing conceptions of what makes these papers impactful and a lack of empirical evidence that would inform this debate. Furthermore, there is a latent skepticism as to whether this sometimes staggering impact of review articles actually represents knowledge development. In a similar way, it is unclear how and to which extent design science research has stimulated meaningful, cumulative knowledge development in information systems. The goal of this thesis is therefore to (1) explain and to (2) distinguish the scientific impact of review articles and design science research. Specifically, the first goal considers overall scientific impact as the dependent variable whose association with antecedent factors is analyzed by regression methodologies. The second goal zooms in on the concept of scientific impact and considers it as a relation between citing and cited papers that is explored through methodologies of manual content analysis and machine- learning classification.&lt;br&gt;With Paper 1, I develop the foundation of knowledge development through review articles by crystallizing their contributions and aligning them with their underlying knowledge conver- sion processes in an overarching framework. This framework is based on the abstraction and codification of knowledge and thereby integrates two essential dimensions of knowledge devel- opment. Overall, the foundation developed in the first paper informs the underlying conception of knowledge development of both review articles and citing papers.&lt;br&gt;Addressing the first goal, Papers 2 and 3 develop and test scientometric impact models ex- plaining the scientific impact of review articles and design science research, respectively. Beyond common control variables related to the journal and author level, they offer distinct insights for each type of paper. For review articles, I identify strong effects related to methodological transparency and the development of a research agenda, which vary depending on the type of review. For design science research, I show that theorization and novelty drive scientific impact.&lt;br&gt;Concerning the second goal, Papers 4 and 5 distinguish different types of scientific impact of review articles and design science research, respectively. To analyze the different types of impact that review articles have on their overwhelming number of citing papers, I develop machine learning classifiers. Specifically, I distinguish ideational impact, which corresponds to a substantial engagement with and development of the knowledge contributions of the review article, from perfunctory impact, which corresponds to more trivial connections to the review article. In a similar, though not automated way, I analyze the types of impact of information systems design theories, a particular type of design science research. These analyses primarily focus on whether follow-up research tests and extends these theories. Based on our content analysis, I identify an alarming paucity of follow-up research in this area and develop specific guidelines for the design science community to address this challenge.&lt;br&gt;The thesis concludes with an overview of the research contributions, implications for research practice, future research opportunities, and final remarks.},</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="in">  school     = {Universität Regensburg}</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: RIS</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="in">TY  - THES</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Wagner, Gerit</span></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="in">TI  - Explaining and Distinguishing Scientific Impact in Information Systems Research</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="in">PY  - 2019</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="in">SP  - 1</span></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="in">EP  - 217</span></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="in">ER  - </span></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: RIS</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="in">TY  - THES</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Wagner, Gerit</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="in">TI  - Explaining and Distinguishing Scientific Impact in Information Systems Research</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="in">PY  - 2019</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="in">SP  - 1</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="in">EP  - 217</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="in">ER  - </span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
