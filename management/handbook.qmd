@@ -42,6 +42,23 @@ This handbook is most useful when it works like a **map**:
 - Link to the **systems where the work happens** (e.g., GitHub repos, issue trackers, course pages, calendars, templates).
 
 We also maintain **automated link checks** and quality controls (linters/statistics) to reduce link rot and make sure references remain usable.
+
+```{mermaid}
+flowchart TD
+  subgraph GH[GitHub Actions]
+    A[Link checker workflow</br>Cronjob]
+  end
+
+  subgraph HB[Handbook repository]
+    A --> SCAN[Scan all handbook pages<br>Extract links]
+    SCAN --> SPLIT{Classify links}
+    SPLIT -->|Internal links| INT[Check internal links</br>Relative paths and anchors]
+    SPLIT -->|External links| EXT["Check external links</br>Based on <a href='https://github.com/lycheeverse/lychee' target='_blank'>lychee</a>"]
+  end
+
+  INT --> R1["<a href='https://github.com/fs-ise/handbook/issues/5' target='_blank'>Broken internal links report</a>"]
+  EXT --> R2["<a href='https://github.com/fs-ise/handbook/issues/4' target='_blank'>Broken external links report</a>"]
+```
 :::
 
 ::: {.callout-note title="Reports and automation" collapse="true"}
@@ -65,6 +82,7 @@ flowchart TD
     R2[generate-projects-pages.py]
     R3[update_talks.py]
     R4[...]
+    R5[research_statistics.py]
   end
 
   subgraph OUT[Handbook outputs]
@@ -76,10 +94,9 @@ flowchart TD
   WR --> R2 --> OUT
   WR --> R3 --> OUT
   WR --> R4 --> OUT
+  MR --> R5 --> OUT
 ```
 :::
-
-
 
 ## How to suggest changes
 
