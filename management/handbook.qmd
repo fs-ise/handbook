@@ -18,22 +18,6 @@ It reduces friction and helps us focus on the work that matters most. Key advant
 
 By documenting what works, we make everyday tasks simpler and leave more room for creativity, collaboration, and discovery.
 
-::: {.callout-note title="Single source of truth"collapse="true"}
-For anything that must be correct and consistent over time (e.g., **course offerings**, **teaching dates**, **presentations**, **research projects**, **paper lists**, **lab processes**), the handbook should be the **single source of truth**.
-
-**Rule of thumb:** if a date, decision, or list appears in multiple places, we should consolidate it here (or have one canonical source and link to it from here).
-:::
-
-::: {.callout-note title="Emergence"collapse="true"}
-Our handbook follows an **emergent** logic: we improve it continuously through small contributions, iteration, and learning-by-doing.
-
-A good reference point is *The Turing Way*’s framing of [emergent strategy and living guidance](https://book.the-turing-way.org/foreword/emergent-strategy/){target=_blank}.
-
-**How our handbook evolves**
-
-![Activity](../assets/reports/handbook_activity_over_time.png)
-:::
-
 ::: {.callout-note title="Linking" collapse="true"}
 Linking is a core practice, not an afterthought.
 This handbook is most useful when it works like a **map**:
@@ -67,7 +51,7 @@ We keep key parts of the handbook **up-to-date automatically** using GitHub Acti
 - Workflows: https://github.com/fs-ise/handbook/tree/main/.github/workflows
 - Scripts: https://github.com/fs-ise/handbook/tree/main/src
 
-These jobs retrieve externaal data to regenerate report artifacts (tables, pages, figures) and commit updates back to the repository.
+These jobs retrieve external data to regenerate report artifacts (tables, pages, figures) and commit updates back to the repository.
 
 ```{mermaid}
 flowchart TD
@@ -98,6 +82,23 @@ flowchart TD
 ```
 :::
 
+::: {.callout-note title="Emergence"collapse="true"}
+Our handbook follows an **emergent** logic: we improve it continuously through small contributions, iteration, and learning-by-doing.
+
+A good reference point is *The Turing Way*’s framing of [emergent strategy and living guidance](https://book.the-turing-way.org/foreword/emergent-strategy/){target=_blank}.
+
+**How our handbook evolves**
+
+![Activity](../assets/reports/handbook_activity_over_time.png)
+:::
+
+::: {.callout-note title="Single source of truth"collapse="true"}
+For anything that must be correct and consistent over time (e.g., **course offerings**, **teaching dates**, **presentations**, **research projects**, **paper lists**, **lab processes**),
+the handbook should be the **single source of truth**.
+
+**Rule of thumb:** if a date, decision, or list appears in multiple places, we should consolidate it here (or have one canonical source and link to it from here).
+:::
+
 ## How to suggest changes
 
 1. Navigate to the page you would like to change.
@@ -121,7 +122,9 @@ Note on deployment: The handbook is hosted on GitHub Pages. The deployment may t
 ## Example page
 
 ::: {.callout-important}
-Each sentence should be on a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){target=_blank}).
+Each sentence should be on a new line (to ensure that the git diff is readable).
+To create a paragraph, add an empty line.
+This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){target=_blank}).
 :::
 
 ```markdown
