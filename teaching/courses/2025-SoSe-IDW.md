@@ -5,7 +5,7 @@ degree_program:
   - "Bachelor of Science: Information Systems"
 semester: 2025-SoSe
 status: completed
-student_evaluations: "[student_evaluations](/assets/student_evaluations/000135_20250719_SS25_IDW.pdf)"
+student_evaluations: "[student_evaluations](/data/student_evaluations/000135_20250719_SS25_IDW.pdf)"
 improvement_issue: "https://github.com/fs-ise/digital-work-lecture/issues/121"
 improvement_status: N/A
 ---

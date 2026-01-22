@@ -5,7 +5,7 @@ degree_program:
   - "Bachelor of Science: Information Systems"
 semester: 2024-SoSe
 status: completed
-student_evaluations: "[student_evaluations](/assets/student_evaluations/000074_20240715_SS24-Digital-Work-Projekt-B.pdf)"
+student_evaluations: "[student_evaluations](/data/student_evaluations/000074_20240715_SS24-Digital-Work-Projekt-B.pdf)"
 improvement_issue: "https://github.com/fs-ise/open-source-project/issues/8"
 improvement_status: completed
 ---

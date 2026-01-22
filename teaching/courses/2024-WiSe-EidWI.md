@@ -5,7 +5,7 @@ degree_program:
   - "Bachelor of Science: Information Systems"
 semester: 2024-WiSe
 status: completed
-student_evaluations: "[student_evaluations](/assets/student_evaluations/000108_20250126_WS24_25-ISM-EidWI-B__Einführung_in_die_Wirtschaftsinformatik_Vorlesung.pdf)"
+student_evaluations: "[student_evaluations](/data/student_evaluations/000108_20250126_WS24_25-ISM-EidWI-B__Einführung_in_die_Wirtschaftsinformatik_Vorlesung.pdf)"
 improvement_issue: ""
 improvement_status:	completed
 ---

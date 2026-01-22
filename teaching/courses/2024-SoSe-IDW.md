@@ -5,7 +5,7 @@ degree_program:
   - "Bachelor of Science: Information Systems"
 semester: 2024-SoSe
 status: completed
-student_evaluations: "[student_evaluations](/assets/student_evaluations/000088_20240721_SS24-Digital-Work-EDW-B_Introduction_Digital_Work.pdf)"
+student_evaluations: "[student_evaluations](/data/student_evaluations/000088_20240721_SS24-Digital-Work-EDW-B_Introduction_Digital_Work.pdf)"
 improvement_issue: "https://github.com/fs-ise/digital-work-lecture/issues/8"
 improvement_status: in-progress
 ---

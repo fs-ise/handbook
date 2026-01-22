@@ -35,7 +35,7 @@ import colrev.writer.write_utils as write_utils
 
 
 OUTPUT_DIR = Path("research/papers")
-ASSETS_REFERENCES = Path("assets/references.bib")
+ASSETS_REFERENCES = Path("data/references.bib")
 
 DEFAULT_BODY_TEMPLATE = """"""
 

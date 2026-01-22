@@ -5,7 +5,7 @@ degree_program:
   - "Master of Science: Information Systems"
 semester: 2024-WiSe
 status: completed
-student_evaluations: "[student_evaluations](/assets/student_evaluations/000109_20250126_WS24_25-DW-Sem-M__Literature_Review_Seminar.pdf)"
+student_evaluations: "[student_evaluations](/data/student_evaluations/000109_20250126_WS24_25-DW-Sem-M__Literature_Review_Seminar.pdf)"
 improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/31"
 improvement_status: in-progress
 ---

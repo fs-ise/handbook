@@ -5,7 +5,7 @@ degree_program:
   - "Master of Science: Information Systems"
 semester: 2025-SoSe
 status: completed
-student_evaluations: "[student_evaluations](/assets/student_evaluations/000141_20250802_SS25-LRSem.pdf)"
+student_evaluations: "[student_evaluations](/data/student_evaluations/000141_20250802_SS25-LRSem.pdf)"
 improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/199"
 improvement_status: N/A
 ---

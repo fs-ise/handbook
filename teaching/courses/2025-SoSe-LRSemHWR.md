@@ -5,7 +5,7 @@ degree_program:
   - "Ph.D."
 semester: 2025-SoSe
 status: completed
-student_evaluations: "[student_evaluations](/assets/student_evaluations/000130_20250807_SS25_LRSem_HWR_Berlin.pdf)"
+student_evaluations: "[student_evaluations](/data/student_evaluations/000130_20250807_SS25_LRSem_HWR_Berlin.pdf)"
 improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/220"
 improvement_status: N/A
 ---

@@ -23,7 +23,7 @@ function parseDateTime(dateTimeString) {
 
 async function loadEvents() {
     try {
-        const yamlText = fs.readFileSync('./assets/calendar/events.yaml', 'utf8'); // Read the YAML file
+        const yamlText = fs.readFileSync('./data/events.yaml', 'utf8'); // Read the YAML file
         const events = yaml.load(yamlText);
 
         if (!Array.isArray(events)) {

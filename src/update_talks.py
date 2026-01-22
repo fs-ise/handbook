@@ -11,7 +11,7 @@ import colrev.loader.load_utils
 # ---------------------------------------------------------
 # Input: your talks as BibTeX (CoLRev) records
 # ---------------------------------------------------------
-BIB_PATH = Path("assets/talks.bib")
+BIB_PATH = Path("data/talks.bib")
 OUTPUT_DIR = Path("research/talks")
 CSV_PATH = Path("talk_places.csv")
 
