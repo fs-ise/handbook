@@ -1,19 +1,12 @@
-
 ---
 title: "Home"
 filters:
   - panel-accordion
-format: html
-format:
-  html:
-    include-in-header: assets/calendar/calendar-head.html
 ---
 
 Welcome to the Information Systems Education (ISE) lab handbook!
-
-This handbook documents how the ISE Lab works — how we teach, research, collaborate, and support students and colleagues in a transparent, reproducible way.
+This handbook documents how we teach, research, collaborate, and support students and colleagues in a transparent, reproducible way.
 It is a public resource written for students, teaching staff, and collaborators who interact with the lab.
-To propose changes or contribute, see [How to contribute to the handbook](/management/handbook.html).
 
 **Start here — by role**
 
@@ -144,65 +137,77 @@ else:
 - Guidelines
 - Resources...
 - Tasks overview (e.g., simple: search IS journals for literature reviews -report them here, review our teaching materials, test search-query/bib-dedupe..., advanced: contribute to search-query, colrev, bib-dedupe)
-
 -->
 
 <br>
 
+<style>
+/* base box style */
+.area-box {
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(0,0,0,.02); /* fallback */
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+/* make the heading and link spacing look nice */
+.area-box h3 {
+  margin-top: 0;
+}
+.area-box a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* slight color variants */
+.area-box.teaching   { background: rgba( 66, 153, 225, .10); border-color: rgba( 66, 153, 225, .25); }
+.area-box.research   { background: rgba( 72, 187, 120, .10); border-color: rgba( 72, 187, 120, .25); }
+.area-box.management { background: rgba(237, 137,  54, .10); border-color: rgba(237, 137,  54, .25); }
+.area-box.academy    { background: rgba(159, 122, 234, .10); border-color: rgba(159, 122, 234, .25); }
+.area-box.team       { background: rgba( 45,  55,  72, .06); border-color: rgba( 45,  55,  72, .18); }
+
+</style>
 ## Areas
 
 The handbook is organized around five core areas that reflect how the lab operates over time.
 
 ::: {.grid}
 
-::: {.g-col-6}
-### Teaching
+<!-- Principles, systems, and procedures for designing, delivering, and evaluating courses — from lectures and theses to assessments, student support, and institutional reporting.
+Support for scholarly work — from project planning and collaboration to methods, data, writing, and publication workflows.
+Operating procedures that keep the lab running — communication, infrastructure, teaching admin, research support, risk, procurement, and HR.
+Training and development activities that build individual and shared capabilities over time.
+Roles, responsibilities, and who to contact for specific topics within the lab.
+-->
 
-Principles, systems, and procedures for designing, delivering, and evaluating courses — from lectures and theses to assessments, student support, and institutional reporting. [Go to Teaching →](teaching/index.qmd)
+::: {.g-col-6 .area-box .teaching}
+### 🎓 Teaching
+Principles, systems, and procedures … [Go to Teaching →](teaching/index.qmd)
 :::
 
-::: {.g-col-6}
-### Research
-
-Support for scholarly work — from project planning and collaboration to methods, data, writing, and publication workflows. [Go to Research →](research/index.qmd)
+::: {.g-col-6 .area-box .research}
+### 🔬 Research
+Support for scholarly work … [Go to Research →](research/index.qmd)
 :::
 
-::: {.g-col-6}
-### Management
-
-Operating procedures that keep the lab running — communication, infrastructure, teaching admin, research support, risk, procurement, and HR. [Go to Management →](management/index.qmd)
+::: {.g-col-6 .area-box .management}
+### ⚙️ Management
+Operating procedures … [Go to Management →](management/index.qmd)
 :::
 
-::: {.g-col-6}
-### Academy
-
-Training and development activities that build individual and shared capabilities over time. [Go to Academy →](academy/index.qmd)
+::: {.g-col-6 .area-box .academy}
+### 🌱 Academy
+Training and development … [Go to Academy →](academy/index.qmd)
 :::
 
-::: {.g-col-6}
-### Team
-
-Roles, responsibilities, and who to contact for specific topics within the lab. [Go to Team →](team/index.qmd)
+::: {.g-col-6 .area-box .team}
+### 👥 Team
+Roles, responsibilities … [Go to Team →](team/index.qmd)
 :::
-
-:::
-
-
-::: {.callout-note title="Calendar" collapse=true}
-Our shared public calendar has dates for upcoming events in the lab.
-It contains mostly public events that are of interest to the team and students.
-
-<div id="ec"></div>
-
-To subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.
-
-```sh
-https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise_cal.ical
-```
-
-To add or modify events, edit the `events.yaml` file [here]({{< meta handbook.url >}}/edit/main/assets/calendar/events.yaml){target=_blank}.
-
 
 :::
 
-<script src="assets/calendar/calendar.js"></script>
+## Contribute
+
+To propose changes or contribute, see [how to contribute to the handbook](/management/handbook.html).
