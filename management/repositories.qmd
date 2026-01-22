@@ -118,7 +118,8 @@ def render_rows(filtered_repos,
 </tr>""")
     return "\n".join(rows)
 
-general_repos = [r for r in repos if r.get("area") not in ("research", "teaching")]
+template_repos = [r for r in repos if r.get("area") == "template"]
+general_repos = [r for r in repos if r.get("area") not in ("research", "teaching", "template")]
 teaching_repos = [r for r in repos if r.get("area") == "teaching"]
 research_repos = [r for r in repos if r.get("area") == "research"]
 ```
@@ -139,6 +140,28 @@ html = f'''
   </thead>
   <tbody>
     {render_rows(general_repos)}
+  </tbody>
+</table>
+'''
+print(html)
+```
+
+## Templates
+
+```{python}
+#| output: asis
+html = f'''
+<table>
+  <thead>
+    <tr>
+      <th style="width: 50%;">Repository</th>
+      <th style="width: 10%;">Status</th>
+      <th style="width: 20%;">Collaborators</th>
+      <th style="width: 10%;">Access</th>
+    </tr>
+  </thead>
+  <tbody>
+    {render_rows(template_repos)}
   </tbody>
 </table>
 '''

@@ -129,13 +129,16 @@ def get_project_type(owner: str, repo_name: str) -> list[str]:
     return p_types
 
 
-def classify_area(topics: list[str]) -> str:
-    """Classify a repository into research/teaching/other based on topics."""
+def classify_area(repo_name: str, topics: list[str]) -> str:
+    """Classify a repository into template/research/teaching/other."""
+    if "template" in repo_name.lower():
+        return "template"
     if "research" in topics:
         return "research"
     if "teaching-materials" in topics:
         return "teaching"
     return "other"
+
 
 
 def get_display_title(owner: str, repo_name: str) -> str:
@@ -163,7 +166,7 @@ def main() -> None:
             print(f"Processing {repo['full_name']}...")
 
             topics = repo.get("topics") or []
-            area = classify_area(topics)
+            area = classify_area(repo["name"], topics)
 
             workflow_id = get_workflow_id_by_filename(org_name, repo["name"], WORKFLOW_FILENAME)
             labot_workflow_status = get_workflow_status(org_name, repo["name"], workflow_id)
