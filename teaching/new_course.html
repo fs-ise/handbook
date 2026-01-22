@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -133,15 +133,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -792,7 +792,7 @@ Note
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</span>
 <span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Exam grading and documentation</span></span>
@@ -927,7 +927,7 @@ Note
 <span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for protocol submissions (upload in VC).</span>
 <span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the presentation.</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
 <span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Grading and documentation</span></span>
@@ -1038,7 +1038,7 @@ Note
 <span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for pull-request evaluation.</span>
 <span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the code review session.</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
 <span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
@@ -1682,7 +1682,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</span>
 <span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
 <span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Exam grading and documentation</span></span>
@@ -1808,7 +1808,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for protocol submissions (upload in VC).</span>
 <span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the presentation.</span>
-<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add presentation dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
 <span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Grading and documentation</span></span>
@@ -1912,7 +1912,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Add the presentation (exam) dates to the department calendar</span>
 <span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set deadline for pull-request evaluation.</span>
 <span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Set the date for the code review session.</span>
-<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/assets/calendar/events.yaml)</span></span>
+<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Add the code review session to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
 <span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Schedule evaluations in the pen-ultimate week (<span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
 <span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scheine (<span class="co">[</span><span class="ot">Formular</span><span class="co">](https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/)</span>{target=_blank}), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</span>
 <span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a></span>
