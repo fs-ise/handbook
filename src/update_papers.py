@@ -39,6 +39,22 @@ ASSETS_REFERENCES = Path("data/references.bib")
 
 DEFAULT_BODY_TEMPLATE = """"""
 
+ALLOWED_ENTRYTYPES = {
+    "article",
+    "inproceedings",
+    "phdthesis",
+    "mastersthesis",
+    "bachelorthesis",
+}
+
+ENTRYTYPE_NORMALIZATION = {
+    # common non-standard variants -> canonical
+    "masterthesis": "mastersthesis",
+    "mscThesis".lower(): "mastersthesis",
+    "bachelorsthesis": "bachelorthesis",
+    "baThesis".lower(): "bachelorthesis",
+}
+
 # Fields that should be stripped from the exported references.bib
 FIELDS_TO_STRIP_FOR_REFERENCES = {
     # "ENTRYTYPE",
@@ -867,6 +883,12 @@ def main():
         # CoLRev records are usually dict-like
         # Ensure we have a mutable dict (in case CoLRev returns a custom type)
         record = dict(record)
+
+        entrytype_raw = str(record.get("ENTRYTYPE", "")).strip().lower()
+        entrytype = ENTRYTYPE_NORMALIZATION.get(entrytype_raw, entrytype_raw)
+
+        if entrytype not in ALLOWED_ENTRYTYPES:
+            continue
 
         key = get_field(record, "ID", "id", default="").strip()
         if not key:
