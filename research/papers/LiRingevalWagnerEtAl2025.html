@@ -114,28 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -156,6 +134,28 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -473,11 +473,11 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <p>Background Centre-based cardiac rehabilitation (CBCR) is underused due to low referral rates, accessibility barriers, and socioeconomic constraints. mHealth technologies have the potential to address some of these challenges through remote delivery of home-based cardiac rehabilitation (HBCR). This study aims to assess the effects of mHealth HBCR interventions compared with usual care and CBCR in patients with heart disease. Methods We conducted a systematic review and meta-analysis of randomised controlled trials of mHealth HBCR interventions. Four electronic databases (MEDLINE, CENTRAL, CINAHL, and Embase) were searched from inception to March 31, 2023, with no restrictions on language or publication type. Eligible studies were randomised controlled trials of adult patients (age ≥18 years) with heart disease, comparing mHealth interventions with usual care or CBCR. The primary outcome of interest was aerobic exercise capacity, assessed with VO2 peak or 6-min walk test (6MWT). Quality of evidence was assessed using the GRADE system. This review was registered with PROSPERO, CRD42024544087. Findings Our search yielded 9164 references, of which 135 were retained for full-text review. 13 randomised controlled trials met eligibility criteria and were included in the systematic review, involving 1508 adults with myocardial infarction, angina pectoris, or heart failure, or who had undergone revascularisation. Intervention duration ranged from 6 weeks to 24 weeks. Random-effects meta-analysis showed that, compared with usual care, mHealth HBCR significantly improved 6MWT (mean difference 24·74, 95% CI 9·88–39·60; 532 patients) and VO2 peak (1·77, 1·19–2·35; 359 patients). No significant differences were found between mHealth HBCR and CBCR. Quality of evidence ranged from low to very low across outcomes due to risk of bias and imprecision (small sample size). Interpretation mHealth HBCR could improve access and health outcomes in patients who are unable to attend CBCR. Further research is needed to build a robust evidence base on the clinical effectiveness and cost-effectiveness of mHealth HBCR, particularly in comparison with CBCR, to inform clinical practice and policy.</p>
 </div>
 <div class="text-center my-3">
-<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://doi.org/10.1016/J.LANDIG.2025.01.011" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-primary" href="../../assets/papers/LiRingevalWagnerEtAl2025.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-pdf"></i> Open access PDF </a></p>
+<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://doi.org/10.1016/J.LANDIG.2025.01.011" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-primary" href="../../data/papers/LiRingevalWagnerEtAl2025.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-pdf"></i> Open access PDF </a></p>
 </div>
 <section id="open-access-pdf" class="level2">
 <h2 class="anchored" data-anchor-id="open-access-pdf">Open access PDF</h2>
-<iframe src="../../assets/papers/LiRingevalWagnerEtAl2025.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
+<iframe src="../../data/papers/LiRingevalWagnerEtAl2025.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
 This browser does not support PDFs. Please use the button above to download the PDF.
 </iframe>
 <div class="metrics-row">
@@ -1101,7 +1101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-secondary me-2"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.1016/J.LANDIG.2025.01.011"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-box-arrow-up-right"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Article / DOI link</span>
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-primary"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/assets/papers/LiRingevalWagnerEtAl2025.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-primary"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/data/papers/LiRingevalWagnerEtAl2025.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-file-earmark-pdf"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Open access PDF</span>
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
 <span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
@@ -1110,7 +1110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Open access PDF</span></span>
 <span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/assets/papers/LiRingevalWagnerEtAl2025.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/data/papers/LiRingevalWagnerEtAl2025.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
 <span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  This browser does not support PDFs. Please use the button above to download the PDF.</span>
 <span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
 <span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>

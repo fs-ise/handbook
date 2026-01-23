@@ -114,6 +114,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -134,28 +156,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -463,7 +463,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <p>Understanding a new literature corpus can be a grueling experience for junior scholars. Nevertheless, corresponding guidelines have not been updated for decades. We contend that the traditional strategy of skimming all papers and reading selected papers afterwards needs to be revised. Therefore, we design a new strategy that guides the overall exploratory process by prioritizing influential papers for initial reading, followed by skimming the remaining papers. Consistent with schemata theory, starting with indepth reading allows readers to acquire more substantial prior content schemata, which are representative for the literature corpus and useful in the following skimming process. To this end, we develop a prototype that identifies the influential papers from a set of PDFs, which is illustrated in a case study in the IT business value domain. With the new strategy, we envision a more efficient process of exploring unknown literature corpora.</p>
 </div>
 <div class="text-center my-3">
-<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://aisel.aisnet.org/ecis2020_rp/44" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-secondary me-2" href="../../assets/papers/WagnerEmplSchryen2020.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-text"></i> Author copy </a></p>
+<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://aisel.aisnet.org/ecis2020_rp/44" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-secondary me-2" href="../../data/papers/WagnerEmplSchryen2020.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-text"></i> Author copy </a></p>
 </div>
 <section id="additional-resources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
@@ -473,7 +473,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </section>
 <section id="author-copy-pdf" class="level2">
 <h2 class="anchored" data-anchor-id="author-copy-pdf">Author-copy PDF</h2>
-<iframe src="../../assets/papers/WagnerEmplSchryen2020.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
+<iframe src="../../data/papers/WagnerEmplSchryen2020.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
 This browser does not support PDFs. Please use the button above to download the PDF.
 </iframe>
 </section>
@@ -1060,7 +1060,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-secondary me-2"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://aisel.aisnet.org/ecis2020_rp/44"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-box-arrow-up-right"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Article / DOI link</span>
 <span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-secondary me-2"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/assets/papers/WagnerEmplSchryen2020.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-secondary me-2"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/data/papers/WagnerEmplSchryen2020.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-file-earmark-text"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Author copy</span>
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
@@ -1074,7 +1074,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Author-copy PDF</span></span>
 <span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/assets/papers/WagnerEmplSchryen2020.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/data/papers/WagnerEmplSchryen2020.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
 <span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  This browser does not support PDFs. Please use the button above to download the PDF.</span>
 <span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
 <span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>

@@ -114,15 +114,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -136,17 +136,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -156,6 +145,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -471,11 +471,11 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <p>Background Unhealthy behaviors, such as physical inactivity, sedentary lifestyle, and unhealthful eating, remain highly prevalent, posing formidable challenges in efforts to improve cardiovascular health. While traditional interventions to promote healthy lifestyles are both costly and effective, wearable trackers, especially Fitbit devices, can provide a low-cost alternative that may effectively help large numbers of individuals become more physically fit and thereby maintain a good health status. Objective The objectives of this meta-analysis are (1) to assess the effectiveness of interventions that incorporate a Fitbit device for healthy lifestyle outcomes (eg, steps, moderate-to-vigorous physical activity, and weight) and (2) to identify which additional intervention components or study characteristics are the most effective at improving healthy lifestyle outcomes. Methods A systematic review was conducted, searching the following databases from 2007 to 2019: MEDLINE, EMBASE, CINAHL, and CENTRAL (Cochrane). Studies were included if (1) they were randomized controlled trials, (2) the intervention involved the use of a Fitbit device, and (3) the reported outcomes were related to healthy lifestyles. The main outcome measures were related to physical activity, sedentary behavior, and weight. All the studies were assessed for risk of bias using Cochrane criteria. A random-effects meta-analysis was conducted to estimate the treatment effect of interventions that included a Fitbit device compared with a control group. We also conducted subgroup analysis and fuzzy-set qualitative comparative analysis (fsQCA) to further disentangle the effects of intervention components. Results Our final sample comprised 41 articles reporting the results of 37 studies. For Fitbit-based interventions, we found a statistically significant increase in daily step count (mean difference [MD] 950.54, 95% CI 475.89-1425.18; P&lt;.001) and moderate-to-vigorous physical activity (MD 6.16, 95% CI 2.80-9.51; P&lt;.001), a significant decrease in weight (MD −1.48, 95% CI −2.81 to −0.14; P=.03), and a nonsignificant decrease in objectively assessed and self-reported sedentary behavior (MD −10.62, 95% CI −35.50 to 14.27; P=.40 and standardized MD −0.11, 95% CI −0.48 to 0.26; P=.56, respectively). In general, the included studies were at low risk for bias, except for performance bias. Subgroup analysis and fsQCA demonstrated that, in addition to the effects of the Fitbit devices, setting activity goals was the most important intervention component. Conclusions The use of Fitbit devices in interventions has the potential to promote healthy lifestyles in terms of physical activity and weight. Fitbit devices may be useful to health professionals for patient monitoring and support. Trial Registration PROSPERO International Prospective Register of Systematic Reviews CRD42019145450; https://www.crd.york.ac.uk/prospero/display_record.php?ID=CRD42019145450</p>
 </div>
 <div class="text-center my-3">
-<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://doi.org/10.2196/23954" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-primary" href="../../assets/papers/RingevalWagnerDenfordEtAl2020.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-pdf"></i> Open access PDF </a></p>
+<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://doi.org/10.2196/23954" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-primary" href="../../data/papers/RingevalWagnerDenfordEtAl2020.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-pdf"></i> Open access PDF </a></p>
 </div>
 <section id="open-access-pdf" class="level2">
 <h2 class="anchored" data-anchor-id="open-access-pdf">Open access PDF</h2>
-<iframe src="../../assets/papers/RingevalWagnerDenfordEtAl2020.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
+<iframe src="../../data/papers/RingevalWagnerDenfordEtAl2020.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
 This browser does not support PDFs. Please use the button above to download the PDF.
 </iframe>
 <div class="metrics-row">
@@ -1096,7 +1096,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-secondary me-2"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.2196/23954"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-box-arrow-up-right"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Article / DOI link</span>
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-primary"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/assets/papers/RingevalWagnerDenfordEtAl2020.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-primary"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/data/papers/RingevalWagnerDenfordEtAl2020.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-file-earmark-pdf"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Open access PDF</span>
 <span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
@@ -1105,7 +1105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Open access PDF</span></span>
 <span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/assets/papers/RingevalWagnerDenfordEtAl2020.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/data/papers/RingevalWagnerDenfordEtAl2020.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
 <span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>  This browser does not support PDFs. Please use the button above to download the PDF.</span>
 <span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
 <span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>

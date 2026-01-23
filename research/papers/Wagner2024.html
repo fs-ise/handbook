@@ -114,26 +114,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -147,15 +136,26 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -468,7 +468,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <p>BibDedupe is a Python library developed for bibliographic record deduplication in meta-analysis and research synthesis. It is constructed with a focus on four requirements: (1) Zero false positives: The primary objective is to prevent incorrectly merging distinct entries. This focus on zero false positives is crucial to ensure trustworthiness and prevent biased conclusions in the analysis. (2) Reproducibility: BibDedupe implements fixed rules to produce consistent results, in line with the scientific standard of reproducibility. (3) Efficiency: The library is also tuned for low false-negative rates and rapid processing, to ensure scalability of the duplicate identification process. (4) Continuous evaluation and improvement: It is continuously evaluated on over 160,000 records from 10 datasets to ensure its effectiveness, especially in follow-up refinements. Unlike general-purpose deduplication tools, BibDedupe is specifically designed for the unique requirements of bibliographic data in meta-analysis and research synthesis. In this context, BibDedupe aims to provide a Python library that improves the effectiveness and efficiency of duplicate identification, potentially benefitting review papers across scientific disciplines.</p>
 </div>
 <div class="text-center my-3">
-<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://doi.org/10.21105/JOSS.06318" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-primary" href="../../assets/papers/Wagner2024.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-pdf"></i> Open access PDF </a></p>
+<p><a class="btn btn-sm btn-outline-secondary me-2" href="https://doi.org/10.21105/JOSS.06318" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-primary" href="../../data/papers/Wagner2024.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-pdf"></i> Open access PDF </a></p>
 </div>
 <section id="additional-resources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
@@ -478,7 +478,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </section>
 <section id="open-access-pdf" class="level2">
 <h2 class="anchored" data-anchor-id="open-access-pdf">Open access PDF</h2>
-<iframe src="../../assets/papers/Wagner2024.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
+<iframe src="../../data/papers/Wagner2024.pdf" width="100%" height="800px" style="border: 1px solid #ccc;">
 This browser does not support PDFs. Please use the button above to download the PDF.
 </iframe>
 <div class="metrics-row">
@@ -1088,7 +1088,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-secondary me-2"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://doi.org/10.21105/JOSS.06318"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-box-arrow-up-right"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Article / DOI link</span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-primary"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/assets/papers/Wagner2024.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-sm btn-outline-primary"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/data/papers/Wagner2024.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> role</span><span class="op">=</span><span class="st">"button"</span><span class="dt">&gt;</span></span>
 <span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-file-earmark-pdf"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Open access PDF</span>
 <span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
@@ -1102,7 +1102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Open access PDF</span></span>
 <span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/assets/papers/Wagner2024.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/data/papers/Wagner2024.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: 1px solid #ccc;"</span><span class="dt">&gt;</span></span>
 <span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  This browser does not support PDFs. Please use the button above to download the PDF.</span>
 <span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
 <span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
