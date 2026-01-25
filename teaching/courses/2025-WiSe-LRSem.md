@@ -5,7 +5,7 @@ degree_program:
   - "Master of Science: Information Systems"
 semester: 2025-WiSe
 status: in-progress
-student_evaluations: ""
+student_evaluations: "[student_evaluations](/data/student_evaluations/000165_20260125-WS25_26-DW-Sem-M__Literature_Review_Seminar.pdf)"
 improvement_issue: ""
 improvement_status: N/A
 ---
