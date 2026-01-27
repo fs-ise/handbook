@@ -44,6 +44,9 @@ flowchart TD
   INT --> R1["<a href='https://github.com/fs-ise/handbook/issues/5' target='_blank'>Broken internal links report</a>"]
   EXT --> R2["<a href='https://github.com/fs-ise/handbook/issues/4' target='_blank'>Broken external links report</a>"]
 ```
+
+Note: ideally, reports should be updated in the /reports directory and included through scripts (python or markdown-includes)
+
 :::
 
 ::: {.callout-note title="Reports and automation" collapse="true"}
@@ -99,7 +102,7 @@ the handbook should be the **single source of truth**.
 
 **Rule of thumb:** If a date, decision, or list appears in multiple places, we should consolidate it here (or have one canonical source and link to it from here).
 
-[🔗 Data directory](https://github.com/fs-ise/handbook/tree/main/data){.btn .btn-primary .btn-center rel="noopener" target=_blank}
+[{{< iconify hugeicons:database-expand style="color: white;" >}}  Data directory](https://github.com/fs-ise/handbook/tree/main/data){.btn .btn-primary .btn-center rel="noopener" target=_blank}
 
 :::
 
@@ -166,6 +169,9 @@ Confidential data is stored on the [Nextcloud](http://url.com){target=_blank}.
 An important callout (important could also be replaced by note, warning, tip, caution; see [quarto-docs](https://quarto.org/docs/authoring/callouts.html){target=_blank}).
 :::
 
+
+{{< iconify hugeicons:add-circle title="Issues" label="Issues" >}}
+
 ```
 
 ::: resource
@@ -179,6 +185,8 @@ Confidential data is stored on the [Nextcloud](http://url.com){target=_blank}.
 ::: callout-important
 An important callout.
 :::
+
+Icons: [hugeicons](https://icon-sets.iconify.design/hugeicons/) preferred.
 
 Graphs can be included as [Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html){target=_blank} (see [Mermaid live editor](https://mermaid.live/edit){target=_blank}).
 
