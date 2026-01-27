@@ -23,7 +23,8 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests pyyaml colrev
+          pip install requests pyyaml
+          pip install "colrev @ git+https://github.com/CoLRev-Environment/colrev.git"
 
       - name: Change to Repo Directory
         run: cd ${{ github.workspace }}
