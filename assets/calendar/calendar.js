@@ -1,3 +1,39 @@
+function setupKeyboardShortcuts() {
+  document.addEventListener("keydown", (e) => {
+    // Don’t hijack keys while typing
+    const el = e.target;
+    const isTyping =
+      el &&
+      (el.tagName === "INPUT" ||
+        el.tagName === "TEXTAREA" ||
+        el.isContentEditable);
+
+    if (isTyping) return;
+
+    if (!window.ec) return;
+
+    // Left / Right navigation
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      window.ec.prev?.();   // previous period
+      return;
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      window.ec.next?.();   // next period
+      return;
+    }
+
+    // Optional: "t" to jump to today
+    if (e.key.toLowerCase() === "t") {
+      e.preventDefault();
+      window.ec.today?.();
+      return;
+    }
+  });
+}
+
+
 async function initCalendar() {
     const events = await loadEventsFromICal();
     const ec = new EventCalendar(document.getElementById('ec'), {
@@ -47,16 +83,46 @@ async function loadEventsFromICal() {
         const vcalendar = new ICAL.Component(jcalData);
         const vevents = vcalendar.getAllSubcomponents('vevent');
 
-        return vevents.map(vevent => {
-            const event = new ICAL.Event(vevent);
-            return {
-                start: event.startDate.toJSDate(),
-                end: event.endDate.toJSDate(),
-                title: event.summary,
-                description: event.description,
-                location: event.location,
-            };
+        return vevents.map((vevent) => {
+        const event = new ICAL.Event(vevent);
+
+        const title = (event.summary || "").toLowerCase();
+
+        // Default: teaching (blue)
+        let category = "teaching";
+        let color = "#007acc";
+
+        // General (light grey)
+        if (title.includes("vacation") || title.includes("remote work") || title.includes("professorium")) {
+            category = "general";
+            color = "#C8D1DC";
+        }
+
+        // Events (green) — add/remove keywords as you like
+        const eventKeywords = [
+            "feier",
+            "conference",
+            "dies academicus",
+            "weihnachtsfeier",
+            "end-of-year",
+            "choose-a-chair",
+        ];
+        if (eventKeywords.some((kw) => title.includes(kw))) {
+            category = "events";
+            color = "#2e7d32";
+        }
+
+        return {
+            start: event.startDate.toJSDate(),
+            end: event.endDate.toJSDate(),
+            title: event.summary,
+            description: event.description,
+            location: event.location,
+            category, // optional, but handy for filtering/legends later
+            color,
+        };
         });
+
     } catch (error) {
         console.error("Error fetching or parsing iCal file:", error);
         return [];
@@ -135,6 +201,7 @@ function popUpEvent(event) {
     document.body.appendChild(modal);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    initCalendar();
+document.addEventListener("DOMContentLoaded", async () => {
+  await initCalendar();
+  setupKeyboardShortcuts();
 });
