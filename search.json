@@ -1226,7 +1226,7 @@
     "href": "teaching/materials.html#slides",
     "title": "Materials",
     "section": "Slides",
-    "text": "Slides\nTemplate is available here (see tutorial)\n\nSlides are in reveal-js.\nHTML and PDF versions are automatically generated (e.g., GitHub actions).\nLearning objectives should be on all slides (verifiable outcomes).\nUse markers for tasks/questions (see example)\n\nQuarto extensions for slides:\n\nsimplemenu\npointer\ncustom callouts\ndownloadthis\ncode animations\ncountdown timer (link exercise sheets on slides)\nflashcards for quick questions with solutions displayed on pressing q\n\n\n\n\n\n\n\nNoteSlide template\n\n\n\n\n\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\nYour content here… [^1]\n\n[^1]: A url and further information.\n\n\n@CastonguayWagnerMotulskyEtAl2023 is useful.\n\n&lt;!-- _class: centered --&gt;\nCentered text...\nTODO: Mermaid diagrams\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nFeedback\n\nLimesurvey\nRustpad for anonymous feedback/suggestions (contents are deleted after 1 day of inactivity)\n\nEmbedding Google Forms (anonymous responses possible):\n&lt;style&gt;\nblockquote {\n    border-top: 0.1em;\n    font-size: 60%;\n    margin-top: auto;\n}\n&lt;/style&gt;\n\n&lt;iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeACViOkyuuG3Bvz4Dhq1yA-Fm8WTPiRst5D_IxK3UuRyFzjg/viewform?embedded=true\" width=\"100%\" height=\"90%\" frameborder=\"\" marginheight=\"0\" marginwidth=\"0\"&gt;Wird geladen…&lt;/iframe&gt;\n\n&gt; Open [responses](https://docs.google.com/forms/d/1Wa_MNL3zClW7j-1NPm31PIP7pXs7QqLnZPi4oefA_gA/edit#responses){target=_blank}\nTypography defaults:\n  --font-family: \"Source Sans Pro\", sans-serif;\nAdding headings to the navigation\n## Heading {data-menu-title=\"I. Overview\"}\n\n### Will not be in the navigation\nTimer\nquarto add gadenbuie/countdown/quarto\n{{&lt; countdown minutes=5 seconds=32 top=10 left=0 &gt;}}\nCode annotation\nSee link:\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n1penguins |&gt;\n2  mutate(\n    bill_ratio = bill_depth_mm / bill_length_mm,\n    bill_area  = bill_depth_mm * bill_length_mm\n  )\n\n1\n\nTake penguins, and then,\n\n2\n\nadd new columns for the bill ratio and bill area.\n\n\nIcons\nBased on Bootstrap\n{{icon=\"mortarboard-fill\"}}\n\n\n\nShortcuts:\n\ng : goto slide\nb\nd\n\nConvert PowerPoint to quarto:\npptx2md \"slides.pptx\" --output \"slides_with_notes.qmd\" --enable-slides --qmd --image-dir \"images\"",
+    "text": "Slides\nTemplate is available here (see tutorial)\n\nSlides are in reveal-js.\nHTML and PDF versions are automatically generated (e.g., GitHub actions).\nLearning objectives should be on all slides (verifiable outcomes).\nUse markers for tasks/questions (see example)\n\nQuarto extensions for slides:\n\nsimplemenu\npointer\ncustom callouts\ndownloadthis\ncode animations\ncountdown timer (link exercise sheets on slides)\nflashcards for quick questions with solutions displayed on pressing q\n\n\n\n\n\n\n\nNoteSlide template\n\n\n\n\n\nLimitation: custom-callouts do not work in revealjs.\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\nYour content here… [^1]\n\n[^1]: A url and further information.\n\n\n@CastonguayWagnerMotulskyEtAl2023 is useful.\n\n&lt;!-- _class: centered --&gt;\nCentered text...\nTODO: Mermaid diagrams\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nFeedback\n\nLimesurvey\nRustpad for anonymous feedback/suggestions (contents are deleted after 1 day of inactivity)\n\nEmbedding Google Forms (anonymous responses possible):\n&lt;style&gt;\nblockquote {\n    border-top: 0.1em;\n    font-size: 60%;\n    margin-top: auto;\n}\n&lt;/style&gt;\n\n&lt;iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeACViOkyuuG3Bvz4Dhq1yA-Fm8WTPiRst5D_IxK3UuRyFzjg/viewform?embedded=true\" width=\"100%\" height=\"90%\" frameborder=\"\" marginheight=\"0\" marginwidth=\"0\"&gt;Wird geladen…&lt;/iframe&gt;\n\n&gt; Open [responses](https://docs.google.com/forms/d/1Wa_MNL3zClW7j-1NPm31PIP7pXs7QqLnZPi4oefA_gA/edit#responses){target=_blank}\nTypography defaults:\n  --font-family: \"Source Sans Pro\", sans-serif;\nAdding headings to the navigation\n## Heading {data-menu-title=\"I. Overview\"}\n\n### Will not be in the navigation\nTimer\nquarto add gadenbuie/countdown/quarto\n{{&lt; countdown minutes=5 seconds=32 top=10 left=0 &gt;}}\nCode annotation\nSee link:\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n1penguins |&gt;\n2  mutate(\n    bill_ratio = bill_depth_mm / bill_length_mm,\n    bill_area  = bill_depth_mm * bill_length_mm\n  )\n\n1\n\nTake penguins, and then,\n\n2\n\nadd new columns for the bill ratio and bill area.\n\n\nIcons\nBased on Bootstrap\n{{icon=\"mortarboard-fill\"}}\n\n\n\nShortcuts:\n\ng : goto slide\nb\nd\n\nConvert PowerPoint to quarto:\npptx2md \"slides.pptx\" --output \"slides_with_notes.qmd\" --enable-slides --qmd --image-dir \"images\"",
     "crumbs": [
       "Teaching",
       "Design",
@@ -8273,7 +8273,115 @@
     "href": "management/agendas.html",
     "title": "Agendas",
     "section": "",
-    "text": "NoteTODO\n\n\n\n\nIntegrate into onboarding process/issue\nVacation notes\nWaiting-for items\nUpcoming items\nTBD: Information on who edits what/when (GitHub blame - with illustration)\nLinks/section to regular tasks (e.g., teaching/course administration)\nThe agenda repository could be an Obsidian vault\nTo facilitate planning and collaboration, we work with agenda repositories. An agenda repository is a shared GitHub repository with a README.md file to keep track of meeting notes, TODOs, and items to discuss. It serves as a single location to track information that can be linked and edited by all participants.",
+    "text": "To facilitate planning and collaboration, we work with agenda repositories. An agenda repository is a shared GitHub repository with a README.md file to keep track of meeting notes, TODOs, and items to discuss. It serves as a single location to track information that can be linked and edited by all participants.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#checklist-for-agendas",
+    "href": "management/agendas.html#checklist-for-agendas",
+    "title": "Agendas",
+    "section": "Checklist for agendas",
+    "text": "Checklist for agendas\nUse the following checklist to keep your agenda repository a practical, living resource for planning, coordination, and reflection.\n\n\n\n\n\n\nNoteChecklist\n\n\n\n\n1. Make the agenda your own\n\nKeep in mind: the agenda will remain a private repository, shared between you and your supervisor.\n\nTreat the agenda as a shared but informal working document (no perfection needed).\n\nAdapt the structure to your personal workflow.\n\nUse it regularly as your primary planning resource.\n\n\n\n\n2. Update the agenda regularly\n\nDefine and revisit shared goals (objectives and key results (OKR)) together.\n\nMaintain a list of major ongoing projects.\n\nKeep a running “Items to Discuss” section.\n\nMaintain a weekly task list:\n\nCheck off completed items.\n\nCopy unfinished items to the next week.\n\n\nShare a link to meeting notes before the meeting.\nAdd meeting notes directly after each meeting.\n\n\n\n\n3. Create a clear overview\n\nKeep orientation easy: structure before detail.\n\nUse folders and multiple documents where helpful.\n\nAdd internal links between sections.\n\nLink to relevant external resources (repos, docs, papers, courses).\n\nEnsure the agenda can be understood quickly by all participants.\n\n\n\n\n4. Maintain a timeline and planning view\n\nCreate Mermaid timelines (Gantt charts).\n\nTrack contracts and important deadlines.\n\nKeep an overview of workload / hours.\n\nPlan development goals (topics, methods, skills).\n\nMap current and future projects over time.\n\n\n\n\n5. Anticipate and track key periods\n\nNote upcoming vacations.\n\nMark exam phases or teaching peaks.\n\nMaintain “waiting-for” items (e.g., reviews, decisions, responses).\n\nMaintain “upcoming” items (projects, papers, milestones).\n\n\n\n\n6. Document interests and ideas\n\nKeep a section for research and teaching interests.\n\nCollect ideas for new projects.\n\nUse this as input for strategic discussions about next steps.\n\n\n\n\n7. Document and celebrate success\n\nRecord accepted/published papers.\n\nAdd positive student feedback.\n\nNote milestones and accomplishments.\n\nUse this as a basis for CV building and reference letters.\n\nRegularly reflect on progress to stay motivated.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#make-the-agenda-your-own",
+    "href": "management/agendas.html#make-the-agenda-your-own",
+    "title": "Agendas",
+    "section": "1. Make the agenda your own",
+    "text": "1. Make the agenda your own\n\nKeep in mind: the agenda will remain a private repository, shared between you and your supervisor.\n\nTreat the agenda as a shared but informal working document (no perfection needed).\n\nAdapt the structure to your personal workflow.\n\nUse it regularly as your primary planning resource.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#update-the-agenda-regularly",
+    "href": "management/agendas.html#update-the-agenda-regularly",
+    "title": "Agendas",
+    "section": "2. Update the agenda regularly",
+    "text": "2. Update the agenda regularly\n\nDefine and revisit shared goals (objectives and key results (OKR)) together.\n\nMaintain a list of major ongoing projects.\n\nKeep a running “Items to Discuss” section.\n\nMaintain a weekly task list:\n\nCheck off completed items.\n\nCopy unfinished items to the next week.\n\n\nShare a link to meeting notes before the meeting.\nAdd meeting notes directly after each meeting.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#create-a-clear-overview",
+    "href": "management/agendas.html#create-a-clear-overview",
+    "title": "Agendas",
+    "section": "3. Create a clear overview",
+    "text": "3. Create a clear overview\n\nKeep orientation easy: structure before detail.\n\nUse folders and multiple documents where helpful.\n\nAdd internal links between sections.\n\nLink to relevant external resources (repos, docs, papers, courses).\n\nEnsure the agenda can be understood quickly by all participants.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#maintain-a-timeline-and-planning-view",
+    "href": "management/agendas.html#maintain-a-timeline-and-planning-view",
+    "title": "Agendas",
+    "section": "4. Maintain a timeline and planning view",
+    "text": "4. Maintain a timeline and planning view\n\nCreate Mermaid timelines (Gantt charts).\n\nTrack contracts and important deadlines.\n\nKeep an overview of workload / hours.\n\nPlan development goals (topics, methods, skills).\n\nMap current and future projects over time.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#anticipate-and-track-key-periods",
+    "href": "management/agendas.html#anticipate-and-track-key-periods",
+    "title": "Agendas",
+    "section": "5. Anticipate and track key periods",
+    "text": "5. Anticipate and track key periods\n\nNote upcoming vacations.\n\nMark exam phases or teaching peaks.\n\nMaintain “waiting-for” items (e.g., reviews, decisions, responses).\n\nMaintain “upcoming” items (projects, papers, milestones).",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#document-interests-and-ideas",
+    "href": "management/agendas.html#document-interests-and-ideas",
+    "title": "Agendas",
+    "section": "6. Document interests and ideas",
+    "text": "6. Document interests and ideas\n\nKeep a section for research and teaching interests.\n\nCollect ideas for new projects.\n\nUse this as input for strategic discussions about next steps.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#document-and-celebrate-success",
+    "href": "management/agendas.html#document-and-celebrate-success",
+    "title": "Agendas",
+    "section": "7. Document and celebrate success",
+    "text": "7. Document and celebrate success\n\nRecord accepted/published papers.\n\nAdd positive student feedback.\n\nNote milestones and accomplishments.\n\nUse this as a basis for CV building and reference letters.\n\nRegularly reflect on progress to stay motivated.",
+    "crumbs": [
+      "Management",
+      "Objectives",
+      "Agendas"
+    ]
+  },
+  {
+    "objectID": "management/agendas.html#template",
+    "href": "management/agendas.html#template",
+    "title": "Agendas",
+    "section": "Template",
+    "text": "Template\nClone the agenda template repository.\n# Agenda: Person A -- Person B\n\nRegular meeting:\n\n- Time: ...\n- Location: ...\n\n## Items to discuss\n\n- Item\n\n## Log\n\n### CW 1\n\n- Meeting note\n\n\nTBD/TODO",
     "crumbs": [
       "Management",
       "Objectives",
@@ -8285,7 +8393,7 @@
     "href": "management/agendas.html#resources",
     "title": "Agendas",
     "section": "Resources",
-    "text": "Resources\n\nAgenda: Example GitLab/Rayana\nAgenda template",
+    "text": "Resources\n\nAgenda: Example GitLab/Rayana",
     "crumbs": [
       "Management",
       "Objectives",
@@ -8609,7 +8717,7 @@
     "href": "management/handbook.html#principles",
     "title": "Handbook",
     "section": "Principles",
-    "text": "Principles\n\nConfidential data: Confidential data, such as grades and student identities, must not be stored in the handbook. Instead, add a link to the confidential data store (see example).\nChecklists: Checklists should be simple, structured, and actionable.\nAdd links: Add links to other parts of the handbook or external resources to avoid replicating content.\nHeadings: Use sentence case (not title case) for all headings and subheadings.\nConsistency: Maintain consistent formatting throughout the document, particularly for lists, tables, and citations.\nFormatting resources: Formatting resources are available in the Quarto Guide.\n\n\n\n\n\n\n\nNoteExample page\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEach sentence should be on a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see semantic line breaks).\n\n\n---\ntitle: \"Title of the page\"\nbibliography: ../data/references.bib\ncsl: ../assets/apa.csl\nnocite: |\n  @WagnerPrester2025\n---\n\nText with illustrations/figures/screenshots:\n\n![Caption](assets/images/Beispiel_Scheinteilnehmer-Excel.JPG)\n\nNote: Copy and adapt the path as needed.\n\nA [link](https://website.com){target=_blank} that opens in a separate window.\n\n&lt;!-- Comments can be used to add further explanations, links to references/resources, or to keep parts of the paper that were shortened --&gt;\n\nAn in-text citation: @Webster2002 (the BibTeX entry must be added to data/references.bib and the YAML header updated accordingly). \n\nCallouts (colored boxes, as illustrated below):\n\n::: resource\nWe use the `resource` callout when resources (external to the handbook) are available.\n:::\n\n::: confidential\nConfidential data is stored on the [Nextcloud](http://url.com){target=_blank}.\n:::\n\n::: callout-important\nAn important callout (important could also be replaced by note, warning, tip, caution; see [quarto-docs](https://quarto.org/docs/authoring/callouts.html){target=_blank}).\n:::\n\n\n\n\n\n\nResourceResource\n\n\n\nWe use the resource callout when resources (external to the handbook) are available.\n\n\n\n\n\n\n\n\nConfidentialConfidential\n\n\n\nConfidential data is stored on the Nextcloud.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAn important callout.\n\n\nGraphs can be included as Mermaid diagrams (see Mermaid live editor).\nNavigation is updated in _quarto.yml.\n\n\n\n\nTerminology:\n\n\n\n\nPreferred term\nNot this\n\n\n\n\nSuSe / WiSe\nSS / WS\n\n\nTeam assistant\nSecretary",
+    "text": "Principles\n\nConfidential data: Confidential data, such as grades and student identities, must not be stored in the handbook. Instead, add a link to the confidential data store (see example).\nChecklists: Checklists should be simple, structured, and actionable.\nAdd links: Add links to other parts of the handbook or external resources to avoid replicating content.\nHeadings: Use sentence case (not title case) for all headings and subheadings.\nConsistency: Maintain consistent formatting throughout the document, particularly for lists, tables, and citations.\nFormatting resources: Formatting resources are available in the Quarto Guide.\n\n\n\n\n\n\n\nNoteExample page\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEach sentence should be on a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see semantic line breaks).\n\n\n---\ntitle: \"Title of the page\"\nbibliography: ../data/references.bib\ncsl: ../assets/apa.csl\nnocite: |\n  @WagnerPrester2025\n---\n\nText with illustrations/figures/screenshots:\n\n![Caption](assets/images/Beispiel_Scheinteilnehmer-Excel.JPG)\n\nNote: Copy and adapt the path as needed.\n\nA [link](https://website.com){target=_blank} that opens in a separate window.\n\n&lt;!-- Comments can be used to add further explanations, links to references/resources, or to keep parts of the paper that were shortened --&gt;\n\nAn in-text citation: @Webster2002 (the BibTeX entry must be added to data/references.bib and the YAML header updated accordingly). \n\nCallouts (colored boxes, as illustrated below):\n\n::: resource\nWe use the `resource` callout when resources (external to the handbook) are available.\n:::\n\n::: confidential\nConfidential data is stored on the [Nextcloud](http://url.com){target=_blank}.\n:::\n\n::: callout-important\nAn important callout (important could also be replaced by note, warning, tip, caution; see [quarto-docs](https://quarto.org/docs/authoring/callouts.html){target=_blank}).\n:::\n\n\n\n\n\n\n\n\n\nResourceResource\n\n\n\nWe use the resource callout when resources (external to the handbook) are available.\n\n\n\n\n\n\n\n\nConfidentialConfidential\n\n\n\nConfidential data is stored on the Nextcloud.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAn important callout.\n\n\nIcons: hugeicons preferred.\nGraphs can be included as Mermaid diagrams (see Mermaid live editor).\nNavigation is updated in _quarto.yml.\n\n\n\n\nTerminology:\n\n\n\n\nPreferred term\nNot this\n\n\n\n\nSuSe / WiSe\nSS / WS\n\n\nTeam assistant\nSecretary",
     "crumbs": [
       "Management",
       "Infrastructure",
