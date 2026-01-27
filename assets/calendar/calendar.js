@@ -71,62 +71,83 @@ async function initCalendar() {
     window.ec = ec;
 }
 
+async function fetchFirstOk(urls) {
+  let lastErr;
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      return await res.text();
+    } catch (err) {
+      lastErr = err;
+      console.warn("Failed to fetch", url, err);
+    }
+  }
+  throw lastErr || new Error("No URL succeeded");
+}
+
 // Parse events from iCal file
 async function loadEventsFromICal() {
-    try {
-        const response = await fetch('https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical');
-        if (!response.ok) {
-            throw new Error("Network response was not ok: " + response.statusText);
-        }
-        const iCalText = await response.text();
-        const jcalData = ICAL.parse(iCalText);
-        const vcalendar = new ICAL.Component(jcalData);
-        const vevents = vcalendar.getAllSubcomponents('vevent');
+  try {
+    // 1) Prefer local/relative (works when served by your site or local server)
+    // Adjust these paths to match where the .ical is in your built site.
+    const localCandidates = [
+      "./assets/calendar/fs-ise.ical",
+      "/assets/calendar/fs-ise.ical",
+    ];
 
-        return vevents.map((vevent) => {
-        const event = new ICAL.Event(vevent);
+    // 2) Fallback: GitHub raw
+    const githubRaw =
+      "https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical";
 
-        const title = (event.summary || "").toLowerCase();
+    const iCalText = await fetchFirstOk([...localCandidates, githubRaw]);
 
-        // Default: teaching (blue)
-        let category = "teaching";
-        let color = "#007acc";
+    const jcalData = ICAL.parse(iCalText);
+    const vcalendar = new ICAL.Component(jcalData);
+    const vevents = vcalendar.getAllSubcomponents("vevent");
 
-        // General (light grey)
-        if (title.includes("vacation") || title.includes("remote work") || title.includes("professorium")) {
-            category = "general";
-            color = "#C8D1DC";
-        }
+    return vevents.map((vevent) => {
+      const event = new ICAL.Event(vevent);
+      const title = (event.summary || "").toLowerCase();
 
-        // Events (green) — add/remove keywords as you like
-        const eventKeywords = [
-            "feier",
-            "conference",
-            "dies academicus",
-            "weihnachtsfeier",
-            "end-of-year",
-            "choose-a-chair",
-        ];
-        if (eventKeywords.some((kw) => title.includes(kw))) {
-            category = "events";
-            color = "#2e7d32";
-        }
+      // Default: teaching (blue)
+      let category = "teaching";
+      let color = "#007acc";
 
-        return {
-            start: event.startDate.toJSDate(),
-            end: event.endDate.toJSDate(),
-            title: event.summary,
-            description: event.description,
-            location: event.location,
-            category, // optional, but handy for filtering/legends later
-            color,
-        };
-        });
+      // General
+      if (title.includes("vacation") || title.includes("remote work") || title.includes("professorium")) {
+        category = "general";
+        color = "#C8D1DC";
+      }
 
-    } catch (error) {
-        console.error("Error fetching or parsing iCal file:", error);
-        return [];
-    }
+      // Events
+      const eventKeywords = [
+        "feier",
+        "conference",
+        "dies academicus",
+        "weihnachtsfeier",
+        "end-of-year",
+        "choose-a-chair",
+      ];
+      if (eventKeywords.some((kw) => title.includes(kw))) {
+        category = "events";
+        color = "#2e7d32";
+      }
+
+      return {
+        start: event.startDate.toJSDate(),
+        end: event.endDate.toJSDate(),
+        title: event.summary,
+        description: event.description,
+        location: event.location,
+        category,
+        color,
+      };
+    });
+  } catch (error) {
+    console.error("Error fetching or parsing iCal file:", error);
+    return [];
+  }
 }
 
 function _pad(num) {
