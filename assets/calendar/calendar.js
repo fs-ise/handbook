@@ -33,43 +33,132 @@ function setupKeyboardShortcuts() {
   });
 }
 
+function injectHeaderButtonSvgs() {
+  const root = document.getElementById("ec");
+  if (!root) return;
+
+  // Your provided export icon
+  const exportSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.478 9.011h.022c2.485 0 4.5 2.018 4.5 4.508c0 2.32-1.75 4.232-4 4.481m-.522-8.989q.021-.248.022-.5A5.505 5.505 0 0 0 12 3a5.505 5.505 0 0 0-5.48 5.032m10.958.98a5.5 5.5 0 0 1-1.235 3.005M6.52 8.032A5.006 5.006 0 0 0 2 13.018a5.01 5.01 0 0 0 4 4.91m.52-9.896q.237-.023.48-.023c1.126 0 2.165.373 3 1.002M12 21v-8m0 8c-.7 0-2.008-1.994-2.5-2.5M12 21c.7 0 2.008-1.994 2.5-2.5"/></svg>`;
+
+  // Simple edit/pencil icon (inline SVG)
+  const editSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 20h4l10.5-10.5a2.12 2.12 0 0 0 0-3L16.5 4.5a2.12 2.12 0 0 0-3 0L3 15v5zM13.5 4.5l6 6"/></svg>`;
+
+  // Try a few likely selectors (EventCalendar and FullCalendar variants)
+  const exportBtn =
+    root.querySelector(".ec-exportBtn-button") ||
+    root.querySelector(".fc-exportBtn-button") ||
+    findButtonByText(root, "export");
+
+  const editBtn =
+    root.querySelector(".ec-editBtn-button") ||
+    root.querySelector(".fc-editBtn-button") ||
+    findButtonByText(root, "edit");
+
+  if (exportBtn) {
+    exportBtn.innerHTML = exportSvg;
+    exportBtn.setAttribute("title", "Export");
+    exportBtn.setAttribute("aria-label", "Export");
+  }
+
+  if (editBtn) {
+    editBtn.innerHTML = editSvg;
+    editBtn.setAttribute("title", "Edit");
+    editBtn.setAttribute("aria-label", "Edit");
+  }
+}
+
+function findButtonByText(root, txt) {
+  const buttons = root.querySelectorAll("button");
+  for (const b of buttons) {
+    if ((b.textContent || "").trim().toLowerCase() === txt) return b;
+  }
+  return null;
+}
+
+// Toolbar can re-render when changing view / navigating.
+// This observer re-applies SVGs when the header changes.
+let _toolbarObserver;
+function observeToolbarForReplacements() {
+  const root = document.getElementById("ec");
+  if (!root || _toolbarObserver) return;
+
+  _toolbarObserver = new MutationObserver(() => injectHeaderButtonSvgs());
+  _toolbarObserver.observe(root, { childList: true, subtree: true });
+}
+
 
 async function initCalendar() {
-    const events = await loadEventsFromICal();
-    const ec = new EventCalendar(document.getElementById('ec'), {
-        view: 'dayGridMonth',
-        customButtons: {
-            exportBtn: {
-                text: 'export',
-                click: function() {
-                    generateICal();
-                }
-            }
+  const events = await loadEventsFromICal();
+  const ec = new EventCalendar(document.getElementById("ec"), {
+    view: "dayGridMonth",
+    customButtons: {
+      exportBtn: {
+        text: "export",
+        click: function () {
+          generateICal();
         },
-        headerToolbar: {
-            start: 'today,prev,next',
-            center: 'title',
-            end: 'dayGridMonth,timeGridWeek,listWeek exportBtn'
+      },
+      editBtn: {
+        text: "edit",
+        click: function () {
+          window.open(
+            "https://github.com/fs-ise/handbook/edit/main/data/events.yaml",
+            "_blank",
+            "noopener,noreferrer"
+          );
         },
-        buttonText: {
-            close: 'Close', dayGridMonth: 'Month', listDay: 'list', listMonth: 'list', listWeek: 'Schedule', listYear: 'list', resourceTimeGridDay: 'resources', resourceTimeGridWeek: 'resources', resourceTimelineDay: 'timeline', resourceTimelineMonth: 'timeline', resourceTimelineWeek: 'timeline', timeGridDay: 'day', timeGridWeek: 'Week', today: 'Today'
-        },
-        scrollTime: '09:00:00',
-        events: events,
-        views: {
-            timeGridWeek: { pointer: true },
-        },
-        eventClick: function(info) {
-            popUpEvent(info.event);
-        },
-        dayMaxEvents: true,
-        nowIndicator: true,
-        eventStartEditable: false,
-        hiddenDays: [0, 6],
-    });
+      },
+    },
+    headerToolbar: {
+      start: "today,prev,next",
+      center: "title",
+      end: "dayGridMonth,timeGridWeek,listWeek exportBtn,editBtn",
+    },
 
-    window.ec = ec;
+    // 👇 add these two hooks (see section 2)
+    datesSet: function () {
+      injectHeaderButtonSvgs();
+    },
+    viewDidMount: function () {
+      injectHeaderButtonSvgs();
+    },
+
+    buttonText: {
+      close: "Close",
+      dayGridMonth: "Month",
+      listDay: "list",
+      listMonth: "list",
+      listWeek: "Schedule",
+      listYear: "list",
+      resourceTimeGridDay: "resources",
+      resourceTimeGridWeek: "resources",
+      resourceTimelineDay: "timeline",
+      resourceTimelineMonth: "timeline",
+      resourceTimelineWeek: "timeline",
+      timeGridDay: "day",
+      timeGridWeek: "Week",
+      today: "Today",
+    },
+    scrollTime: "09:00:00",
+    events: events,
+    views: { timeGridWeek: { pointer: true } },
+    eventClick: function (info) {
+      popUpEvent(info.event);
+    },
+    dayMaxEvents: true,
+    nowIndicator: true,
+    eventStartEditable: false,
+    hiddenDays: [0, 6],
+  });
+
+  window.ec = ec;
+
+  // initial injection (in case hooks above aren’t supported in your build)
+  injectHeaderButtonSvgs();
+  observeToolbarForReplacements();
 }
+
+
 
 async function fetchFirstOk(urls) {
   let lastErr;
