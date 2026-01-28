@@ -2,21 +2,3 @@
 title: "News"
 format: html
 ---
-
-
-## 2026-01-28
-New releases:
-- **search-query** v0.13.0 (https://pypi.org/project/search-query/)
-
-## 2026-01-28
-New releases:
-- **search-query** v0.13.0 (https://pypi.org/project/search-query/)
-
-  Release notes:
-
-  > - **Versioned platform architecture & upgrades**: Introduced version-aware parser registry that selects list or string parsers per platform version and defaults to the latest registered release. Auto-discovery for parser, serializer, and translator implementations. Added an upgrade pipeline that routes through the generic query as an intermediate representation, exposed through a new `upgrade` CLI subcommand.
-  > - **CLI improvements**: Rebuilt the CLI around explicit `translate`, `lint`, and `upgrade` sub-commands with improved error handling and user feedback, including success messages emitted by the linter workflow.
-  > - **Search file handling**: Refactored `SearchFile` to replace `filepath` with `search_results_path`, derive the default history path, ensure directories exist when saving, and exclude private attributes from serialization output.
-  > - **Linter updates**: Added the `deprecated-syntax` warning (`LINT_2001`) to guide users toward upgrading queries that rely on legacy syntax.
-  > - **Documentation**: Documented the syntax upgrade workflow and versioning policy for database-specific queries, including CLI examples.
-
