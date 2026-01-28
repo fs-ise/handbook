@@ -1,11 +1,13 @@
 name: Update reports (daily)
+
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   run-script:
@@ -13,21 +15,20 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests pyyaml
           pip install "colrev @ git+https://github.com/CoLRev-Environment/colrev.git"
-
-      - name: Change to Repo Directory
-        run: cd ${{ github.workspace }}
+          # optional: if your release_watch uses GitHub API and you want higher rate limits:
+          pip install PyGithub
 
       - name: Update repositories
         env:
@@ -40,12 +41,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
         run: |
           python src/generate-projects-pages.py
-      
+
       - name: Update talks pages
         env:
           GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
         run: |
-          python src/update_talks.py    
+          python src/update_talks.py
 
       - name: Update papers
         env:
@@ -53,7 +54,8 @@ jobs:
         run: |
           python src/update_papers.py
 
-      - name: Commit and Push changes
+      # Commit/push normal daily updates directly to default branch (same as your current behavior)
+      - name: Commit and Push changes (daily updates)
         env:
           GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
         run: |
@@ -66,3 +68,34 @@ jobs:
           else
             echo "No changes to commit"
           fi
+
+      - name: Release watch (updates references.bib + news.qmd)
+        env:
+          GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
+        run: |
+          python src/release_watch.py
+
+      # If news.qmd changed, open a PR for that change and request geritwagner to review/merge
+      #
+      # IMPORTANT: This works best if release_watch.py only changes references.bib/news.qmd when a release happens.
+      # If you also want references.bib in the PR, include it in `add-paths` below.
+      - name: Create PR for news update (if news.qmd changed)
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.LABOT_PAT_TOKEN }}
+          commit-message: "Update news for recent releases"
+          title: "Update news for recent releases"
+          body: |
+            Automated release watch detected new software releases and updated:
+
+            - news.qmd (with release notes)
+            - data/references.bib (version/urldate)
+
+            Please review & merge.
+          branch: automation/release-news
+          delete-branch: true
+          reviewers: geritwagner
+          # Only create a PR when relevant files changed:
+          add-paths: |
+            news.qmd
+            data/references.bib
