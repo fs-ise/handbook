@@ -131,15 +131,15 @@ div.csl-indent {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -153,17 +153,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -173,6 +162,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -387,6 +387,10 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   <li class="nav-item">
     <a class="nav-link" href="../team/index.html"> 
 <span class="menu-text">Team</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../news.html"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="hugeicons:megaphone-03" style="color: #002EFF;" aria-label="News" title="News"></iconify-icon></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../calendar.html"> 
@@ -926,17 +930,20 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-EckhardtEtAlSearchQuery" class="csl-entry" role="listitem">
+Eckhardt, P., Ernst, K. M., Fleischmann, T., Geßler, A., Schnickmann, K., &amp; Wagner, G. (2026). <em>Search-query: A python package for queries in academic literature searches.</em> (Version 0.14.0) [Computer software].
+</div>
 <div id="ref-PresterWagnerSchryenEtAl2021" class="csl-entry" role="listitem">
 Prester, J., Wagner, G., Schryen, G., &amp; Hassan, N. R. (2021). Classifying the ideational impact of information systems review articles: A content-enriched deep learning approach. <em>Decision Support Systems</em>, <em>140</em>, 113432. <a href="https://doi.org/10.1016/J.DSS.2020.113432">https://doi.org/10.1016/J.DSS.2020.113432</a>
 </div>
-<div id="ref-Wagner2024" class="csl-entry" role="listitem">
-Wagner, G. (2024). BibDedupe: An open-source python library for bibliographic record deduplication. <em>Journal of Open Source Software</em>, <em>9</em>(97), 6318. <a href="https://doi.org/10.21105/JOSS.06318">https://doi.org/10.21105/JOSS.06318</a>
+<div id="ref-WagnerBibDedupe" class="csl-entry" role="listitem">
+Wagner, G. (2026). <em>BibDedupe: An open-source python library for bibliographic record deduplication</em> (Version 0.11.0) [Computer software].
 </div>
 <div id="ref-WagnerEmplSchryen2020" class="csl-entry" role="listitem">
 Wagner, G., Empl, P., &amp; Schryen, G. (2020). Designing a novel strategy for exploring literature corpora. <em>European Conference on Information Systems</em>, 1–17. <a href="https://aisel.aisnet.org/ecis2020_rp/44">https://aisel.aisnet.org/ecis2020_rp/44</a>
 </div>
-<div id="ref-WagnerPrester2025" class="csl-entry" role="listitem">
-Wagner, G., &amp; Prester, J. (2025). <em><span class="nocase">CoLRev: An open-source environment for collaborative reviews</span></em> (Version 0.14.0) [Computer software]. <a href="https://github.com/CoLRev-Environment/colrev">https://github.com/CoLRev-Environment/colrev</a>
+<div id="ref-WagnerPresterCoLRev" class="csl-entry" role="listitem">
+Wagner, G., &amp; Prester, J. (2026). <em><span class="nocase">CoLRev: An open-source environment for collaborative reviews</span></em> (Version 0.15.0) [Computer software].
 </div>
 </div></section></div></main> <!-- /main -->
 <script>
@@ -1431,9 +1438,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> ../data/references.bib</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> ../assets/apa.csl</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">nocite:</span><span class="co"> |</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  @WagnerPrester2025</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  @EckhardtEtAl2025</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  @Wagner2024</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  @WagnerPresterCoLRev</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  @EckhardtEtAlSearchQuery</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  @WagnerBibDedupe</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  @PresterWagnerSchryenEtAl2021</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  @WagnerEmplSchryen2020</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
