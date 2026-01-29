@@ -66,7 +66,7 @@ jobs:
         run: git checkout -b ${{ env.BRANCH_NAME }}
 
       - name: Fix links
-        run: python .github/workflows/link_fix.py
+        run: python src/link_fix.py
 
       - name: Check for broken links file
         run: |
