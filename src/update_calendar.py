@@ -76,7 +76,7 @@ def expand_events(events: list[dict]) -> list[dict]:
 
 def generate_ical(events: list[dict]) -> str:
     cal = Calendar()
-    cal.add("prodid", "-//Digital Work Lab//Calendar Export Tool//EN")
+    cal.add("prodid", "-//FS-ISE Lab//Calendar Export Tool//EN")
     cal.add("version", "2.0")
     cal.add("calscale", "GREGORIAN")
     cal.add("method", "PUBLISH")
@@ -87,7 +87,7 @@ def generate_ical(events: list[dict]) -> str:
 
     for ev in events:
         e = Event()
-        e.add("uid", f"{uuid.uuid4()}@digital-work-lab")
+        e.add("uid", f"{uuid.uuid4()}@fs-ise")
         e.add("dtstamp", now_utc)
         e.add("summary", ev.get("title", "") or " ")
         e.add("dtstart", ev["start"])
