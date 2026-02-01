@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -133,17 +133,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -153,6 +142,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -436,7 +436,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gerit-wagner-professor" id="toc-gerit-wagner-professor" class="nav-link active" data-scroll-target="#gerit-wagner-professor">Gerit Wagner (Professor)</a></li>
+  <li><a href="#gerit-wagner-senior-lecturer" id="toc-gerit-wagner-senior-lecturer" class="nav-link active" data-scroll-target="#gerit-wagner-senior-lecturer">Gerit Wagner (Senior Lecturer)</a></li>
   <li><a href="#address" id="toc-address" class="nav-link" data-scroll-target="#address">Address</a></li>
   <li><a href="#alumni" id="toc-alumni" class="nav-link" data-scroll-target="#alumni">Alumni</a></li>
   </ul>
@@ -465,8 +465,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<section id="gerit-wagner-professor" class="level2">
-<h2 class="anchored" data-anchor-id="gerit-wagner-professor">Gerit Wagner (Professor)</h2>
+<section id="gerit-wagner-senior-lecturer" class="level2">
+<h2 class="anchored" data-anchor-id="gerit-wagner-senior-lecturer">Gerit Wagner (Senior Lecturer)</h2>
 <!--
 <div style="float: left; margin-right: 50px;">
   <a href="https://github.com/geritwagner">
@@ -476,14 +476,14 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <div style="clear: both;"></div>
 -->
 <ul>
-<li>E-Mail: <a href="mailto:%22gerit.wagner@uni-bamberg.de%22">gerit.wagner@uni-bamberg.de</a></li>
+<li>E-Mail: <a href="mailto:%22g.wagner@fs.de%22">g.wagner@fs.de</a></li>
 <li>ORCID: <a href="https://orcid.org/0000-0003-3926-7717" target="_blank">0000-0003-3926-7717</a></li>
 <li>Profiles: <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4128280" target="_blank">SSRN</a>, <a href="https://www.researchgate.net/profile/Gerit-Wagner" target="_blank">ResearchGate</a>, <a href="https://scholar.google.com/citations?user=TIbrR2QAAAAJ&amp;hl=de" target="_blank">GoogleScholar</a></li>
 <li>GitHub: <a href="https://github.com/geritwagner" target="_blank">geritwagner</a></li>
-<li>Working days: Monday - Friday (Office: Monday - Thursday, Remote: Friday)</li>
+<li>Working days: Monday - Friday (Office) <!-- - Working days: Monday - Friday (Office: Monday - Thursday, Remote: Friday) --></li>
 <li>Working hours: I start early, but prefer to schedule meetings in the evening.</li>
 <li>Meetings (online or in-person): Via <a href="https://calendly.com/gerit-wagner/30min?month=2023-07" target="_blank">calendly</a></li>
-<li>Vacation and remote work: Available in our <a href="../index.html">calendar</a>.</li>
+<li>Vacation and remote work: Available in our <a href="../calendar.html">calendar</a>.</li>
 </ul>
 </section>
 <section id="address" class="level2">
@@ -542,9 +542,9 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <section id="alumni" class="level1">
 <h1>Alumni</h1>
 <ul>
-<li>Stella Ott (Team Assistant). <a href="https://github.com/digital-work-lab/agenda-jour-fixe" target="_blank">Jour Fixe Agenda</a></li>
-<li>Laureen Thurner (Student Assistant). ORCID: <a href="https://orcid.org/0009-0000-5716-5816" target="_blank">0009-0000-5716-5816</a>. <a href="https://github.com/digital-work-lab/agenda-gerit-laureen" target="_blank">Agenda</a>.</li>
-<li>Karl Schnickmann (Student Assistant). ORCID: <a href="https://orcid.org/0009-0008-7763-7276" target="_blank">0009-0008-7763-7276</a>. <a href="https://github.com/digital-work-lab/agenda_gerit_k-schnickmann" target="_blank">Agenda</a>.</li>
+<li>Stella Ott (Team Assistant).</li>
+<li>Laureen Thurner (Student Assistant). ORCID: <a href="https://orcid.org/0009-0000-5716-5816" target="_blank">0009-0000-5716-5816</a>. <a href="https://github.com/fs-lise/agenda-gerit-laureen" target="_blank">Agenda</a>.</li>
+<li>Karl Schnickmann (Student Assistant). ORCID: <a href="https://orcid.org/0009-0008-7763-7276" target="_blank">0009-0008-7763-7276</a>. <a href="https://github.com/fs-lise/agenda_gerit_k-schnickmann" target="_blank">Agenda</a>.</li>
 <li>Alexa Steinheimer (Student Assistant). ORCID: <a href="https://orcid.org/0009-0005-2628-2522" target="_blank">0009-0005-2628-2522</a>.</li>
 <li>Carlo Tang (Student Assistant). GitHub: <a href="https://github.com/dengdenglele" target="_blank">dengdenglele</a>.</li>
 </ul>
@@ -1073,7 +1073,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">transition_comment:</span><span class="co"> "Update email office etc."</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gerit Wagner (Professor)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gerit Wagner (Senior Lecturer)</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;div style="float: left; margin-right: 50px;"&gt;</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  &lt;a href="https://github.com/geritwagner"&gt;</span></span>
@@ -1083,103 +1083,104 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;div style="clear: both;"&gt;&lt;/div&gt;</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>E-Mail: <span class="co">[</span><span class="ot">gerit.wagner@uni-bamberg.de</span><span class="co">](mailto:"gerit.wagner@uni-bamberg.de")</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>E-Mail: <span class="co">[</span><span class="ot">g.wagner@fs.de</span><span class="co">](mailto:"g.wagner@fs.de")</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ORCID: <span class="co">[</span><span class="ot">0000-0003-3926-7717</span><span class="co">](https://orcid.org/0000-0003-3926-7717)</span>{target=_blank}</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Profiles: <span class="co">[</span><span class="ot">SSRN</span><span class="co">](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4128280)</span>{target=_blank}, <span class="co">[</span><span class="ot">ResearchGate</span><span class="co">](https://www.researchgate.net/profile/Gerit-Wagner)</span>{target=_blank}, <span class="co">[</span><span class="ot">GoogleScholar</span><span class="co">](https://scholar.google.com/citations?user=TIbrR2QAAAAJ&amp;hl=de)</span>{target=_blank}</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GitHub: <span class="co">[</span><span class="ot">geritwagner</span><span class="co">](https://github.com/geritwagner)</span>{target=_blank}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Working days: Monday - Friday (Office: Monday - Thursday, Remote: Friday)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Working hours: I start early, but prefer to schedule meetings in the evening.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meetings (online or in-person): Via <span class="co">[</span><span class="ot">calendly</span><span class="co">](https://calendly.com/gerit-wagner/30min?month=2023-07)</span>{target=_blank}</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Vacation and remote work: Available in our <span class="co">[</span><span class="ot">calendar</span><span class="co">](/index.html)</span>.</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Address</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>**Mail:** TBA.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>**Office:** TBA.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"map"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"height: 500px; margin-top: 1em;"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot">href</span><span class="op">=</span><span class="st">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"DOMContentLoaded"</span><span class="op">,</span> <span class="kw">function</span> () {</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> center <span class="op">=</span> [<span class="fl">50.132848752595365</span><span class="op">,</span> <span class="fl">8.680411577224731</span>]<span class="op">;</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">"map"</span>)<span class="op">.</span><span class="fu">setView</span>(center<span class="op">,</span> <span class="dv">17</span>)<span class="op">;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    L<span class="op">.</span><span class="fu">tileLayer</span>(<span class="st">"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"</span><span class="op">,</span> {</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>      <span class="dt">attribution</span><span class="op">:</span> <span class="st">"&amp;copy; OpenStreetMap contributors"</span><span class="op">,</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> emojiIcon <span class="op">=</span> L<span class="op">.</span><span class="fu">divIcon</span>({</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      <span class="dt">html</span><span class="op">:</span> <span class="st">"🔴"</span><span class="op">,</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="dt">className</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">32</span><span class="op">,</span> <span class="dv">32</span>]<span class="op">,</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">16</span><span class="op">,</span> <span class="dv">8</span>]<span class="op">,</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      <span class="dt">popupAnchor</span><span class="op">:</span> [<span class="op">-</span><span class="dv">8</span><span class="op">,</span> <span class="op">-</span><span class="dv">8</span>]<span class="op">,</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    L<span class="op">.</span><span class="fu">marker</span>(center<span class="op">,</span> { <span class="dt">icon</span><span class="op">:</span> emojiIcon })</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">addTo</span>(map)</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">bindPopup</span>(</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>        <span class="vs">`</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;strong&gt;Frankfurt School&lt;/strong&gt;&lt;br&gt;</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;a href="https://www.openstreetmap.org/?mlat=50.132848752595365&amp;mlon=8.680411577224731#map=18/50.132848752595365/8.680411577224731" target="_blank" rel="noopener"&gt;</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="vs">          Open in OpenStreetMap</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;/a&gt;&lt;br&gt;</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;a href="https://www.google.com/maps/search/?api=1&amp;query=50.132848752595365,8.680411577224731" target="_blank" rel="noopener"&gt;</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="vs">          Open in Google Maps</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;/a&gt;</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="vs">      `</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">openPopup</span>()<span class="op">;</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> bbox <span class="op">=</span> [</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>      [<span class="fl">50.13040037545383</span><span class="op">,</span> <span class="fl">8.675154447555544</span>]<span class="op">,</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>      [<span class="fl">50.13529700446773</span><span class="op">,</span> <span class="fl">8.685668706893923</span>]<span class="op">,</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">;</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">fitBounds</span>(bbox)<span class="op">;</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">zoomOut</span>(<span class="dv">4</span>)<span class="op">;</span></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Working days: Monday - Friday (Office)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- - Working days: Monday - Friday (Office: Monday - Thursday, Remote: Friday) --&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Working hours: I start early, but prefer to schedule meetings in the evening.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meetings (online or in-person): Via <span class="co">[</span><span class="ot">calendly</span><span class="co">](https://calendly.com/gerit-wagner/30min?month=2023-07)</span>{target=_blank}</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Vacation and remote work: Available in our <span class="co">[</span><span class="ot">calendar</span><span class="co">](/calendar.html)</span>.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Address</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>**Mail:** TBA.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>**Office:** TBA.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"map"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"height: 500px; margin-top: 1em;"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot">href</span><span class="op">=</span><span class="st">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"DOMContentLoaded"</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> center <span class="op">=</span> [<span class="fl">50.132848752595365</span><span class="op">,</span> <span class="fl">8.680411577224731</span>]<span class="op">;</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">"map"</span>)<span class="op">.</span><span class="fu">setView</span>(center<span class="op">,</span> <span class="dv">17</span>)<span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    L<span class="op">.</span><span class="fu">tileLayer</span>(<span class="st">"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"</span><span class="op">,</span> {</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>      <span class="dt">attribution</span><span class="op">:</span> <span class="st">"&amp;copy; OpenStreetMap contributors"</span><span class="op">,</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> emojiIcon <span class="op">=</span> L<span class="op">.</span><span class="fu">divIcon</span>({</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="dt">html</span><span class="op">:</span> <span class="st">"🔴"</span><span class="op">,</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      <span class="dt">className</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">32</span><span class="op">,</span> <span class="dv">32</span>]<span class="op">,</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">16</span><span class="op">,</span> <span class="dv">8</span>]<span class="op">,</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>      <span class="dt">popupAnchor</span><span class="op">:</span> [<span class="op">-</span><span class="dv">8</span><span class="op">,</span> <span class="op">-</span><span class="dv">8</span>]<span class="op">,</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    L<span class="op">.</span><span class="fu">marker</span>(center<span class="op">,</span> { <span class="dt">icon</span><span class="op">:</span> emojiIcon })</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">addTo</span>(map)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">bindPopup</span>(</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>        <span class="vs">`</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;strong&gt;Frankfurt School&lt;/strong&gt;&lt;br&gt;</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;a href="https://www.openstreetmap.org/?mlat=50.132848752595365&amp;mlon=8.680411577224731#map=18/50.132848752595365/8.680411577224731" target="_blank" rel="noopener"&gt;</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="vs">          Open in OpenStreetMap</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;/a&gt;&lt;br&gt;</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;a href="https://www.google.com/maps/search/?api=1&amp;query=50.132848752595365,8.680411577224731" target="_blank" rel="noopener"&gt;</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="vs">          Open in Google Maps</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;/a&gt;</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="vs">      `</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">openPopup</span>()<span class="op">;</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> bbox <span class="op">=</span> [</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>      [<span class="fl">50.13040037545383</span><span class="op">,</span> <span class="fl">8.675154447555544</span>]<span class="op">,</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>      [<span class="fl">50.13529700446773</span><span class="op">,</span> <span class="fl">8.685668706893923</span>]<span class="op">,</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">;</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">fitBounds</span>(bbox)<span class="op">;</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">zoomOut</span>(<span class="dv">4</span>)<span class="op">;</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
 <span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"clear: both;"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="fu"># Alumni</span></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stella Ott (Team Assistant). <span class="co">[</span><span class="ot">Jour Fixe Agenda</span><span class="co">](https://github.com/digital-work-lab/agenda-jour-fixe)</span>{target=_blank}</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Laureen Thurner (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0000-5716-5816</span><span class="co">](https://orcid.org/0009-0000-5716-5816)</span>{target=_blank}. <span class="co">[</span><span class="ot">Agenda</span><span class="co">](https://github.com/digital-work-lab/agenda-gerit-laureen)</span>{target=_blank}.</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Karl Schnickmann (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0008-7763-7276</span><span class="co">](https://orcid.org/0009-0008-7763-7276)</span>{target=_blank}. <span class="co">[</span><span class="ot">Agenda</span><span class="co">](https://github.com/digital-work-lab/agenda_gerit_k-schnickmann)</span>{target=_blank}.</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Alexa Steinheimer (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0005-2628-2522</span><span class="co">](https://orcid.org/0009-0005-2628-2522)</span>{target=_blank}.</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Carlo Tang (Student Assistant). GitHub: <span class="co">[</span><span class="ot">dengdenglele</span><span class="co">](https://github.com/dengdenglele)</span>{target=_blank}.</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="co">Availabilities are shared on a voluntary basis.</span></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="co">Availability information may refer to days in the office vs. remote, or preferred meeting days/times.</span></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="co">For teaching assistants, Calendly can be useful for communicating availabilities for online meetings.</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="co">Note: this will include SOP, Agendas, Meetings</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="co">If you would like to schedule an appointment with Prof. Wagner, please feel free to send a meeting invitation directly via Outlook. Prof. Wagner can then **accept,** **decline,** or **propose** a new time.&lt;br&gt;</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="co">➡️ This streamlines the scheduling process and avoids the need for prior email coordination.</span></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="co">## Team building</span></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="co">Semester-prep session / Lunch at the end</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="co">## Retreats</span></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="co">- [Speinshart Scientific Center](https://www.speinshart.ai/){target=_blank}</span></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="co">- [DORMERO Schlosshotel Reichenschwand](http://www.dormero.de){target=_blank}</span></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="co">- [Hotel Schloss Burgellern](http://www.burgellern.de){target=_blank}</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="co">- [Stemperhof Gößweinstein](http://www.schloss-wiesenthau.de/){target=_blank}</span></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="co">- [Landhotel Geiselwind](http://www.landhotel-geiselwind.de){target=_blank}</span></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co">- [Schloss Wiesenthau](http://www.schloss-wiesenthau.de){target=_blank}</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="co">- [Internationale Begegnungsstätte Kloster Speinshart](https://kloster-speinshart.de/){target=_blank}</span></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="co">- [Landhotel Rügheim](http://www.landhotel-ruegheim.de){target=_blank}</span></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"clear: both;"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="fu"># Alumni</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stella Ott (Team Assistant).</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Laureen Thurner (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0000-5716-5816</span><span class="co">](https://orcid.org/0009-0000-5716-5816)</span>{target=_blank}. <span class="co">[</span><span class="ot">Agenda</span><span class="co">](https://github.com/fs-lise/agenda-gerit-laureen)</span>{target=_blank}.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Karl Schnickmann (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0008-7763-7276</span><span class="co">](https://orcid.org/0009-0008-7763-7276)</span>{target=_blank}. <span class="co">[</span><span class="ot">Agenda</span><span class="co">](https://github.com/fs-lise/agenda_gerit_k-schnickmann)</span>{target=_blank}.</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Alexa Steinheimer (Student Assistant). ORCID: <span class="co">[</span><span class="ot">0009-0005-2628-2522</span><span class="co">](https://orcid.org/0009-0005-2628-2522)</span>{target=_blank}.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Carlo Tang (Student Assistant). GitHub: <span class="co">[</span><span class="ot">dengdenglele</span><span class="co">](https://github.com/dengdenglele)</span>{target=_blank}.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="co">Availabilities are shared on a voluntary basis.</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="co">Availability information may refer to days in the office vs. remote, or preferred meeting days/times.</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="co">For teaching assistants, Calendly can be useful for communicating availabilities for online meetings.</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="co">Note: this will include SOP, Agendas, Meetings</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="co">If you would like to schedule an appointment with Prof. Wagner, please feel free to send a meeting invitation directly via Outlook. Prof. Wagner can then **accept,** **decline,** or **propose** a new time.&lt;br&gt;</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="co">➡️ This streamlines the scheduling process and avoids the need for prior email coordination.</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="co">## Team building</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="co">Semester-prep session / Lunch at the end</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">## Retreats</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="co">- [Speinshart Scientific Center](https://www.speinshart.ai/){target=_blank}</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="co">- [DORMERO Schlosshotel Reichenschwand](http://www.dormero.de){target=_blank}</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="co">- [Hotel Schloss Burgellern](http://www.burgellern.de){target=_blank}</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="co">- [Stemperhof Gößweinstein](http://www.schloss-wiesenthau.de/){target=_blank}</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co">- [Landhotel Geiselwind](http://www.landhotel-geiselwind.de){target=_blank}</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="co">- [Schloss Wiesenthau](http://www.schloss-wiesenthau.de){target=_blank}</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="co">- [Internationale Begegnungsstätte Kloster Speinshart](https://kloster-speinshart.de/){target=_blank}</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="co">- [Landhotel Rügheim](http://www.landhotel-ruegheim.de){target=_blank}</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
