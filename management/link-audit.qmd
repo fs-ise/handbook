@@ -1,0 +1,323 @@
+---
+title: "Link audit & architecture overview"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+
+TODO: distinguish links to public resources vs. private ones (repositories, VC, Nextcloud ...)
+
+```{python}
+import json
+import pandas as pd
+from pathlib import Path
+from urllib.parse import urlparse
+from collections import Counter
+
+# Load extractor outputs (adjust paths as needed)
+summary = json.loads(Path("../_link_audit/summary.json").read_text(encoding="utf-8"))
+df = pd.read_csv("../_link_audit/links.csv")
+
+# --- Helpers (categorization) ---
+def host_of(url: str) -> str:
+    try:
+        return (urlparse(url).netloc or "").lower()
+    except Exception:
+        return ""
+
+def clean_host(host: str) -> str:
+    return (host or "").lower().removeprefix("www.")
+
+def is_external_row(row) -> bool:
+    try:
+        return int(row["external"]) == 1 and str(row["system"]) != "internal"
+    except Exception:
+        return False
+
+def safe_id(s: str, prefix: str = "n_") -> str:
+    s = (
+        s.replace(" ", "_")
+         .replace("-", "_")
+         .replace(".", "_")
+         .replace("/", "_")
+         .replace(":", "_")
+    )
+    if s and s[0].isdigit():
+        s = "x_" + s
+    return prefix + s
+
+# --- Config ---
+IGNORE_HOSTS = {"img.shields.io"}
+
+# Hosts counted as "GitHub"
+GITHUB_HOSTS = {
+    "github.com",
+    "raw.githubusercontent.com",
+    "github.io",
+    "fs-ise.github.io",
+    "coderefinery.github.io",
+}
+
+PUBLISHER_HOST_HINTS = {
+    "aisnet.org",
+    "aisel.aisnet.org",
+    "sciencedirect.com",
+    "www.sciencedirect.com",
+    "link.springer.com",
+    "onlinelibrary.wiley.com",
+    "tandfonline.com",
+    "journals.sagepub.com",
+    "ieeexplore.ieee.org",
+    "dl.acm.org",
+    "academic.oup.com",
+    "cambridge.org",
+    "jstor.org",
+    "emerald.com",
+    "mdpi.com",
+    "frontiersin.org",
+    "nature.com",
+    "science.org",
+    "pubmed.ncbi.nlm.nih.gov",
+}
+
+NEXTCLOUD_HOST_HINTS = {
+    "nc-2272638881871040784.nextcloud-ionos.com",
+}
+
+# Add normalized host column early
+df["host"] = df["url"].map(host_of).map(clean_host)
+
+def mapped_system(row) -> str:
+    url = str(row["url"])
+    host = str(row["host"])
+    url_lc = url.lower()
+
+    if host in GITHUB_HOSTS:
+        return "github"
+    if host in NEXTCLOUD_HOST_HINTS:
+        return "nextcloud"
+    if "bamberg" in url_lc:
+        return "bamberg"
+    if any(h == host or host.endswith("." + h) for h in PUBLISHER_HOST_HINTS):
+        return "publishers"
+    return str(row["system"])
+
+# Categorized system column on the full df
+df["system_m"] = df.apply(mapped_system, axis=1)
+
+# External-only, filtered view used by all later sections
+ext = df[df.apply(is_external_row, axis=1)].copy()
+ext = ext[~ext["host"].isin(IGNORE_HOSTS)].copy()
+
+# Precompute counts used by Mermaid + tables
+counts = Counter(ext["system_m"])
+systems = {sys for sys, cnt in counts.items() if cnt > 5}
+```
+
+## Statistics
+
+```{python}
+pd.DataFrame({
+  "metric": ["total_links", "external_links", "internal_links"],
+  "value": [summary["total_links"], summary["external_links"], summary["internal_links"]],
+})
+```
+
+## System map
+
+```{python}
+#| echo: false
+#| output: asis
+
+from collections import Counter
+from urllib.parse import urlparse
+
+lines = ["graph LR", 'HB["Handbook"]']
+edges = []
+
+# Bamberg subgraph: TOP-3 only (nodes inside; edges outside)
+if "bamberg" in systems:
+    bamberg_rows = ext[ext["system_m"] == "bamberg"].copy()
+    bamberg_hosts = Counter(bamberg_rows["host"])
+    if bamberg_hosts:
+        lines.append("subgraph Bamberg[Bamberg]")
+        for h, cnt in bamberg_hosts.most_common(3):
+            hid = safe_id(h, prefix="bam_")
+            lines.append(f'  {hid}["{h} ({cnt})"]')
+        lines.append("end")
+        for h, _cnt in bamberg_hosts.most_common(3):
+            hid = safe_id(h, prefix="bam_")
+            edges.append(f"HB --> {hid}")
+
+# Publishers subgraph: TOP-3 only (nodes inside; edges outside)
+if "publishers" in systems:
+    pub_rows = ext[ext["system_m"] == "publishers"].copy()
+    pub_hosts = Counter(pub_rows["host"])
+    if pub_hosts:
+        lines.append("subgraph Publishers[Publishers]")
+        for h, cnt in pub_hosts.most_common(3):
+            hid = safe_id(h, prefix="pub_")
+            lines.append(f'  {hid}["{h} ({cnt})"]')
+        lines.append("end")
+        for h, _cnt in pub_hosts.most_common(3):
+            hid = safe_id(h, prefix="pub_")
+            edges.append(f"HB --> {hid}")
+
+# GitHub subgraph with TOP-3 repositories
+if "github" in systems:
+    gh_rows = ext[ext["system_m"] == "github"].copy()
+
+    def repo_key(url: str) -> str | None:
+        try:
+            p = urlparse(url)
+            host = clean_host(p.netloc)
+            parts = [x for x in p.path.split("/") if x]
+
+            if host in {"github.com", "raw.githubusercontent.com"} and len(parts) >= 2:
+                return f"{parts[0]}/{parts[1]}"
+            if host.endswith("github.io"):
+                return host  # e.g., coderefinery.github.io, fs-ise.github.io
+        except Exception:
+            pass
+        return None
+
+    repo_counts = Counter([r for r in gh_rows["url"].map(repo_key) if r])
+    top_repos = repo_counts.most_common(3)
+
+    lines.append("subgraph GitHub[GitHub]")
+    lines.append('  GH_ROOT["GitHub"]')
+    for repo, cnt in top_repos:
+        rid = safe_id(repo, prefix="gh_")
+        lines.append(f'  {rid}["{repo} ({cnt})"]')
+        lines.append(f"  GH_ROOT --> {rid}")
+    lines.append("end")
+
+    edges.append("HB --> GH_ROOT")
+
+# Nextcloud node (keep count)
+if "nextcloud" in systems:
+    nc_cnt = counts.get("nextcloud", 0)
+    lines.append(f'NC["Nextcloud ({nc_cnt})"]')
+    edges.append("HB --> NC")
+
+# Remaining systems as direct nodes + edges
+for sys, cnt in counts.most_common():
+    if sys not in systems:
+        continue
+    if sys in {"github", "bamberg", "publishers", "nextcloud"}:
+        continue
+    sid = safe_id(sys, prefix="sys_")
+    lines.append(f'{sid}["{sys} ({cnt})"]')
+    edges.append(f"HB --> {sid}")
+
+# Append edges at the end (Mermaid-friendly)
+lines.extend(edges)
+
+mermaid = "\n".join(lines)
+
+print("```{mermaid}")
+print(mermaid)
+print("```")
+```
+
+## Tables
+
+### Top systems (categorized)
+
+```{python}
+#| echo: false
+#| output: asis
+
+import html
+import pandas as pd
+
+x = ext.copy()
+
+# Bucket into your main categories; everything else becomes "non-categorized"
+bucketed = {"github", "nextcloud", "bamberg", "publishers"}
+x["category"] = x["system_m"].where(x["system_m"].isin(bucketed), "non-categorized")
+
+out = (
+    x.groupby(["category", "host", "url"], dropna=False)
+     .size()
+     .reset_index(name="count")
+     .sort_values(["category", "count", "host", "url"], ascending=[True, False, True, True])
+)
+
+table_id = "link_index_table"
+search_id = "link_index_search"
+
+def esc(s) -> str:
+    return html.escape("" if s is None else str(s))
+
+# Build HTML table (URLs clickable)
+rows_html = []
+for _, r in out.iterrows():
+    url = str(r["url"])
+    rows_html.append(
+        "<tr>"
+        f"<td>{esc(r['category'])}</td>"
+        f"<td>{esc(r['host'])}</td>"
+        f"<td><a href=\"{esc(url)}\" target=\"_blank\" rel=\"noopener\">{esc(url)}</a></td>"
+        f"<td style=\"text-align:right;\">{int(r['count'])}</td>"
+        "</tr>"
+    )
+
+html_out = f"""
+<div style="margin: 0 0 0.75rem 0;">
+  <label for="{search_id}" style="font-weight:600;">Filter/search:</label>
+  <input id="{search_id}" type="text" placeholder="Type to filter (category, host, URL)…"
+         style="width: 100%; max-width: 720px; padding: 0.5rem; margin-top: 0.25rem;">
+</div>
+
+<table id="{table_id}" class="table" style="width: 100%;">
+  <thead>
+    <tr>
+      <th>category</th>
+      <th>host</th>
+      <th>url</th>
+      <th style="text-align:right;">count</th>
+    </tr>
+  </thead>
+  <tbody>
+    {''.join(rows_html)}
+  </tbody>
+</table>
+
+<script>
+(function() {{
+  const input = document.getElementById("{search_id}");
+  const table = document.getElementById("{table_id}");
+  const tbody = table.querySelector("tbody");
+  const rows = Array.from(tbody.querySelectorAll("tr"));
+
+  function norm(s) {{ return (s || "").toLowerCase(); }}
+
+  input.addEventListener("input", () => {{
+    const q = norm(input.value).trim();
+    if (!q) {{
+      rows.forEach(r => r.style.display = "");
+      return;
+    }}
+    rows.forEach(r => {{
+      const text = norm(r.innerText);
+      r.style.display = text.includes(q) ? "" : "none";
+    }});
+  }});
+}})();
+</script>
+"""
+
+print(html_out)
+```
+
+### Files with most links
+
+```{python}
+pd.DataFrame(summary["files"], columns=["file", "links"]).head(20)
+```
+
+TODO: connect to link-check (plus procedures)
