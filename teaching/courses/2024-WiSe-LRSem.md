@@ -32,7 +32,7 @@ Status of Revisions | {{< meta improvement_status >}}
 - Grading: the team assistant registers students for the seminar, enters grades, and submits them online.
 
 ## 1. Announce the seminar (4 months before)
- 
+
 Start: December (summer term), May (winter term)
 
 - [x] Professor: Announce seminar on the website for the next semester (without dates/rooms).
@@ -71,7 +71,7 @@ Grading
 Entering Grades into FlexNow
 
 - [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
-- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
+- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
 
 Documentation
 

@@ -27,7 +27,7 @@ Status of Revisions | {{< meta improvement_status >}}
 ## Process
 
 ## 1. Announce the project (4 months before)
- 
+
 Start: December (summer term), May (winter term)
 
 - [x] Professor: Announce project on the website for the next semester (without dates/rooms).
@@ -73,11 +73,11 @@ Entering Grades into FlexNow
     - Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter
     - Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)
         - Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester:
-    "Noten endgültig freischalten und verbuchen" ([Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)
+    "Noten endgültig freischalten und verbuchen" ([Nextcloud]({{< var nextcloud.grades >}}){target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)
     - Only store grades as PDF (not as csv)?
     - Klausuren entsprechend der Reihenfolge im PDF sortieren.
 
-Grades are archived at [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
+Grades are archived at [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
 
 Sending exams to the examination office
 

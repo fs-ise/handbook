@@ -29,7 +29,7 @@ Status of Revisions | {{< meta improvement_status >}}
 **TODO**: set deadline etc.
 
 ## 1. Announce the project (4 months before)
- 
+
 Start: December (summer term), May (winter term)
 
 - [x] Professor: Announce project on the website for the next semester (without dates/rooms).
@@ -68,7 +68,7 @@ Grading
 Entering Grades into FlexNow
 
 - [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
-- [x] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
+- [x] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
 
 Sending exams to the examination office
 

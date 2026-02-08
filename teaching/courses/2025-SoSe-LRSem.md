@@ -30,7 +30,7 @@ Status of Revisions | {{< meta improvement_status >}}
 - Grading: the team assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register on FlexNow.
 
 ## 1. Announce the seminar (4 months before)
- 
+
 Start: December (summer term), May (winter term)
 
 - [x] Team Assistant: Create the course in FlexNow.
@@ -39,12 +39,12 @@ Start: December (summer term), May (winter term)
  Check public holidays
 
 Flexnow: Besonderheiten bei Ausstattung/Hinweise:
- 
+
 - 8h Semesterwoche 5, Freitag, Blocktermin, Seminarraum
 - 8h Semesterwoche 6, Freitag, Blocktermin, Seminarraum
 :::
 
-At the end of the semester: 
+At the end of the semester:
 
 - [x] Professor: Announce the seminar on the website for the next semester (without dates/rooms).
 - [x] Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.
@@ -86,7 +86,7 @@ Grading
 Entering Grades into FlexNow
 
 - [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
-- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
+- [x] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
 
 Documentation
 

@@ -29,7 +29,7 @@ Status of Revisions | {{< meta improvement_status >}}
 - Grading: the team assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register on FlexNow.
 
 ## 1. Announce the project (4 months before)
- 
+
 Start: December (summer term), May (winter term)
 
 - [x] Team Assistant: Create the project in FlexNow.
@@ -38,14 +38,14 @@ Start: December (summer term), May (winter term)
 Check public holidays
 
 Flexnow: Besonderheiten bei Ausstattung/Hinweise:
- 
+
 - 2h in Semesterwoche 1, Tag und Zeit egal
 - 4h in Semesterwoche 2, Freitag, Uhrzeit egal, CIP-Pool
 - 2 x 4h in Semesterwoche 3, Donnerstag und Freitag, Uhrzeit egal, CIP-Pool
 - 2h in Semesterwoche 5, Donnerstag oder Freitag, Uhrzeit egal, CIP-Pool
 :::
 
-At the end of the semester: 
+At the end of the semester:
 
 - [x] Team Assistant: Update information in UnivIS (**add keywords „WI-Projekt“ and „WI-Projekte“**), check information on the website. VC/UnivIS: "WI-Projekt-B: Bachelorprojekt aus der Fächergruppe Wirtschaftsinformatik"
 - [x] Team Assistant: Announce the project on the website for the next semester (without dates/rooms).
@@ -87,7 +87,7 @@ Grading
 Entering Grades into FlexNow
 
 - [x] Team Assistant: [Enter grades in FlexNow](/teaching/exams.html#entering-grades-in-flexnow) (or create certificates if exam is not yet available in FlexNow ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
-- [ ] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [Nextcloud]({{< meta nextcloud.grades >}}){target=_blank}.
+- [ ] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
 
 Documentation
 
