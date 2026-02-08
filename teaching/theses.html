@@ -114,28 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -147,6 +125,17 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -156,6 +145,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -966,7 +966,7 @@ Note
 </section>
 <section id="applicable-regulations" class="level2">
 <h2 class="anchored" data-anchor-id="applicable-regulations">Applicable regulations</h2>
-<!-- 
+<!--
 - Bachelor Business Information Systems
 - Bachelor International Information Systems Management
 - Bachelor Angewandte Informatik
@@ -1552,7 +1552,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>It is important that we receive **two paper versions with original signatures**:</span>
 <span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 original with the signature of the professor and the student **for the student**.</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 original with the signature of the professor and the student **for archiving at the chair** (added to the <span class="co">[</span><span class="ot">archive</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}).</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 original with the signature of the professor and the student **for archiving at the chair** (added to the <span class="co">[</span><span class="ot">archive</span><span class="co">]({{&lt; var nextcloud.grades &gt;}})</span>{target=_blank}).</span>
 <span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>To **complete the registration**, the thesis advisor</span>
 <span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
@@ -1563,7 +1563,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The script creates a folder in the <span class="co">[</span><span class="ot">theses overview</span><span class="co">](https://github.com/fs-ise/theses-confidential/)</span>{target=_blank}.</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Moves the documents to <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.theses &gt;}})</span>{target=_blank}.</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Moves the documents to <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; var nextcloud.theses &gt;}})</span>{target=_blank}.</span>
 <span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enters the **topic** of the thesis and **date** of the topic issue in the Word document (the date of the topic issue cannot be before the date of enrollment in the Word document; if the Word document cannot be found in the E-Mail history, students can share it):</span>
 <span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="al">![Registration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/thesis-registration.png)</span>{target=_blank}</span>
@@ -1571,20 +1571,20 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sends an e-mail containing the Word document to the examination office, which enters the topic and the day of the topic issue into FlexNow:</span>
 <span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; wiai.pruefungen@uni-bamberg.de</span></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Anmeldung Abschlussarbeit**</span></span>
 <span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Liebe Frau Schick,</span></span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Anbei übersende ich Ihnen die ausgefüllte Themenbestätigung für XXXXXXX.</span></span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Mit besten Grüßen</span></span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Gerit Wagner</span></span>
 <span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advising</span></span>
 <span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>Notes on thesis advising and process are stored internally on <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.theses &gt;}})</span>{target=_blank}.</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>Notes on thesis advising and process are stored internally on <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; var nextcloud.theses &gt;}})</span>{target=_blank}.</span>
 <span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>Supervising principles</span>
 <span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
@@ -1619,7 +1619,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
 <span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>To start grading the thesis and to create the review run</span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a><span class="in">labot thesis --grade</span></span>
 <span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1642,19 +1642,19 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The deadline is given by the examination office. Our goal is to grade theses within two weeks (the official deadline allows up to 4 months).</span>
 <span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spell-check the review.</span>
 <span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The review and grade in paper form (signed by the professor) are sent to the examination office by the Team Assistant (no cover letter, Hauspost: Ref II/3).</span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The review (PDF) is archived at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}. Materials in 35.XXX should be consolidated.</span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The review (PDF) is archived at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; var nextcloud.grades &gt;}})</span>{target=_blank}. Materials in 35.XXX should be consolidated.</span>
 <span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Grades are entered by the examination office.</span>
 <span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Students can check the grade via FlexNow.</span>
 <span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Invite the student to a feedback session using the following template:</span>
 <span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Bewertung Ihrer Bachelorarbeit und Feedback**</span></span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Sehr geehrte/r Frau/Herr XXXXX,</span></span>
 <span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Ich habe das Gutachten zu Ihrer Bachelorarbeit erstellt und an das Prüfungsamt übersendet. Vorab möchte ich Ihnen schon inoffiziell mitteilen, dass Ihre Arbeit mit der Note XXXXXX bewertet wird.</span></span>
 <span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Herzlichen Glückwunsch zu dieser hervorragenden Leistung!</span></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Abschließend möchte ich Sie zu einem Feedbackgespräch einladen, um die Bewertung und den Prozess zu besprechen. Ich würde mich freuen, wenn Sie diese Möglichkeit wahrnehmen. Einen Termin können Sie über das Calendly-Tool auswählen:</span></span>
 <span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; https://calendly.com/gerit-wagner/30min</span></span>
@@ -1664,13 +1664,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Gerit Wagner</span></span>
 <span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Bewertung Ihrer Masterarbeit und Feedback**</span></span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Sehr geehrte/r Frau/Herr XXXXX,</span></span>
 <span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Ich habe das Gutachten zu Ihrer Masterarbeit erstellt und an das Prüfungsamt übersendet. Vorab möchte ich Ihnen schon inoffiziell mitteilen, dass die schriftliche Arbeit mit der Note XXXXXX bewertet wird. Die Präsentation wird mit XXXX bewertet. Die Gesamtnote wird vom FlexNow berechnet.</span></span>
 <span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Herzlichen Glückwunsch zu dieser hervorragenden Leistung!</span></span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Abschließend möchte ich Sie zu einem Feedbackgespräch einladen, um die Bewertung und den Prozess zu besprechen. Ich würde mich freuen, wenn Sie diese Möglichkeit wahrnehmen. Einen Termin können Sie über das Calendly-Tool auswählen:</span></span>
 <span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; https://calendly.com/gerit-wagner/30min</span></span>
@@ -1683,9 +1683,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>A confirmation for passing the thesis (Bestehensbescheinigung) can be issued upon request. Thesis supervisors can send a confirmation to the examination office via email. The official confirmation is issued by the examination office.</span>
 <span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; wiai.pruefungen(at)uni-bamberg.de</span></span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Sehr geehrte Frau Schick,</span></span>
-<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Ich bestätige, dass Herr/Frau NAME die Master/Bachelorarbeit mit einer Note besser als 4.0 besteht. Können Sie das Ausstellen der Bestehensbescheinigung veranlassen?</span></span>
 <span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Mit besten Grüßen</span></span>
@@ -1701,7 +1701,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a><span class="fu">## Applicable regulations</span></span>
 <span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
 <span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a><span class="co">- Bachelor Business Information Systems</span></span>
 <span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a><span class="co">- Bachelor International Information Systems Management</span></span>
 <span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a><span class="co">- Bachelor Angewandte Informatik</span></span>

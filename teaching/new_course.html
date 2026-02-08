@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -133,6 +133,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -142,17 +153,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -768,12 +768,12 @@ Note
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Process</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Announce the course (4 months before)</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Start: December (summer term), May (winter term)</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Create the course in FlexNow.</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>At the end of the semester: </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>At the end of the semester:</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Announce lecture on the website for the next semester (without dates/rooms).</span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Update information in UnivIS (add keywords „WI-Seminar“ and „WI-Seminare“ for seminars), check information on the website.</span>
@@ -843,7 +843,7 @@ Note
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office. (true???)</span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Repeat relevant steps of *Exams and documentation* (step 4) </span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Repeat relevant steps of *Exams and documentation* (step 4)</span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (<span class="co">[</span><span class="ot">link</span><span class="co">](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/)</span>{target=_blank}).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -893,7 +893,7 @@ Note
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Grading: The Team Assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register on FlexNow.</span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Announce the seminar (4 months before)</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>Start: December (summer term), May (winter term)</span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Create the course in FlexNow.</span>
@@ -907,7 +907,7 @@ Note
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>8h Semesterwoche 6, Freitag, Blocktermin, Seminarraum</span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>At the end of the semester: </span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>At the end of the semester:</span>
 <span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Announce the seminar on the website for the next semester (without dates/rooms).</span>
 <span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.</span>
@@ -949,7 +949,7 @@ Note
 <span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; var nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
@@ -1003,7 +1003,7 @@ Note
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Grading: The Team Assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register on FlexNow.</span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Announce the project (4 months before)</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>Start: December (summer term), May (winter term)</span>
 <span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Create the project in FlexNow.</span>
@@ -1019,7 +1019,7 @@ Note
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2h in Semesterwoche 5, Donnerstag oder Freitag, Uhrzeit egal, CIP-Pool</span>
 <span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>At the end of the semester: </span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>At the end of the semester:</span>
 <span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Update information in UnivIS (**add keywords „WI-Projekt“ and „WI-Projekte“**), check information on the website. VC/UnivIS: "WI-Projekt-B: Bachelorprojekt aus der Fächergruppe Wirtschaftsinformatik"</span>
 <span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Announce the project on the website for the next semester (without dates/rooms).</span>
@@ -1061,7 +1061,7 @@ Note
 <span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; var nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
@@ -1658,12 +1658,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Process</span></span>
 <span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Announce the course (4 months before)</span></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>Start: December (summer term), May (winter term)</span>
 <span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Create the course in FlexNow.</span>
 <span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>At the end of the semester: </span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>At the end of the semester:</span>
 <span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Announce lecture on the website for the next semester (without dates/rooms).</span>
 <span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Update information in UnivIS (add keywords „WI-Seminar“ and „WI-Seminare“ for seminars), check information on the website.</span>
@@ -1733,7 +1733,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office. (true???)</span>
 <span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.</span>
-<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Repeat relevant steps of *Exams and documentation* (step 4) </span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Repeat relevant steps of *Exams and documentation* (step 4)</span>
 <span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office (<span class="co">[</span><span class="ot">link</span><span class="co">](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/)</span>{target=_blank}).</span>
 <span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1774,7 +1774,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Grading: The Team Assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register on FlexNow.</span>
 <span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Announce the seminar (4 months before)</span></span>
-<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>Start: December (summer term), May (winter term)</span>
 <span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Create the course in FlexNow.</span>
@@ -1788,7 +1788,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>8h Semesterwoche 6, Freitag, Blocktermin, Seminarraum</span>
 <span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>At the end of the semester: </span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>At the end of the semester:</span>
 <span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Announce the seminar on the website for the next semester (without dates/rooms).</span>
 <span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.</span>
@@ -1830,7 +1830,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
-<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
+<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; var nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a></span>
@@ -1877,7 +1877,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-270"><a href="#cb4-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Grading: The Team Assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register on FlexNow.</span>
 <span id="cb4-271"><a href="#cb4-271" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Announce the project (4 months before)</span></span>
-<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a>Start: December (summer term), May (winter term)</span>
 <span id="cb4-275"><a href="#cb4-275" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-276"><a href="#cb4-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Create the project in FlexNow.</span>
@@ -1893,7 +1893,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-286"><a href="#cb4-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2h in Semesterwoche 5, Donnerstag oder Freitag, Uhrzeit egal, CIP-Pool</span>
 <span id="cb4-287"><a href="#cb4-287" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a>At the end of the semester: </span>
+<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a>At the end of the semester:</span>
 <span id="cb4-290"><a href="#cb4-290" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-291"><a href="#cb4-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Update information in UnivIS (**add keywords „WI-Projekt“ and „WI-Projekte“**), check information on the website. VC/UnivIS: "WI-Projekt-B: Bachelorprojekt aus der Fächergruppe Wirtschaftsinformatik"</span>
 <span id="cb4-292"><a href="#cb4-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: Announce the project on the website for the next semester (without dates/rooms).</span>
@@ -1935,7 +1935,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a>Entering Grades into FlexNow</span>
 <span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Team Assistant: <span class="co">[</span><span class="ot">Enter grades in FlexNow</span><span class="co">](/teaching/exams.html#entering-grades-in-flexnow)</span> (or create certificates if exam is not yet available in FlexNow (<span class="co">[</span><span class="ot">script</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/src/scheine)</span>{target=_blank})).</span>
-<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; meta nextcloud.grades &gt;}})</span>{target=_blank}.</span>
+<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at <span class="co">[</span><span class="ot">Nextcloud</span><span class="co">]({{&lt; var nextcloud.grades &gt;}})</span>{target=_blank}.</span>
 <span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-333"><a href="#cb4-333" aria-hidden="true" tabindex="-1"></a>Documentation</span>
 <span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a></span>
