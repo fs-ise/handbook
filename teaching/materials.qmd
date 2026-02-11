@@ -46,7 +46,7 @@ A teaching repository contains
 - Detailed teaching notes allow teaching assistants to replicate it quickly.
 - Links related to continuous improvement: **feedback**, **evaluations**, **improvement**.
 - Add branch protection rule for `main`: restrict deletions and block force pushes
-- Each course should have a separate repository and page. 
+- Each course should have a separate repository and page.
 - Options to provide feedback should be linked on the first page.
 - Optional: surveys to collect feedback for individual sessions (Google Forms?)
 - Optional: ask students how they learn (PDF, ...) whether they use a knowledge management system (which one), and adapt accordingly
@@ -87,8 +87,20 @@ Quarto extensions for slides:
 Limitation: custom-callouts do not work in revealjs.
 
 ```Markdown
+---
+title: "Analytics and Big Data"
+subtitle: "Foundations of data analytics"
+section_label: "Introductory"
+session: "Session 1"
+date: "2026-03-23"
+---
+
+## Heading (added to simplemenu overview) {data-stack-name="Data"}
+
+## Summary (simplemenu overview hidden) {data-state="hide-menubar"}
+
 :::{.callout-note}
-Note that there are five types of callouts, including: 
+Note that there are five types of callouts, including:
 `note`, `tip`, `warning`, `caution`, and `important`.
 :::
 
