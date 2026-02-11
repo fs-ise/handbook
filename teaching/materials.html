@@ -134,17 +134,6 @@ div.csl-indent {
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -156,17 +145,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -176,6 +154,28 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -877,20 +877,32 @@ Important
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Limitation: custom-callouts do not work in revealjs.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including: </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">`note`</span>, <span class="in">`tip`</span>, <span class="in">`warning`</span>, <span class="in">`caution`</span>, and <span class="in">`important`</span>.</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Your content here… <span class="ot">[^1]</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>A url and further information.</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Analytics and Big Data"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Foundations of data analytics"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">section_label:</span><span class="co"> "Introductory"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">session:</span><span class="co"> "Session 1"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-03-23"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading (added to simplemenu overview) {data-stack-name="Data"}</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>@CastonguayWagnerMotulskyEtAl2023 is useful.</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary (simplemenu overview hidden) {data-state="hide-menubar"}</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- _class: centered --&gt;</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Centered text...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including:</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in">`note`</span>, <span class="in">`tip`</span>, <span class="in">`warning`</span>, <span class="in">`caution`</span>, and <span class="in">`important`</span>.</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>Your content here… <span class="ot">[^1]</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>A url and further information.</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>@CastonguayWagnerMotulskyEtAl2023 is useful.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- _class: centered --&gt;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>Centered text...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>TODO: Mermaid diagrams</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -1704,7 +1716,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Detailed teaching notes allow teaching assistants to replicate it quickly.</span>
 <span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Links related to continuous improvement: **feedback**, **evaluations**, **improvement**.</span>
 <span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add branch protection rule for <span class="in">`main`</span>: restrict deletions and block force pushes</span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Each course should have a separate repository and page. </span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Each course should have a separate repository and page.</span>
 <span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Options to provide feedback should be linked on the first page.</span>
 <span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Optional: surveys to collect feedback for individual sessions (Google Forms?)</span>
 <span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Optional: ask students how they learn (PDF, ...) whether they use a knowledge management system (which one), and adapt accordingly</span>
@@ -1745,254 +1757,266 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a>Limitation: custom-callouts do not work in revealjs.</span>
 <span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including: </span>
-<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a><span class="in">`note`</span>, <span class="in">`tip`</span>, <span class="in">`warning`</span>, <span class="in">`caution`</span>, and <span class="in">`important`</span>.</span>
-<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>Your content here… <span class="ot">[^1]</span></span>
-<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>A url and further information.</span>
-<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a>title: "Analytics and Big Data"</span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>subtitle: "Foundations of data analytics"</span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a>section_label: "Introductory"</span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>session: "Session 1"</span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>date: "2026-03-23"</span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading (added to simplemenu overview) {data-stack-name="Data"}</span></span>
 <span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a>@CastonguayWagnerMotulskyEtAl2023 is useful.</span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary (simplemenu overview hidden) {data-state="hide-menubar"}</span></span>
 <span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- _class: centered --&gt;</span></span>
-<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a>Centered text...</span>
-<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including:</span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a><span class="in">`note`</span>, <span class="in">`tip`</span>, <span class="in">`warning`</span>, <span class="in">`caution`</span>, and <span class="in">`important`</span>.</span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>TODO: Mermaid diagrams</span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>Your content here… <span class="ot">[^1]</span></span>
 <span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
-<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
-<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
-<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span>
-<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>A url and further information.</span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a>@CastonguayWagnerMotulskyEtAl2023 is useful.</span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- _class: centered --&gt;</span></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>Centered text...</span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a>**Feedback**</span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a>TODO: Mermaid diagrams</span>
 <span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Limesurvey</span>
-<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Rustpad</span><span class="co">](https://rustpad.io/#GCUiny)</span>{target=_blank} for anonymous feedback/suggestions (contents are deleted after 1 day of inactivity)</span>
-<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>Embedding Google Forms (anonymous responses possible):</span>
-<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
-<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>style<span class="op">&gt;</span></span>
-<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a>blockquote <span class="op">{</span></span>
-<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a>    border<span class="op">-</span>top<span class="op">:</span> <span class="fl">0.1</span><span class="er">em</span><span class="op">;</span></span>
-<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a>    font<span class="op">-</span>size<span class="op">:</span> <span class="dv">60</span><span class="op">%;</span></span>
-<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a>    margin<span class="op">-</span>top<span class="op">:</span> <span class="kw">auto</span><span class="op">;</span></span>
-<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
-<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>iframe src<span class="op">=</span><span class="st">"https://docs.google.com/forms/d/e/1FAIpQLSeACViOkyuuG3Bvz4Dhq1yA-Fm8WTPiRst5D_IxK3UuRyFzjg/viewform?embedded=true"</span> width<span class="op">=</span><span class="st">"100%"</span> height<span class="op">=</span><span class="st">"90%"</span> frameborder<span class="op">=</span><span class="st">""</span> marginheight<span class="op">=</span><span class="st">"0"</span> marginwidth<span class="op">=</span><span class="st">"0"</span><span class="op">&gt;</span>Wird geladen…<span class="op">&lt;/</span>iframe<span class="op">&gt;</span></span>
-<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Open <span class="op">[</span>responses<span class="op">](</span>https<span class="op">:</span><span class="co">//docs.google.com/forms/d/1Wa_MNL3zClW7j-1NPm31PIP7pXs7QqLnZPi4oefA_gA/edit#responses){target=_blank}</span></span>
-<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a>Typography defaults:</span>
-<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a><span class="in">```css</span></span>
-<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>font<span class="op">-</span>family<span class="op">:</span> <span class="st">"Source Sans Pro"</span><span class="op">,</span> sans<span class="op">-</span>serif<span class="op">;</span></span>
-<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a>Adding headings to the navigation</span>
-<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {data-menu-title="I. Overview"}</span></span>
-<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a><span class="fu">### Will not be in the navigation</span></span>
-<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>**Timer**</span>
-<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a>quarto add gadenbuie/countdown/quarto</span>
-<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a>{{&lt; countdown minutes=5 seconds=32 top=10 left=0 &gt;}}</span>
-<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a>  B --&gt; C{Decision}</span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Result one]</span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a>  C --&gt; E[Result two]</span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a>**Feedback**</span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Limesurvey</span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Rustpad</span><span class="co">](https://rustpad.io/#GCUiny)</span>{target=_blank} for anonymous feedback/suggestions (contents are deleted after 1 day of inactivity)</span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a>Embedding Google Forms (anonymous responses possible):</span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>style<span class="op">&gt;</span></span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a>blockquote <span class="op">{</span></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a>    border<span class="op">-</span>top<span class="op">:</span> <span class="fl">0.1</span><span class="er">em</span><span class="op">;</span></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a>    font<span class="op">-</span>size<span class="op">:</span> <span class="dv">60</span><span class="op">%;</span></span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>    margin<span class="op">-</span>top<span class="op">:</span> <span class="kw">auto</span><span class="op">;</span></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>iframe src<span class="op">=</span><span class="st">"https://docs.google.com/forms/d/e/1FAIpQLSeACViOkyuuG3Bvz4Dhq1yA-Fm8WTPiRst5D_IxK3UuRyFzjg/viewform?embedded=true"</span> width<span class="op">=</span><span class="st">"100%"</span> height<span class="op">=</span><span class="st">"90%"</span> frameborder<span class="op">=</span><span class="st">""</span> marginheight<span class="op">=</span><span class="st">"0"</span> marginwidth<span class="op">=</span><span class="st">"0"</span><span class="op">&gt;</span>Wird geladen…<span class="op">&lt;/</span>iframe<span class="op">&gt;</span></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Open <span class="op">[</span>responses<span class="op">](</span>https<span class="op">:</span><span class="co">//docs.google.com/forms/d/1Wa_MNL3zClW7j-1NPm31PIP7pXs7QqLnZPi4oefA_gA/edit#responses){target=_blank}</span></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a>Typography defaults:</span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a><span class="in">```css</span></span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>font<span class="op">-</span>family<span class="op">:</span> <span class="st">"Source Sans Pro"</span><span class="op">,</span> sans<span class="op">-</span>serif<span class="op">;</span></span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a>Adding headings to the navigation</span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading {data-menu-title="I. Overview"}</span></span>
 <span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a>**Code annotation**</span>
-<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">link</span><span class="co">](https://quarto.org/docs/authoring/code-annotation.html)</span>{target=_blank}:</span>
-<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span>                                      <span class="co"># &lt;1&gt;</span></span>
-<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(                                        <span class="co"># &lt;2&gt;</span></span>
-<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm, <span class="co"># &lt;2&gt;</span></span>
-<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm  <span class="co"># &lt;2&gt;</span></span>
-<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a>  )                                              <span class="co"># &lt;2&gt;</span></span>
-<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a><span class="fu">### Will not be in the navigation</span></span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a>**Timer**</span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a>quarto add gadenbuie/countdown/quarto</span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a>{{&lt; countdown minutes=5 seconds=32 top=10 left=0 &gt;}}</span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a>**Code annotation**</span>
 <span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Take <span class="in">`penguins`</span>, and then,</span>
-<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>add new columns for the bill ratio and bill area.</span>
-<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a>**Icons**</span>
-<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>Based on <span class="co">[</span><span class="ot">Bootstrap</span><span class="co">](https://icons.getbootstrap.com/)</span>{target=_blank}</span>
-<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a>{{icon="mortarboard-fill"}}</span>
-<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a>Shortcuts:</span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">link</span><span class="co">](https://quarto.org/docs/authoring/code-annotation.html)</span>{target=_blank}:</span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span>                                      <span class="co"># &lt;1&gt;</span></span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(                                        <span class="co"># &lt;2&gt;</span></span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm, <span class="co"># &lt;2&gt;</span></span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm  <span class="co"># &lt;2&gt;</span></span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a>  )                                              <span class="co"># &lt;2&gt;</span></span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Take <span class="in">`penguins`</span>, and then,</span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>add new columns for the bill ratio and bill area.</span>
 <span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>g : goto slide</span>
-<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b</span>
-<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>d</span>
+<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a>**Icons**</span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a>Based on <span class="co">[</span><span class="ot">Bootstrap</span><span class="co">](https://icons.getbootstrap.com/)</span>{target=_blank}</span>
 <span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>Convert PowerPoint to quarto:</span>
-<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
-<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a><span class="ex">pptx2md</span> <span class="st">"slides.pptx"</span> <span class="at">--output</span> <span class="st">"slides_with_notes.qmd"</span> <span class="at">--enable-slides</span> <span class="at">--qmd</span> <span class="at">--image-dir</span> <span class="st">"images"</span></span>
-<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>{{icon="mortarboard-fill"}}</span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notebooks</span></span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>Shortcuts:</span>
 <span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a>We use Jupyter notebooks for exercises.</span>
-<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>The benefits of Jupyter notebooks are summarized by @VialNegoita2018:</span>
-<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No separation between code and pedagogical materials, no need to switch attention between materials for students.</span>
-<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interactive Python: re-running parts of the code (instead of the entire program) with variables and objects staying in memory.</span>
-<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Option to include short problems for students.</span>
-<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a>Jupyter notebooks should be delivered through GitHub Codespaces to avoid individual setup problems <span class="co">[</span><span class="ot">see @Malan2024</span><span class="co">]</span>.</span>
-<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Notebook template" collapse=true}</span>
-<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>TODO</span>
-<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a><span class="co">Comments can be used to add further explanations or links to references/resources</span></span>
-<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>g : goto slide</span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b</span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>d</span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>Convert PowerPoint to quarto:</span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a><span class="ex">pptx2md</span> <span class="st">"slides.pptx"</span> <span class="at">--output</span> <span class="st">"slides_with_notes.qmd"</span> <span class="at">--enable-slides</span> <span class="at">--qmd</span> <span class="at">--image-dir</span> <span class="st">"images"</span></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notebooks</span></span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a>We use Jupyter notebooks for exercises.</span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>The benefits of Jupyter notebooks are summarized by @VialNegoita2018:</span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No separation between code and pedagogical materials, no need to switch attention between materials for students.</span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interactive Python: re-running parts of the code (instead of the entire program) with variables and objects staying in memory.</span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Option to include short problems for students.</span>
 <span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Resources for notebook design" collapse=true}</span>
-<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">CodeRefinery on Jupyter Notebooks</span><span class="co">](https://coderefinery.github.io/jupyter/)</span>{target=_blank}</span>
-<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise worksheets with Jupyter notebooks</span><span class="co">](https://www.epfl.ch/education/educational-initiatives/jupyter-notebooks-for-education/teaching-and-learning-with-jupyter-notebooks/exercise-worksheets-with-jupyter-notebooks/)</span>{target=_blank}</span>
-<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Example 1</span><span class="co">](https://github.com/yaozeliang/Python-100-exercises-notebook)</span>{target=_blank}</span>
-<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Example 2</span><span class="co">](https://github.com/jerry-git/learn-python3)</span>{target=_blank}</span>
-<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Live code running</span><span class="co">](https://r-wasm.github.io/quarto-live/)</span>{target=_blank}</span>
-<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">assign</span><span class="co">](https://github.com/coatless-quarto/assign)</span>{target=_blank}</span>
-<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">downloadthis</span><span class="co">](https://github.com/shafayetShafee/downloadthis)</span>{target=_blank}</span>
-<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teaching notes</span></span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>Jupyter notebooks should be delivered through GitHub Codespaces to avoid individual setup problems <span class="co">[</span><span class="ot">see @Malan2024</span><span class="co">]</span>.</span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Notebook template" collapse=true}</span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a>TODO</span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a><span class="co">Comments can be used to add further explanations or links to references/resources</span></span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Teaching notes are shared and updated regularly.</span>
-<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Teaching notes template" collapse=true}</span>
-<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a>title: "Session X: XXX"</span>
-<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a><span class="fu">### Week 1: Topics (Teaching notes)</span></span>
-<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time (min) <span class="pp">|</span> Duration  <span class="pp">|</span> Topic                                                                          <span class="pp">|</span> Additional materials                           <span class="pp">|</span></span>
-<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------|-----------|--------------------------------------------------------------------------------|------------------------------------------------|</span></span>
-<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0-10       <span class="pp">|</span> 10        <span class="pp">|</span> <span class="co">[</span><span class="ot">Intro and instructor background</span><span class="co">](#intro)</span>                                      <span class="pp">|</span>                                                <span class="pp">|</span></span>
-<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 10-25      <span class="pp">|</span> 15        <span class="pp">|</span> <span class="co">[</span><span class="ot">What you will learn</span><span class="co">](#what-you-will-learn)</span>                                    <span class="pp">|</span>                                                <span class="pp">|</span></span>
-<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 50-80      <span class="pp">|</span> 30        <span class="pp">|</span> <span class="co">[</span><span class="ot">Orientation in Open Source projects</span><span class="co">](#orientation-in-open-source-projects)</span>    <span class="pp">|</span> Group task, discussing solutions afterwards    <span class="pp">|</span></span>
-<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 80-90      <span class="pp">|</span> 10        <span class="pp">|</span> <span class="co">[</span><span class="ot">Next steps</span><span class="co">](#next-steps)</span>                                                      <span class="pp">|</span>                                                <span class="pp">|</span></span>
-<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a>::: objective</span>
-<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a>In this session, our goal is to .... (competencies)</span>
-<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a>Summary of last session.</span>
-<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a><span class="fu">### Intro and instructor &lt;a id="intro"&gt;&lt;/a&gt;</span></span>
-<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contents (e.g., photo of the board writing)</span>
-<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Highlight areas that can be shortened (optional)</span>
-<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Additional challenges and tasks for students</span>
-<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Typical questions raised (common errors)</span>
-<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a>Summarize lessons learned.</span>
-<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>**Page breaks for PDFs/print**</span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Resources for notebook design" collapse=true}</span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">CodeRefinery on Jupyter Notebooks</span><span class="co">](https://coderefinery.github.io/jupyter/)</span>{target=_blank}</span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise worksheets with Jupyter notebooks</span><span class="co">](https://www.epfl.ch/education/educational-initiatives/jupyter-notebooks-for-education/teaching-and-learning-with-jupyter-notebooks/exercise-worksheets-with-jupyter-notebooks/)</span>{target=_blank}</span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Example 1</span><span class="co">](https://github.com/yaozeliang/Python-100-exercises-notebook)</span>{target=_blank}</span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Example 2</span><span class="co">](https://github.com/jerry-git/learn-python3)</span>{target=_blank}</span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Live code running</span><span class="co">](https://r-wasm.github.io/quarto-live/)</span>{target=_blank}</span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">assign</span><span class="co">](https://github.com/coatless-quarto/assign)</span>{target=_blank}</span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">downloadthis</span><span class="co">](https://github.com/shafayetShafee/downloadthis)</span>{target=_blank}</span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teaching notes</span></span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Teaching notes are shared and updated regularly.</span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Teaching notes template" collapse=true}</span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a>title: "Session X: XXX"</span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a><span class="fu">### Week 1: Topics (Teaching notes)</span></span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time (min) <span class="pp">|</span> Duration  <span class="pp">|</span> Topic                                                                          <span class="pp">|</span> Additional materials                           <span class="pp">|</span></span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------|-----------|--------------------------------------------------------------------------------|------------------------------------------------|</span></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0-10       <span class="pp">|</span> 10        <span class="pp">|</span> <span class="co">[</span><span class="ot">Intro and instructor background</span><span class="co">](#intro)</span>                                      <span class="pp">|</span>                                                <span class="pp">|</span></span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 10-25      <span class="pp">|</span> 15        <span class="pp">|</span> <span class="co">[</span><span class="ot">What you will learn</span><span class="co">](#what-you-will-learn)</span>                                    <span class="pp">|</span>                                                <span class="pp">|</span></span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 50-80      <span class="pp">|</span> 30        <span class="pp">|</span> <span class="co">[</span><span class="ot">Orientation in Open Source projects</span><span class="co">](#orientation-in-open-source-projects)</span>    <span class="pp">|</span> Group task, discussing solutions afterwards    <span class="pp">|</span></span>
+<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 80-90      <span class="pp">|</span> 10        <span class="pp">|</span> <span class="co">[</span><span class="ot">Next steps</span><span class="co">](#next-steps)</span>                                                      <span class="pp">|</span>                                                <span class="pp">|</span></span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a>::: objective</span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a>In this session, our goal is to .... (competencies)</span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>Summary of last session.</span>
 <span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;lt;</span>div class=<span class="dv">&amp;quot;</span>page-break<span class="dv">&amp;quot;&amp;gt;&amp;lt;</span>/div<span class="dv">&amp;gt;</span></span>
-<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>Native page break:</span>
-<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>{{{&lt; pagebreak &gt;}}}</span>
-<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a><span class="fu">### Intro and instructor &lt;a id="intro"&gt;&lt;/a&gt;</span></span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contents (e.g., photo of the board writing)</span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Highlight areas that can be shortened (optional)</span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Additional challenges and tasks for students</span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Typical questions raised (common errors)</span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>Summarize lessons learned.</span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a>**Page breaks for PDFs/print**</span>
 <span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Instructor guide</span><span class="co">](https://coderefinery.github.io/documentation/guide/)</span>{target=_blank}</span>
-<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">awesome quarto</span><span class="co">](https://github.com/mcanouil/awesome-quarto)</span>{target=_blank}</span>
-<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Slidecrafting: Making beautiful slides with reveal.js and Quarto</span><span class="co">](https://slidecrafting-book.com/)</span>{target=_blank}</span>
-<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>revealjs editor (slides.com): ai prompts limited (generating many slides, or changing text fields) - cannot do animations with it. limited import/export (for quarto/revealjs) - only complex/full htm.</span>
-<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Terminal animations (asciinema)" collapse=true}</span>
-<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a>Installation</span>
-<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
-<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install asciinema</span>
-<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/asciinema/agg</span>
-<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> agg</span>
-<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> build <span class="at">-t</span> agg .</span>
-<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>Recording and conversion</span>
-<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
-<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a><span class="ex">asciinema</span> rec demo.cast</span>
-<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a><span class="co"># code ...</span></span>
-<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a><span class="co"># ctrl+d to quit</span></span>
-<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a><span class="co"># convert:</span></span>
-<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-u</span> <span class="va">$(</span><span class="fu">id</span> <span class="at">-u</span><span class="va">)</span>:<span class="va">$(</span><span class="fu">id</span> <span class="at">-g</span><span class="va">)</span> <span class="at">-v</span> <span class="va">$PWD</span>:/data agg demo.cast demo.gif</span>
-<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>**Possible extensions**</span>
-<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Workflows (quality checks)</span>
-<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Setup of exercises</span>
-<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)</span>
-<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Quarto extensions" collapse=true}</span>
-<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/jmbuhr/quarto-qrcode</span>
-<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/fradav/quarto-revealjs-animate</span>
-<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-animate-graph</span>
-<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-excalidraw</span>
-<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/gadenbuie/quarto-now</span>
-<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-subtitles</span>
-<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-revealjs-highlightword</span>
-<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/produnis/quarto-cheatsheet</span>
-<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-leader-line</span>
-<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-quizdown (interactive - incompatible with PDF export)</span>
-<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/shafayetShafee/interactive-sql</span>
-<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/peter-gy/quarto-gradio</span>
-<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://quarto.thecoatlessprofessor.com/pyodide/</span>
-<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless-quarto/pyodide</span>
-<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/shinylive</span>
-<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless/quarto-webr?tab=readme-ov-file</span>
-<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-snow</span>
-<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/fontawesome</span>
-<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://parmsam.github.io/quarto-github-corner/</span>
-<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;lt;</span>div class=<span class="dv">&amp;quot;</span>page-break<span class="dv">&amp;quot;&amp;gt;&amp;lt;</span>/div<span class="dv">&amp;gt;</span></span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a>Native page break:</span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>{{{&lt; pagebreak &gt;}}}</span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Instructor guide</span><span class="co">](https://coderefinery.github.io/documentation/guide/)</span>{target=_blank}</span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">awesome quarto</span><span class="co">](https://github.com/mcanouil/awesome-quarto)</span>{target=_blank}</span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Slidecrafting: Making beautiful slides with reveal.js and Quarto</span><span class="co">](https://slidecrafting-book.com/)</span>{target=_blank}</span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>revealjs editor (slides.com): ai prompts limited (generating many slides, or changing text fields) - cannot do animations with it. limited import/export (for quarto/revealjs) - only complex/full htm.</span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Terminal animations (asciinema)" collapse=true}</span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>Installation</span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install asciinema</span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/asciinema/agg</span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> agg</span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> build <span class="at">-t</span> agg .</span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a>Recording and conversion</span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="in">```sh</span></span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a><span class="ex">asciinema</span> rec demo.cast</span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a><span class="co"># code ...</span></span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a><span class="co"># ctrl+d to quit</span></span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="co"># convert:</span></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-u</span> <span class="va">$(</span><span class="fu">id</span> <span class="at">-u</span><span class="va">)</span>:<span class="va">$(</span><span class="fu">id</span> <span class="at">-g</span><span class="va">)</span> <span class="at">-v</span> <span class="va">$PWD</span>:/data agg demo.cast demo.gif</span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a>**Possible extensions**</span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Workflows (quality checks)</span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Setup of exercises</span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)</span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Quarto extensions" collapse=true}</span>
+<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/jmbuhr/quarto-qrcode</span>
+<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/fradav/quarto-revealjs-animate</span>
+<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-animate-graph</span>
+<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-excalidraw</span>
+<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/gadenbuie/quarto-now</span>
+<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-subtitles</span>
+<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-revealjs-highlightword</span>
+<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/produnis/quarto-cheatsheet</span>
+<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-leader-line</span>
+<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-quizdown (interactive - incompatible with PDF export)</span>
+<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/shafayetShafee/interactive-sql</span>
+<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/peter-gy/quarto-gradio</span>
+<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://quarto.thecoatlessprofessor.com/pyodide/</span>
+<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless-quarto/pyodide</span>
+<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/shinylive</span>
+<span id="cb14-347"><a href="#cb14-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless/quarto-webr?tab=readme-ov-file</span>
+<span id="cb14-348"><a href="#cb14-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-snow</span>
+<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/fontawesome</span>
+<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://parmsam.github.io/quarto-github-corner/</span>
+<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
