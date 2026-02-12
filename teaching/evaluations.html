@@ -143,17 +143,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -163,6 +152,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -739,6 +739,7 @@ window.Quarto = {
   <li><a href="#process" id="toc-process" class="nav-link" data-scroll-target="#process">Process</a></li>
   <li><a href="#example-for-the-invitation-to-the-evaluation" id="toc-example-for-the-invitation-to-the-evaluation" class="nav-link" data-scroll-target="#example-for-the-invitation-to-the-evaluation">Example for the invitation to the evaluation</a></li>
   <li><a href="#systems" id="toc-systems" class="nav-link" data-scroll-target="#systems">Systems</a></li>
+  <li><a href="#survey" id="toc-survey" class="nav-link" data-scroll-target="#survey">Survey</a></li>
   <li><a href="#evaluation-results" id="toc-evaluation-results" class="nav-link" data-scroll-target="#evaluation-results">Evaluation results</a></li>
   <li><a href="#applicable-regulations" id="toc-applicable-regulations" class="nav-link" data-scroll-target="#applicable-regulations">Applicable regulations</a></li>
   </ul>
@@ -842,6 +843,35 @@ Note
 </ul>
 <p>Order an evaluation: <a href="https://www.uni-bamberg.de/its/lehrevaluation/" target="_blank">RZ intern</a></p>
 </section>
+<section id="survey" class="level2">
+<h2 class="anchored" data-anchor-id="survey">Survey</h2>
+<p><strong>The Lecturer and Your Course</strong></p>
+<ul>
+<li>The lecturer’s competence / expertise in the subject area.</li>
+<li>The lecturer’s teaching style (rhetorical skills, methods, etc.).</li>
+<li>The lecturer’s accessibility and approachability.</li>
+<li>The structure of the course.</li>
+<li>The materials provided by the lecturer (scripts, slides etc.).</li>
+<li>The overall quality of the course.</li>
+</ul>
+<p><strong>Your Spent Workload</strong></p>
+<ul>
+<li>Average amount of time (assignments &amp; self-study) needed for 1 academic hour (45 minutes):</li>
+<li>Study time generally needed for this course compared to the indicated workload (i.e.&nbsp;in the module description):</li>
+</ul>
+<p><strong>General Aspects of Your Course</strong></p>
+<ul>
+<li>The overall course level was… (extremely hard &lt;-&gt; extremely easy)</li>
+<li>The relevance of the course was…</li>
+<li>The atmosphere in class (discussion, cooperation etc.) was…</li>
+<li>The overall organisation of the course was…</li>
+</ul>
+<p><strong>Your Comments and Suggestions</strong></p>
+<ul>
+<li>In the course with [lecturer], I especially liked…</li>
+<li>For the course with [lecturer], I suggest the following changes…</li>
+</ul>
+</section>
 <section id="evaluation-results" class="level2">
 <h2 class="anchored" data-anchor-id="evaluation-results">Evaluation results</h2>
 <div id="lecture-listing">
@@ -888,7 +918,7 @@ student_evaluations
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-Prog.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-Prog.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -901,7 +931,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -914,7 +944,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Big Data and Analytics" data-listing-filename-sort="2026-SuSe-BDA.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Big Data and Analytics" data-listing-filename-sort="2026-SuSe-BDA.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -927,7 +957,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -940,7 +970,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
+<tr data-index="4" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-WiSe</span>
 </td>
@@ -953,7 +983,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
+<tr data-index="5" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -966,7 +996,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
+<tr data-index="6" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -979,7 +1009,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
+<tr data-index="7" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -992,7 +1022,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
+<tr data-index="8" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1005,7 +1035,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
+<tr data-index="9" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1018,7 +1048,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
+<tr data-index="10" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1031,7 +1061,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
+<tr data-index="11" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1044,7 +1074,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
+<tr data-index="12" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1057,7 +1087,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
+<tr data-index="13" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1070,7 +1100,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
+<tr data-index="14" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1083,7 +1113,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
+<tr data-index="15" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1096,7 +1126,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
+<tr data-index="16" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1109,7 +1139,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
+<tr data-index="17" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1122,7 +1152,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
+<tr data-index="18" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1135,7 +1165,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="19" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
+<tr data-index="19" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1148,7 +1178,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="20" data-listing-file-modified-sort="1770897919671" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
+<tr data-index="20" data-listing-file-modified-sort="1770899944821" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2022-WiSe</span>
 </td>
@@ -1705,11 +1735,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example for the invitation to the evaluation</span></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Dear Students,</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="at">We would like to invite you to participate in the upcoming course evaluation. Your feedback is voluntary and anonymous, so please be open and honest in your responses. Your participation helps us improve the quality of our courses, and we highly value your opinions.</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Please rest assured that your responses will remain confidential, and there is no risk of disadvantage or negative consequences for you, regardless of the feedback you provide.</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Thank you for your time and honest feedback!</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Systems</span></span>
@@ -1720,15 +1750,43 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>Order an evaluation: <span class="co">[</span><span class="ot">RZ intern</span><span class="co">](https://www.uni-bamberg.de/its/lehrevaluation/)</span>{target=_blank}</span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluation results</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Survey</span></span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>::: {#lecture-listing}</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Applicable regulations</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Evaluation der Lehre (§5 and §6)</span><span class="co">](https://www.uni-bamberg.de/fileadmin/www.abt-studium/Rechtsvorschriften/1Organisation/Evaluation%20Lehre%20Studium/180305-O-Sicherung-Qualitaet-Lehre-Studium.pdf)</span>{target=_blank}</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Overview: Goals, procedure, data protection etc.</span><span class="co">](https://www.uni-bamberg.de/qm/evaluation/lehrveranstaltungsevaluation/schriftliche-lehrveranstaltungsevaluation/)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>**The Lecturer and Your Course**</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The lecturer's competence / expertise in the subject area.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The lecturer's teaching style (rhetorical skills, methods, etc.).</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The lecturer's accessibility and approachability.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The structure of the course.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The materials provided by the lecturer (scripts, slides etc.).</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The overall quality of the course.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>**Your Spent Workload**</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Average amount of time (assignments &amp; self-study) needed for 1 academic hour (45 minutes):</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Study time generally needed for this course compared to the indicated workload (i.e. in the module description):</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>**General Aspects of Your Course**</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The overall course level was... (extremely hard &lt;-&gt; extremely easy)</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The relevance of the course was...</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The atmosphere in class (discussion, cooperation etc.) was...</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The overall organisation of the course was...</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>**Your Comments and Suggestions**</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In the course with <span class="co">[</span><span class="ot">lecturer</span><span class="co">]</span>, I especially liked...</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For the course with <span class="co">[</span><span class="ot">lecturer</span><span class="co">]</span>, I suggest the following changes...</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluation results</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>::: {#lecture-listing}</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Applicable regulations</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Evaluation der Lehre (§5 and §6)</span><span class="co">](https://www.uni-bamberg.de/fileadmin/www.abt-studium/Rechtsvorschriften/1Organisation/Evaluation%20Lehre%20Studium/180305-O-Sicherung-Qualitaet-Lehre-Studium.pdf)</span>{target=_blank}</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Overview: Goals, procedure, data protection etc.</span><span class="co">](https://www.uni-bamberg.de/qm/evaluation/lehrveranstaltungsevaluation/schriftliche-lehrveranstaltungsevaluation/)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
