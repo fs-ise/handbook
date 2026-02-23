@@ -153,9 +153,9 @@ def update_software_versions(records, releases):
     return changed
 
 
-def append_news_entry(path: Path,
-                      new_pubs: List[tuple[str, dict]],
-                      software_updates: List[ReleaseInfo]):
+def prepend_news_entry(path: Path,
+                       new_pubs: List[tuple[str, dict]],
+                       software_updates: List[ReleaseInfo]):
 
     if not new_pubs and not software_updates:
         return
@@ -207,8 +207,31 @@ def append_news_entry(path: Path,
             elif rel.release_notes_url:
                 lines.append(f"\n  Release notes: {rel.release_notes_url}\n\n")
 
-    with path.open("a", encoding="utf-8") as f:
-        f.writelines(lines)
+    existing = path.read_text(encoding="utf-8")
+
+    if existing.startswith("---\n"):
+        closing = existing.find("\n---\n", 4)
+        if closing != -1:
+            header_end = closing + len("\n---\n")
+            header = existing[:header_end]
+            body = existing[header_end:].lstrip("\n")
+        else:
+            header = ""
+            body = existing.lstrip("\n")
+    else:
+        header = ""
+        body = existing.lstrip("\n")
+
+    new_block = "".join(lines).strip("\n")
+
+    updated = ""
+    if header:
+        updated += header + "\n"
+    updated += new_block + "\n"
+    if body:
+        updated += "\n" + body
+
+    path.write_text(updated, encoding="utf-8")
 
 
 # ---------------------------------------------------------------------
@@ -278,7 +301,7 @@ def main():
     # -------------------------------------------------
     # Write news + update state
     # -------------------------------------------------
-    append_news_entry(NEWS_QMD, new_pubs, software_updates)
+    prepend_news_entry(NEWS_QMD, new_pubs, software_updates)
 
     today = utc_date_iso()
 
@@ -287,7 +310,7 @@ def main():
 
     if software_updates or new_pubs:
         colrev.writer.write_utils.write_file(records, filename=str(REFERENCES_BIB))
-        print("[OK] references.bib updated and news appended.")
+        print("[OK] references.bib updated and news updated.")
     else:
         print("[OK] No changes detected.")
 
