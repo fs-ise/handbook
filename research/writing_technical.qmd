@@ -50,7 +50,7 @@ The paper template creates the following files (additional [files for the analys
 │                    and run the analyses (if a Makefile exists in the analysis
 │                    directory)
 ├── Dockerfile    <- Describes the Pandoc container for building the paper
-│                    (called by the Makefile)  
+│                    (called by the Makefile)
 ├── literature    <- Directory containing literature summaries for Obsidian
 ├── figures       <- Directory containing all conceptual figures
 ├── output        <- Directory containing all output, such as data plots and
@@ -80,7 +80,7 @@ Option 1: Create a new repository
 git init
 quarto use template fs-ise/quarto-template-paper
 # change title etc.
-# git add . 
+# git add .
 # git commit ...
 # etc.
 # git remote add origin https://github.com/....
@@ -220,15 +220,17 @@ Literature summaries for each paper are stored in Obsidian format in the `litera
 
 Citing allows us to make the results of others understandable and give proper recognition to the authors.
 There are two main reasons why we cite: firstly, to respect copyrighted works, and secondly, to adhere to the principles of good scientific practice by appropriately acknowledging the contributions of others.
-The following examples use Markdown syntax (used by Pandoc converters and Quarto).
 
+To lookup metadata, online tools exist: [BibGuru](https://app.bibguru.com/p/5b28865e-1e58-451b-a00f-cd0753e99c96){target=_blank} and [ISBN-lookup](https://openlibrary.org/api/books?bibkeys=ISBN:0393038912&format=json&jscmd=data){target=_blank}.
+
+The following examples use Markdown syntax (used by Pandoc converters and Quarto).
 The syntax is based on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} (see [CSL](https://citationstyles.org/){target=_blank}).
 Further information on the [citation syntax](https://pandoc.org/MANUAL.html#citation-syntax){target=_blank} is available in the Pandoc manual.
 
 To include citations:
 
 - Add them to the [references](#bib-file).
-- [Cite](#citing) them in the text, and 
+- [Cite](#citing) them in the text, and
 - Generate the [bibliography](#bibliography).
 
 #### References (BibTeX file){#bib-file}
@@ -327,9 +329,9 @@ For fitness trackers, "measures of sleep quality are inaccurate" [@SmithEtAl2006
 When rendered with Quarto and the APA citation style, this will be displayed as:
 
 > Fitness trackers were found to have mixed effects on sedentary behavior (Smith et al. 2006).
-> 
+>
 > Smith et al. (2006) analyzed the effectiveness of fitness trackers.
-> 
+>
 > For fitness trackers, "measures of sleep quality are inaccurate" (Smith et al. 2006, p. 111).
 
 ::: {.callout-note title="Formatting guidelines"}
