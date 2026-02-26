@@ -78,9 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bcb25182caae26147be93c822f4adeea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-483d0d55dddee7a855ad9e55bc84489d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-bcb25182caae26147be93c822f4adeea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0a28314302bec3991d155153bdd8f4e8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-feed8bbe4a698d8a4d50a41e03655ea4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0a28314302bec3991d155153bdd8f4e8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -111,15 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -144,15 +144,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -519,6 +519,12 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/systems_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/handbook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Handbook</span></a>
   </div>
@@ -531,8 +537,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/systems_overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Systems</span></a>
+  <a href="../management/software.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Software overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -676,6 +682,12 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
    
   <ul>
   <li><a href="#checklist-for-agendas" id="toc-checklist-for-agendas" class="nav-link active" data-scroll-target="#checklist-for-agendas">Checklist for agendas</a></li>
+  <li><a href="#how-we-use-the-agenda-in-meetings" id="toc-how-we-use-the-agenda-in-meetings" class="nav-link" data-scroll-target="#how-we-use-the-agenda-in-meetings">How We Use the Agenda in Meetings</a>
+  <ul class="collapse">
+  <li><a href="#review-session-looking-back" id="toc-review-session-looking-back" class="nav-link" data-scroll-target="#review-session-looking-back">1. Review Session (Looking Back)</a></li>
+  <li><a href="#planning-session-looking-ahead" id="toc-planning-session-looking-ahead" class="nav-link" data-scroll-target="#planning-session-looking-ahead">2. Planning Session (Looking Ahead)</a></li>
+  <li><a href="#use-of-issues-and-links" id="toc-use-of-issues-and-links" class="nav-link" data-scroll-target="#use-of-issues-and-links">3. Use of Issues and Links</a></li>
+  </ul></li>
   <li><a href="#template" id="toc-template" class="nav-link" data-scroll-target="#template">Template</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
@@ -721,12 +733,9 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="make-the-agenda-your-own" class="level2">
 <h2 class="anchored" data-anchor-id="make-the-agenda-your-own">1. Make the agenda your own</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Keep in mind: the agenda will remain a private repository, shared between you and your supervisor.<br>
-</label></li>
-<li><label><input type="checkbox">Treat the agenda as a shared but informal working document (no perfection needed).<br>
-</label></li>
-<li><label><input type="checkbox">Adapt the structure to your personal workflow.<br>
-</label></li>
+<li><label><input type="checkbox">Keep in mind: the agenda will remain a private repository, shared between you and your supervisor.</label></li>
+<li><label><input type="checkbox">Treat the agenda as a shared but informal working document (no perfection needed).</label></li>
+<li><label><input type="checkbox">Adapt the structure to your personal workflow.</label></li>
 <li><label><input type="checkbox">Use it regularly as your primary planning resource.</label></li>
 </ul>
 <hr>
@@ -734,18 +743,13 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="update-the-agenda-regularly" class="level2">
 <h2 class="anchored" data-anchor-id="update-the-agenda-regularly">2. Update the agenda regularly</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Define and revisit shared goals (<a href="TODO">objectives and key results (OKR)</a>) together.<br>
-</label></li>
-<li><label><input type="checkbox">Maintain a list of major ongoing projects.<br>
-</label></li>
-<li><label><input type="checkbox">Keep a running “Items to Discuss” section.<br>
-</label></li>
+<li><label><input type="checkbox">Define and revisit shared goals (<a href="TODO">objectives and key results (OKR)</a>) together.</label></li>
+<li><label><input type="checkbox">Maintain a list of major ongoing projects.</label></li>
+<li><label><input type="checkbox">Keep a running “Items to Discuss” section.</label></li>
 <li><label><input type="checkbox">Maintain a weekly task list:</label>
 <ul class="task-list">
-<li><label><input type="checkbox">Check off completed items.<br>
-</label></li>
-<li><label><input type="checkbox">Copy unfinished items to the next week.<br>
-</label></li>
+<li><label><input type="checkbox">Check off completed items.</label></li>
+<li><label><input type="checkbox">Copy unfinished items to the next week.</label></li>
 </ul></li>
 <li><label><input type="checkbox">Share a link to meeting notes before the meeting.</label></li>
 <li><label><input type="checkbox">Add meeting notes directly after each meeting.</label></li>
@@ -755,14 +759,10 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="create-a-clear-overview" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-clear-overview">3. Create a clear overview</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Keep orientation easy: structure before detail.<br>
-</label></li>
-<li><label><input type="checkbox">Use folders and multiple documents where helpful.<br>
-</label></li>
-<li><label><input type="checkbox">Add internal links between sections.<br>
-</label></li>
-<li><label><input type="checkbox">Link to relevant external resources (repos, docs, papers, courses).<br>
-</label></li>
+<li><label><input type="checkbox">Keep orientation easy: structure before detail.</label></li>
+<li><label><input type="checkbox">Use folders and multiple documents where helpful.</label></li>
+<li><label><input type="checkbox">Add internal links between sections.</label></li>
+<li><label><input type="checkbox">Link to relevant external resources (repos, docs, papers, courses).</label></li>
 <li><label><input type="checkbox">Ensure the agenda can be understood quickly by all participants.</label></li>
 </ul>
 <hr>
@@ -770,14 +770,10 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="maintain-a-timeline-and-planning-view" class="level2">
 <h2 class="anchored" data-anchor-id="maintain-a-timeline-and-planning-view">4. Maintain a timeline and planning view</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Create Mermaid timelines (Gantt charts).<br>
-</label></li>
-<li><label><input type="checkbox">Track contracts and important deadlines.<br>
-</label></li>
-<li><label><input type="checkbox">Keep an overview of workload / hours.<br>
-</label></li>
-<li><label><input type="checkbox">Plan development goals (topics, methods, skills).<br>
-</label></li>
+<li><label><input type="checkbox">Create Mermaid timelines (Gantt charts).</label></li>
+<li><label><input type="checkbox">Track contracts and important deadlines.</label></li>
+<li><label><input type="checkbox">Keep an overview of workload / hours.</label></li>
+<li><label><input type="checkbox">Plan development goals (topics, methods, skills).</label></li>
 <li><label><input type="checkbox">Map current and future projects over time.</label></li>
 </ul>
 <hr>
@@ -785,12 +781,9 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="anticipate-and-track-key-periods" class="level2">
 <h2 class="anchored" data-anchor-id="anticipate-and-track-key-periods">5. Anticipate and track key periods</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Note upcoming vacations.<br>
-</label></li>
-<li><label><input type="checkbox">Mark exam phases or teaching peaks.<br>
-</label></li>
-<li><label><input type="checkbox">Maintain “waiting-for” items (e.g., reviews, decisions, responses).<br>
-</label></li>
+<li><label><input type="checkbox">Note upcoming vacations.</label></li>
+<li><label><input type="checkbox">Mark exam phases or teaching peaks.</label></li>
+<li><label><input type="checkbox">Maintain “waiting-for” items (e.g., reviews, decisions, responses).</label></li>
 <li><label><input type="checkbox">Maintain “upcoming” items (projects, papers, milestones).</label></li>
 </ul>
 <hr>
@@ -798,10 +791,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="document-interests-and-ideas" class="level2">
 <h2 class="anchored" data-anchor-id="document-interests-and-ideas">6. Document interests and ideas</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Keep a section for research and teaching interests.<br>
-</label></li>
-<li><label><input type="checkbox">Collect ideas for new projects.<br>
-</label></li>
+<li><label><input type="checkbox">Keep a section for research and teaching interests.</label></li>
+<li><label><input type="checkbox">Collect ideas for new projects.</label></li>
 <li><label><input type="checkbox">Use this as input for strategic discussions about next steps.</label></li>
 </ul>
 <hr>
@@ -809,19 +800,53 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="document-and-celebrate-success" class="level2">
 <h2 class="anchored" data-anchor-id="document-and-celebrate-success">7. Document and celebrate success</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Record accepted/published papers.<br>
-</label></li>
-<li><label><input type="checkbox">Add positive student feedback.<br>
-</label></li>
-<li><label><input type="checkbox">Note milestones and accomplishments.<br>
-</label></li>
-<li><label><input type="checkbox">Use this as a basis for CV building and reference letters.<br>
-</label></li>
+<li><label><input type="checkbox">Record accepted/published papers.</label></li>
+<li><label><input type="checkbox">Add positive student feedback.</label></li>
+<li><label><input type="checkbox">Note milestones and accomplishments.</label></li>
+<li><label><input type="checkbox">Use this as a basis for CV building and reference letters.</label></li>
 <li><label><input type="checkbox">Regularly reflect on progress to stay motivated.</label></li>
 </ul>
 </section>
 </div>
 </div>
+</section>
+<section id="how-we-use-the-agenda-in-meetings" class="level2">
+<h2 class="anchored" data-anchor-id="how-we-use-the-agenda-in-meetings">How We Use the Agenda in Meetings</h2>
+<section id="review-session-looking-back" class="level3">
+<h3 class="anchored" data-anchor-id="review-session-looking-back">1. Review Session (Looking Back)</h3>
+<p>At the beginning of each meeting, we:</p>
+<ul>
+<li>Review the weekly task list</li>
+<li>Check off completed items</li>
+<li>Reflect briefly on progress toward shared objectives</li>
+<li>Discuss blockers or “waiting-for” items</li>
+<li>Add short notes directly into the repository</li>
+</ul>
+<p>The agenda is updated live during the meeting.</p>
+</section>
+<section id="planning-session-looking-ahead" class="level3">
+<h3 class="anchored" data-anchor-id="planning-session-looking-ahead">2. Planning Session (Looking Ahead)</h3>
+<p>In the second part of the meeting, we:</p>
+<ul>
+<li>Define or adjust objectives together</li>
+<li>Break down larger goals into concrete next steps</li>
+<li>Clarify responsibilities and expectations</li>
+<li>Identify priorities for the coming week</li>
+<li>Add new tasks directly to the weekly section</li>
+</ul>
+<p>This ensures alignment and clear next actions.</p>
+</section>
+<section id="use-of-issues-and-links" class="level3">
+<h3 class="anchored" data-anchor-id="use-of-issues-and-links">3. Use of Issues and Links</h3>
+<p>To avoid duplication and keep information structured:</p>
+<ul>
+<li>Use GitHub issues for well-defined tasks and discussions</li>
+<li>Link issues directly in the agenda</li>
+<li>Link to relevant repositories, documents, datasets, or papers</li>
+<li>Use the agenda as a coordination hub — not as a storage location</li>
+</ul>
+<p>The agenda serves as a shared navigation layer across distributed work.</p>
+</section>
 </section>
 <section id="template" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="template">Template</h2>
@@ -1361,105 +1386,142 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Make the agenda your own</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep in mind: the agenda will remain a private repository, shared between you and your supervisor.  </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Treat the agenda as a shared but informal working document (no perfection needed).  </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Adapt the structure to your personal workflow.  </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use it regularly as your primary planning resource.  </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep in mind: the agenda will remain a private repository, shared between you and your supervisor.</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Treat the agenda as a shared but informal working document (no perfection needed).</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Adapt the structure to your personal workflow.</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use it regularly as your primary planning resource.</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Update the agenda regularly</span></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Define and revisit shared goals (<span class="co">[</span><span class="ot">objectives and key results (OKR)</span><span class="co">](TODO)</span>) together.  </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain a list of major ongoing projects.  </span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep a running “Items to Discuss” section.  </span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain a weekly task list:  </span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Check off completed items.  </span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Copy unfinished items to the next week.  </span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Define and revisit shared goals (<span class="co">[</span><span class="ot">objectives and key results (OKR)</span><span class="co">](TODO)</span>) together.</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain a list of major ongoing projects.</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep a running “Items to Discuss” section.</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain a weekly task list:</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Check off completed items.</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="va">[ ]</span> Copy unfinished items to the next week.</span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Share a link to meeting notes before the meeting.</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add meeting notes directly after each meeting.  </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add meeting notes directly after each meeting.</span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Create a clear overview</span></span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep orientation easy: structure before detail.  </span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use folders and multiple documents where helpful.  </span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add internal links between sections.  </span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Link to relevant external resources (repos, docs, papers, courses).  </span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Ensure the agenda can be understood quickly by all participants.  </span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep orientation easy: structure before detail.</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use folders and multiple documents where helpful.</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add internal links between sections.</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Link to relevant external resources (repos, docs, papers, courses).</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Ensure the agenda can be understood quickly by all participants.</span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Maintain a timeline and planning view</span></span>
 <span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create Mermaid timelines (Gantt charts).  </span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Track contracts and important deadlines.  </span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep an overview of workload / hours.  </span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Plan development goals (topics, methods, skills).  </span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Map current and future projects over time.  </span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create Mermaid timelines (Gantt charts).</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Track contracts and important deadlines.</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep an overview of workload / hours.</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Plan development goals (topics, methods, skills).</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Map current and future projects over time.</span>
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Anticipate and track key periods</span></span>
 <span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Note upcoming vacations.  </span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Mark exam phases or teaching peaks.  </span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain “waiting-for” items (e.g., reviews, decisions, responses).  </span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain “upcoming” items (projects, papers, milestones).  </span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Note upcoming vacations.</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Mark exam phases or teaching peaks.</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain “waiting-for” items (e.g., reviews, decisions, responses).</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Maintain “upcoming” items (projects, papers, milestones).</span>
 <span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Document interests and ideas</span></span>
 <span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep a section for research and teaching interests.  </span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Collect ideas for new projects.  </span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use this as input for strategic discussions about next steps.  </span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Keep a section for research and teaching interests.</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Collect ideas for new projects.</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use this as input for strategic discussions about next steps.</span>
 <span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. Document and celebrate success</span></span>
 <span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Record accepted/published papers.  </span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add positive student feedback.  </span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Note milestones and accomplishments.  </span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use this as a basis for CV building and reference letters.  </span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Regularly reflect on progress to stay motivated.  </span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Record accepted/published papers.</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add positive student feedback.</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Note milestones and accomplishments.</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use this as a basis for CV building and reference letters.</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Regularly reflect on progress to stay motivated.</span>
 <span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Template</span></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>Clone the <span class="co">[</span><span class="ot">agenda template</span><span class="co">](https://github.com/fs-ise/agenda-template)</span>{target=_blank} repository.</span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="fu"># Agenda: Person A -- Person B</span></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>Regular meeting:</span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Time: ...</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Location: ...</span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Items to discuss</span></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Item</span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Log</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="fu">### CW 1</span></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meeting note</span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## How We Use the Agenda in Meetings</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Review Session (Looking Back)</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>At the beginning of each meeting, we:</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review the weekly task list</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check off completed items</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reflect briefly on progress toward shared objectives</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discuss blockers or “waiting-for” items</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add short notes directly into the repository</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>The agenda is updated live during the meeting.</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Planning Session (Looking Ahead)</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>In the second part of the meeting, we:</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Define or adjust objectives together</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Break down larger goals into concrete next steps</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Clarify responsibilities and expectations</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Identify priorities for the coming week</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add new tasks directly to the weekly section</span>
 <span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="in">::: {.aside}</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="in">TBD/TODO</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="in">:::</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>This ensures alignment and clear next actions.</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Use of Issues and Links</span></span>
 <span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="in">## Resources</span></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="in">- [Agenda: Example GitLab/Rayana](https://gitlab.com/rayana/plan/){target=_blank}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>To avoid duplication and keep information structured:</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use GitHub issues for well-defined tasks and discussions</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Link issues directly in the agenda</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Link to relevant repositories, documents, datasets, or papers</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use the agenda as a coordination hub — not as a storage location</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>The agenda serves as a shared navigation layer across distributed work.</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="fu">## Template</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>Clone the <span class="co">[</span><span class="ot">agenda template</span><span class="co">](https://github.com/fs-ise/agenda-template)</span>{target=_blank} repository.</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="in">```Markdown</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="fu"># Agenda: Person A -- Person B</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>Regular meeting:</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Time: ...</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Location: ...</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="fu">## Items to discuss</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Item</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="fu">## Log</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="fu">### CW 1</span></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meeting note</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a><span class="in">::: {.aside}</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="in">TBD/TODO</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="in">:::</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="in">## Resources</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="in">- [Agenda: Example GitLab/Rayana](https://gitlab.com/rayana/plan/){target=_blank}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
