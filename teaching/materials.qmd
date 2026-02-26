@@ -55,13 +55,6 @@ A teaching repository contains
 
 For `quarto publish gh-pages` : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).
 
-### Adding extensions
-
-```sh
-docker compose run --rm quarto quarto add gadenbuie/countdown/quarto
-docker compose run --rm quarto quarto add martinomagnifico/quarto-simplemenu
-```
-
 ## Slides
 
 Template is available [here](https://github.com/fs-ise/fs-ise-presentation){target=_blank} (see [tutorial](https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html){target=_blank})
@@ -219,11 +212,55 @@ Shortcuts:
 - b
 - d
 
+::: {.callout-note title="Slide preparation" collapse=true}
+
 Convert PowerPoint to quarto:
 
 ```sh
 pptx2md "slides.pptx" --output "slides_with_notes.qmd" --enable-slides --qmd --image-dir "images"
 ```
+
+Prompt
+
+```Markdown
+Create Reveal.js slides with a title page, simple menu navigation, and support for sections, columns, asides, and centered images. Use this slide formatting structure:
+
+---
+title: "<TITLE>"
+author: "Prof. Dr. Gerit Wagner"
+format:
+  revealjs:
+    section-divs: true
+    center: false
+    title-slide-attributes:
+      data-state: "hide-menubar"
+    simplemenu:
+      barhtml:
+        header: ""
+        footer: "<div class='menubar'><ul class='menu'></ul><div class='slide-number'></div></div>"
+      scale: 0.67
+revealjs-plugins:
+  - simplemenu
+---
+
+Use:
+
+# for main sections (stack navigation, with {data-stack-name="..."} where needed)
+
+## for slides within a section
+
+::: columns / ::: column for side-by-side layouts
+
+::: aside for sources or small side notes
+
+![](path){fig-align="center" width="X%"} for centered visuals
+
+Fenced code blocks (e.g., Python) for figures generated with code
+
+Keep the style clean, structured, and concise, similar to academic lecture slides on analytics and big data.
+```
+
+:::
 
 ## Notebooks
 
