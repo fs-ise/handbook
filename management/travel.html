@@ -114,6 +114,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -134,17 +145,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -714,7 +714,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 
 <section id="request" class="level2">
 <h2 class="anchored" data-anchor-id="request">Request</h2>
-<p><a href="https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&amp;route=shorturl" class="btn btn-lg btn-success btn-center" target="_blank" rel="noopener">Schedule feedback session</a></p>
+<p><a href="https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&amp;route=shorturl" class="btn btn-lg btn-success btn-center" target="_blank" rel="noopener">Request form</a></p>
 </section>
 <section id="book" class="level2">
 <h2 class="anchored" data-anchor-id="book">Book</h2>
@@ -1290,7 +1290,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Request</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Schedule feedback session</span><span class="co">](https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&amp;route=shorturl)</span>{.btn .btn-lg .btn-success .btn-center target="_blank" rel="noopener"}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Request form</span><span class="co">](https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&amp;route=shorturl)</span>{.btn .btn-lg .btn-success .btn-center target="_blank" rel="noopener"}</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Book</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
