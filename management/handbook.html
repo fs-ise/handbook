@@ -136,17 +136,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -156,6 +145,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -715,16 +715,11 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 <p>This handbook is designed to support collaboration and effective learning in our lab. It reduces friction and helps us focus on the work that matters most. Key advantages include:</p>
 <ul>
-<li><strong>Reduced search and communication overhead</strong>: Information becomes easily discoverable instead of relying on individual memory or repeated explanations.<br>
-</li>
-<li><strong>Faster onboarding</strong>: Students, assistants, and new collaborators can quickly understand expectations, tools, and workflows.<br>
-</li>
-<li><strong>Standardization and clarity</strong>: Consistent processes and formatting support a reliable, high-quality way of working.<br>
-</li>
-<li><strong>Support for stigmergic collaboration</strong>: Like in open-source projects, visible contributions encourage further improvements and self-organizing progress over time.<br>
-</li>
-<li><strong>Sustainable knowledge retention</strong>: Guidance remains accessible even when responsibilities shift or team members move on.<br>
-</li>
+<li><strong>Reduced search and communication overhead</strong>: Information becomes easily discoverable instead of relying on individual memory or repeated explanations.</li>
+<li><strong>Faster onboarding</strong>: Students, assistants, and new collaborators can quickly understand expectations, tools, and workflows.</li>
+<li><strong>Standardization and clarity</strong>: Consistent processes and formatting support a reliable, high-quality way of working.</li>
+<li><strong>Support for stigmergic collaboration</strong>: Like in open-source projects, visible contributions encourage further improvements and self-organizing progress over time.</li>
+<li><strong>Sustainable knowledge retention</strong>: Guidance remains accessible even when responsibilities shift or team members move on.</li>
 <li><strong>Shared learning across labs</strong>: We adopt proven practices from others and offer our own experiences openly, strengthening the broader community.</li>
 </ul>
 <blockquote class="blockquote">
@@ -941,7 +936,7 @@ Important
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Comments can be used to add further explanations, links to references/resources, or to keep parts of the paper that were shortened --&gt;</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>An in-text citation: @Webster2002 (the BibTeX entry must be added to data/references.bib and the YAML header updated accordingly). </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>An in-text citation: @Webster2002 (the BibTeX entry must be added to data/references.bib and the YAML header updated accordingly).</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Callouts (colored boxes, as illustrated below):</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
@@ -1040,6 +1035,7 @@ Important
 <li><a href="https://www.sciencedirect.com/science/article/pii/S0301472X25005545" target="_blank">Building a transparent and functional laboratory culture: Guidelines for creating a laboratory handbook for principal investigators</a></li>
 <li><a href="https://robjhyndman.com/" target="_blank">Hyndman</a>, <a href="https://www.andrewheiss.com/" target="_blank">Heiss</a>, <a href="https://mickael.canouil.fr/" target="_blank">Canouil</a></li>
 </ul>
+<p>See <span class="citation" data-cites="Rhymer2023">(<a href="#ref-Rhymer2023" role="doc-biblioref"><strong>Rhymer2023?</strong></a>)</span> on document-mediated, open, and asynchronous organizing practices.</p>
 
 
 <!-- -->
@@ -1544,14 +1540,14 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>It reduces friction and helps us focus on the work that matters most.</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Key advantages include:</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Reduced search and communication overhead**: Information becomes easily discoverable instead of relying on individual memory or repeated explanations.  </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Faster onboarding**: Students, assistants, and new collaborators can quickly understand expectations, tools, and workflows.  </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Standardization and clarity**: Consistent processes and formatting support a reliable, high-quality way of working.  </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Support for stigmergic collaboration**: Like in open-source projects, visible contributions encourage further improvements and self-organizing progress over time.  </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sustainable knowledge retention**: Guidance remains accessible even when responsibilities shift or team members move on.  </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Shared learning across labs**: We adopt proven practices from others and offer our own experiences openly, strengthening the broader community.  </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Reduced search and communication overhead**: Information becomes easily discoverable instead of relying on individual memory or repeated explanations.</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Faster onboarding**: Students, assistants, and new collaborators can quickly understand expectations, tools, and workflows.</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Standardization and clarity**: Consistent processes and formatting support a reliable, high-quality way of working.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Support for stigmergic collaboration**: Like in open-source projects, visible contributions encourage further improvements and self-organizing progress over time.</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sustainable knowledge retention**: Guidance remains accessible even when responsibilities shift or team members move on.</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Shared learning across labs**: We adopt proven practices from others and offer our own experiences openly, strengthening the broader community.</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; “Civilization advances by increasing the number of things we can do without thinking about them.” — Alfred North Whitehead</span>  </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; “Civilization advances by increasing the number of things we can do without thinking about them.” — Alfred North Whitehead</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>By documenting what works, we make everyday tasks simpler and leave more room for creativity, collaboration, and discovery.</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
@@ -1689,7 +1685,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Comments can be used to add further explanations, links to references/resources, or to keep parts of the paper that were shortened --&gt;</span></span>
 <span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>An in-text citation: @Webster2002 (the BibTeX entry must be added to data/references.bib and the YAML header updated accordingly). </span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>An in-text citation: @Webster2002 (the BibTeX entry must be added to data/references.bib and the YAML header updated accordingly).</span>
 <span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>Callouts (colored boxes, as illustrated below):</span>
 <span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a></span>
@@ -1748,6 +1744,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Research culture: Why every lab needs a handbook</span><span class="co">](https://elifesciences.org/articles/88853)</span>{target=_blank}</span>
 <span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Building a transparent and functional laboratory culture: Guidelines for creating a laboratory handbook for principal investigators</span><span class="co">](https://www.sciencedirect.com/science/article/pii/S0301472X25005545)</span>{target=_blank}</span>
 <span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hyndman</span><span class="co">](https://robjhyndman.com/)</span>{target=_blank}, <span class="co">[</span><span class="ot">Heiss</span><span class="co">](https://www.andrewheiss.com/)</span>{target=_blank}, <span class="co">[</span><span class="ot">Canouil</span><span class="co">](https://mickael.canouil.fr/)</span>{target=_blank}</span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>See @Rhymer2023 on document-mediated, open, and asynchronous organizing practices.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
