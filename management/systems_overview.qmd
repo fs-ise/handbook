@@ -1,35 +1,148 @@
 ---
 title: "System overview"
-transition_status: "toupdate"
+transition_status: "updated"
 transition_comment: "update"
 ---
 
-::: callout-note
-This section is marked as "toupdate": completely update
+## Overview
 
-TODO:
+```{mermaid}
+graph LR
 
-- Include the system overview from https://chatgpt.com/c/699da1a7-6648-8387-b9b8-ea1dc8c16ef5
+    subgraph Nextcloud["Nextcloud"]
+        Archive["Archive"]
+        Grades["Grades"]
+    end
 
-- TBD: include machine setup? https://github.com/fs-ise/workstation-setup
+    subgraph Public_Git_Sphere["GitHub"]
 
-- Content production systems (internal, but also pulic and collaborative): Quarto (website, paper, presentation, thesis) - with overview of templates (highlighting git/pandoc/markdown choice)
-- Administration systems (grades, nextcloud, ...)
-- Collaboration systems (meetings, ...)
-- Explicitly discuss tradeoff: git means no Zotero, no Word... But: it also means immediate involvement of new team members, algorithms (LLMs), and external contributors
-:::
+        %% Coordination Layer
+        subgraph Coordination_Layer
+            Handbook["Public Handbook"]
+            Agenda["Individual Agenda Repos"]
+        end
 
-Welcome to the chapter on IT systems.
+        %% Infrastructure Layer
+        subgraph Infrastructure_Layer
+            Workstation["Workstation Setup<br>(Infrastructure-as-Code)"]
+        end
+        %% Automation Layer
+        subgraph Automation_Layer
+            LabBot["Lab Bot"]
+        end
+        %% Knowledge Layer
+        subgraph Knowledge_Layer
+            ResearchHub["Research Hub"]
+            TeachingHub["Teaching Hub"]
+        end
+
+        %% Execution Layer
+        subgraph Execution_Layer
+            PaperTemplate["Paper Template"]
+            PaperProjects["Paper Repositories"]
+            LectureTemplate["Lecture Template"]
+            LectureRepos["Lecture Repositories"]
+            ThesisTemplate["Thesis Template"]
+        end
+
+    end
+
+    %% Core relationships
+
+    Handbook --> ResearchHub
+    Handbook --> TeachingHub
+    Handbook --> PaperTemplate
+    Handbook --> LectureTemplate
+    Handbook --> Agenda
+    Handbook --> Nextcloud
+
+    ResearchHub --> PaperProjects
+    TeachingHub --> LectureRepos
+
+    PaperTemplate --> PaperProjects
+    LectureTemplate --> LectureRepos
+    ThesisTemplate --> PaperProjects
+```
+
+
+## Coordination Layer
+
+**Purpose:** Orientation, transparency, and alignment
+
+**Includes:**
+
+* Public [handbook](https://fs-ise.github.io/handbook/){target=_blank} (see [Editing guidelines](/management/handbook.html))
+* Individual Agenda Repositories, see [agendas](agendas.html).
+
+This layer connects individual work with collective standards and external communication. It provides clarity on processes, responsibilities, priorities, and strategic direction. It aligns personal goals with lab-wide objectives and ensures transparency toward stakeholders.
+
+## Infrastructure Layer
+
+**Purpose:** Reproducibility and standardization
+
+**Includes:**
+
+* [workstation-setup](https://github.com/fs-ise/workstation-setup) (Infrastructure-as-Code)
+* Defined technology stack
+
+This layer ensures consistent development environments and reproducible workflows. By codifying infrastructure, onboarding becomes efficient and technical fragmentation is minimized. It connects tools to practice through automation and standardization.
+
+## Knowledge Layer
+
+**Purpose:** Institutional memory and knowledge synthesis
+
+**Includes:**
+
+* Research Hub
+* Teaching Hub
+
+This layer organizes accumulated knowledge across projects. It preserves methods, literature syntheses, templates, and best practices. It connects past and ongoing work, enabling reuse, cumulative learning, and cross-project coherence.
+
+## Execution Layer
+
+**Purpose:** Project realization and output production
+
+**Includes:**
+
+* Paper Template → Paper Repositories
+* Lecture Template → Lecture Repositories
+* Thesis Template
+
+This layer transforms knowledge into deliverables. It structures collaborative writing, course development, and thesis supervision. Templates ensure consistency, while project repositories enable modular and scalable execution.
+
+## Automation Layer
+
+**Purpose:** Process reliability and reduced coordination overhead
+
+**Includes:**
+
+* Lab Bot
+* Repository automation
+* Quality checks and synchronization scripts
+
+This layer maintains flow and enforces standards. Automation reduces manual coordination, supports quality assurance, and ensures that repositories remain aligned with lab principles.
+
+## Confidential & Archival Layer (Private Sphere)
+
+**Purpose:** Security, privacy, and long-term storage
+
+**Includes:**
+
+* Nextcloud
+
+This layer stores sensitive research data, administrative documents, and non-public materials. It complements the public Git-based ecosystem by providing controlled access and archival stability.
+
+System | Description |
+---|---|
+[Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/){target=_blank}| - [Clients](https://nextcloud.com/de/install/#install-clients){target=_blank} (use *Nextcloud Files*)<br>- Contains all **confidential** materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).<br>- "Anmelden", URL: ``https://nc-2272638881871040784.nextcloud-ionos.com/``, give access in Browser (pop-up), accept default settings<br>- Our preferred choice for confidential data, and binary/large files<br>- **Collaborative editing of a shared document (without login)**: create md-file and public link (can edit) |
+
+
+## Rationales
+
 <!--
+Welcome to the chapter on IT systems.
 This guide is intended to offer you with a useful overview on the many IT technologies and tools that support the administrative processes and lead you to the right places to learn more about them.
 This manual will serve as resource for navigating the digital environment, from learning platforms to communication tools, data analysis software to writing tools.
--->
-We prefer open-source tools and open-data formats:
-
-- **[Markdown](https://www.markdownguide.org/){target=_blank}**, a markup language, which allows us to creating formatted documents, papers, websites, presentations using plain text (formatting such as headings, lists, bold, italics, and links). It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank}. Citations can be included via the [CSL](https://citationstyles.org/){target=_blank} project.
-- **[Git](https://git-scm.com/){target=_blank}**, a distributed version control system to collaborate on software development projects, data analyses, paper writing, and teaching materials. It allows users to work on the same file, to track changes, to merge different versions or branches, and revert to any previous state.
-
-::: {.callout-note title="Markdown" collapse=true}
 **[Markdown](https://www.markdownguide.org/){target=_blank}** is our preferred open-data format for the documentation (website), for writing papers and theses, managing knowledge, and creating slides. It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank}.
 
 ```{mermaid}
@@ -38,10 +151,13 @@ graph LR
     C[Edit Markdown Slides on GitHub] -->|triggers:GitHub Actions| D[HTML slides]
     E[Edit Markdown Paper on GitHub] -->|triggers:GitHub Actions| F[Paper PDF/DOX]
 ```
-:::
+-->
+We prefer open-source tools and open-data formats:
 
-System | Description |
----|---|
-[handbook](https://fs-ise.github.io/handbook/){target=_blank}| - Hosted on GitHub<br>- [Editing guidelines](/management/handbook.html)<br>- Distributed version control system to collaborate in software development projects, and for collaborating in writing and teaching<br>- Our preferred choice for manuscripts, and lecture material |
-[Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/){target=_blank}| - [Clients](https://nextcloud.com/de/install/#install-clients){target=_blank} (use *Nextcloud Files*)<br>- Contains all **confidential** materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).<br>- "Anmelden", URL: ``https://nc-2272638881871040784.nextcloud-ionos.com/``, give access in Browser (pop-up), accept default settings<br>- Our preferred choice for confidential data, and binary/large files<br>- **Collaborative editing of a shared document (without login)**: create md-file and public link (can edit) |
+- **[Git](https://git-scm.com/){target=_blank}**, a distributed version control system to collaborate on software development projects, data analyses, paper writing, and teaching materials.
+  It allows users to work on the same file, to track changes, to merge different versions or branches, and revert to any previous state.
+- **[Markdown](https://www.markdownguide.org/){target=_blank}**, a markup language, which allows us to creating formatted documents, papers, websites, presentations using plain text (formatting such as headings, lists, bold, italics, and links).
+  It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank} or the [Quarto](https://quarto.org/){target=_blank} ecosystem.
+  Citations can be included via the [CSL](https://citationstyles.org/){target=_blank} project.
 
+Tradeoff: Git means no Zotero, no Word... But: it also means immediate involvement of new team members, algorithms (LLMs), and external contributors
