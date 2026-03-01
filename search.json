@@ -46,7 +46,103 @@
     "href": "management/systems_overview.html",
     "title": "System overview",
     "section": "",
-    "text": "Note\n\n\n\nThis section is marked as “toupdate”: completely update\nTODO:\n\nInclude the system overview from https://chatgpt.com/c/699da1a7-6648-8387-b9b8-ea1dc8c16ef5\nTBD: include machine setup? https://github.com/fs-ise/workstation-setup\nContent production systems (internal, but also pulic and collaborative): Quarto (website, paper, presentation, thesis) - with overview of templates (highlighting git/pandoc/markdown choice)\nAdministration systems (grades, nextcloud, …)\nCollaboration systems (meetings, …)\nExplicitly discuss tradeoff: git means no Zotero, no Word… But: it also means immediate involvement of new team members, algorithms (LLMs), and external contributors\n\n\n\nWelcome to the chapter on IT systems.  We prefer open-source tools and open-data formats:\n\nMarkdown, a markup language, which allows us to creating formatted documents, papers, websites, presentations using plain text (formatting such as headings, lists, bold, italics, and links). It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using Pandoc. Citations can be included via the CSL project.\nGit, a distributed version control system to collaborate on software development projects, data analyses, paper writing, and teaching materials. It allows users to work on the same file, to track changes, to merge different versions or branches, and revert to any previous state.\n\n\n\n\n\n\n\nNoteMarkdown\n\n\n\n\n\nMarkdown is our preferred open-data format for the documentation (website), for writing papers and theses, managing knowledge, and creating slides. It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using Pandoc.\n\n\n\n\n\ngraph LR\n    A[Edit Markdown Handbook pages on GitHub] --&gt;|triggers:GitHub Actions| B[Live Website]\n    C[Edit Markdown Slides on GitHub] --&gt;|triggers:GitHub Actions| D[HTML slides]\n    E[Edit Markdown Paper on GitHub] --&gt;|triggers:GitHub Actions| F[Paper PDF/DOX]\n\n\n\n\n\n\n\n\n\n\n\n\nSystem\nDescription\n\n\n\n\nhandbook\n- Hosted on GitHub- Editing guidelines- Distributed version control system to collaborate in software development projects, and for collaborating in writing and teaching- Our preferred choice for manuscripts, and lecture material\n\n\nNextcloud\n- Clients (use Nextcloud Files)- Contains all confidential materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).- “Anmelden”, URL: https://nc-2272638881871040784.nextcloud-ionos.com/, give access in Browser (pop-up), accept default settings- Our preferred choice for confidential data, and binary/large files- Collaborative editing of a shared document (without login): create md-file and public link (can edit)",
+    "text": "graph LR\n\n    subgraph Nextcloud[\"Nextcloud\"]\n        Archive[\"Archive\"]\n        Grades[\"Grades\"]\n    end\n\n    subgraph Public_Git_Sphere[\"GitHub\"]\n\n        %% Coordination Layer\n        subgraph Coordination_Layer\n            Handbook[\"Public Handbook\"]\n            Agenda[\"Individual Agenda Repos\"]\n        end\n\n        %% Infrastructure Layer\n        subgraph Infrastructure_Layer\n            Workstation[\"Workstation Setup&lt;br&gt;(Infrastructure-as-Code)\"]\n        end\n        %% Automation Layer\n        subgraph Automation_Layer\n            LabBot[\"Lab Bot\"]\n        end\n        %% Knowledge Layer\n        subgraph Knowledge_Layer\n            ResearchHub[\"Research Hub\"]\n            TeachingHub[\"Teaching Hub\"]\n        end\n\n        %% Execution Layer\n        subgraph Execution_Layer\n            PaperTemplate[\"Paper Template\"]\n            PaperProjects[\"Paper Repositories\"]\n            LectureTemplate[\"Lecture Template\"]\n            LectureRepos[\"Lecture Repositories\"]\n            ThesisTemplate[\"Thesis Template\"]\n        end\n\n    end\n\n    %% Core relationships\n\n    Handbook --&gt; ResearchHub\n    Handbook --&gt; TeachingHub\n    Handbook --&gt; PaperTemplate\n    Handbook --&gt; LectureTemplate\n    Handbook --&gt; Agenda\n    Handbook --&gt; Nextcloud\n\n    ResearchHub --&gt; PaperProjects\n    TeachingHub --&gt; LectureRepos\n\n    PaperTemplate --&gt; PaperProjects\n    LectureTemplate --&gt; LectureRepos\n    ThesisTemplate --&gt; PaperProjects",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#overview",
+    "href": "management/systems_overview.html#overview",
+    "title": "System overview",
+    "section": "",
+    "text": "graph LR\n\n    subgraph Nextcloud[\"Nextcloud\"]\n        Archive[\"Archive\"]\n        Grades[\"Grades\"]\n    end\n\n    subgraph Public_Git_Sphere[\"GitHub\"]\n\n        %% Coordination Layer\n        subgraph Coordination_Layer\n            Handbook[\"Public Handbook\"]\n            Agenda[\"Individual Agenda Repos\"]\n        end\n\n        %% Infrastructure Layer\n        subgraph Infrastructure_Layer\n            Workstation[\"Workstation Setup&lt;br&gt;(Infrastructure-as-Code)\"]\n        end\n        %% Automation Layer\n        subgraph Automation_Layer\n            LabBot[\"Lab Bot\"]\n        end\n        %% Knowledge Layer\n        subgraph Knowledge_Layer\n            ResearchHub[\"Research Hub\"]\n            TeachingHub[\"Teaching Hub\"]\n        end\n\n        %% Execution Layer\n        subgraph Execution_Layer\n            PaperTemplate[\"Paper Template\"]\n            PaperProjects[\"Paper Repositories\"]\n            LectureTemplate[\"Lecture Template\"]\n            LectureRepos[\"Lecture Repositories\"]\n            ThesisTemplate[\"Thesis Template\"]\n        end\n\n    end\n\n    %% Core relationships\n\n    Handbook --&gt; ResearchHub\n    Handbook --&gt; TeachingHub\n    Handbook --&gt; PaperTemplate\n    Handbook --&gt; LectureTemplate\n    Handbook --&gt; Agenda\n    Handbook --&gt; Nextcloud\n\n    ResearchHub --&gt; PaperProjects\n    TeachingHub --&gt; LectureRepos\n\n    PaperTemplate --&gt; PaperProjects\n    LectureTemplate --&gt; LectureRepos\n    ThesisTemplate --&gt; PaperProjects",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#coordination-layer",
+    "href": "management/systems_overview.html#coordination-layer",
+    "title": "System overview",
+    "section": "Coordination Layer",
+    "text": "Coordination Layer\nPurpose: Orientation, transparency, and alignment\nIncludes:\n\nPublic handbook (see Editing guidelines)\nIndividual Agenda Repositories, see agendas.\n\nThis layer connects individual work with collective standards and external communication. It provides clarity on processes, responsibilities, priorities, and strategic direction. It aligns personal goals with lab-wide objectives and ensures transparency toward stakeholders.",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#infrastructure-layer",
+    "href": "management/systems_overview.html#infrastructure-layer",
+    "title": "System overview",
+    "section": "Infrastructure Layer",
+    "text": "Infrastructure Layer\nPurpose: Reproducibility and standardization\nIncludes:\n\nworkstation-setup (Infrastructure-as-Code)\nDefined technology stack\n\nThis layer ensures consistent development environments and reproducible workflows. By codifying infrastructure, onboarding becomes efficient and technical fragmentation is minimized. It connects tools to practice through automation and standardization.",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#knowledge-layer",
+    "href": "management/systems_overview.html#knowledge-layer",
+    "title": "System overview",
+    "section": "Knowledge Layer",
+    "text": "Knowledge Layer\nPurpose: Institutional memory and knowledge synthesis\nIncludes:\n\nResearch Hub\nTeaching Hub\n\nThis layer organizes accumulated knowledge across projects. It preserves methods, literature syntheses, templates, and best practices. It connects past and ongoing work, enabling reuse, cumulative learning, and cross-project coherence.",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#execution-layer",
+    "href": "management/systems_overview.html#execution-layer",
+    "title": "System overview",
+    "section": "Execution Layer",
+    "text": "Execution Layer\nPurpose: Project realization and output production\nIncludes:\n\nPaper Template → Paper Repositories\nLecture Template → Lecture Repositories\nThesis Template\n\nThis layer transforms knowledge into deliverables. It structures collaborative writing, course development, and thesis supervision. Templates ensure consistency, while project repositories enable modular and scalable execution.",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#automation-layer",
+    "href": "management/systems_overview.html#automation-layer",
+    "title": "System overview",
+    "section": "Automation Layer",
+    "text": "Automation Layer\nPurpose: Process reliability and reduced coordination overhead\nIncludes:\n\nLab Bot\nRepository automation\nQuality checks and synchronization scripts\n\nThis layer maintains flow and enforces standards. Automation reduces manual coordination, supports quality assurance, and ensures that repositories remain aligned with lab principles.",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#confidential-archival-layer-private-sphere",
+    "href": "management/systems_overview.html#confidential-archival-layer-private-sphere",
+    "title": "System overview",
+    "section": "Confidential & Archival Layer (Private Sphere)",
+    "text": "Confidential & Archival Layer (Private Sphere)\nPurpose: Security, privacy, and long-term storage\nIncludes:\n\nNextcloud\n\nThis layer stores sensitive research data, administrative documents, and non-public materials. It complements the public Git-based ecosystem by providing controlled access and archival stability.\n\n\n\nSystem\nDescription\n\n\n\n\nNextcloud\n- Clients (use Nextcloud Files)- Contains all confidential materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).- “Anmelden”, URL: https://nc-2272638881871040784.nextcloud-ionos.com/, give access in Browser (pop-up), accept default settings- Our preferred choice for confidential data, and binary/large files- Collaborative editing of a shared document (without login): create md-file and public link (can edit)",
+    "crumbs": [
+      "Management",
+      "Infrastructure",
+      "System overview"
+    ]
+  },
+  {
+    "objectID": "management/systems_overview.html#rationales",
+    "href": "management/systems_overview.html#rationales",
+    "title": "System overview",
+    "section": "Rationales",
+    "text": "Rationales\n\nWe prefer open-source tools and open-data formats:\n\nGit, a distributed version control system to collaborate on software development projects, data analyses, paper writing, and teaching materials. It allows users to work on the same file, to track changes, to merge different versions or branches, and revert to any previous state.\nMarkdown, a markup language, which allows us to creating formatted documents, papers, websites, presentations using plain text (formatting such as headings, lists, bold, italics, and links). It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using Pandoc or the Quarto ecosystem. Citations can be included via the CSL project.\n\nTradeoff: Git means no Zotero, no Word… But: it also means immediate involvement of new team members, algorithms (LLMs), and external contributors",
     "crumbs": [
       "Management",
       "Infrastructure",
