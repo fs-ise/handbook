@@ -18,31 +18,29 @@ graph LR
 
         %% Coordination Layer
         subgraph Coordination_Layer
-            Handbook["Public Handbook"]
-            Agenda["Individual Agenda Repos"]
+            Handbook["<a href='handbook.html'>handbook</a> (public)"]
+            Agenda["<a href='repositories.html#general-repositories'>agendas</a> (private)"]
         end
 
         %% Infrastructure Layer
         subgraph Infrastructure_Layer
-            Workstation["Workstation Setup<br>(Infrastructure-as-Code)"]
+            Workstation["<a href='https://github.com/fs-ise/workstation-setup'  target='_blank'>workstation-setup</a> (public)"]
         end
         %% Automation Layer
         subgraph Automation_Layer
-            LabBot["Lab Bot"]
+            LabBot["<a href='https://github.com/digital-work-lab/labot' target='_blank'>labot</a> (public)"]
         end
         %% Knowledge Layer
         subgraph Knowledge_Layer
-            ResearchHub["Research Hub"]
-            TeachingHub["Teaching Hub"]
+            ResearchHub["<a href='https://github.com/fs-ise/research-hub' target='_blank'>research-hub</a>"]
+            TeachingHub["<a href='https://github.com/fs-ise/teaching-hub' target='_blank'>teaching-hub</a>"]
         end
 
         %% Execution Layer
         subgraph Execution_Layer
-            PaperTemplate["Paper Template"]
-            PaperProjects["Paper Repositories"]
-            LectureTemplate["Lecture Template"]
-            LectureRepos["Lecture Repositories"]
-            ThesisTemplate["Thesis Template"]
+            PaperProjects["<a href='repositories.html#research-repositories'>research repositories</a>"]
+            LectureRepos["<a href='repositories.html#teaching-repositories'>teaching repositories</a>"]
+            Templates["Templates"]
         end
 
     end
@@ -51,17 +49,16 @@ graph LR
 
     Handbook --> ResearchHub
     Handbook --> TeachingHub
-    Handbook --> PaperTemplate
-    Handbook --> LectureTemplate
+    Handbook --> PaperProjects
+    Handbook --> LectureRepos
     Handbook --> Agenda
     Handbook --> Nextcloud
+    Templates --> PaperProjects
+    Templates --> LectureRepos
 
     ResearchHub --> PaperProjects
     TeachingHub --> LectureRepos
 
-    PaperTemplate --> PaperProjects
-    LectureTemplate --> LectureRepos
-    ThesisTemplate --> PaperProjects
 ```
 
 
