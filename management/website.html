@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -142,17 +153,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 </style>
@@ -537,6 +537,12 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/nextcloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nextcloud</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software overview</span></a>
   </div>
@@ -557,12 +563,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   <div class="sidebar-item-container"> 
   <a href="../management/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/archive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archive</span></a>
   </div>
 </li>
       </ul>
@@ -676,17 +676,8 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#system" id="toc-system" class="nav-link active" data-scroll-target="#system">System</a></li>
-  <li><a href="#dontt-forget" id="toc-dontt-forget" class="nav-link" data-scroll-target="#dontt-forget">Dont’t forget</a></li>
-  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/website.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -711,59 +702,41 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This section is marked as “toupdate”: update complete process</p>
-</div>
-</div>
-<p><strong>The website is based on Typo3.</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/images/LogoTypo3.jpg" class="img-fluid figure-img"></p>
-<figcaption>LogoTypo3</figcaption>
-</figure>
-</div>
-<p>The overview of publications is automatically generated from <a href="https://fis.uni-bamberg.de/" target="_blank">FIS</a>.</p>
-<section id="system" class="level2">
-<h2 class="anchored" data-anchor-id="system">System</h2>
-<ul>
-<li><a href="https://www.uni-bamberg.de/digital-work/" target="_blank">Website</a></li>
-<li><a href="https://www.uni-bamberg.de/typo3" target="_blank">Typo3 login</a></li>
-</ul>
-</section>
-<section id="dontt-forget" class="level2">
-<h2 class="anchored" data-anchor-id="dontt-forget">Dont’t forget</h2>
-<ul>
-<li>Announce the courses for the coming semester (in January &amp; August)</li>
-<li>Update course pages every semester</li>
-<li>Update the student assistants page if necessary</li>
-</ul>
-</section>
-<section id="support" class="level2">
-<h2 class="anchored" data-anchor-id="support">Support</h2>
-<ul>
-<li><a href="https://univis.uni-bamberg.de/prg?search=persons&amp;show=info&amp;department=320930&amp;fullname=Joachim+Drescher" target="_blank">Joachim Drescher</a></li>
-<li><a href="https://univis.uni-bamberg.de/form?dsc=anew/tel_view&amp;pers=zuv/abtlg1/ref3/weigan&amp;anonymous=1&amp;founds=zuv/abtlg1/ref3/weigan&amp;sem=2025w&amp;tel_nosem=1" target="_blank">Felix Weigand</a></li>
-</ul>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><a href="https://vc.uni-bamberg.de/course/view.php?id=264&amp;section=2" target="_blank">VC</a></li>
-</ul>
+<p>The <a href="https://www.frankfurt-school.de/de/home/research-and-faculty/faculty/faculty-directory/gerit-wagner">public website</a> is updated by the department assistants.</p>
+<!--
+
+::: callout-note
+This section is marked as "toupdate": update complete process
+:::
+
+**The website is based on Typo3.**
+
+![LogoTypo3](/assets/images/LogoTypo3.jpg)
+
+## System
+
+- [Website](https://www.uni-bamberg.de/digital-work/){target=_blank}
+- [Typo3 login](https://www.uni-bamberg.de/typo3){target=_blank}
+
+## Dont't forget
+- Announce the courses for the coming semester (in January & August)
+- Update course pages every semester
+- Update the student assistants page if necessary
+
+## Support
+
+- [Joachim Drescher](https://univis.uni-bamberg.de/prg?search=persons&show=info&department=320930&fullname=Joachim+Drescher){target=_blank}
+- [Felix Weigand](https://univis.uni-bamberg.de/form?dsc=anew/tel_view&pers=zuv/abtlg1/ref3/weigan&anonymous=1&founds=zuv/abtlg1/ref3/weigan&sem=2025w&tel_nosem=1){target=_blank}
+
+## Resources
+
+- [VC](https://vc.uni-bamberg.de/course/view.php?id=264&section=2){target=_blank}
+
+-->
 
 
 <!-- -->
 
-</section>
 
 </main> <!-- /main -->
 <script>
@@ -1255,43 +1228,47 @@ document.addEventListener("DOMContentLoaded", function () {
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Website"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">transition_status:</span><span class="co"> "toupdate"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">transition_status:</span><span class="co"> "updated"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">transition_comment:</span><span class="co"> "update"</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This section is marked as "toupdate": update complete process</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">public website</span><span class="co">](https://www.frankfurt-school.de/de/home/research-and-faculty/faculty/faculty-directory/gerit-wagner)</span> is updated by the department assistants.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>**The website is based on Typo3.**</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![LogoTypo3](/assets/images/LogoTypo3.jpg)</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">::: callout-note</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">This section is marked as "toupdate": update complete process</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">:::</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>The overview of publications is automatically generated from <span class="co">[</span><span class="ot">FIS</span><span class="co">](https://fis.uni-bamberg.de/)</span>{target=_blank}.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">**The website is based on Typo3.**</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## System</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">![LogoTypo3](/assets/images/LogoTypo3.jpg)</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Website</span><span class="co">](https://www.uni-bamberg.de/digital-work/)</span>{target=_blank}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Typo3 login</span><span class="co">](https://www.uni-bamberg.de/typo3)</span>{target=_blank}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dont't forget</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Announce the courses for the coming semester (in January &amp; August)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update course pages every semester</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update the student assistants page if necessary</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Support</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">## System</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">- [Website](https://www.uni-bamberg.de/digital-work/){target=_blank}</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">- [Typo3 login](https://www.uni-bamberg.de/typo3){target=_blank}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">## Dont't forget</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">- Announce the courses for the coming semester (in January &amp; August)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">- Update course pages every semester</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">- Update the student assistants page if necessary</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Joachim Drescher</span><span class="co">](https://univis.uni-bamberg.de/prg?search=persons&amp;show=info&amp;department=320930&amp;fullname=Joachim+Drescher)</span>{target=_blank}</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Felix Weigand</span><span class="co">](https://univis.uni-bamberg.de/form?dsc=anew/tel_view&amp;pers=zuv/abtlg1/ref3/weigan&amp;anonymous=1&amp;founds=zuv/abtlg1/ref3/weigan&amp;sem=2025w&amp;tel_nosem=1)</span>{target=_blank}</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">## Support</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">- [Joachim Drescher](https://univis.uni-bamberg.de/prg?search=persons&amp;show=info&amp;department=320930&amp;fullname=Joachim+Drescher){target=_blank}</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">- [Felix Weigand](https://univis.uni-bamberg.de/form?dsc=anew/tel_view&amp;pers=zuv/abtlg1/ref3/weigan&amp;anonymous=1&amp;founds=zuv/abtlg1/ref3/weigan&amp;sem=2025w&amp;tel_nosem=1){target=_blank}</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">VC</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=264&amp;section=2)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">## Resources</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">- [VC](https://vc.uni-bamberg.de/course/view.php?id=264&amp;section=2){target=_blank}</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/website.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/website.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

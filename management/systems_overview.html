@@ -114,28 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -147,6 +125,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -156,6 +145,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -540,6 +540,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/nextcloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nextcloud</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software overview</span></a>
   </div>
@@ -560,12 +566,6 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   <div class="sidebar-item-container"> 
   <a href="../management/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/archive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archive</span></a>
   </div>
 </li>
       </ul>
@@ -802,7 +802,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <p><strong>Purpose:</strong> Reproducibility and standardization</p>
 <p><strong>Includes:</strong></p>
 <ul>
-<li><a href="https://github.com/fs-ise/workstation-setup">workstation-setup</a> (Infrastructure-as-Code)</li>
+<li><a href="https://github.com/fs-ise/workstation-setup" target="_blank">workstation-setup</a> (Infrastructure-as-Code)</li>
 <li>Defined technology stack</li>
 </ul>
 <p>This layer ensures consistent development environments and reproducible workflows. By codifying infrastructure, onboarding becomes efficient and technical fragmentation is minimized. It connects tools to practice through automation and standardization.</p>
@@ -847,20 +847,6 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li>Nextcloud</li>
 </ul>
 <p>This layer stores sensitive research data, administrative documents, and non-public materials. It complements the public Git-based ecosystem by providing controlled access and archival stability.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>System</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://nc-2272638881871040784.nextcloud-ionos.com/" target="_blank">Nextcloud</a></td>
-<td>- <a href="https://nextcloud.com/de/install/#install-clients" target="_blank">Clients</a> (use <em>Nextcloud Files</em>)<br>- Contains all <strong>confidential</strong> materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).<br>- “Anmelden”, URL: <code>https://nc-2272638881871040784.nextcloud-ionos.com/</code>, give access in Browser (pop-up), accept default settings<br>- Our preferred choice for confidential data, and binary/large files<br>- <strong>Collaborative editing of a shared document (without login)</strong>: create md-file and public link (can edit)</td>
-</tr>
-</tbody>
-</table>
 </section>
 <section id="rationales" class="level2">
 <h2 class="anchored" data-anchor-id="rationales">Rationales</h2>
@@ -1475,7 +1461,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>**Includes:**</span>
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">workstation-setup</span><span class="co">](https://github.com/fs-ise/workstation-setup)</span> (Infrastructure-as-Code)</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">workstation-setup</span><span class="co">](https://github.com/fs-ise/workstation-setup)</span>{target=_blank} (Infrastructure-as-Code)</span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Defined technology stack</span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>This layer ensures consistent development environments and reproducible workflows. By codifying infrastructure, onboarding becomes efficient and technical fragmentation is minimized. It connects tools to practice through automation and standardization.</span>
@@ -1525,35 +1511,30 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>This layer stores sensitive research data, administrative documents, and non-public materials. It complements the public Git-based ecosystem by providing controlled access and archival stability.</span>
 <span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>System | Description |</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>---|---|</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Nextcloud</span><span class="co">](https://nc-2272638881871040784.nextcloud-ionos.com/)</span>{target=_blank}| - <span class="co">[</span><span class="ot">Clients</span><span class="co">](https://nextcloud.com/de/install/#install-clients)</span>{target=_blank} (use *Nextcloud Files*)&lt;br&gt;- Contains all **confidential** materials for lab management, teaching, research, funding, and service (following the same structure as the handbook).&lt;br&gt;- "Anmelden", URL: ``https://nc-2272638881871040784.nextcloud-ionos.com/``, give access in Browser (pop-up), accept default settings&lt;br&gt;- Our preferred choice for confidential data, and binary/large files&lt;br&gt;- **Collaborative editing of a shared document (without login)**: create md-file and public link (can edit) |</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rationales</span></span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="co">Welcome to the chapter on IT systems.</span></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="co">This guide is intended to offer you with a useful overview on the many IT technologies and tools that support the administrative processes and lead you to the right places to learn more about them.</span></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="co">This manual will serve as resource for navigating the digital environment, from learning platforms to communication tools, data analysis software to writing tools.</span></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="co">**[Markdown](https://www.markdownguide.org/){target=_blank}** is our preferred open-data format for the documentation (website), for writing papers and theses, managing knowledge, and creating slides. It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank}.</span></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="co">graph LR</span></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">    A[Edit Markdown Handbook pages on GitHub] --&gt;</span>|triggers:GitHub Actions| B<span class="co">[</span><span class="ot">Live Website</span><span class="co">]</span></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>    C<span class="co">[</span><span class="ot">Edit Markdown Slides on GitHub</span><span class="co">]</span> --&gt;|triggers:GitHub Actions| D<span class="co">[</span><span class="ot">HTML slides</span><span class="co">]</span></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>    E<span class="co">[</span><span class="ot">Edit Markdown Paper on GitHub</span><span class="co">]</span> --&gt;|triggers:GitHub Actions| F<span class="co">[</span><span class="ot">Paper PDF/DOX</span><span class="co">]</span></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="in">--&gt;</span></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="in">We prefer open-source tools and open-data formats:</span></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="in">- **[Git](https://git-scm.com/){target=_blank}**, a distributed version control system to collaborate on software development projects, data analyses, paper writing, and teaching materials.</span></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="in">  It allows users to work on the same file, to track changes, to merge different versions or branches, and revert to any previous state.</span></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="in">- **[Markdown](https://www.markdownguide.org/){target=_blank}**, a markup language, which allows us to creating formatted documents, papers, websites, presentations using plain text (formatting such as headings, lists, bold, italics, and links).</span></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="in">  It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank} or the [Quarto](https://quarto.org/){target=_blank} ecosystem.</span></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="in">  Citations can be included via the [CSL](https://citationstyles.org/){target=_blank} project.</span></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="in">Tradeoff: Git means no Zotero, no Word... But: it also means immediate involvement of new team members, algorithms (LLMs), and external contributors</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rationales</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="co">Welcome to the chapter on IT systems.</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="co">This guide is intended to offer you with a useful overview on the many IT technologies and tools that support the administrative processes and lead you to the right places to learn more about them.</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="co">This manual will serve as resource for navigating the digital environment, from learning platforms to communication tools, data analysis software to writing tools.</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="co">**[Markdown](https://www.markdownguide.org/){target=_blank}** is our preferred open-data format for the documentation (website), for writing papers and theses, managing knowledge, and creating slides. It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank}.</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="co">graph LR</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="co">    A[Edit Markdown Handbook pages on GitHub] --&gt;</span>|triggers:GitHub Actions| B<span class="co">[</span><span class="ot">Live Website</span><span class="co">]</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>    C<span class="co">[</span><span class="ot">Edit Markdown Slides on GitHub</span><span class="co">]</span> --&gt;|triggers:GitHub Actions| D<span class="co">[</span><span class="ot">HTML slides</span><span class="co">]</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>    E<span class="co">[</span><span class="ot">Edit Markdown Paper on GitHub</span><span class="co">]</span> --&gt;|triggers:GitHub Actions| F<span class="co">[</span><span class="ot">Paper PDF/DOX</span><span class="co">]</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="in">--&gt;</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="in">We prefer open-source tools and open-data formats:</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="in">- **[Git](https://git-scm.com/){target=_blank}**, a distributed version control system to collaborate on software development projects, data analyses, paper writing, and teaching materials.</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="in">  It allows users to work on the same file, to track changes, to merge different versions or branches, and revert to any previous state.</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="in">- **[Markdown](https://www.markdownguide.org/){target=_blank}**, a markup language, which allows us to creating formatted documents, papers, websites, presentations using plain text (formatting such as headings, lists, bold, italics, and links).</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="in">  It is platform-independent, integrates well with git, and can easily be converted to other formats (e.g., PDF, HTML, DOCX) using [Pandoc](https://pandoc.org/){target=_blank} or the [Quarto](https://quarto.org/){target=_blank} ecosystem.</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="in">  Citations can be included via the [CSL](https://citationstyles.org/){target=_blank} project.</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="in">Tradeoff: Git means no Zotero, no Word... But: it also means immediate involvement of new team members, algorithms (LLMs), and external contributors</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

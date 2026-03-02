@@ -111,6 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -142,17 +153,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -537,6 +537,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/nextcloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nextcloud</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software overview</span></a>
   </div>
@@ -557,12 +563,6 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   <div class="sidebar-item-container"> 
   <a href="../management/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../management/archive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archive</span></a>
   </div>
 </li>
       </ul>
@@ -757,13 +757,13 @@ Response:
 <ul>
 <li>Dezentrale schriftliche Prüfungen unter Angabe des Modulkürzels: Diese sind durch die Professuren einzutragen. Hier sind Überschneidungen zu vermeiden, d.h. zu einem konkreten Zeitpunkt darf nur eine dezentrale Prüfung liegen. Sobald zu einem Zeitpunkt eine schriftliche Prüfung liegt, muss ein anderes Modul, zumindest, wenn potenziell dieselben Studierenden betroffen sind, ein anderes Zeitfenster wählen.</li>
 <li>Abgabe-Deadlines für Seminararbeiten und Projektleistungen unter Angabe des Modulkürzels: Diese sind durch die Professuren als „freier Ganztagestermin“ einzutragen. (Hintergrund: Hierüber wollen wir im Studiendekanat einen Überblick über die von der Studierendenvertretung vorgebrachte Kritik an vermeintlichen Häufungen von Deadlines erhalten.)</li>
-<li>Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen</li>
+<li>Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen.</li>
 </ul>
 <p>Forschung und Weiteres:</p>
 <ul>
 <li>Öffentliche Wissenschaftsvorträge (bspw. WIAI-Kolloquium, BACAI). Diese sind bitte durch die jeweiligen Veranstalter einzutragen.</li>
-<li>Disputationen: Werden durch das Promotionsbüro eingetragen</li>
-<li>Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen</li>
+<li>Disputationen: Werden durch das Promotionsbüro eingetragen.</li>
+<li>Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen.</li>
 <li>Wesentliche universitäre und insb. fakultätsinterne Gremientermine (FR, Professorium, Lehrkonferenz etc.): Werden vom Dekanat eingetragen.</li>
 </ul>
 </section>
@@ -1278,71 +1278,72 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">transition_comment:</span><span class="co"> "update"</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**TBA**</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">- [Overview of processes](https://www.uni-bamberg.de/qm/prozesse-studium-und-lehre/prozessportal/){target=_blank} (Prozessportal)</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">## Raumplanung</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">We receive an email ("Raumplanung") at the end of the semester (for the following one):</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">- Check whether the rooms were booked correctly (no overlapping sessions, CIP-pools when needed, correct number of sessions)</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">- Add the sessions to our [calendar](/index.html)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">- Add the announcements to our teaching repositories</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">## Aufsichtenplanung</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">Student assistants with a Bachelor's degree and research assistants are required to participate.</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">Emails: "Meldeformular für Aufsichtenplanung", "Meldeformular für Aufsichtenkalkulation",</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">::: callout-note</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss" with a table</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">→ the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">:::</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">Response:</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>**TBA**</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">- [Overview of processes](https://www.uni-bamberg.de/qm/prozesse-studium-und-lehre/prozessportal/){target=_blank} (Prozessportal)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">## Raumplanung</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">We receive an email ("Raumplanung") at the end of the semester (for the following one):</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">- Check whether the rooms were booked correctly (no overlapping sessions, CIP-pools when needed, correct number of sessions)</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">- Add the sessions to our [calendar](/index.html)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">- Add the announcements to our teaching repositories</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">## Aufsichtenplanung</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">Student assistants with a Bachelor's degree and research assistants are required to participate.</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">Emails: "Meldeformular für Aufsichtenplanung", "Meldeformular für Aufsichtenkalkulation",</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">::: callout-note</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss" with a table</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">→ the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">:::</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">Response:</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scheinteilnehmer</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>When students register as "Scheinteilnehmer" via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="al">![Scheinteilnehmer](/assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG)</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Access: Rose Fleck</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>Should contain the following dates:</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>Studium &amp; Lehre:</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dezentrale schriftliche Prüfungen unter Angabe des Modulkürzels: Diese sind durch die Professuren einzutragen. Hier sind Überschneidungen zu vermeiden, d.h. zu einem konkreten Zeitpunkt darf nur eine dezentrale Prüfung liegen. Sobald zu einem Zeitpunkt eine schriftliche Prüfung liegt, muss ein anderes Modul, zumindest, wenn potenziell dieselben Studierenden betroffen sind, ein anderes Zeitfenster wählen.</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Abgabe-Deadlines für Seminararbeiten und Projektleistungen unter Angabe des Modulkürzels: Diese sind durch die Professuren als „freier Ganztagestermin“ einzutragen. (Hintergrund: Hierüber wollen wir im Studiendekanat einen Überblick über die von der Studierendenvertretung vorgebrachte Kritik an vermeintlichen Häufungen von Deadlines erhalten.)</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Forschung und Weiteres:</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scheinteilnehmer</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>When students register as "Scheinteilnehmer" via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="al">![Scheinteilnehmer](/assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG)</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Access: Rose Fleck</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Should contain the following dates:</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Studium &amp; Lehre:</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dezentrale schriftliche Prüfungen unter Angabe des Modulkürzels: Diese sind durch die Professuren einzutragen.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  Hier sind Überschneidungen zu vermeiden, d.h. zu einem konkreten Zeitpunkt darf nur eine dezentrale Prüfung liegen.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  Sobald zu einem Zeitpunkt eine schriftliche Prüfung liegt, muss ein anderes Modul, zumindest, wenn potenziell dieselben Studierenden betroffen sind, ein anderes Zeitfenster wählen.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Abgabe-Deadlines für Seminararbeiten und Projektleistungen unter Angabe des Modulkürzels: Diese sind durch die Professuren als „freier Ganztagestermin“ einzutragen.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  (Hintergrund: Hierüber wollen wir im Studiendekanat einen Überblick über die von der Studierendenvertretung vorgebrachte Kritik an vermeintlichen Häufungen von Deadlines erhalten.)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen.</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Öffentliche Wissenschaftsvorträge (bspw. WIAI-Kolloquium, BACAI). Diese sind bitte durch die jeweiligen Veranstalter einzutragen.</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disputationen: Werden durch das Promotionsbüro eingetragen</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wesentliche universitäre und insb. fakultätsinterne Gremientermine (FR, Professorium, Lehrkonferenz etc.): Werden vom Dekanat eingetragen.</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Professorium <span class="co">[</span><span class="ot">VC</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=2193)</span>{target=_blank}</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fakultätsrat</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Social Media Management</span><span class="co">](https://www.uni-bamberg.de/wiai/fakultaetsleitung-und-dekanat/)</span>{target=_blank}</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">TikTok Kanal</span><span class="co">](https://www.tiktok.com/@unibamberg)</span>{target=_blank}</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Instagram</span><span class="co">](https://www.instagram.com/informatik_unibamberg/)</span>{target=_blank}</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>--&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Forschung und Weiteres:</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Öffentliche Wissenschaftsvorträge (bspw. WIAI-Kolloquium, BACAI). Diese sind bitte durch die jeweiligen Veranstalter einzutragen.</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disputationen: Werden durch das Promotionsbüro eingetragen.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wesentliche universitäre und insb. fakultätsinterne Gremientermine (FR, Professorium, Lehrkonferenz etc.): Werden vom Dekanat eingetragen.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Professorium <span class="co">[</span><span class="ot">VC</span><span class="co">](https://vc.uni-bamberg.de/course/view.php?id=2193)</span>{target=_blank}</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fakultätsrat</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Social Media Management</span><span class="co">](https://www.uni-bamberg.de/wiai/fakultaetsleitung-und-dekanat/)</span>{target=_blank}</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">TikTok Kanal</span><span class="co">](https://www.tiktok.com/@unibamberg)</span>{target=_blank}</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Instagram</span><span class="co">](https://www.instagram.com/informatik_unibamberg/)</span>{target=_blank}</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>--&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
