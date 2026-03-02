@@ -122,6 +122,17 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -142,17 +153,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 </style>
@@ -400,7 +400,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/mail.html">Communication</a></li><li class="breadcrumb-item"><a href="../management/faculty.html">Faculty</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/mail.html">Communication</a></li><li class="breadcrumb-item"><a href="../management/department.html">Faculty</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -496,7 +496,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/faculty.html" class="sidebar-item-text sidebar-link active">
+  <a href="../management/department.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Faculty</span></a>
   </div>
 </li>
@@ -681,19 +681,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#raumplanung" id="toc-raumplanung" class="nav-link active" data-scroll-target="#raumplanung">Raumplanung</a></li>
-  <li><a href="#aufsichtenplanung" id="toc-aufsichtenplanung" class="nav-link" data-scroll-target="#aufsichtenplanung">Aufsichtenplanung</a></li>
-  <li><a href="#scheinteilnehmer" id="toc-scheinteilnehmer" class="nav-link" data-scroll-target="#scheinteilnehmer">Scheinteilnehmer</a></li>
+  <li><a href="#scheinteilnehmer" id="toc-scheinteilnehmer" class="nav-link active" data-scroll-target="#scheinteilnehmer">Scheinteilnehmer</a></li>
   <li><a href="#department-calendar-fakultätskalender-veranstaltungen-wiai-kalender" id="toc-department-calendar-fakultätskalender-veranstaltungen-wiai-kalender" class="nav-link" data-scroll-target="#department-calendar-fakultätskalender-veranstaltungen-wiai-kalender">Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/faculty.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/department.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/mail.html">Communication</a></li><li class="breadcrumb-item"><a href="../management/faculty.html">Faculty</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/mail.html">Communication</a></li><li class="breadcrumb-item"><a href="../management/department.html">Faculty</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Faculty</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
@@ -712,56 +710,35 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This section is marked as “toupdate”: update complete process</p>
-</div>
-</div>
-<ul>
-<li><a href="https://www.uni-bamberg.de/qm/prozesse-studium-und-lehre/prozessportal/" target="_blank">Overview of processes</a> (Prozessportal)</li>
-</ul>
-<section id="raumplanung" class="level2">
-<h2 class="anchored" data-anchor-id="raumplanung">Raumplanung</h2>
-<p>We receive an email (“Raumplanung”) at the end of the semester (for the following one):</p>
-<ul>
-<li>Check whether the rooms were booked correctly (no overlapping sessions, CIP-pools when needed, correct number of sessions)</li>
-<li>Add the sessions to our <a href="../index.html">calendar</a></li>
-<li>Add the announcements to our teaching repositories</li>
-</ul>
-</section>
-<section id="aufsichtenplanung" class="level2">
-<h2 class="anchored" data-anchor-id="aufsichtenplanung">Aufsichtenplanung</h2>
-<p>Student assistants with a Bachelor’s degree and research assistants are required to participate.</p>
-<p>Emails: “Meldeformular für Aufsichtenplanung”, “Meldeformular für Aufsichtenkalkulation”,</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Following: The dean’s office sends an email “Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss” with a table<br>
-→ the secretariat must forward this email to Hiwis with a Bachelor’s degree with the request to return it to the dean’s office and cc the secretariat.</p>
-</div>
-</div>
-<!-- 
+<p><strong>TBA</strong></p>
+<!--
+- [Overview of processes](https://www.uni-bamberg.de/qm/prozesse-studium-und-lehre/prozessportal/){target=_blank} (Prozessportal)
+
+## Raumplanung
+
+We receive an email ("Raumplanung") at the end of the semester (for the following one):
+
+- Check whether the rooms were booked correctly (no overlapping sessions, CIP-pools when needed, correct number of sessions)
+- Add the sessions to our [calendar](/index.html)
+- Add the announcements to our teaching repositories
+
+## Aufsichtenplanung
+
+Student assistants with a Bachelor's degree and research assistants are required to participate.
+
+Emails: "Meldeformular für Aufsichtenplanung", "Meldeformular für Aufsichtenkalkulation",
+
+::: callout-note
+Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss" with a table
+→ the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.
+:::
+
+<!--
 Response:
 
 ```
 ```
 -->
-</section>
 <section id="scheinteilnehmer" class="level2">
 <h2 class="anchored" data-anchor-id="scheinteilnehmer">Scheinteilnehmer</h2>
 <p>When students register as “Scheinteilnehmer” via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.</p>
@@ -798,7 +775,7 @@ Response:
 <li><a href="https://www.uni-bamberg.de/wiai/fakultaetsleitung-und-dekanat/" target="_blank">Social Media Management</a>
 <ul>
 <li><a href="https://www.tiktok.com/@unibamberg" target="_blank">TikTok Kanal</a></li>
-<li><a href="https://www.instagram.com/informatik_unibamberg/" target="_blank">Instagram</a></li>
+<li><a href="https://www.instagram.com/informatik_unibamberg/" target="_blank">Instagram</a> –&gt;</li>
 </ul></li>
 </ul>
 
@@ -1297,36 +1274,36 @@ document.addEventListener("DOMContentLoaded", function () {
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Faculty"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">transition_status:</span><span class="co"> "toupdate"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">transition_status:</span><span class="co"> "updated"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">transition_comment:</span><span class="co"> "update"</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This section is marked as "toupdate": update complete process</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Overview of processes</span><span class="co">](https://www.uni-bamberg.de/qm/prozesse-studium-und-lehre/prozessportal/)</span>{target=_blank} (Prozessportal)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**TBA**</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">- [Overview of processes](https://www.uni-bamberg.de/qm/prozesse-studium-und-lehre/prozessportal/){target=_blank} (Prozessportal)</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Raumplanung</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">## Raumplanung</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>We receive an email ("Raumplanung") at the end of the semester (for the following one):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">We receive an email ("Raumplanung") at the end of the semester (for the following one):</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check whether the rooms were booked correctly (no overlapping sessions, CIP-pools when needed, correct number of sessions)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add the sessions to our <span class="co">[</span><span class="ot">calendar</span><span class="co">](/index.html)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add the announcements to our teaching repositories </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">- Check whether the rooms were booked correctly (no overlapping sessions, CIP-pools when needed, correct number of sessions)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">- Add the sessions to our [calendar](/index.html)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">- Add the announcements to our teaching repositories</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Aufsichtenplanung</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">## Aufsichtenplanung</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Student assistants with a Bachelor's degree and research assistants are required to participate.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">Student assistants with a Bachelor's degree and research assistants are required to participate.</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Emails: "Meldeformular für Aufsichtenplanung", "Meldeformular für Aufsichtenkalkulation", </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">Emails: "Meldeformular für Aufsichtenplanung", "Meldeformular für Aufsichtenkalkulation",</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss" with a table  </span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>→ the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">::: callout-note</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit für Prüfungsaufsichten - Hiwi´s mit Bachelorabschluss" with a table</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">→ the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">:::</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">Response:</span></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
@@ -1336,7 +1313,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scheinteilnehmer</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>When students register as "Scheinteilnehmer" via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.</span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="al">![Scheinteilnehmer](/assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG)</span>  </span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="al">![Scheinteilnehmer](/assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG)</span></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
@@ -1364,12 +1341,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fakultätsrat</span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Social Media Management</span><span class="co">](https://www.uni-bamberg.de/wiai/fakultaetsleitung-und-dekanat/)</span>{target=_blank}</span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">TikTok Kanal</span><span class="co">](https://www.tiktok.com/@unibamberg)</span>{target=_blank}</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Instagram</span><span class="co">](https://www.instagram.com/informatik_unibamberg/)</span>{target=_blank}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Instagram</span><span class="co">](https://www.instagram.com/informatik_unibamberg/)</span>{target=_blank}</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>--&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/faculty.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/department.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
