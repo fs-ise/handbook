@@ -9,43 +9,50 @@ transition_comment: "update"
 ```{mermaid}
 graph LR
 
-    subgraph Nextcloud["Nextcloud"]
+    subgraph Nextcloud["<a href='nextcloud.html'>Nextcloud</a> (mostly private)"]
         Archive["Archive"]
         Grades["Grades"]
     end
 
-    subgraph Public_Git_Sphere["GitHub"]
+    %% Infrastructure Layer
+    subgraph Infrastructure_Layer["infrastructure-layer <a href='#infrastructure-layer'>🔗</a>"]
+        Workstation["<a href='https://github.com/fs-ise/workstation-setup'  target='_blank'>workstation-setup</a> (public)"]
+    end
+
+    subgraph Github_Sphere["GitHub"]
 
         %% Coordination Layer
-        subgraph Coordination_Layer
+        subgraph Coordination_Layer["coordination-layer <a href='#coordination-layer'>🔗</a>"]
             Handbook["<a href='handbook.html'>handbook</a> (public)"]
             Agenda["<a href='repositories.html#general-repositories'>agendas</a> (private)"]
         end
 
-        %% Infrastructure Layer
-        subgraph Infrastructure_Layer
-            Workstation["<a href='https://github.com/fs-ise/workstation-setup'  target='_blank'>workstation-setup</a> (public)"]
-        end
-        %% Automation Layer
-        subgraph Automation_Layer
-            LabBot["<a href='https://github.com/digital-work-lab/labot' target='_blank'>labot</a> (public)"]
-        end
         %% Knowledge Layer
-        subgraph Knowledge_Layer
-            ResearchHub["<a href='https://github.com/fs-ise/research-hub' target='_blank'>research-hub</a>"]
-            TeachingHub["<a href='https://github.com/fs-ise/teaching-hub' target='_blank'>teaching-hub</a>"]
+        subgraph Knowledge_Layer["knowledge-layer <a href='#knowledge-layer'>🔗</a>"]
+            ResearchHub["<a href='https://github.com/fs-ise/research-hub' target='_blank'>research-hub</a> (private)"]
+            TeachingHub["<a href='https://github.com/fs-ise/teaching-hub' target='_blank'>teaching-hub</a> (private)"]
         end
 
+
         %% Execution Layer
-        subgraph Execution_Layer
-            PaperProjects["<a href='repositories.html#research-repositories'>research repositories</a>"]
-            LectureRepos["<a href='repositories.html#teaching-repositories'>teaching repositories</a>"]
-            Templates["Templates"]
+        subgraph Execution_Layer["execution-layer <a href='#execution-layer'>🔗</a>"]
+            Templates["<a href='repositories.html#general-repositories'>templates</a> (public)"]
+            PaperProjects["<a href='repositories.html#research-repositories'>research repositories</a><br> (mostly private)"]
+            LectureRepos["<a href='repositories.html#teaching-repositories'>teaching repositories</a><br> (mostly public)"]
+        end
+
+        %% Automation Layer
+        subgraph Automation_Layer["automation-layer <a href='#automation-layer'>🔗</a>"]
+            LabBot["<a href='https://github.com/digital-work-lab/labot' target='_blank'>labot</a> (public)"]
         end
 
     end
 
     %% Core relationships
+
+    Automation_Layer -.- Coordination_Layer
+    Automation_Layer -.- Knowledge_Layer
+    Automation_Layer -.- Execution_Layer
 
     Handbook --> ResearchHub
     Handbook --> TeachingHub
@@ -53,11 +60,18 @@ graph LR
     Handbook --> LectureRepos
     Handbook --> Agenda
     Handbook --> Nextcloud
-    Templates --> PaperProjects
-    Templates --> LectureRepos
+    %% Handbook --> Templates
+    Templates -.- PaperProjects
+    Templates -.- LectureRepos
 
-    ResearchHub --> PaperProjects
-    TeachingHub --> LectureRepos
+    ResearchHub <==> PaperProjects
+    TeachingHub <==> LectureRepos
+
+    Infrastructure_Layer -.- Github_Sphere
+    Infrastructure_Layer -.- Nextcloud
+
+    %% Highlight Handbook
+    style Handbook fill:#ffe599,stroke:#b45f06,stroke-width:3px,color:#000
 
 ```
 
@@ -119,7 +133,7 @@ This layer transforms knowledge into deliverables. It structures collaborative w
 
 This layer maintains flow and enforces standards. Automation reduces manual coordination, supports quality assurance, and ensures that repositories remain aligned with lab principles.
 
-## Confidential & Archival Layer (Private Sphere)
+## Archival Layer
 
 **Purpose:** Security, privacy, and long-term storage
 
