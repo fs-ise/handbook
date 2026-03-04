@@ -34,7 +34,8 @@ import colrev.loader.load_utils as load_utils
 import colrev.writer.write_utils as write_utils
 
 
-OUTPUT_DIR = Path("research/papers")
+OUTPUT_DIR_RESEARCH = Path("research/papers")
+OUTPUT_DIR_TEACHING = Path("teaching/papers")
 ASSETS_REFERENCES = Path("data/references.bib")
 
 DEFAULT_BODY_TEMPLATE = """"""
@@ -861,23 +862,28 @@ def main():
     records_iter = load_records(ASSETS_REFERENCES)
 
     # Ensure output dir exists and is empty before generation
-    if OUTPUT_DIR.exists():
+    if OUTPUT_DIR_RESEARCH.exists():
         # Remove all files and subdirectories in research/papers
-        for child in OUTPUT_DIR.iterdir():
+        for child in OUTPUT_DIR_RESEARCH.iterdir():
             if child.is_file():
                 child.unlink()
             else:
                 shutil.rmtree(child)
     else:
-        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        OUTPUT_DIR_RESEARCH.mkdir(parents=True, exist_ok=True)
 
     # (Re)ensure directory exists (after potential deletion of subdirs)
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    OUTPUT_DIR_RESEARCH.mkdir(parents=True, exist_ok=True)
+
+    # Teaching output dir: ensure it exists (no cleanup by default)
+    OUTPUT_DIR_TEACHING.mkdir(parents=True, exist_ok=True)
 
     template_body = load_body_template()
 
     created = 0
     skipped = 0
+    teaching_created = 0
+    teaching_skipped = 0
 
     for record in records_iter:
         # CoLRev records are usually dict-like
@@ -898,22 +904,37 @@ def main():
         # Ensure the record has ID for BibTeX/RIS generation
         record.setdefault("ID", key)
 
-        out_path = OUTPUT_DIR / f"{key}.qmd"
-
-        if out_path.exists():
-            print(f"Skipping existing file: {out_path}")
-            skipped += 1
-            continue
-
         yaml_header = build_yaml_header(record)
         body = build_body(record, template_body)
         content = yaml_header + body
 
-        out_path.write_text(content, encoding="utf8")
-        print(f"Created {out_path}")
-        created += 1
+        out_path = OUTPUT_DIR_RESEARCH / f"{key}.qmd"
 
-    print(f"\nDone. Created {created} file(s), skipped {skipped} existing file(s).")
+        if out_path.exists():
+            print(f"Skipping existing file: {out_path}")
+            skipped += 1
+        else:
+            out_path.write_text(content, encoding="utf8")
+            print(f"Created {out_path}")
+            created += 1
+
+        # Export to teaching/papers if "teaching" is in keywords
+        raw_keywords = get_field(record, "keywords", default="")
+        kw_norm = {k.strip().lower() for k in split_keywords(raw_keywords)}
+        if "teaching" in kw_norm:
+            teaching_path = OUTPUT_DIR_TEACHING / f"{key}.qmd"
+            if teaching_path.exists():
+                print(f"Teaching export: skipping existing file: {teaching_path}")
+                teaching_skipped += 1
+            else:
+                teaching_path.write_text(content, encoding="utf8")
+                print(f"Teaching export: created {teaching_path}")
+                teaching_created += 1
+
+    print(
+        f"\nDone. Created {created} file(s), skipped {skipped} existing file(s). "
+        f"Teaching export: created {teaching_created}, skipped {teaching_skipped}."
+    )
 
 
 if __name__ == "__main__":
