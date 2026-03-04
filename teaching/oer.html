@@ -111,6 +111,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -131,28 +153,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -647,7 +647,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../teaching/publications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Publications</span></a>
+ <span class="menu-text">Publications (Teaching)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -694,16 +694,16 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 Wagner, G., Thurner, L., Tang, C., and Ott, S.. The Open-Source Project. Zenodo. doi:10.5281/zenodo.13871275. Available at: <a href="https://fs-ise.github.io/open-source-project/" target="_blank">https://fs-ise.github.io/open-source-project/</a>
 </p>
 <p>
-Wagner, G.. The Literature Review Seminar. Zenodo. doi:10.5281/zenodo.13893025. Available at: <a href="https://fs-ise.github.io/literature-review-seminar" target="_blank">https://fs-ise.github.io/literature-review-seminar</a>/
+Wagner, G. The Literature Review Seminar. Zenodo. doi:10.5281/zenodo.13893025. Available at: <a href="https://fs-ise.github.io/literature-review-seminar" target="_blank">https://fs-ise.github.io/literature-review-seminar</a>/
 </p>
 <p>
-Wagner, G.,. The Digital Work Lecture. Zenodo. doi:10.5281/zenodo.13893041. Available at: <a href="https://fs-ise.github.io/digital-work-lecture" target="_blank">https://fs-ise.github.io/digital-work-lecture</a>/
+Wagner, G. The Digital Work Lecture. Zenodo. doi:10.5281/zenodo.13893041. Available at: <a href="https://fs-ise.github.io/digital-work-lecture" target="_blank">https://fs-ise.github.io/digital-work-lecture</a>/
 </p>
 <p>
-Wagner, G.,. Theses. Zenodo. doi:10.5281/zenodo.13893017. Available at: <a href="https://fs-ise.github.io/theses" target="_blank">https://fs-ise.github.io/theses</a>/
+Wagner, G. Theses. Zenodo. doi:10.5281/zenodo.13893017. Available at: <a href="https://fs-ise.github.io/theses" target="_blank">https://fs-ise.github.io/theses</a>/
 </p>
 <p>
-Wagner, G.. Git Practice Notebooks. Zenodo. doi:10.5281/zenodo.13892877. Available at: <a href="https://github.com/fs-ise/practice-git" target="_blank">https://github.com/fs-ise/practice-git</a>
+Wagner, G. Git Practice Notebooks. Zenodo. doi:10.5281/zenodo.13892877. Available at: <a href="https://github.com/fs-ise/practice-git" target="_blank">https://github.com/fs-ise/practice-git</a>
 </p>
 </div>
 
@@ -1207,13 +1207,13 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G., Thurner, L., Tang, C., and Ott, S.. The Open-Source Project. Zenodo. doi:10.5281/zenodo.13871275. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://fs-ise.github.io/open-source-project/"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://fs-ise.github.io/open-source-project/<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G.. The Literature Review Seminar. Zenodo. doi:10.5281/zenodo.13893025. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://fs-ise.github.io/literature-review-seminar"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://fs-ise.github.io/literature-review-seminar<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>/<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. The Literature Review Seminar. Zenodo. doi:10.5281/zenodo.13893025. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://fs-ise.github.io/literature-review-seminar"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://fs-ise.github.io/literature-review-seminar<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>/<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G.,. The Digital Work Lecture. Zenodo. doi:10.5281/zenodo.13893041. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://fs-ise.github.io/digital-work-lecture"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://fs-ise.github.io/digital-work-lecture<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>/<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. The Digital Work Lecture. Zenodo. doi:10.5281/zenodo.13893041. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://fs-ise.github.io/digital-work-lecture"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://fs-ise.github.io/digital-work-lecture<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>/<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G.,. Theses. Zenodo. doi:10.5281/zenodo.13893017. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://fs-ise.github.io/theses"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://fs-ise.github.io/theses<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>/<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. Theses. Zenodo. doi:10.5281/zenodo.13893017. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://fs-ise.github.io/theses"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://fs-ise.github.io/theses<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>/<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G.. Git Practice Notebooks. Zenodo. doi:10.5281/zenodo.13892877. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://github.com/fs-ise/practice-git"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://github.com/fs-ise/practice-git<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Wagner, G. Git Practice Notebooks. Zenodo. doi:10.5281/zenodo.13892877. Available at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://github.com/fs-ise/practice-git"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://github.com/fs-ise/practice-git<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
