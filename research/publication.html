@@ -111,28 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -144,6 +122,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -153,6 +142,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -726,6 +726,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <li><a href="#authors-with-first-time-publication" id="toc-authors-with-first-time-publication" class="nav-link" data-scroll-target="#authors-with-first-time-publication">Authors with first-time publication</a></li>
   <li><a href="#enter-publication-details-and-store-full-text-document" id="toc-enter-publication-details-and-store-full-text-document" class="nav-link" data-scroll-target="#enter-publication-details-and-store-full-text-document">Enter publication details and store full-text document</a></li>
   <li><a href="#improvement-reflection-and-follow-up" id="toc-improvement-reflection-and-follow-up" class="nav-link" data-scroll-target="#improvement-reflection-and-follow-up">Improvement, reflection and follow-up</a></li>
+  <li><a href="#add-to-research-hub-teaching-hub" id="toc-add-to-research-hub-teaching-hub" class="nav-link" data-scroll-target="#add-to-research-hub-teaching-hub">Add to <code>research-hub</code> / <code>teaching-hub</code></a></li>
   <li><a href="#archive-and-publish-pdf-andor-data" id="toc-archive-and-publish-pdf-andor-data" class="nav-link" data-scroll-target="#archive-and-publish-pdf-andor-data">Archive and publish PDF and/or data</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/publication.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -808,6 +809,13 @@ Die Rechnungen werden ab 01.04.24 direkt von der Bibliothek gebucht und auch dor
 <ul>
 <li>Reflect on potential improvements in the research process and document <a href="../research/improvement.html">here</a></li>
 <li>Discuss potential follow-up projects and document <a href="../research/projects.html">here</a></li>
+</ul>
+</section>
+<section id="add-to-research-hub-teaching-hub" class="level2">
+<h2 class="anchored" data-anchor-id="add-to-research-hub-teaching-hub">Add to <code>research-hub</code> / <code>teaching-hub</code></h2>
+<ul>
+<li>Add Markdown file to <code>research-hub</code> or <code>teaching-hub</code></li>
+<li>Import summary notes for key references (replace <code>@Author</code> citation syntax with <code>[[Author]]</code> obsidian links)</li>
 </ul>
 </section>
 <section id="archive-and-publish-pdf-andor-data" class="level2">
@@ -1367,14 +1375,19 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reflect on potential improvements in the research process and document <span class="co">[</span><span class="ot">here</span><span class="co">](/research/improvement.html)</span></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discuss potential follow-up projects and document <span class="co">[</span><span class="ot">here</span><span class="co">](/research/projects.html)</span></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Archive and publish PDF and/or data</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Add to `research-hub` / `teaching-hub`</span></span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reuse of literature (PDFs should be in nextcloud; PDF names should be IDs; BibTeX file and final paper should be added)</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reuse of data, and scripts (archive of git repository)</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check whether PDFs and primary data can be made available, if so:</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Use <span class="co">[</span><span class="ot">Zenodo</span><span class="co">](https://zenodo.org/)</span>{target=_blank} to assign a DOI to the repo and make it citable: <span class="co">[</span><span class="ot">link</span><span class="co">](https://zenodo.org/account/settings/github/)</span>{target=_blank} (<span class="co">[</span><span class="ot">instructions</span><span class="co">](https://coderefinery.github.io/github-without-command-line/doi/)</span>{target=_blank})</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Add <span class="in">`dataset`</span> tag to GitHub repository (see <span class="co">[</span><span class="ot">overview</span><span class="co">](https://github.com/orgs/fs-ise/repositories?q=topic%3Adataset)</span>{target=_blank})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add Markdown file to <span class="in">`research-hub`</span> or <span class="in">`teaching-hub`</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Import summary notes for key references (replace <span class="in">`@Author`</span> citation syntax with <span class="in">`[[Author]]`</span> obsidian links)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Archive and publish PDF and/or data</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reuse of literature (PDFs should be in nextcloud; PDF names should be IDs; BibTeX file and final paper should be added)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reuse of data, and scripts (archive of git repository)</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check whether PDFs and primary data can be made available, if so:</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Use <span class="co">[</span><span class="ot">Zenodo</span><span class="co">](https://zenodo.org/)</span>{target=_blank} to assign a DOI to the repo and make it citable: <span class="co">[</span><span class="ot">link</span><span class="co">](https://zenodo.org/account/settings/github/)</span>{target=_blank} (<span class="co">[</span><span class="ot">instructions</span><span class="co">](https://coderefinery.github.io/github-without-command-line/doi/)</span>{target=_blank})</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Add <span class="in">`dataset`</span> tag to GitHub repository (see <span class="co">[</span><span class="ot">overview</span><span class="co">](https://github.com/orgs/fs-ise/repositories?q=topic%3Adataset)</span>{target=_blank})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
