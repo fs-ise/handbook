@@ -135,17 +135,6 @@ div.csl-indent {
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -157,15 +146,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -177,6 +166,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1182,6 +1182,7 @@ Important
 <p><strong>Teaching case repositories</strong></p>
 <ul>
 <li><a href="https://hbsp.harvard.edu/cases/" target="_blank">HBD teaching cases</a></li>
+<li><a href="https://jise.org/cases.html" target="_blank">JISE teaching cases</a></li>
 <li><a href="https://www.iveypublishing.ca/s/" target="_blank">Ivey Publishing (Western University)</a></li>
 <li><a href="https://www.thecasecentre.org/" target="_blank">The Case Centre (casecentre.org)</a></li>
 <li><a href="https://www.thecasecentre.org/caseCollection/INSEAD" target="_blank">INSEAD case collection</a></li>
@@ -2109,39 +2110,40 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb14-378"><a href="#cb14-378" aria-hidden="true" tabindex="-1"></a>**Teaching case repositories**</span>
 <span id="cb14-379"><a href="#cb14-379" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-380"><a href="#cb14-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">HBD teaching cases</span><span class="co">](https://hbsp.harvard.edu/cases/)</span>{target=_blank}</span>
-<span id="cb14-381"><a href="#cb14-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Ivey Publishing (Western University)</span><span class="co">](https://www.iveypublishing.ca/s/)</span>{target=_blank}</span>
-<span id="cb14-382"><a href="#cb14-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">The Case Centre (casecentre.org)</span><span class="co">](https://www.thecasecentre.org/)</span>{target=_blank}</span>
-<span id="cb14-383"><a href="#cb14-383" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">INSEAD case collection</span><span class="co">](https://www.thecasecentre.org/caseCollection/INSEAD)</span>{target=_blank}</span>
-<span id="cb14-384"><a href="#cb14-384" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Stanford GSB cases</span><span class="co">](https://www.gsb.stanford.edu/faculty-research/case-studies)</span>{target=_blank}</span>
-<span id="cb14-385"><a href="#cb14-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-381"><a href="#cb14-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">JISE teaching cases</span><span class="co">](https://jise.org/cases.html)</span>{target=_blank}</span>
+<span id="cb14-382"><a href="#cb14-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Ivey Publishing (Western University)</span><span class="co">](https://www.iveypublishing.ca/s/)</span>{target=_blank}</span>
+<span id="cb14-383"><a href="#cb14-383" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">The Case Centre (casecentre.org)</span><span class="co">](https://www.thecasecentre.org/)</span>{target=_blank}</span>
+<span id="cb14-384"><a href="#cb14-384" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">INSEAD case collection</span><span class="co">](https://www.thecasecentre.org/caseCollection/INSEAD)</span>{target=_blank}</span>
+<span id="cb14-385"><a href="#cb14-385" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Stanford GSB cases</span><span class="co">](https://www.gsb.stanford.edu/faculty-research/case-studies)</span>{target=_blank}</span>
 <span id="cb14-386"><a href="#cb14-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-387"><a href="#cb14-387" aria-hidden="true" tabindex="-1"></a>**Possible extensions**</span>
-<span id="cb14-388"><a href="#cb14-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-389"><a href="#cb14-389" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Workflows (quality checks)</span>
-<span id="cb14-390"><a href="#cb14-390" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Setup of exercises</span>
-<span id="cb14-391"><a href="#cb14-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)</span>
-<span id="cb14-392"><a href="#cb14-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-393"><a href="#cb14-393" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Quarto extensions" collapse=true}</span>
-<span id="cb14-394"><a href="#cb14-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/jmbuhr/quarto-qrcode</span>
-<span id="cb14-395"><a href="#cb14-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/fradav/quarto-revealjs-animate</span>
-<span id="cb14-396"><a href="#cb14-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-animate-graph</span>
-<span id="cb14-397"><a href="#cb14-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-excalidraw</span>
-<span id="cb14-398"><a href="#cb14-398" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/gadenbuie/quarto-now</span>
-<span id="cb14-399"><a href="#cb14-399" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-subtitles</span>
-<span id="cb14-400"><a href="#cb14-400" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-revealjs-highlightword</span>
-<span id="cb14-401"><a href="#cb14-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/produnis/quarto-cheatsheet</span>
-<span id="cb14-402"><a href="#cb14-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-leader-line</span>
-<span id="cb14-403"><a href="#cb14-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-quizdown (interactive - incompatible with PDF export)</span>
-<span id="cb14-404"><a href="#cb14-404" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/shafayetShafee/interactive-sql</span>
-<span id="cb14-405"><a href="#cb14-405" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/peter-gy/quarto-gradio</span>
-<span id="cb14-406"><a href="#cb14-406" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://quarto.thecoatlessprofessor.com/pyodide/</span>
-<span id="cb14-407"><a href="#cb14-407" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless-quarto/pyodide</span>
-<span id="cb14-408"><a href="#cb14-408" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/shinylive</span>
-<span id="cb14-409"><a href="#cb14-409" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless/quarto-webr?tab=readme-ov-file</span>
-<span id="cb14-410"><a href="#cb14-410" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-snow</span>
-<span id="cb14-411"><a href="#cb14-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/fontawesome</span>
-<span id="cb14-412"><a href="#cb14-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://parmsam.github.io/quarto-github-corner/</span>
-<span id="cb14-413"><a href="#cb14-413" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-387"><a href="#cb14-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-388"><a href="#cb14-388" aria-hidden="true" tabindex="-1"></a>**Possible extensions**</span>
+<span id="cb14-389"><a href="#cb14-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-390"><a href="#cb14-390" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Workflows (quality checks)</span>
+<span id="cb14-391"><a href="#cb14-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Setup of exercises</span>
+<span id="cb14-392"><a href="#cb14-392" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)</span>
+<span id="cb14-393"><a href="#cb14-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-394"><a href="#cb14-394" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Quarto extensions" collapse=true}</span>
+<span id="cb14-395"><a href="#cb14-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/jmbuhr/quarto-qrcode</span>
+<span id="cb14-396"><a href="#cb14-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/fradav/quarto-revealjs-animate</span>
+<span id="cb14-397"><a href="#cb14-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-animate-graph</span>
+<span id="cb14-398"><a href="#cb14-398" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-excalidraw</span>
+<span id="cb14-399"><a href="#cb14-399" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/gadenbuie/quarto-now</span>
+<span id="cb14-400"><a href="#cb14-400" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-subtitles</span>
+<span id="cb14-401"><a href="#cb14-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-revealjs-highlightword</span>
+<span id="cb14-402"><a href="#cb14-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/produnis/quarto-cheatsheet</span>
+<span id="cb14-403"><a href="#cb14-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/ofkoru/quarto-leader-line</span>
+<span id="cb14-404"><a href="#cb14-404" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/parmsam/quarto-quizdown (interactive - incompatible with PDF export)</span>
+<span id="cb14-405"><a href="#cb14-405" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/shafayetShafee/interactive-sql</span>
+<span id="cb14-406"><a href="#cb14-406" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/peter-gy/quarto-gradio</span>
+<span id="cb14-407"><a href="#cb14-407" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://quarto.thecoatlessprofessor.com/pyodide/</span>
+<span id="cb14-408"><a href="#cb14-408" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless-quarto/pyodide</span>
+<span id="cb14-409"><a href="#cb14-409" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/shinylive</span>
+<span id="cb14-410"><a href="#cb14-410" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/coatless/quarto-webr?tab=readme-ov-file</span>
+<span id="cb14-411"><a href="#cb14-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/EmilHvitfeldt/quarto-snow</span>
+<span id="cb14-412"><a href="#cb14-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://github.com/quarto-ext/fontawesome</span>
+<span id="cb14-413"><a href="#cb14-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://parmsam.github.io/quarto-github-corner/</span>
+<span id="cb14-414"><a href="#cb14-414" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
