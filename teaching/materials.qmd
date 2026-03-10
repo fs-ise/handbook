@@ -275,7 +275,36 @@ Jupyter notebooks should be delivered through GitHub Codespaces to avoid individ
 
 ::: {.callout-note title="Notebook template" collapse=true}
 ```Markdown
-TODO
+
+Include images in html tags (otherwise, attributes like width will be ignored):
+
+<img src="images/schema_solution_1.png" width="800">
+
+Mermaid resizing (with/out divs) does not work in blocks. Export as png.
+
+When using `coatless-quarto/assign`, combine assignment and solution in the same qmd file.
+
+This text will appear across all versions of the document
+
+:::{.direction}
+
+Only display the directions content in the assignment document
+
+:::
+
+:::{.sol}
+
+Only display the answer in the solution or rubric documents
+
+:::
+
+
+:::{.rubric}
+
+Only display the grading notes in the rubric document.
+
+:::
+
 
 <!--
 Comments can be used to add further explanations or links to references/resources
