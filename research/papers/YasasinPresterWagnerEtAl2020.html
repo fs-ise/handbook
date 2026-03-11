@@ -114,17 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -136,15 +125,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-resource.callout {
+div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
-div.callout-resource.callout-style-default > .callout-header {
+div.callout-objective.callout-style-default > .callout-header {
   background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -156,6 +145,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -520,9 +520,8 @@ Yasasin, E., Prester, J., Wagner, G., &amp; Schryen, G. (2020). Forecasting IT s
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">volume</span>     = {88},</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span>      = {101610},</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>        = {https://www.sciencedirect.com/science/article/pii/S016740481830854X},</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">abstract</span>   = {Today, organizations must deal with a plethora of IT security threats and to ensure smooth and uninterrupted business operations, firms are challenged to predict the volume of IT security vulnerabilities and allocate resources for fixing them. This challenge requires decision makers to assess which system or software packages are prone to vulnerabilities, how many post-release vulnerabilities can be expected to occur during a certain period of time, and what impact exploits might have. Substantial research has been dedicated to techniques that analyze source code and detect security vulnerabilities. However, only limited research has focused on forecasting security vulnerabilities that are detected and reported after the release of software. To address this shortcoming, we apply established methodologies which are capable of forecasting events exhibiting specific time series characteristics of security vulnerabilities, i.e., rareness of occurrence, volatility, non-stationarity, and seasonality. Based on a dataset taken from the National Vulnerability Database (NVD), we use the Mean Absolute Error (MAE) and Root Mean Square Error (RMSE) to measure the forecasting accuracy of single, double, and triple exponential smoothing methodologies, Croston’s methodology, ARIMA, and a neural network-based approach. We analyze the impact of the applied forecasting methodology on the prediction accuracy with regard to its robustness along the dimensions of the examined system and software package “operating systems”, “browsers” and “office solutions” and the applied metrics. To the best of our knowledge, this study is the first to analyze the effect of forecasting methodologies and to apply metrics that are suitable in this context. Our results show that the optimal forecasting methodology depends on the software or system package, as some methodologies perform poorly in the context of IT security vulnerabilities, that absolute metrics can cover the actual prediction error precisely, and that the prediction accuracy is robust within the two applied forecasting-error metrics.},</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">news_announced</span> = {2026-02-22}</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">abstract</span>   = {Today, organizations must deal with a plethora of IT security threats and to ensure smooth and uninterrupted business operations, firms are challenged to predict the volume of IT security vulnerabilities and allocate resources for fixing them. This challenge requires decision makers to assess which system or software packages are prone to vulnerabilities, how many post-release vulnerabilities can be expected to occur during a certain period of time, and what impact exploits might have. Substantial research has been dedicated to techniques that analyze source code and detect security vulnerabilities. However, only limited research has focused on forecasting security vulnerabilities that are detected and reported after the release of software. To address this shortcoming, we apply established methodologies which are capable of forecasting events exhibiting specific time series characteristics of security vulnerabilities, i.e., rareness of occurrence, volatility, non-stationarity, and seasonality. Based on a dataset taken from the National Vulnerability Database (NVD), we use the Mean Absolute Error (MAE) and Root Mean Square Error (RMSE) to measure the forecasting accuracy of single, double, and triple exponential smoothing methodologies, Croston’s methodology, ARIMA, and a neural network-based approach. We analyze the impact of the applied forecasting methodology on the prediction accuracy with regard to its robustness along the dimensions of the examined system and software package “operating systems”, “browsers” and “office solutions” and the applied metrics. To the best of our knowledge, this study is the first to analyze the effect of forecasting methodologies and to apply metrics that are suitable in this context. Our results show that the optimal forecasting methodology depends on the software or system package, as some methodologies perform poorly in the context of IT security vulnerabilities, that absolute metrics can cover the actual prediction error precisely, and that the prediction accuracy is robust within the two applied forecasting-error metrics.}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="citation-ris" class="level2">
 <h2 class="anchored" data-anchor-id="citation-ris">Citation: RIS</h2>
@@ -1152,29 +1151,28 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="in">  volume     = {88},</span></span>
 <span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="in">  pages      = {101610},</span></span>
 <span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="in">  url        = {https://www.sciencedirect.com/science/article/pii/S016740481830854X},</span></span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="in">  abstract   = {Today, organizations must deal with a plethora of IT security threats and to ensure smooth and uninterrupted business operations, firms are challenged to predict the volume of IT security vulnerabilities and allocate resources for fixing them. This challenge requires decision makers to assess which system or software packages are prone to vulnerabilities, how many post-release vulnerabilities can be expected to occur during a certain period of time, and what impact exploits might have. Substantial research has been dedicated to techniques that analyze source code and detect security vulnerabilities. However, only limited research has focused on forecasting security vulnerabilities that are detected and reported after the release of software. To address this shortcoming, we apply established methodologies which are capable of forecasting events exhibiting specific time series characteristics of security vulnerabilities, i.e., rareness of occurrence, volatility, non-stationarity, and seasonality. Based on a dataset taken from the National Vulnerability Database (NVD), we use the Mean Absolute Error (MAE) and Root Mean Square Error (RMSE) to measure the forecasting accuracy of single, double, and triple exponential smoothing methodologies, Croston’s methodology, ARIMA, and a neural network-based approach. We analyze the impact of the applied forecasting methodology on the prediction accuracy with regard to its robustness along the dimensions of the examined system and software package “operating systems”, “browsers” and “office solutions” and the applied metrics. To the best of our knowledge, this study is the first to analyze the effect of forecasting methodologies and to apply metrics that are suitable in this context. Our results show that the optimal forecasting methodology depends on the software or system package, as some methodologies perform poorly in the context of IT security vulnerabilities, that absolute metrics can cover the actual prediction error precisely, and that the prediction accuracy is robust within the two applied forecasting-error metrics.},</span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="in">  news_announced = {2026-02-22}</span></span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="in">  abstract   = {Today, organizations must deal with a plethora of IT security threats and to ensure smooth and uninterrupted business operations, firms are challenged to predict the volume of IT security vulnerabilities and allocate resources for fixing them. This challenge requires decision makers to assess which system or software packages are prone to vulnerabilities, how many post-release vulnerabilities can be expected to occur during a certain period of time, and what impact exploits might have. Substantial research has been dedicated to techniques that analyze source code and detect security vulnerabilities. However, only limited research has focused on forecasting security vulnerabilities that are detected and reported after the release of software. To address this shortcoming, we apply established methodologies which are capable of forecasting events exhibiting specific time series characteristics of security vulnerabilities, i.e., rareness of occurrence, volatility, non-stationarity, and seasonality. Based on a dataset taken from the National Vulnerability Database (NVD), we use the Mean Absolute Error (MAE) and Root Mean Square Error (RMSE) to measure the forecasting accuracy of single, double, and triple exponential smoothing methodologies, Croston’s methodology, ARIMA, and a neural network-based approach. We analyze the impact of the applied forecasting methodology on the prediction accuracy with regard to its robustness along the dimensions of the examined system and software package “operating systems”, “browsers” and “office solutions” and the applied metrics. To the best of our knowledge, this study is the first to analyze the effect of forecasting methodologies and to apply metrics that are suitable in this context. Our results show that the optimal forecasting methodology depends on the software or system package, as some methodologies perform poorly in the context of IT security vulnerabilities, that absolute metrics can cover the actual prediction error precisely, and that the prediction accuracy is robust within the two applied forecasting-error metrics.}</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: RIS</span></span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="in">TY  - JOUR</span></span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Yasasin, Emrah</span></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Prester, Julian</span></span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Wagner, Gerit</span></span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Schryen, Guido</span></span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="in">TI  - Forecasting IT security vulnerabilities – An empirical analysis</span></span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="in">T2  - Computers &amp; Security</span></span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="in">PY  - 2020</span></span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="in">VL  - 88</span></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="in">SP  - 101610</span></span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="in">DO  - 10.1016/J.COSE.2019.101610</span></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="in">UR  - https://www.sciencedirect.com/science/article/pii/S016740481830854X</span></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="in">ER  - </span></span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: RIS</span></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="in">TY  - JOUR</span></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Yasasin, Emrah</span></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Prester, Julian</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Wagner, Gerit</span></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Schryen, Guido</span></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a><span class="in">TI  - Forecasting IT security vulnerabilities – An empirical analysis</span></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="in">T2  - Computers &amp; Security</span></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="in">PY  - 2020</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="in">VL  - 88</span></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="in">SP  - 101610</span></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="in">DO  - 10.1016/J.COSE.2019.101610</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="in">UR  - https://www.sciencedirect.com/science/article/pii/S016740481830854X</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="in">ER  - </span></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

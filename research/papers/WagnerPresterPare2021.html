@@ -114,15 +114,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -136,6 +136,17 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -145,17 +156,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -527,9 +527,8 @@ Wagner, G., Prester, J., &amp; Paré, G. (2021). Exploring the boundaries and pr
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">number</span>     = {4},</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span>      = {101694},</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>        = {https://www.sciencedirect.com/science/article/pii/S096386872100041X},</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">abstract</span>   = {Digital platforms for knowledge work (DPKW), such as Upwork, Freelancer, and Fiverr, connect clients with millions of workers for a range of knowledge work services, including app development, graphic design, and data analytics. Research on this emergent phenomenon has recently gained traction in terms of publication volume and research diversity. Focusing on the contributions of information systems research, we conducted a literature review to distinguish papers on DPKW from related types of digital platforms, to synthesize what we know about knowledge work on DPKW, and to guide future research. Based on a comprehensive literature search, we derived five boundary conditions, which constitute our definition of DPKW: digitality, value network paradigm, centralized governance, contractual work, and knowledge work. We further developed a conceptual process framework of the constituent processes of DPKW. With this framework, we elaborate on an established process model to distinguish the three macro­level processes of matching, contracting, and executing. We further examined micro­level processes suggested in extant research based on a process linking approach in order to understand how they synchronically instantiate each macro­level process. Emphasizing the significance of the micro­ and macro­level processes and the emergent stage of the literature on DPKW, we offer an agenda for future research and outline implications for practice.},</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">news_announced</span> = {2026-02-22}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">abstract</span>   = {Digital platforms for knowledge work (DPKW), such as Upwork, Freelancer, and Fiverr, connect clients with millions of workers for a range of knowledge work services, including app development, graphic design, and data analytics. Research on this emergent phenomenon has recently gained traction in terms of publication volume and research diversity. Focusing on the contributions of information systems research, we conducted a literature review to distinguish papers on DPKW from related types of digital platforms, to synthesize what we know about knowledge work on DPKW, and to guide future research. Based on a comprehensive literature search, we derived five boundary conditions, which constitute our definition of DPKW: digitality, value network paradigm, centralized governance, contractual work, and knowledge work. We further developed a conceptual process framework of the constituent processes of DPKW. With this framework, we elaborate on an established process model to distinguish the three macro­level processes of matching, contracting, and executing. We further examined micro­level processes suggested in extant research based on a process linking approach in order to understand how they synchronically instantiate each macro­level process. Emphasizing the significance of the micro­ and macro­level processes and the emergent stage of the literature on DPKW, we offer an agenda for future research and outline implications for practice.}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="citation-ris" class="level2">
 <h2 class="anchored" data-anchor-id="citation-ris">Citation: RIS</h2>
@@ -1169,29 +1168,28 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="in">  number     = {4},</span></span>
 <span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="in">  pages      = {101694},</span></span>
 <span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="in">  url        = {https://www.sciencedirect.com/science/article/pii/S096386872100041X},</span></span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="in">  abstract   = {Digital platforms for knowledge work (DPKW), such as Upwork, Freelancer, and Fiverr, connect clients with millions of workers for a range of knowledge work services, including app development, graphic design, and data analytics. Research on this emergent phenomenon has recently gained traction in terms of publication volume and research diversity. Focusing on the contributions of information systems research, we conducted a literature review to distinguish papers on DPKW from related types of digital platforms, to synthesize what we know about knowledge work on DPKW, and to guide future research. Based on a comprehensive literature search, we derived five boundary conditions, which constitute our definition of DPKW: digitality, value network paradigm, centralized governance, contractual work, and knowledge work. We further developed a conceptual process framework of the constituent processes of DPKW. With this framework, we elaborate on an established process model to distinguish the three macro­level processes of matching, contracting, and executing. We further examined micro­level processes suggested in extant research based on a process linking approach in order to understand how they synchronically instantiate each macro­level process. Emphasizing the significance of the micro­ and macro­level processes and the emergent stage of the literature on DPKW, we offer an agenda for future research and outline implications for practice.},</span></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="in">  news_announced = {2026-02-22}</span></span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="in">  abstract   = {Digital platforms for knowledge work (DPKW), such as Upwork, Freelancer, and Fiverr, connect clients with millions of workers for a range of knowledge work services, including app development, graphic design, and data analytics. Research on this emergent phenomenon has recently gained traction in terms of publication volume and research diversity. Focusing on the contributions of information systems research, we conducted a literature review to distinguish papers on DPKW from related types of digital platforms, to synthesize what we know about knowledge work on DPKW, and to guide future research. Based on a comprehensive literature search, we derived five boundary conditions, which constitute our definition of DPKW: digitality, value network paradigm, centralized governance, contractual work, and knowledge work. We further developed a conceptual process framework of the constituent processes of DPKW. With this framework, we elaborate on an established process model to distinguish the three macro­level processes of matching, contracting, and executing. We further examined micro­level processes suggested in extant research based on a process linking approach in order to understand how they synchronically instantiate each macro­level process. Emphasizing the significance of the micro­ and macro­level processes and the emergent stage of the literature on DPKW, we offer an agenda for future research and outline implications for practice.}</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: RIS</span></span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="in">TY  - JOUR</span></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Wagner, Gerit</span></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Prester, Julian</span></span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Paré, Guy</span></span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="in">TI  - Exploring the boundaries and processes of digital platforms for knowledge work: A review of information systems research</span></span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="in">T2  - The Journal of Strategic Information Systems</span></span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="in">PY  - 2021</span></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="in">VL  - 30</span></span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="in">IS  - 4</span></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="in">SP  - 101694</span></span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a><span class="in">DO  - 10.1016/J.JSIS.2021.101694</span></span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a><span class="in">UR  - https://www.sciencedirect.com/science/article/pii/S096386872100041X</span></span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a><span class="in">ER  - </span></span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation: RIS</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="in">TY  - JOUR</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Wagner, Gerit</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Prester, Julian</span></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="in">AU  - Paré, Guy</span></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="in">TI  - Exploring the boundaries and processes of digital platforms for knowledge work: A review of information systems research</span></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="in">T2  - The Journal of Strategic Information Systems</span></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="in">PY  - 2021</span></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="in">VL  - 30</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="in">IS  - 4</span></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="in">SP  - 101694</span></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="in">DO  - 10.1016/J.JSIS.2021.101694</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a><span class="in">UR  - https://www.sciencedirect.com/science/article/pii/S096386872100041X</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a><span class="in">ER  - </span></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
