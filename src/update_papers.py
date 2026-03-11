@@ -95,6 +95,7 @@ FIELDS_TO_STRIP_FOR_REFERENCES = {
     "author_copy_file",
     "author+an:orcid",
     "colrev.pubmed.pubmedid",
+    "news_announced",
 }
 
 
