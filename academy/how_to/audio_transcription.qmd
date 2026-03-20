@@ -7,6 +7,6 @@ Transcribe audio with whisper
 ```sh
 docker run --rm \
   -v "$PWD":/data \
-  ghcr.io/ggerganov/whisper.cpp:latest \
+  ghcr.io/ggerganov/whisper.cpp:main \
   ./main -f /data/input_audio.mp3 -otxt -l en
 ```
