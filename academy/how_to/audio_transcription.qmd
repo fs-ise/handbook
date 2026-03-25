@@ -4,9 +4,20 @@ title: Audio transcription
 
 Transcribe audio with whisper
 
+See [ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)
+
 ```sh
-docker run --rm \
-  -v "$PWD":/data \
+docker run -it --rm \
+  --entrypoint /bin/bash \
   ghcr.io/ggerganov/whisper.cpp:main \
-  ./main -f /data/input_audio.mp3 -otxt -l en
+  -lc 'pwd; ls -la; echo; command -v whisper-cli || true; echo; find / -maxdepth 4 \( -name whisper-cli -o -name main \) 2>/dev/null'
+
+docker run -it --rm \
+    -v "$PWD":/data   \
+    -v "$PWD/models":/models \
+    ghcr.io/ggerganov/whisper.cpp:main  \
+    "/app/build/bin/whisper-cli \
+    -m /models/ggml-base.en.bin \
+    -f /data/input_audio.wav \
+    -of /data/input_audio -otxt -l en"
 ```
