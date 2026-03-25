@@ -1,0 +1,88 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgffor}
+\pagestyle{empty}
+
+\definecolor{helpgreen}{RGB}{76,175,80}
+\definecolor{helpyellow}{RGB}{255,235,59}
+\definecolor{helpred}{RGB}{244,67,54}
+\definecolor{helpglue}{RGB}{220,220,220}
+
+% Small group icons (pdfLaTeX-compatible)
+\newcommand{\groupicon}[1]{%
+	\begin{tikzpicture}[baseline=-0.5ex, scale=0.18]
+		\foreach \x in {1,...,#1} {
+			\fill[black] (\x*1.5,0) circle (0.45);
+		}
+	\end{tikzpicture}%
+}
+
+% One help tag for card index #1
+\newcommand{\helptag}[1]{%
+	% Compute the group numbers
+	\pgfmathtruncatemacro{\groupTwo}{(#1+1)/2}
+	\pgfmathtruncatemacro{\groupThree}{(#1+2)/3}
+	\pgfmathtruncatemacro{\groupFour}{(#1+3)/4}
+	
+	\begin{tikzpicture}
+		\def\w{4cm}
+		\def\h{5cm}
+		\def\g{3cm}
+		\def\xsep{2.15cm}
+		
+		% FIRST FIELD: YELLOW
+		\fill[helpyellow] (0,0) rectangle (\w,\h);
+		\draw (0,0) rectangle (\w,\h);
+		
+		% Group icons | numbers, aligned at separator
+		\node[black, font=\bfseries\large, anchor=center] at (\xsep,0.75*\h) {|};
+		\node[black, font=\bfseries\large, anchor=east]   at (\xsep-0.12cm,0.75*\h) {\groupicon{2}};
+		\node[black, font=\bfseries\large, anchor=west]   at (\xsep+0.12cm,0.75*\h) {\groupTwo};
+		
+		\node[black, font=\bfseries\large, anchor=center] at (\xsep,0.55*\h) {|};
+		\node[black, font=\bfseries\large, anchor=east]   at (\xsep-0.12cm,0.55*\h) {\groupicon{3}};
+		\node[black, font=\bfseries\large, anchor=west]   at (\xsep+0.12cm,0.55*\h) {\groupThree};
+		
+		\node[black, font=\bfseries\large, anchor=center] at (\xsep,0.35*\h) {|};
+		\node[black, font=\bfseries\large, anchor=east]   at (\xsep-0.12cm,0.35*\h) {\groupicon{4}};
+		\node[black, font=\bfseries\large, anchor=west]   at (\xsep+0.12cm,0.35*\h) {\groupFour};
+		
+		% Instruction
+		\node[black, font=\small, align=center]
+		at (0.5*\w,0.15*\h) {Find others\\with the same number};
+		
+		% SECOND FIELD: GREEN
+		\fill[helpgreen] (\w,0) rectangle (2*\w,\h);
+		\draw (\w,0) rectangle (2*\w,\h);
+		
+		% RED
+		\fill[helpred] (2*\w,0) rectangle (3*\w,\h);
+		\draw (2*\w,0) rectangle (3*\w,\h);
+		
+		% GLUE FLAP
+		\fill[helpglue] (3*\w,0) rectangle (3*\w+\g,\h);
+		\draw[dashed] (3*\w,0) rectangle (3*\w+\g,\h);
+		
+		% Fold line
+		\draw[thick,dotted] (3*\w,0) -- (3*\w,\h);
+		
+		% Glue label
+		\node[rotate=90] at (3*\w+0.5*\g,0.5*\h) {\small glue};
+	\end{tikzpicture}%
+}
+
+\begin{document}
+	\centering
+	
+	% 60 tags total
+	\foreach \i in {1,...,60} {%
+		\helptag{\i}
+		
+		\ifnum\i<60
+		\vspace{0.8cm}
+		\fi
+	}
+	
+\end{document}
