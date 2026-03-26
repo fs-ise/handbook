@@ -475,21 +475,31 @@ def _format_publication_details(record: Dict[str, Any]) -> Tuple[str, str, str]:
     """Return (outlet, details, combined) publication metadata strings."""
     outlet = get_field(record, "outlet", "journal", "booktitle", default="").strip()
 
+    year = get_field(record, "year", default="").strip()
     volume = get_field(record, "volume", default="").strip()
     number = get_field(record, "number", default="").strip()
     pages = get_field(record, "pages", default="").strip()
 
-    details = ""
+    detail_parts: List[str] = []
+    if year:
+        detail_parts.append(year)
+
+    vol_issue = ""
     if volume and number:
-        details = f"{volume}({number})"
+        vol_issue = f"{volume}({number})"
     elif volume:
-        details = volume
+        vol_issue = volume
     elif number:
-        details = f"Issue {number}"
+        vol_issue = f"Issue {number}"
 
     if pages:
         page_part = pages.replace("--", "–")
-        details = f"{details}, {page_part}" if details else page_part
+        vol_issue = f"{vol_issue}, {page_part}" if vol_issue else page_part
+
+    if vol_issue:
+        detail_parts.append(vol_issue)
+
+    details = " · ".join(detail_parts)
 
     combined = ""
     if outlet and details:
