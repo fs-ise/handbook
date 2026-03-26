@@ -28,7 +28,7 @@ import json
 import html
 import shutil
 from pathlib import Path
-from typing import List, Iterable, Dict, Any, Optional
+from typing import List, Iterable, Dict, Any, Optional, Tuple
 
 import colrev.loader.load_utils as load_utils
 import colrev.writer.write_utils as write_utils
@@ -469,6 +469,38 @@ def build_authors_metadata(record: Dict[str, Any]) -> List[Dict[str, str]]:
     return authors_meta
 
 
+
+
+def _format_publication_details(record: Dict[str, Any]) -> Tuple[str, str, str]:
+    """Return (outlet, details, combined) publication metadata strings."""
+    outlet = get_field(record, "outlet", "journal", "booktitle", default="").strip()
+
+    volume = get_field(record, "volume", default="").strip()
+    number = get_field(record, "number", default="").strip()
+    pages = get_field(record, "pages", default="").strip()
+
+    details = ""
+    if volume and number:
+        details = f"{volume}({number})"
+    elif volume:
+        details = volume
+    elif number:
+        details = f"Issue {number}"
+
+    if pages:
+        page_part = pages.replace("--", "–")
+        details = f"{details}, {page_part}" if details else page_part
+
+    combined = ""
+    if outlet and details:
+        combined = f"{outlet} · {details}"
+    elif outlet:
+        combined = outlet
+    elif details:
+        combined = details
+
+    return outlet, details, combined
+
 def build_yaml_header(record: Dict[str, Any]) -> str:
     """
     Build a YAML header string from a CoLRev record.
@@ -513,7 +545,7 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
 
     # new fields
     journal_name = get_field(record, "journal", "journal.name", default="").strip()
-    outlet = get_field(record, "outlet", "journal", "booktitle", default="").strip()
+    outlet, publication_details, publication_header = _format_publication_details(record)
     author = get_field(record, "author", default="").strip()
 
     # fulltext / author copy info for availability flag
@@ -565,6 +597,15 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
         )
     if outlet:
         yaml_lines.append(f"outlet: {json.dumps(outlet, ensure_ascii=False)}")
+    if publication_details:
+        yaml_lines.append(
+            f"publication_details: {json.dumps(publication_details, ensure_ascii=False)}"
+        )
+    if publication_header:
+        yaml_lines.append(
+            f"publication_header: {json.dumps(publication_header, ensure_ascii=False)}"
+        )
+        yaml_lines.append(f"subtitle: {json.dumps(publication_header, ensure_ascii=False)}")
 
     # keep flat author string for simple use
     if author:
