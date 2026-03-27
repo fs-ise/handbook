@@ -645,11 +645,14 @@ def build_yaml_header(record: Dict[str, Any]) -> str:
     yaml_lines.append(
         f"self_archiving_possible_2y: {'true' if self_archiving_possible_2y else 'false'}"
     )
-
     yaml_lines.append(
-        "format:\n  html:\n    include-after-body: ../../assets/metrics-scripts.html"
+        "format:\n"
+        "  html:\n"
+        "    title-block: false\n"
+        "    page-layout: full\n"
+        "    include-before-body: ../../_partials/header.html\n"
+        "    include-after-body: ../../assets/metrics-scripts.html"
     )
-
     yaml_lines.append("---")
     yaml_lines.append("")  # blank line before body
 
@@ -779,7 +782,7 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     summary_block = ""
     if abstract:
         summary_block = (
-            "\n\n# Summary\n\n::: { .justify }\n\n"
+            "\n\n# Abstract\n\n::: { .justify }\n\n"
             f"{abstract}\n\n:::\n"
         )
     if buttons_block:
@@ -879,7 +882,7 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     if apa_citation:
         escaped_citation = html.escape(apa_citation)
         parts.append(
-            "## Citation (APA style)\n\n"
+            "## Citation (APA)\n\n"
             '<div class="apa-citation">\n'
             '<p style="text-indent:-2.5em; margin-left:2.5em;">\n'
             f"{escaped_citation}\n"
