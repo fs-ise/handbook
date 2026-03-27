@@ -116,6 +116,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -136,17 +147,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -402,7 +402,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -410,10 +410,10 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a>
   <ul class="collapse">
   <li><a href="#open-access-pdf" id="toc-open-access-pdf" class="nav-link" data-scroll-target="#open-access-pdf">Open access PDF</a></li>
-  <li><a href="#citation-apa-style" id="toc-citation-apa-style" class="nav-link" data-scroll-target="#citation-apa-style">Citation (APA style)</a></li>
+  <li><a href="#citation-apa" id="toc-citation-apa" class="nav-link" data-scroll-target="#citation-apa">Citation (APA)</a></li>
   <li><a href="#citation-bibtex" id="toc-citation-bibtex" class="nav-link" data-scroll-target="#citation-bibtex">Citation: BibTeX</a></li>
   <li><a href="#citation-ris" id="toc-citation-ris" class="nav-link" data-scroll-target="#citation-ris">Citation: RIS</a></li>
   </ul></li>
@@ -421,8 +421,108 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/papers/OuimetWagnerRaymondEtAl2020.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
+<div id="custom-header-container"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const original = document.getElementById("title-block-header");
+  const target = document.getElementById("custom-header-container");
+
+  if (!original || !target) return;
+
+  // Remove keywords block
+  const keywords = original.querySelector(".keywords");
+  if (keywords) {
+    keywords.remove();
+  }
+
+  const meta = original.querySelector(".quarto-title-meta");
+
+  // Remove "Published"
+  if (meta) {
+    Array.from(meta.children).forEach(block => {
+      const heading = block.querySelector(".quarto-title-meta-heading");
+      if (heading && heading.textContent.trim() === "Published") {
+        block.remove();
+      }
+    });
+  }
+
+  // Extract DOI
+  let doiBlock = null;
+
+  if (meta) {
+    Array.from(meta.children).forEach(block => {
+      const heading = block.querySelector(".quarto-title-meta-heading");
+      if (heading && heading.textContent.trim().toLowerCase() === "doi") {
+        doiBlock = block;
+        block.remove();
+      }
+    });
+  }
+
+  // Clean meta + determine authors node
+  let authorsNode = meta;
+
+  if (meta) {
+    const blocks = Array.from(meta.children);
+
+    // Remove empty blocks
+    blocks.forEach(block => {
+      const contents = block.querySelector(".quarto-title-meta-contents");
+      if (!contents || contents.textContent.trim() === "") {
+        block.remove();
+      }
+    });
+
+    const remainingBlocks = Array.from(meta.children);
+
+    // If only authors remain → unwrap
+    if (remainingBlocks.length === 1) {
+      const onlyBlock = remainingBlocks[0];
+      const contents = onlyBlock.querySelector(".quarto-title-meta-contents");
+
+      if (contents) {
+        meta.replaceWith(contents);
+        authorsNode = contents;
+      }
+    }
+
+    // If nothing remains → remove entirely
+    if (meta.children.length === 0) {
+      meta.remove();
+      authorsNode = null;
+    }
+  }
+
+  // Move authors directly under title
+  const quartoTitle = original.querySelector(".quarto-title");
+  const h1 = quartoTitle?.querySelector("h1.title");
+
+  if (authorsNode && quartoTitle && h1) {
+    h1.insertAdjacentElement("afterend", authorsNode);
+  }
+
+  // Move full header into custom container
+  target.appendChild(original);
+
+  // Append DOI at bottom of header
+  if (doiBlock) {
+    doiBlock.classList.add("pub-doi");
+    original.appendChild(doiBlock);
+  }
+
+  // ORCID links → open in new tab
+  const orcidLinks = original.querySelectorAll(".quarto-title-author-orcid");
+  orcidLinks.forEach(link => {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
+
+});
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -436,7 +536,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     <div>
     <div class="quarto-title-meta-heading">Authors</div>
@@ -477,8 +577,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<section id="summary" class="level1">
-<h1>Summary</h1>
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
 <div class="justify">
 <p>Background The COVID-19 crisis has drastically changed care delivery with teleconsultation platforms experiencing substantial spikes in demand, helping patients and care providers avoid infections and maintain health care services. Beyond the current pandemic, teleconsultation is considered a significant opportunity to address persistent health system challenges, including accessibility, continuity, and cost of care, while ensuring quality. Objective This study aims at identifying the determinants of patients’ intention to continue using a teleconsultation platform. It extends prior research on information technology use continuance intention and teleconsultation services. Methods Data was collected in November 2018 and May 2019 with Canadian patients who had access to a teleconsultation platform. Measures included patients’ intention to continue their use; teleconsultation usefulness; teleconsultation quality; patients’ trust toward the digital platform, its provider. and health care professionals; and confirmation of patients’ expectations toward teleconsultation. We used structural equation modeling employing the partial least squares component-based technique to test our research model and hypotheses. Results We analyzed a sample of 178 participants who had used teleconsultation services. Our findings revealed that confirmation of expectations had the greatest influence on continuance intention (total effects=0.722; P&lt;.001), followed by usefulness (total effects=0.587; P&lt;.001) and quality (total effects=0.511; P&lt;.001). Usefulness (β=.60; P&lt;.001) and quality (β=.34; P=.01) had direct effects on the dependent variable. The confirmation of expectations had direct effects both on usefulness (β=.56; P&lt;.001) and quality (β=.75; P&lt;.001) in addition to having an indirect effect on usefulness (indirect effects=0.282; P&lt;.001). Last, quality directly influenced usefulness (β=.34; P=.002) and trust (β=.88; P&lt;.001). Trust does not play a role in the context under study. Conclusions Teleconsultation is central to care going forward, and it represents a significant lever for an improved, digital delivery of health care in the future. We believe that our findings will help drive long-term teleconsultation adoption and use, including in the aftermath of the current COVID-19 crisis, so that general care improvement and greater preparedness for exceptional situations can be achieved.</p>
 </div>
@@ -512,8 +612,8 @@ This browser does not support PDFs. Please use the button above to download the 
 
 </div>
 </section>
-<section id="citation-apa-style" class="level2">
-<h2 class="anchored" data-anchor-id="citation-apa-style">Citation (APA style)</h2>
+<section id="citation-apa" class="level2">
+<h2 class="anchored" data-anchor-id="citation-apa">Citation (APA)</h2>
 <div class="apa-citation">
 <p style="text-indent:-2.5em; margin-left:2.5em;">
 Grenier Ouimet, A., Wagner, G., Raymond, L., &amp; Pare, G. (2020). Investigating Patients’ Intention to Continue Using Teleconsultation to Anticipate Postcrisis Momentum: Survey Study. <em>Journal of Medical Internet Research</em> 22(11), e22081. https://doi.org/10.2196/22081
