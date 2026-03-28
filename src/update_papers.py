@@ -681,6 +681,12 @@ def build_body(record: Dict[str, Any], template_body: str) -> str:
     """
     abstract = get_field(record, "abstract", default="").strip()
 
+    # Replace newlines with HTML breaks FIRST
+    abstract = abstract.replace("\\n", "\n\n")
+
+    # Then escape everything EXCEPT the <br> tags
+    abstract = html.escape(abstract).replace("&lt;br&gt;", "<br>")
+
     # Link button from DOI/URL (landing page)
     doi_raw = get_field(record, "doi", default="").strip()
     url_raw = get_field(record, "url", default="").strip()
