@@ -116,17 +116,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -136,6 +125,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -149,15 +149,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-objective.callout {
+div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
-div.callout-objective.callout-style-default > .callout-header {
+div.callout-resource.callout-style-default > .callout-header {
   background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -578,7 +578,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
 <div class="justify">
-<p>Although off‐the‐shelf enterprise systems (ES) have been widely adopted in organisations, the extant literature repeatedly documents ES failures caused by misfits between organisational processes and the ES. Although some misfits can be identified early in the ES lifecycle, others emerge in the onward and upward phase (i.e., after the implementation) and, hence, must be resolved reactively. Prior research on misfits and resolution strategies has primarily focused on the implementation phase, often assuming that close‐to‐perfect information on the misfit’s nature and characteristics is available. However, no study has examined how to effectively complete a shared diagnosis and resolution of misfits when diverging individual user perceptions are taken as the starting point. Such situations may be particularly pronounced in pluralistic organisations, where a variety of interdependent processes and potentially competing perceptions of processes are prevalent. The main objective of this study is to address this gap. To this end, we propose a pragmatic method for the diagnosis and resolution of misfits between organisational processes and enterprise systems, which builds on an actionable conceptualization of misfits. This method builds on theoretical concepts of affordances, affordance actualization, user participation, and change agentry. To demonstrate the feasibility and effectiveness of the proposed method, we conducted an action research study in a university hospital. Our analysis focused on a specific misfit involving the hospital’s ES‐supported clinical processes. The findings suggest that the method effectively diagnoses and resolves misfits and optimises the resources required for their resolution through efficient management of user participation. We conclude with a discussion of the theoretical and practical contributions of our work.</p>
+<p>Although off‐the‐shelf enterprise systems (ES) have been widely adopted in organisations, the extant literature repeatedly documents ES failures caused by misfits between organisational processes and the ES. Although some misfits can be identified early in the ES lifecycle, others emerge in the onward and upward phase (i.e., after the implementation) and, hence, must be resolved reactively. Prior research on misfits and resolution strategies has primarily focused on the implementation phase, often assuming that close‐to‐perfect information on the misfit's nature and characteristics is available. However, no study has examined how to effectively complete a shared diagnosis and resolution of misfits when diverging individual user perceptions are taken as the starting point. Such situations may be particularly pronounced in pluralistic organisations, where a variety of interdependent processes and potentially competing perceptions of processes are prevalent. The main objective of this study is to address this gap. To this end, we propose a pragmatic method for the diagnosis and resolution of misfits between organisational processes and enterprise systems, which builds on an actionable conceptualization of misfits. This method builds on theoretical concepts of affordances, affordance actualization, user participation, and change agentry. To demonstrate the feasibility and effectiveness of the proposed method, we conducted an action research study in a university hospital. Our analysis focused on a specific misfit involving the hospital's ES‐supported clinical processes. The findings suggest that the method effectively diagnoses and resolves misfits and optimises the resources required for their resolution through efficient management of user participation. We conclude with a discussion of the theoretical and practical contributions of our work.</p>
 </div>
 <div class="text-center my-3">
 <p><a class="btn btn-sm btn-outline-secondary me-2" href="https://doi.org/10.1111/ISJ.12433" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a></p>

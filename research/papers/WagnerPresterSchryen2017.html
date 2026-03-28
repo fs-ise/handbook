@@ -116,15 +116,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -138,17 +138,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -158,6 +147,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -571,7 +571,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
 <div class="justify">
-<p>Design science is a fundamental research stream that contends its position in the information systems discipline. While ongoing debates address the relative importance of design science contributions in the information systems community, insights into the scientific impact of design science research (DSR) are missing and this lack of understanding arguably poses challenges to an informed discourse. To identify the most influential papers and those factors that explain their scientific impact, this paper presents an exploratory study of the scientific impact of DSR papers published in the AIS Senior Scholars’ Basket of Journals. We uncover the current DSR landscape by taking stock of influential papers and theories and develop a model to explain the scientific impact of DSR papers. Our findings show that scientific impact is significantly explained by theorization and novelty. We discuss how the implications of our work can be projected on the overarching discourse on DSR.</p>
+<p>Design science is a fundamental research stream that contends its position in the information systems discipline. While ongoing debates address the relative importance of design science contributions in the information systems community, insights into the scientific impact of design science research (DSR) are missing and this lack of understanding arguably poses challenges to an informed discourse. To identify the most influential papers and those factors that explain their scientific impact, this paper presents an exploratory study of the scientific impact of DSR papers published in the AIS Senior Scholars' Basket of Journals. We uncover the current DSR landscape by taking stock of influential papers and theories and develop a model to explain the scientific impact of DSR papers. Our findings show that scientific impact is significantly explained by theorization and novelty. We discuss how the implications of our work can be projected on the overarching discourse on DSR.</p>
 </div>
 <div class="text-center my-3">
 <p><a class="btn btn-sm btn-outline-secondary me-2" href="http://aisel.aisnet.org/icis2017/ResearchMethods/Presentations/8" target="_blank" role="button"> <i class="bi bi-box-arrow-up-right"></i> Article / DOI link </a> <a class="btn btn-sm btn-outline-secondary me-2" href="../../data/papers/WagnerPresterSchryen2017.pdf" target="_blank" role="button"> <i class="bi bi-file-earmark-text"></i> Author copy </a></p>
