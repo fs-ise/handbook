@@ -116,15 +116,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -138,17 +138,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -158,6 +147,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -625,16 +625,16 @@ Wagner, G., Thurner, L., Tang, C., &amp; Ott, S. (2026). Teaching Python package
 <section id="citation-bibtex" class="level2">
 <h2 class="anchored" data-anchor-id="citation-bibtex">Citation: BibTeX</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">WagnerThurnerTangEtAl026</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>      = {Teaching Python package development: A structured course with learning resources and an instructor's guide},</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span>        = {10.21105/JOSE.00292},</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>     = {Wagner, Gerit and Thurner, Laureen and Tang, Carlo and Ott, Stella},</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">journal</span>    = {Journal of Open Source Education},</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>       = {2026},</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">volume</span>     = {9},</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">number</span>     = {97},</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span>      = {292},</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>        = {https://jose.theoj.org/papers/10.21105/jose.00292},</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">abstract</span>   = {Although there are many open online courses aimed at teaching Python programming, few educational resources focus on the specific skills required for understanding and developing Python packages. Existing materials typically emphasize programming basics, but the development of Python packages, an essential skill for contributing to the open source community requires deeper knowledge of packaging infrastructure, dependency management, development environments, and best coding practices. This gap leaves learners unprepared for the practicalities of structuring packages, managing dependencies, implementing version control, and ensuring code quality.<span class="ch">\nTo</span> address this, we present educational resources designed to teach Python package development. Our materials include a course plan, detailed syllabus, slides, and practice notebooks that cover introductory sessions on Git and Python, an initial session on identifying project topics, a session on best practices, and a code review session. Additionally, we provide a detailed playbook for instructors to guide course delivery. In the course project, students develop Python packages that extend an existing open source system through a plugin architecture. This approach allows them to implement a standalone package from scratch while integrating their work into a functioning ecosystem.<span class="ch">\nThe</span> course materials were developed as part of the “Open Source Project” offered by the Digital Work Lab at Otto-Friedrich-Universität Bamberg. Informed by iterations and refinements over four semesters, these resources provide a well-structured and engaging learning experience. The course repository consists of a landing page, featuring course pages, instructor notes, slides, and practice notebooks. A preconfigured development setup is offered for GitHub Codespaces, ensuring that the required development environment is preinstalled. The course materials are hosted on GitHub and available for reuse and adaptation.},</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span>        = {10.21105/JOSE.00292}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>      = {Teaching Python package development: A structured course with learning resources and an instructor's guide},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>       = {2026},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">volume</span>     = {9},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">number</span>     = {97},</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span>      = {292},</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>        = {https://jose.theoj.org/papers/10.21105/jose.00292},</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">abstract</span>   = {Although there are many open online courses aimed at teaching Python programming, few educational resources focus on the specific skills required for understanding and developing Python packages. Existing materials typically emphasize programming basics, but the development of Python packages, an essential skill for contributing to the open source community requires deeper knowledge of packaging infrastructure, dependency management, development environments, and best coding practices. This gap leaves learners unprepared for the practicalities of structuring packages, managing dependencies, implementing version control, and ensuring code quality.<span class="ch">\nTo</span> address this, we present educational resources designed to teach Python package development. Our materials include a course plan, detailed syllabus, slides, and practice notebooks that cover introductory sessions on Git and Python, an initial session on identifying project topics, a session on best practices, and a code review session. Additionally, we provide a detailed playbook for instructors to guide course delivery. In the course project, students develop Python packages that extend an existing open source system through a plugin architecture. This approach allows them to implement a standalone package from scratch while integrating their work into a functioning ecosystem.<span class="ch">\nThe</span> course materials were developed as part of the “Open Source Project” offered by the Digital Work Lab at Otto-Friedrich-Universität Bamberg. Informed by iterations and refinements over four semesters, these resources provide a well-structured and engaging learning experience. The course repository consists of a landing page, featuring course pages, instructor notes, slides, and practice notebooks. A preconfigured development setup is offered for GitHub Codespaces, ensuring that the required development environment is preinstalled. The course materials are hosted on GitHub and available for reuse and adaptation.}</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="citation-ris" class="level2">
