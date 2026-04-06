@@ -78,17 +78,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -98,6 +87,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -677,17 +677,17 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<p>TODO: List additional infos and optional software TODO: List cloud services</p>
 <section id="workstation-setup" class="level2">
 <h2 class="anchored" data-anchor-id="workstation-setup">Workstation setup</h2>
-<p><a href="https://github.com/fs-ise/workstation-setup" target="_blank">workstation-setup</a></p>
-<p><strong>Workstation Stack</strong></p>
+<p>An ansible repository for the default workstation stack is available here:</p>
+<p>[<iconify-icon role="img" inline="" icon="fluent:cloud-sync-48-regular" style="color: white;" aria-label="Icon cloud-sync-48-regular from fluent Iconify.design set." title="Icon cloud-sync-48-regular from fluent Iconify.design set."></iconify-icon> <a href="https://github.com/fs-ise/workstation-setup" class="btn btn-primary btn-center" rel="noopener" target="_blank">workstation-setup</a></p>
+<p><strong>Workstation stack</strong></p>
 <ul>
 <li><strong>Base</strong> (Minimal Fedora, debloated GNOME)</li>
 <li><strong>Dev</strong> (Visual Studio Code, Git + LFS, Python, Docker, SSH)</li>
 <li><strong>Research &amp; Writing</strong> (Quarto, LaTeX, Pandoc tooling, Obsidian)</li>
 <li><strong>Documents &amp; Knowledge</strong> (Okular, PDF tools: OCR and GROBID, Recoll)</li>
-<li>**Sync* &amp; Backup* (Nextcloud, Vorta/Borg)</li>
+<li><strong>Sync &amp; Backup</strong> (Nextcloud, Vorta/Borg)</li>
 <li><strong>Productivity &amp; Media</strong> (Thunderbird, Chrome, GIMP, Audacity, OBS Studio)</li>
 <li><strong>Security</strong> (GnuPG, KeePassXC, ClamAV)</li>
 </ul>
@@ -698,14 +698,48 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <li><p><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/" target="_blank">VPN</a>: Some Services are only available via VPN or within the university network</p></li>
 <li><p><a href="https://dataimpulse.com/#pricing" target="_blank">Proxy servers</a>: Residential proxy server service</p></li>
 <li><p><a href="https://languagetool.org/de" target="_blank">LanguageTools</a>: Free Online Spellchecker (local setup: see academy)</p></li>
-<li><p>Mail</p></li>
-<li><p>Calendar permissions (set in Outlook)</p>
+<li><p>Mail, Calendar permissions (set in Outlook)</p>
 <ul>
 <li>Sharing calendars -&gt; You decide what the other person can see<br></li>
 <li>Permission settings -&gt; In your own calendar, click on “Eigenschaften” -&gt; “Berechtigungen”<br></li>
 </ul></li>
-<li><p><a href="../teaching/systems.html">Software for teaching</a></p></li>
-<li><p><a href="../research/systems.html">Sotware for research</a></p></li>
+<li><p><a href="https://github.com/apps/desktop" target="_blank">GitHub Desktop</a></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Potential extensions">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Potential extensions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://github.com/languagetool-org/languagetool" target="_blank">LanguageTools</a> - see <a href="https://chatgpt.com/c/69d35fd3-df94-8392-b094-1f0964a56c21">here</a></li>
+<li><a href="https://github.com/rclone/rclone" target="_blank">rclone</a> for Dropbox, GoogleDrive, etc.</li>
+<li>Local LLM setup, agentic, Thunderbird MCP …</li>
+<li>Citation manager (TBD: Git-based?)</li>
+<li>Reference extraction pipelines (Grobid/document)</li>
+<li>Jupyter Lab</li>
+<li>Venvs</li>
+<li>Rstudio</li>
+<li>Whisper</li>
+<li>TODO: integrate material from academy?</li>
+<li><a href="https://github.com/ISMAELMARTINEZ/teams-for-linux" target="_blank">Teams for Linux</a>?</li>
+</ul>
+<p>Custom scripts:</p>
+<ul>
+<li>CoLRev: document</li>
+<li>Labot ?</li>
+<li>Digital-tickler</li>
+<li>Boot checks</li>
+</ul>
+</div>
+</div>
+<ul>
+<li><a href="../teaching/systems.html">Software for teaching</a></li>
+<li><a href="../research/systems.html">Sotware for research</a></li>
 </ul>
 </section>
 <section id="cloud-services" class="level2">
