@@ -78,6 +78,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -109,17 +120,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 </style>
@@ -650,7 +650,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <ul>
   <li><a href="#workstation-setup" id="toc-workstation-setup" class="nav-link active" data-scroll-target="#workstation-setup">Workstation setup</a></li>
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
-  <li><a href="#mail" id="toc-mail" class="nav-link" data-scroll-target="#mail">Mail</a></li>
   <li><a href="#cloud-services" id="toc-cloud-services" class="nav-link" data-scroll-target="#cloud-services">Cloud services</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/workstation_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -686,11 +685,11 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <ul>
 <li><strong>Base</strong> (Minimal Fedora, debloated GNOME)</li>
 <li><strong>Dev</strong> (Visual Studio Code, Git + LFS, Python, Docker, SSH)</li>
-<li><strong>Research &amp; Writing</strong> (Obsidian, Quarto, LaTeX, Pandoc tooling)</li>
+<li><strong>Research &amp; Writing</strong> (Quarto, LaTeX, Pandoc tooling, Obsidian)</li>
 <li><strong>Documents &amp; Knowledge</strong> (Okular, PDF tools: OCR and GROBID, Recoll)</li>
-<li><strong>Sync</strong> (Nextcloud)</li>
-<li><strong>Media &amp; Productivity</strong> (GIMP, Audacity, OBS Studio, Xournal++)</li>
-<li><strong>Security</strong> (GnuPG, KeePassXC, ClamAV, Vorta/Borg)</li>
+<li>**Sync* &amp; Backup* (Nextcloud, Vorta/Borg)</li>
+<li><strong>Productivity &amp; Media</strong> (Thunderbird, Chrome, GIMP, Audacity, OBS Studio)</li>
+<li><strong>Security</strong> (GnuPG, KeePassXC, ClamAV)</li>
 </ul>
 </section>
 <section id="software" class="level2">
@@ -699,16 +698,14 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li><p><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/" target="_blank">VPN</a>: Some Services are only available via VPN or within the university network</p></li>
 <li><p><a href="https://dataimpulse.com/#pricing" target="_blank">Proxy servers</a>: Residential proxy server service</p></li>
 <li><p><a href="https://languagetool.org/de" target="_blank">LanguageTools</a>: Free Online Spellchecker (local setup: see academy)</p></li>
-<li><p><a href="../teaching/systems.html">Software for teaching</a></p></li>
-<li><p><a href="../research/systems.html">Sotware for research</a></p></li>
-</ul>
-</section>
-<section id="mail" class="level2">
-<h2 class="anchored" data-anchor-id="mail">Mail</h2>
-<p>Outlook: Calendar permissions:</p>
+<li><p>Mail</p></li>
+<li><p>Calendar permissions (set in Outlook)</p>
 <ul>
 <li>Sharing calendars -&gt; You decide what the other person can see<br></li>
 <li>Permission settings -&gt; In your own calendar, click on “Eigenschaften” -&gt; “Berechtigungen”<br></li>
+</ul></li>
+<li><p><a href="../teaching/systems.html">Software for teaching</a></p></li>
+<li><p><a href="../research/systems.html">Sotware for research</a></p></li>
 </ul>
 </section>
 <section id="cloud-services" class="level2">
@@ -722,10 +719,10 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Recording functionality</li>
 <li>Collaborate on files within a team</li>
 </ul></li>
-<li><p><a href="https://nuudel.digitalcourage.de/" target="_blank">Nuudel</a>: A Doodle replacement</p></li>
+<li><p><a href="https://www.microsoft.com/de-de/microsoft-365/business/scheduling-and-booking-app" target="_blank">Bookings</a>: Scheduling of individual appointments (based on availability)</p></li>
+<li><p><a href="https://nuudel.digitalcourage.de/" target="_blank">Nuudel</a>: Scheduling of group meetings (<a href="https://doodle.com/de/" target="_blank">Doodle</a> replacement])</p></li>
 <li><p><a href="https://intranet.neuro.polymtl.ca/computing-resources/youtube.html" target="_blank">Youtube procedure</a></p></li>
 </ul>
-<p>Booking</p>
 <!--
 
 [Zoom](https://www.uni-bamberg.de/its/dienstleistungen/tele/video/zoom/){target=_blank}| - Single-Sign-On-Url: ``uni-bamberg``<br>- Online service for web conferencing<br>- Teaching as Meetings or Webinars<br>- Recording functionality<br>- For events that exclusively involve members students of our university, please use [Teams](#teams) because of data security and privacy concerns |
