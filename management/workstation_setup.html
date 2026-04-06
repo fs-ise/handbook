@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Software overview – ISE Lab Handbook</title>
+<title>Workstation setup – ISE Lab Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,6 +78,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -98,17 +109,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -367,7 +367,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/systems_overview.html">Infrastructure</a></li><li class="breadcrumb-item"><a href="../management/software.html">Software overview</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/systems_overview.html">Infrastructure</a></li><li class="breadcrumb-item"><a href="../management/workstation_setup.html">Workstation setup</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -510,8 +510,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/software.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Software overview</span></a>
+  <a href="../management/workstation_setup.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Workstation setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -648,19 +648,20 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#machine-setup" id="toc-machine-setup" class="nav-link active" data-scroll-target="#machine-setup">Machine setup</a></li>
-  <li><a href="#outlook-calendar-permissions" id="toc-outlook-calendar-permissions" class="nav-link" data-scroll-target="#outlook-calendar-permissions">Outlook: Calendar permissions</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#workstation-setup" id="toc-workstation-setup" class="nav-link active" data-scroll-target="#workstation-setup">Workstation setup</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
+  <li><a href="#mail" id="toc-mail" class="nav-link" data-scroll-target="#mail">Mail</a></li>
+  <li><a href="#cloud-services" id="toc-cloud-services" class="nav-link" data-scroll-target="#cloud-services">Cloud services</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/software.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/workstation_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/systems_overview.html">Infrastructure</a></li><li class="breadcrumb-item"><a href="../management/software.html">Software overview</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/systems_overview.html">Infrastructure</a></li><li class="breadcrumb-item"><a href="../management/workstation_setup.html">Workstation setup</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Software overview</h1>
+<h1 class="title">Workstation setup</h1>
 </div>
 
 
@@ -677,69 +678,61 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>TODO: highlight what is (not) installed with ansible (workstation-setup)</p>
-</div>
-</div>
-<section id="machine-setup" class="level2">
-<h2 class="anchored" data-anchor-id="machine-setup">Machine setup</h2>
+<p>TODO: List additional infos and optional software TODO: List cloud services</p>
+<section id="workstation-setup" class="level2">
+<h2 class="anchored" data-anchor-id="workstation-setup">Workstation setup</h2>
+<p><a href="https://github.com/fs-ise/workstation-setup" target="_blank">workstation-setup</a></p>
+<p><strong>Workstation Stack</strong></p>
 <ul>
-<li><p><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/wlan/eduroam/" target="_blank">Eduroam</a>: Log-in with university credentials</p></li>
+<li><strong>Base</strong> (Minimal Fedora, debloated GNOME)</li>
+<li><strong>Dev</strong> (Visual Studio Code, Git + LFS, Python, Docker, SSH)</li>
+<li><strong>Research &amp; Writing</strong> (Obsidian, Quarto, LaTeX, Pandoc tooling)</li>
+<li><strong>Documents &amp; Knowledge</strong> (Okular, PDF tools: OCR and GROBID, Recoll)</li>
+<li><strong>Sync</strong> (Nextcloud)</li>
+<li><strong>Media &amp; Productivity</strong> (GIMP, Audacity, OBS Studio, Xournal++)</li>
+<li><strong>Security</strong> (GnuPG, KeePassXC, ClamAV, Vorta/Borg)</li>
+</ul>
+</section>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<ul>
 <li><p><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/" target="_blank">VPN</a>: Some Services are only available via VPN or within the university network</p></li>
 <li><p><a href="https://dataimpulse.com/#pricing" target="_blank">Proxy servers</a>: Residential proxy server service</p></li>
 <li><p><a href="https://languagetool.org/de" target="_blank">LanguageTools</a>: Free Online Spellchecker (local setup: see academy)</p></li>
-<li><p><a href="../teaching/systems.html">Systems for teaching</a></p></li>
-<li><p><a href="../research/systems.html">Systems for research</a></p></li>
+<li><p><a href="../teaching/systems.html">Software for teaching</a></p></li>
+<li><p><a href="../research/systems.html">Sotware for research</a></p></li>
 </ul>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>System</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/" target="_blank">Mail</a></td>
-<td>- Every member of the university gets a mail assigned<br>- <a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/wlv/" target="_blank">Personnel</a> has the format <code>firstname.surname@uni-bamberg.de</code> while <a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/studium/" target="_blank">student</a> mail addresses have the format <code>firstname1-firstname2-firstname3-(...).surname@stud.uni-bamberg.de</code><br>- The messages are accessible via <a href="https://www.uni-bamberg.de/its/dienstleistungen/mail/zugriff/outlook/" target="_blank">Outlook</a> or any other e-mail client</td>
-</tr>
-<tr class="even">
-<td>Teams</td>
-<td>- Platform for collaboration and organization, allowing users to create different areas called “Teams” to work together or manage part of their online teaching<br>- Shared chat and separate chats in different channels<br>- Lectures and seminars can be held as phone or video meetings with up to 250 participants<br>- Recording functionality<br>- Collaborate on files within a team</td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.uni-bamberg.de/its/dienstleistungen/tele/video/zoom/" target="_blank">Zoom</a></td>
-<td>- Single-Sign-On-Url: <code>uni-bamberg</code><br>- Online service for web conferencing<br>- Teaching as Meetings or Webinars<br>- Recording functionality<br>- For events that exclusively involve members students of our university, please use <a href="#teams">Teams</a> because of data security and privacy concerns</td>
-</tr>
-<tr class="even">
-<td><a href="https://calendly.com/event_types/user/me" target="_blank">Calendly</a></td>
-<td>- Allow students to book appointments, which are automatically added to the Outlook calendar<br>- Example: <a href="https://calendly.com/gerit-wagner/30min?month=2023-07" target="_blank">30-minute meeting</a></td>
-</tr>
-<tr class="odd">
-<td><a href="https://nuudel.digitalcourage.de/" target="_blank">Nuudel</a></td>
-<td>- Doodle replacement</td>
-</tr>
-</tbody>
-</table>
 </section>
-<section id="outlook-calendar-permissions" class="level2">
-<h2 class="anchored" data-anchor-id="outlook-calendar-permissions">Outlook: Calendar permissions</h2>
-<p>Sharing calendars -&gt; You decide what the other person can see<br> Permission settings -&gt; In your own calendar, click on “Eigenschaften” -&gt; “Berechtigungen”<br></p>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<section id="mail" class="level2">
+<h2 class="anchored" data-anchor-id="mail">Mail</h2>
+<p>Outlook: Calendar permissions:</p>
 <ul>
-<li><a href="https://intranet.neuro.polymtl.ca/computing-resources/youtube.html" target="_blank">Youtube procedure</a></li>
+<li>Sharing calendars -&gt; You decide what the other person can see<br></li>
+<li>Permission settings -&gt; In your own calendar, click on “Eigenschaften” -&gt; “Berechtigungen”<br></li>
 </ul>
+</section>
+<section id="cloud-services" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-services">Cloud services</h2>
+<ul>
+<li><p>Teams:</p>
+<ul>
+<li>Platform for collaboration and organization, allowing users to create different areas called “Teams” to work together or manage part of their online teaching</li>
+<li>Shared chat and separate chats in different channels</li>
+<li>Lectures and seminars can be held as phone or video meetings with up to 250 participants</li>
+<li>Recording functionality</li>
+<li>Collaborate on files within a team</li>
+</ul></li>
+<li><p><a href="https://nuudel.digitalcourage.de/" target="_blank">Nuudel</a>: A Doodle replacement</p></li>
+<li><p><a href="https://intranet.neuro.polymtl.ca/computing-resources/youtube.html" target="_blank">Youtube procedure</a></p></li>
+</ul>
+<p>Booking</p>
+<!--
+
+[Zoom](https://www.uni-bamberg.de/its/dienstleistungen/tele/video/zoom/){target=_blank}| - Single-Sign-On-Url: ``uni-bamberg``<br>- Online service for web conferencing<br>- Teaching as Meetings or Webinars<br>- Recording functionality<br>- For events that exclusively involve members students of our university, please use [Teams](#teams) because of data security and privacy concerns |
+- [Eduroam](https://www.uni-bamberg.de/its/dienstleistungen/netz/wlan/eduroam/){target=_blank}: Log-in with university credentials
+[Calendly](https://calendly.com/event_types/user/me){target=_blank}| - Allow students to book appointments, which are automatically added to the Outlook calendar<br>- Example: [30-minute meeting](https://calendly.com/gerit-wagner/30min?month=2023-07){target=_blank} |
+
+-->
 
 
 </section>
@@ -1186,5 +1179,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/software.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/workstation_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
