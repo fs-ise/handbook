@@ -82,6 +82,28 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -102,28 +124,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -722,8 +722,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p>For knowledge management tasks, we use <a href="https://obsidian.md/" target="_blank">Obsidian</a>.</p>
 <ul>
-<li>Each note (paper summary or concept) should be an a separate, <strong>atomic note</strong> (see <a href="https://zettelkasten.de/overview/" target="_blank">1</a>, <a href="https://forum.obsidian.md/t/12-principles-for-using-zettelkasten/51679" target="_blank">2</a>).</li>
-<li>Paper summaries should have the filename <code>citation_key.md</code>, with the <em>citation_key</em> corresponding to the ID in a BibTex file.</li>
+<li>Each note (paper summary or concept) should be a separate, <strong>atomic note</strong> (see <a href="https://zettelkasten.de/overview/" target="_blank">1</a>, <a href="https://forum.obsidian.md/t/12-principles-for-using-zettelkasten/51679" target="_blank">2</a>).</li>
+<li>Paper summaries should have the filename <code>citation_key.md</code>, with the <em>citation_key</em> corresponding to the ID in a BibTeX file.</li>
 </ul>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -767,7 +767,7 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <p>Git repository with</p>
 <ul>
 <li>References: <code>references.bib</code> in Git repository</li>
-<li>PDFs: Git-LFS (add locally) - <strong>PDFs cannot be uploaded online - must use the local cli for git-lfs</strong></li>
+<li>PDFs: Git-LFS (add locally) - <strong>PDFs cannot be uploaded online - must use the local CLI for Git LFS</strong></li>
 <li>Obsidian literature summaries</li>
 <li>If Word integration (citation plugin) is needed: Zotero (for individual projects)</li>
 </ul>
@@ -786,16 +786,16 @@ Zotero can be used (recommended) to facilitate the export to the repository
 ## Online workflow
 
 - No setup is required.
-- Uploading PDFs to git-lfs is not possible.
+- Uploading PDFs to Git LFS is not possible.
 
-**TODO**: Create concept notes with a script (not manually with obsidian/Zotero?)
+**TODO**: Create concept notes with a script (not manually with Obsidian/Zotero?)
 
 **TODO**:
 
 - Zotero vs. JabRef?
 - Update repo setup: include Git-LFS
 - Existing projects: Move PDFs to git repositories with Git-LFS [Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1083838?dir=/research/projects){target=_blank}.
-- TBD: CoLRev repositories (PDFs and obsidian vaults)
+- TBD: CoLRev repositories (PDFs and Obsidian vaults)
  -->
 <p><strong>Pull request</strong>: Labot support is enabled for pull requests (e.g., checking consistency, updating references).</p>
 <p>Example repository: <a href="https://github.com/fs-ise/research-hub" target="_blank">research-hub</a></p>
