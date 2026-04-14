@@ -4,11 +4,24 @@ transition_status: "updated"
 transition_comment: "update"
 ---
 
-An ansible repository for the default workstation stack is available here:
+::: {.callout-tip title="Scope: Local machine (how)"}
+  
+This section focuses on setting up and maintaining your **local workstation** (software, configuration, automation via Ansible).
+  
+It answers: *How do I build and reproduce my machine?*
+ 
+- For shared tools and platforms (e.g., communication, storage, scheduling tools), see → [Cloud services](cloud-services.html)
+:::
 
-{{< iconify fluent:cloud-sync-48-regular style="color: white;" >}} [workstation-setup](https://github.com/fs-ise/workstation-setup){.btn .btn-primary .btn-center rel="noopener" target=_blank}
+## Resources
 
-**Workstation stack**
+We maintain a reproducible workstation configuration based on Ansible.
+
+- [{{< iconify fluent:code-24-regular >}}  Source workstation-setup repository (automation)](https://github.com/fs-ise/workstation-setup){.btn .btn-outline-primary rel="noopener" target=_blank}
+
+- [{{< iconify fluent:document-24-regular >}} Documentation (how to use it)](https://github.com/fs-ise/workstation-setup/tree/main/docs){.btn .btn-outline-primary rel="noopener" target=_blank}
+
+## Workstation stack
 
 - **Base** (Minimal Fedora, debloated GNOME)
 - **Dev** (Visual Studio Code, Git + LFS, Python, Docker, SSH)
@@ -17,73 +30,3 @@ An ansible repository for the default workstation stack is available here:
 - **Sync & Backup** (Nextcloud, Vorta/Borg)
 - **Productivity & Media** (Thunderbird, Chrome, GIMP, Audacity, OBS Studio)
 - **Security** (KeePassXC, ClamAV)
-
-## Software
-
-- [VPN](https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/){target=_blank}: Some Services are only available via VPN or within the university network
-- [Proxy servers](https://dataimpulse.com/#pricing){target=_blank}: Residential proxy server service
-- [LanguageTools](https://languagetool.org/de){target=_blank}: Free Online Spellchecker (local setup: see academy)
-- [GitHub Desktop](https://github.com/apps/desktop){target=_blank}
-
-::: {.callout-note title="Thunderbird / Mail and calendar settings" collapse=true}
-Extensions (install manually, not through ansible)
-
-- LanguageTool
-- mailmindr
-- FiltaQuilla
-- Owl for Exchange
-- Thunderbird MCP (TBD)
-
-Calendar permissions (set in Outlook): 
-
-- Sharing calendars -> You decide what the other person can see
-- Permission settings -> In your own calendar, click on "Eigenschaften" -> "Berechtigungen"
-:::
-
-
-::: {.callout-note title="Potential extensions" collapse=true}
-- [LanguageTools](https://github.com/languagetool-org/languagetool){target=_blank} - see [here](https://chatgpt.com/c/69d35fd3-df94-8392-b094-1f0964a56c21){target=_blank}
-- [rclone](https://github.com/rclone/rclone){target=_blank} for Dropbox, GoogleDrive, etc.
-- Local LLM setup (Ollama, Gemma 4, ...), agentic, Thunderbird MCP ...
-- Citation manager (TBD: Git-based?)
-- Reference extraction pipelines (Grobid/document)
-- Jupyter Lab
-- Venvs
-- Rstudio
-- Whisper (see how-to) - or [speechnote](https://github.com/mkiol/dsnote){target=_blank}
-- TODO: integrate material from academy?
-- [Teams for Linux](https://github.com/ISMAELMARTINEZ/teams-for-linux){target=_blank}?
-
-Custom scripts:
-
-- CoLRev: document
-- Labot ?
-- Digital-tickler
-- Boot checks
-
-:::
-
-- [Software for teaching](/teaching/systems.html)
-- [Software for research](/research/systems.html)
-
-## Cloud services
-
-- Teams: 
-
-    - Platform for collaboration and organization, allowing users to create different areas called "Teams" to work together or manage part of their online teaching
-    - Shared chat and separate chats in different channels
-    - Lectures and seminars can be held as phone or video meetings with up to 250 participants
-    - Recording functionality
-    - Collaborate on files within a team
-
-- [Bookings](https://www.microsoft.com/de-de/microsoft-365/business/scheduling-and-booking-app){target=_blank}: Scheduling of individual appointments (based on availability)
-- [Nuudel](https://nuudel.digitalcourage.de/){target=_blank}: Scheduling of group meetings ([Doodle](https://doodle.com/de/){target=_blank} replacement])
-- [Youtube procedure](https://intranet.neuro.polymtl.ca/computing-resources/youtube.html){target=_blank}
-
-<!--
-
-[Zoom](https://www.uni-bamberg.de/its/dienstleistungen/tele/video/zoom/){target=_blank}| - Single-Sign-On-Url: ``uni-bamberg``<br>- Online service for web conferencing<br>- Teaching as Meetings or Webinars<br>- Recording functionality<br>- For events that exclusively involve members students of our university, please use [Teams](#teams) because of data security and privacy concerns |
-- [Eduroam](https://www.uni-bamberg.de/its/dienstleistungen/netz/wlan/eduroam/){target=_blank}: Log-in with university credentials
-[Calendly](https://calendly.com/event_types/user/me){target=_blank}| - Allow students to book appointments, which are automatically added to the Outlook calendar<br>- Example: [30-minute meeting](https://calendly.com/gerit-wagner/30min?month=2023-07){target=_blank} |
-
--->
