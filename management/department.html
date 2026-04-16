@@ -100,17 +100,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -120,6 +109,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -645,16 +645,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#scheinteilnehmer" id="toc-scheinteilnehmer" class="nav-link active" data-scroll-target="#scheinteilnehmer">Scheinteilnehmer</a></li>
-  <li><a href="#department-calendar-fakultätskalender-veranstaltungen-wiai-kalender" id="toc-department-calendar-fakultätskalender-veranstaltungen-wiai-kalender" class="nav-link" data-scroll-target="#department-calendar-fakultätskalender-veranstaltungen-wiai-kalender">Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/department.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -702,54 +694,49 @@ Following: The dean's office sends an email "Rückmeldung zur Verfügbarkeit fü
 → the secretariat must forward this email to Hiwis with a Bachelor's degree with the request to return it to the dean's office and cc the secretariat.
 :::
 
-<!--
 Response:
 
 ```
+TODO
 ```
+
+## Scheinteilnehmer
+When students register as "Scheinteilnehmer" via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.
+
+![Scheinteilnehmer](/assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG)
+
+## Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)
+
+Access: Rose Fleck
+
+Should contain the following dates:
+
+Studium & Lehre:
+
+- Dezentrale schriftliche Prüfungen unter Angabe des Modulkürzels: Diese sind durch die Professuren einzutragen.
+  Hier sind Überschneidungen zu vermeiden, d.h. zu einem konkreten Zeitpunkt darf nur eine dezentrale Prüfung liegen.
+  Sobald zu einem Zeitpunkt eine schriftliche Prüfung liegt, muss ein anderes Modul, zumindest, wenn potenziell dieselben Studierenden betroffen sind, ein anderes Zeitfenster wählen.
+- Abgabe-Deadlines für Seminararbeiten und Projektleistungen unter Angabe des Modulkürzels: Diese sind durch die Professuren als „freier Ganztagestermin“ einzutragen.
+  (Hintergrund: Hierüber wollen wir im Studiendekanat einen Überblick über die von der Studierendenvertretung vorgebrachte Kritik an vermeintlichen Häufungen von Deadlines erhalten.)
+- Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen.
+
+Forschung und Weiteres:
+
+- Öffentliche Wissenschaftsvorträge (bspw. WIAI-Kolloquium, BACAI). Diese sind bitte durch die jeweiligen Veranstalter einzutragen.
+- Disputationen: Werden durch das Promotionsbüro eingetragen.
+- Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen.
+- Wesentliche universitäre und insb. fakultätsinterne Gremientermine (FR, Professorium, Lehrkonferenz etc.): Werden vom Dekanat eingetragen.
+
+## Resources
+
+- Professorium [VC](https://vc.uni-bamberg.de/course/view.php?id=2193){target=_blank}
+- Fakultätsrat
+- [Social Media Management](https://www.uni-bamberg.de/wiai/fakultaetsleitung-und-dekanat/){target=_blank}
+  - [TikTok Kanal](https://www.tiktok.com/@unibamberg){target=_blank}
+  - [Instagram](https://www.instagram.com/informatik_unibamberg/){target=_blank}
 -->
-<section id="scheinteilnehmer" class="level2">
-<h2 class="anchored" data-anchor-id="scheinteilnehmer">Scheinteilnehmer</h2>
-<p>When students register as “Scheinteilnehmer” via secretariat, we need to fill out the form (excel) for the deans office (shared by the deans office). Only applies to centrally organized exams.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/images/Beispiel_Scheinteilnehmer-Excel_kleiner.JPG" class="img-fluid figure-img"></p>
-<figcaption>Scheinteilnehmer</figcaption>
-</figure>
-</div>
-</section>
-<section id="department-calendar-fakultätskalender-veranstaltungen-wiai-kalender" class="level2">
-<h2 class="anchored" data-anchor-id="department-calendar-fakultätskalender-veranstaltungen-wiai-kalender">Department calendar (Fakultätskalender | „Veranstaltungen WIAI“-Kalender)</h2>
-<p>Access: Rose Fleck</p>
-<p>Should contain the following dates:</p>
-<p>Studium &amp; Lehre:</p>
-<ul>
-<li>Dezentrale schriftliche Prüfungen unter Angabe des Modulkürzels: Diese sind durch die Professuren einzutragen. Hier sind Überschneidungen zu vermeiden, d.h. zu einem konkreten Zeitpunkt darf nur eine dezentrale Prüfung liegen. Sobald zu einem Zeitpunkt eine schriftliche Prüfung liegt, muss ein anderes Modul, zumindest, wenn potenziell dieselben Studierenden betroffen sind, ein anderes Zeitfenster wählen.</li>
-<li>Abgabe-Deadlines für Seminararbeiten und Projektleistungen unter Angabe des Modulkürzels: Diese sind durch die Professuren als „freier Ganztagestermin“ einzutragen. (Hintergrund: Hierüber wollen wir im Studiendekanat einen Überblick über die von der Studierendenvertretung vorgebrachte Kritik an vermeintlichen Häufungen von Deadlines erhalten.)</li>
-<li>Studienabschlussfeiern und Choose-a-Chair-Messen: Werden durch das Studiendekanat eingetragen.</li>
-</ul>
-<p>Forschung und Weiteres:</p>
-<ul>
-<li>Öffentliche Wissenschaftsvorträge (bspw. WIAI-Kolloquium, BACAI). Diese sind bitte durch die jeweiligen Veranstalter einzutragen.</li>
-<li>Disputationen: Werden durch das Promotionsbüro eingetragen.</li>
-<li>Berufungsvorträge: Werden durch das Sekretariat des oder der Berufungsausschussvorsitzenden eingetragen.</li>
-<li>Wesentliche universitäre und insb. fakultätsinterne Gremientermine (FR, Professorium, Lehrkonferenz etc.): Werden vom Dekanat eingetragen.</li>
-</ul>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li>Professorium <a href="https://vc.uni-bamberg.de/course/view.php?id=2193" target="_blank">VC</a></li>
-<li>Fakultätsrat</li>
-<li><a href="https://www.uni-bamberg.de/wiai/fakultaetsleitung-und-dekanat/" target="_blank">Social Media Management</a>
-<ul>
-<li><a href="https://www.tiktok.com/@unibamberg" target="_blank">TikTok Kanal</a></li>
-<li><a href="https://www.instagram.com/informatik_unibamberg/" target="_blank">Instagram</a> –&gt;</li>
-</ul></li>
-</ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script>
@@ -1193,5 +1180,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/department.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/department.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
