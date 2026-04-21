@@ -78,6 +78,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -109,17 +120,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -368,21 +368,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2026-04-04</a>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2026-04-21</a>
   <ul class="collapse">
   <li><a href="#new-publications" id="toc-new-publications" class="nav-link" data-scroll-target="#new-publications">✨ New Publications</a></li>
   </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2026-02-25</a>
-  <ul class="collapse">
-  <li><a href="#software-updates" id="toc-software-updates" class="nav-link" data-scroll-target="#software-updates">🔄 Software Updates</a></li>
-  </ul></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2026-02-23</a>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2026-04-04</a>
   <ul class="collapse">
   <li><a href="#new-publications-1" id="toc-new-publications-1" class="nav-link" data-scroll-target="#new-publications-1">✨ New Publications</a></li>
   </ul></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2026-02-06</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2026-01-29</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">2026-01-28</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2026-02-25</a>
+  <ul class="collapse">
+  <li><a href="#software-updates" id="toc-software-updates" class="nav-link" data-scroll-target="#software-updates">🔄 Software Updates</a></li>
+  </ul></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2026-02-23</a>
+  <ul class="collapse">
+  <li><a href="#new-publications-2" id="toc-new-publications-2" class="nav-link" data-scroll-target="#new-publications-2">✨ New Publications</a></li>
+  </ul></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2026-02-06</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">2026-01-29</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">2026-01-28</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/news.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -410,16 +414,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2026-04-04</h2>
+<h2 class="anchored" data-anchor-id="section">2026-04-21</h2>
 <section id="new-publications" class="level3">
 <h3 class="anchored" data-anchor-id="new-publications">✨ New Publications</h3>
+<ul>
+<li><strong>Data management in literature reviews: The C5-DM Framework</strong> (2026), <em>Research Synthesis Methods</em> — Wagner, Gerit and Prester, Julian and Lukyanenko, Roman and Paré, Guy</li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2026-04-04</h2>
+<section id="new-publications-1" class="level3">
+<h3 class="anchored" data-anchor-id="new-publications-1">✨ New Publications</h3>
 <ul>
 <li><strong>Teaching Python package development: A structured course with learning resources and an instructor’s guide</strong> (2026), <em>Journal of Open Source Education</em> — Wagner, Gerit and Thurner, Laureen and Tang, Carlo and Ott, Stella [https://jose.theoj.org/papers/10.21105/jose.00292]</li>
 </ul>
 </section>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2026-02-25</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">2026-02-25</h2>
 <section id="software-updates" class="level3">
 <h3 class="anchored" data-anchor-id="software-updates">🔄 Software Updates</h3>
 <ul>
@@ -435,17 +448,17 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 </section>
 </section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">2026-02-23</h2>
-<section id="new-publications-1" class="level3">
-<h3 class="anchored" data-anchor-id="new-publications-1">✨ New Publications</h3>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">2026-02-23</h2>
+<section id="new-publications-2" class="level3">
+<h3 class="anchored" data-anchor-id="new-publications-2">✨ New Publications</h3>
 <ul>
 <li><strong>search-query: An open source Python library for academic search queries</strong> (2026), <em>Journal of Open Source Software</em> — Eckhardt, Peter and Ernst, Katharina Maria and Fleischmann, Thomas and Geßler, Anna and Schnickmann, Karl and Thurner, Laureen and Wagner, Gerit [https://joss.theoj.org/papers/10.21105/joss.08775#]</li>
 </ul>
 </section>
 </section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">2026-02-06</h2>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4">2026-02-06</h2>
 <p>New releases: - <strong>search-query</strong> v0.15.0 (https://pypi.org/project/search-query/)</p>
 <p>Release notes:</p>
 <blockquote class="blockquote">
@@ -456,16 +469,16 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 </blockquote>
 </section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4">2026-01-29</h2>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5">2026-01-29</h2>
 <p>New releases:</p>
 <ul>
 <li><strong>colrev</strong> v0.16.1 (https://pypi.org/project/colrev/)</li>
 <li><strong>search-query</strong> v0.14.1 (https://pypi.org/project/search-query/)</li>
 </ul>
 </section>
-<section id="section-5" class="level2">
-<h2 class="anchored" data-anchor-id="section-5">2026-01-28</h2>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6">2026-01-28</h2>
 <p>New releases:</p>
 <ul>
 <li><p><strong>search-query</strong> v0.14.0 (https://pypi.org/project/search-query/)</p>
