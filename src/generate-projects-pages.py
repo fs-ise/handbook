@@ -49,14 +49,13 @@ def _resources_table(resources: List[Dict[str, Any]]) -> str:
         return "—\n"
 
     lines: List[str] = []
-    lines.append("| Name | Access | Last updated | Request |")
-    lines.append("|---|---|---:|---|")
+    lines.append("| Name | Access | Request |")
+    lines.append("|---|---|---|")
 
     for res in resources:
         name = res.get("name") or "—"
         link = res.get("link")
         access = res.get("access") or []
-        last_updated = _fmt_date(res.get("last_updated"))
 
         if link:
             name_cell = f'[{name}]({link}){{target="_blank" rel="noopener"}}'
@@ -72,7 +71,7 @@ def _resources_table(resources: List[Dict[str, Any]]) -> str:
 
         request_cell = _request_access_html(link)
 
-        lines.append(f"| {name_cell} | {access_cell} | {last_updated} | {request_cell} |")
+        lines.append(f"| {name_cell} | {access_cell} | {request_cell} |")
 
     return "\n".join(lines) + "\n"
 
