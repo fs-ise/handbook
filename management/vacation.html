@@ -113,17 +113,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -133,6 +122,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -685,7 +685,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#documentation---vacation-balances-tracking" id="toc-documentation---vacation-balances-tracking" class="nav-link active" data-scroll-target="#documentation---vacation-balances-tracking">2. Documentation - Vacation Balances Tracking</a></li>
+  <li><a href="#take-vacation" id="toc-take-vacation" class="nav-link active" data-scroll-target="#take-vacation">1. Take vacation</a></li>
+  <li><a href="#documentation---vacation-balances-tracking" id="toc-documentation---vacation-balances-tracking" class="nav-link" data-scroll-target="#documentation---vacation-balances-tracking">2. Documentation - Vacation Balances Tracking</a></li>
   <li><a href="#communication---notification-to-colleagues" id="toc-communication---notification-to-colleagues" class="nav-link" data-scroll-target="#communication---notification-to-colleagues">3. Communication - Notification to Colleagues</a></li>
   <li><a href="#handover-procedures" id="toc-handover-procedures" class="nav-link" data-scroll-target="#handover-procedures">4. Handover Procedures</a></li>
   <li><a href="#exceptions-and-special-circumstances" id="toc-exceptions-and-special-circumstances" class="nav-link" data-scroll-target="#exceptions-and-special-circumstances">5. Exceptions and Special Circumstances</a></li>
@@ -716,25 +717,14 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<p><strong>E-Mail template:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">Subject:</span><span class="co"> Out of the office</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Thank you for your email. I am out of the office and will return on 26 October 20XX.</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>I will answer your inquiry as soon as possible upon my return.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>If urgent, please contact Mr/Mrs XYZ. Phone: +49 69-154008-XYZ or email X.XYZ@fs.de.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Vielen Dank für Ihre Nachricht. Vom 19. bis zum 23. Oktober 20XX bin ich nicht im Hause.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Gern beantworte ich Ihre E-Mail nach meiner Rückkehr. In dringenden Fällen wenden Sie</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>sich bitte an meine/n Kollegen/ in Herr/Frau XYZ unter Telefon 069-154008-XYZ oder</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>EMail X.XYZ@fs.de.</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Herzliche Grüße / Best regards,</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="take-vacation" class="level2">
+<h2 class="anchored" data-anchor-id="take-vacation">1. Take vacation</h2>
+<p>Fill out the official vacation request form in <a href="https://fs.cloud.veda.net/horizon/" target="_blank">veda</a>.</p>
 <!--
 
 Welcome to the vacation section for the fs-ise lab!
 This guide streamlines the administrative process for requesting and managing vacation time. Enjoy your time off and return refreshed 🌴 ✈️ 🏖️
 
-## 1. Take vacation
 
 - To take vacation, coordinate your responsibilities (such as teaching and project work), decide when to take vacation, and *inform* Gerit in advance via e-mail (ideally, at least 2 weeks in advance)
 - If there are any additional scheduling constraints, Gerit will respond and ask for a meeting to discuss possible adjustments
@@ -765,7 +755,6 @@ Cheers,
 [Your Name]
 ```
 
-Fill out the official vacation request form in [veda](https://fs.cloud.veda.net/horizon/){target=_blank}.
 
 <!--
     **Scientific Staff**
@@ -790,6 +779,7 @@ Fill out the official vacation request form in [veda](https://fs.cloud.veda.net/
 
     :::
 -->
+</section>
 <section id="documentation---vacation-balances-tracking" class="level2">
 <h2 class="anchored" data-anchor-id="documentation---vacation-balances-tracking">2. Documentation - Vacation Balances Tracking</h2>
 <!--
@@ -806,18 +796,35 @@ Fill out the official vacation request form in [veda](https://fs.cloud.veda.net/
 <li><strong>Inform your students (if applicable):</strong> If you’re a teacher, notify your students about your absence. Depending on their age and the nature of your classes, you can either inform them verbally or send a written communication. Include the dates of your vacation and any instructions or assignments they need to complete in your absence.</li>
 <li><strong>Set up an out-of-office message:</strong> Configure an out-of-office email auto-responder, clearly stating the dates of your vacation and providing an alternative point of contact for urgent matters.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Sehr geehrter Absender,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>vielen Dank für Ihre Nachricht.</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Bis einschließlich XXX befinde ich mich außer Haus</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>und habe bis dahin leider keinen Zugriff auf eingehende E-Mails.</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Bitte wenden Sie sich in dringenden Fällen während</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>meiner Abwesenheit an meinen Kollegen XXX</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>unter XXX oder telefonisch</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>unter +49 (0) 123 456 789.</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Mit freundlichen Grüßen</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>XXX</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>E-Mail template:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">Subject:</span><span class="co"> Out of the office</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Thank you for your email. I am out of the office and will return on 26 October 20XX.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>I will answer your inquiry as soon as possible upon my return.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>If urgent, please contact Mr/Mrs XYZ. Phone: +49 69-154008-XYZ or email X.XYZ@fs.de.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Vielen Dank für Ihre Nachricht. Vom 19. bis zum 23. Oktober 20XX bin ich nicht im Hause.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Gern beantworte ich Ihre E-Mail nach meiner Rückkehr. In dringenden Fällen wenden Sie</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>sich bitte an meine/n Kollegen/ in Herr/Frau XYZ unter Telefon 069-154008-XYZ oder</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>E-Mail X.XYZ@fs.de.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Herzliche Grüße / Best regards,</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<!--
+  ```markdown
+  Sehr geehrter Absender,
+
+  vielen Dank für Ihre Nachricht.
+  Bis einschließlich XXX befinde ich mich außer Haus
+  und habe bis dahin leider keinen Zugriff auf eingehende E-Mails.
+  Bitte wenden Sie sich in dringenden Fällen während
+  meiner Abwesenheit an meinen Kollegen XXX
+  unter XXX oder telefonisch
+  unter +49 (0) 123 456 789.
+
+  Mit freundlichen Grüßen
+  XXX
+  ```
+-->
 </section>
 <section id="handover-procedures" class="level2">
 <h2 class="anchored" data-anchor-id="handover-procedures">4. Handover Procedures</h2>
