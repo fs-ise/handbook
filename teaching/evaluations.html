@@ -121,17 +121,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -141,6 +130,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -694,11 +694,7 @@ window.Quarto = {
   <ul>
   <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
   <li><a href="#process" id="toc-process" class="nav-link" data-scroll-target="#process">Process</a></li>
-  <li><a href="#example-for-the-invitation-to-the-evaluation" id="toc-example-for-the-invitation-to-the-evaluation" class="nav-link" data-scroll-target="#example-for-the-invitation-to-the-evaluation">Example for the invitation to the evaluation</a></li>
-  <li><a href="#systems" id="toc-systems" class="nav-link" data-scroll-target="#systems">Systems</a></li>
-  <li><a href="#survey" id="toc-survey" class="nav-link" data-scroll-target="#survey">Survey</a></li>
   <li><a href="#evaluation-results" id="toc-evaluation-results" class="nav-link" data-scroll-target="#evaluation-results">Evaluation results</a></li>
-  <li><a href="#applicable-regulations" id="toc-applicable-regulations" class="nav-link" data-scroll-target="#applicable-regulations">Applicable regulations</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/evaluations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -751,16 +747,21 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Trigger</strong> Evaluations can be ordered by <strong>early December / early July</strong>. We receive an e-mail reminder.</p>
+<p><strong>Trigger</strong> None. Evaluations are administered automatically.</p>
 </div>
 </div>
+<!--
+  Evaluations can be ordered by **early December / early July**. We receive an e-mail reminder.
+-->
 </section>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
+<!--
+- Evaluations can be ordered via EvaSys, which requires a **minimum of 5 students** to complete the evaluation. Otherwise, anonymity is not given, and results will not be made available.
+- For small courses, it is possible to use other tools or modes of evaluation.
+- It is possible and recommended that the survey be adapted (shortened).
+-->
 <ul>
-<li>Evaluations can be ordered via EvaSys, which requires a <strong>minimum of 5 students</strong> to complete the evaluation. Otherwise, anonymity is not given, and results will not be made available.</li>
-<li>For small courses, it is possible to use other tools or modes of evaluation.</li>
-<li>It is possible and recommended that the survey be adapted (shortened).</li>
 <li>Evaluation results and potential improvements should be discussed with students (last week of teaching).</li>
 <li>Students should be reminded in the session and via VC.</li>
 <li>Add to the list of prior reports below.</li>
@@ -769,78 +770,70 @@ Note
 <li>Evaluation results are shared (e.g., via e-mail or link in VC) and discussed with students.</li>
 </ul>
 <p>Note: We are allowed to publish evaluation reports (no personal information, no hand-written responses that could identify individuals).</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To use a QR code in the session, ask the <a href="https://www.uni-bamberg.de/pqm/qualitaetsmanagement/" target="_blank">QM team</a>.</p>
-</div>
-</div>
-</section>
-<section id="example-for-the-invitation-to-the-evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="example-for-the-invitation-to-the-evaluation">Example for the invitation to the evaluation</h2>
-<blockquote class="blockquote">
-<p>Dear Students,</p>
-<p>We would like to invite you to participate in the upcoming course evaluation. Your feedback is voluntary and anonymous, so please be open and honest in your responses. Your participation helps us improve the quality of our courses, and we highly value your opinions.</p>
-<p>Please rest assured that your responses will remain confidential, and there is no risk of disadvantage or negative consequences for you, regardless of the feedback you provide.</p>
-<p>Thank you for your time and honest feedback!</p>
-</blockquote>
-</section>
-<section id="systems" class="level2">
-<h2 class="anchored" data-anchor-id="systems">Systems</h2>
-<p>Create or edit a survey (<a href="https://www.uni-bamberg.de/its/dienstleistungen/eva/evasys/" target="_blank">account</a> required - <a href="https://www.uni-bamberg.de/its/dienstleistungen/eva/evasys/antrag-benutzerkonto-in-evasys/" target="_blank">form</a>):</p>
-<ul>
-<li><a href="https://evasys.uni-bamberg.de/evasys/public/ui/" target="_blank">EvaSys</a></li>
-</ul>
-<p>Order an evaluation: <a href="https://www.uni-bamberg.de/its/lehrevaluation/" target="_blank">RZ intern</a></p>
-</section>
-<section id="survey" class="level2">
-<h2 class="anchored" data-anchor-id="survey">Survey</h2>
-<p><strong>The Lecturer and Your Course</strong></p>
-<ul>
-<li>The lecturer’s competence / expertise in the subject area.</li>
-<li>The lecturer’s teaching style (rhetorical skills, methods, etc.).</li>
-<li>The lecturer’s accessibility and approachability.</li>
-<li>The structure of the course.</li>
-<li>The materials provided by the lecturer (scripts, slides etc.).</li>
-<li>The overall quality of the course.</li>
-</ul>
-<p><strong>Your Spent Workload</strong></p>
-<ul>
-<li>Average amount of time (assignments &amp; self-study) needed for 1 academic hour (45 minutes):</li>
-<li>Study time generally needed for this course compared to the indicated workload (i.e.&nbsp;in the module description):</li>
-</ul>
-<p><strong>General Aspects of Your Course</strong></p>
-<ul>
-<li>The overall course level was… (extremely hard &lt;-&gt; extremely easy)</li>
-<li>The relevance of the course was…</li>
-<li>The atmosphere in class (discussion, cooperation etc.) was…</li>
-<li>The overall organisation of the course was…</li>
-</ul>
-<p><strong>Your Comments and Suggestions</strong></p>
-<ul>
-<li>In the course with [lecturer], I especially liked…</li>
-<li>For the course with [lecturer], I suggest the following changes…</li>
-</ul>
+<!--
+
+    ::: callout-note
+    To use a QR code in the session, ask the [QM team](https://www.uni-bamberg.de/pqm/qualitaetsmanagement/){target=_blank}.
+    :::
+
+    ## Example for the invitation to the evaluation
+
+    > Dear Students,
+    >
+    We would like to invite you to participate in the upcoming course evaluation. Your feedback is voluntary and anonymous, so please be open and honest in your responses. Your participation helps us improve the quality of our courses, and we highly value your opinions.
+    >
+    > Please rest assured that your responses will remain confidential, and there is no risk of disadvantage or negative consequences for you, regardless of the feedback you provide.
+    >
+    > Thank you for your time and honest feedback!
+
+    ## Systems
+
+    Create or edit a survey ([account](https://www.uni-bamberg.de/its/dienstleistungen/eva/evasys/){target=_blank} required - [form](https://www.uni-bamberg.de/its/dienstleistungen/eva/evasys/antrag-benutzerkonto-in-evasys/){target=_blank}):
+
+    - [EvaSys](https://evasys.uni-bamberg.de/evasys/public/ui/){target=_blank}
+
+    Order an evaluation: [RZ intern](https://www.uni-bamberg.de/its/lehrevaluation/){target=_blank}
+
+    ## Survey
+
+    **The Lecturer and Your Course**
+
+    - The lecturer's competence / expertise in the subject area.
+    - The lecturer's teaching style (rhetorical skills, methods, etc.).
+    - The lecturer's accessibility and approachability.
+    - The structure of the course.
+    - The materials provided by the lecturer (scripts, slides etc.).
+    - The overall quality of the course.
+
+    **Your Spent Workload**
+
+    - Average amount of time (assignments & self-study) needed for 1 academic hour (45 minutes):
+    - Study time generally needed for this course compared to the indicated workload (i.e. in the module description):
+
+    **General Aspects of Your Course**
+
+    - The overall course level was... (extremely hard <-> extremely easy)
+    - The relevance of the course was...
+    - The atmosphere in class (discussion, cooperation etc.) was...
+    - The overall organisation of the course was...
+
+    **Your Comments and Suggestions**
+
+    - In the course with [lecturer], I especially liked...
+    - For the course with [lecturer], I suggest the following changes...
+
+    ## Applicable regulations
+
+    - [Evaluation der Lehre (§5 and §6)](https://www.uni-bamberg.de/fileadmin/www.abt-studium/Rechtsvorschriften/1Organisation/Evaluation%20Lehre%20Studium/180305-O-Sicherung-Qualitaet-Lehre-Studium.pdf){target=_blank}
+    - [Overview: Goals, procedure, data protection etc.](https://www.uni-bamberg.de/qm/evaluation/lehrveranstaltungsevaluation/schriftliche-lehrveranstaltungsevaluation/){target=_blank}
+
+-->
 </section>
 <section id="evaluation-results" class="level2">
 <h2 class="anchored" data-anchor-id="evaluation-results">Evaluation results</h2>
 <div id="lecture-listing">
 
 </div>
-</section>
-<section id="applicable-regulations" class="level2">
-<h2 class="anchored" data-anchor-id="applicable-regulations">Applicable regulations</h2>
-<ul>
-<li><a href="https://www.uni-bamberg.de/fileadmin/www.abt-studium/Rechtsvorschriften/1Organisation/Evaluation%20Lehre%20Studium/180305-O-Sicherung-Qualitaet-Lehre-Studium.pdf" target="_blank">Evaluation der Lehre (§5 and §6)</a></li>
-<li><a href="https://www.uni-bamberg.de/qm/evaluation/lehrveranstaltungsevaluation/schriftliche-lehrveranstaltungsevaluation/" target="_blank">Overview: Goals, procedure, data protection etc.</a></li>
-</ul>
 
 
 
@@ -873,7 +866,7 @@ student_evaluations
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -886,7 +879,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1777643231244" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-Prog.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-Prog.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -899,7 +892,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -912,7 +905,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Analytics and Big Data" data-listing-filename-sort="2026-SuSe-ABD.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Analytics and Big Data" data-listing-filename-sort="2026-SuSe-ABD.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -925,7 +918,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
+<tr data-index="4" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-WiSe</span>
 </td>
@@ -938,7 +931,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
+<tr data-index="5" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -951,7 +944,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
+<tr data-index="6" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -964,7 +957,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
+<tr data-index="7" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -977,7 +970,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
+<tr data-index="8" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -990,7 +983,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
+<tr data-index="9" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1003,7 +996,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
+<tr data-index="10" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1016,7 +1009,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
+<tr data-index="11" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1029,7 +1022,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
+<tr data-index="12" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1042,7 +1035,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
+<tr data-index="13" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1055,7 +1048,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
+<tr data-index="14" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1068,7 +1061,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
+<tr data-index="15" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1081,7 +1074,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
+<tr data-index="16" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1094,7 +1087,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
+<tr data-index="17" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1107,7 +1100,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
+<tr data-index="18" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1120,7 +1113,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="19" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
+<tr data-index="19" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1133,7 +1126,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="20" data-listing-file-modified-sort="1777643231243" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
+<tr data-index="20" data-listing-file-modified-sort="1777877876748" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2022-WiSe</span>
 </td>
