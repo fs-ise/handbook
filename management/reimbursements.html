@@ -82,17 +82,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -102,6 +91,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -115,15 +115,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -758,14 +758,16 @@ Note
 <section id="reimbursement-of-expenses" class="level2">
 <h2 class="anchored" data-anchor-id="reimbursement-of-expenses">Reimbursement of expenses</h2>
 <ul>
-<li>via <a href="https://www.mitarbeiterservice.bayern.de/" target="_blank">Mitarbeiterservice Bayern</a>
-<ul>
-<li>Select “Neuer Abrechnungsantrag”</li>
-<li>Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.</li>
-</ul></li>
-<li>Don’t forget to attach receipts, till vouchers, etc., as PDF</li>
-<li>Save the complete PDF in the 13.XXX folder</li>
+<li>Invoice: Frankfurt School GGMBH</li>
+<li>EMail: Dinara</li>
 </ul>
+<!--
+  - via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
+    - Select "Neuer Abrechnungsantrag"
+    - Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.
+  - Don’t forget to attach receipts, till vouchers, etc., as PDF
+  - Save the complete PDF in the 13.XXX folder
+-->
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
