@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1fdead029bae0c37af47c6eae49a86d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ef2faf195be464dca4a85569461c64d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-1fdead029bae0c37af47c6eae49a86d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7055e8c06fd938d043cf774acdef3bb1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-4f5175399e01559eaf3c7c015e7e7755.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7055e8c06fd938d043cf774acdef3bb1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -113,17 +113,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -144,6 +133,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -848,8 +848,10 @@ Warning
 <li>To ensure a blind peer review: Use “Anonymous” consistently (instead of author names).</li>
 <li>Search the paper for “reference” (to catch notes like (“reference needed”)).</li>
 <li>Check in-text citations: are they correctly cited? Are they separated by semicolons?</li>
+<li>Run the following script to check for erroneous (hallucinated) references:</li>
 </ul></li>
 </ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">labot</span> references consolidate paper.pdf <span class="at">--mailto</span> you@example.org</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For manuscripts generated by Quarto, the following should not be necessary (when the Word/LaTeX reference documents work properly):</p>
 <ul>
 <li>Consistent use of font sizes and types in figures and tables.</li>
@@ -873,39 +875,46 @@ Warning
 <li>Check and update metadata (authors, title, etc.).</li>
 <li>LaTeX: Check if .tex writes metadata to PDF (final version, not for submissions/revisions):</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  pdftitle={Title of the paper},</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  pdfauthor={AuthorName FamilyName, AuthorName FamilyName},</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  pdfkeywords={keyword1, keyword2}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>]{<span class="ex">hyperref</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  pdftitle={Title of the paper},</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  pdfauthor={AuthorName FamilyName, AuthorName FamilyName},</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  pdfkeywords={keyword1, keyword2}</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>]{<span class="ex">hyperref</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cover-letter" class="level2">
 <h2 class="anchored" data-anchor-id="cover-letter">Cover letter</h2>
 <p><strong>Example 1: JOSS</strong></p>
-<p>Dear JOSS editors,</p>
-<p>I am pleased to submit the Python package BibDedupe for consideration and possible publication in the Journal of Open-Source Software. This submission addresses the clear need for effective software tailored to the detection of duplicates within bibliographic data.</p>
-<p>In academic research, especially in areas involving meta-analysis and research synthesis, the accurate identification of duplicate bibliographic entries is essential. These duplicates, often resulting from the dissemination of a single study across multiple databases, can affect the integrity of research outcomes. Existing tools for deduplication generally do not cater adequately to the unique aspects of bibliographic data, which has very specific and idiosyncratic variations in authors’ names, publication titles, and source details. BibDedupe is designed to address these specific challenges, focusing on achieving zero false positives to ensure that each unique study is correctly represented in research summaries.</p>
-<p>Our development is informed by a comprehensive understanding of bibliographic data management and data quality requirements. It employs a detailed approach to data preprocessing, blocking, matching, and merging, offering efficiency and reproducibility in deduplicating bibliographic records. The performance of the package is particularly beneficial for researchers engaged in literature reviews involving large volumes of publications.</p>
-<p>BibDedupe is one of the first open-source tools in its domain that actively seeks peer review of its code. The field of literature review and meta-analysis software has long been dominated by proprietary and non-peer-reviewed tools, leading to a gap in the availability of rigorously evaluated, open-source options. By submitting BibDedupe to JOSS, we aim to raise standards in the field, encouraging the development of more rigorous, effective, and transparent tools for conducting literature reviews and meta-analyses. This effort aligns with a growing demand in the academic community for open-source tools that are not only functional but also validated through peer review.</p>
-<p>I believe BibDedupe will be a valuable contribution to the Journal of Open-Source Software, appealing to researchers looking for efficient and reliable bibliographic data management tools. I look forward to sharing more details in a paper to be submitted to a peer-reviewed journal.</p>
-<p>There are no conflicts of interest.</p>
-<p>Best regards,</p>
-<p>Gerit Wagner</p>
-<!--
-Dear JOSS Editors,
-
-I am pleased to submit the Python package search-query for consideration and possible publication in the Journal of Open Source Software. This package addresses the growing need for reliable, transparent, and automatable tools to manage academic search queries, which are foundational to systematic literature reviews and meta-analyses.
-
-In academic research, constructing high-quality search queries is critical for the validity and reproducibility of literature reviews. Yet, existing tools are often proprietary, web-based, or lack validation mechanisms. The search-query library provides a comprehensive, open-source solution to this problem by supporting loading, linting, translating, saving, improving, and automating academic search queries. It currently covers three major platforms—Web of Science, PubMed, and EBSCOHost—and has been tested against a corpus of peer-reviewed queries from SearchRXiv. Our implementation emphasizes extensibility, integration into Python-based workflows, and automation. Notably, the package also includes support for pre-commit hooks and API-based usage scenarios. These features make search-query particularly well-suited for reproducible research pipelines.
-
-We are aware that the paper exceeds 1000 words. However, we believe this is necessary to provide a clear overview of the tool’s functionality, the specific needs it addresses, and its positioning relative to existing tools. In addition, we have included vector-based screenshots (SVG) in the paper to preserve syntax highlighting and visual clarity when illustrating linter outputs and usage examples.
-
-We believe that search-query will be a valuable resource for researchers involved in literature reviews and evidence synthesis.
-
-There are no conflicts of interest.
-
-Best regards, Gerit Wagner (on behalf of the author team)
--->
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Dear JOSS editors,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>I am pleased to submit the Python package BibDedupe for consideration and possible publication in the Journal of Open-Source Software. This submission addresses the clear need for effective software tailored to the detection of duplicates within bibliographic data.</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>In academic research, especially in areas involving meta-analysis and research synthesis, the accurate identification of duplicate bibliographic entries is essential. These duplicates, often resulting from the dissemination of a single study across multiple databases, can affect the integrity of research outcomes. Existing tools for deduplication generally do not cater adequately to the unique aspects of bibliographic data, which has very specific and idiosyncratic variations in authors' names, publication titles, and source details. BibDedupe is designed to address these specific challenges, focusing on achieving zero false positives to ensure that each unique study is correctly represented in research summaries.</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Our development is informed by a comprehensive understanding of bibliographic data management and data quality requirements. It employs a detailed approach to data preprocessing, blocking, matching, and merging, offering efficiency and reproducibility in deduplicating bibliographic records. The performance of the package is particularly beneficial for researchers engaged in literature reviews involving large volumes of publications.</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>BibDedupe is one of the first open-source tools in its domain that actively seeks peer review of its code. The field of literature review and meta-analysis software has long been dominated by proprietary and non-peer-reviewed tools, leading to a gap in the availability of rigorously evaluated, open-source options. By submitting BibDedupe to JOSS, we aim to raise standards in the field, encouraging the development of more rigorous, effective, and transparent tools for conducting literature reviews and meta-analyses. This effort aligns with a growing demand in the academic community for open-source tools that are not only functional but also validated through peer review.</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>I believe BibDedupe will be a valuable contribution to the Journal of Open-Source Software, appealing to researchers looking for efficient and reliable bibliographic data management tools. I look forward to sharing more details in a paper to be submitted to a peer-reviewed journal.</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>There are no conflicts of interest.</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>Best regards,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>Gerit Wagner</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Example 2: JOSS</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Dear JOSS Editors,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>I am pleased to submit the Python package search-query for consideration and possible publication in the Journal of Open Source Software. This package addresses the growing need for reliable, transparent, and automatable tools to manage academic search queries, which are foundational to systematic literature reviews and meta-analyses.</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>In academic research, constructing high-quality search queries is critical for the validity and reproducibility of literature reviews. Yet, existing tools are often proprietary, web-based, or lack validation mechanisms. The search-query library provides a comprehensive, open-source solution to this problem by supporting loading, linting, translating, saving, improving, and automating academic search queries. It currently covers three major platforms—Web of Science, PubMed, and EBSCOHost—and has been tested against a corpus of peer-reviewed queries from SearchRXiv. Our implementation emphasizes extensibility, integration into Python-based workflows, and automation. Notably, the package also includes support for pre-commit hooks and API-based usage scenarios. These features make search-query particularly well-suited for reproducible research pipelines.</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>We are aware that the paper exceeds 1000 words. However, we believe this is necessary to provide a clear overview of the tool’s functionality, the specific needs it addresses, and its positioning relative to existing tools. In addition, we have included vector-based screenshots (SVG) in the paper to preserve syntax highlighting and visual clarity when illustrating linter outputs and usage examples.</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>We believe that search-query will be a valuable resource for researchers involved in literature reviews and evidence synthesis.</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>There are no conflicts of interest.</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>Best regards, Gerit Wagner (on behalf of the author team)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="post-submission-tasks" class="level2">
 <h2 class="anchored" data-anchor-id="post-submission-tasks">Post-submission tasks</h2>
