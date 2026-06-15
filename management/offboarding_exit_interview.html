@@ -77,6 +77,28 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -99,35 +121,13 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 </style>
 
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -1188,40 +1188,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#opening" id="toc-opening" class="nav-link active" data-scroll-target="#opening">0. Opening</a></li>
-  <li><a href="#projects-offboarding" id="toc-projects-offboarding" class="nav-link" data-scroll-target="#projects-offboarding">1. Projects &amp; Offboarding</a>
-  <ul class="collapse">
-  <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects">Projects</a></li>
-  <li><a href="#expectations-on-open-projects" id="toc-expectations-on-open-projects" class="nav-link" data-scroll-target="#expectations-on-open-projects">Expectations on open projects</a></li>
-  <li><a href="#knowledge-transfer" id="toc-knowledge-transfer" class="nav-link" data-scroll-target="#knowledge-transfer">Knowledge transfer</a></li>
-  </ul></li>
-  <li><a href="#infrastructure-coordination" id="toc-infrastructure-coordination" class="nav-link" data-scroll-target="#infrastructure-coordination">2. Infrastructure &amp; Coordination</a>
-  <ul class="collapse">
-  <li><a href="#digital-infrastructure" id="toc-digital-infrastructure" class="nav-link" data-scroll-target="#digital-infrastructure">Digital infrastructure</a></li>
-  <li><a href="#project-management" id="toc-project-management" class="nav-link" data-scroll-target="#project-management">Project management</a></li>
-  </ul></li>
-  <li><a href="#work-design-learning" id="toc-work-design-learning" class="nav-link" data-scroll-target="#work-design-learning">3. Work Design &amp; Learning</a>
-  <ul class="collapse">
-  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">Skills</a></li>
-  <li><a href="#autonomy-vs.-structure" id="toc-autonomy-vs.-structure" class="nav-link" data-scroll-target="#autonomy-vs.-structure">Autonomy vs.&nbsp;structure</a></li>
-  </ul></li>
-  <li><a href="#synthesis-keep-stop-start" id="toc-synthesis-keep-stop-start" class="nav-link" data-scroll-target="#synthesis-keep-stop-start">4. Synthesis: Keep / Stop / Start</a></li>
-  <li><a href="#forward-looking-closure" id="toc-forward-looking-closure" class="nav-link" data-scroll-target="#forward-looking-closure">5. Forward-Looking Closure</a>
-  <ul class="collapse">
-  <li><a href="#next-step-preparation" id="toc-next-step-preparation" class="nav-link" data-scroll-target="#next-step-preparation">Next step preparation</a></li>
-  <li><a href="#recommendation-letter-academic-support" id="toc-recommendation-letter-academic-support" class="nav-link" data-scroll-target="#recommendation-letter-academic-support">Recommendation letter / academic support</a></li>
-  <li><a href="#network" id="toc-network" class="nav-link" data-scroll-target="#network">Network</a></li>
-  <li><a href="#celebrate-success" id="toc-celebrate-success" class="nav-link" data-scroll-target="#celebrate-success">Celebrate success</a></li>
-  </ul></li>
-  <li><a href="#notes-for-interviewer" id="toc-notes-for-interviewer" class="nav-link" data-scroll-target="#notes-for-interviewer">Notes for Interviewer</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/offboarding_exit_interview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1825,5 +1792,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/offboarding_exit_interview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/offboarding_exit_interview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -136,15 +136,15 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -158,6 +158,17 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -167,17 +178,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -215,7 +215,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="alternate" type="application/rss+xml" title="ISE Lab Handbook" href="research_support.xml" data-external="1"></head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -1276,25 +1276,7 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#handbook" id="toc-handbook" class="nav-link active" data-scroll-target="#handbook">Handbook</a></li>
-  <li><a href="#downloading-of-papers" id="toc-downloading-of-papers" class="nav-link" data-scroll-target="#downloading-of-papers">Downloading of papers</a></li>
-  <li><a href="#preparation-of-reference-metadata" id="toc-preparation-of-reference-metadata" class="nav-link" data-scroll-target="#preparation-of-reference-metadata">Preparation of reference metadata</a></li>
-  <li><a href="#collecting-of-pdfs" id="toc-collecting-of-pdfs" class="nav-link" data-scroll-target="#collecting-of-pdfs">Collecting of PDFs</a></li>
-  <li><a href="#formatting-of-manuscripts" id="toc-formatting-of-manuscripts" class="nav-link" data-scroll-target="#formatting-of-manuscripts">Formatting of manuscripts</a></li>
-  <li><a href="#github-issues-help-needed" id="toc-github-issues-help-needed" class="nav-link" data-scroll-target="#github-issues-help-needed">GitHub issues <span class="badge bg-light text-dark">#help-needed</span></a></li>
-  <li><a href="#author-copies" id="toc-author-copies" class="nav-link" data-scroll-target="#author-copies">Author copies</a>
-  <ul class="collapse">
-  <li><a href="#year-self-archiving" id="toc-year-self-archiving" class="nav-link" data-scroll-target="#year-self-archiving">1-year self-archiving</a></li>
-  <li><a href="#year-self-archiving-1" id="toc-year-self-archiving-1" class="nav-link" data-scroll-target="#year-self-archiving-1">2-year self-archiving</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/research_support.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1526,7 +1508,7 @@ Journal / Conference
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781510919572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="794" data-listing-title-sort="AI maturity in health care: An overview of 10 OECD countries" data-listing-filename-sort="CastonguayWagnerMotulskyEtAl2023.qmd">
+<tr data-index="0" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781531889231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="794" data-listing-title-sort="AI maturity in health care: An overview of 10 OECD countries" data-listing-filename-sort="CastonguayWagnerMotulskyEtAl2023.qmd">
 <td>
 <span class="listing-author">Castonguay, Alexandre and Wagner, Gerit and Motulsky, Aude and Paré, Guy</span>
 </td>
@@ -1542,7 +1524,7 @@ Journal / Conference
 
 </tr>
 
-<tr data-index="1" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781510919572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897" data-listing-title-sort="A method for resolving organisation‐enterprise system misfits: An action research study in a pluralistic organisation" data-listing-filename-sort="MorquinOlogeanuTaddeiPareEtAl2023.qmd">
+<tr data-index="1" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781531889232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897" data-listing-title-sort="A method for resolving organisation‐enterprise system misfits: An action research study in a pluralistic organisation" data-listing-filename-sort="MorquinOlogeanuTaddeiPareEtAl2023.qmd">
 <td>
 <span class="listing-author">Morquin, David and Ologeanu‐Taddei, Roxana and Paré, Guy and Wagner, Gerit</span>
 </td>
@@ -1558,7 +1540,7 @@ Journal / Conference
 
 </tr>
 
-<tr data-index="2" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781510919572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="729" data-listing-title-sort="Classifying the ideational impact of Information Systems review articles: A content-enriched deep learning approach" data-listing-filename-sort="PresterWagnerSchryenEtAl2021.qmd">
+<tr data-index="2" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781531889232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="729" data-listing-title-sort="Classifying the ideational impact of Information Systems review articles: A content-enriched deep learning approach" data-listing-filename-sort="PresterWagnerSchryenEtAl2021.qmd">
 <td>
 <span class="listing-author">Prester, Julian and Wagner, Gerit and Schryen, Guido and Hassan, Nik Rushdi</span>
 </td>
@@ -1574,7 +1556,7 @@ Journal / Conference
 
 </tr>
 
-<tr data-index="3" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781510919573" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612" data-listing-title-sort="Which factors affect the scientific impact of review papers in IS research? A scientometric study" data-listing-filename-sort="WagnerPresterRocheEtAl2021.qmd">
+<tr data-index="3" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781531889233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612" data-listing-title-sort="Which factors affect the scientific impact of review papers in IS research? A scientometric study" data-listing-filename-sort="WagnerPresterRocheEtAl2021.qmd">
 <td>
 <span class="listing-author">Wagner, Gerit and Prester, Julian and Roche, Maria Patricia and Schryen, Guido and Benlian, Alexander and Paré, Guy and Templier, Mathieu</span>
 </td>
@@ -1590,7 +1572,7 @@ Journal / Conference
 
 </tr>
 
-<tr data-index="4" data-categories="ZGlnaXRhbC1oZWFsdGglMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781510919572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400" data-listing-title-sort="Why Do People Keep Consulting Physicians Online? A Study Of Teleconsultation Continuance Intention" data-listing-filename-sort="OuimetPareWagner2020.qmd">
+<tr data-index="4" data-categories="ZGlnaXRhbC1oZWFsdGglMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781531889232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400" data-listing-title-sort="Why Do People Keep Consulting Physicians Online? A Study Of Teleconsultation Continuance Intention" data-listing-filename-sort="OuimetPareWagner2020.qmd">
 <td>
 <span class="listing-author">Ouimet, A. Grenier and Paré, G. and Wagner, G.</span>
 </td>
@@ -1606,7 +1588,7 @@ Journal / Conference
 
 </tr>
 
-<tr data-index="5" data-categories="aXQtc2VjdXJpdHk=" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781510919573" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="948" data-listing-title-sort="Forecasting IT security vulnerabilities – An empirical analysis" data-listing-filename-sort="YasasinPresterWagnerEtAl2020.qmd">
+<tr data-index="5" data-categories="aXQtc2VjdXJpdHk=" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781531889234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="948" data-listing-title-sort="Forecasting IT security vulnerabilities – An empirical analysis" data-listing-filename-sort="YasasinPresterWagnerEtAl2020.qmd">
 <td>
 <span class="listing-author">Yasasin, Emrah and Prester, Julian and Wagner, Gerit and Schryen, Guido</span>
 </td>
@@ -1622,7 +1604,7 @@ Journal / Conference
 
 </tr>
 
-<tr data-index="6" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781510919572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="639" data-listing-title-sort="Assessing data quality – A probability-based metric for semantic consistency" data-listing-filename-sort="HeinrichKlierSchillerEtAl2018.qmd">
+<tr data-index="6" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781531889232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="639" data-listing-title-sort="Assessing data quality – A probability-based metric for semantic consistency" data-listing-filename-sort="HeinrichKlierSchillerEtAl2018.qmd">
 <td>
 <span class="listing-author">Heinrich, Bernd and Klier, Mathias and Schiller, Alexander and Wagner, Gerit</span>
 </td>
@@ -2091,5 +2073,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/research_support.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/research_support.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

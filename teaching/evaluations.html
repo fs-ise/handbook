@@ -109,15 +109,15 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
+div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
-div.callout-objective.callout-style-default > .callout-header {
+div.callout-resource.callout-style-default > .callout-header {
   background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -131,15 +131,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-resource.callout {
+div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
-div.callout-resource.callout-style-default > .callout-header {
+div.callout-objective.callout-style-default > .callout-header {
   background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -188,7 +188,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -1249,16 +1249,7 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#process" id="toc-process" class="nav-link active" data-scroll-target="#process">Process</a></li>
-  <li><a href="#evaluation-results" id="toc-evaluation-results" class="nav-link" data-scroll-target="#evaluation-results">Evaluation results</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/evaluations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1414,7 +1405,7 @@ student_evaluations
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -1427,7 +1418,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-Prog.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-Prog.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -1440,7 +1431,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Analytics and Big Data" data-listing-filename-sort="2026-SuSe-ABD.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="Analytics and Big Data" data-listing-filename-sort="2026-SuSe-ABD.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -1453,7 +1444,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="4" data-listing-word-count-sort="761" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSecM.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -1466,7 +1457,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
+<tr data-index="4" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-WiSe</span>
 </td>
@@ -1479,7 +1470,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
+<tr data-index="5" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1492,7 +1483,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
+<tr data-index="6" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1505,7 +1496,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
+<tr data-index="7" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1518,7 +1509,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
+<tr data-index="8" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRSemIDIS.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1531,7 +1522,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
+<tr data-index="9" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRSemHWR.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1544,7 +1535,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
+<tr data-index="10" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EidWI.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1557,7 +1548,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
+<tr data-index="11" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1570,7 +1561,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
+<tr data-index="12" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1583,7 +1574,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
+<tr data-index="13" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRSem.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1596,7 +1587,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
+<tr data-index="14" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1609,7 +1600,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
+<tr data-index="15" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1622,7 +1613,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
+<tr data-index="16" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1635,7 +1626,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
+<tr data-index="17" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1648,7 +1639,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
+<tr data-index="18" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1661,7 +1652,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="19" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
+<tr data-index="19" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1674,7 +1665,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="20" data-listing-file-modified-sort="1781510919579" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
+<tr data-index="20" data-listing-file-modified-sort="1781531889239" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRSem.md">
 <td>
 <span class="listing-semester">2022-WiSe</span>
 </td>
@@ -2136,5 +2127,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/evaluations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/evaluations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
