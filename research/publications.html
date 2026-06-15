@@ -47,16 +47,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7055e8c06fd938d043cf774acdef3bb1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-4f5175399e01559eaf3c7c015e7e7755.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-7055e8c06fd938d043cf774acdef3bb1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a814e5d616ec3d9cd1e4b0382e6b49b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -110,15 +109,15 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -143,15 +142,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -189,7 +188,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -355,76 +354,12 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/logo.png" alt="" class="navbar-logo light-content">
-    <img src="../assets/logo.png" alt="" class="navbar-logo dark-content">
-    </a>
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">ISE Lab Handbook</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Overview</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../teaching/index.html"> 
-<span class="menu-text">Teaching</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../research/index.html" aria-current="page"> 
-<span class="menu-text">Research</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../management/index.html"> 
-<span class="menu-text">Management</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../academy/index.html"> 
-<span class="menu-text">Academy</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../team/index.html"> 
-<span class="menu-text">Team</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../news.html"> 
-<span class="menu-text"><iconify-icon role="img" inline="" icon="hugeicons:megaphone-03" style="color: #002EFF;" aria-label="News" title="News"></iconify-icon></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../calendar.html"> 
-<span class="menu-text"><iconify-icon role="img" inline="" icon="hugeicons:calendar-04" style="color: #002EFF;" aria-label="Calendar" title="Calendar"></iconify-icon></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://github.com/fs-ise/handbook" rel="noopener noreferrer" target="_blank"> 
-<span class="menu-text"><iconify-icon role="img" inline="" icon="hugeicons:github-01" style="color: #002EFF;" aria-label="GitHub" title="GitHub"></iconify-icon></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://github.com/fs-ise/handbook/issues" rel="noopener noreferrer" target="_blank"> 
-<span class="menu-text"><iconify-icon role="img" inline="" icon="hugeicons:add-circle" style="color: #002EFF;" aria-label="Issues" title="Issues"></iconify-icon></span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/data.html">Output</a></li><li class="breadcrumb-item"><a href="../research/publications.html">Publications</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/index.html">Research</a></li><li class="breadcrumb-item"><a href="../research/data.html">Output</a></li><li class="breadcrumb-item"><a href="../research/publications.html">Publications</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -434,9 +369,18 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../assets/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -446,19 +390,295 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../news.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">News</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../calendar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calendar</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Objectives</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a href="../teaching/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Objectives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/statement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statement</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Courses</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/course_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/theses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theses</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Design</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/new_course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">New course</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/pedagogy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pedagogy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Materials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/knowledge_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/improvements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Improvements</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Delivery</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/session.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sessions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/lms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LMS (Canvas)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/evaluations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/advertising.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Advertising</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Assessment</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/exams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exams</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/plagiarism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plagiarism</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/reviews.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reviews</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Student Support</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/counselling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Counselling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/recommendations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recommendations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/stipends_and_awards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stipends &amp; awards</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Institutional</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/platforms_degree_programs_courses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Academic programs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/rankings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rankings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/department.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Department</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/reports.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching reports</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Output</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publications (Teaching)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/oer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OER</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../research/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Objectives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/statement.html" class="sidebar-item-text sidebar-link">
@@ -473,15 +693,15 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
  <span class="menu-text">Overview</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/projects.html" class="sidebar-item-text sidebar-link">
@@ -514,15 +734,15 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
  <span class="menu-text">Knowledge infrastructure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/knowledge_management.html" class="sidebar-item-text sidebar-link">
@@ -537,15 +757,15 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
  <span class="menu-text">Project execution</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/methods.html" class="sidebar-item-text sidebar-link">
@@ -644,15 +864,15 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
  <span class="menu-text">Community service</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/peer_review.html" class="sidebar-item-text sidebar-link">
@@ -667,15 +887,15 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true">
  <span class="menu-text">Output</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../research/data.html" class="sidebar-item-text sidebar-link">
@@ -702,6 +922,328 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../management/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Management</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/transition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
+ <span class="menu-text">Objectives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/statement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/responsibilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Responsibilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/sop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SOP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/agendas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Agendas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P&amp;R sessions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
+ <span class="menu-text">Communication</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/mail.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mail</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/website.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Website</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/department.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Faculty</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/media_kit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Media kit</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false">
+ <span class="menu-text">Infrastructure</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/systems_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/handbook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Handbook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/nextcloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nextcloud</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/workstation_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workstation setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/cloud_services.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cloud services</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/controlling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controlling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/systems_administration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Administration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false">
+ <span class="menu-text">Support</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/research_support.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research support</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/teaching_support.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching support</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false">
+ <span class="menu-text">Risk management</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/compliance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Compliance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/emergencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Emergencies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Security</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false">
+ <span class="menu-text">Procurement</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/orders.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orders</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/reimbursements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reimbursements</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false">
+ <span class="menu-text">HR</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Travel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/sick_leave.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sick leave</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../management/vacation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vacation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../academy/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Academy</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../academy/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../academy/development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Development</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../academy/research_training.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research training</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../academy/how_tos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How-tos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../team/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Team</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../team/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -714,7 +1256,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/data.html">Output</a></li><li class="breadcrumb-item"><a href="../research/publications.html">Publications</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/index.html">Research</a></li><li class="breadcrumb-item"><a href="../research/data.html">Output</a></li><li class="breadcrumb-item"><a href="../research/publications.html">Publications</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Publications</h1>
 </div>
@@ -788,7 +1330,7 @@ Journal
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="c3R1ZGVudC1wYXBlciUyQ3RlYWNoaW5n" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781244615526" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="962" data-listing-title-sort="Teaching Python package development: A structured course with learning resources and an instructor's guide" data-listing-filename-sort="WagnerThurnerTangEtAl026.qmd">
+<tr data-index="0" data-categories="c3R1ZGVudC1wYXBlciUyQ3RlYWNoaW5n" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="962" data-listing-title-sort="Teaching Python package development: A structured course with learning resources and an instructor's guide" data-listing-filename-sort="WagnerThurnerTangEtAl026.qmd">
 <td>
 <span class="listing-date">2026</span>
 </td>
@@ -804,7 +1346,7 @@ Journal
 
 </tr>
 
-<tr data-index="1" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="732" data-listing-title-sort="Generative Artificial Intelligence for Literature Reviews" data-listing-filename-sort="WagnerPresterMousaviEtAl2026.qmd">
+<tr data-index="1" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="732" data-listing-title-sort="Generative Artificial Intelligence for Literature Reviews" data-listing-filename-sort="WagnerPresterMousaviEtAl2026.qmd">
 <td>
 <span class="listing-date">2026</span>
 </td>
@@ -820,7 +1362,7 @@ Journal
 
 </tr>
 
-<tr data-index="2" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDbGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="734" data-listing-title-sort="Data management in literature reviews: The C5-DM Framework" data-listing-filename-sort="WagnerPresterLukyanenkoEtAl2026.qmd">
+<tr data-index="2" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDbGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="734" data-listing-title-sort="Data management in literature reviews: The C5-DM Framework" data-listing-filename-sort="WagnerPresterLukyanenkoEtAl2026.qmd">
 <td>
 <span class="listing-date">2026</span>
 </td>
@@ -836,7 +1378,7 @@ Journal
 
 </tr>
 
-<tr data-index="3" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="628" data-listing-title-sort="search-query: An open source Python library for academic search queries" data-listing-filename-sort="EckhardtEtAl2026.qmd">
+<tr data-index="3" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="628" data-listing-title-sort="search-query: An open source Python library for academic search queries" data-listing-filename-sort="EckhardtEtAl2026.qmd">
 <td>
 <span class="listing-date">2026</span>
 </td>
@@ -852,7 +1394,7 @@ Journal
 
 </tr>
 
-<tr data-index="4" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079" data-listing-title-sort="Effectiveness of home-based cardiac rehabilitation interventions delivered via mHealth technologies: a systematic review and meta-analysis" data-listing-filename-sort="LiRingevalWagnerEtAl2025.qmd">
+<tr data-index="4" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079" data-listing-title-sort="Effectiveness of home-based cardiac rehabilitation interventions delivered via mHealth technologies: a systematic review and meta-analysis" data-listing-filename-sort="LiRingevalWagnerEtAl2025.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -868,7 +1410,7 @@ Journal
 
 </tr>
 
-<tr data-index="5" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1032" data-listing-title-sort="Digital health competences and AI beliefs as conditions for the practice of evidence-based medicine: a study of prospective physicians in Canada" data-listing-filename-sort="WagnerRingevalRaymondEtAl2025.qmd">
+<tr data-index="5" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1032" data-listing-title-sort="Digital health competences and AI beliefs as conditions for the practice of evidence-based medicine: a study of prospective physicians in Canada" data-listing-filename-sort="WagnerRingevalRaymondEtAl2025.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -884,7 +1426,7 @@ Journal
 
 </tr>
 
-<tr data-index="6" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="511" data-listing-title-sort="Identifying Necessary Conditions for AI Adoption: Medical Students' Perspectives Across the COVID-19 Timeline" data-listing-filename-sort="RingevalPareRaymondEtAl2025.qmd">
+<tr data-index="6" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="511" data-listing-title-sort="Identifying Necessary Conditions for AI Adoption: Medical Students' Perspectives Across the COVID-19 Timeline" data-listing-filename-sort="RingevalPareRaymondEtAl2025.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -900,7 +1442,7 @@ Journal
 
 </tr>
 
-<tr data-index="7" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlciUyQ3RlYWNoaW5n" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="886" data-listing-title-sort="Teaching Tip Rethinking How We Teach Git: Pedagogical Recommendations and Practical Strategies for the Information Systems Curriculum" data-listing-filename-sort="WagnerThurner2025.qmd">
+<tr data-index="7" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlciUyQ3RlYWNoaW5n" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="886" data-listing-title-sort="Teaching Tip Rethinking How We Teach Git: Pedagogical Recommendations and Practical Strategies for the Information Systems Curriculum" data-listing-filename-sort="WagnerThurner2025.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -916,7 +1458,7 @@ Journal
 
 </tr>
 
-<tr data-index="8" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="762" data-listing-title-sort="Theorising forward: positioning deductive elaboration in the Information Systems research repertoire" data-listing-filename-sort="PareWagnerTateEtA2025.qmd">
+<tr data-index="8" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="762" data-listing-title-sort="Theorising forward: positioning deductive elaboration in the Information Systems research repertoire" data-listing-filename-sort="PareWagnerTateEtA2025.qmd">
 <td>
 <span class="listing-date">2025</span>
 </td>
@@ -932,7 +1474,7 @@ Journal
 
 </tr>
 
-<tr data-index="9" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1704067200000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="BibDedupe: An Open-Source Python Library for Bibliographic Record Deduplication" data-listing-filename-sort="Wagner2024.qmd">
+<tr data-index="9" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1704067200000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="BibDedupe: An Open-Source Python Library for Bibliographic Record Deduplication" data-listing-filename-sort="Wagner2024.qmd">
 <td>
 <span class="listing-date">2024</span>
 </td>
@@ -948,7 +1490,7 @@ Journal
 
 </tr>
 
-<tr data-index="10" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1704067200000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="637" data-listing-title-sort="How to develop and frame impactful review articles: key recommendations" data-listing-filename-sort="PareWagnerPrester2024.qmd">
+<tr data-index="10" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1704067200000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="637" data-listing-title-sort="How to develop and frame impactful review articles: key recommendations" data-listing-filename-sort="PareWagnerPrester2024.qmd">
 <td>
 <span class="listing-date">2024</span>
 </td>
@@ -964,7 +1506,7 @@ Journal
 
 </tr>
 
-<tr data-index="11" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781244615522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="794" data-listing-title-sort="AI maturity in health care: An overview of 10 OECD countries" data-listing-filename-sort="CastonguayWagnerMotulskyEtAl2023.qmd">
+<tr data-index="11" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781509733341" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="794" data-listing-title-sort="AI maturity in health care: An overview of 10 OECD countries" data-listing-filename-sort="CastonguayWagnerMotulskyEtAl2023.qmd">
 <td>
 <span class="listing-date">2023</span>
 </td>
@@ -980,7 +1522,7 @@ Journal
 
 </tr>
 
-<tr data-index="12" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897" data-listing-title-sort="A method for resolving organisation‐enterprise system misfits: An action research study in a pluralistic organisation" data-listing-filename-sort="MorquinOlogeanuTaddeiPareEtAl2023.qmd">
+<tr data-index="12" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897" data-listing-title-sort="A method for resolving organisation‐enterprise system misfits: An action research study in a pluralistic organisation" data-listing-filename-sort="MorquinOlogeanuTaddeiPareEtAl2023.qmd">
 <td>
 <span class="listing-date">2023</span>
 </td>
@@ -996,7 +1538,7 @@ Journal
 
 </tr>
 
-<tr data-index="13" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1080" data-listing-title-sort="Understanding Prospective Physicians’ Intention to Use Artificial Intelligence in Their Future Medical Practice: Configurational Analysis" data-listing-filename-sort="WagnerRaymondPareEtAl2023.qmd">
+<tr data-index="13" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1080" data-listing-title-sort="Understanding Prospective Physicians’ Intention to Use Artificial Intelligence in Their Future Medical Practice: Configurational Analysis" data-listing-filename-sort="WagnerRaymondPareEtAl2023.qmd">
 <td>
 <span class="listing-date">2023</span>
 </td>
@@ -1012,7 +1554,7 @@ Journal
 
 </tr>
 
-<tr data-index="14" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527" data-listing-title-sort="Prospective Physicians' Intention to Adopt Artificial Intelligence: A Configurational Perspective" data-listing-filename-sort="PareRaymondCastonguayEtAl2023.qmd">
+<tr data-index="14" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527" data-listing-title-sort="Prospective Physicians' Intention to Adopt Artificial Intelligence: A Configurational Perspective" data-listing-filename-sort="PareRaymondCastonguayEtAl2023.qmd">
 <td>
 <span class="listing-date">2023</span>
 </td>
@@ -1028,7 +1570,7 @@ Journal
 
 </tr>
 
-<tr data-index="15" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="659" data-listing-title-sort="Artificial intelligence and the conduct of literature reviews" data-listing-filename-sort="WagnerLukyanenkoParEtAl2022.qmd">
+<tr data-index="15" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="659" data-listing-title-sort="Artificial intelligence and the conduct of literature reviews" data-listing-filename-sort="WagnerLukyanenkoParEtAl2022.qmd">
 <td>
 <span class="listing-date">2022</span>
 </td>
@@ -1044,7 +1586,7 @@ Journal
 
 </tr>
 
-<tr data-index="16" data-categories="ZGlnaXRhbC13b3Jr" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="517" data-listing-title-sort="Contracting Decisions on Digital Markets for Knowledge Work Services: A Qualitative Systematic Review" data-listing-filename-sort="PresterWagner2021.qmd">
+<tr data-index="16" data-categories="ZGlnaXRhbC13b3Jr" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="517" data-listing-title-sort="Contracting Decisions on Digital Markets for Knowledge Work Services: A Qualitative Systematic Review" data-listing-filename-sort="PresterWagner2021.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -1060,7 +1602,7 @@ Journal
 
 </tr>
 
-<tr data-index="17" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612" data-listing-title-sort="Which factors affect the scientific impact of review papers in IS research? A scientometric study" data-listing-filename-sort="WagnerPresterRocheEtAl2021.qmd">
+<tr data-index="17" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612" data-listing-title-sort="Which factors affect the scientific impact of review papers in IS research? A scientometric study" data-listing-filename-sort="WagnerPresterRocheEtAl2021.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -1076,7 +1618,7 @@ Journal
 
 </tr>
 
-<tr data-index="18" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="Exploring the Scientific Impact of Information Systems Design Science Research" data-listing-filename-sort="WagnerPresterSchryen2021.qmd">
+<tr data-index="18" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="Exploring the Scientific Impact of Information Systems Design Science Research" data-listing-filename-sort="WagnerPresterSchryen2021.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -1092,7 +1634,7 @@ Journal
 
 </tr>
 
-<tr data-index="19" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="729" data-listing-title-sort="Classifying the ideational impact of Information Systems review articles: A content-enriched deep learning approach" data-listing-filename-sort="PresterWagnerSchryenEtAl2021.qmd">
+<tr data-index="19" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="729" data-listing-title-sort="Classifying the ideational impact of Information Systems review articles: A content-enriched deep learning approach" data-listing-filename-sort="PresterWagnerSchryenEtAl2021.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -1108,7 +1650,7 @@ Journal
 
 </tr>
 
-<tr data-index="20" data-categories="ZGlnaXRhbC13b3Jr" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="846" data-listing-title-sort="Exploring the boundaries and processes of digital platforms for knowledge work: A review of information systems research" data-listing-filename-sort="WagnerPresterPare2021.qmd">
+<tr data-index="20" data-categories="ZGlnaXRhbC13b3Jr" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="846" data-listing-title-sort="Exploring the boundaries and processes of digital platforms for knowledge work: A review of information systems research" data-listing-filename-sort="WagnerPresterPare2021.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -1124,7 +1666,7 @@ Journal
 
 </tr>
 
-<tr data-index="21" data-categories="ZGlnaXRhbC13b3JrJTJDbGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="A Framework of Platform Design Mechanisms, Platform Congruence and Value Creation on C2C Platforms" data-listing-filename-sort="WagnerPrester2021.qmd">
+<tr data-index="21" data-categories="ZGlnaXRhbC13b3JrJTJDbGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1609459200000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="A Framework of Platform Design Mechanisms, Platform Congruence and Value Creation on C2C Platforms" data-listing-filename-sort="WagnerPrester2021.qmd">
 <td>
 <span class="listing-date">2021</span>
 </td>
@@ -1140,7 +1682,7 @@ Journal
 
 </tr>
 
-<tr data-index="22" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="513" data-listing-title-sort="Designing a Novel Strategy for Exploring Literature Corpora" data-listing-filename-sort="WagnerEmplSchryen2020.qmd">
+<tr data-index="22" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="513" data-listing-title-sort="Designing a Novel Strategy for Exploring Literature Corpora" data-listing-filename-sort="WagnerEmplSchryen2020.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -1156,7 +1698,7 @@ Journal
 
 </tr>
 
-<tr data-index="23" data-categories="ZGlnaXRhbC1oZWFsdGglMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400" data-listing-title-sort="Why Do People Keep Consulting Physicians Online? A Study Of Teleconsultation Continuance Intention" data-listing-filename-sort="OuimetPareWagner2020.qmd">
+<tr data-index="23" data-categories="ZGlnaXRhbC1oZWFsdGglMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400" data-listing-title-sort="Why Do People Keep Consulting Physicians Online? A Study Of Teleconsultation Continuance Intention" data-listing-filename-sort="OuimetPareWagner2020.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -1172,7 +1714,7 @@ Journal
 
 </tr>
 
-<tr data-index="24" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1233" data-listing-title-sort="Fitbit-Based Interventions for Healthy Lifestyle Outcomes: Systematic Review and Meta-Analysis" data-listing-filename-sort="RingevalWagnerDenfordEtAl2020.qmd">
+<tr data-index="24" data-categories="ZGlnaXRhbC1oZWFsdGg=" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1233" data-listing-title-sort="Fitbit-Based Interventions for Healthy Lifestyle Outcomes: Systematic Review and Meta-Analysis" data-listing-filename-sort="RingevalWagnerDenfordEtAl2020.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -1188,7 +1730,7 @@ Journal
 
 </tr>
 
-<tr data-index="25" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="729" data-listing-title-sort="A Knowledge Development Perspective on Literature Reviews - Validation of a new Typology in the IS Field" data-listing-filename-sort="SchryenWagnerBenlianEtAl2020.qmd">
+<tr data-index="25" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="729" data-listing-title-sort="A Knowledge Development Perspective on Literature Reviews - Validation of a new Typology in the IS Field" data-listing-filename-sort="SchryenWagnerBenlianEtAl2020.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -1204,7 +1746,7 @@ Journal
 
 </tr>
 
-<tr data-index="26" data-categories="ZGlnaXRhbC1oZWFsdGglMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1072" data-listing-title-sort="Investigating Patients’ Intention to Continue Using Teleconsultation to Anticipate Postcrisis Momentum: Survey Study" data-listing-filename-sort="OuimetWagnerRaymondEtAl2020.qmd">
+<tr data-index="26" data-categories="ZGlnaXRhbC1oZWFsdGglMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1072" data-listing-title-sort="Investigating Patients’ Intention to Continue Using Teleconsultation to Anticipate Postcrisis Momentum: Survey Study" data-listing-filename-sort="OuimetWagnerRaymondEtAl2020.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -1220,7 +1762,7 @@ Journal
 
 </tr>
 
-<tr data-index="27" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="533" data-listing-title-sort="Seeking Out Clear And Unique Information Systems Concepts: A Natural Language Processing Approach" data-listing-filename-sort="HassanPresterWagner2020.qmd">
+<tr data-index="27" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="533" data-listing-title-sort="Seeking Out Clear And Unique Information Systems Concepts: A Natural Language Processing Approach" data-listing-filename-sort="HassanPresterWagner2020.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -1236,7 +1778,7 @@ Journal
 
 </tr>
 
-<tr data-index="28" data-categories="aXQtc2VjdXJpdHk=" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781244615526" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="948" data-listing-title-sort="Forecasting IT security vulnerabilities – An empirical analysis" data-listing-filename-sort="YasasinPresterWagnerEtAl2020.qmd">
+<tr data-index="28" data-categories="aXQtc2VjdXJpdHk=" data-listing-date-sort="1577836800000" data-listing-file-modified-sort="1781509733344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="948" data-listing-title-sort="Forecasting IT security vulnerabilities – An empirical analysis" data-listing-filename-sort="YasasinPresterWagnerEtAl2020.qmd">
 <td>
 <span class="listing-date">2020</span>
 </td>
@@ -1252,7 +1794,7 @@ Journal
 
 </tr>
 
-<tr data-index="29" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1546300800000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1181" data-listing-title-sort="Explaining and Distinguishing Scientific Impact in Information Systems Research" data-listing-filename-sort="Wagner2019.qmd">
+<tr data-index="29" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1546300800000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1181" data-listing-title-sort="Explaining and Distinguishing Scientific Impact in Information Systems Research" data-listing-filename-sort="Wagner2019.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -1268,7 +1810,7 @@ Journal
 
 </tr>
 
-<tr data-index="30" data-categories="ZGlnaXRhbC13b3Jr" data-listing-date-sort="1546300800000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="524" data-listing-title-sort="Information Systems Research on Digital Platforms for Knowledge Work - A Scoping Review" data-listing-filename-sort="WagnerPrester2019.qmd">
+<tr data-index="30" data-categories="ZGlnaXRhbC13b3Jr" data-listing-date-sort="1546300800000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="524" data-listing-title-sort="Information Systems Research on Digital Platforms for Knowledge Work - A Scoping Review" data-listing-filename-sort="WagnerPrester2019.qmd">
 <td>
 <span class="listing-date">2019</span>
 </td>
@@ -1284,7 +1826,7 @@ Journal
 
 </tr>
 
-<tr data-index="31" data-categories="ZGlnaXRhbC13b3JrJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="542" data-listing-title-sort="Classifying the Ideational Impact of IS Review Articles - A Natural Language Processing Based Approach" data-listing-filename-sort="PresterWagnerSchryen2018.qmd">
+<tr data-index="31" data-categories="ZGlnaXRhbC13b3JrJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="542" data-listing-title-sort="Classifying the Ideational Impact of IS Review Articles - A Natural Language Processing Based Approach" data-listing-filename-sort="PresterWagnerSchryen2018.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1300,7 +1842,7 @@ Journal
 
 </tr>
 
-<tr data-index="32" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781244615523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="639" data-listing-title-sort="Assessing data quality – A probability-based metric for semantic consistency" data-listing-filename-sort="HeinrichKlierSchillerEtAl2018.qmd">
+<tr data-index="32" data-categories="ZGF0YS1tYW5hZ2VtZW50JTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="639" data-listing-title-sort="Assessing data quality – A probability-based metric for semantic consistency" data-listing-filename-sort="HeinrichKlierSchillerEtAl2018.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1316,7 +1858,7 @@ Journal
 
 </tr>
 
-<tr data-index="33" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528" data-listing-title-sort="Information Systems Design Science Research and Cumulative Knowledge Development - An Exploratory Study" data-listing-filename-sort="SchusterWagnerSchryen2018.qmd">
+<tr data-index="33" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1514764800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528" data-listing-title-sort="Information Systems Design Science Research and Cumulative Knowledge Development - An Exploratory Study" data-listing-filename-sort="SchusterWagnerSchryen2018.qmd">
 <td>
 <span class="listing-date">2018</span>
 </td>
@@ -1332,7 +1874,7 @@ Journal
 
 </tr>
 
-<tr data-index="34" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1483228800000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="537" data-listing-title-sort="Exploring the Scientific Impact of Information Systems Design Science Research - A Scientometric Study" data-listing-filename-sort="WagnerPresterSchryen2017.qmd">
+<tr data-index="34" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1483228800000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="537" data-listing-title-sort="Exploring the Scientific Impact of Information Systems Design Science Research - A Scientometric Study" data-listing-filename-sort="WagnerPresterSchryen2017.qmd">
 <td>
 <span class="listing-date">2017</span>
 </td>
@@ -1348,7 +1890,7 @@ Journal
 
 </tr>
 
-<tr data-index="35" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1483228800000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="799" data-listing-title-sort="Literature Reviews in IS Research - What Can Be Learnt from the Past and Other Fields?" data-listing-filename-sort="SchryenBenlianRoweEtAl2017.qmd">
+<tr data-index="35" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1483228800000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="799" data-listing-title-sort="Literature Reviews in IS Research - What Can Be Learnt from the Past and Other Fields?" data-listing-filename-sort="SchryenBenlianRoweEtAl2017.qmd">
 <td>
 <span class="listing-date">2017</span>
 </td>
@@ -1364,7 +1906,7 @@ Journal
 
 </tr>
 
-<tr data-index="36" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1451606400000" data-listing-file-modified-sort="1781244615525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556" data-listing-title-sort="Factors Affecting the Scientific Impact of Literature Reviews - A Scientometric Study" data-listing-filename-sort="WagnerPresterRocheEtAl2016.qmd">
+<tr data-index="36" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdzJTJDc3R1ZGVudC1wYXBlcg==" data-listing-date-sort="1451606400000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556" data-listing-title-sort="Factors Affecting the Scientific Impact of Literature Reviews - A Scientometric Study" data-listing-filename-sort="WagnerPresterRocheEtAl2016.qmd">
 <td>
 <span class="listing-date">2016</span>
 </td>
@@ -1380,7 +1922,7 @@ Journal
 
 </tr>
 
-<tr data-index="37" data-categories="aXQtc2VjdXJpdHklMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1451606400000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="719" data-listing-title-sort="Development of two novel face-recognition CAPTCHAs: A security and usability study" data-listing-filename-sort="SchryenWagnerSchlegel2016.qmd">
+<tr data-index="37" data-categories="aXQtc2VjdXJpdHklMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1451606400000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="719" data-listing-title-sort="Development of two novel face-recognition CAPTCHAs: A security and usability study" data-listing-filename-sort="SchryenWagnerSchlegel2016.qmd">
 <td>
 <span class="listing-date">2016</span>
 </td>
@@ -1396,7 +1938,7 @@ Journal
 
 </tr>
 
-<tr data-index="38" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1420070400000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="522" data-listing-title-sort="Theory of Knowledge for Literature Reviews - An Epistemological Model, Taxonomy and Empirical Analysis of IS Literature" data-listing-filename-sort="SchryenWagnerBenlian2015.qmd">
+<tr data-index="38" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1420070400000" data-listing-file-modified-sort="1781509733342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="522" data-listing-title-sort="Theory of Knowledge for Literature Reviews - An Epistemological Model, Taxonomy and Empirical Analysis of IS Literature" data-listing-filename-sort="SchryenWagnerBenlian2015.qmd">
 <td>
 <span class="listing-date">2015</span>
 </td>
@@ -1412,7 +1954,7 @@ Journal
 
 </tr>
 
-<tr data-index="39" data-categories="aXQtc2VjdXJpdHklMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1420070400000" data-listing-file-modified-sort="1781244615526" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="638" data-listing-title-sort="Towards an Economic Approach to Identity and Access Management Systems Using Decision Theory" data-listing-filename-sort="WeishauplKunzYasasinEtAl2015.qmd">
+<tr data-index="39" data-categories="aXQtc2VjdXJpdHklMkNzdHVkZW50LXBhcGVy" data-listing-date-sort="1420070400000" data-listing-file-modified-sort="1781509733344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="638" data-listing-title-sort="Towards an Economic Approach to Identity and Access Management Systems Using Decision Theory" data-listing-filename-sort="WeishauplKunzYasasinEtAl2015.qmd">
 <td>
 <span class="listing-date">2015</span>
 </td>
@@ -1428,7 +1970,7 @@ Journal
 
 </tr>
 
-<tr data-index="40" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1388534400000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Epistemological Contributions of Information Systems Literature Reviews" data-listing-filename-sort="Wagner2014.qmd">
+<tr data-index="40" data-categories="bGl0ZXJhdHVyZS1yZXZpZXdz" data-listing-date-sort="1388534400000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Epistemological Contributions of Information Systems Literature Reviews" data-listing-filename-sort="Wagner2014.qmd">
 <td>
 <span class="listing-date">2014</span>
 </td>
@@ -1444,7 +1986,7 @@ Journal
 
 </tr>
 
-<tr data-index="41" data-categories="ZGF0YS1tYW5hZ2VtZW50" data-listing-date-sort="1325376000000" data-listing-file-modified-sort="1781244615524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="101" data-listing-title-sort="Evaluating Data Consistency - A metric based approach" data-listing-filename-sort="Wagner2012.qmd">
+<tr data-index="41" data-categories="ZGF0YS1tYW5hZ2VtZW50" data-listing-date-sort="1325376000000" data-listing-file-modified-sort="1781509733343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="101" data-listing-title-sort="Evaluating Data Consistency - A metric based approach" data-listing-filename-sort="Wagner2012.qmd">
 <td>
 <span class="listing-date">2012</span>
 </td>
@@ -1468,26 +2010,27 @@ Journal
 </nav>
 </div></main> <!-- /main -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const today = new Date();
-  const dayIndex = today.getDay(); // 0 = Sunday, 6 = Saturday
-  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const dayName = weekdays[dayIndex];
-
-  const isWeekend = (dayIndex === 0 || dayIndex === 6);
-
-  // Current mode according to Quarto (based on body class)
-  const isCurrentlyDark = document.body.classList.contains("quarto-dark");
-
-  // If it's weekend and we're not already dark, ask Quarto to toggle
-  if (isWeekend && !isCurrentlyDark && window.quartoToggleColorScheme) {
-    window.quartoToggleColorScheme();
-    console.log(`Today is ${dayName}. Weekend detected → switched to dark mode via Quarto toggle.`);
-  } else {
-    console.log(
-      `Today is ${dayName}. isWeekend=${isWeekend}, isCurrentlyDark=${isCurrentlyDark}. No automatic switch.`
-    );
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.querySelector("#quarto-sidebar");
+  if (!sidebar) return;
+  
+  const activeLink = sidebar.querySelector("a.sidebar-link.active");
+  if (!activeLink) return;
+  
+  // Find the top-level sidebar section that contains the active page
+  const topSection = activeLink.closest("li.sidebar-item-section");
+  if (!topSection) return;
+  
+  // Expand all nested collapsible sections inside the active top-level section
+  topSection.querySelectorAll(".collapse").forEach((el) => {
+    el.classList.add("show");
+  });
+  
+  // Update toggle buttons/arrows so their visual state matches
+  topSection.querySelectorAll('[data-bs-toggle="collapse"]').forEach((toggle) => {
+    toggle.classList.remove("collapsed");
+    toggle.setAttribute("aria-expanded", "true");
+  });
 });
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
