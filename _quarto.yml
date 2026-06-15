@@ -4,7 +4,6 @@ project:
 bibliography: data/references.bib
 csl: assets/apa.csl
 
-
 website:
   # announcement:
   #   icon: info-circle
@@ -18,213 +17,207 @@ website:
   site-url: https://fs-ise.github.io/handbook/
   repo-url: https://github.com/fs-ise/handbook
   repo-actions: [edit, issue]
-  navbar:
-    logo: assets/logo.png
-    right:
-      - text: "Overview"
-        href: index.qmd
-      - text: "Teaching"
-        href: teaching/index.qmd
-      - text: "Research"
-        href: research/index.qmd
-      - text: "Management"
-        href: management/index.qmd
-      - text: "Academy"
-        href: academy/index.qmd
-      - text: "Team"
-        href: team/index.qmd
-      - text: '{{< iconify hugeicons:megaphone-03 title="News" label="News" >}}'
-        href: news.qmd
-      - text: '{{< iconify hugeicons:calendar-04 title="Calendar" label="Calendar" >}}'
-        href: calendar.qmd
-      - text: '{{< iconify hugeicons:github-01 title="GitHub" label="GitHub" >}}'
-        href: "https://github.com/fs-ise/handbook"
-        target: _blank
-        rel: noopener noreferrer
-      - text: '{{< iconify hugeicons:add-circle title="Issues" label="Issues" >}}'
-        href: https://github.com/fs-ise/handbook/issues
-        target: _blank
-        rel: noopener noreferrer
 
   sidebar:
-    - title: "Research"
-      style: floating
-      search: true
-      contents:
-        - research/index.qmd
-        - section: "Objectives"
-          contents:
-            - research/statement.qmd
-            - research/SOP.qmd
+    style: floating
+    search: true
+    collapse-level: 1
+    logo: assets/logo.png
+    contents:
+      - text: "Overview"
+        href: index.qmd
 
-        - section: "Overview"
-          contents:
-            - research/projects.qmd
-            - research/funding_overview.qmd
-            - research/outlets.qmd
-            - research/mailing_lists.qmd
-            - research/labs.qmd
+      - text: "News"
+        href: news.qmd
 
-        - section: "Knowledge infrastructure"
-          contents:
-            - research/knowledge_management.qmd
-            - research/pdf_collection.qmd
+      - text: "Calendar"
+        href: calendar.qmd
 
-        - section: "Project execution"
-          contents:
-          - research/methods.qmd
-          - research/literature_review.qmd
-          - research/survey.qmd
-          - research/data_management.qmd
-          - research/data_sets.qmd
-          - research/repo_setup.qmd
-          - research/analysis_templates.qmd
-          - research/python.qmd
-          - research/collaboration.qmd
-          - research/writing_technical.qmd
-          - research/writing_conceptual.qmd
-          - research/revision.qmd
-          - research/submission.qmd
-          - research/presentation.qmd
-          - research/publication.qmd
-          - research/dissemination.qmd
+      - section: "Teaching"
+        href: teaching/index.qmd
+        contents:
+          - text: "Overview"
+            href: teaching/index.qmd
 
-        - section: "Community service"
-          contents:
-          - research/peer_review.qmd
-          - research/editorial_work.qmd
+          - section: "Objectives"
+            contents:
+              - teaching/statement.qmd
 
-        - section: "Output"
-          contents:
-          - research/data.qmd
-          - research/software.qmd
-          - research/publications.qmd
-          - research/talks.qmd
+          - section: "Courses"
+            contents:
+              - teaching/course_overview.qmd
+              - teaching/theses.qmd
 
+          - section: "Design"
+            contents:
+              - teaching/new_course.qmd
+              - teaching/pedagogy.qmd
+              - teaching/materials.qmd
+              - teaching/knowledge_management.qmd
+              - teaching/improvements.qmd
 
-    - title: "Teaching"
-      style: floating
-      contents:
-        - teaching/index.qmd
+          - section: "Delivery"
+            contents:
+              - teaching/session.qmd
+              - teaching/lms.qmd
+              - teaching/evaluations.qmd
+              - teaching/advertising.qmd
 
-        - section: "Objectives"
-          contents:
-            - teaching/statement.qmd
+          - section: "Assessment"
+            contents:
+              - teaching/exams.qmd
+              # - teaching/certificates.qmd
+              - teaching/plagiarism.qmd
+              - teaching/reviews.qmd
 
-        - section: "Courses"
-          contents:
-            - teaching/course_overview.qmd
-            - teaching/theses.qmd
+          - section: "Student Support"
+            contents:
+              - teaching/counselling.qmd
+              - teaching/recommendations.qmd
+              - teaching/stipends_and_awards.qmd
 
-        - section: "Design"
-          contents:
-            - teaching/new_course.qmd
-            - teaching/pedagogy.qmd
-            - teaching/materials.qmd
-            - teaching/knowledge_management.qmd
-            - teaching/improvements.qmd
+          - section: "Institutional"
+            contents:
+              - teaching/platforms_degree_programs_courses.qmd
+              - teaching/rankings.qmd
+              - teaching/department.qmd
+              - teaching/reports.qmd
 
-        - section: "Delivery"
-          contents:
-            - teaching/session.qmd
-            - teaching/lms.qmd
-            - teaching/evaluations.qmd
-            - teaching/advertising.qmd
+          - section: "Output"
+            contents:
+              - teaching/publications.qmd
+              - teaching/oer.qmd
 
-        - section: "Assessment"
-          contents:
-            - teaching/exams.qmd
-            # - teaching/certificates.qmd
-            - teaching/plagiarism.qmd
-            - teaching/reviews.qmd
+      - section: "Research"
+        href: research/index.qmd
+        contents:
+          - text: "Overview"
+            href: research/index.qmd
 
-        - section: "Student Support"
-          contents:
-            - teaching/counselling.qmd
-            - teaching/recommendations.qmd
-            - teaching/stipends_and_awards.qmd
+          - section: "Objectives"
+            contents:
+              - research/statement.qmd
+              - research/SOP.qmd
 
-        - section: "Institutional"
-          contents:
-            - teaching/platforms_degree_programs_courses.qmd
-            - teaching/rankings.qmd
-            - teaching/department.qmd
-            - teaching/reports.qmd
+          - section: "Overview"
+            contents:
+              - research/projects.qmd
+              - research/funding_overview.qmd
+              - research/outlets.qmd
+              - research/mailing_lists.qmd
+              - research/labs.qmd
 
-        - section: "Output"
-          contents:
-            - teaching/publications.qmd
-            - teaching/oer.qmd
+          - section: "Knowledge infrastructure"
+            contents:
+              - research/knowledge_management.qmd
+              - research/pdf_collection.qmd
 
-    - title: "Management"
-      contents:
-        - management/index.qmd
-        - management/transition.qmd
+          - section: "Project execution"
+            contents:
+              - research/methods.qmd
+              - research/literature_review.qmd
+              - research/survey.qmd
+              - research/data_management.qmd
+              - research/data_sets.qmd
+              - research/repo_setup.qmd
+              - research/analysis_templates.qmd
+              - research/python.qmd
+              - research/collaboration.qmd
+              - research/writing_technical.qmd
+              - research/writing_conceptual.qmd
+              - research/revision.qmd
+              - research/submission.qmd
+              - research/presentation.qmd
+              - research/publication.qmd
+              - research/dissemination.qmd
 
-        - section: "Objectives"
-          contents:
-            - management/statement.qmd
-            - management/responsibilities.qmd
-            - management/sop.qmd
-            - management/agendas.qmd
-            - management/planning_review_sessions.qmd
+          - section: "Community service"
+            contents:
+              - research/peer_review.qmd
+              - research/editorial_work.qmd
 
-        - section: "Communication"
-          contents:
-            - management/mail.qmd
-            - management/website.qmd
-            - management/department.qmd
-            - management/media_kit.qmd
+          - section: "Output"
+            contents:
+              - research/data.qmd
+              - research/software.qmd
+              - research/publications.qmd
+              - research/talks.qmd
 
-        - section: "Infrastructure"
-          contents:
-            - management/systems_overview.qmd
-            - management/handbook.qmd
-            - management/github.qmd
-            - management/nextcloud.qmd
-            - management/workstation_setup.qmd
-            - management/cloud_services.qmd
-            - management/controlling.qmd
-            - text: "Administration"
-              href: management/systems_administration.qmd
-            - management/resources.qmd
+      - section: "Management"
+        href: management/index.qmd
+        contents:
+          - text: "Overview"
+            href: management/index.qmd
+          - management/transition.qmd
 
-        - section: "Support"
-          contents:
-            - management/research_support.qmd
-            - management/teaching_support.qmd
+          - section: "Objectives"
+            contents:
+              - management/statement.qmd
+              - management/responsibilities.qmd
+              - management/sop.qmd
+              - management/agendas.qmd
+              - management/planning_review_sessions.qmd
 
-        - section: "Risk management"
-          contents:
-            - management/compliance.qmd
-            - management/emergencies.qmd
-            - management/security.qmd
+          - section: "Communication"
+            contents:
+              - management/mail.qmd
+              - management/website.qmd
+              - management/department.qmd
+              - management/media_kit.qmd
 
-        - section: "Procurement"
-          contents:
-            - management/orders.qmd
-            - management/reimbursements.qmd
+          - section: "Infrastructure"
+            contents:
+              - management/systems_overview.qmd
+              - management/handbook.qmd
+              - management/github.qmd
+              - management/nextcloud.qmd
+              - management/workstation_setup.qmd
+              - management/cloud_services.qmd
+              - management/controlling.qmd
+              - text: "Administration"
+                href: management/systems_administration.qmd
+              - management/resources.qmd
 
-        - section: "HR"
-          contents:
-            # - management/hiring.qmd
-            # - management/onboarding.qmd
-            - management/travel.qmd
-            - management/sick_leave.qmd
-            - management/vacation.qmd
-            # - management/offboarding.qmd
+          - section: "Support"
+            contents:
+              - management/research_support.qmd
+              - management/teaching_support.qmd
 
-    - title: "Academy"
-      contents:
-        - academy/index.qmd
-        - academy/development.qmd
-        - academy/research_training.qmd
-        - academy/how_tos.qmd
+          - section: "Risk management"
+            contents:
+              - management/compliance.qmd
+              - management/emergencies.qmd
+              - management/security.qmd
 
+          - section: "Procurement"
+            contents:
+              - management/orders.qmd
+              - management/reimbursements.qmd
 
-    - title: "Team"
-      contents:
-        - team/index.qmd
+          - section: "HR"
+            contents:
+              # - management/hiring.qmd
+              # - management/onboarding.qmd
+              - management/travel.qmd
+              - management/sick_leave.qmd
+              - management/vacation.qmd
+              # - management/offboarding.qmd
+
+      - section: "Academy"
+        href: academy/index.qmd
+        contents:
+          - text: "Overview"
+            href: academy/index.qmd
+          - academy/development.qmd
+          - academy/research_training.qmd
+          - academy/how_tos.qmd
+
+      - section: "Team"
+        href: team/index.qmd
+        contents:
+          - text: "Overview"
+            href: team/index.qmd
+
 
 format:
   html:
@@ -239,17 +232,19 @@ format:
     smooth-scroll: true
     code-tools: false
     grid:
+      sidebar-width: 280px
       body-width: 1000px
+      margin-width: 280px
+      gutter-width: 1.5rem
     include-after-body:
       - assets/scripts/weekend-mode.js
+      - assets/scripts/sidebar-active-section.js
     highlight-style: github
     mermaid:
       theme: neutral
 
-
 resources:
   - assets/calendar/fs-ise.ical
-
 
 extensions:
   iconify:
@@ -257,7 +252,6 @@ extensions:
 
 execute:
   freeze: auto
-
 
 filters:
   - custom-callout
