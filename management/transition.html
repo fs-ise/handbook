@@ -77,14 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a814e5d616ec3d9cd1e4b0382e6b49b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -143,17 +139,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -174,6 +159,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -222,169 +218,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-sidebar floating fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -411,9 +245,6 @@ window.Quarto = {
       <img src="../assets/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
       <img src="../assets/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
-      <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -1276,7 +1107,6 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../management/index.html">Management</a></li><li class="breadcrumb-item"><a href="../management/transition.html">Transition</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Transition</h1>
@@ -1407,7 +1237,7 @@ transition_comment
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="1" data-listing-word-count-sort="70" data-listing-title-sort="Controlling" data-listing-filename-sort="controlling.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1781589337358" data-listing-reading-time-sort="1" data-listing-word-count-sort="70" data-listing-title-sort="Controlling" data-listing-filename-sort="controlling.qmd">
 <td>
 <span class="listing-path">/management/controlling.qmd</span>
 </td>
@@ -1420,7 +1250,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="1" data-listing-word-count-sort="58" data-listing-title-sort="Emergencies" data-listing-filename-sort="emergencies.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1781589337358" data-listing-reading-time-sort="1" data-listing-word-count-sort="58" data-listing-title-sort="Emergencies" data-listing-filename-sort="emergencies.qmd">
 <td>
 <span class="listing-path">/management/emergencies.qmd</span>
 </td>
@@ -1433,7 +1263,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="4" data-listing-word-count-sort="607" data-listing-title-sort="Hiring" data-listing-filename-sort="hiring.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1781589337358" data-listing-reading-time-sort="4" data-listing-word-count-sort="607" data-listing-title-sort="Hiring" data-listing-filename-sort="hiring.qmd">
 <td>
 <span class="listing-path">/management/hiring.qmd</span>
 </td>
@@ -1446,7 +1276,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="2" data-listing-word-count-sort="272" data-listing-title-sort="Mail" data-listing-filename-sort="mail.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1781589337358" data-listing-reading-time-sort="2" data-listing-word-count-sort="272" data-listing-title-sort="Mail" data-listing-filename-sort="mail.qmd">
 <td>
 <span class="listing-path">/management/mail.qmd</span>
 </td>
@@ -1459,7 +1289,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="1" data-listing-word-count-sort="56" data-listing-title-sort="Offboarding" data-listing-filename-sort="offboarding.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1781589337358" data-listing-reading-time-sort="1" data-listing-word-count-sort="56" data-listing-title-sort="Offboarding" data-listing-filename-sort="offboarding.qmd">
 <td>
 <span class="listing-path">/management/offboarding.qmd</span>
 </td>
@@ -1472,7 +1302,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="4" data-listing-word-count-sort="716" data-listing-title-sort="Onboarding" data-listing-filename-sort="onboarding.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1781589337358" data-listing-reading-time-sort="4" data-listing-word-count-sort="716" data-listing-title-sort="Onboarding" data-listing-filename-sort="onboarding.qmd">
 <td>
 <span class="listing-path">/management/onboarding.qmd</span>
 </td>
@@ -1485,7 +1315,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="1" data-listing-word-count-sort="153" data-listing-title-sort="Orders" data-listing-filename-sort="orders.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1781589337358" data-listing-reading-time-sort="1" data-listing-word-count-sort="153" data-listing-title-sort="Orders" data-listing-filename-sort="orders.qmd">
 <td>
 <span class="listing-path">/management/orders.qmd</span>
 </td>
@@ -1498,7 +1328,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1781534837390" data-listing-reading-time-sort="2" data-listing-word-count-sort="251" data-listing-title-sort="Reimbursements" data-listing-filename-sort="reimbursements.qmd">
+<tr data-index="7" data-listing-file-modified-sort="1781589337359" data-listing-reading-time-sort="2" data-listing-word-count-sort="251" data-listing-title-sort="Reimbursements" data-listing-filename-sort="reimbursements.qmd">
 <td>
 <span class="listing-path">/management/reimbursements.qmd</span>
 </td>
@@ -1511,7 +1341,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1781534837391" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Systems administration" data-listing-filename-sort="systems_administration.qmd">
+<tr data-index="8" data-listing-file-modified-sort="1781589337359" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Systems administration" data-listing-filename-sort="systems_administration.qmd">
 <td>
 <span class="listing-path">/management/systems_administration.qmd</span>
 </td>
@@ -1524,7 +1354,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1781534837391" data-listing-reading-time-sort="1" data-listing-word-count-sort="19" data-listing-title-sort="Teaching support" data-listing-filename-sort="teaching_support.qmd">
+<tr data-index="9" data-listing-file-modified-sort="1781589337359" data-listing-reading-time-sort="1" data-listing-word-count-sort="19" data-listing-title-sort="Teaching support" data-listing-filename-sort="teaching_support.qmd">
 <td>
 <span class="listing-path">/management/teaching_support.qmd</span>
 </td>
@@ -1537,7 +1367,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1781534837392" data-listing-reading-time-sort="1" data-listing-word-count-sort="146" data-listing-title-sort="Funding overview" data-listing-filename-sort="funding_overview.qmd">
+<tr data-index="10" data-listing-file-modified-sort="1781589337360" data-listing-reading-time-sort="1" data-listing-word-count-sort="146" data-listing-title-sort="Funding overview" data-listing-filename-sort="funding_overview.qmd">
 <td>
 <span class="listing-path">/research/funding_overview.qmd</span>
 </td>
@@ -1550,7 +1380,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1781534837396" data-listing-reading-time-sort="3" data-listing-word-count-sort="425" data-listing-title-sort="Publication" data-listing-filename-sort="publication.qmd">
+<tr data-index="11" data-listing-file-modified-sort="1781589337364" data-listing-reading-time-sort="3" data-listing-word-count-sort="425" data-listing-title-sort="Publication" data-listing-filename-sort="publication.qmd">
 <td>
 <span class="listing-path">/research/publication.qmd</span>
 </td>
@@ -1563,7 +1393,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1781534837399" data-listing-reading-time-sort="3" data-listing-word-count-sort="420" data-listing-title-sort="Advertising" data-listing-filename-sort="advertising.qmd">
+<tr data-index="12" data-listing-file-modified-sort="1781589337367" data-listing-reading-time-sort="3" data-listing-word-count-sort="420" data-listing-title-sort="Advertising" data-listing-filename-sort="advertising.qmd">
 <td>
 <span class="listing-path">/teaching/advertising.qmd</span>
 </td>
@@ -1576,7 +1406,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1781534837400" data-listing-reading-time-sort="1" data-listing-word-count-sort="188" data-listing-title-sort="Counselling" data-listing-filename-sort="counselling.qmd">
+<tr data-index="13" data-listing-file-modified-sort="1781589337368" data-listing-reading-time-sort="1" data-listing-word-count-sort="188" data-listing-title-sort="Counselling" data-listing-filename-sort="counselling.qmd">
 <td>
 <span class="listing-path">/teaching/counselling.qmd</span>
 </td>
@@ -1589,7 +1419,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1781534837400" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Department" data-listing-filename-sort="department.qmd">
+<tr data-index="14" data-listing-file-modified-sort="1781589337368" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Department" data-listing-filename-sort="department.qmd">
 <td>
 <span class="listing-path">/teaching/department.qmd</span>
 </td>
@@ -1602,7 +1432,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1781534837400" data-listing-reading-time-sort="4" data-listing-word-count-sort="776" data-listing-title-sort="Exams" data-listing-filename-sort="exams.qmd">
+<tr data-index="15" data-listing-file-modified-sort="1781589337368" data-listing-reading-time-sort="5" data-listing-word-count-sort="818" data-listing-title-sort="Exams" data-listing-filename-sort="exams.qmd">
 <td>
 <span class="listing-path">/teaching/exams.qmd</span>
 </td>
@@ -1615,7 +1445,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1781534837400" data-listing-reading-time-sort="1" data-listing-word-count-sort="189" data-listing-title-sort="LMS (Canvas)" data-listing-filename-sort="lms.qmd">
+<tr data-index="16" data-listing-file-modified-sort="1781589337368" data-listing-reading-time-sort="1" data-listing-word-count-sort="189" data-listing-title-sort="LMS (Canvas)" data-listing-filename-sort="lms.qmd">
 <td>
 <span class="listing-path">/teaching/lms.qmd</span>
 </td>
@@ -1628,7 +1458,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1781534837400" data-listing-reading-time-sort="15" data-listing-word-count-sort="2812" data-listing-title-sort="New course" data-listing-filename-sort="new_course.qmd">
+<tr data-index="17" data-listing-file-modified-sort="1781589337368" data-listing-reading-time-sort="15" data-listing-word-count-sort="2812" data-listing-title-sort="New course" data-listing-filename-sort="new_course.qmd">
 <td>
 <span class="listing-path">/teaching/new_course.qmd</span>
 </td>
@@ -1641,7 +1471,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1781534837401" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Plagiarism" data-listing-filename-sort="plagiarism.qmd">
+<tr data-index="18" data-listing-file-modified-sort="1781589337369" data-listing-reading-time-sort="1" data-listing-word-count-sort="98" data-listing-title-sort="Plagiarism" data-listing-filename-sort="plagiarism.qmd">
 <td>
 <span class="listing-path">/teaching/plagiarism.qmd</span>
 </td>
@@ -1654,7 +1484,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="19" data-listing-file-modified-sort="1781534837401" data-listing-reading-time-sort="1" data-listing-word-count-sort="109" data-listing-title-sort="Recommendations" data-listing-filename-sort="recommendations.qmd">
+<tr data-index="19" data-listing-file-modified-sort="1781589337369" data-listing-reading-time-sort="1" data-listing-word-count-sort="109" data-listing-title-sort="Recommendations" data-listing-filename-sort="recommendations.qmd">
 <td>
 <span class="listing-path">/teaching/recommendations.qmd</span>
 </td>
@@ -1667,7 +1497,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="20" data-listing-file-modified-sort="1781534837401" data-listing-reading-time-sort="2" data-listing-word-count-sort="360" data-listing-title-sort="Teaching reports" data-listing-filename-sort="reports.qmd">
+<tr data-index="20" data-listing-file-modified-sort="1781589337369" data-listing-reading-time-sort="2" data-listing-word-count-sort="360" data-listing-title-sort="Teaching reports" data-listing-filename-sort="reports.qmd">
 <td>
 <span class="listing-path">/teaching/reports.qmd</span>
 </td>
@@ -1680,7 +1510,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="21" data-listing-file-modified-sort="1781534837401" data-listing-reading-time-sort="2" data-listing-word-count-sort="294" data-listing-title-sort="Reviews" data-listing-filename-sort="reviews.qmd">
+<tr data-index="21" data-listing-file-modified-sort="1781589337369" data-listing-reading-time-sort="2" data-listing-word-count-sort="294" data-listing-title-sort="Reviews" data-listing-filename-sort="reviews.qmd">
 <td>
 <span class="listing-path">/teaching/reviews.qmd</span>
 </td>
@@ -1693,7 +1523,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="22" data-listing-file-modified-sort="1781534837401" data-listing-reading-time-sort="10" data-listing-word-count-sort="1901" data-listing-title-sort="Statement" data-listing-filename-sort="statement.qmd">
+<tr data-index="22" data-listing-file-modified-sort="1781589337369" data-listing-reading-time-sort="10" data-listing-word-count-sort="1901" data-listing-title-sort="Statement" data-listing-filename-sort="statement.qmd">
 <td>
 <span class="listing-path">/teaching/statement.qmd</span>
 </td>
@@ -1706,7 +1536,7 @@ transition_comment
 
 </tr>
 
-<tr data-index="23" data-listing-file-modified-sort="1781534837401" data-listing-reading-time-sort="1" data-listing-word-count-sort="19" data-listing-title-sort="Stipends &amp; awards" data-listing-filename-sort="stipends_and_awards.qmd">
+<tr data-index="23" data-listing-file-modified-sort="1781589337369" data-listing-reading-time-sort="1" data-listing-word-count-sort="19" data-listing-title-sort="Stipends &amp; awards" data-listing-filename-sort="stipends_and_awards.qmd">
 <td>
 <span class="listing-path">/teaching/stipends_and_awards.qmd</span>
 </td>
@@ -1749,19 +1579,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
