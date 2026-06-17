@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Peer review – ISE Lab Handbook</title>
+<title>agenticlr – ISE Lab Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,82 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -128,28 +73,6 @@ div.csl-indent {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -172,10 +95,32 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 </style>
 
 
-<link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../../assets/styles.css">
 </head>
 
 <body class="nav-sidebar floating fullcontent quarto-light">
@@ -187,7 +132,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/index.html">Research</a></li><li class="breadcrumb-item"><a href="../research/peer_review.html">Community service</a></li><li class="breadcrumb-item"><a href="../research/peer_review.html">Peer review</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">agenticlr</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -201,9 +146,9 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../assets/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../assets/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../assets/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../assets/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -215,25 +160,25 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../news.html" class="sidebar-item-text sidebar-link">
+  <a href="../../news.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">News</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../calendar.html" class="sidebar-item-text sidebar-link">
+  <a href="../../calendar.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calendar</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../teaching/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../teaching/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -242,7 +187,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -257,7 +202,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/statement.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statement</span></a>
   </div>
 </li>
@@ -274,13 +219,13 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/course_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/course_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/theses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/theses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Theses</span></a>
   </div>
 </li>
@@ -297,31 +242,31 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/new_course.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/new_course.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">New course</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/pedagogy.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/pedagogy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pedagogy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/knowledge_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/knowledge_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/improvements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/improvements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Improvements</span></a>
   </div>
 </li>
@@ -338,25 +283,25 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/session.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/session.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sessions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/lms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/lms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LMS (Canvas)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/evaluations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/evaluations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Evaluations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/advertising.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/advertising.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Advertising</span></a>
   </div>
 </li>
@@ -373,19 +318,19 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/exams.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/exams.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exams</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/plagiarism.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/plagiarism.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plagiarism</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/reviews.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/reviews.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reviews</span></a>
   </div>
 </li>
@@ -402,19 +347,19 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/counselling.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/counselling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Counselling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/recommendations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/recommendations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recommendations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/stipends_and_awards.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/stipends_and_awards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stipends &amp; awards</span></a>
   </div>
 </li>
@@ -431,25 +376,25 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/platforms_degree_programs_courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/platforms_degree_programs_courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Academic programs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/rankings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/rankings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rankings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/department.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/department.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Department</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/reports.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching reports</span></a>
   </div>
 </li>
@@ -466,13 +411,13 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/publications.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/publications.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publications (Teaching)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/oer.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/oer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OER</span></a>
   </div>
 </li>
@@ -482,16 +427,16 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../research/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../research/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -506,13 +451,13 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/statement.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/SOP.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/SOP.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOP</span></a>
   </div>
 </li>
@@ -529,31 +474,31 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/projects.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/funding_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/funding_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Funding overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/outlets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/outlets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Outlets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/mailing_lists.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/mailing_lists.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mailing lists</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/labs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/labs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labs</span></a>
   </div>
 </li>
@@ -570,13 +515,13 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/knowledge_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/knowledge_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/pdf_collection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/pdf_collection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PDF collection</span></a>
   </div>
 </li>
@@ -593,97 +538,97 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/methods.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/methods.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/literature_review.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/literature_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literature review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/survey.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/survey.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Survey</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/data_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/data_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/data_sets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/data_sets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data sets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/repo_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/repo_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Repository setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/analysis_templates.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/analysis_templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analysis templates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Phyton</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/collaboration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/collaboration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaboration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/writing_technical.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/writing_technical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writing - technical</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/writing_conceptual.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/writing_conceptual.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writing - conceptual</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/revision.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/revision.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Revision</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/submission.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/submission.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Submission</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/presentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Presentation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/publication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/publication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/dissemination.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/dissemination.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dissemination</span></a>
   </div>
 </li>
@@ -691,22 +636,22 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
  <span class="menu-text">Community service</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/peer_review.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../research/peer_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Peer review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/editorial_work.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/editorial_work.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Editorial work</span></a>
   </div>
 </li>
@@ -723,25 +668,25 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/software.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/publications.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/publications.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publications</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/talks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research/talks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Talks</span></a>
   </div>
 </li>
@@ -751,7 +696,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../management/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Management</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -760,13 +705,13 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/transition.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/transition.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transition</span></a>
   </div>
 </li>
@@ -781,31 +726,31 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/statement.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/responsibilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/responsibilities.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Responsibilities</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/sop.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/sop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/agendas.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/agendas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Agendas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">P&amp;R sessions</span></a>
   </div>
 </li>
@@ -822,25 +767,25 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/mail.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/mail.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mail</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/website.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/website.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Website</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/department.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/department.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Faculty</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/media_kit.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/media_kit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Media kit</span></a>
   </div>
 </li>
@@ -857,55 +802,55 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/systems_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/systems_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/handbook.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/handbook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Handbook</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/nextcloud.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/nextcloud.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nextcloud</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/workstation_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/workstation_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workstation setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/cloud_services.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/cloud_services.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cloud services</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/controlling.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/controlling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Controlling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/systems_administration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/systems_administration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Administration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -922,13 +867,13 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/research_support.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/research_support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research support</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/teaching_support.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/teaching_support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching support</span></a>
   </div>
 </li>
@@ -945,19 +890,19 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/compliance.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/compliance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Compliance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/emergencies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/emergencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Emergencies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/security.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/security.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Security</span></a>
   </div>
 </li>
@@ -974,13 +919,13 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/orders.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/orders.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Orders</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/reimbursements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/reimbursements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reimbursements</span></a>
   </div>
 </li>
@@ -997,19 +942,19 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/travel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Travel</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/sick_leave.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/sick_leave.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sick leave</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../management/vacation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../management/vacation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vacation</span></a>
   </div>
 </li>
@@ -1019,7 +964,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../academy/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../academy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Academy</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1028,25 +973,25 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../academy/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../academy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../academy/development.html" class="sidebar-item-text sidebar-link">
+  <a href="../../academy/development.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../academy/research_training.html" class="sidebar-item-text sidebar-link">
+  <a href="../../academy/research_training.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research training</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../academy/how_tos.html" class="sidebar-item-text sidebar-link">
+  <a href="../../academy/how_tos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How-tos</span></a>
   </div>
 </li>
@@ -1054,7 +999,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Team</span></a>
   </div>
 </li>
@@ -1067,9 +1012,9 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/index.html">Research</a></li><li class="breadcrumb-item"><a href="../research/peer_review.html">Community service</a></li><li class="breadcrumb-item"><a href="../research/peer_review.html">Peer review</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Peer review</h1>
+<h1 class="title">agenticlr</h1>
 </div>
 
 
@@ -1086,171 +1031,56 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When using this checklist, remember that the peer review process is strictly confidential. The manuscript and your review comments must not be shared, distributed, or discussed outside the formal review process. Always maintain professionalism and provide constructive, unbiased feedback.</p>
+<p>This page is auto-generated. The authoritative project metadata is stored in <a href="https://github.com/fs-ise/handbook/tree/main/data/projects.yml" target="_blank"><code>data/projects.yml</code></a>.</p>
 </div>
 </div>
-<section id="review-structure" class="level2">
-<h2 class="anchored" data-anchor-id="review-structure">Review structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 0: Review details</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>This review concerns the manuscript "TITLE" (JOURNAL as MANUSCRIPT_ID). </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 1: Introduction (3 paragraphs)</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 1:** Main question, goals, approach, and conclusions.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 2:** Contribution to the journal, ideally with reference to prior work.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Paragraph 3:** Publishability evaluation and recommendation.</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 2: Major issues (numbered items)</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section 3: Minor issues (indicate line, figure, table numbers)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="step-1-invitation-to-review" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-invitation-to-review">Step 1: Invitation to review</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Read the abstract.</label></li>
-<li><label><input type="checkbox">Assess if your expertise qualifies you to critically evaluate the manuscript.</label></li>
-<li><label><input type="checkbox">Check for conflicts of interest.</label></li>
-<li><label><input type="checkbox">Confirm time availability to complete the review.</label></li>
-<li><label><input type="checkbox">Review journal guidelines and adjust workflow accordingly.</label></li>
-<li><label><input type="checkbox">Respond promptly to the invitation (Accept/Decline and provide reasons, if applicable).</label></li>
-</ul>
-</section>
-<section id="step-2-first-overview" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-first-overview">Step 2: First overview</h2>
-<ul class="task-list">
-<li><p><label><input type="checkbox">Prepare a text file with the <a href="#review-structure">review structure</a>.</label></p></li>
-<li><p><label><input type="checkbox">Read the entire paper, noting motivation, approach, results, and conclusions.</label></p></li>
-<li><p><label><input type="checkbox">Examine figures and tables to ensure they complement the results.</label></p></li>
-<li><p><label><input type="checkbox">Assess readability; notify the editor if the manuscript is incomprehensible.</label></p></li>
-<li><p><label><input type="checkbox">Identify key aspects:</label></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Main question addressed by the research.</label></li>
-<li><label><input type="checkbox">Relevance and contribution to the field.</label></li>
-<li><label><input type="checkbox">Clarity and justification of the Abstract and Introduction.</label></li>
-<li><label><input type="checkbox">Appropriateness of the methods.</label></li>
-<li><label><input type="checkbox">Presentation and justification of results.</label></li>
-<li><label><input type="checkbox">Clear and described figures.</label></li>
-<li><label><input type="checkbox">Conclusions aligned with the main questions.</label></li>
-<li><label><input type="checkbox">Scope and publishability of the paper.</label></li>
-</ul></li>
-<li><p><label><input type="checkbox">Check references (in particular potential hallucinations in the last part):</label></p></li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">labot</span> references consolidate paper.pdf <span class="at">--mailto</span> you@example.org</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul class="task-list">
-<li><label><input type="checkbox">Write introductory paragraphs (Section 1)</label></li>
-</ul>
-</section>
-<section id="step-3-full-read" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-full-read">Step 3: Full read</h2>
-<ul class="task-list">
-<li><p><label><input type="checkbox">Take detailed notes with references to section, line, figure, and table numbers.</label></p></li>
-<li><p><label><input type="checkbox">Read the manuscript in detail, section by section (Introduction, Methods, Results, etc.).</label></p></li>
-<li><p><label><input type="checkbox">Validate:</label></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Methods, including reproducibility and rationale for non-reproducible methods.</label></li>
-<li><label><input type="checkbox">Figures, ensuring clarity and reflection of the main text.</label></li>
-<li><label><input type="checkbox">References and supplementary materials.</label></li>
-<li><label><input type="checkbox">Compliance with journal guidelines and data policy.</label></li>
-</ul></li>
-<li><p><label><input type="checkbox">Identify issues:</label></p>
-<ul>
-<li><strong>Major Issues (Section 2):</strong> Use numbered paragraphs for clarity.</li>
-<li><strong>Minor Issues (Section 3):</strong> Detail line, figure, and table numbers.</li>
-</ul></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="Knowledge management">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Knowledge management
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Open the <code>review.md</code> in an Obsidian vault (e.g., <a href="https://github.com/fs-ise/research-hub" target="_blank">research-hub</a>). Compare key elements (method, theory, key papers) to the knowledge database:</p>
-<ul>
-<li>Recommend specific papers in the review</li>
-<li>Extend knowledge database</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="step-4-writing" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-writing">Step 4: Writing</h2>
-<ul class="task-list">
-<li><p><label><input type="checkbox">Check organization and flow of arguments:</label></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Ensure clarity and logical flow of paragraphs.</label></li>
-<li><label><input type="checkbox">Minimize excessive jargon and confusing acronyms.</label></li>
-</ul></li>
-<li><p><label><input type="checkbox">Polish the review for tone and clarity.</label></p></li>
-<li><p><label><input type="checkbox">Address specific questions from the journal.</label></p></li>
-<li><p><label><input type="checkbox">Include optional remarks to the editor.</label></p></li>
-<li><p><label><input type="checkbox">Submit the review using the provided platform.</label></p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="Conference papers">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Conference papers
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When reviewing conference papers, point to issues that would make for a fruitful discussion.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Constructive tone">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Constructive tone
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Always adopt a constructive tone when providing feedback during peer review. Frame comments in a way that helps the authors refine their work, offering actionable suggestions rather than vague criticisms. A respectful and supportive approach fosters collaboration and enhances the quality of academic discourse.</p>
-</div>
-</div>
-</section>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Acronym</td>
+<td><code>agenticlr</code></td>
+</tr>
+<tr class="even">
+<td>Team</td>
+<td>julianprester, rm, rl, gp</td>
+</tr>
+<tr class="odd">
+<td>Status</td>
+<td><code>under_review</code></td>
+</tr>
+</tbody>
+</table>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>—</p>
+</section>
+<section id="history" class="level2">
+<h2 class="anchored" data-anchor-id="history">History</h2>
 <ul>
-<li><a href="https://drive.google.com/file/d/1-cyLPxpK2R1K_HV4TeA9NeE9GHro126K/view" target="_blank">MISQ Open Report</a></li>
+<li><strong>2026-03-11</strong> — started</li>
+<li><strong>2026-06-17</strong> — submission</li>
 </ul>
-
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Davison2015" class="csl-entry" role="listitem">
-Davison, R. M. (2015). Editorial—the art of constructive reviewing. <em>Information Systems Journal</em>, <em>25</em>(5), 429–432. <a href="https://doi.org/10.1111/isj.12083">https://doi.org/10.1111/isj.12083</a>
-</div>
-<div id="ref-Ragins2017" class="csl-entry" role="listitem">
-Ragins, B. R. (2017). Editor’s comments: Raising the bar for developmental reviewing. <em>Academy of Management Review</em>, <em>42</em>(4), 573–576. <a href="https://doi.org/10.5465/amr.2017.0464">https://doi.org/10.5465/amr.2017.0464</a>
-</div>
-<div id="ref-Rai2016" class="csl-entry" role="listitem">
-Rai, A. (2016). Editor’s comments: Writing a virtuous review. <em>MIS Quarterly</em>, <em>40</em>(3), iii–x. <a href="https://doi.org/10.5555/3177634.3177635">https://doi.org/10.5555/3177634.3177635</a>
-</div>
-<div id="ref-Sarker2023" class="csl-entry" role="listitem">
-Sarker, S., Whitley, E. A., Goh, K. Y., Hong, Y., Mähring, M., Sanyal, P., Su, N., Xu, J., Zhang, J., &amp; Zhao, H. (2023). Some thoughts on reviewing for <span>I</span>nformation <span>S</span>ystems <span>R</span>esearch and other leading information systems journals. <em>Information Systems Research</em>, <em>34</em>(4), 1321–1338. <a href="https://doi.org/10.1287/isre.2023.editorial.v34.n4">https://doi.org/10.1287/isre.2023.editorial.v34.n4</a>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.querySelector("#quarto-sidebar");
@@ -1680,5 +1510,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/peer_review.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/projects/agenticlr.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
