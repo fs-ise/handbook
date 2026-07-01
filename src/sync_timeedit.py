@@ -4,17 +4,16 @@ from __future__ import annotations
 import hashlib
 import urllib.request
 from datetime import date, datetime
-from pathlib import Path
 from typing import Any
 
 import yaml
 from icalendar import Calendar
+from sync_utils import EVENTS_PATH, sort_events, write_events_yaml
 from update_calendar import main as update_calendar_main
 from zoneinfo import ZoneInfo
 
 
 TIMEEDIT_ICAL_URL = "https://cloud.timeedit.net/de_frankfurt_school/web/employees/ri66Qv2Z56Y99dQYQ6Qun22XZo00Qwt118mZnZ7ym55Z0Y4620nQo4558Bt8980E66367C3B70m7kBQnF4341ZC27j4olA87501287C.ics"
-EVENTS_PATH = Path("data/events.yaml")
 BERLIN = ZoneInfo("Europe/Berlin")
 NON_LECTURE_TITLE_PARTS = (
     "orientation",
@@ -38,32 +37,6 @@ NON_LECTURE_TITLE_PARTS = (
     "fronleichnam",
 )
 
-class QuotedValue(str):
-    pass
-
-
-class ValueQuotedDumper(yaml.SafeDumper):
-    pass
-
-
-def quoted_value_representer(dumper: yaml.Dumper, data: QuotedValue) -> yaml.Node:
-    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style='"')
-
-
-ValueQuotedDumper.add_representer(QuotedValue, quoted_value_representer)
-
-
-def quote_string_values(value: Any) -> Any:
-    if isinstance(value, dict):
-        return {
-            key: quote_string_values(item)
-            for key, item in value.items()
-        }
-    if isinstance(value, list):
-        return [quote_string_values(item) for item in value]
-    if isinstance(value, str):
-        return QuotedValue(value)
-    return value
 
 def fetch_timeedit_ical() -> bytes:
     request = urllib.request.Request(
@@ -150,29 +123,6 @@ def parse_timeedit_events(ical_bytes: bytes) -> list[dict[str, str]]:
         events,
         key=lambda ev: (ev["start"], ev["title"], ev["source_uid"]),
     )
-
-
-def sort_events(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    return sorted(
-        events,
-        key=lambda ev: (
-            str(ev.get("start", "")),
-            str(ev.get("title", "")),
-            str(ev.get("source_uid", "")),
-        ),
-    )
-
-
-def write_events_yaml(events: list[dict[str, Any]]) -> None:
-    text = yaml.dump(
-        quote_string_values(events),
-        Dumper=ValueQuotedDumper,
-        allow_unicode=True,
-        default_flow_style=False,
-        sort_keys=False,
-        width=4096,
-    )
-    EVENTS_PATH.write_text(text, encoding="utf-8")
 
 
 def main() -> None:
