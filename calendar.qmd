@@ -12,17 +12,58 @@ It contains public events that are of interest to the team and students.
 
 <br>
 
-To subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.
+## ISE calendar data flow
+
+The ISE calendar combines manually maintained events with automated imports from TimeEdit and AISNET. The resulting canonical calendar data feeds both the public ISE calendar page and an ICS feed that can be subscribed to from external calendar applications.
+
+::: {.text-center}
+```{mermaid}
+flowchart LR
+    manual[Manual additions]
+    timeedit[TimeEdit sync]
+    ais[AIS sync]
+
+    events[(data/events.yaml)]
+
+    calendar[ISE calendar page]
+    ics[ICS feed for sync]
+
+    manual --> events
+    timeedit --> events
+    ais --> events
+
+    events --> calendar
+    events --> ics
+
+    click manual "#manual-additions" "Read about manual calendar additions"
+    click timeedit "#timeedit-sync" "Read about the TimeEdit sync"
+    click ais "#ais-sync" "Read about the AIS sync"
+    click events "https://github.com/fs-ise/handbook/blob/main/data/events.yaml" "View canonical calendar data"
+    click calendar "#ise-calendar-data-flow" "Read about the calendar page"
+    click ics "#ics-feed-calendar-sync-output" "Read about the ICS feed"
+```
+:::
+
+All input modes are normalized into the shared [`data/events.yaml`](data/events.yaml) file before the calendar page and ICS feed are generated.
+
+### Manual additions
+
+Manual additions are maintained directly in [`data/events.yaml`](data/events.yaml). Use this mode for events that are not available from an automated source.
+
+### TimeEdit sync
+
+The TimeEdit sync imports teaching and timetable-related events with [`src/sync_timeedit.py`](src/sync_timeedit.py). It runs through the [TimeEdit calendar sync GitHub Action](.github/workflows/sync_timeedit_calendar.yml).
+
+### AIS sync
+
+The AIS sync imports selected institutional and conference events with [`src/sync_aisnet.py`](src/sync_aisnet.py). It runs through the [AISNET sync GitHub Action](.github/workflows/sync_aisnet.yml).
+
+## ICS feed / calendar sync output
+
+The ICS feed is generated from the same canonical data as the calendar page by [`src/update_calendar.py`](src/update_calendar.py), with regular updates handled by the [calendar ICS GitHub Action](.github/workflows/update_calendar_ics.yml). Subscribe to the ISE calendar ICS feed from external calendar apps instead of manually copying events.
 
 ```sh
-https://raw.githubusercontent.com/fs-ise/handbook/refs/heads/main/assets/calendar/fs-ise.ical
+https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical
 ```
-
-::: {.callout-note title="TimeEdit sync"}
-Lecture slots are synchronized from TimeEdit into the canonical
-[`data/events.yaml`](data/events.yaml) file by the
-[`src/sync_timeedit.py`](src/sync_timeedit.py) import script, with regular runs by [`.github/workflows/sync_timeedit_calendar.yml`](.github/workflows/sync_timeedit_calendar.yml).
-Manually maintained events remain in the same YAML file.
-:::
 
 <script src="assets/calendar/calendar.js"></script>
