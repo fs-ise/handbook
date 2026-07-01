@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import uuid
+import hashlib
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import yaml
 from dateutil import rrule
@@ -14,6 +14,7 @@ from icalendar import Calendar, Event
 
 
 BERLIN = ZoneInfo("Europe/Berlin")
+UTC = ZoneInfo("UTC")
 
 
 def parse_dt(value: str) -> datetime:
@@ -35,6 +36,21 @@ def parse_dt(value: str) -> datetime:
     return dt.replace(tzinfo=BERLIN)
 
 
+def stable_uid(ev: dict) -> str:
+    if ev.get("source_uid"):
+        prefix = ev.get("source") or "event"
+        return f"{prefix}-{ev['source_uid']}@fs-ise"
+
+    parts = [
+        ev.get("title", ""),
+        ev["start"].isoformat(),
+        ev["end"].isoformat(),
+        ev.get("location", ""),
+    ]
+    digest = hashlib.sha256("\u241f".join(parts).encode("utf-8")).hexdigest()[:24]
+    return f"event-{digest}@fs-ise"
+
+
 def expand_events(events: list[dict]) -> list[dict]:
     expanded: list[dict] = []
 
@@ -43,35 +59,34 @@ def expand_events(events: list[dict]) -> list[dict]:
         end = parse_dt(ev["end"])
         duration = end - start
 
+        base = {
+            "title": ev.get("title", ""),
+            "location": ev.get("location", ""),
+            "description": ev.get("description", ""),
+            "color": ev.get("color", ""),
+            "source": ev.get("source", ""),
+            "source_uid": ev.get("source_uid", ""),
+        }
+
         if "recurrence" in ev and ev["recurrence"]:
             # RRULE.parseString equivalent:
             rule = rrule.rrulestr(ev["recurrence"], dtstart=start)
 
             for occ_start in rule:
                 occ_end = occ_start + duration
-                expanded.append(
-                    {
-                        "start": occ_start,
-                        "end": occ_end,
-                        "title": ev.get("title", ""),
-                        "location": ev.get("location", ""),
-                        "description": ev.get("description", ""),
-                        "color": ev.get("color", ""),
-                    }
-                )
+                expanded.append({**base, "start": occ_start, "end": occ_end})
         else:
-            expanded.append(
-                {
-                    "start": start,
-                    "end": end,
-                    "title": ev.get("title", ""),
-                    "location": ev.get("location", ""),
-                    "description": ev.get("description", ""),
-                    "color": ev.get("color", ""),
-                }
-            )
+            expanded.append({**base, "start": start, "end": end})
 
-    return expanded
+    return sorted(
+        expanded,
+        key=lambda ev: (
+            ev["start"],
+            ev.get("title", ""),
+            ev.get("source_uid", ""),
+            ev.get("location", ""),
+        ),
+    )
 
 
 def generate_ical(events: list[dict]) -> str:
@@ -83,12 +98,10 @@ def generate_ical(events: list[dict]) -> str:
     # Optional: many clients ignore this, but harmless
     cal.add("x-published-ttl", "PT1H")
 
-    now_utc = datetime.now(tz=ZoneInfo("UTC"))
-
     for ev in events:
         e = Event()
-        e.add("uid", f"{uuid.uuid4()}@fs-ise")
-        e.add("dtstamp", now_utc)
+        e.add("uid", stable_uid(ev))
+        e.add("dtstamp", ev["start"].astimezone(UTC))
         e.add("summary", ev.get("title", "") or " ")
         e.add("dtstart", ev["start"])
         e.add("dtend", ev["end"])

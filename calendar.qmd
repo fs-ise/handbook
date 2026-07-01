@@ -18,4 +18,11 @@ To subscribe directly, you can export the .ics file, then add the calendar to Ou
 https://raw.githubusercontent.com/fs-ise/handbook/refs/heads/main/assets/calendar/fs-ise.ical
 ```
 
+::: {.callout-note title="TimeEdit sync"}
+Lecture slots are synchronized from TimeEdit into the canonical
+[`data/events.yaml`](data/events.yaml) file by the
+[`src/sync_timeedit.py`](src/sync_timeedit.py) import script, with regular runs by [`.github/workflows/sync_timeedit_calendar.yml`](.github/workflows/sync_timeedit_calendar.yml).
+Manually maintained events remain in the same YAML file.
+:::
+
 <script src="assets/calendar/calendar.js"></script>

@@ -1,0 +1,43 @@
+name: Sync TimeEdit Calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync-timeedit-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml python-dateutil icalendar
+
+      - name: Sync TimeEdit events and generate iCal file
+        run: python src/sync_timeedit.py
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/sync-timeedit-calendar
+          commit-message: Update calendar from TimeEdit
+          title: Update calendar from TimeEdit
+          body: |
+            Synchronizes TimeEdit-managed entries in `data/events.yaml` and regenerates `assets/calendar/fs-ise.ical`.
+          add-paths: |
+            data/events.yaml
+            assets/calendar/fs-ise.ical
