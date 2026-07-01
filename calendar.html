@@ -115,29 +115,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="./assets/calendar/ics.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/rrule/dist/es5/rrule.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -149,6 +131,17 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -158,6 +151,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -1079,24 +1083,67 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 </div>
 <p><br></p>
-<p>To subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/fs-ise/handbook/refs/heads/main/assets/calendar/fs-ise.ical</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-note callout-titled" title="TimeEdit sync">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="ise-calendar-data-flow" class="level2">
+<h2 class="anchored" data-anchor-id="ise-calendar-data-flow">ISE calendar data flow</h2>
+<p>The ISE calendar combines manually maintained events with automated imports from TimeEdit and AISNET. The resulting canonical calendar data feeds both the public ISE calendar page and an ICS feed that can be subscribed to from external calendar applications.</p>
+<div class="text-center">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    manual[Manual additions]
+    timeedit[TimeEdit sync]
+    ais[AIS sync]
+
+    events[(data/events.yaml)]
+
+    calendar[ISE calendar page]
+    ics[ICS feed for sync]
+
+    manual --&gt; events
+    timeedit --&gt; events
+    ais --&gt; events
+
+    events --&gt; calendar
+    events --&gt; ics
+
+    click manual "#manual-additions" "Read about manual calendar additions"
+    click timeedit "#timeedit-sync" "Read about the TimeEdit sync"
+    click ais "#ais-sync" "Read about the AIS sync"
+    click events "https://github.com/fs-ise/handbook/blob/main/data/events.yaml" "View canonical calendar data"
+    click calendar "#ise-calendar-data-flow" "Read about the calendar page"
+    click ics "#ics-feed-calendar-sync-output" "Read about the ICS feed"
+</pre>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>TimeEdit sync
+<p></p></figure><p></p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Lecture slots are synchronized from TimeEdit into the canonical <a href="data/events.yaml"><code>data/events.yaml</code></a> file by the <a href="src/sync_timeedit.py"><code>src/sync_timeedit.py</code></a> import script, with regular runs by <a href=".github/workflows/sync_timeedit_calendar.yml"><code>.github/workflows/sync_timeedit_calendar.yml</code></a>. Manually maintained events remain in the same YAML file.</p>
 </div>
 </div>
+<p>All input modes are normalized into the shared <a href="data/events.yaml"><code>data/events.yaml</code></a> file before the calendar page and ICS feed are generated.</p>
+<section id="manual-additions" class="level3">
+<h3 class="anchored" data-anchor-id="manual-additions">Manual additions</h3>
+<p>Manual additions are maintained directly in <a href="data/events.yaml"><code>data/events.yaml</code></a>. Use this mode for events that are not available from an automated source.</p>
+</section>
+<section id="timeedit-sync" class="level3">
+<h3 class="anchored" data-anchor-id="timeedit-sync">TimeEdit sync</h3>
+<p>The TimeEdit sync imports teaching and timetable-related events with <a href="src/sync_timeedit.py"><code>src/sync_timeedit.py</code></a>. It runs through the <a href=".github/workflows/sync_timeedit_calendar.yml">TimeEdit calendar sync GitHub Action</a>.</p>
+</section>
+<section id="ais-sync" class="level3">
+<h3 class="anchored" data-anchor-id="ais-sync">AIS sync</h3>
+<p>The AIS sync imports selected institutional and conference events with <a href="src/sync_aisnet.py"><code>src/sync_aisnet.py</code></a>. It runs through the <a href=".github/workflows/sync_aisnet.yml">AISNET sync GitHub Action</a>.</p>
+</section>
+</section>
+<section id="ics-feed-calendar-sync-output" class="level2">
+<h2 class="anchored" data-anchor-id="ics-feed-calendar-sync-output">ICS feed / calendar sync output</h2>
+<p>The ICS feed is generated from the same canonical data as the calendar page by <a href="src/update_calendar.py"><code>src/update_calendar.py</code></a>, with regular updates handled by the <a href=".github/workflows/update_calendar_ics.yml">calendar ICS GitHub Action</a>. Subscribe to the ISE calendar ICS feed from external calendar apps instead of manually copying events.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <script src="assets/calendar/calendar.js"></script>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>

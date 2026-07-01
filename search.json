@@ -4317,7 +4317,27 @@
     "href": "calendar.html",
     "title": "Calendar",
     "section": "",
-    "text": "Our shared public calendar has dates for upcoming events in the lab. It contains public events that are of interest to the team and students.\n\n\n\n\nTo subscribe directly, you can export the .ics file, then add the calendar to Outlook or Thunderbird.\nhttps://raw.githubusercontent.com/fs-ise/handbook/refs/heads/main/assets/calendar/fs-ise.ical\n\n\n\n\n\n\nNoteTimeEdit sync\n\n\n\nLecture slots are synchronized from TimeEdit into the canonical data/events.yaml file by the src/sync_timeedit.py import script, with regular runs by .github/workflows/sync_timeedit_calendar.yml. Manually maintained events remain in the same YAML file.",
+    "text": "Our shared public calendar has dates for upcoming events in the lab. It contains public events that are of interest to the team and students.",
+    "crumbs": [
+      "Calendar"
+    ]
+  },
+  {
+    "objectID": "calendar.html#ise-calendar-data-flow",
+    "href": "calendar.html#ise-calendar-data-flow",
+    "title": "Calendar",
+    "section": "ISE calendar data flow",
+    "text": "ISE calendar data flow\nThe ISE calendar combines manually maintained events with automated imports from TimeEdit and AISNET. The resulting canonical calendar data feeds both the public ISE calendar page and an ICS feed that can be subscribed to from external calendar applications.\n\n\n\n\n\n\nflowchart LR\n    manual[Manual additions]\n    timeedit[TimeEdit sync]\n    ais[AIS sync]\n\n    events[(data/events.yaml)]\n\n    calendar[ISE calendar page]\n    ics[ICS feed for sync]\n\n    manual --&gt; events\n    timeedit --&gt; events\n    ais --&gt; events\n\n    events --&gt; calendar\n    events --&gt; ics\n\n    click manual \"#manual-additions\" \"Read about manual calendar additions\"\n    click timeedit \"#timeedit-sync\" \"Read about the TimeEdit sync\"\n    click ais \"#ais-sync\" \"Read about the AIS sync\"\n    click events \"https://github.com/fs-ise/handbook/blob/main/data/events.yaml\" \"View canonical calendar data\"\n    click calendar \"#ise-calendar-data-flow\" \"Read about the calendar page\"\n    click ics \"#ics-feed-calendar-sync-output\" \"Read about the ICS feed\"\n\n\n\n\n\n\n\nAll input modes are normalized into the shared data/events.yaml file before the calendar page and ICS feed are generated.\n\nManual additions\nManual additions are maintained directly in data/events.yaml. Use this mode for events that are not available from an automated source.\n\n\nTimeEdit sync\nThe TimeEdit sync imports teaching and timetable-related events with src/sync_timeedit.py. It runs through the TimeEdit calendar sync GitHub Action.\n\n\nAIS sync\nThe AIS sync imports selected institutional and conference events with src/sync_aisnet.py. It runs through the AISNET sync GitHub Action.",
+    "crumbs": [
+      "Calendar"
+    ]
+  },
+  {
+    "objectID": "calendar.html#ics-feed-calendar-sync-output",
+    "href": "calendar.html#ics-feed-calendar-sync-output",
+    "title": "Calendar",
+    "section": "ICS feed / calendar sync output",
+    "text": "ICS feed / calendar sync output\nThe ICS feed is generated from the same canonical data as the calendar page by src/update_calendar.py, with regular updates handled by the calendar ICS GitHub Action. Subscribe to the ISE calendar ICS feed from external calendar apps instead of manually copying events.\nhttps://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical",
     "crumbs": [
       "Calendar"
     ]
