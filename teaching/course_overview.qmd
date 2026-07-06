@@ -17,17 +17,19 @@ listing:
 
 ➕ [Create a new course](/teaching/new_course.html)
 
-## Data and materials
-
-- Courses are [here](https://github.com/fs-ise/handbook/tree/main/teaching/courses){target=_blank}.
-- Materials are [here](/teaching/materials.html).
-
-## State model
+::: {.callout-note title="State model"}
 
 ```{mermaid}
-flowchart
-direction LR
+%%| fig-align: center
+
+flowchart LR
     Upcoming(["upcoming"]) --> InProgress(["in-progress"])
     InProgress --> Grade(["grading"])
     Grade --> Completed(["completed"])
 ```
+:::
+
+## Data and materials
+
+- Courses are [here](https://github.com/fs-ise/handbook/tree/main/teaching/courses){target=_blank}.
+- Materials are [here](/teaching/materials.html).
