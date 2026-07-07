@@ -32,6 +32,9 @@ status: upcoming
 student_evaluations: ""
 improvement_issue: ""
 improvement_status: N/A
+lecturer: "Gerit Wagner"
+lms: "Canvas URL pending"
+website: "Website URL pending"
 ---
 
 # IDW 20XX WiSe
@@ -40,9 +43,9 @@ Field               | Value
 ------------------- | -----
 Title               | {{< meta title >}}
 Semester            | {{< meta semester >}}
-Lecturer            | Gerit Wagner
-Link: LMS           | Canvas URL pending
-Link: Website       | Website URL pending
+Lecturer            | {{< meta lecturer >}}
+Link: LMS           | {{< meta lms >}}
+Link: Website       | {{< meta website >}}
 Status              | {{< meta status >}}
 Student Evaluations | {{< meta student_evaluations >}}
 Improvement Issue   | {{< meta improvement_issue >}}
@@ -120,6 +123,9 @@ Students can review their exams and grades according to the applicable examinati
     student_evaluations: ""
     improvement_issue: ""
     improvement_status: N/A
+    lecturer: "Gerit Wagner"
+    lms: "Canvas URL pending"
+    website: "Website URL pending"
     ---
 
     # LRSem 20XX WiSe
@@ -128,9 +134,9 @@ Students can review their exams and grades according to the applicable examinati
     ------------------- | -----
     Title               | {{< meta title >}}
     Semester            | {{< meta semester >}}
-    Lecturer            | Gerit Wagner
-    Link: LMS           | Canvas URL pending
-    Link: Website       | Website URL pending
+    Lecturer            | {{< meta lecturer >}}
+    Link: LMS           | {{< meta lms >}}
+    Link: Website       | {{< meta website >}}
     Status              | {{< meta status >}}
     Student Evaluations | {{< meta student_evaluations >}}
     Improvement Issue   | {{< meta improvement_issue >}}
@@ -138,42 +144,20 @@ Students can review their exams and grades according to the applicable examinati
 
     ## Process
 
-    - Exato: Seminars must be created for each semester (decentral exams), a seminar paper and presentation are mandatory
-    - Grading: The Team Assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register in Exato.
-
-    ## 1. Announce the seminar (4 months before)
+    ## 1. Announce the course (4 months before)
 
     Start: December (summer term), May (winter term)
 
-    - [ ] Team Assistant: Create the course in Exato.
-
-    ::: .callout-note
-    Check public holidays
-
-    Exato/course scheduling: Besonderheiten bei Ausstattung/Hinweise:
-
-    - 8h Semesterwoche 5, Freitag, Blocktermin, Seminarraum
-    - 8h Semesterwoche 6, Freitag, Blocktermin, Seminarraum
-    :::
-
-    At the end of the semester:
-
-    - [ ] Professor: Announce the seminar on the website for the next semester (without dates/rooms).
-    - [ ] Team Assistant: Update information in UnivIS (**add keywords „WI-Seminar“ and „WI-Seminare“**), check information on the website.
+    - [ ] Canvas team: Create the course and shares the link.
+    - [ ] Carefully select lecture rooms (Power supply, Harvard vs. Flat, Beamer)
 
     Deadline: mid-May (summer term), December/January (winter term)
 
-    ## 2. Prepare the seminar (1 month before)
+    ## 2. Prepare the course (1 month before)
 
     Start: March (summer term), September (winter term)
 
-    - [ ] Team Assistant and Professor: Set dates and request lecture rooms.
-    - [ ] IT department: Create or confirm the Canvas course shell according to Frankfurt School processes.
-    - [ ] Have the seminar announced through Frankfurt School channels where applicable (see [dissemination](/research/dissemination.html)).
-    - [ ] Professor: Create a reminder for the evaluations.
-    - [ ] Team Assistant: Add teaching team members and session dates in Canvas.
     - [ ] Professor: Summarize the feedback from the last course and explain how it was addressed.
-    - [ ] Professor: Publish the Canvas course when it is ready for students.
 
     Follow the complete [Canvas course checklist](/teaching/lms.html) when preparing the LMS course.
 
@@ -185,36 +169,32 @@ Students can review their exams and grades according to the applicable examinati
     - [ ] Professor: Review the course using Student View.
     - [ ] Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.
 
+    - [ ] Professor: Publish the Canvas course when it is ready for students.
+
     Deadline: April (summer term), October (winter term)
 
-    ## 3. Offer the seminar
+    ## 3. Offer the course
 
     Start: April (summer term), October (winter term)
 
-    - [ ] Team Assistant: Add the presentation (exam) dates to the department calendar
-    - [ ] Professor: Set deadline for protocol submissions in Canvas.
-    - [ ] Professor: Set the date for the presentation.
-    - [ ] Professor: Add presentation dates to the [calendar]({{< meta handbook.url >}}/tree/main/data/events.yaml)
-    - [ ] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
+    - [ ] Professor (Team Assistant): Prepare the exams. Use the [exam checklist](/teaching/exams.html#preparing-the-exam).
+    - [ ] Add exam dates to the [calendar]({{< meta handbook.url >}}/tree/main/data/events.yaml)
 
-    ## 4. Grading and documentation
+    ## 4. Exam grading and documentation
 
     Grading
 
     - [ ] Create a reminder for the deadline.
-    - [ ] Use the [grading scripts]({{< meta handbook.url >}}/tree/main/src/grading){target=_blank} to assign grades and prepare Exato import
-
-    Entering grades into Exato
-
-    - [ ] Team Assistant: Enter grades in Exato (or create certificates if exam is not yet available in Exato ([script]({{< meta handbook.url >}}/tree/main/src/scheine){target=_blank})).
-    - [ ] Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
+    - [ ] Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students
 
     Documentation
 
     - [ ] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
-    - [ ] Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.
+    - [ ] Professor: Document necessary changes for the following exams (e.g., unclear questions, too many questions)
 
     Deadline: End of August (summer term), March (winter term)
+
+    Students can review their exams and grades according to the applicable examination-office process.
 
     ```
 
@@ -233,6 +213,9 @@ Students can review their exams and grades according to the applicable examinati
     student_evaluations: ""
     improvement_issue: ""
     improvement_status: N/A
+    lecturer: "Gerit Wagner"
+    lms: "Canvas URL pending"
+    website: "Website URL pending"
     ---
 
     # OSP 20XX WiSe
@@ -241,9 +224,9 @@ Students can review their exams and grades according to the applicable examinati
     ------------------- | -----
     Title               | {{< meta title >}}
     Semester            | {{< meta semester >}}
-    Lecturer            | Gerit Wagner
-    Link: LMS           | Canvas URL pending
-    Link: Website       | Website URL pending
+    Lecturer            | {{< meta lecturer >}}
+    Link: LMS           | {{< meta lms >}}
+    Link: Website       | {{< meta website >}}
     Status              | {{< meta status >}}
     Student Evaluations | {{< meta student_evaluations >}}
     Improvement Issue   | {{< meta improvement_issue >}}
@@ -251,43 +234,20 @@ Students can review their exams and grades according to the applicable examinati
 
     ## Process
 
-    - Grading: The Team Assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register in Exato.
-
-    ## 1. Announce the project (4 months before)
+    ## 1. Announce the course (4 months before)
 
     Start: December (summer term), May (winter term)
 
-    - [ ] Team Assistant: Create the project in Exato.
-
-    ::: .callout-note
-    Check public holidays
-
-    Exato/course scheduling: Besonderheiten bei Ausstattung/Hinweise:
-
-    - 2h in Semesterwoche 1, Tag und Zeit egal
-    - 4h in Semesterwoche 2, Freitag, Uhrzeit egal, CIP-Pool
-    - 2 x 4h in Semesterwoche 3, Donnerstag und Freitag, Uhrzeit egal, CIP-Pool
-    - 2h in Semesterwoche 5, Donnerstag oder Freitag, Uhrzeit egal, CIP-Pool
-    :::
-
-    At the end of the semester:
-
-    - [ ] Team Assistant: Update information in UnivIS (**add keywords „WI-Projekt“ and „WI-Projekte“**), check information on the website. Canvas/course catalogue: confirm the applicable project entry.
-    - [ ] Team Assistant: Announce the project on the website for the next semester (without dates/rooms).
+    - [ ] Canvas team: Create the course and shares the link.
+    - [ ] Carefully select lecture rooms (Power supply, Harvard vs. Flat, Beamer)
 
     Deadline: mid-May (summer term), December/January (winter term)
 
-    ## 2. Prepare the project (1 month before)
+    ## 2. Prepare the course (1 month before)
 
     Start: March (summer term), September (winter term)
 
-    - [ ] Team Assistant and Professor: Set dates and request lecture rooms.
-    - [ ] IT department: Create or confirm the Canvas course shell according to Frankfurt School processes.
-    - [ ] Professor: Have the project announced through Frankfurt School channels where applicable (see [dissemination](/research/dissemination.html)).
-    - [ ] Professor: Create a reminder for the evaluations.
-    - [ ] Team Assistant: Add teaching team members and session dates in Canvas.
     - [ ] Professor: Summarize the feedback from the last course and explain how it was addressed.
-    - [ ] Professor: Publish the Canvas course when it is ready for students.
 
     Follow the complete [Canvas course checklist](/teaching/lms.html) when preparing the LMS course.
 
@@ -299,36 +259,33 @@ Students can review their exams and grades according to the applicable examinati
     - [ ] Professor: Review the course using Student View.
     - [ ] Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.
 
+    - [ ] Professor: Publish the Canvas course when it is ready for students.
+
     Deadline: April (summer term), October (winter term)
 
-    ## 3. Offer the project
+    ## 3. Offer the course
 
     Start: April (summer term), October (winter term)
 
-    - [ ] Team Assistant: Add the presentation (exam) dates to the department calendar
-    - [ ] Professor: Set deadline for pull-request evaluation.
-    - [ ] Professor: Set the date for the code review session.
-    - [ ] Professor: Add the code review session to the [calendar]({{< meta handbook.url >}}/tree/main/data/events.yaml)
-    - [ ] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
+    - [ ] Professor (Team Assistant): Prepare the exams. Use the [exam checklist](/teaching/exams.html#preparing-the-exam).
+    - [ ] Add exam dates to the [calendar]({{< meta handbook.url >}}/tree/main/data/events.yaml)
 
-    ## 4. Grading and documentation
+    ## 4. Exam grading and documentation
 
     Grading
 
     - [ ] Create a reminder for the deadline.
-    - [ ] Use the [grading scripts]({{< meta handbook.url >}}/tree/main/src/grading){target=_blank} to assign grades and prepare Exato import
-
-    Entering grades into Exato
-
-    - [ ] Team Assistant: Enter grades in Exato (or create certificates if exam is not yet available in Exato ([script]({{< meta handbook.url >}}/tree/main/src/scheine){target=_blank})).
-    - [ ] Professor: Archive grades and presentation protocols (projects and seminars: digital is sufficient) at [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
+    - [ ] Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students
 
     Documentation
 
     - [ ] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
-    - [ ] Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.
+    - [ ] Professor: Document necessary changes for the following exams (e.g., unclear questions, too many questions)
 
     Deadline: End of August (summer term), March (winter term)
+
+    Students can review their exams and grades according to the applicable examination-office process.
+
     ```
     :::
 -->

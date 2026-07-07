@@ -10,19 +10,19 @@ improvement_issue: ""
 improvement_status: "N/A"
 teaching_load:
   - hours: 44
+lecturer: 'Gerit Wagner'
+lms: '[Canvas](https://frankfurtschool.instructure.com/courses/19780){target="_blank"}'
+website: '[Website](https://github.com/fs-ise/analytics-and-big-data){target="_blank"}'
 ---
 
-::: callout-important
-Process needs to be adapted.
-:::
 
 Field               | Value
 ------------------- | -----
 Title               | {{< meta title >}}
 Semester            | {{< meta semester >}}
-Lecturer            | Gerit Wagner
-Link: LMS           | [Canvas](https://frankfurtschool.instructure.com/courses/19780){target="_blank"}
-Link: Website       | [Website](https://github.com/fs-ise/analytics-and-big-data){target="_blank"}
+Lecturer            | {{< meta lecturer >}}
+Link: LMS           | {{< meta lms >}}
+Link: Website       | {{< meta website >}}
 Status              | {{< meta status >}}
 Student Evaluations | {{< meta student_evaluations >}}
 Improvement Issue   | {{< meta improvement_issue >}}
@@ -30,40 +30,20 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
-```{mermaid}
-flowchart LR
-    A[<a href="#announce">1. Announce the course</a><br/>4 months before] --> B[<a href="#prepare">2. Prepare the course</a><br/>1 month before]
-    B --> C[<a href="#offer">3. Offer the course</a>]
-    C --> D[<a href="#grade">4. Exam grading<br/>and documentation</a>]
-    D --> E[<a href="#repeat">5. Repeat exam</a><br/>following term]
+## 1. Announce the course (4 months before)
 
-```
-
-## 1. Announce the course{#announce}
- 
 Start: December (summer term), May (winter term)
 
-- [x] Team Assistant: Create the course in Exato.
-
-At the end of the semester: 
-
-
-- [x] Professor: Announce lecture on the website for the next semester (without dates/rooms).
-- [x] Team Assistant: Update information in UnivIS (add keywords „WI-Seminar“ and „WI-Seminare“ for seminars), check information on the website.
+- [x] Canvas team: Create the course and shares the link.
+- [x] Carefully select lecture rooms (Power supply, Harvard vs. Flat, Beamer)
 
 Deadline: mid-May (summer term), December/January (winter term)
 
-## 2. Prepare the course{#prepare}
+## 2. Prepare the course (1 month before)
 
 Start: March (summer term), September (winter term)
 
-- [x] Team Assistant and Professor: Set dates and request lecture rooms.
-- [x] IT department: Create or confirm the Canvas course shell according to Frankfurt School processes.
-- [x] Have the lecture announced through Frankfurt School channels where applicable.
-- [x] Professor: Create a reminder for the evaluations.
-- [x] Team Assistant: Add teaching team members and session dates in Canvas.
 - [x] Professor: Summarize the feedback from the last course and explain how it was addressed.
-- [x] Professor: Publish the Canvas course when it is ready for students.
 
 Follow the complete [Canvas course checklist](/teaching/lms.html) when preparing the LMS course.
 
@@ -75,50 +55,29 @@ Follow the complete [Canvas course checklist](/teaching/lms.html) when preparing
 - [x] Professor: Review the course using Student View.
 - [x] Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.
 
+- [x] Professor: Publish the Canvas course when it is ready for students.
+
 Deadline: April (summer term), October (winter term)
 
-## 3. Offer the course{#offer}
+## 3. Offer the course
 
 Start: April (summer term), October (winter term)
 
-- [x] Professor: Schedule evaluations in the pen-ultimate week ([evaluations](/teaching/evaluations.html)).
-- [x] Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).
-- [x] Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: "Prüferbestellung"). Use the [exam checklist](/teaching/exams.html#preparing-the-exam).
-- [x] Add exam dates to the [calendar](/index.html)
+- [x] Professor (Team Assistant): Prepare the exams. Use the [exam checklist](/teaching/exams.html#preparing-the-exam).
+- [x] Add exam dates to the [calendar]({{< meta handbook.url >}}/tree/main/data/events.yaml)
 
-## 4. Exam grading and documentation{#grade}
-
-Before grading (day of the exam)
-
-- [x] Professor: Cases of cheating (Unterschleif): immediately enter it into Exato and send the exam to the examination office (do not grade it)
-- [x] Professor: Cases of missed exams (Versäumnisklausuren): immediately enter it into Exato, archive the exams for 1 year.
-- [x] Professor: Send the exam sheets, protocols (Anwesenheitslisten), and two empty exams to the examination office immediately after the exams are completed.
-- [x] Team Assistant: Empty exams (Versäumnis-Klausur): archive for one semester.
+## 4. Exam grading and documentation
 
 Grading
 
-- [x] Create reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).
-- [x] Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".
-- [x] Do not dispose of empty exams
-- [x] Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare Exato import
-- [x] Have failed exams reviewed by a second professor
-
-Entering grades into Exato
-
-- [x] Team Assistant: Enter grades in Exato (or create certificates if exam is not yet available in Exato ([script](https://github.com/fs-ise/handbook/tree/main/src/scheine){target=_blank})).
-- [x] Professor: Archive bonus exercises (if any).
+- [x] Create a reminder for the deadline.
+- [x] Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students
 
 Documentation
 
 - [ ] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
+- [ ] Professor: Document necessary changes for the following exams (e.g., unclear questions, too many questions)
 
 Deadline: End of August (summer term), March (winter term)
-
-## 5. Repeat exam{#repeat}
-
-Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in Exato is created by the examination office.
-
-- [ ] Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in Exato.
-- [ ] Repeat relevant steps of *Exams and documentation* (step 4) 
 
 Students can review their exams and grades according to the applicable examination-office process.
