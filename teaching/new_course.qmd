@@ -21,7 +21,7 @@ To set up a new lecture, seminar, or project:
 
 ::: {.callout-note title="Lecture template" collapse=true}
 
-```Markdown {shortcodes=false}
+````Markdown {shortcodes=false}
 ---
 title_short: IDW
 title: The Literature Review Seminar
@@ -53,7 +53,15 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
-## 1. Announce the course (4 months before)
+```{mermaid}
+flowchart LR
+    A[<a href="#announce">1. Announce the course</a><br/>4 months before] --> B[<a href="#prepare">2. Prepare the course</a><br/>1 month before]
+    B --> C[<a href="#offer">3. Offer the course</a>]
+    C --> D[<a href="#grade">4. Exam grading<br/>and documentation</a>]
+    D --> E[<a href="#repeat">5. Repeat exam</a><br/>following term]
+```
+
+## 1. Announce the course (4 months before) {#announce}
 
 Start: December (summer term), May (winter term)
 
@@ -62,7 +70,7 @@ Start: December (summer term), May (winter term)
 
 Deadline: mid-May (summer term), December/January (winter term)
 
-## 2. Prepare the course (1 month before)
+## 2. Prepare the course (1 month before) {#prepare}
 
 Start: March (summer term), September (winter term)
 
@@ -82,14 +90,14 @@ Follow the complete [Canvas course checklist](/teaching/lms.html) when preparing
 
 Deadline: April (summer term), October (winter term)
 
-## 3. Offer the course
+## 3. Offer the course {#offer}
 
 Start: April (summer term), October (winter term)
 
 - [ ] Professor (Team Assistant): Prepare the exams. Use the [exam checklist](/teaching/exams.html#preparing-the-exam).
 - [ ] Add exam dates to the [calendar]({{< meta handbook.url >}}/tree/main/data/events.yaml)
 
-## 4. Exam grading and documentation
+## 4. Exam grading and documentation {#grade}
 
 Grading
 
@@ -104,7 +112,16 @@ Documentation
 Deadline: End of August (summer term), March (winter term)
 
 Students can review their exams and grades according to the applicable examination-office process.
-```
+
+## 5. Repeat exam {#repeat}
+
+Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office.
+
+- [ ] Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.
+- [ ] Repeat relevant steps of *Exam grading and documentation* (step 4).
+
+Students can review their exams and grades according to the applicable examination-office process.
+````
 :::
 
 <!--
