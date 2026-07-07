@@ -72,29 +72,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -106,6 +88,17 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -115,6 +108,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -1079,9 +1083,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </table>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[&lt;a href="#announce"&gt;1. Announce the course&lt;/a&gt;&lt;br/&gt;4 months before] --&gt; B[&lt;a href="#prepare"&gt;2. Prepare the course&lt;/a&gt;&lt;br/&gt;1 month before]
+    B --&gt; C[&lt;a href="#offer"&gt;3. Offer the course&lt;/a&gt;]
+    C --&gt; D[&lt;a href="#grade"&gt;4. Exam grading&lt;br/&gt;and documentation&lt;/a&gt;]
+    D --&gt; E[&lt;a href="#repeat"&gt;5. Repeat exam&lt;/a&gt;&lt;br/&gt;following term]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
-<section id="announce-the-course-4-months-before" class="level2">
-<h2 class="anchored" data-anchor-id="announce-the-course-4-months-before">1. Announce the course (4 months before)</h2>
+<section id="announce" class="level2">
+<h2 class="anchored" data-anchor-id="announce">1. Announce the course (4 months before)</h2>
 <p>Start: December (summer term), May (winter term)</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Canvas team: Create the course and shares the link.</label></li>
@@ -1089,8 +1109,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p>Deadline: mid-May (summer term), December/January (winter term)</p>
 </section>
-<section id="prepare-the-course-1-month-before" class="level2">
-<h2 class="anchored" data-anchor-id="prepare-the-course-1-month-before">2. Prepare the course (1 month before)</h2>
+<section id="prepare" class="level2">
+<h2 class="anchored" data-anchor-id="prepare">2. Prepare the course (1 month before)</h2>
 <p>Start: March (summer term), September (winter term)</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Professor: Summarize the feedback from the last course and explain how it was addressed.</label></li>
@@ -1108,16 +1128,16 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p>Deadline: April (summer term), October (winter term)</p>
 </section>
-<section id="offer-the-course" class="level2">
-<h2 class="anchored" data-anchor-id="offer-the-course">3. Offer the course</h2>
+<section id="offer" class="level2">
+<h2 class="anchored" data-anchor-id="offer">3. Offer the course</h2>
 <p>Start: April (summer term), October (winter term)</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Professor (Team Assistant): Prepare the exams. Use the <a href="../../teaching/exams.html#preparing-the-exam">exam checklist</a>.</label></li>
 <li><label><input type="checkbox" checked="">Add exam dates to the <a href="https://github.com/fs-ise/handbook/tree/main/data/events.yaml">calendar</a></label></li>
 </ul>
 </section>
-<section id="exam-grading-and-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="exam-grading-and-documentation">4. Exam grading and documentation</h2>
+<section id="grade" class="level2">
+<h2 class="anchored" data-anchor-id="grade">4. Exam grading and documentation</h2>
 <p>Grading</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Create a reminder for the deadline.</label></li>
@@ -1129,6 +1149,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li><label><input type="checkbox">Professor: Document necessary changes for the following exams (e.g., unclear questions, too many questions)</label></li>
 </ul>
 <p>Deadline: End of August (summer term), March (winter term)</p>
+<p>Students can review their exams and grades according to the applicable examination-office process.</p>
+</section>
+<section id="repeat" class="level2">
+<h2 class="anchored" data-anchor-id="repeat">5. Repeat exam</h2>
+<p>Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Professor: Upon notification by the examination office (E-Mail: “Prüferbestellung”), create the repeat exam. Student registrations are available in FlexNow.</label></li>
+<li><label><input type="checkbox">Repeat relevant steps of <em>Exam grading and documentation</em> (step 4).</label></li>
+</ul>
 <p>Students can review their exams and grades according to the applicable examination-office process.</p>
 
 
