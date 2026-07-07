@@ -73,6 +73,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -104,17 +115,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 </style>
@@ -1196,13 +1196,12 @@ Access
 </tr>
 <tr>
 <td>
-<a href="https://github.com/fs-ise/literature-deduplication-benchmarks" target="_blank">literature-deduplication-benchmarks</a>
+<a href="https://github.com/fs-ise/mlbd" target="_blank">mlbd</a>
 </td>
 <td>
-<span style="color: green;">🟢</span>
+<span style="color: green;">🟢</span> <img src="https://img.shields.io/badge/Public-green" alt="Public">
 </td>
 <td>
-<a href="https://github.com/MingxinJiang" target="_blank">MingxinJiang</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
@@ -1711,6 +1710,20 @@ Access
 </td>
 <td>
 <a href="https://github.com/LaureenTh" target="_blank">LaureenTh</a>
+</td>
+<td>
+<a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/fs-ise/literature-deduplication-benchmarks" target="_blank">literature-deduplication-benchmarks</a>
+</td>
+<td>
+<span style="color: green;">🟢</span> ❓
+</td>
+<td>
+<a href="https://github.com/MingxinJiang" target="_blank">MingxinJiang</a>
 </td>
 <td>
 <a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a>
