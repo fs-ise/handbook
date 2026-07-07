@@ -131,8 +131,8 @@ p {
 
 .news-item {
   display: grid;
-  grid-template-columns: 8rem 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
 }
 
 .news-date {
@@ -152,4 +152,14 @@ p {
 
 .news-footer {
   margin-top: 1rem;
+}
+/* Keep dates compact in Quarto's default news listing. */
+.quarto-listing-default .quarto-post .metadata {
+  flex-basis: 5.5rem;
+  min-width: 5.5rem;
+  max-width: 5.5rem;
+}
+
+.quarto-listing-default .quarto-post .body {
+  flex-basis: calc(100% - 6.5rem);
 }
