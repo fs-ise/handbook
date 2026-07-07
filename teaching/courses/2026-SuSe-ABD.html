@@ -72,11 +72,18 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta name="mermaid-theme" content="neutral">
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -86,17 +93,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -110,15 +106,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1035,19 +1031,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Process needs to be adapted.</p>
-</div>
-</div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1066,15 +1049,15 @@ Important
 </tr>
 <tr class="odd">
 <td>Lecturer</td>
-<td>Gerit Wagner</td>
+<td><p>Gerit Wagner</p></td>
 </tr>
 <tr class="even">
 <td>Link: LMS</td>
-<td><a href="https://frankfurtschool.instructure.com/courses/19780" target="_blank">Canvas</a></td>
+<td><p><a href="https://frankfurtschool.instructure.com/courses/19780" target="_blank">Canvas</a></p></td>
 </tr>
 <tr class="odd">
 <td>Link: Website</td>
-<td><a href="https://github.com/fs-ise/analytics-and-big-data" target="_blank">Website</a></td>
+<td><p><strong>?meta:website</strong></p></td>
 </tr>
 <tr class="even">
 <td>Status</td>
@@ -1096,106 +1079,56 @@ Important
 </table>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A[&lt;a href="#announce"&gt;1. Announce the course&lt;/a&gt;&lt;br/&gt;4 months before] --&gt; B[&lt;a href="#prepare"&gt;2. Prepare the course&lt;/a&gt;&lt;br/&gt;1 month before]
-    B --&gt; C[&lt;a href="#offer"&gt;3. Offer the course&lt;/a&gt;]
-    C --&gt; D[&lt;a href="#grade"&gt;4. Exam grading&lt;br/&gt;and documentation&lt;/a&gt;]
-    D --&gt; E[&lt;a href="#repeat"&gt;5. Repeat exam&lt;/a&gt;&lt;br/&gt;following term]
-
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
 </section>
-<section id="announce" class="level2">
-<h2 class="anchored" data-anchor-id="announce">1. Announce the course</h2>
+<section id="announce-the-course-4-months-before" class="level2">
+<h2 class="anchored" data-anchor-id="announce-the-course-4-months-before">1. Announce the course (4 months before)</h2>
 <p>Start: December (summer term), May (winter term)</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Team Assistant: Create the course in Exato.</label></li>
-</ul>
-<p>At the end of the semester:</p>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">Professor: Announce lecture on the website for the next semester (without dates/rooms).</label></li>
-<li><label><input type="checkbox" checked="">Team Assistant: Update information in UnivIS (add keywords „WI-Seminar“ and „WI-Seminare“ for seminars), check information on the website.</label></li>
+<li><label><input type="checkbox" checked="">Canvas team: Create the course and shares the link.</label></li>
+<li><label><input type="checkbox" checked="">Carefully select lecture rooms (Power supply, Harvard vs.&nbsp;Flat, Beamer)</label></li>
 </ul>
 <p>Deadline: mid-May (summer term), December/January (winter term)</p>
 </section>
-<section id="prepare" class="level2">
-<h2 class="anchored" data-anchor-id="prepare">2. Prepare the course</h2>
+<section id="prepare-the-course-1-month-before" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-the-course-1-month-before">2. Prepare the course (1 month before)</h2>
 <p>Start: March (summer term), September (winter term)</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Team Assistant and Professor: Set dates and request lecture rooms.</label></li>
-<li><label><input type="checkbox" checked="">IT department: Create or confirm the Canvas course shell according to Frankfurt School processes.</label></li>
-<li><label><input type="checkbox" checked="">Have the lecture announced through Frankfurt School channels where applicable.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Create a reminder for the evaluations.</label></li>
-<li><label><input type="checkbox" checked="">Team Assistant: Add teaching team members and session dates in Canvas.</label></li>
 <li><label><input type="checkbox" checked="">Professor: Summarize the feedback from the last course and explain how it was addressed.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Publish the Canvas course when it is ready for students.</label></li>
 </ul>
 <p>Follow the complete <a href="../../teaching/lms.html">Canvas course checklist</a> when preparing the LMS course.</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Professor: Review the syllabus and programme-specific Canvas elements.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Define the Canvas course structure.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Prepare and organize course content in Canvas.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Configure assignments, group sets, and rubrics where applicable.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Define discussion and communication settings.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Review the course using Student View.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.</label></li>
+<li><p><label><input type="checkbox" checked="">Professor: Review the syllabus and programme-specific Canvas elements.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Professor: Define the Canvas course structure.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Professor: Prepare and organize course content in Canvas.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Professor: Configure assignments, group sets, and rubrics where applicable.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Professor: Define discussion and communication settings.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Professor: Review the course using Student View.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Professor: Publish the Canvas course when it is ready for students.</label></p></li>
 </ul>
 <p>Deadline: April (summer term), October (winter term)</p>
 </section>
-<section id="offer" class="level2">
-<h2 class="anchored" data-anchor-id="offer">3. Offer the course</h2>
+<section id="offer-the-course" class="level2">
+<h2 class="anchored" data-anchor-id="offer-the-course">3. Offer the course</h2>
 <p>Start: April (summer term), October (winter term)</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Professor: Schedule evaluations in the pen-ultimate week (<a href="../../teaching/evaluations.html">evaluations</a>).</label></li>
-<li><label><input type="checkbox" checked="">Team Assistant: Order exam materials (Prüfungspapier, Mantelbögen).</label></li>
-<li><label><input type="checkbox" checked="">Professor (Team Assistant): Prepare the exams (Deadline: day of the exam), information is typically provided one month before the semester ends (E-Mail: “Prüferbestellung”). Use the <a href="../../teaching/exams.html#preparing-the-exam">exam checklist</a>.</label></li>
-<li><label><input type="checkbox" checked="">Add exam dates to the <a href="../../index.html">calendar</a></label></li>
+<li><label><input type="checkbox" checked="">Professor (Team Assistant): Prepare the exams. Use the <a href="../../teaching/exams.html#preparing-the-exam">exam checklist</a>.</label></li>
+<li><label><input type="checkbox" checked="">Add exam dates to the <a href="https://github.com/fs-ise/handbook/tree/main/data/events.yaml">calendar</a></label></li>
 </ul>
 </section>
-<section id="grade" class="level2">
-<h2 class="anchored" data-anchor-id="grade">4. Exam grading and documentation</h2>
-<p>Before grading (day of the exam)</p>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">Professor: Cases of cheating (Unterschleif): immediately enter it into Exato and send the exam to the examination office (do not grade it)</label></li>
-<li><label><input type="checkbox" checked="">Professor: Cases of missed exams (Versäumnisklausuren): immediately enter it into Exato, archive the exams for 1 year.</label></li>
-<li><label><input type="checkbox" checked="">Professor: Send the exam sheets, protocols (Anwesenheitslisten), and two empty exams to the examination office immediately after the exams are completed.</label></li>
-<li><label><input type="checkbox" checked="">Team Assistant: Empty exams (Versäumnis-Klausur): archive for one semester.</label></li>
-</ul>
+<section id="exam-grading-and-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="exam-grading-and-documentation">4. Exam grading and documentation</h2>
 <p>Grading</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Create reminder for the deadline: approx. 15. September (summer term), ??? (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).</label></li>
-<li><label><input type="checkbox" checked="">Add bonus points if any and <strong>if exam is passed</strong>. Otherwise, note the bonus points and add a note “kann nicht angerechnet werden”.</label></li>
-<li><label><input type="checkbox" checked="">Do not dispose of empty exams</label></li>
-<li><label><input type="checkbox" checked="">Use the <a href="https://github.com/fs-ise/handbook/tree/main/src/grading" target="_blank">grading scripts</a> to assign grades and prepare Exato import</label></li>
-<li><label><input type="checkbox" checked="">Have failed exams reviewed by a second professor</label></li>
-</ul>
-<p>Entering grades into Exato</p>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">Team Assistant: Enter grades in Exato (or create certificates if exam is not yet available in Exato (<a href="https://github.com/fs-ise/handbook/tree/main/src/scheine" target="_blank">script</a>)).</label></li>
-<li><label><input type="checkbox" checked="">Professor: Archive bonus exercises (if any).</label></li>
+<li><label><input type="checkbox" checked="">Create a reminder for the deadline.</label></li>
+<li><label><input type="checkbox" checked="">Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students</label></li>
 </ul>
 <p>Documentation</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Professor: Analyse the evaluations, store the files, and document the improvements (see <a href="../../teaching/evaluations.html">evaluations</a>).</label></li>
+<li><label><input type="checkbox">Professor: Document necessary changes for the following exams (e.g., unclear questions, too many questions)</label></li>
 </ul>
 <p>Deadline: End of August (summer term), March (winter term)</p>
-</section>
-<section id="repeat" class="level2">
-<h2 class="anchored" data-anchor-id="repeat">5. Repeat exam</h2>
-<p>Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in Exato is created by the examination office.</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Professor: Upon notification by the examination office (E-Mail: “Prüferbestellung”), create the repeat exam. Student registrations are available in Exato.</label></li>
-<li><label><input type="checkbox">Repeat relevant steps of <em>Exams and documentation</em> (step 4)</label></li>
-</ul>
 <p>Students can review their exams and grades according to the applicable examination-office process.</p>
 
 
@@ -1206,24 +1139,39 @@ Important
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.querySelector("#quarto-sidebar");
   if (!sidebar) return;
-  
+
   const activeLink = sidebar.querySelector("a.sidebar-link.active");
   if (!activeLink) return;
-  
-  // Find the top-level sidebar section that contains the active page
-  const topSection = activeLink.closest("li.sidebar-item-section");
+
+  // Start with the immediate section containing the active page
+  let topSection = activeLink.closest("li.sidebar-item-section");
   if (!topSection) return;
-  
-  // Expand all nested collapsible sections inside the active top-level section
-  topSection.querySelectorAll(".collapse").forEach((el) => {
-    el.classList.add("show");
+
+  // Climb to the outermost section, e.g. Delivery -> Teaching
+  while (true) {
+    const parentSection = topSection.parentElement?.closest(
+      "li.sidebar-item-section"
+    );
+
+    if (!parentSection || !sidebar.contains(parentSection)) {
+      break;
+    }
+
+    topSection = parentSection;
+  }
+
+  // Expand all subsections within the active top-level section
+  topSection.querySelectorAll(".collapse").forEach((element) => {
+    element.classList.add("show");
   });
-  
-  // Update toggle buttons/arrows so their visual state matches
-  topSection.querySelectorAll('[data-bs-toggle="collapse"]').forEach((toggle) => {
-    toggle.classList.remove("collapsed");
-    toggle.setAttribute("aria-expanded", "true");
-  });
+
+  // Synchronize arrows and accessibility state
+  topSection
+    .querySelectorAll('[data-bs-toggle="collapse"]')
+    .forEach((toggle) => {
+      toggle.classList.remove("collapsed");
+      toggle.setAttribute("aria-expanded", "true");
+    });
 });
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1299,7 +1247,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/fs-ise\.github\.io\/handbook\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

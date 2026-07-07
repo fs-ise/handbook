@@ -143,17 +143,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -174,6 +163,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -1194,6 +1194,21 @@ Important
 <li>Optional: Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see <a href="https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/" target="_blank">example</a>)</li>
 <li>Optional: Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see <a href="https://harvard-iacs.github.io/2019-CS109A/pages/materials.html" target="_blank">example</a>).</li>
 </ul>
+<p>See examples: <a href="https://evalf22.classes.andrewheiss.com/">1</a> and [2] (https://evalf22.classes.andrewheiss.com/content/).</p>
+<section id="community-engaged-teaching" class="level3">
+<h3 class="anchored" data-anchor-id="community-engaged-teaching">Community-engaged teaching</h3>
+<p>For project-based courses, consider linking teaching activities to real communities, repositories, or open-source projects.</p>
+<p>A useful model is JabRef’s teaching page: <a href="https://devdocs.jabref.org/teaching.html" target="_blank">Teaching with JabRef</a>.</p>
+<p>Recommended elements:</p>
+<ul>
+<li>Curated issues or contribution ideas suitable for students.</li>
+<li>Early coordination with maintainers or community partners.</li>
+<li>A clear contribution workflow from setup to review and pull request.</li>
+<li>Peer and instructor review before upstream submission.</li>
+<li>Reflection on collaboration, maintainability, and community norms.</li>
+</ul>
+<p>This pattern is especially relevant for the Open Source Project course, but can also support software, data, documentation, or research-infrastructure assignments.</p>
+</section>
 <section id="publishing-to-github-pages" class="level3">
 <h3 class="anchored" data-anchor-id="publishing-to-github-pages">Publishing to GitHub pages</h3>
 <p>For <code>quarto publish gh-pages</code> : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).</p>
@@ -1651,24 +1666,39 @@ Vial, G., &amp; Negoita, B. (2018). Teaching programming to non-programmers: The
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.querySelector("#quarto-sidebar");
   if (!sidebar) return;
-  
+
   const activeLink = sidebar.querySelector("a.sidebar-link.active");
   if (!activeLink) return;
-  
-  // Find the top-level sidebar section that contains the active page
-  const topSection = activeLink.closest("li.sidebar-item-section");
+
+  // Start with the immediate section containing the active page
+  let topSection = activeLink.closest("li.sidebar-item-section");
   if (!topSection) return;
-  
-  // Expand all nested collapsible sections inside the active top-level section
-  topSection.querySelectorAll(".collapse").forEach((el) => {
-    el.classList.add("show");
+
+  // Climb to the outermost section, e.g. Delivery -> Teaching
+  while (true) {
+    const parentSection = topSection.parentElement?.closest(
+      "li.sidebar-item-section"
+    );
+
+    if (!parentSection || !sidebar.contains(parentSection)) {
+      break;
+    }
+
+    topSection = parentSection;
+  }
+
+  // Expand all subsections within the active top-level section
+  topSection.querySelectorAll(".collapse").forEach((element) => {
+    element.classList.add("show");
   });
-  
-  // Update toggle buttons/arrows so their visual state matches
-  topSection.querySelectorAll('[data-bs-toggle="collapse"]').forEach((toggle) => {
-    toggle.classList.remove("collapsed");
-    toggle.setAttribute("aria-expanded", "true");
-  });
+
+  // Synchronize arrows and accessibility state
+  topSection
+    .querySelectorAll('[data-bs-toggle="collapse"]')
+    .forEach((toggle) => {
+      toggle.classList.remove("collapsed");
+      toggle.setAttribute("aria-expanded", "true");
+    });
 });
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
