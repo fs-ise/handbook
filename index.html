@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-external-url',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-bibliography","listing-csl","listing-website","listing-format","listing-resources","listing-extensions","listing-execute","listing-filters","listing-custom-callout","listing-handbook","listing-engines","listing-_quarto-vars","listing-language","listing-title","listing-description","listing-date","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-bibliography","listing-csl","listing-website","listing-format","listing-resources","listing-extensions","listing-execute","listing-filters","listing-custom-callout","listing-handbook","listing-engines","listing-_quarto-vars","listing-language","listing-title","listing-date","listing-description","listing-categories","listing-external-url","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -106,6 +106,17 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -126,17 +137,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -228,7 +228,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./news.html" class="sidebar-item-text sidebar-link">
+  <a href="./news/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">News</span></a>
   </div>
 </li>
@@ -1109,110 +1109,33 @@ window.Quarto = {
     </div>
   </div>
 
+  <div class="news-item">
+    <div class="news-date">Apr 21, 2026</div>
+    <div class="news-content">
+      <a class="news-title" href="./news/posts/2026-04-21-c5-dm.html">Data management in literature reviews: The C5-DM Framework</a>
+      
+      <div class="news-description">Gerit Wagner, Julian Prester, Roman Lukyanenko, and Guy Paré published "Data management in literature reviews: The C5-DM Framework" in Research Synthesis Methods.
+</div>
+      
+    </div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-date">Apr 4, 2026</div>
+    <div class="news-content">
+      <a class="news-title" href="https://jose.theoj.org/papers/10.21105/jose.00292">Teaching Python package development</a>
+      
+      <div class="news-description">Gerit Wagner, Laureen Thurner, Carlo Tang, and Stella Ott published a structured course with learning resources and an instructor's guide in the Journal of Open Source Education.
+</div>
+      
+    </div>
+  </div>
+
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-<p><a href="./news.html">All news →</a></p>
+<p><a href="./news/index.html">All news →</a></p>
 </div>
-<p><strong>Start here — by role</strong></p>
-<div class="accordion" id="accordion-1">
-  <div class="accordion-item">
-    <h3 class="accordion-header m-0 p-0 anchored" id="students">
-      <button class="accordion-button collapsed gap-2" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1-collapse-1" aria-expanded="false" aria-controls="accordion-1-collapse-1">
-<i class="bi bi-mortarboard-fill"></i> <div class="accordion-header-content">Students</div>
-      </button>
-    </h3>
-    <div id="accordion-1-collapse-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1" aria-labelledby="students">
-      <div class="accordion-body">
-<ul>
-<li>Courses:</li>
-</ul>
-<div id="cell-course-table" class="cell" data-execution_count="1">
-<div id="course-table" class="cell-output cell-output-display cell-output-markdown">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 29%">
-<col style="width: 44%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Degree Program</th>
-<th>Lecture</th>
-<th>Upcoming Semester</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bachelor of Science</td>
-<td>Introduction to Programming</td>
-<td>WiSe 2026</td>
-</tr>
-<tr class="even">
-<td>Master of Science</td>
-<td>Machine Learning for Big Data</td>
-<td>WiSe 2026</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<ul>
-<li><a href="https://fs-ise.github.io/theses/" target="_blank">Theses</a></li>
-</ul>
-<!--
-    - [FAQ](teaching/faq.html)
--->
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h3 class="accordion-header m-0 p-0 anchored" id="admin">
-      <button class="accordion-button collapsed gap-2" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1-collapse-2" aria-expanded="false" aria-controls="accordion-1-collapse-2">
-<i class="bi bi-person-gear"></i> <div class="accordion-header-content">Admin</div>
-      </button>
-    </h3>
-    <div id="accordion-1-collapse-2" class="accordion-collapse collapse" data-bs-parent="#accordion-1" aria-labelledby="admin">
-      <div class="accordion-body">
-<ul>
-<li><a href="management/github.html">GitHub repositories</a></li>
-</ul>
-      </div>
-    </div>
-  </div>
-</div>
-<!--
-### Students
-
-- Courses (pages with materials, dates, exams, reviews, ...)
-- Theses
-- Improvement
-- Contact (recomendation letters, mentoring/counselling, Calendly, Q&A, feedback form)
-- Teaching statement
-
-### Joining the team
-
-### Teaching assistants {icon="person-video"}
-
-- SOP
-- Pedagogy
-- Admin (vacation, contracts, onboarding, job letters)
-
-### Admin
-
-- Courses (announced, rooms, dates)
-- Exams (supervising, corrections)
-- Hiring
-- Security (Gefahren, ...)
-- Budget, Inventory
-
-### Crowdworkers & Citizen Scientists {icon="people"}
-
-- Guidelines
-- Resources...
-- Tasks overview (e.g., simple: search IS journals for literature reviews -report them here, review our teaching materials, test search-query/bib-dedupe..., advanced: contribute to search-query, colrev, bib-dedupe)
--->
-<p><br></p>
 <style>
 /* base box style */
 .area-box {

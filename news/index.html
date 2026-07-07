@@ -83,9 +83,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -115,17 +115,6 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -146,6 +135,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -181,9 +181,9 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
-<link rel="alternate" type="application/rss+xml" title="ISE Lab Handbook" href="index.xml" data-external="1"></head>
+</head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -192,7 +192,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">News</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../news/index.html">News</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -226,7 +226,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../news.html" class="sidebar-item-text sidebar-link">
+  <a href="../news/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">News</span></a>
   </div>
 </li>
@@ -1068,8 +1068,7 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGl0ZXJhdHVyZS1yZXZpZXdz">literature-reviews <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHVibGljYXRpb24=">publication <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1099,12 +1098,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHVibGljYXRpb24lMkNsaXRlcmF0dXJlLXJldmlld3M=" data-listing-date-sort="1776729600000" data-listing-file-modified-sort="1783432413724" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<div class="thumbnail"><a href="../news/posts/2026-04-21-lrdm.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
+<div class="quarto-post image-right" data-index="0" data-categories="cHVibGljYXRpb24lMkNsaXRlcmF0dXJlLXJldmlld3M=" data-listing-date-sort="1776729600000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../news/posts/2026-04-21-lrdm.html" class="no-external">Data management in literature reviews: The C5-DM Framework</a>
@@ -1124,6 +1118,160 @@ window.Quarto = {
 <a href="../news/posts/2026-04-21-lrdm.html" class="no-external">
 <div class="listing-date">
 Apr 21, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="UHVibGljYXRpb24=" data-listing-date-sort="1776729600000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../news/posts/2026-04-21-c5-dm.html" class="no-external">Data management in literature reviews: The C5-DM Framework</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHVibGljYXRpb24='); return false;">Publication</div>
+
+</div>
+<div class="delink listing-description"><a href="../news/posts/2026-04-21-c5-dm.html" class="no-external">
+<p>Gerit Wagner, Julian Prester, Roman Lukyanenko, and Guy Paré published “Data management in literature reviews: The C5-DM Framework” in Research Synthesis Methods.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../news/posts/2026-04-21-c5-dm.html" class="no-external">
+<div class="listing-date">
+Apr 21, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="UHVibGljYXRpb24=" data-listing-date-sort="1775260800000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../news/posts/2026-04-04-teapad.html" class="no-external">Teaching Python package development</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHVibGljYXRpb24='); return false;">Publication</div>
+
+</div>
+<div class="delink listing-description"><a href="../news/posts/2026-04-04-teapad.html" class="no-external">
+<p>Gerit Wagner, Laureen Thurner, Carlo Tang, and Stella Ott published a structured course with learning resources and an instructor’s guide in the Journal of Open Source Education.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../news/posts/2026-04-04-teapad.html" class="no-external">
+<div class="listing-date">
+Apr 4, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="U29mdHdhcmU=" data-listing-date-sort="1771977600000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../news/posts/2026-02-25-colrev-0.16.2.html" class="no-external">colrev v0.16.2 released</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmU='); return false;">Software</div>
+
+</div>
+<div class="delink listing-description"><a href="../news/posts/2026-02-25-colrev-0.16.2.html" class="no-external">
+<p>colrev v0.16.2 activates search-query validation for PubMed, adds support for Python 3.13, and simplifies the default setup.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../news/posts/2026-02-25-colrev-0.16.2.html" class="no-external">
+<div class="listing-date">
+Feb 25, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="UHVibGljYXRpb24=" data-listing-date-sort="1771804800000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../news/posts/2026-02-23-search-query-joss.html" class="no-external">search-query published in the Journal of Open Source Software</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHVibGljYXRpb24='); return false;">Publication</div>
+
+</div>
+<div class="delink listing-description"><a href="../news/posts/2026-02-23-search-query-joss.html" class="no-external">
+<p>Peter Eckhardt, Katharina Maria Ernst, Thomas Fleischmann, Anna Geßler, Karl Schnickmann, Laureen Thurner, and Gerit Wagner published “search-query: An open source Python library for academic search queries” in JOSS.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../news/posts/2026-02-23-search-query-joss.html" class="no-external">
+<div class="listing-date">
+Feb 23, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="U29mdHdhcmU=" data-listing-date-sort="1770336000000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../news/posts/2026-02-06-search-query-0.15.0.html" class="no-external">search-query v0.15.0 released</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmU='); return false;">Software</div>
+
+</div>
+<div class="delink listing-description"><a href="../news/posts/2026-02-06-search-query-0.15.0.html" class="no-external">
+<p>search-query v0.15.0 polishes the documentation, extends tests, and makes SearchQuery(query=…) the safer JSON default.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../news/posts/2026-02-06-search-query-0.15.0.html" class="no-external">
+<div class="listing-date">
+Feb 6, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="U29mdHdhcmU=" data-listing-date-sort="1769644800000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../news/posts/2026-01-29-colrev-search-query-releases.html" class="no-external">colrev v0.16.1 and search-query v0.14.1 released</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmU='); return false;">Software</div>
+
+</div>
+<div class="delink listing-description"><a href="../news/posts/2026-01-29-colrev-search-query-releases.html" class="no-external">
+<p>Same-day software releases updated colrev to v0.16.1 and search-query to v0.14.1.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../news/posts/2026-01-29-colrev-search-query-releases.html" class="no-external">
+<div class="listing-date">
+Jan 29, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="U29mdHdhcmU=" data-listing-date-sort="1769558400000" data-listing-file-modified-sort="1783432967568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../news/posts/2026-01-28-search-query-0.14.0.html" class="no-external">search-query v0.14.0 released</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmU='); return false;">Software</div>
+
+</div>
+<div class="delink listing-description"><a href="../news/posts/2026-01-28-search-query-0.14.0.html" class="no-external">
+<p>search-query v0.14.0 revises the documentation and demo notebook, improves generic query syntax and linter messages, and removes the packaging dependency.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../news/posts/2026-01-28-search-query-0.14.0.html" class="no-external">
+<div class="listing-date">
+Jan 28, 2026
 </div>
 </a>
 </div>
