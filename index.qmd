@@ -2,11 +2,31 @@
 title: "The FS-ISE handbook"
 filters:
   - panel-accordion
+listing:
+  - id: homepage-news
+    contents: news/posts
+    sort: "date desc"
+    template: _templates/homepage-news.ejs.md
+    max-items: 3
+    fields: [date, title, description]
+    sort-ui: false
+    filter-ui: false
 ---
 
 Welcome to the Information Systems Education (ISE) lab handbook!
 This handbook documents how we teach, research, collaborate, and support students and colleagues in a transparent, reproducible way.
 It is a public resource written for students, teaching staff, and collaborators who interact with the lab.
+
+::: {.news-card}
+
+**🎉 NEWS**
+
+::: {#homepage-news}
+:::
+
+[All news →](news.qmd)
+
+:::
 
 **Start here — by role**
 
