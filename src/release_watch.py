@@ -3,7 +3,7 @@
 - Checks PyPI for latest versions of all BibTeX items with ENTRYTYPE == "software"
 - Updates data/references.bib (stores version in a 'version' field; refreshes 'urldate')
 - Detects newly added non-software records (no 'news_announced' field)
-- Appends ONE structured dated entry to news.qmd
+- Drafts one dated Quarto news post in news/posts/ for newly detected items
 - Adds release notes (prefers GitHub Releases; falls back to a link if unavailable)
 - references.bib remains the only state file
 """
@@ -14,7 +14,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import requests
 
@@ -23,13 +23,14 @@ import colrev.writer.write_utils
 
 
 REFERENCES_BIB = Path("data/references.bib")
-NEWS_QMD = Path("news.qmd")
+NEWS_POSTS_DIR = Path("news/posts")
 
 PYPI_PROJECT_URL = "https://pypi.org/pypi/{project}/json"
 GITHUB_API_LATEST_RELEASE = "https://api.github.com/repos/{owner}/{repo}/releases/latest"
 GITHUB_API_TAG_RELEASE = "https://api.github.com/repos/{owner}/{repo}/releases/tags/{tag}"
 
 MAX_RELEASE_NOTES_CHARS = 1200
+MAX_DESCRIPTION_CHARS = 220
 
 
 @dataclass(frozen=True)
@@ -105,17 +106,52 @@ def extract_pypi_project(rec: dict) -> Optional[str]:
     return None
 
 
-def ensure_news_file_exists(path: Path):
-    if path.exists():
-        return
-    path.write_text(
-        "---\n"
-        'title: "News"\n'
-        "format: html\n"
-        "---\n\n"
-        "# News\n\n",
-        encoding="utf-8",
-    )
+def ensure_news_posts_dir_exists(path: Path):
+    path.mkdir(parents=True, exist_ok=True)
+
+
+def slugify(value: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+    return slug or "news-item"
+
+
+def yaml_double_quote(value: str) -> str:
+    return '"' + str(value).replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def yaml_folded(value: str, indent: str = "  ") -> str:
+    words = str(value).split()
+    lines = []
+    current = ""
+    for word in words:
+        candidate = f"{current} {word}".strip()
+        if len(candidate) > 78 and current:
+            lines.append(indent + current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        lines.append(indent + current)
+    return "\n".join(lines) or indent
+
+
+def truncate_description(value: str) -> str:
+    value = " ".join(str(value).split())
+    if len(value) <= MAX_DESCRIPTION_CHARS:
+        return value
+    return value[: MAX_DESCRIPTION_CHARS - 1].rsplit(" ", 1)[0].rstrip() + "…"
+
+
+def unique_news_post_path(posts_dir: Path, date: str, slug: str) -> Path:
+    candidate = posts_dir / f"{date}-{slug}.qmd"
+    if not candidate.exists():
+        return candidate
+    i = 2
+    while True:
+        candidate = posts_dir / f"{date}-{slug}-{i}.qmd"
+        if not candidate.exists():
+            return candidate
+        i += 1
 
 
 def _trim_notes(text: str) -> str:
@@ -153,26 +189,107 @@ def update_software_versions(records, releases):
     return changed
 
 
-def prepend_news_entry(path: Path,
-                       new_pubs: List[tuple[str, dict]],
-                       software_updates: List[ReleaseInfo]):
+def publication_title(rec: dict) -> str:
+    return str(rec.get("title") or "Untitled publication")
 
+
+def publication_description(new_pubs: List[tuple[str, dict]]) -> str:
+    if len(new_pubs) == 1:
+        _, rec = new_pubs[0]
+        title = publication_title(rec)
+        authors = rec.get("author", "")
+        venue = rec.get("journal") or rec.get("booktitle") or ""
+        parts = []
+        if authors:
+            parts.append(str(authors))
+        parts.append(f'published "{title}"')
+        if venue:
+            parts.append(f"in {venue}")
+        return truncate_description(" ".join(parts) + ".")
+    return truncate_description(
+        f"{len(new_pubs)} new publications were added to the handbook bibliography."
+    )
+
+
+def software_description(software_updates: List[ReleaseInfo]) -> str:
+    if len(software_updates) == 1:
+        rel = software_updates[0]
+        return truncate_description(f"{rel.project} v{rel.version} was released.")
+    versions = ", ".join(f"{rel.project} v{rel.version}" for rel in software_updates)
+    return truncate_description(f"Software releases: {versions}.")
+
+
+def build_news_post_front_matter(
+    title: str,
+    date: str,
+    description: str,
+    categories: List[str],
+    external_url: Optional[str] = None,
+) -> str:
+    lines = [
+        "---",
+        f"title: {yaml_double_quote(title)}",
+        f"date: {date}",
+        "description: >",
+        yaml_folded(description),
+        "categories:",
+    ]
+    lines.extend(f"  - {category}" for category in categories)
+    if external_url:
+        lines.append(f"external-url: {external_url}")
+    lines.append("---")
+    return "\n".join(lines)
+
+
+def draft_news_post(
+    posts_dir: Path,
+    new_pubs: List[tuple[str, dict]],
+    software_updates: List[ReleaseInfo],
+) -> Optional[Path]:
     if not new_pubs and not software_updates:
-        return
+        return None
 
-    ensure_news_file_exists(path)
+    ensure_news_posts_dir_exists(posts_dir)
     date = utc_date_iso()
 
-    lines = [f"\n## {date}\n"]
-
-    # -------------------------------------------------
-    # New publications
-    # -------------------------------------------------
+    categories = []
     if new_pubs:
-        lines.append("\n### ✨ New Publications\n\n")
+        categories.append("Publication")
+    if software_updates:
+        categories.append("Software")
 
-        for rid, rec in sorted(new_pubs, key=lambda x: x[1].get("year", ""), reverse=True):
-            title = rec.get("title", "Untitled")
+    if new_pubs and not software_updates and len(new_pubs) == 1:
+        _, rec = new_pubs[0]
+        title = publication_title(rec)
+        description = publication_description(new_pubs)
+        external_url = rec.get("url", "") or None
+        slug = slugify(title)[:60].strip("-")
+    elif software_updates and not new_pubs:
+        if len(software_updates) == 1:
+            rel = software_updates[0]
+            title = f"{rel.project} v{rel.version} released"
+            external_url = rel.pypi_url
+            slug = slugify(f"{rel.project}-{rel.version}")
+        else:
+            title = "Software releases"
+            external_url = None
+            slug = "software-releases"
+        description = software_description(software_updates)
+    else:
+        title = "Publication and software updates"
+        description = truncate_description(
+            f"{len(new_pubs)} publication update(s) and {len(software_updates)} software release(s) were added."
+        )
+        external_url = None
+        slug = "publication-software-updates"
+
+    lines = [build_news_post_front_matter(title, date, description, categories, external_url)]
+
+    body: List[str] = []
+    if new_pubs and (len(new_pubs) > 1 or software_updates):
+        body.extend(["", "## Publications", ""])
+        for _, rec in sorted(new_pubs, key=lambda x: x[1].get("year", ""), reverse=True):
+            title = publication_title(rec)
             author = rec.get("author", "")
             year = rec.get("year", "")
             venue = rec.get("journal") or rec.get("booktitle") or ""
@@ -186,52 +303,32 @@ def prepend_news_entry(path: Path,
             if author:
                 entry += f" — {author}"
             if url:
-                entry += f" [{url}]"
+                entry += f" — <{url}>"
+            body.append(entry)
 
-            lines.append(entry + "\n")
-
-    # -------------------------------------------------
-    # Software updates
-    # -------------------------------------------------
     if software_updates:
-        lines.append("\n### 🔄 Software Updates\n\n")
+        if new_pubs or len(software_updates) > 1:
+            body.extend(["", "## Software", ""])
 
         for rel in sorted(software_updates, key=lambda x: x.project.lower()):
-            lines.append(f"- **{rel.project}** → v{rel.version} ({rel.pypi_url})\n")
+            body.append(f"- **{rel.project}** v{rel.version}: <{rel.pypi_url}>")
 
             if rel.release_notes:
-                lines.append("\n  Release notes:\n\n")
+                body.append("\n  Release notes:\n")
                 for ln in _trim_notes(rel.release_notes).splitlines():
-                    lines.append(f"  > {ln}\n")
-                lines.append("\n")
+                    stripped = ln.strip()
+                    if stripped:
+                        body.append(f"  - {stripped.lstrip('-* ')}")
+                body.append("")
             elif rel.release_notes_url:
-                lines.append(f"\n  Release notes: {rel.release_notes_url}\n\n")
+                body.append(f"\n  Release notes: <{rel.release_notes_url}>\n")
 
-    existing = path.read_text(encoding="utf-8")
-
-    if existing.startswith("---\n"):
-        closing = existing.find("\n---\n", 4)
-        if closing != -1:
-            header_end = closing + len("\n---\n")
-            header = existing[:header_end]
-            body = existing[header_end:].lstrip("\n")
-        else:
-            header = ""
-            body = existing.lstrip("\n")
-    else:
-        header = ""
-        body = existing.lstrip("\n")
-
-    new_block = "".join(lines).strip("\n")
-
-    updated = ""
-    if header:
-        updated += header + "\n"
-    updated += new_block + "\n"
     if body:
-        updated += "\n" + body
+        lines.append("\n".join(body).rstrip())
 
-    path.write_text(updated, encoding="utf-8")
+    path = unique_news_post_path(posts_dir, date, slug)
+    path.write_text("\n\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    return path
 
 
 # ---------------------------------------------------------------------
@@ -299,9 +396,9 @@ def main():
     new_pubs = collect_new_publications(records)
 
     # -------------------------------------------------
-    # Write news + update state
+    # Draft news post + update state
     # -------------------------------------------------
-    prepend_news_entry(NEWS_QMD, new_pubs, software_updates)
+    news_post = draft_news_post(NEWS_POSTS_DIR, new_pubs, software_updates)
 
     today = utc_date_iso()
 
@@ -310,7 +407,8 @@ def main():
 
     if software_updates or new_pubs:
         colrev.writer.write_utils.write_file(records, filename=str(REFERENCES_BIB))
-        print("[OK] references.bib updated and news updated.")
+        suffix = f" News post drafted at {news_post}." if news_post else ""
+        print(f"[OK] references.bib updated and news updated.{suffix}")
     else:
         print("[OK] No changes detected.")
 
