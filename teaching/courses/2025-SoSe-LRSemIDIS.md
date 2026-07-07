@@ -18,7 +18,7 @@ Title               | {{< meta title >}}
 Semester            | {{< meta semester >}}
 Lecturer            | Gerit Wagner
 Link: LMS           | [Cavas](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
-Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){target="_blank"}
+Link: Website       | -
 Status              | {{< meta status >}}
 Student Evaluations | {{< meta student_evaluations >}}
 Improvement Issue   | {{< meta improvement_issue >}}

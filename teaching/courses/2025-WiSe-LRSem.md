@@ -4,7 +4,7 @@ title: "The Literature Review Seminar"
 degree_program:
   - "Master of Science: Information Systems"
 semester: 2025-WiSe
-status: in-progress
+status: completed
 student_evaluations: "[student_evaluations](/data/student_evaluations/000165_20260125-WS25_26-DW-Sem-M__Literature_Review_Seminar.pdf)"
 improvement_issue: ""
 improvement_status: N/A
@@ -18,7 +18,7 @@ Title               | {{< meta title >}}
 Semester            | {{< meta semester >}}
 Lecturer            | Gerit Wagner
 Link: LMS           | [Cavas](https://vc.uni-bamberg.de/course/view.php?id=71961){target="_blank"}
-Link: Website       | [Website](https://www.uni-bamberg.de/digital-work/studium/bachelor/introduction-to-digital-work/){target="_blank"}
+Link: Website       | -
 Status              | {{< meta status >}}
 Student Evaluations | {{< meta student_evaluations >}}
 Improvement Issue   | {{< meta improvement_issue >}}
@@ -90,7 +90,7 @@ Entering Grades into FlexNow
 
 Documentation
 
-- [ ] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
+- [x] Professor: Analyse the evaluations, store the files, and document the improvements (see [evaluations](/teaching/evaluations.html)).
 - [x] Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.
 
 Deadline: End of August (summer term), March (winter term)
