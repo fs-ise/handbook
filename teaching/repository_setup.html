@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lrs-impact-uniformity – ISE Lab Handbook</title>
+<title>Repository setup – ISE Lab Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,24 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../assets/favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-272187935b9495194ee8c9d09ef76e79.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,15 +73,15 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -95,15 +95,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -120,7 +120,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </style>
 
 
-<link rel="stylesheet" href="../../assets/styles.css">
+<link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body class="nav-sidebar floating fullcontent quarto-light">
@@ -132,7 +132,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">lrs-impact-uniformity</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../teaching/index.html">Teaching</a></li><li class="breadcrumb-item"><a href="../teaching/new_course.html">Design</a></li><li class="breadcrumb-item"><a href="../teaching/repository_setup.html">Repository setup</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -146,9 +146,9 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../assets/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../../assets/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../assets/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -160,34 +160,34 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../news/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../news/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">News</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../calendar.html" class="sidebar-item-text sidebar-link">
+  <a href="../calendar.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calendar</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../teaching/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../teaching/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -202,7 +202,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/statement.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statement</span></a>
   </div>
 </li>
@@ -219,13 +219,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/course_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/course_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/theses.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/theses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Theses</span></a>
   </div>
 </li>
@@ -233,46 +233,46 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Design</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/new_course.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/new_course.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">New course</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/pedagogy.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/pedagogy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pedagogy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/repository_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/repository_setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Repository setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/knowledge_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/knowledge_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/improvements.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/improvements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Improvements</span></a>
   </div>
 </li>
@@ -289,25 +289,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/session.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/session.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sessions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/lms.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/lms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LMS (Canvas)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/evaluations.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/evaluations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Evaluations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/advertising.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/advertising.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Advertising</span></a>
   </div>
 </li>
@@ -324,19 +324,19 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/exams.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/exams.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exams</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/plagiarism.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/plagiarism.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plagiarism</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/reviews.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/reviews.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reviews</span></a>
   </div>
 </li>
@@ -353,19 +353,19 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/counselling.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/counselling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Counselling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/recommendations.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/recommendations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recommendations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/scholarships_and_awards.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/scholarships_and_awards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scholarships &amp; awards</span></a>
   </div>
 </li>
@@ -382,25 +382,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/platforms_degree_programs_courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/platforms_degree_programs_courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Academic programs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/rankings.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/rankings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rankings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/department.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/department.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Department</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/reports.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching reports</span></a>
   </div>
 </li>
@@ -417,13 +417,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/publications.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/publications.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publications (Teaching)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../teaching/oer.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/oer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OER</span></a>
   </div>
 </li>
@@ -433,7 +433,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../research/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../research/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -442,7 +442,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -457,13 +457,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/statement.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/SOP.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/SOP.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOP</span></a>
   </div>
 </li>
@@ -480,31 +480,31 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/projects.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/funding_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/funding_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Funding overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/outlets.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/outlets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Outlets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/mailing_lists.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/mailing_lists.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mailing lists</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/labs.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/labs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labs</span></a>
   </div>
 </li>
@@ -521,13 +521,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/knowledge_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/knowledge_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/pdf_collection.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/pdf_collection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PDF collection</span></a>
   </div>
 </li>
@@ -544,97 +544,97 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/methods.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/methods.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/literature_review.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/literature_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literature review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/survey.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/survey.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Survey</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/data_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/data_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/data_sets.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/data_sets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data sets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/repo_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/repo_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Repository setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/analysis_templates.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/analysis_templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analysis templates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/python.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Phyton</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/collaboration.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/collaboration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaboration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/writing_technical.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/writing_technical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writing - technical</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/writing_conceptual.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/writing_conceptual.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writing - conceptual</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/revision.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/revision.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Revision</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/submission.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/submission.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Submission</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/presentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Presentation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/publication.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/publication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/dissemination.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/dissemination.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dissemination</span></a>
   </div>
 </li>
@@ -651,13 +651,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/peer_review.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/peer_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Peer review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/editorial_work.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/editorial_work.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Editorial work</span></a>
   </div>
 </li>
@@ -674,25 +674,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/data.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/software.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/publications.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/publications.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publications</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research/talks.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/talks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Talks</span></a>
   </div>
 </li>
@@ -702,7 +702,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../management/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Management</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -711,13 +711,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/transition.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/transition.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transition</span></a>
   </div>
 </li>
@@ -732,31 +732,31 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/statement.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/statement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/responsibilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/responsibilities.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Responsibilities</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/sop.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/sop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/agendas.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/agendas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Agendas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/planning_review_sessions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">P&amp;R sessions</span></a>
   </div>
 </li>
@@ -773,25 +773,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/mail.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/mail.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mail</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/website.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/website.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Website</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/department.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/department.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Faculty</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/media_kit.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/media_kit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Media kit</span></a>
   </div>
 </li>
@@ -808,55 +808,55 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/systems_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/systems_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/handbook.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/handbook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Handbook</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/nextcloud.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/nextcloud.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nextcloud</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/workstation_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/workstation_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workstation setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/cloud_services.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/cloud_services.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cloud services</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/controlling.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/controlling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Controlling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/systems_administration.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/systems_administration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Administration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -873,13 +873,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/research_support.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/research_support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research support</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/teaching_support.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/teaching_support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching support</span></a>
   </div>
 </li>
@@ -896,19 +896,19 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/compliance.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/compliance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Compliance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/emergencies.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/emergencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Emergencies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/security.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/security.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Security</span></a>
   </div>
 </li>
@@ -925,13 +925,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/orders.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/orders.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Orders</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/reimbursements.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/reimbursements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reimbursements</span></a>
   </div>
 </li>
@@ -948,19 +948,19 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/travel.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Travel</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/sick_leave.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/sick_leave.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sick leave</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../management/vacation.html" class="sidebar-item-text sidebar-link">
+  <a href="../management/vacation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vacation</span></a>
   </div>
 </li>
@@ -970,7 +970,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../academy/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../academy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Academy</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -979,25 +979,25 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../academy/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../academy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../academy/development.html" class="sidebar-item-text sidebar-link">
+  <a href="../academy/development.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../academy/research_training.html" class="sidebar-item-text sidebar-link">
+  <a href="../academy/research_training.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research training</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../academy/how_tos.html" class="sidebar-item-text sidebar-link">
+  <a href="../academy/how_tos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How-tos</span></a>
   </div>
 </li>
@@ -1005,7 +1005,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../team.html" class="sidebar-item-text sidebar-link">
+  <a href="../team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Team</span></a>
   </div>
 </li>
@@ -1018,9 +1018,9 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../teaching/index.html">Teaching</a></li><li class="breadcrumb-item"><a href="../teaching/new_course.html">Design</a></li><li class="breadcrumb-item"><a href="../teaching/repository_setup.html">Repository setup</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">lrs-impact-uniformity</h1>
+<h1 class="title">Repository setup</h1>
 </div>
 
 
@@ -1037,63 +1037,126 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is auto-generated. The authoritative project metadata is stored in <a href="https://github.com/fs-ise/handbook/tree/main/data/projects.yml" target="_blank"><code>data/projects.yml</code></a>.</p>
-</div>
-</div>
+<p>Best practices and resources for setting up teaching repositories.</p>
+<section id="repositories" class="level2">
+<h2 class="anchored" data-anchor-id="repositories">Repositories</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Field</th>
-<th>Value</th>
+<th></th>
+<th>Course</th>
+<th>Materials Repository</th>
+<th>Exams Repository</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Acronym</td>
-<td><code>lrs-impact-uniformity</code></td>
+<td>ABD</td>
+<td>Analytics and Big Data</td>
+<td><a href="https://github.com/fs-ise/big-data-analytics" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/big-data-analytics-exams" target="_blank">repository</a></td>
 </tr>
 <tr class="even">
-<td>Team</td>
-<td>julianprester, gs, nh</td>
+<td>ITSecM</td>
+<td>IT Security Management</td>
+<td><a href="https://github.com/fs-ise/it-security-management" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/it-security-management-exams" target="_blank">repository</a></td>
 </tr>
 <tr class="odd">
-<td>Status</td>
-<td><code>published</code></td>
+<td>IDW</td>
+<td>Introduction to Digital Work</td>
+<td><a href="https://github.com/fs-ise/digital-work-lecture" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/digital-work-lecture-exam" target="_blank">repository</a></td>
 </tr>
-</tbody>
-</table>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Access</th>
-<th>Request</th>
+<tr class="even">
+<td>OSP</td>
+<td>Open Source Project</td>
+<td><a href="https://github.com/fs-ise/open-source-project" target="_blank">repository</a></td>
+<td>—</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td><a href="https://github.com/fs-ise/lrs-impact-uniformity" target="_blank" rel="noopener">GitHub repository</a></td>
-<td><a href="https://github.com/julianprester" target="_blank" rel="noopener">julianprester</a></td>
-<td><a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a></td>
+<td>LRSem</td>
+<td>Literature Review Seminar</td>
+<td><a href="https://github.com/fs-ise/literature-review-seminar" target="_blank">repository</a></td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Theses</td>
+<td>Theses</td>
+<td><a href="https://github.com/fs-ise/theses" target="_blank">repository</a></td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="history" class="level2">
-<h2 class="anchored" data-anchor-id="history">History</h2>
-<p>—</p>
+<section id="general-setup" class="level2">
+<h2 class="anchored" data-anchor-id="general-setup">General setup</h2>
+<p>We use <a href="https://quarto.org/" target="_blank">Quarto</a> for our teaching materials.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not create quarto brand extension or use the revealjs seminar plugin (complexity).</p>
+</div>
+</div>
+<p>Principles</p>
+<ul>
+<li>Dates, rooms, and links should be in one place to prevent inconsistent information.</li>
+<li>VC links never point to a specific course but to a search in VC (e.g., for the <a href="https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B" target="_blank">project</a>).</li>
+<li>Teaching contents are licensed under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">CC-BY license</a> per default.</li>
+<li>Design contents in such a way that students can learn them (after the session, pdf, making comments)</li>
+<li>Add dynamic illustrations only as an extra (link them in the offline version)</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see <a href="https://sembr.org/" target="_blank">semantic line breaks</a>).</p>
+</div>
+</div>
+<p>A teaching repository contains</p>
+<ul>
+<li>Overview of related courses in the README.md file (see other courses <a href="platforms_degree_programs_courses.html">here</a>).</li>
+<li>PDFs should be generated through <code>make pdfs</code> (a <code>make</code> -&gt; <code>quarto render</code> -&gt; <code>decktape</code> chain, as in <a href="https://github.com/fs-ise/big-data-analytics" target="_blank">bda</a>).</li>
+<li>A syllabus (<a href="https://fs-ise.github.io/open-source-project/docs/syllabus.html" target="_blank">example</a>)</li>
+<li>Detailed teaching notes allow teaching assistants to replicate it quickly.</li>
+<li>Links related to continuous improvement: <strong>feedback</strong>, <strong>evaluations</strong>, <strong>improvement</strong>.</li>
+<li>Add branch protection rule for <code>main</code>: restrict deletions and block force pushes</li>
+<li>Each course should have a separate repository and page.</li>
+<li>Options to provide feedback should be linked on the first page.</li>
+<li>Optional: surveys to collect feedback for individual sessions (Google Forms?)</li>
+<li>Optional: ask students how they learn (PDF, …) whether they use a knowledge management system (which one), and adapt accordingly</li>
+<li>Optional: Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see <a href="https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/" target="_blank">example</a>)</li>
+<li>Optional: Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see <a href="https://harvard-iacs.github.io/2019-CS109A/pages/materials.html" target="_blank">example</a>).</li>
+</ul>
+<p>Principles:</p>
+<ul>
+<li>One slide-deck (optional notebook) per session (no multi-session slide decks)</li>
+<li>Markers on the slides indicate where in-class exercises are used</li>
+</ul>
+<section id="publishing-to-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="publishing-to-github-pages">Publishing to GitHub pages</h3>
+<p>For <code>quarto publish gh-pages</code> : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).</p>
+</section>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://evalf22.classes.andrewheiss.com/" target="_blank">Example course landing page</a>.</li>
+<li><a href="https://evalf22.classes.andrewheiss.com/content/">Example content page</a>.</li>
+</ul>
 
 
 </section>
@@ -1543,5 +1606,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/projects/lrs-impact-uniformity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/repository_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

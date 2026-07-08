@@ -132,28 +132,6 @@ div.csl-indent {
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -165,6 +143,17 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -174,6 +163,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -309,6 +309,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <div class="sidebar-item-container"> 
   <a href="../teaching/pedagogy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pedagogy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../teaching/repository_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repository setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1091,129 +1097,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 
 <p>Best practices and resources for preparing teaching materials.</p>
-<section id="repositories" class="level2">
-<h2 class="anchored" data-anchor-id="repositories">Repositories</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Course</th>
-<th>Materials Repository</th>
-<th>Exams Repository</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ABD</td>
-<td>Analytics and Big Data</td>
-<td><a href="https://github.com/fs-ise/big-data-analytics" target="_blank">repository</a></td>
-<td><a href="https://github.com/fs-ise/big-data-analytics-exams" target="_blank">repository</a></td>
-</tr>
-<tr class="even">
-<td>ITSecM</td>
-<td>IT Security Management</td>
-<td><a href="https://github.com/fs-ise/it-security-management" target="_blank">repository</a></td>
-<td><a href="https://github.com/fs-ise/it-security-management-exams" target="_blank">repository</a></td>
-</tr>
-<tr class="odd">
-<td>IDW</td>
-<td>Introduction to Digital Work</td>
-<td><a href="https://github.com/fs-ise/digital-work-lecture" target="_blank">repository</a></td>
-<td><a href="https://github.com/fs-ise/digital-work-lecture-exam" target="_blank">repository</a></td>
-</tr>
-<tr class="even">
-<td>OSP</td>
-<td>Open Source Project</td>
-<td><a href="https://github.com/fs-ise/open-source-project" target="_blank">repository</a></td>
-<td>—</td>
-</tr>
-<tr class="odd">
-<td>LRSem</td>
-<td>Literature Review Seminar</td>
-<td><a href="https://github.com/fs-ise/literature-review-seminar" target="_blank">repository</a></td>
-<td>—</td>
-</tr>
-<tr class="even">
-<td>Theses</td>
-<td>Theses</td>
-<td><a href="https://github.com/fs-ise/theses" target="_blank">repository</a></td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="general-setup" class="level2">
-<h2 class="anchored" data-anchor-id="general-setup">General setup</h2>
-<p>We use <a href="https://quarto.org/" target="_blank">Quarto</a> for our teaching materials.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Do not create quarto brand extension or use the revealjs seminar plugin (complexity).</p>
-</div>
-</div>
-<p>Principles</p>
-<ul>
-<li>Dates, rooms, and links should be in one place to prevent inconsistent information.</li>
-<li>VC links never point to a specific course but to a search in VC (e.g., for the <a href="https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B" target="_blank">project</a>).</li>
-<li>Teaching contents are licensed under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">CC-BY license</a> per default.</li>
-<li>Design contents in such a way that students can learn them (after the session, pdf, making comments)</li>
-<li>Add dynamic illustrations only as an extra (link them in the offline version)</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see <a href="https://sembr.org/" target="_blank">semantic line breaks</a>).</p>
-</div>
-</div>
-<p>A teaching repository contains</p>
-<ul>
-<li>Overview of related courses in the README.md file (see other courses <a href="platforms_degree_programs_courses.html">here</a>).</li>
-<li>PDFs should be generated through <code>make pdfs</code> (a <code>make</code> -&gt; <code>quarto render</code> -&gt; <code>decktape</code> chain, as in <a href="https://github.com/fs-ise/big-data-analytics" target="_blank">bda</a>).</li>
-<li>A syllabus (<a href="https://fs-ise.github.io/open-source-project/docs/syllabus.html" target="_blank">example</a>)</li>
-<li>Detailed teaching notes allow teaching assistants to replicate it quickly.</li>
-<li>Links related to continuous improvement: <strong>feedback</strong>, <strong>evaluations</strong>, <strong>improvement</strong>.</li>
-<li>Add branch protection rule for <code>main</code>: restrict deletions and block force pushes</li>
-<li>Each course should have a separate repository and page.</li>
-<li>Options to provide feedback should be linked on the first page.</li>
-<li>Optional: surveys to collect feedback for individual sessions (Google Forms?)</li>
-<li>Optional: ask students how they learn (PDF, …) whether they use a knowledge management system (which one), and adapt accordingly</li>
-<li>Optional: Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see <a href="https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/" target="_blank">example</a>)</li>
-<li>Optional: Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see <a href="https://harvard-iacs.github.io/2019-CS109A/pages/materials.html" target="_blank">example</a>).</li>
-</ul>
-<p>See examples: <a href="https://evalf22.classes.andrewheiss.com/" target="_blank">1</a> and [2] (https://evalf22.classes.andrewheiss.com/content/).</p>
-<section id="community-engaged-teaching" class="level3">
-<h3 class="anchored" data-anchor-id="community-engaged-teaching">Community-engaged teaching</h3>
-<p>For project-based courses, consider linking teaching activities to real communities, repositories, or open-source projects.</p>
-<p>A useful model is JabRef’s teaching page: <a href="https://devdocs.jabref.org/teaching.html" target="_blank">Teaching with JabRef</a>.</p>
-<p>Recommended elements:</p>
-<ul>
-<li>Curated issues or contribution ideas suitable for students.</li>
-<li>Early coordination with maintainers or community partners.</li>
-<li>A clear contribution workflow from setup to review and pull request.</li>
-<li>Peer and instructor review before upstream submission.</li>
-<li>Reflection on collaboration, maintainability, and community norms.</li>
-</ul>
-<p>This pattern is especially relevant for the Open Source Project course, but can also support software, data, documentation, or research-infrastructure assignments.</p>
-</section>
-<section id="publishing-to-github-pages" class="level3">
-<h3 class="anchored" data-anchor-id="publishing-to-github-pages">Publishing to GitHub pages</h3>
-<p>For <code>quarto publish gh-pages</code> : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).</p>
-</section>
-</section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
 <p>Template is available <a href="https://github.com/fs-ise/fs-ise-presentation" target="_blank">here</a> (see <a href="https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html" target="_blank">tutorial</a>)</p>
@@ -1236,7 +1119,7 @@ Important
 <li><a href="https://github.com/parmsam/quarto-webcam" target="_blank">flashcards for quick questions with solutions displayed on pressing <code>q</code></a></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Slide template">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1245,7 +1128,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Limitation: custom-callouts do not work in revealjs.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -1364,7 +1247,7 @@ Important
 <li>d</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Slide preparation">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1373,7 +1256,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Convert PowerPoint to quarto:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pptx2md</span> <span class="st">"slides.pptx"</span> <span class="at">--output</span> <span class="st">"slides_with_notes.qmd"</span> <span class="at">--enable-slides</span> <span class="at">--qmd</span> <span class="at">--image-dir</span> <span class="st">"images"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1427,7 +1310,7 @@ Important
 </ul>
 <p>Jupyter notebooks should be delivered through GitHub Codespaces to avoid individual setup problems <span class="citation" data-cites="Malan2024">(see <a href="#ref-Malan2024" role="doc-biblioref">Malan, 2024</a>)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Notebook template">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1436,7 +1319,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Include images in html tags (otherwise, attributes like width will be ignored):</span>
@@ -1476,7 +1359,7 @@ Important
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Resources for notebook design">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1485,7 +1368,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><a href="https://coderefinery.github.io/jupyter/" target="_blank">CodeRefinery on Jupyter Notebooks</a></li>
@@ -1506,7 +1389,7 @@ Important
 <li>Teaching notes are shared and updated regularly.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Teaching notes template">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1515,7 +1398,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Session X: XXX"</span></span>
@@ -1555,6 +1438,20 @@ Important
 </div>
 </div>
 </div>
+<section id="community-engaged-teaching" class="level3">
+<h3 class="anchored" data-anchor-id="community-engaged-teaching">Community-engaged teaching</h3>
+<p>For project-based courses, consider linking teaching activities to real communities, repositories, or open-source projects.</p>
+<p>A useful model is JabRef’s teaching page: <a href="https://devdocs.jabref.org/teaching.html" target="_blank">Teaching with JabRef</a>.</p>
+<p>Recommended elements:</p>
+<ul>
+<li>Curated issues or contribution ideas suitable for students.</li>
+<li>Early coordination with maintainers or community partners.</li>
+<li>A clear contribution workflow from setup to review and pull request.</li>
+<li>Peer and instructor review before upstream submission.</li>
+<li>Reflection on collaboration, maintainability, and community norms.</li>
+</ul>
+<p>This pattern is especially relevant for the Open Source Project course, but can also support software, data, documentation, or research-infrastructure assignments.</p>
+</section>
 </section>
 <section id="video-recordings" class="level2">
 <h2 class="anchored" data-anchor-id="video-recordings">Video recordings</h2>
@@ -1571,7 +1468,7 @@ Important
 <li>revealjs editor (slides.com): ai prompts limited (generating many slides, or changing text fields) - cannot do animations with it. limited import/export (for quarto/revealjs) - only complex/full htm.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Terminal animations (asciinema)">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1580,7 +1477,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Installation</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install asciinema</span>
@@ -1614,7 +1511,7 @@ Important
 <li>Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Quarto extensions">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1623,7 +1520,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>https://github.com/jmbuhr/quarto-qrcode</li>
