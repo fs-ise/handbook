@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -73,28 +108,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -115,6 +128,28 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -1038,6 +1073,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 
 <p>Best practices and resources for setting up teaching repositories.</p>
+<p>Goals: efficiency (clear principles, automation, git-based improvement cycle, sharing/publication-readiness)</p>
 <section id="repositories" class="level2">
 <h2 class="anchored" data-anchor-id="repositories">Repositories</h2>
 <table class="caption-top table">
@@ -1053,8 +1089,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <tr class="odd">
 <td>ABD</td>
 <td>Analytics and Big Data</td>
-<td><a href="https://github.com/fs-ise/big-data-analytics" target="_blank">repository</a></td>
-<td><a href="https://github.com/fs-ise/big-data-analytics-exams" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/analytics-and-big-data" target="_blank">repository</a></td>
+<td><a href="https://github.com/fs-ise/analytics-and-big-data-exams" target="_blank">repository</a></td>
 </tr>
 <tr class="even">
 <td>ITSecM</td>
@@ -1089,65 +1125,104 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </tbody>
 </table>
 </section>
-<section id="general-setup" class="level2">
-<h2 class="anchored" data-anchor-id="general-setup">General setup</h2>
-<p>We use <a href="https://quarto.org/" target="_blank">Quarto</a> for our teaching materials.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Do not create quarto brand extension or use the revealjs seminar plugin (complexity).</p>
-</div>
-</div>
-<p>Principles</p>
+<section id="general-setup-principles" class="level2">
+<h2 class="anchored" data-anchor-id="general-setup-principles">General setup principles</h2>
+<p>Repository</p>
 <ul>
-<li>Dates, rooms, and links should be in one place to prevent inconsistent information.</li>
-<li>VC links never point to a specific course but to a search in VC (e.g., for the <a href="https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B" target="_blank">project</a>).</li>
+<li>We use <a href="https://quarto.org/" target="_blank">Quarto</a> for teaching repositories.</li>
+<li>Each course has a separate repository and page.</li>
+<li>Each course is hosted publicly on GitHub.</li>
+<li>Each course can be used locally and offline.</li>
+<li>Shared materials may be extracted in the <a href="TODO">shared-materials</a> repository and included through git submodules and quarto include commands.</li>
+<li>Add branch protection rule for <code>main</code>: restrict deletions and block force pushes</li>
 <li>Teaching contents are licensed under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">CC-BY license</a> per default.</li>
-<li>Design contents in such a way that students can learn them (after the session, pdf, making comments)</li>
-<li>Add dynamic illustrations only as an extra (link them in the offline version)</li>
+<li>Zenodo/DOI</li>
 </ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see <a href="https://sembr.org/" target="_blank">semantic line breaks</a>).</p>
-</div>
-</div>
-<p>A teaching repository contains</p>
+<p>Files and directories</p>
 <ul>
 <li>Overview of related courses in the README.md file (see other courses <a href="platforms_degree_programs_courses.html">here</a>).</li>
-<li>PDFs should be generated through <code>make pdfs</code> (a <code>make</code> -&gt; <code>quarto render</code> -&gt; <code>decktape</code> chain, as in <a href="https://github.com/fs-ise/big-data-analytics" target="_blank">bda</a>).</li>
 <li>A syllabus (<a href="https://fs-ise.github.io/open-source-project/docs/syllabus.html" target="_blank">example</a>)</li>
 <li>Detailed teaching notes allow teaching assistants to replicate it quickly.</li>
-<li>Links related to continuous improvement: <strong>feedback</strong>, <strong>evaluations</strong>, <strong>improvement</strong>.</li>
-<li>Add branch protection rule for <code>main</code>: restrict deletions and block force pushes</li>
-<li>Each course should have a separate repository and page.</li>
-<li>Options to provide feedback should be linked on the first page.</li>
-<li>Optional: surveys to collect feedback for individual sessions (Google Forms?)</li>
-<li>Optional: ask students how they learn (PDF, …) whether they use a knowledge management system (which one), and adapt accordingly</li>
-<li>Optional: Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see <a href="https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/" target="_blank">example</a>)</li>
-<li>Optional: Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see <a href="https://harvard-iacs.github.io/2019-CS109A/pages/materials.html" target="_blank">example</a>).</li>
-</ul>
-<p>Principles:</p>
-<ul>
 <li>One slide-deck (optional notebook) per session (no multi-session slide decks)</li>
 <li>Markers on the slides indicate where in-class exercises are used</li>
+<li>Markers on the slides include explicit discussion prompts</li>
+<li>Markers on the slides indicate key concepts (must learn vs.&nbsp;learning notes on optional contents)</li>
+<li>HTML and PDF versions are automatically generated (e.g., GitHub actions).</li>
+<li>All files: Each sentence should be in a new line</li>
+<li>Dates, rooms, and links should be in one place to prevent inconsistent information.</li>
+<li><code>slides</code> dir for session slides (one per session)</li>
+<li><code>notes</code> dir for teaching notes (one per session)</li>
+<li><code>exercises</code> dir for exercises (one per session - TBD: including in-class exercises?)</li>
+<li>images: tbd.</li>
+<li><code>README.md</code></li>
+<li><code>index.qmd</code></li>
+<li><code>syllabus.qmd</code></li>
+<li><code>teaching_notes.qmd</code></li>
+<li>Makefile</li>
+<li><code>references.bib</code></li>
+<li><code>_quarto.yml</code></li>
+<li>Optional: <code>news.qmd</code>, <code>pyproject.toml</code>, <code>assignment.qmd</code> or <code>group_work.qmd</code></li>
+<li>TBD: <code>objectives.qmd</code>, <code>preparation.qmd</code>, <code>_quarto-pdf.yml</code>, <code>variables.qmd</code>, <code>data</code> dir, <code>scripts</code> dir?</li>
+</ul>
+<p>Commands</p>
+<ul>
+<li>PDFs should be generated through <code>make pdfs</code> (a <code>make</code> -&gt; <code>quarto render</code> -&gt; <code>decktape</code> chain, as in <a href="https://github.com/fs-ise/analytics-and-big-data" target="_blank">ABD</a>).</li>
+<li>gh-actions: …</li>
+<li>links, spellchecking, pdf generation</li>
+</ul>
+<p>Page</p>
+<ul>
+<li>Links related to continuous improvement: <strong>feedback</strong>, <strong>evaluations</strong>, <strong>improvement</strong>.</li>
+<li>Logo, navigation on the left, …</li>
+<li>LMS links never point to a specific course but to a search in the LMS (e.g., for the <a href="https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B" target="_blank">project</a>).</li>
+<li>Badges??</li>
+</ul>
+<p>Automated checks/report:</p>
+<ul>
+<li>Start with the LLM version (simply pass all principles - maybe even as a chatgpt/codex prompt)?</li>
+<li>iterate over repos locally</li>
+<li>rule-based and llm-based checks (llm: optional/additional)</li>
+<li>pass/fail with detailed report</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Potential extensions">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Potential extensions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Surveys to collect feedback for individual sessions (Google Forms?)</li>
+<li>Options to provide feedback should be linked on the first page.</li>
+<li>Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see <a href="https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/" target="_blank">example</a>)</li>
+<li>Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see <a href="https://harvard-iacs.github.io/2019-CS109A/pages/materials.html" target="_blank">example</a>).</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="new-repository" class="level2">
+<h2 class="anchored" data-anchor-id="new-repository">New repository</h2>
+<p>TODO:</p>
+<ul>
+<li>codex: create template repository (based on latest…)</li>
+<li>use codex to compare template repo with latest teaching and update before using it as a basis</li>
+</ul>
+<p>https://chatgpt.com/c/6a4dff3d-3ad8-83eb-81ad-ba0418a6752e</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>@GitHub I would like to create a template for teaching repositories (lectures, ...). best practices are still evolving. the latest version of a repo is in https://github.com/fs-ise/analytics-and-big-data .  also, a lot of best practices and ideas for principles are documented in https://fs-ise.github.io/handbook/teaching/materials.html . also, I like the progress indicators in https://github.com/fs-ise/open-source-project . Ideally, I would like to include data on session dates etc. from the handbook repository (data/events.yaml): I am thinking about "TODO: codex: create template repository (based on latest...)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>TODO: use codex to compare template repo with latest teaching and update before using it as a basis". advise me on how to best approach this.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>TODO: also consolidate with https://github.com/fs-ise/quarto-template-presentation</p>
+<ul>
+<li>Add the new repository to the overview (above)</li>
 </ul>
 <section id="publishing-to-github-pages" class="level3">
 <h3 class="anchored" data-anchor-id="publishing-to-github-pages">Publishing to GitHub pages</h3>
+<p>See <a href="https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html" target="_blank">tutorial</a>.</p>
 <p>For <code>quarto publish gh-pages</code> : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).</p>
 </section>
 </section>

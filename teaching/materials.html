@@ -154,17 +154,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -174,6 +163,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -1097,12 +1097,43 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 
 <p>Best practices and resources for preparing teaching materials.</p>
+<p>TODO:</p>
+<ul>
+<li>Design contents in such a way that students can learn them (after the session, pdf, making comments)</li>
+<li>Add dynamic illustrations only as an extra (link them in the offline version)</li>
+<li>Ask students how they learn (PDF, …) whether they use a knowledge management system (which one), and adapt accordingly</li>
+<li>Template is available <a href="https://github.com/fs-ise/fs-ise-presentation" target="_blank">here</a></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line. This makes the history more readable and merging easier (see <a href="https://sembr.org/" target="_blank">semantic line breaks</a>).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not create quarto brand extension or use the revealjs seminar plugin (complexity).</p>
+</div>
+</div>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Template is available <a href="https://github.com/fs-ise/fs-ise-presentation" target="_blank">here</a> (see <a href="https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html" target="_blank">tutorial</a>)</p>
 <ul>
 <li>Slides are in reveal-js.</li>
-<li>HTML and PDF versions are automatically generated (e.g., GitHub actions).</li>
 <li>Learning objectives should be on all slides (verifiable outcomes).</li>
 <li>Use markers for tasks/questions (see <a href="https://fs-ise.github.io/literature-review-seminar/output/01-goals.html#4" target="_blank">example</a>)</li>
 </ul>
@@ -1119,7 +1150,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li><a href="https://github.com/parmsam/quarto-webcam" target="_blank">flashcards for quick questions with solutions displayed on pressing <code>q</code></a></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Slide template">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1128,7 +1159,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Limitation: custom-callouts do not work in revealjs.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -1240,14 +1271,29 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled" title="Slide shortcuts">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Slide shortcuts
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Shortcuts:</p>
 <ul>
 <li>g : goto slide</li>
-<li>b</li>
-<li>d</li>
+<li>b : blackboard</li>
+<li>d : download blackboard notes</li>
 </ul>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled" title="Slide preparation">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1256,7 +1302,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Convert PowerPoint to quarto:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pptx2md</span> <span class="st">"slides.pptx"</span> <span class="at">--output</span> <span class="st">"slides_with_notes.qmd"</span> <span class="at">--enable-slides</span> <span class="at">--qmd</span> <span class="at">--image-dir</span> <span class="st">"images"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1310,7 +1356,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p>Jupyter notebooks should be delivered through GitHub Codespaces to avoid individual setup problems <span class="citation" data-cites="Malan2024">(see <a href="#ref-Malan2024" role="doc-biblioref">Malan, 2024</a>)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Notebook template">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1319,7 +1365,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Include images in html tags (otherwise, attributes like width will be ignored):</span>
@@ -1359,7 +1405,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Resources for notebook design">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1368,7 +1414,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><a href="https://coderefinery.github.io/jupyter/" target="_blank">CodeRefinery on Jupyter Notebooks</a></li>
@@ -1389,7 +1435,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li>Teaching notes are shared and updated regularly.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Teaching notes template">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1398,7 +1444,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Session X: XXX"</span></span>
@@ -1438,8 +1484,16 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 </div>
 </div>
-<section id="community-engaged-teaching" class="level3">
-<h3 class="anchored" data-anchor-id="community-engaged-teaching">Community-engaged teaching</h3>
+</section>
+<section id="video-recordings" class="level2">
+<h2 class="anchored" data-anchor-id="video-recordings">Video recordings</h2>
+<p>Best practices on software, lighting/audio etc. should be documented here.</p>
+<ul>
+<li><a href="https://darribas.org/gds_course/content/bG/concepts_G.html" target="_blank">Interesting video format</a></li>
+</ul>
+</section>
+<section id="community-engaged-teaching" class="level2">
+<h2 class="anchored" data-anchor-id="community-engaged-teaching">Community-engaged teaching</h2>
 <p>For project-based courses, consider linking teaching activities to real communities, repositories, or open-source projects.</p>
 <p>A useful model is JabRef’s teaching page: <a href="https://devdocs.jabref.org/teaching.html" target="_blank">Teaching with JabRef</a>.</p>
 <p>Recommended elements:</p>
@@ -1452,13 +1506,6 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p>This pattern is especially relevant for the Open Source Project course, but can also support software, data, documentation, or research-infrastructure assignments.</p>
 </section>
-</section>
-<section id="video-recordings" class="level2">
-<h2 class="anchored" data-anchor-id="video-recordings">Video recordings</h2>
-<ul>
-<li><a href="https://darribas.org/gds_course/content/bG/concepts_G.html" target="_blank">Interesting video format</a></li>
-</ul>
-</section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
@@ -1468,7 +1515,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li>revealjs editor (slides.com): ai prompts limited (generating many slides, or changing text fields) - cannot do animations with it. limited import/export (for quarto/revealjs) - only complex/full htm.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Terminal animations (asciinema)">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1477,7 +1524,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Installation</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install asciinema</span>
@@ -1506,12 +1553,11 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </ul>
 <p><strong>Possible extensions</strong></p>
 <ul>
-<li>Workflows (quality checks)</li>
 <li>Setup of exercises</li>
 <li>Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Quarto extensions">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1520,7 +1566,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>https://github.com/jmbuhr/quarto-qrcode</li>

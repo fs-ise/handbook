@@ -108,17 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -139,6 +128,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1104,7 +1104,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">improvement_status:</span><span class="co"> N/A</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">lecturer:</span><span class="co"> "Gerit Wagner"</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">lms:</span><span class="co"> "Canvas URL pending"</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">website:</span><span class="co"> "Website URL pending"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">web:</span><span class="co"> "Website URL pending"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># IDW 20XX WiSe</span></span>
@@ -1114,8 +1114,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Title               | {{&lt; meta title &gt;}}</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Semester            | {{&lt; meta semester &gt;}}</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Lecturer            | {{&lt; meta lecturer &gt;}}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Link: LMS           | {{&lt; meta lms &gt;}}</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Link: Website       | {{&lt; meta website &gt;}}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Link: LMS           | <span class="co">[</span><span class="ot">Canvas</span><span class="co">]({{&lt; meta lms &gt;}})</span>{target="_blank"}</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Link: Website       | <span class="co">[</span><span class="ot">Website</span><span class="co">]({{&lt; meta web &gt;}})</span>{target="_blank"}</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Status              | {{&lt; meta status &gt;}}</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Student Evaluations | {{&lt; meta student_evaluations &gt;}}</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Improvement Issue   | {{&lt; meta improvement_issue &gt;}}</span>
@@ -1211,7 +1211,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     improvement_status: N/A
     lecturer: "Gerit Wagner"
     lms: "Canvas URL pending"
-    website: "Website URL pending"
+    web: "Website URL pending"
     ---
 
     # LRSem 20XX WiSe
@@ -1221,8 +1221,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     Title               | New course
     Semester            | ?meta:semester
     Lecturer            | ?meta:lecturer
-    Link: LMS           | ?meta:lms
-    Link: Website       | ?meta:website
+    Link: LMS           | [Canvas](?meta:lms){target="_blank"}
+    Link: Website       | [Website](?meta:web){target="_blank"}
     Status              | ?meta:status
     Student Evaluations | ?meta:student_evaluations
     Improvement Issue   | ?meta:improvement_issue
@@ -1301,7 +1301,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     improvement_status: N/A
     lecturer: "Gerit Wagner"
     lms: "Canvas URL pending"
-    website: "Website URL pending"
+    web: "Website URL pending"
     ---
 
     # OSP 20XX WiSe
@@ -1311,8 +1311,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
     Title               | New course
     Semester            | ?meta:semester
     Lecturer            | ?meta:lecturer
-    Link: LMS           | ?meta:lms
-    Link: Website       | ?meta:website
+    Link: LMS           | [Canvas](?meta:lms){target="_blank"}
+    Link: Website       | [Website](?meta:web){target="_blank"}
     Status              | ?meta:status
     Student Evaluations | ?meta:student_evaluations
     Improvement Issue   | ?meta:improvement_issue
