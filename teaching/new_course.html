@@ -119,17 +119,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -139,6 +128,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1066,30 +1066,16 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Update the templates (in line with quarto)! TODO : describe the process and system of booking lecture rooms.</p>
-</div>
-</div>
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>Courses are <a href="https://github.com/fs-ise/handbook/tree/main/teaching/courses" target="_blank">here</a>.</p>
 <p>To set up a new lecture, seminar, or project:</p>
 <ul>
 <li>Add a <a href="#new-module">new module</a> if necessary.</li>
-<li>Announcement and scheduling is documented <a href="../teaching/new_course.html">here</a></li>
 <li>Create a <a href="https://github.com/fs-ise/handbook/new/main/_courses" target="_blank">new lecture, seminar, or project</a> with this filename pattern: <code>2023-SuSe-IDW.md</code> based on the right template:</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lecture template">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1098,7 +1084,7 @@ Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title_short:</span><span class="co"> IDW</span></span>
@@ -1386,13 +1372,13 @@ Note
 -->
 <ul>
 <li>Update yaml-header information.</li>
+<li>Update github pages, e.g., dates on the project page (e.g., <a href="https://fs-ise.github.io/open-source-project/" target="_blank">example</a>).</li>
 <li>The <a href="../teaching/course_overview.html">overview</a>, <a href="../teaching/evaluations.html">evaluation</a> and <a href="../teaching/improvements.html">improvements</a> are updated automatically.</li>
-<li>Update github pages, e.g., dates on the <a href="https://fs-ise.github.io/open-source-project/" target="_blank">project page</a>.</li>
 </ul>
 </section>
 <section id="scheduling-of-courses" class="level2">
 <h2 class="anchored" data-anchor-id="scheduling-of-courses">Scheduling of courses</h2>
-<p>The scheduling department (individuals responsible for specific degree programs) contacts me (with preferences gathered via Google Forms). I then receive a proposed schedule (I must manually check and resolve conflicts between programs; if necessary, clarify with the scheduling department or speak directly with colleagues). Ensure that module coordinators list me as the instructor (otherwise invitations will be sent to the wrong person).</p>
+<p>The scheduling department (individuals responsible for specific degree programs) contacts me (with preferences gathered via TimeEdit/Google Forms). I then receive a proposed schedule (I must manually check and resolve conflicts between programs; if necessary, clarify with the scheduling department or speak directly with colleagues). Ensure that module coordinators list me as the instructor (otherwise invitations will be sent to the wrong person).</p>
 <!--
 ## Room bookings UnivIS
 
