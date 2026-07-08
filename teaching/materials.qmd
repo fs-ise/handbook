@@ -6,12 +6,27 @@ csl: ../assets/apa.csl
 
 Best practices and resources for preparing teaching materials.
 
+
+TODO:
+
+- Design contents in such a way that students can learn them (after the session, pdf, making comments)
+- Add dynamic illustrations only as an extra (link them in the offline version)
+- Ask students how they learn (PDF, ...) whether they use a knowledge management system (which one), and adapt accordingly
+- Template is available [here](https://github.com/fs-ise/fs-ise-presentation){target=_blank} 
+
+::: {.callout-important}
+Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line.
+This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){target=_blank}).
+:::
+
+::: callout-important
+Do not create quarto brand extension or use the revealjs seminar plugin (complexity).
+:::
+
+
 ## Slides
 
-Template is available [here](https://github.com/fs-ise/fs-ise-presentation){target=_blank} (see [tutorial](https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html){target=_blank})
-
 - Slides are in reveal-js.
-- HTML and PDF versions are automatically generated (e.g., GitHub actions).
 - Learning objectives should be on all slides (verifiable outcomes).
 - Use markers for tasks/questions (see [example](https://fs-ise.github.io/literature-review-seminar/output/01-goals.html#4){target=_blank})
 
@@ -161,11 +176,15 @@ Based on [Bootstrap](https://icons.getbootstrap.com/){target=_blank}
 
 :::
 
+::: {.callout-note title="Slide shortcuts" collapse=true}
+
 Shortcuts:
 
 - g : goto slide
-- b
-- d
+- b : blackboard
+- d : download blackboard notes
+
+:::
 
 ::: {.callout-note title="Slide preparation" collapse=true}
 
@@ -327,7 +346,13 @@ Native page break:
 
 :::
 
-### Community-engaged teaching
+## Video recordings
+
+Best practices on software, lighting/audio etc. should be documented here.
+
+- [Interesting video format](https://darribas.org/gds_course/content/bG/concepts_G.html){target=_blank}
+
+## Community-engaged teaching
 
 For project-based courses, consider linking teaching activities to real communities, repositories, or open-source projects.
 
@@ -342,10 +367,6 @@ Recommended elements:
 * Reflection on collaboration, maintainability, and community norms.
 
 This pattern is especially relevant for the Open Source Project course, but can also support software, data, documentation, or research-infrastructure assignments.
-
-## Video recordings
-
-- [Interesting video format](https://darribas.org/gds_course/content/bG/concepts_G.html){target=_blank}
 
 ## Resources
 
@@ -390,7 +411,6 @@ docker run --rm -it -u $(id -u):$(id -g) -v $PWD:/data agg demo.cast demo.gif
 
 **Possible extensions**
 
-- Workflows (quality checks)
 - Setup of exercises
 - Quartz (obsidian) and infos on how to export notes (obsidian/notion/word)
 

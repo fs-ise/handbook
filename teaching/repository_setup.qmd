@@ -6,6 +6,8 @@ csl: ../assets/apa.csl
 
 Best practices and resources for setting up teaching repositories.
 
+Goals: efficiency (clear principles, automation, git-based improvement cycle, sharing/publication-readiness)
+
 ## Repositories
 
 |        | Course                       | Materials Repository                                                              | Exams Repository                                                                        |
@@ -17,51 +19,97 @@ Best practices and resources for setting up teaching repositories.
 | LRSem  | Literature Review Seminar    | [repository](https://github.com/fs-ise/literature-review-seminar){target=_blank}  | —                                                                                       |
 | Theses | Theses                       | [repository](https://github.com/fs-ise/theses){target=_blank}                     | —                                                                                       |
 
-## General setup
+## General setup principles
 
-We use [Quarto](https://quarto.org/){target=_blank} for our teaching materials.
+Repository
 
-::: callout-important
-Do not create quarto brand extension or use the revealjs seminar plugin (complexity).
-:::
-
-Principles
-
-- Dates, rooms, and links should be in one place to prevent inconsistent information.
-- VC links never point to a specific course but to a search in VC (e.g., for the [project](https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B){target=_blank}).
+- We use [Quarto](https://quarto.org/){target=_blank} for teaching repositories.
+- Each course has a separate repository and page.
+- Each course is hosted publicly on GitHub.
+- Each course can be used locally and offline.
+- Shared materials may be extracted in the [shared-materials](TODO) repository and included through git submodules and quarto include commands.
+- Add branch protection rule for `main`: restrict deletions and block force pushes
 - Teaching contents are licensed under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/deed.en){target=_blank} per default.
-- Design contents in such a way that students can learn them (after the session, pdf, making comments)
-- Add dynamic illustrations only as an extra (link them in the offline version)
 
-::: {.callout-important}
-Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line.
-This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){target=_blank}).
-:::
-
-A teaching repository contains
+Files and directories
 
 - Overview of related courses in the README.md file (see other courses [here](platforms_degree_programs_courses.html)).
-- PDFs should be generated through `make pdfs` (a `make` -> `quarto render` -> `decktape` chain, as in [bda](https://github.com/fs-ise/big-data-analytics){target=_blank}).
 - A syllabus ([example](https://fs-ise.github.io/open-source-project/docs/syllabus.html){target=_blank})
 - Detailed teaching notes allow teaching assistants to replicate it quickly.
-- Links related to continuous improvement: **feedback**, **evaluations**, **improvement**.
-- Add branch protection rule for `main`: restrict deletions and block force pushes
-- Each course should have a separate repository and page.
-- Options to provide feedback should be linked on the first page.
-- Optional: surveys to collect feedback for individual sessions (Google Forms?)
-- Optional: ask students how they learn (PDF, ...) whether they use a knowledge management system (which one), and adapt accordingly
-- Optional: Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see [example](https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/){target=_blank})
-- Optional: Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see [example](https://harvard-iacs.github.io/2019-CS109A/pages/materials.html){target=_blank}).
-
-
-Principles:
-
 - One slide-deck (optional notebook) per session (no multi-session slide decks)
 - Markers on the slides indicate where in-class exercises are used
+- Markers on the slides include explicit discussion prompts
+- Markers on the slides indicate key concepts (must learn vs. learning notes on optional contents)
+- HTML and PDF versions are automatically generated (e.g., GitHub actions).
+- All files: Each sentence should be in a new line
+- Dates, rooms, and links should be in one place to prevent inconsistent information.
+- `slides` dir for session slides (one per session)
+- `notes` dir for teaching notes (one per session)
+- `exercises` dir for exercises (one per session - TBD: including in-class exercises?)
+- images: tbd.
+- `README.md`
+- `index.qmd`
+- `syllabus.qmd`
+- `teaching_notes.qmd`
+- Makefile
+- `references.md`
+- `_quarto.yml`
+- Optional: `news.qmd`, `pyproject.toml`, `assignment.qmd` or `group_work.qmd`
+- TBD: `objectives.qmd`, `preparation.qmd`, `_quarto-pdf.yml`, `variables.qmd`, `data` dir, `scripts` dir?
+
+Commands
+
+- PDFs should be generated through `make pdfs` (a `make` -> `quarto render` -> `decktape` chain, as in [bda](https://github.com/fs-ise/big-data-analytics){target=_blank}).
+- gh-actions: ...
+- links, spellchecking, pdf generation
+
+Page
+
+- Links related to continuous improvement: **feedback**, **evaluations**, **improvement**.
+- Logo, navigation on the left, ...
+- LMS links never point to a specific course but to a search in the LMS (e.g., for the [project](https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B){target=_blank}).
+- Badges??
+
+Automated checks/report:
+
+- Start with the LLM version (simply pass all principles - maybe even as a chatgpt/codex prompt)?
+- iterate over repos locally
+- rule-based and llm-based checks (llm: optional/additional)
+- pass/fail with detailed report
+
+
+::: {.callout-note title="Potential extensions" collapse=true}
+- Surveys to collect feedback for individual sessions (Google Forms?)
+- Options to provide feedback should be linked on the first page.
+- Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see [example](https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/){target=_blank})
+- Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see [example](https://harvard-iacs.github.io/2019-CS109A/pages/materials.html){target=_blank}).
+:::
+
+## New repository
+
+TODO:
+
+- codex: create template repository (based on latest...)
+- use codex to compare template repo with latest teaching and update before using it as a basis
+
+https://chatgpt.com/c/6a4dff3d-3ad8-83eb-81ad-ba0418a6752e
+
+```Markdown
+@GitHub I would like to create a template for teaching repositories (lectures, ...). best practices are still evolving. the latest version of a repo is in https://github.com/fs-ise/analytics-and-big-data .  also, a lot of best practices and ideas for principles are documented in https://fs-ise.github.io/handbook/teaching/materials.html . also, I like the progress indicators in https://github.com/fs-ise/open-source-project . Ideally, I would like to include data on session dates etc. from the handbook repository (data/events.yaml): I am thinking about "TODO: codex: create template repository (based on latest...)
+TODO: use codex to compare template repo with latest teaching and update before using it as a basis". advise me on how to best approach this.
+```
+
+TODO: also consolidate with https://github.com/fs-ise/quarto-template-presentation
+
+- Add the new repository to the overview (above)
 
 ### Publishing to GitHub pages
 
+See [tutorial](https://www.jtrive.com/posts/creating-gh-pages-blog-with-quarto/creating-gh-pages-blog-with-quarto.html){target=_blank}.
+
 For `quarto publish gh-pages` : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).
+
+
 
 ## Resources
 
