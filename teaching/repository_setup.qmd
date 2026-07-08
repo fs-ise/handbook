@@ -1,0 +1,69 @@
+---
+title: "Repository setup"
+bibliography: ../assets/complementary-references.bib
+csl: ../assets/apa.csl
+---
+
+Best practices and resources for setting up teaching repositories.
+
+## Repositories
+
+|        | Course                       | Materials Repository                                                              | Exams Repository                                                                        |
+|--------|------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| ABD    | Analytics and Big Data       | [repository](https://github.com/fs-ise/big-data-analytics){target=_blank}         | [repository](https://github.com/fs-ise/big-data-analytics-exams){target=_blank}         |
+| ITSecM | IT Security Management       | [repository](https://github.com/fs-ise/it-security-management){target=_blank}     | [repository](https://github.com/fs-ise/it-security-management-exams){target=_blank}     |
+| IDW    | Introduction to Digital Work | [repository](https://github.com/fs-ise/digital-work-lecture){target=_blank}       | [repository](https://github.com/fs-ise/digital-work-lecture-exam){target=_blank}        |
+| OSP    | Open Source Project          | [repository](https://github.com/fs-ise/open-source-project){target=_blank}        | —                                                                                       |
+| LRSem  | Literature Review Seminar    | [repository](https://github.com/fs-ise/literature-review-seminar){target=_blank}  | —                                                                                       |
+| Theses | Theses                       | [repository](https://github.com/fs-ise/theses){target=_blank}                     | —                                                                                       |
+
+## General setup
+
+We use [Quarto](https://quarto.org/){target=_blank} for our teaching materials.
+
+::: callout-important
+Do not create quarto brand extension or use the revealjs seminar plugin (complexity).
+:::
+
+Principles
+
+- Dates, rooms, and links should be in one place to prevent inconsistent information.
+- VC links never point to a specific course but to a search in VC (e.g., for the [project](https://vc.uni-bamberg.de/course/search.php?search=Digital-Work-Projekt-B){target=_blank}).
+- Teaching contents are licensed under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/deed.en){target=_blank} per default.
+- Design contents in such a way that students can learn them (after the session, pdf, making comments)
+- Add dynamic illustrations only as an extra (link them in the offline version)
+
+::: {.callout-important}
+Each sentence should be in a new line (to ensure that the git diff is readable). To create a paragraph, add an empty line.
+This makes the history more readable and merging easier (see [semantic line breaks](https://sembr.org/){target=_blank}).
+:::
+
+A teaching repository contains
+
+- Overview of related courses in the README.md file (see other courses [here](platforms_degree_programs_courses.html)).
+- PDFs should be generated through `make pdfs` (a `make` -> `quarto render` -> `decktape` chain, as in [bda](https://github.com/fs-ise/big-data-analytics){target=_blank}).
+- A syllabus ([example](https://fs-ise.github.io/open-source-project/docs/syllabus.html){target=_blank})
+- Detailed teaching notes allow teaching assistants to replicate it quickly.
+- Links related to continuous improvement: **feedback**, **evaluations**, **improvement**.
+- Add branch protection rule for `main`: restrict deletions and block force pushes
+- Each course should have a separate repository and page.
+- Options to provide feedback should be linked on the first page.
+- Optional: surveys to collect feedback for individual sessions (Google Forms?)
+- Optional: ask students how they learn (PDF, ...) whether they use a knowledge management system (which one), and adapt accordingly
+- Optional: Session pages. One page per teaching session, integrating video, slides, exercise materials, code/notebooks, quizzes, and follow-up resources. (see [example](https://slds-lmu.github.io/i2ml/chapters/03_supervised_classification/03-04-classification-logistic/){target=_blank})
+- Optional: Resource index. One cross-session page that makes all materials findable by topic, concept, method, or material type (see [example](https://harvard-iacs.github.io/2019-CS109A/pages/materials.html){target=_blank}).
+
+
+Principles:
+
+- One slide-deck (optional notebook) per session (no multi-session slide decks)
+- Markers on the slides indicate where in-class exercises are used
+
+### Publishing to GitHub pages
+
+For `quarto publish gh-pages` : install quarto locally (otherwise, the ssh and git setup in the docker container requires detailed configuration).
+
+## Resources
+
+- [Example course landing page](https://evalf22.classes.andrewheiss.com/){target=_blank}.
+- [Example content page](https://evalf22.classes.andrewheiss.com/content/).
