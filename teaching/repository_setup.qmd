@@ -12,7 +12,7 @@ Goals: efficiency (clear principles, automation, git-based improvement cycle, sh
 
 |        | Course                       | Materials Repository                                                              | Exams Repository                                                                        |
 |--------|------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| ABD    | Analytics and Big Data       | [repository](https://github.com/fs-ise/big-data-analytics){target=_blank}         | [repository](https://github.com/fs-ise/big-data-analytics-exams){target=_blank}         |
+| ABD    | Analytics and Big Data       | [repository](https://github.com/fs-ise/analytics-and-big-data){target=_blank}     | [repository](https://github.com/fs-ise/analytics-and-big-data-exams){target=_blank}     |
 | ITSecM | IT Security Management       | [repository](https://github.com/fs-ise/it-security-management){target=_blank}     | [repository](https://github.com/fs-ise/it-security-management-exams){target=_blank}     |
 | IDW    | Introduction to Digital Work | [repository](https://github.com/fs-ise/digital-work-lecture){target=_blank}       | [repository](https://github.com/fs-ise/digital-work-lecture-exam){target=_blank}        |
 | OSP    | Open Source Project          | [repository](https://github.com/fs-ise/open-source-project){target=_blank}        | —                                                                                       |
@@ -30,6 +30,7 @@ Repository
 - Shared materials may be extracted in the [shared-materials](TODO) repository and included through git submodules and quarto include commands.
 - Add branch protection rule for `main`: restrict deletions and block force pushes
 - Teaching contents are licensed under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/deed.en){target=_blank} per default.
+- Zenodo/DOI
 
 Files and directories
 
@@ -52,14 +53,14 @@ Files and directories
 - `syllabus.qmd`
 - `teaching_notes.qmd`
 - Makefile
-- `references.md`
+- `references.bib`
 - `_quarto.yml`
 - Optional: `news.qmd`, `pyproject.toml`, `assignment.qmd` or `group_work.qmd`
 - TBD: `objectives.qmd`, `preparation.qmd`, `_quarto-pdf.yml`, `variables.qmd`, `data` dir, `scripts` dir?
 
 Commands
 
-- PDFs should be generated through `make pdfs` (a `make` -> `quarto render` -> `decktape` chain, as in [bda](https://github.com/fs-ise/big-data-analytics){target=_blank}).
+- PDFs should be generated through `make pdfs` (a `make` -> `quarto render` -> `decktape` chain, as in [ABD](https://github.com/fs-ise/analytics-and-big-data){target=_blank}).
 - gh-actions: ...
 - links, spellchecking, pdf generation
 
