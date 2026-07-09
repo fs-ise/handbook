@@ -1128,24 +1128,30 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </div>
 </div>
 </div>
-<p>All input modes are normalized into the shared <a href="data/events.yaml"><code>data/events.yaml</code></a> file before the calendar page and ICS feed are generated.</p>
+<p>All input modes are normalized into the shared <a href="https://github.com/fs-ise/handbook/blob/main/data/events.yaml"><code>data/events.yaml</code></a> file before the calendar page and ICS feed are generated.</p>
 <section id="manual-additions" class="level3">
 <h3 class="anchored" data-anchor-id="manual-additions">Manual additions</h3>
-<p>Manual additions are maintained directly in <a href="data/events.yaml"><code>data/events.yaml</code></a>. Use this mode for events that are not available from an automated source.</p>
+<p>Manual additions are maintained directly in <a href="https://github.com/fs-ise/handbook/edit/main/data/events.yaml"><code>data/events.yaml</code></a>. Use this mode for events that are not available from an automated source.</p>
 </section>
 <section id="timeedit-sync" class="level3">
 <h3 class="anchored" data-anchor-id="timeedit-sync">TimeEdit sync</h3>
 <p>The TimeEdit sync imports teaching and timetable-related events with <a href="src/sync_timeedit.py"><code>src/sync_timeedit.py</code></a>. It runs through the <a href=".github/workflows/sync_timeedit_calendar.yml">TimeEdit calendar sync GitHub Action</a>.</p>
+<p>To run the same sync locally from the repository root:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> src/sync_timeedit.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="ais-sync" class="level3">
 <h3 class="anchored" data-anchor-id="ais-sync">AIS sync</h3>
 <p>The AIS sync imports selected institutional and conference events with <a href="src/sync_aisnet.py"><code>src/sync_aisnet.py</code></a>. It runs through the <a href=".github/workflows/sync_aisnet.yml">AISNET sync GitHub Action</a>.</p>
+<p>To run the same sync locally from the repository root:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install .</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> src/sync_aisnet.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="ics-feed-calendar-sync-output" class="level2">
 <h2 class="anchored" data-anchor-id="ics-feed-calendar-sync-output">ICS feed / calendar sync output</h2>
 <p>The ICS feed is generated from the same canonical data as the calendar page by <a href="src/update_calendar.py"><code>src/update_calendar.py</code></a>, with regular updates handled by the <a href=".github/workflows/update_calendar_ics.yml">calendar ICS GitHub Action</a>. Subscribe to the ISE calendar ICS feed from external calendar apps instead of manually copying events.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/fs-ise/handbook/main/assets/calendar/fs-ise.ical</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <script src="assets/calendar/calendar.js"></script>
 
 
