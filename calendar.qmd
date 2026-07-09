@@ -20,8 +20,11 @@ The ISE calendar combines manually maintained events with automated imports from
 ```{mermaid}
 flowchart LR
     manual[Manual additions]
-    timeedit[TimeEdit sync]
-    ais[AIS sync]
+
+    subgraph automated[Automated imports]
+        timeedit[TimeEdit sync]
+        ais[AIS sync]
+    end
 
     events[(data/events.yaml)]
 
@@ -36,19 +39,31 @@ flowchart LR
     events --> ics
 
     click manual "#manual-additions" "Read about manual calendar additions"
-    click timeedit "#timeedit-sync" "Read about the TimeEdit sync"
-    click ais "#ais-sync" "Read about the AIS sync"
+    click timeedit "#automated-imports" "Read about automated imports"
+    click ais "#automated-imports" "Read about automated imports"
     click events "https://github.com/fs-ise/handbook/blob/main/data/events.yaml" "View canonical calendar data"
-    click calendar "#ise-calendar-data-flow" "Read about the calendar page"
+    click calendar "#" "Go to the calendar page"
     click ics "#ics-feed-calendar-sync-output" "Read about the ICS feed"
+
+    classDef clickable text-decoration:underline;
+    class manual,timeedit,ais,events,calendar,ics clickable;
 ```
 :::
+
+<br>
 
 All input modes are normalized into the shared [`data/events.yaml`](https://github.com/fs-ise/handbook/blob/main/data/events.yaml) file before the calendar page and ICS feed are generated.
 
 ### Manual additions
 
 Manual additions are maintained directly in [`data/events.yaml`](https://github.com/fs-ise/handbook/edit/main/data/events.yaml). Use this mode for events that are not available from an automated source.
+
+### Automated imports
+
+Some imports are automated, so most users do not need these operational details during normal calendar use.
+
+::: {.callout-note collapse="true"}
+## Details
 
 ### TimeEdit sync
 
@@ -63,7 +78,7 @@ python src/sync_timeedit.py
 
 ### AIS sync
 
-The AIS sync imports selected institutional and conference events with [`src/sync_aisnet.py`](src/sync_aisnet.py). It runs through the [AISNET sync GitHub Action](.github/workflows/sync_aisnet.yml).
+The AIS sync imports selected conference events with [`src/sync_aisnet.py`](src/sync_aisnet.py). It runs through the [AISNET sync GitHub Action](.github/workflows/sync_aisnet.yml).
 
 To run the same sync locally from the repository root:
 
@@ -71,8 +86,9 @@ To run the same sync locally from the repository root:
 python -m pip install .
 python src/sync_aisnet.py
 ```
+:::
 
-## ICS feed / calendar sync output
+### ICS feed / calendar sync output
 
 The ICS feed is generated from the same canonical data as the calendar page by [`src/update_calendar.py`](src/update_calendar.py), with regular updates handled by the [calendar ICS GitHub Action](.github/workflows/update_calendar_ics.yml). Subscribe to the ISE calendar ICS feed from external calendar apps instead of manually copying events.
 
