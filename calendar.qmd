@@ -54,9 +54,23 @@ Manual additions are maintained directly in [`data/events.yaml`](data/events.yam
 
 The TimeEdit sync imports teaching and timetable-related events with [`src/sync_timeedit.py`](src/sync_timeedit.py). It runs through the [TimeEdit calendar sync GitHub Action](.github/workflows/sync_timeedit_calendar.yml).
 
+To run the same sync locally from the repository root:
+
+```sh
+python -m pip install .
+python src/sync_timeedit.py
+```
+
 ### AIS sync
 
 The AIS sync imports selected institutional and conference events with [`src/sync_aisnet.py`](src/sync_aisnet.py). It runs through the [AISNET sync GitHub Action](.github/workflows/sync_aisnet.yml).
+
+To run the same sync locally from the repository root:
+
+```sh
+python -m pip install .
+python src/sync_aisnet.py
+```
 
 ## ICS feed / calendar sync output
 
