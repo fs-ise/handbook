@@ -77,17 +77,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -119,6 +108,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -1041,6 +1041,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
+<section id="current-and-upcoming-courses" class="level2">
+<h2 class="anchored" data-anchor-id="current-and-upcoming-courses">Current and upcoming courses</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1078,19 +1080,19 @@ gantt
 
 :::{}
 
-<pre class="mermaid mermaid-js">---
-displayMode: compact
----
-gantt
-    title Academic year 2025/26
-    dateFormat  YYYY-MM-DD
-    axisFormat %b
+<pre class="mermaid mermaid-js">    ---
+    displayMode: compact
+    ---
+    gantt
+        title Academic year 2025/26
+        dateFormat  YYYY-MM-DD
+        axisFormat %b
 
-    section WiSe 2025/26
-    Lectures WiSe 25/26           :w2, 2025-09-01, 2025-12-12
+        section WiSe 2025/26
+        Lectures WiSe 25/26           :w2, 2025-09-01, 2025-12-12
 
-    section SuSe 2026
-    Lectures SuSe 2026            :s1, 2026-03-23, 2026-05-21
+        section SuSe 2026
+        Lectures SuSe 2026            :s1, 2026-03-23, 2026-05-21
 
 </pre>
 :::
@@ -1099,19 +1101,58 @@ gantt
 :::::
 ::::::
 
-    WiSe 25/26 (1 Sep – 31 Jan)   :w1, 2025-09-01, 2026-01-31
+        WiSe 25/26 (1 Sep – 31 Jan)   :w1, 2025-09-01, 2026-01-31
 
-    Exam period I (18–25 Oct)     :we1, 2025-10-18, 8d
-    Exam period II (13–20 Dec)    :we2, 2025-12-13, 8d
+        Exam period I (18–25 Oct)     :we1, 2025-10-18, 8d
+        Exam period II (13–20 Dec)    :we2, 2025-12-13, 8d
 
-    SuSe 2026 (1 Feb – 31 Aug)    :s0, 2026-02-01, 2026-08-31
-    section Exams – SuSe 2026
-    Exam period I (14–21 Mar)     :se1, 2026-03-14, 8d
-    Exam period II (22–30 May)    :se2, 2026-05-22, 9d
+        SuSe 2026 (1 Feb – 31 Aug)    :s0, 2026-02-01, 2026-08-31
+        section Exams – SuSe 2026
+        Exam period I (14–21 Mar)     :se1, 2026-03-14, 8d
+        Exam period II (22–30 May)    :se2, 2026-05-22, 9d
 -->
-<p>👈 Use the sidebar to navigate to a specific topic.</p>
+<p>The course title links to the public GitHub Pages course website. Use the handbook link for the internal administration page.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Semester</th>
+<th>Course</th>
+<th>Status</th>
+<th>Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2026-SuSe</td>
+<td><a href="https://fs-ise.github.io/analytics-and-big-data/" target="_blank">Analytics and Big Data</a></td>
+<td>grading</td>
+<td><a href="../teaching/courses/2026-SuSe-ABD.html">Handbook</a></td>
+</tr>
+<tr class="even">
+<td>2026-SuSe</td>
+<td><a href="https://fs-ise.github.io/it-security-management/" target="_blank">IT Security Management</a></td>
+<td>grading</td>
+<td><a href="../teaching/courses/2026-SuSe-ITSecM.html">Handbook</a></td>
+</tr>
+<tr class="odd">
+<td>2026-WiSe</td>
+<td>Introduction to Programming</td>
+<td>upcoming</td>
+<td><a href="../teaching/courses/2026-WiSe-Prog.html">Handbook</a></td>
+</tr>
+<tr class="even">
+<td>2026-WiSe</td>
+<td><a href="https://fs-ise.github.io/mlbd/" target="_blank">Machine Learning for Big Data</a></td>
+<td>upcoming</td>
+<td><a href="../teaching/courses/2026-WiSe-MLBD.html">Handbook</a></td>
+</tr>
+</tbody>
+</table>
+<p><a href="../teaching/course_overview.html">Full course overview</a></p>
+</section>
 <section id="overview-of-areas" class="level2">
 <h2 class="anchored" data-anchor-id="overview-of-areas">Overview of areas</h2>
+<p>👈 Use the sidebar to navigate to a specific topic.</p>
 <div class="grid">
 <section id="objectives" class="level3 g-col-6">
 <h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
