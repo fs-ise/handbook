@@ -52,6 +52,24 @@ gantt
 
 👈 Use the sidebar to navigate to a specific topic.
 
+## Current and upcoming courses
+
+The course title links to the public GitHub Pages course website. Use the handbook link for the internal administration page.
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+from pathlib import Path
+
+sys.path.extend([str(Path.cwd() / "scripts"), str(Path.cwd().parent / "scripts")])
+from course_overview import current_upcoming_courses_markdown
+
+print(current_upcoming_courses_markdown())
+```
+
+[Full course overview](/teaching/course_overview.html)
+
 ## Overview of areas
 
 ::: {.grid}
