@@ -21,6 +21,7 @@ Goals: efficiency (clear principles, automation, git-based improvement cycle, sh
 | LRSem  | Literature Review Seminar    | [repository](https://github.com/fs-ise/literature-review-seminar){target=_blank}  | —                                                                                       |
 | Theses | Theses                       | [repository](https://github.com/fs-ise/theses){target=_blank}                     | —                                                                                       |
 
+
 ## General setup principles
 
 Repository
@@ -119,6 +120,23 @@ For `quarto publish gh-pages` : install quarto locally (otherwise, the ssh and g
 
 - Repository: in the `About` section, add `teaching` and `teaching-materials` as topics.
 - Repository: in the `About` section, select the GitHub Pages URL.
+
+## Repository conformance overview
+
+The repository conformance checks run separately from Quarto rendering.
+Quarto only includes the previously generated static report fragment below, so rendering the handbook does not clone repositories or call the GitHub API.
+
+Regenerate the report locally with:
+
+```bash
+make repository-conformance
+```
+
+The scheduled and manually triggered GitHub Actions workflow is defined in [update_repository_conformance.yml](https://github.com/fs-ise/handbook/actions/workflows/update_repository_conformance.yml){target=_blank}.
+For branch-protection checks across repositories, the workflow can use `LABOT_PAT_TOKEN` when the default `GITHUB_TOKEN` is not sufficient.
+
+{{< include _generated/repository-conformance.qmd >}}
+
 
 ## Resources
 

@@ -1,0 +1,53 @@
+name: Update repository conformance report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * 1"
+  push:
+    paths:
+      - "src/repository_conformance.py"
+      - "teaching/courses/**"
+      - "teaching/repository_setup.qmd"
+      - ".github/workflows/update_repository_conformance.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-repository-conformance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml
+
+      - name: Update repository conformance report
+        env:
+          GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN || github.token }}
+        run: |
+          python src/repository_conformance.py
+
+      - name: Commit and Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN || github.token }}
+        run: |
+          git config --global user.email "digital-work-labot@users.noreply.github.com"
+          git config --global user.name "digital-work-labot"
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add assets/reports/repository-conformance.json teaching/_generated/repository-conformance.qmd
+            git commit -m "Update repository conformance report"
+            git push
+          else
+            echo "No changes to commit"
+          fi
