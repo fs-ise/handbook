@@ -108,15 +108,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -130,17 +130,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -150,6 +139,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -879,6 +879,12 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/library.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Library</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/controlling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Controlling</span></a>
   </div>
@@ -1075,24 +1081,24 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <section id="publication-fees" class="level2">
 <h2 class="anchored" data-anchor-id="publication-fees">Publication fees</h2>
 <ul>
-<li>Options for <a href="../research/publication.html">open-access publishing</a> should be considered whenever possible.</li>
-<li>Open access publishing fees may be covered by the library if a transformative agreement exists with the publisher.</li>
+<li>Options for open-access publishing should be considered whenever possible.</li>
+<li>Open access publishing fees may be covered by the library if a transformative agreement exists with the publisher (see <a href="library.html#publishing">library</a>).</li>
 </ul>
 <!--
-      Zukünftig wird die Universitätsbibliothek die Bearbeitung von Rechnungen im Zusammenhang mit dem wissenschaftlichen Publizieren übernehmen.
-      Bitte senden Sie ab 01.04.2024 Rechnungen über Publikationskosten (= Kosten im Zusammenhang mit der Veröffentlichung wissenschaftlicher Dokumente) direkt an die Universitätsbibliothek (UB/F21, rechnungswesen.ub@uni-bamberg.de ).
-      Bitte geben Sie bei der Rechnung wie bisher die Kostenstelle an und ob die Rechnung aus dem regulären Lehrstuhletat oder aus einem spezifischen Drittmittelkonto bezahlt werden soll. Die Universitätsbibliothek wird die Rechnung dann bearbeiten.
+    Zukünftig wird die Universitätsbibliothek die Bearbeitung von Rechnungen im Zusammenhang mit dem wissenschaftlichen Publizieren übernehmen.
+    Bitte senden Sie ab 01.04.2024 Rechnungen über Publikationskosten (= Kosten im Zusammenhang mit der Veröffentlichung wissenschaftlicher Dokumente) direkt an die Universitätsbibliothek (UB/F21, rechnungswesen.ub@uni-bamberg.de ).
+    Bitte geben Sie bei der Rechnung wie bisher die Kostenstelle an und ob die Rechnung aus dem regulären Lehrstuhletat oder aus einem spezifischen Drittmittelkonto bezahlt werden soll. Die Universitätsbibliothek wird die Rechnung dann bearbeiten.
 
-      Die Rechnungen werden ab 01.04.24 direkt von der Bibliothek gebucht und auch dort abgelegt.
-      Es ist zwingend darauf zu achten, dass jede Rechnung mit „sachlich und rechnerisch richtig“ unterzeichnet ist.
+    Die Rechnungen werden ab 01.04.24 direkt von der Bibliothek gebucht und auch dort abgelegt.
+    Es ist zwingend darauf zu achten, dass jede Rechnung mit „sachlich und rechnerisch richtig“ unterzeichnet ist.
 
-      "Aus dem Open-Access-Fonds kann hier weiterhin eine Unterstützung mit maximal 2.000 Euro pro Artikel erfolgen.
-      Jedoch kann diese Finanzierung auf Empfehlung des Beirats der Universitätsbibliothek **nun auch anteilig erfolgen, d.h. die Publikationsgebühr darf über diesem Betrag liegen**.
-      Für den darüber hinausgehenden Anteil müssen die Autorinnen und Autoren eine andere Finanzierung angeben.
-      Unverändert bleibt, dass aus dem Open-Access-Fonds nur Beiträge gefördert werden, die in “echten“ Open-Access-Zeitschriften erscheinen, deren Beiträge sämtlich unmittelbar mit Erscheinen open access zugänglich sind.
-      Eine Doppelfinanzierung von Zeitschriften durch Publikationsgebühren und Abo-Gebühren möchten wir nicht unterstützen."
+    "Aus dem Open-Access-Fonds kann hier weiterhin eine Unterstützung mit maximal 2.000 Euro pro Artikel erfolgen.
+    Jedoch kann diese Finanzierung auf Empfehlung des Beirats der Universitätsbibliothek **nun auch anteilig erfolgen, d.h. die Publikationsgebühr darf über diesem Betrag liegen**.
+    Für den darüber hinausgehenden Anteil müssen die Autorinnen und Autoren eine andere Finanzierung angeben.
+    Unverändert bleibt, dass aus dem Open-Access-Fonds nur Beiträge gefördert werden, die in “echten“ Open-Access-Zeitschriften erscheinen, deren Beiträge sämtlich unmittelbar mit Erscheinen open access zugänglich sind.
+    Eine Doppelfinanzierung von Zeitschriften durch Publikationsgebühren und Abo-Gebühren möchten wir nicht unterstützen."
 
-      [Open-Access Fonds](https://www.uni-bamberg.de/ub/forschen-und-publizieren/open-access-publizieren/foerderung-oa-artikel/){target=_blank}
+    [Open-Access Fonds](https://www.uni-bamberg.de/ub/forschen-und-publizieren/open-access-publizieren/foerderung-oa-artikel/){target=_blank}
 -->
 </section>
 <section id="authors-with-first-time-publication" class="level2">
@@ -1112,8 +1118,10 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <li><a href="https://orcid.org/" target="_blank">ORCID</a> (if the publisher has not added the publication)</li>
 <li><a href="https://scholar.google.com/" target="_blank">GoogleScholar</a> / My profile / Add article manually</li>
 <li><a href="https://www.researchgate.net/" target="_blank">ResearchGate</a></li>
-<li>CV <!-- - Website --></li>
+<li>CV</li>
+<li>Share publication details with department assistant</li>
 </ul>
+<!-- - Website -->
 <p>Add PDF to</p>
 <ul>
 <li>Nextcloud <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1069286?dir=/research/publications" target="_blank">publications</a></li>
