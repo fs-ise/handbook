@@ -22,12 +22,16 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
+          version: "1.9.38"
           tinytex: false
+
+      - name: Install Chrome Headless Shell
+        run: quarto install chrome-headless-shell --no-prompt
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install Python deps
         run: |
@@ -35,6 +39,7 @@ jobs:
           pip install nbformat jupyter pandas matplotlib
 
       - name: Render site
+        timeout-minutes: 30
         run: |
           quarto render
 
