@@ -99,6 +99,37 @@ Navigation is updated in `_quarto.yml`.
 
 :::
 
+::: {.callout-note title="Mermaid diagrams" collapse=true}
+Use Quarto's default Mermaid rendering for visible diagrams.
+Do not set `mermaid-format: svg` globally in `_quarto.yml`,
+because global SVG rendering can add fixed heights
+and excessive whitespace to shallow diagrams.
+
+Use pre-generated SVG only for Mermaid diagrams inside collapsed callouts.
+JavaScript rendering can calculate incorrect dimensions
+when the containing callout is hidden during page load.
+Add the cell option immediately after the Mermaid fence.
+
+````markdown
+```{mermaid}
+flowchart LR
+  A[Visible diagram] --> B[Default rendering]
+```
+````
+
+````markdown
+::: {.callout-note collapse="true"}
+## Details
+
+```{mermaid}
+%%| mermaid-format: svg
+flowchart LR
+  A[Hidden at load] --> B[Pre-generated SVG]
+```
+:::
+````
+:::
+
 - **Terminology**:
 
 | Preferred term     | Not this        |
