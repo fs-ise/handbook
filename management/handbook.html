@@ -128,17 +128,20 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../site_libs/quarto-diagram/mermaid-postprocess-shim.js"></script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -152,15 +155,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1227,6 +1230,36 @@ Important
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mermaid diagrams">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Mermaid diagrams
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use Quarto’s default Mermaid rendering for visible diagrams. Do not set <code>mermaid-format: svg</code> globally in <code>_quarto.yml</code>, because global SVG rendering can add fixed heights and excessive whitespace to shallow diagrams.</p>
+<p>Use pre-generated SVG only for Mermaid diagrams inside collapsed callouts. JavaScript rendering can calculate incorrect dimensions when the containing callout is hidden during page load. Add the cell option immediately after the Mermaid fence.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  A[Visible diagram] --&gt; B[Default rendering]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Details</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>%%| mermaid-<span class="fu">format</span>: svg</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  A[Hidden at load] --&gt; B[Pre-generated SVG]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Terminology</strong>:</li>
 </ul>
@@ -1284,114 +1317,21 @@ Important
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<svg id="mermaid-figure-1" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="flowchart" viewbox="0 0 626.2109375 774.46875" role="graphics-document document" aria-roledescription="flowchart-v2" height="480">
-<style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-1 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#666;stroke:#666;}#mermaid-figure-1 .marker.cross{stroke:#666;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 p{margin:0;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-figure-1 .cluster-label text{fill:#333;}#mermaid-figure-1 .cluster-label span{color:#333;}#mermaid-figure-1 .cluster-label span p{background-color:transparent;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#000000;color:#000000;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-figure-1 .rough-node .label text,#mermaid-figure-1 .node .label text,#mermaid-figure-1 .image-shape .label,#mermaid-figure-1 .icon-shape .label{text-anchor:middle;}#mermaid-figure-1 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-1 .rough-node .label,#mermaid-figure-1 .node .label,#mermaid-figure-1 .image-shape .label,#mermaid-figure-1 .icon-shape .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .root .anchor path{fill:#666!important;stroke-width:0;stroke:#666;}#mermaid-figure-1 .arrowheadPath{fill:#333333;}#mermaid-figure-1 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#666;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:white;text-align:center;}#mermaid-figure-1 .edgeLabel p{background-color:white;}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-1 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-figure-1 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:#333;}#mermaid-figure-1 .cluster span{color:#333;}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-figure-1 rect.text{fill:none;stroke-width:0;}#mermaid-figure-1 .icon-shape,#mermaid-figure-1 .image-shape{background-color:white;text-align:center;}#mermaid-figure-1 .icon-shape p,#mermaid-figure-1 .image-shape p{background-color:white;padding:2px;}#mermaid-figure-1 .icon-shape rect,#mermaid-figure-1 .image-shape rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-1 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-1 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker id="mermaid-1784098244808_flowchart-v2-pointEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098244808_flowchart-v2-pointStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="4.5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098244808_flowchart-v2-circleEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="11" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098244808_flowchart-v2-circleStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="-1" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098244808_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="12" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098244808_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="-1" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"><g class="cluster" id="HB" data-look="classic"><rect style="" x="8" y="186" width="610.2109375" height="476.46875"></rect><g class="cluster-label" transform="translate(239.28515625, 186)"><foreignobject width="147.640625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Handbook repository
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="cluster" id="GH" data-look="classic"><rect style="" x="177.97265625" y="8" width="286.5" height="128"></rect><g class="cluster-label" transform="translate(268.30859375, 8)"><foreignobject width="105.828125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-GitHub Actions
-</p>
-</span>
-</div>
-</foreignobject></g></g></g><g class="edgePaths"><path d="M321.223,111L321.223,115.167C321.223,119.333,321.223,127.667,321.223,136C321.223,144.333,321.223,152.667,321.223,161C321.223,169.333,321.223,177.667,321.223,185.333C321.223,193,321.223,200,321.223,203.5L321.223,207" id="L_A_SCAN_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_A_SCAN_0" data-points="W3sieCI6MzIxLjIyMjY1NjI1LCJ5IjoxMTF9LHsieCI6MzIxLjIyMjY1NjI1LCJ5IjoxMzZ9LHsieCI6MzIxLjIyMjY1NjI1LCJ5IjoxNjF9LHsieCI6MzIxLjIyMjY1NjI1LCJ5IjoxODZ9LHsieCI6MzIxLjIyMjY1NjI1LCJ5IjoyMTF9XQ==" marker-end="url(#mermaid-1784098244808_flowchart-v2-pointEnd)"></path><path d="M321.223,289L321.223,293.167C321.223,297.333,321.223,305.667,321.223,313.333C321.223,321,321.223,328,321.223,331.5L321.223,335" id="L_SCAN_SPLIT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_SCAN_SPLIT_0" data-points="W3sieCI6MzIxLjIyMjY1NjI1LCJ5IjoyODl9LHsieCI6MzIxLjIyMjY1NjI1LCJ5IjozMTR9LHsieCI6MzIxLjIyMjY1NjI1LCJ5IjozMzl9XQ==" marker-end="url(#mermaid-1784098244808_flowchart-v2-pointEnd)"></path><path d="M278.86,443.106L260.708,456.333C242.557,469.56,206.255,496.014,188.104,514.742C169.953,533.469,169.953,544.469,169.953,549.969L169.953,555.469" id="L_SPLIT_INT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_SPLIT_INT_0" data-points="W3sieCI6Mjc4Ljg1OTUwNDgyOTA1NzQsInkiOjQ0My4xMDU1OTg1NzkwNTc0fSx7IngiOjE2OS45NTMxMjUsInkiOjUyMi40Njg3NX0seyJ4IjoxNjkuOTUzMTI1LCJ5Ijo1NTkuNDY4NzV9XQ==" marker-end="url(#mermaid-1784098244808_flowchart-v2-pointEnd)"></path><path d="M363.586,443.106L381.737,456.333C399.888,469.56,436.19,496.014,454.341,514.742C472.492,533.469,472.492,544.469,472.492,549.969L472.492,555.469" id="L_SPLIT_EXT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_SPLIT_EXT_0" data-points="W3sieCI6MzYzLjU4NTgwNzY3MDk0MjYsInkiOjQ0My4xMDU1OTg1NzkwNTc0fSx7IngiOjQ3Mi40OTIxODc1LCJ5Ijo1MjIuNDY4NzV9LHsieCI6NDcyLjQ5MjE4NzUsInkiOjU1OS40Njg3NX1d" marker-end="url(#mermaid-1784098244808_flowchart-v2-pointEnd)"></path><path d="M169.953,637.469L169.953,641.635C169.953,645.802,169.953,654.135,169.953,662.469C169.953,670.802,169.953,679.135,169.953,686.802C169.953,694.469,169.953,701.469,169.953,704.969L169.953,708.469" id="L_INT_R1_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_INT_R1_0" data-points="W3sieCI6MTY5Ljk1MzEyNSwieSI6NjM3LjQ2ODc1fSx7IngiOjE2OS45NTMxMjUsInkiOjY2Mi40Njg3NX0seyJ4IjoxNjkuOTUzMTI1LCJ5Ijo2ODcuNDY4NzV9LHsieCI6MTY5Ljk1MzEyNSwieSI6NzEyLjQ2ODc1fV0=" marker-end="url(#mermaid-1784098244808_flowchart-v2-pointEnd)"></path><path d="M472.492,637.469L472.492,641.635C472.492,645.802,472.492,654.135,472.492,662.469C472.492,670.802,472.492,679.135,472.492,686.802C472.492,694.469,472.492,701.469,472.492,704.969L472.492,708.469" id="L_EXT_R2_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_EXT_R2_0" data-points="W3sieCI6NDcyLjQ5MjE4NzUsInkiOjYzNy40Njg3NX0seyJ4Ijo0NzIuNDkyMTg3NSwieSI6NjYyLjQ2ODc1fSx7IngiOjQ3Mi40OTIxODc1LCJ5Ijo2ODcuNDY4NzV9LHsieCI6NDcyLjQ5MjE4NzUsInkiOjcxMi40Njg3NX1d" marker-end="url(#mermaid-1784098244808_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_A_SCAN_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_SCAN_SPLIT_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel" transform="translate(169.953125, 522.46875)"><g class="label" data-id="L_SPLIT_INT_0" transform="translate(-44.9140625, -12)"><foreignobject width="89.828125" height="24">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel">
-<p>
-Internal links
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="edgeLabel" transform="translate(472.4921875, 522.46875)"><g class="label" data-id="L_SPLIT_EXT_0" transform="translate(-47.578125, -12)"><foreignobject width="95.15625" height="24">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel">
-<p>
-External links
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_INT_R1_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_EXT_R2_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-0" transform="translate(321.22265625, 72)"><rect class="basic label-container" style="" x="-108.25" y="-39" width="216.5" height="78"></rect><g class="label" style="" transform="translate(-78.25, -24)"><rect></rect><foreignobject width="156.5" height="48">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Link checker workflow<br>Cronjob
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-SCAN-2" transform="translate(321.22265625, 250)"><rect class="basic label-container" style="" x="-119.8515625" y="-39" width="239.703125" height="78"></rect><g class="label" style="" transform="translate(-89.8515625, -24)"><rect></rect><foreignobject width="179.703125" height="48">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Scan all handbook pages<br>Extract links
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-SPLIT-4" transform="translate(321.22265625, 412.234375)"><polygon points="73.234375,0 146.46875,-73.234375 73.234375,-146.46875 0,-73.234375" class="label-container" transform="translate(-72.734375, 73.234375)"></polygon><g class="label" style="" transform="translate(-46.234375, -12)"><rect></rect><foreignobject width="92.46875" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Classify links
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-INT-6" transform="translate(169.953125, 598.46875)"><rect class="basic label-container" style="" x="-126.953125" y="-39" width="253.90625" height="78"></rect><g class="label" style="" transform="translate(-96.953125, -24)"><rect></rect><foreignobject width="193.90625" height="48">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Check internal links<br>Relative paths and anchors
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-EXT-8" transform="translate(472.4921875, 598.46875)"><rect class="basic label-container" style="" x="-101.5859375" y="-39" width="203.171875" height="78"></rect><g class="label" style="" transform="translate(-71.5859375, -24)"><rect></rect><foreignobject width="143.171875" height="48">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Check external links<br>Based on <a href="https://github.com/lycheeverse/lychee" rel="noopener" target="_blank">lychee</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-R1-10" transform="translate(169.953125, 739.46875)"><rect class="basic label-container" style="" x="-125.15625" y="-27" width="250.3125" height="54"></rect><g class="label" style="" transform="translate(-95.15625, -12)"><rect></rect><foreignobject width="190.3125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="https://github.com/fs-ise/handbook/issues/5" rel="noopener" target="_blank">Broken internal links report</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-R2-12" transform="translate(472.4921875, 739.46875)"><rect class="basic label-container" style="" x="-127.3828125" y="-27" width="254.765625" height="54"></rect><g class="label" style="" transform="translate(-97.3828125, -12)"><rect></rect><foreignobject width="194.765625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="https://github.com/fs-ise/handbook/issues/4" rel="noopener" target="_blank">Broken external links report</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g></g></g></g>
-</svg>
+<pre class="mermaid mermaid-js">flowchart TD
+  subgraph GH[GitHub Actions]
+    A[Link checker workflow&lt;/br&gt;Cronjob]
+  end
+
+  subgraph HB[Handbook repository]
+    A --&gt; SCAN[Scan all handbook pages&lt;br&gt;Extract links]
+    SCAN --&gt; SPLIT{Classify links}
+    SPLIT --&gt;|Internal links| INT[Check internal links&lt;/br&gt;Relative paths and anchors]
+    SPLIT --&gt;|External links| EXT["Check external links&lt;/br&gt;Based on &lt;a href='https://github.com/lycheeverse/lychee' target='_blank'&gt;lychee&lt;/a&gt;"]
+  end
+
+  INT --&gt; R1["&lt;a href='https://github.com/fs-ise/handbook/issues/5' target='_blank'&gt;Broken internal links report&lt;/a&gt;"]
+  EXT --&gt; R2["&lt;a href='https://github.com/fs-ise/handbook/issues/4' target='_blank'&gt;Broken external links report&lt;/a&gt;"]
+</pre>
 </div>
 <p></p></figure><p></p>
 </div>
@@ -1413,146 +1353,32 @@ Check external links<br>Based on <a href="https://github.com/lycheeverse/lychee"
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<svg id="mermaid-figure-2" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="flowchart" viewbox="0 0 1221.9375 552" role="graphics-document document" aria-roledescription="flowchart-v2" height="480">
-<style>#mermaid-figure-2{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-2 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-2 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-2 .error-icon{fill:#552222;}#mermaid-figure-2 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-2 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#666;stroke:#666;}#mermaid-figure-2 .marker.cross{stroke:#666;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-2 p{margin:0;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-figure-2 .cluster-label text{fill:#333;}#mermaid-figure-2 .cluster-label span{color:#333;}#mermaid-figure-2 .cluster-label span p{background-color:transparent;}#mermaid-figure-2 .label text,#mermaid-figure-2 span{fill:#000000;color:#000000;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-figure-2 .rough-node .label text,#mermaid-figure-2 .node .label text,#mermaid-figure-2 .image-shape .label,#mermaid-figure-2 .icon-shape .label{text-anchor:middle;}#mermaid-figure-2 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-2 .rough-node .label,#mermaid-figure-2 .node .label,#mermaid-figure-2 .image-shape .label,#mermaid-figure-2 .icon-shape .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .root .anchor path{fill:#666!important;stroke-width:0;stroke:#666;}#mermaid-figure-2 .arrowheadPath{fill:#333333;}#mermaid-figure-2 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:#666;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:white;text-align:center;}#mermaid-figure-2 .edgeLabel p{background-color:white;}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-2 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-figure-2 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:#333;}#mermaid-figure-2 .cluster span{color:#333;}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-figure-2 rect.text{fill:none;stroke-width:0;}#mermaid-figure-2 .icon-shape,#mermaid-figure-2 .image-shape{background-color:white;text-align:center;}#mermaid-figure-2 .icon-shape p,#mermaid-figure-2 .image-shape p{background-color:white;padding:2px;}#mermaid-figure-2 .icon-shape rect,#mermaid-figure-2 .image-shape rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-2 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-2 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker id="mermaid-1784098245111_flowchart-v2-pointEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098245111_flowchart-v2-pointStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="4.5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098245111_flowchart-v2-circleEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="11" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098245111_flowchart-v2-circleStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="-1" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098245111_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="12" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098245111_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="-1" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"><g class="cluster" id="SCRIPTS" data-look="classic"><rect style="" x="8" y="162" width="1205.9375" height="104"></rect><g class="cluster-label" transform="translate(572.7421875, 162)"><foreignobject width="76.453125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-src/ scripts
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="cluster" id="RUN" data-look="classic"><rect style="" x="99.50390625" y="8" width="1098.86328125" height="104"></rect><g class="cluster-label" transform="translate(569.333984375, 8)"><foreignobject width="159.203125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-GitHub-hosted Actions
-</p>
-</span>
-</div>
-</foreignobject></g></g></g><g class="edgePaths"><path d="M492.871,70.043L436.383,77.036C379.896,84.029,266.921,98.014,210.433,109.174C153.945,120.333,153.945,128.667,153.945,137C153.945,145.333,153.945,153.667,153.945,161.333C153.945,169,153.945,176,153.945,179.5L153.945,183" id="L_WR_R1_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_WR_R1_0" data-points="W3sieCI6NDkyLjg3MTA5Mzc1LCJ5Ijo3MC4wNDI4MzMzNjI3ODE2Nn0seyJ4IjoxNTMuOTQ1MzEyNSwieSI6MTEyfSx7IngiOjE1My45NDUzMTI1LCJ5IjoxMzd9LHsieCI6MTUzLjk0NTMxMjUsInkiOjE2Mn0seyJ4IjoxNTMuOTQ1MzEyNSwieSI6MTg3fV0=" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M505.606,87L495.052,91.167C484.498,95.333,463.389,103.667,452.835,112C442.281,120.333,442.281,128.667,442.281,137C442.281,145.333,442.281,153.667,442.281,161.333C442.281,169,442.281,176,442.281,179.5L442.281,183" id="L_WR_R2_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_WR_R2_0" data-points="W3sieCI6NTA1LjYwNTY5NDExMDU3NjksInkiOjg3fSx7IngiOjQ0Mi4yODEyNSwieSI6MTEyfSx7IngiOjQ0Mi4yODEyNSwieSI6MTM3fSx7IngiOjQ0Mi4yODEyNSwieSI6MTYyfSx7IngiOjQ0Mi4yODEyNSwieSI6MTg3fV0=" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M642.386,87L652.941,91.167C663.495,95.333,684.603,103.667,695.157,112C705.711,120.333,705.711,128.667,705.711,137C705.711,145.333,705.711,153.667,705.711,161.333C705.711,169,705.711,176,705.711,179.5L705.711,183" id="L_WR_R3_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_WR_R3_0" data-points="W3sieCI6NjQyLjM4NjQ5MzM4OTQyMzEsInkiOjg3fSx7IngiOjcwNS43MTA5Mzc1LCJ5IjoxMTJ9LHsieCI6NzA1LjcxMDkzNzUsInkiOjEzN30seyJ4Ijo3MDUuNzEwOTM3NSwieSI6MTYyfSx7IngiOjcwNS43MTA5Mzc1LCJ5IjoxODd9XQ==" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M655.121,73.857L692.338,80.214C729.555,86.571,803.988,99.286,841.205,109.81C878.422,120.333,878.422,128.667,878.422,137C878.422,145.333,878.422,153.667,878.422,161.333C878.422,169,878.422,176,878.422,179.5L878.422,183" id="L_WR_R4_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_WR_R4_0" data-points="W3sieCI6NjU1LjEyMTA5Mzc1LCJ5Ijo3My44NTcyMzYzNDQwMzkxMX0seyJ4Ijo4NzguNDIxODc1LCJ5IjoxMTJ9LHsieCI6ODc4LjQyMTg3NSwieSI6MTM3fSx7IngiOjg3OC40MjE4NzUsInkiOjE2Mn0seyJ4Ijo4NzguNDIxODc1LCJ5IjoxODd9XQ==" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M1072.016,87L1072.016,91.167C1072.016,95.333,1072.016,103.667,1072.016,112C1072.016,120.333,1072.016,128.667,1072.016,137C1072.016,145.333,1072.016,153.667,1072.016,161.333C1072.016,169,1072.016,176,1072.016,179.5L1072.016,183" id="L_MR_R5_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_MR_R5_0" data-points="W3sieCI6MTA3Mi4wMTU2MjUsInkiOjg3fSx7IngiOjEwNzIuMDE1NjI1LCJ5IjoxMTJ9LHsieCI6MTA3Mi4wMTU2MjUsInkiOjEzN30seyJ4IjoxMDcyLjAxNTYyNSwieSI6MTYyfSx7IngiOjEwNzIuMDE1NjI1LCJ5IjoxODd9XQ==" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M153.945,241L153.945,245.167C153.945,249.333,153.945,257.667,153.945,266C153.945,274.333,153.945,282.667,215.669,302.801C277.393,322.935,400.84,354.869,462.564,370.836L524.288,386.804" id="L_R1_OUT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R1_OUT_0" data-points="W3sieCI6MTUzLjk0NTMxMjUsInkiOjI0MX0seyJ4IjoxNTMuOTQ1MzEyNSwieSI6MjY2fSx7IngiOjE1My45NDUzMTI1LCJ5IjoyOTF9LHsieCI6NTI4LjE2MDE1NjI1LCJ5IjozODcuODA1MzU3ODU2ODU3MjZ9XQ==" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M442.281,241L442.281,245.167C442.281,249.333,442.281,257.667,442.281,266C442.281,274.333,442.281,282.667,456.012,294.499C469.743,306.331,497.205,321.662,510.936,329.327L524.668,336.993" id="L_R2_OUT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R2_OUT_0" data-points="W3sieCI6NDQyLjI4MTI1LCJ5IjoyNDF9LHsieCI6NDQyLjI4MTI1LCJ5IjoyNjZ9LHsieCI6NDQyLjI4MTI1LCJ5IjoyOTF9LHsieCI6NTI4LjE2MDE1NjI1LCJ5IjozMzguOTQyNjg5OTQ4Mzg0OX1d" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M705.711,241L705.711,245.167C705.711,249.333,705.711,257.667,705.711,266C705.711,274.333,705.711,282.667,705.347,290.337C704.983,298.007,704.255,305.014,703.891,308.518L703.527,312.021" id="L_R3_OUT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R3_OUT_0" data-points="W3sieCI6NzA1LjcxMDkzNzUsInkiOjI0MX0seyJ4Ijo3MDUuNzEwOTM3NSwieSI6MjY2fSx7IngiOjcwNS43MTA5Mzc1LCJ5IjoyOTF9LHsieCI6NzAzLjExMzU2MjI3NTE3OTksInkiOjMxNn1d" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M878.422,241L878.422,245.167C878.422,249.333,878.422,257.667,878.422,266C878.422,274.333,878.422,282.667,873.347,290.603C868.272,298.538,858.122,306.077,853.047,309.846L847.973,313.615" id="L_R4_OUT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R4_OUT_0" data-points="W3sieCI6ODc4LjQyMTg3NSwieSI6MjQxfSx7IngiOjg3OC40MjE4NzUsInkiOjI2Nn0seyJ4Ijo4NzguNDIxODc1LCJ5IjoyOTF9LHsieCI6ODQ0Ljc2MTM4MTUxOTc4NDIsInkiOjMxNn1d" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path><path d="M1072.016,241L1072.016,245.167C1072.016,249.333,1072.016,257.667,1072.016,266C1072.016,274.333,1072.016,282.667,1036.369,299.847C1000.723,317.027,929.429,343.054,893.783,356.068L858.136,369.081" id="L_R5_OUT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R5_OUT_0" data-points="W3sieCI6MTA3Mi4wMTU2MjUsInkiOjI0MX0seyJ4IjoxMDcyLjAxNTYyNSwieSI6MjY2fSx7IngiOjEwNzIuMDE1NjI1LCJ5IjoyOTF9LHsieCI6ODU0LjM3ODkwNjI1LCJ5IjozNzAuNDUzMjIxOTgzOTc0NzR9XQ==" marker-end="url(#mermaid-1784098245111_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_WR_R1_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_WR_R2_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_WR_R3_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_WR_R4_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_MR_R5_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_R1_OUT_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_R2_OUT_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_R3_OUT_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_R4_OUT_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_R5_OUT_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g></g><g class="nodes"><g class="root" transform="translate(520.16015625, 308)"><g class="clusters"><g class="cluster" id="OUT" data-look="classic"><rect style="" x="8" y="8" width="326.21875" height="228"></rect><g class="cluster-label" transform="translate(106.171875, 8)"><foreignobject width="129.875" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Handbook outputs
-</p>
-</span>
-</div>
-</foreignobject></g></g></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g class="node default" id="flowchart-O1-7" transform="translate(171.109375, 70)"><rect class="basic label-container" style="" x="-117.1875" y="-27" width="234.375" height="54"></rect><g class="label" style="" transform="translate(-87.1875, -12)"><rect></rect><foreignobject width="174.375" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Pages and data updated
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-O2-8" transform="translate(171.109375, 174)"><rect class="basic label-container" style="" x="-125.609375" y="-27" width="251.21875" height="54"></rect><g class="label" style="" transform="translate(-95.609375, -12)"><rect></rect><foreignobject width="191.21875" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-assets/reports regenerated
-</p>
-</span>
-</div>
-</foreignobject></g></g></g></g><g class="node default" id="flowchart-WR-0" transform="translate(573.99609375, 60)"><rect class="basic label-container" style="" x="-81.125" y="-27" width="162.25" height="54"></rect><g class="label" style="" transform="translate(-51.125, -12)"><rect></rect><foreignobject width="102.25" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Daily workflow
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-MR-1" transform="translate(1072.015625, 60)"><rect class="basic label-container" style="" x="-91.3515625" y="-27" width="182.703125" height="54"></rect><g class="label" style="" transform="translate(-61.3515625, -12)"><rect></rect><foreignobject width="122.703125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Monthly workflow
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-R1-2" transform="translate(153.9453125, 214)"><rect class="basic label-container" style="" x="-110.9453125" y="-27" width="221.890625" height="54"></rect><g class="label" style="" transform="translate(-80.9453125, -12)"><rect></rect><foreignobject width="161.890625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-update_repositories.py
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-R2-3" transform="translate(442.28125, 214)"><rect class="basic label-container" style="" x="-127.390625" y="-27" width="254.78125" height="54"></rect><g class="label" style="" transform="translate(-97.390625, -12)"><rect></rect><foreignobject width="194.78125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-generate-projects-pages.py
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-R3-4" transform="translate(705.7109375, 214)"><rect class="basic label-container" style="" x="-86.0390625" y="-27" width="172.078125" height="54"></rect><g class="label" style="" transform="translate(-56.0390625, -12)"><rect></rect><foreignobject width="112.078125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-update_talks.py
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-R4-5" transform="translate(878.421875, 214)"><rect class="basic label-container" style="" x="-36.671875" y="-27" width="73.34375" height="54"></rect><g class="label" style="" transform="translate(-6.671875, -12)"><rect></rect><foreignobject width="13.34375" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-…
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-R5-6" transform="translate(1072.015625, 214)"><rect class="basic label-container" style="" x="-106.921875" y="-27" width="213.84375" height="54"></rect><g class="label" style="" transform="translate(-76.921875, -12)"><rect></rect><foreignobject width="153.84375" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-research_statistics.py
-</p>
-</span>
-</div>
-</foreignobject></g></g></g></g></g>
-</svg>
+<pre class="mermaid mermaid-js">flowchart TD
+
+  subgraph RUN[GitHub-hosted Actions]
+    WR[Daily workflow]
+    MR[Monthly workflow]
+  end
+
+  subgraph SCRIPTS[src/ scripts]
+    R1[update_repositories.py]
+    R2[generate-projects-pages.py]
+    R3[update_talks.py]
+    R4[...]
+    R5[research_statistics.py]
+  end
+
+  subgraph OUT[Handbook outputs]
+    O1[Pages and data updated]
+    O2[assets/reports regenerated]
+  end
+
+  WR --&gt; R1 --&gt; OUT
+  WR --&gt; R2 --&gt; OUT
+  WR --&gt; R3 --&gt; OUT
+  WR --&gt; R4 --&gt; OUT
+  MR --&gt; R5 --&gt; OUT
+</pre>
 </div>
 <p></p></figure><p></p>
 </div>

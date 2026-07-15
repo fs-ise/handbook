@@ -72,8 +72,22 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../site_libs/quarto-diagram/mermaid-postprocess-shim.js"></script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -94,17 +108,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -1051,214 +1054,73 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<svg id="mermaid-figure-1" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="flowchart" viewbox="0 0 1642.34375 949" role="graphics-document document" aria-roledescription="flowchart-v2" height="480">
-<style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-1 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#666;stroke:#666;}#mermaid-figure-1 .marker.cross{stroke:#666;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 p{margin:0;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-figure-1 .cluster-label text{fill:#333;}#mermaid-figure-1 .cluster-label span{color:#333;}#mermaid-figure-1 .cluster-label span p{background-color:transparent;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#000000;color:#000000;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-figure-1 .rough-node .label text,#mermaid-figure-1 .node .label text,#mermaid-figure-1 .image-shape .label,#mermaid-figure-1 .icon-shape .label{text-anchor:middle;}#mermaid-figure-1 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-1 .rough-node .label,#mermaid-figure-1 .node .label,#mermaid-figure-1 .image-shape .label,#mermaid-figure-1 .icon-shape .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .root .anchor path{fill:#666!important;stroke-width:0;stroke:#666;}#mermaid-figure-1 .arrowheadPath{fill:#333333;}#mermaid-figure-1 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#666;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:white;text-align:center;}#mermaid-figure-1 .edgeLabel p{background-color:white;}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-1 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-figure-1 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:#333;}#mermaid-figure-1 .cluster span{color:#333;}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-figure-1 rect.text{fill:none;stroke-width:0;}#mermaid-figure-1 .icon-shape,#mermaid-figure-1 .image-shape{background-color:white;text-align:center;}#mermaid-figure-1 .icon-shape p,#mermaid-figure-1 .image-shape p{background-color:white;padding:2px;}#mermaid-figure-1 .icon-shape rect,#mermaid-figure-1 .image-shape rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-1 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-1 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker id="mermaid-1784098225708_flowchart-v2-pointEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098225708_flowchart-v2-pointStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="4.5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098225708_flowchart-v2-circleEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="11" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098225708_flowchart-v2-circleStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="-1" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098225708_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="12" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098225708_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="-1" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"><g class="cluster" id="Github_Sphere" data-look="classic"><rect style="" x="370.296875" y="8" width="1264.046875" height="769"></rect><g class="cluster-label" transform="translate(977.421875, 8)"><foreignobject width="49.796875" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-GitHub
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="cluster" id="Execution_Layer" data-look="classic"><rect style="" x="929.109375" y="276" width="680.234375" height="276"></rect><g class="cluster-label" transform="translate(1202.75, 276)"><foreignobject width="132.953125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-execution-layer <a href="#execution-layer">🔗</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="cluster" id="Knowledge_Layer" data-look="classic"><rect style="" x="929.109375" y="28" width="395.828125" height="228"></rect><g class="cluster-label" transform="translate(1056.546875, 28)"><foreignobject width="140.953125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-knowledge-layer <a href="#knowledge-layer">🔗</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="cluster" id="Coordination_Layer" data-look="classic"><rect style="" x="666.90625" y="572" width="658.03125" height="185"></rect><g class="cluster-label" transform="translate(920.109375, 572)"><foreignobject width="151.625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-coordination-layer <a href="#coordination-layer">🔗</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g></g><g class="edgePaths"><path d="M829.983,638L842.338,630.5C854.692,623,879.401,608,895.922,600.5C912.443,593,920.776,593,955.914,514.287C991.051,435.574,1052.993,278.148,1083.964,199.435L1114.935,120.722" id="L_Handbook_ResearchHub_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Handbook_ResearchHub_0" data-points="W3sieCI6ODI5Ljk4MzM5ODQzNzUsInkiOjYzOH0seyJ4Ijo5MDQuMTA5Mzc1LCJ5Ijo1OTN9LHsieCI6OTI5LjEwOTM3NSwieSI6NTkzfSx7IngiOjExMTYuMzk5ODE5ODMxMDE0LCJ5IjoxMTd9XQ==" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M847.089,638L856.593,633.833C866.096,629.667,885.103,621.333,898.773,617.167C912.443,613,920.776,613,955.518,548.269C990.26,483.539,1051.411,354.078,1081.986,289.347L1112.562,224.617" id="L_Handbook_TeachingHub_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Handbook_TeachingHub_0" data-points="W3sieCI6ODQ3LjA4OTM5MzAyODg0NjIsInkiOjYzOH0seyJ4Ijo5MDQuMTA5Mzc1LCJ5Ijo2MTN9LHsieCI6OTI5LjEwOTM3NSwieSI6NjEzfSx7IngiOjExMTQuMjcwMDI1MzU3OTk1MywieSI6MjIxfV0=" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M879.109,689.466L883.276,690.555C887.443,691.644,895.776,693.822,904.109,694.911C912.443,696,920.776,696,957.928,696C995.081,696,1061.052,696,1127.023,696C1192.995,696,1258.966,696,1296.118,647.125C1333.271,598.25,1341.604,500.5,1350.788,449.584C1359.972,398.669,1370.007,394.588,1375.024,392.547L1380.041,390.507" id="L_Handbook_PaperProjects_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Handbook_PaperProjects_0" data-points="W3sieCI6ODc5LjEwOTM3NSwieSI6Njg5LjQ2NTUxNjEwNTY1ODR9LHsieCI6OTA0LjEwOTM3NSwieSI6Njk2fSx7IngiOjkyOS4xMDkzNzUsInkiOjY5Nn0seyJ4IjoxMTI3LjAyMzQzNzUsInkiOjY5Nn0seyJ4IjoxMzI0LjkzNzUsInkiOjY5Nn0seyJ4IjoxMzQ5LjkzNzUsInkiOjQwMi43NX0seyJ4IjoxMzgzLjc0NjM3MTQ0NTQ5NzUsInkiOjM4OX1d" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M848.297,692L857.599,696C866.901,700,885.505,708,898.974,712C912.443,716,920.776,716,957.928,716C995.081,716,1061.052,716,1127.023,716C1192.995,716,1258.966,716,1296.118,680.833C1333.271,645.667,1341.604,575.333,1349.432,539.405C1357.26,503.476,1364.582,501.951,1368.243,501.189L1371.904,500.427" id="L_Handbook_LectureRepos_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Handbook_LectureRepos_0" data-points="W3sieCI6ODQ4LjI5Njg3NSwieSI6NjkyfSx7IngiOjkwNC4xMDkzNzUsInkiOjcxNn0seyJ4Ijo5MjkuMTA5Mzc1LCJ5Ijo3MTZ9LHsieCI6MTEyNy4wMjM0Mzc1LCJ5Ijo3MTZ9LHsieCI6MTMyNC45Mzc1LCJ5Ijo3MTZ9LHsieCI6MTM0OS45Mzc1LCJ5Ijo1MDV9LHsieCI6MTM3NS44MjAzMTI1LCJ5Ijo0OTkuNjEyMDM0Njk0NjE1MX1d" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M879.109,640.534L883.276,639.445C887.443,638.356,895.776,636.178,904.109,635.089C912.443,634,920.776,634,941.885,634C962.995,634,996.88,634,1013.823,634L1030.766,634" id="L_Handbook_Agenda_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Handbook_Agenda_0" data-points="W3sieCI6ODc5LjEwOTM3NSwieSI6NjQwLjUzNDQ4Mzg5NDM0MTZ9LHsieCI6OTA0LjEwOTM3NSwieSI6NjM0fSx7IngiOjkyOS4xMDkzNzUsInkiOjYzNH0seyJ4IjoxMDM0Ljc2NTYyNSwieSI6NjM0fV0=" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M1212.522,377.25L1231.258,371.333C1249.994,365.417,1287.466,353.583,1310.368,347.667C1333.271,341.75,1341.604,341.75,1349.938,342.015C1358.271,342.28,1366.604,342.81,1370.771,343.075L1374.938,343.34" id="L_Templates_PaperProjects_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Templates_PaperProjects_0" data-points="W3sieCI6MTIxMi41MjIzMTI1LCJ5IjozNzcuMjV9LHsieCI6MTMyNC45Mzc1LCJ5IjozNDEuNzV9LHsieCI6MTM0OS45Mzc1LCJ5IjozNDEuNzV9LHsieCI6MTM3NC45Mzc1LCJ5IjozNDMuMzQwMTY5ODU5MDUzMX1d"></path><path d="M1220.164,429.545L1237.626,434.288C1255.089,439.03,1290.013,448.515,1311.642,453.258C1333.271,458,1341.604,458,1350.085,458.665C1358.565,459.33,1367.193,460.661,1371.507,461.326L1375.82,461.991" id="L_Templates_LectureRepos_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Templates_LectureRepos_0" data-points="W3sieCI6MTIyMC4xNjQwNjI1LCJ5Ijo0MjkuNTQ1MzY1NzI4NDk2NDV9LHsieCI6MTMyNC45Mzc1LCJ5Ijo0NTh9LHsieCI6MTM0OS45Mzc1LCJ5Ijo0NTh9LHsieCI6MTM3NS44MjAzMTI1LCJ5Ijo0NjEuOTkxMDg1NDExMzk2Mn1d"></path><path d="M1239.727,90L1253.928,90C1268.13,90,1296.534,90,1314.902,128.625C1333.271,167.25,1341.604,244.5,1349.286,283.891C1356.968,323.281,1363.999,324.813,1367.514,325.578L1371.029,326.344" id="L_ResearchHub_PaperProjects_0" class="edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_ResearchHub_PaperProjects_0" data-points="W3sieCI6MTIzNS43MjY1NjI1LCJ5Ijo5MH0seyJ4IjoxMzI0LjkzNzUsInkiOjkwfSx7IngiOjEzNDkuOTM3NSwieSI6MzIxLjc1fSx7IngiOjEzNzQuOTM3NSwieSI6MzI3LjE5NTEyNzA5MzEyMTN9XQ==" marker-start="url(#mermaid-1784098225708_flowchart-v2-pointStart)" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M1238.844,194L1253.193,194C1267.542,194,1296.24,194,1314.755,232.125C1333.271,270.25,1341.604,346.5,1351.515,387.072C1361.427,427.644,1372.916,432.538,1378.661,434.985L1384.405,437.432" id="L_TeachingHub_LectureRepos_0" class="edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_TeachingHub_LectureRepos_0" data-points="W3sieCI6MTIzNC44NDM3NSwieSI6MTk0fSx7IngiOjEzMjQuOTM3NSwieSI6MTk0fSx7IngiOjEzNDkuOTM3NSwieSI6NDIyLjc1fSx7IngiOjEzODguMDg1NDc3OTQxMTc2NiwieSI6NDM5fV0=" marker-start="url(#mermaid-1784098225708_flowchart-v2-pointStart)" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M541,478.5L557.817,509.583C574.635,540.667,608.271,602.833,629.255,633.917C650.24,665,658.573,665,662.74,665L666.906,665" id="L_Automation_Layer_Coordination_Layer_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Automation_Layer_Coordination_Layer_0" data-points="W3sieCI6NTQwLjk5OTU3OTgwNTc3NjksInkiOjQ3OC41fSx7IngiOjY0MS45MDYyNSwieSI6NjY1fSx7IngiOjY2Ni45MDYyNSwieSI6NjY1fSx7IngiOjY5MS45MDYyNSwieSI6NjY1fV0="></path><path d="M533.137,349.5L551.265,306.25C569.393,263,605.65,176.5,627.945,133.25C650.24,90,658.573,90,682.507,90C706.44,90,745.974,90,785.508,90C825.042,90,864.576,90,888.509,90C912.443,90,920.776,90,924.943,90L929.109,90" id="L_Automation_Layer_Knowledge_Layer_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Automation_Layer_Knowledge_Layer_0" data-points="W3sieCI6NTMzLjEzNjc1NDkxODk4MTUsInkiOjM0OS41fSx7IngiOjY0MS45MDYyNSwieSI6OTB9LHsieCI6NjY2LjkwNjI1LCJ5Ijo5MH0seyJ4Ijo3ODUuNTA3ODEyNSwieSI6OTB9LHsieCI6OTA0LjEwOTM3NSwieSI6OTB9LHsieCI6OTI5LjEwOTM3NSwieSI6OTB9LHsieCI6MTAxOC4zMjAzMTI1LCJ5Ijo5MH1d"></path><path d="M616.906,406.045L621.073,405.746C625.24,405.447,633.573,404.848,641.906,404.549C650.24,404.25,658.573,404.25,682.507,404.25C706.44,404.25,745.974,404.25,785.508,404.25C825.042,404.25,864.576,404.25,888.509,404.25C912.443,404.25,920.776,404.25,924.943,404.25L929.109,404.25" id="L_Automation_Layer_Execution_Layer_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Automation_Layer_Execution_Layer_0" data-points="W3sieCI6NjE2LjkwNjI1LCJ5Ijo0MDYuMDQ0ODU3MDQ0MjM4Nn0seyJ4Ijo2NDEuOTA2MjUsInkiOjQwNC4yNX0seyJ4Ijo2NjYuOTA2MjUsInkiOjQwNC4yNX0seyJ4Ijo3ODUuNTA3ODEyNSwieSI6NDA0LjI1fSx7IngiOjkwNC4xMDkzNzUsInkiOjQwNC4yNX0seyJ4Ijo5MjkuMTA5Mzc1LCJ5Ijo0MDQuMjV9LHsieCI6MTAzMy44ODI4MTI1LCJ5Ijo0MDQuMjV9XQ=="></path><path d="M830.61,692L842.86,699.333C855.11,706.667,879.61,721.333,896.026,728.667C912.443,736,920.776,736,942.242,748.281C963.708,760.562,998.306,785.123,1015.605,797.404L1032.904,809.685" id="L_Handbook_Nextcloud_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Handbook_Nextcloud_0" data-points="W3sieCI6ODMwLjYwOTgxNTE0MDg0NTEsInkiOjY5Mn0seyJ4Ijo5MDQuMTA5Mzc1LCJ5Ijo3MzZ9LHsieCI6OTI5LjEwOTM3NSwieSI6NzM2fSx7IngiOjEwMzYuMTY2MDkyMDgxODUwNiwieSI6ODEyfV0=" marker-end="url(#mermaid-1784098225708_flowchart-v2-pointEnd)"></path><path d="M212.083,593.25L234.285,563.375C256.488,533.5,300.892,473.75,327.261,443.875C353.63,414,361.964,414,366.13,414L370.297,414" id="L_Infrastructure_Layer_Github_Sphere_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Infrastructure_Layer_Github_Sphere_0" data-points="W3sieCI6MjEyLjA4MzEwMDk2MTUzODQ2LCJ5Ijo1OTMuMjV9LHsieCI6MzQ1LjI5Njg3NSwieSI6NDE0fSx7IngiOjM3MC4yOTY4NzUsInkiOjQxNH0seyJ4IjozOTUuMjk2ODc1LCJ5Ijo0MTR9XQ=="></path><path d="M217.561,722.25L238.851,747.958C260.14,773.667,302.718,825.083,328.174,850.792C353.63,876.5,361.964,876.5,388.764,876.5C415.565,876.5,460.833,876.5,506.102,876.5C551.37,876.5,596.638,876.5,623.439,876.5C650.24,876.5,658.573,876.5,682.507,876.5C706.44,876.5,745.974,876.5,785.508,876.5C825.042,876.5,864.576,876.5,888.509,876.5C912.443,876.5,920.776,876.5,929.109,876.5C937.443,876.5,945.776,876.5,949.943,876.5L954.109,876.5" id="L_Infrastructure_Layer_Nextcloud_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Infrastructure_Layer_Nextcloud_0" data-points="W3sieCI6MjE3LjU2MTM0ODIxNDI4NTcyLCJ5Ijo3MjIuMjV9LHsieCI6MzQ1LjI5Njg3NSwieSI6ODc2LjV9LHsieCI6MzcwLjI5Njg3NSwieSI6ODc2LjV9LHsieCI6NTA2LjEwMTU2MjUsInkiOjg3Ni41fSx7IngiOjY0MS45MDYyNSwieSI6ODc2LjV9LHsieCI6NjY2LjkwNjI1LCJ5Ijo4NzYuNX0seyJ4Ijo3ODUuNTA3ODEyNSwieSI6ODc2LjV9LHsieCI6OTA0LjEwOTM3NSwieSI6ODc2LjV9LHsieCI6OTI5LjEwOTM3NSwieSI6ODc2LjV9LHsieCI6OTU0LjEwOTM3NSwieSI6ODc2LjV9XQ=="></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_Handbook_ResearchHub_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Handbook_TeachingHub_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Handbook_PaperProjects_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Handbook_LectureRepos_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Handbook_Agenda_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Templates_PaperProjects_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Templates_LectureRepos_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_ResearchHub_PaperProjects_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_TeachingHub_LectureRepos_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Automation_Layer_Coordination_Layer_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Automation_Layer_Knowledge_Layer_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Automation_Layer_Execution_Layer_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Handbook_Nextcloud_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Infrastructure_Layer_Github_Sphere_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_Infrastructure_Layer_Nextcloud_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
-<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="edgeLabel"></span>
-</div>
-</foreignobject></g></g></g><g class="nodes"><g class="root" transform="translate(387.296875, 341.5)"><g class="clusters"><g class="cluster" id="Automation_Layer" data-look="classic"><rect style="" x="8" y="8" width="221.609375" height="129"></rect><g class="cluster-label" transform="translate(46.9921875, 8)"><foreignobject width="143.625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-automation-layer <a href="#automation-layer">🔗</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g class="node default" id="flowchart-LabBot-10" transform="translate(118.8046875, 72.5)"><rect class="basic label-container" style="" x="-75.8046875" y="-27" width="151.609375" height="54"></rect><g class="label" style="" transform="translate(-45.8046875, -12)"><rect></rect><foreignobject width="91.609375" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="https://github.com/digital-work-lab/labot" rel="noopener" target="_blank">labot</a> (public)
-</p>
-</span>
-</div>
-</foreignobject></g></g></g></g><g class="root" transform="translate(0, 585.25)"><g class="clusters"><g class="cluster" id="Infrastructure_Layer" data-look="classic"><rect style="" x="8" y="8" width="312.296875" height="129"></rect><g class="cluster-label" transform="translate(85.234375, 8)"><foreignobject width="157.828125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-infrastructure-layer <a href="#infrastructure-layer">🔗</a>
-</p>
-</span>
-</div>
-</foreignobject></g></g></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g class="node default" id="flowchart-Workstation-2" transform="translate(164.1484375, 72.5)"><rect class="basic label-container" style="" x="-121.1484375" y="-27" width="242.296875" height="54"></rect><g class="label" style="" transform="translate(-91.1484375, -12)"><rect></rect><foreignobject width="182.296875" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="workstation_setup.html">workstation-setup</a> (public)
-</p>
-</span>
-</div>
-</foreignobject></g></g></g></g><g class="root" transform="translate(946.109375, 804)"><g class="clusters"><g class="cluster" id="Nextcloud" data-look="classic"><rect style="" x="8" y="8" width="345.828125" height="129"></rect><g class="cluster-label" transform="translate(88.4375, 8)"><foreignobject width="184.953125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="nextcloud.html">Nextcloud</a> (mostly private)
-</p>
-</span>
-</div>
-</foreignobject></g></g></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g class="node default" id="flowchart-Archive-0" transform="translate(99.6796875, 72.5)"><rect class="basic label-container" style="" x="-56.6796875" y="-27" width="113.359375" height="54"></rect><g class="label" style="" transform="translate(-26.6796875, -12)"><rect></rect><foreignobject width="53.359375" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Archive
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-Grades-1" transform="translate(262.59375, 72.5)"><rect class="basic label-container" style="" x="-56.234375" y="-27" width="112.46875" height="54"></rect><g class="label" style="" transform="translate(-26.234375, -12)"><rect></rect><foreignobject width="52.46875" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-Grades
-</p>
-</span>
-</div>
-</foreignobject></g></g></g></g><g class="node default" id="flowchart-Handbook-3" transform="translate(785.5078125, 665)"><rect class="basic label-container" style="fill:#ffe599 !important;stroke:#b45f06 !important;stroke-width:3px !important" x="-93.6015625" y="-27" width="187.203125" height="54"></rect><g class="label" style="color:#000 !important" transform="translate(-63.6015625, -12)"><rect></rect><foreignobject width="127.203125" height="24">
-<div style="color: rgb(0, 0, 0) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
-<span style="color:#000 !important" class="nodeLabel">
-<p>
-<a href="handbook.html">handbook</a> (public)
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-Agenda-4" transform="translate(1127.0234375, 634)"><rect class="basic label-container" style="" x="-92.2578125" y="-27" width="184.515625" height="54"></rect><g class="label" style="" transform="translate(-62.2578125, -12)"><rect></rect><foreignobject width="124.515625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="github.html#general-repositories">agendas</a> (private)
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-ResearchHub-5" transform="translate(1127.0234375, 90)"><rect class="basic label-container" style="" x="-108.703125" y="-27" width="217.40625" height="54"></rect><g class="label" style="" transform="translate(-78.703125, -12)"><rect></rect><foreignobject width="157.40625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="https://github.com/fs-ise/research-hub" rel="noopener" target="_blank">research-hub</a> (private)
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-TeachingHub-6" transform="translate(1127.0234375, 194)"><rect class="basic label-container" style="" x="-107.8203125" y="-27" width="215.640625" height="54"></rect><g class="label" style="" transform="translate(-77.8203125, -12)"><rect></rect><foreignobject width="155.640625" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="https://github.com/fs-ise/teaching-hub" rel="noopener" target="_blank">teaching-hub</a> (private)
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-Templates-7" transform="translate(1127.0234375, 404.25)"><rect class="basic label-container" style="" x="-93.140625" y="-27" width="186.28125" height="54"></rect><g class="label" style="" transform="translate(-63.140625, -12)"><rect></rect><foreignobject width="126.28125" height="24">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="github.html#general-repositories">templates</a> (public)
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-PaperProjects-8" transform="translate(1479.640625, 350)"><rect class="basic label-container" style="" x="-104.703125" y="-39" width="209.40625" height="78"></rect><g class="label" style="" transform="translate(-74.703125, -24)"><rect></rect><foreignobject width="149.40625" height="48">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="github.html#research-repositories">research repositories</a><br> (mostly private)
-</p>
-</span>
-</div>
-</foreignobject></g></g><g class="node default" id="flowchart-LectureRepos-9" transform="translate(1479.640625, 478)"><rect class="basic label-container" style="" x="-103.8203125" y="-39" width="207.640625" height="78"></rect><g class="label" style="" transform="translate(-73.8203125, -24)"><rect></rect><foreignobject width="147.640625" height="48">
-<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
-<span class="nodeLabel">
-<p>
-<a href="github.html#teaching-repositories">teaching repositories</a><br> (mostly public)
-</p>
-</span>
-</div>
-</foreignobject></g></g></g></g></g>
-</svg>
+<pre class="mermaid mermaid-js">graph LR
+
+    subgraph Nextcloud["&lt;a href='nextcloud.html'&gt;Nextcloud&lt;/a&gt; (mostly private)"]
+        Archive["Archive"]
+        Grades["Grades"]
+    end
+
+    %% Infrastructure Layer
+    subgraph Infrastructure_Layer["infrastructure-layer &lt;a href='#infrastructure-layer'&gt;🔗&lt;/a&gt;"]
+        Workstation["&lt;a href='workstation_setup.html'&gt;workstation-setup&lt;/a&gt; (public)"]
+    end
+
+    subgraph Github_Sphere["GitHub"]
+
+        %% Coordination Layer
+        subgraph Coordination_Layer["coordination-layer &lt;a href='#coordination-layer'&gt;🔗&lt;/a&gt;"]
+            Handbook["&lt;a href='handbook.html'&gt;handbook&lt;/a&gt; (public)"]
+            Agenda["&lt;a href='github.html#general-repositories'&gt;agendas&lt;/a&gt; (private)"]
+        end
+
+        %% Knowledge Layer
+        subgraph Knowledge_Layer["knowledge-layer &lt;a href='#knowledge-layer'&gt;🔗&lt;/a&gt;"]
+            ResearchHub["&lt;a href='https://github.com/fs-ise/research-hub' target='_blank'&gt;research-hub&lt;/a&gt; (private)"]
+            TeachingHub["&lt;a href='https://github.com/fs-ise/teaching-hub' target='_blank'&gt;teaching-hub&lt;/a&gt; (private)"]
+        end
+
+
+        %% Execution Layer
+        subgraph Execution_Layer["execution-layer &lt;a href='#execution-layer'&gt;🔗&lt;/a&gt;"]
+            Templates["&lt;a href='github.html#general-repositories'&gt;templates&lt;/a&gt; (public)"]
+            PaperProjects["&lt;a href='github.html#research-repositories'&gt;research repositories&lt;/a&gt;&lt;br&gt; (mostly private)"]
+            LectureRepos["&lt;a href='github.html#teaching-repositories'&gt;teaching repositories&lt;/a&gt;&lt;br&gt; (mostly public)"]
+        end
+
+        %% Automation Layer
+        subgraph Automation_Layer["automation-layer &lt;a href='#automation-layer'&gt;🔗&lt;/a&gt;"]
+            LabBot["&lt;a href='https://github.com/digital-work-lab/labot' target='_blank'&gt;labot&lt;/a&gt; (public)"]
+        end
+
+    end
+
+    %% Core relationships
+
+    Automation_Layer -.- Coordination_Layer
+    Automation_Layer -.- Knowledge_Layer
+    Automation_Layer -.- Execution_Layer
+
+    Handbook --&gt; ResearchHub
+    Handbook --&gt; TeachingHub
+    Handbook --&gt; PaperProjects
+    Handbook --&gt; LectureRepos
+    Handbook --&gt; Agenda
+    Handbook --&gt; Nextcloud
+    %% Handbook --&gt; Templates
+    Templates -.- PaperProjects
+    Templates -.- LectureRepos
+
+    ResearchHub &lt;==&gt; PaperProjects
+    TeachingHub &lt;==&gt; LectureRepos
+
+    Infrastructure_Layer -.- Github_Sphere
+    Infrastructure_Layer -.- Nextcloud
+
+    %% Highlight Handbook
+    style Handbook fill:#ffe599,stroke:#b45f06,stroke-width:3px,color:#000
+
+</pre>
 </div>
 <p></p></figure><p></p>
 </div>
@@ -1344,7 +1206,12 @@ This manual will serve as resource for navigating the digital environment, from 
 `<figure class=''>`{=html}
 
 :::{}
-<svg id="mermaid-figure-2" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="flowchart" viewbox="0 0 667.890625 350" role="graphics-document document" aria-roledescription="flowchart-v2" height="480"><style>#mermaid-figure-2{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-2 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-2 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-2 .error-icon{fill:#552222;}#mermaid-figure-2 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-2 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#666;stroke:#666;}#mermaid-figure-2 .marker.cross{stroke:#666;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-2 p{margin:0;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-figure-2 .cluster-label text{fill:#333;}#mermaid-figure-2 .cluster-label span{color:#333;}#mermaid-figure-2 .cluster-label span p{background-color:transparent;}#mermaid-figure-2 .label text,#mermaid-figure-2 span{fill:#000000;color:#000000;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-figure-2 .rough-node .label text,#mermaid-figure-2 .node .label text,#mermaid-figure-2 .image-shape .label,#mermaid-figure-2 .icon-shape .label{text-anchor:middle;}#mermaid-figure-2 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-2 .rough-node .label,#mermaid-figure-2 .node .label,#mermaid-figure-2 .image-shape .label,#mermaid-figure-2 .icon-shape .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .root .anchor path{fill:#666!important;stroke-width:0;stroke:#666;}#mermaid-figure-2 .arrowheadPath{fill:#333333;}#mermaid-figure-2 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:#666;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:white;text-align:center;}#mermaid-figure-2 .edgeLabel p{background-color:white;}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-2 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-figure-2 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:#333;}#mermaid-figure-2 .cluster span{color:#333;}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-figure-2 rect.text{fill:none;stroke-width:0;}#mermaid-figure-2 .icon-shape,#mermaid-figure-2 .image-shape{background-color:white;text-align:center;}#mermaid-figure-2 .icon-shape p,#mermaid-figure-2 .image-shape p{background-color:white;padding:2px;}#mermaid-figure-2 .icon-shape rect,#mermaid-figure-2 .image-shape rect{opacity:0.5;background-color:white;fill:white;}#mermaid-figure-2 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-2 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker id="mermaid-1784098226043_flowchart-v2-pointEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098226043_flowchart-v2-pointStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="4.5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098226043_flowchart-v2-circleEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="11" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098226043_flowchart-v2-circleStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="-1" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1784098226043_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="12" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1784098226043_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="-1" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M268,47L285.802,47C303.604,47,339.208,47,376.392,47C413.576,47,452.339,47,471.72,47L491.102,47" id="L_A_B_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_A_B_0" data-points="W3sieCI6MjY4LCJ5Ijo0N30seyJ4IjozNzQuODEyNSwieSI6NDd9LHsieCI6NDk1LjEwMTU2MjUsInkiOjQ3fV0=" marker-end="url(#mermaid-1784098226043_flowchart-v2-pointEnd)"></path><path d="M268,175L285.802,175C303.604,175,339.208,175,376.642,175C414.076,175,453.339,175,472.97,175L492.602,175" id="L_C_D_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_C_D_0" data-points="W3sieCI6MjY4LCJ5IjoxNzV9LHsieCI6Mzc0LjgxMjUsInkiOjE3NX0seyJ4Ijo0OTYuNjAxNTYyNSwieSI6MTc1fV0=" marker-end="url(#mermaid-1784098226043_flowchart-v2-pointEnd)"></path><path d="M268,303L285.802,303C303.604,303,339.208,303,374.146,303C409.083,303,443.354,303,460.49,303L477.625,303" id="L_E_F_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_E_F_0" data-points="W3sieCI6MjY4LCJ5IjozMDN9LHsieCI6Mzc0LjgxMjUsInkiOjMwM30seyJ4Ijo0ODEuNjI1LCJ5IjozMDN9XQ==" marker-end="url(#mermaid-1784098226043_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(374.8125, 47)"><g class="label" data-id="L_A_B_0" transform="translate(-81.8125, -12)"><foreignobject width="163.625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>triggers:GitHub Actions</p></span></div></foreignobject></g></g><g class="edgeLabel" transform="translate(374.8125, 175)"><g class="label" data-id="L_C_D_0" transform="translate(-81.8125, -12)"><foreignobject width="163.625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>triggers:GitHub Actions</p></span></div></foreignobject></g></g><g class="edgeLabel" transform="translate(374.8125, 303)"><g class="label" data-id="L_E_F_0" transform="translate(-81.8125, -12)"><foreignobject width="163.625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>triggers:GitHub Actions</p></span></div></foreignobject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-0" transform="translate(138, 47)"><rect class="basic label-container" style="" x="-130" y="-39" width="260" height="78"></rect><g class="label" style="" transform="translate(-100, -24)"><rect></rect><foreignobject width="200" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>Edit Markdown Handbook pages on GitHub</p></span></div></foreignobject></g></g><g class="node default" id="flowchart-B-1" transform="translate(570.7578125, 47)"><rect class="basic label-container" style="" x="-75.65625" y="-27" width="151.3125" height="54"></rect><g class="label" style="" transform="translate(-45.65625, -12)"><rect></rect><foreignobject width="91.3125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Live Website</p></span></div></foreignobject></g></g><g class="node default" id="flowchart-C-2" transform="translate(138, 175)"><rect class="basic label-container" style="" x="-130" y="-39" width="260" height="78"></rect><g class="label" style="" transform="translate(-100, -24)"><rect></rect><foreignobject width="200" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>Edit Markdown Slides on GitHub</p></span></div></foreignobject></g></g><g class="node default" id="flowchart-D-3" transform="translate(570.7578125, 175)"><rect class="basic label-container" style="" x="-74.15625" y="-27" width="148.3125" height="54"></rect><g class="label" style="" transform="translate(-44.15625, -12)"><rect></rect><foreignobject width="88.3125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>HTML slides</p></span></div></foreignobject></g></g><g class="node default" id="flowchart-E-4" transform="translate(138, 303)"><rect class="basic label-container" style="" x="-130" y="-39" width="260" height="78"></rect><g class="label" style="" transform="translate(-100, -24)"><rect></rect><foreignobject width="200" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>Edit Markdown Paper on GitHub</p></span></div></foreignobject></g></g><g class="node default" id="flowchart-F-5" transform="translate(570.7578125, 303)"><rect class="basic label-container" style="" x="-89.1328125" y="-27" width="178.265625" height="54"></rect><g class="label" style="" transform="translate(-59.1328125, -12)"><rect></rect><foreignobject width="118.265625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Paper PDF/DOX</p></span></div></foreignobject></g></g></g></g></g></svg>
+
+<pre class="mermaid mermaid-js">graph LR
+    A[Edit Markdown Handbook pages on GitHub] --&gt;|triggers:GitHub Actions| B[Live Website]
+    C[Edit Markdown Slides on GitHub] --&gt;|triggers:GitHub Actions| D[HTML slides]
+    E[Edit Markdown Paper on GitHub] --&gt;|triggers:GitHub Actions| F[Paper PDF/DOX]
+</pre>
 :::
 `</figure>`{=html}
 ::::
