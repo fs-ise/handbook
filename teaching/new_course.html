@@ -108,15 +108,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -130,17 +130,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -150,6 +139,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1143,7 +1143,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>Start: December (summer term), May (winter term)</span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Canvas team: Create the course and shares the link.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Canvas team: Create the course and share the link.</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Carefully select lecture rooms (Power supply, Harvard vs. Flat, Beamer)</span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Deadline: mid-May (summer term), December/January (winter term)</span>
@@ -1154,50 +1154,56 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Review <span class="in">`feedback.qmd`</span>, add feedback from issues, student evaluations, and surveys, document how the feedback was addressed, and mention the addressed feedback in the first lecture.</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>Follow the complete <span class="co">[</span><span class="ot">Canvas course checklist</span><span class="co">](/teaching/lms.html)</span> when preparing the LMS course.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">### Canvas setup</span></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Review the syllabus and programme-specific Canvas elements.</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Define the Canvas course structure.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Prepare and organize course content in Canvas.</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Configure assignments, group sets, and rubrics where applicable.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Define discussion and communication settings.</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Review the course using Student View.</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Publish the Canvas course when it is ready for students.</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>Deadline: April (summer term), October (winter term)</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Offer the course {#offer}</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Start: April (summer term), October (winter term)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Establish the Canvas course structure.</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: In <span class="in">`Files`</span>, create appropriate directories, such as <span class="in">`slides`</span> and <span class="in">`notebooks`</span>.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: On <span class="in">`Home`</span>, update the session overview.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: On <span class="in">`Home`</span>, review and update the lecturer profile and literature information.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: On <span class="in">`Home`</span>, provide the examination information.</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Prepare and organize the course materials and content in Canvas.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Configure assignments, groups and group sets, and rubrics where applicable.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Define the main communication channel and make it explicit to students.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Create a reminder to post the welcome message based on the course repository's <span class="in">`news.qmd`</span>.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Review the complete course using Student View.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Notify or involve TEL as required for publication.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Ensure that the Canvas course is published when it is ready for students.</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams. Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Exam grading and documentation {#grade}</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>Grading</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline.</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>Documentation</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Document necessary changes for the following exams (e.g., unclear questions, too many questions)</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>Deadline: End of August (summer term), March (winter term)</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades according to the applicable examination-office process.</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Repeat exam {#repeat}</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>Deadline: April (summer term), October (winter term)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Offer the course {#offer}</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Start: April (summer term), October (winter term)</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor (Team Assistant): Prepare the exams. Use the <span class="co">[</span><span class="ot">exam checklist</span><span class="co">](/teaching/exams.html#preparing-the-exam)</span>.</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add exam dates to the <span class="co">[</span><span class="ot">calendar</span><span class="co">]({{&lt; meta handbook.url &gt;}}/tree/main/data/events.yaml)</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Exam grading and documentation {#grade}</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>Grading</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a reminder for the deadline.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Check whether to adjust the grades of narrowly failing exams upwards and, if necessary, lower the passing threshold in favor of students</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>Documentation</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Analyse the evaluations, store the files, and document the improvements (see <span class="co">[</span><span class="ot">evaluations</span><span class="co">](/teaching/evaluations.html)</span>).</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Document necessary changes for the following exams (e.g., unclear questions, too many questions)</span>
 <span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office.</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>Deadline: End of August (summer term), March (winter term)</span>
 <span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Repeat relevant steps of *Exam grading and documentation* (step 4).</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades according to the applicable examination-office process.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades according to the applicable examination-office process.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Repeat exam {#repeat}</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>Students have the possibility to repeat the exam in the following term (even if the lecture is not offered again). Registration for students in FlexNow is created by the examination office.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Professor: Upon notification by the examination office (E-Mail: "Prüferbestellung"), create the repeat exam. Student registrations are available in FlexNow.</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Repeat relevant steps of *Exam grading and documentation* (step 4).</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>Students can review their exams and grades according to the applicable examination-office process.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1244,7 +1250,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
     Start: December (summer term), May (winter term)
 
-    - [ ] Canvas team: Create the course and shares the link.
+    - [ ] Canvas team: Create the course and share the link.
     - [ ] Carefully select lecture rooms (Power supply, Harvard vs. Flat, Beamer)
 
     Deadline: mid-May (summer term), December/January (winter term)
@@ -1255,17 +1261,22 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
     - [ ] Professor: Review `feedback.qmd`, add feedback from issues, student evaluations, and surveys, document how the feedback was addressed, and mention the addressed feedback in the first lecture.
 
-    Follow the complete [Canvas course checklist](/teaching/lms.html) when preparing the LMS course.
+    ### Canvas setup
 
     - [ ] Professor: Review the syllabus and programme-specific Canvas elements.
-    - [ ] Professor: Define the Canvas course structure.
-    - [ ] Professor: Prepare and organize course content in Canvas.
-    - [ ] Professor: Configure assignments, group sets, and rubrics where applicable.
-    - [ ] Professor: Define discussion and communication settings.
-    - [ ] Professor: Review the course using Student View.
+    - [ ] Professor: Establish the Canvas course structure.
+    - [ ] Professor: In `Files`, create appropriate directories, such as `slides` and `notebooks`.
+    - [ ] Professor: On `Home`, update the session overview.
+    - [ ] Professor: On `Home`, review and update the lecturer profile and literature information.
+    - [ ] Professor: On `Home`, provide the examination information.
+    - [ ] Professor: Prepare and organize the course materials and content in Canvas.
+    - [ ] Professor: Configure assignments, groups and group sets, and rubrics where applicable.
+    - [ ] Professor: Define the main communication channel and make it explicit to students.
+    - [ ] Professor: Create a reminder to post the welcome message based on the course repository's `news.qmd`.
+    - [ ] Professor: Review the complete course using Student View.
     - [ ] Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.
-
-    - [ ] Professor: Publish the Canvas course when it is ready for students.
+    - [ ] Professor: Notify or involve TEL as required for publication.
+    - [ ] Professor: Ensure that the Canvas course is published when it is ready for students.
 
     Deadline: April (summer term), October (winter term)
 
@@ -1336,7 +1347,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
     Start: December (summer term), May (winter term)
 
-    - [ ] Canvas team: Create the course and shares the link.
+    - [ ] Canvas team: Create the course and share the link.
     - [ ] Carefully select lecture rooms (Power supply, Harvard vs. Flat, Beamer)
 
     Deadline: mid-May (summer term), December/January (winter term)
@@ -1347,17 +1358,22 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
     - [ ] Professor: Review `feedback.qmd`, add feedback from issues, student evaluations, and surveys, document how the feedback was addressed, and mention the addressed feedback in the first lecture.
 
-    Follow the complete [Canvas course checklist](/teaching/lms.html) when preparing the LMS course.
+    ### Canvas setup
 
     - [ ] Professor: Review the syllabus and programme-specific Canvas elements.
-    - [ ] Professor: Define the Canvas course structure.
-    - [ ] Professor: Prepare and organize course content in Canvas.
-    - [ ] Professor: Configure assignments, group sets, and rubrics where applicable.
-    - [ ] Professor: Define discussion and communication settings.
-    - [ ] Professor: Review the course using Student View.
+    - [ ] Professor: Establish the Canvas course structure.
+    - [ ] Professor: In `Files`, create appropriate directories, such as `slides` and `notebooks`.
+    - [ ] Professor: On `Home`, update the session overview.
+    - [ ] Professor: On `Home`, review and update the lecturer profile and literature information.
+    - [ ] Professor: On `Home`, provide the examination information.
+    - [ ] Professor: Prepare and organize the course materials and content in Canvas.
+    - [ ] Professor: Configure assignments, groups and group sets, and rubrics where applicable.
+    - [ ] Professor: Define the main communication channel and make it explicit to students.
+    - [ ] Professor: Create a reminder to post the welcome message based on the course repository's `news.qmd`.
+    - [ ] Professor: Review the complete course using Student View.
     - [ ] Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.
-
-    - [ ] Professor: Publish the Canvas course when it is ready for students.
+    - [ ] Professor: Notify or involve TEL as required for publication.
+    - [ ] Professor: Ensure that the Canvas course is published when it is ready for students.
 
     Deadline: April (summer term), October (winter term)
 
