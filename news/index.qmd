@@ -11,3 +11,28 @@ listing:
 ---
 
 Here you can find recent publications, software releases, reports, and teaching updates.
+
+:::: {.callout-note title="Adding news" collapse=true}
+
+Everyone can suggest news, including team members and other contributors. To add an item manually, create a `YYYY-MM-DD-short-title.qmd` file in the [news posts directory](https://github.com/fs-ise/handbook/tree/main/news/posts); items can also be suggested automatically by regularly scheduled news-check scripts. Automated suggestions still go through a pull request so they can be reviewed and revised before publication.
+
+```{mermaid}
+flowchart TD
+    M[Add news item manually]
+
+    subgraph Regular checks
+        S[Scheduled workflow]
+        C[Run news-check scripts]
+        A[Add new items]
+    end
+
+    P[Create pull request]
+    R[Review and revise]
+    G[Merge pull request]
+    N[News page is updated]
+
+    S --> C --> A --> P
+    M --> P
+    P --> R --> G --> N
+```
+::::
