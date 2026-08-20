@@ -2,6 +2,7 @@
 title: "News"
 format: html
 listing:
+  id: news-listing
   contents: posts
   sort: "date desc"
   type: default
@@ -12,9 +13,16 @@ listing:
 
 Here you can find recent publications, software releases, reports, and teaching updates.
 
-:::: {.callout-note title="Adding news" collapse=true}
 
-Everyone can suggest news, including team members and other contributors. To add an item manually, create a `YYYY-MM-DD-short-title.qmd` file in the [news posts directory](https://github.com/fs-ise/handbook/tree/main/news/posts); items can also be suggested automatically by regularly scheduled news-check scripts. Automated suggestions still go through a pull request so they can be reviewed and revised before publication.
+::: {#news-listing}
+:::
+
+::: {.callout-note title="Adding news"}
+
+Everyone can suggest news, including team members and external contributors.
+To add an item manually, create a `YYYY-MM-DD-short-title.qmd` file in the [news posts directory](https://github.com/fs-ise/handbook/tree/main/news/posts);
+items can also be suggested automatically by regularly scheduled news-check scripts.
+Automated suggestions still go through a pull request so they can be reviewed and revised before publication.
 
 ```{mermaid}
 flowchart TD
@@ -35,4 +43,5 @@ flowchart TD
     M --> P
     P --> R --> G --> N
 ```
-::::
+
+:::
