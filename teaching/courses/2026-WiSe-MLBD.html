@@ -77,17 +77,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -108,6 +97,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -1073,15 +1073,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </tr>
 <tr class="odd">
 <td>Link: Repository</td>
-<td><a href="https://github.com/fs-ise/mlbd" target="_blank">Repository</a></td>
+<td><a href="https://github.com/fs-ise/machine-learning-for-big-data" target="_blank">Repository</a></td>
 </tr>
 <tr class="even">
 <td>Link: Website</td>
-<td><a href="https://fs-ise.github.io/mlbd/" target="_blank">Website</a></td>
+<td><a href="https://fs-ise.github.io/machine-learning-for-big-data/" target="_blank">Website</a></td>
 </tr>
 <tr class="odd">
 <td>Status</td>
-<td><p>upcoming</p></td>
+<td><p>in-progress</p></td>
 </tr>
 <tr class="even">
 <td>Student Evaluations</td>
@@ -1134,20 +1134,20 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <section id="canvas-setup" class="level3">
 <h3 class="anchored" data-anchor-id="canvas-setup">Canvas setup</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Professor: Review the syllabus and programme-specific Canvas elements.</label></li>
-<li><label><input type="checkbox">Professor: Establish the Canvas course structure.</label></li>
-<li><label><input type="checkbox">Professor: In <code>Files</code>, create appropriate directories, such as <code>slides</code> and <code>notebooks</code>.</label></li>
-<li><label><input type="checkbox">Professor: On <code>Home</code>, update the session overview.</label></li>
-<li><label><input type="checkbox">Professor: On <code>Home</code>, review and update the lecturer profile and literature information.</label></li>
-<li><label><input type="checkbox">Professor: On <code>Home</code>, provide the examination information.</label></li>
-<li><label><input type="checkbox">Professor: Prepare and organize the course materials and content in Canvas.</label></li>
-<li><label><input type="checkbox">Professor: Configure assignments, groups and group sets, and rubrics where applicable.</label></li>
-<li><label><input type="checkbox">Professor: Define the main communication channel and make it explicit to students.</label></li>
-<li><label><input type="checkbox">Professor: Create a reminder to post the welcome message based on the course repository’s <code>news.qmd</code>.</label></li>
-<li><label><input type="checkbox">Professor: Review the complete course using Student View.</label></li>
-<li><label><input type="checkbox">Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.</label></li>
-<li><label><input type="checkbox">Professor: Notify or involve TEL as required for publication.</label></li>
-<li><label><input type="checkbox">Professor: Ensure that the Canvas course is published when it is ready for students.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Review the syllabus and programme-specific Canvas elements.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Establish the Canvas course structure.</label></li>
+<li><label><input type="checkbox" checked="">Professor: In <code>Files</code>, create appropriate directories, such as <code>slides</code> and <code>notebooks</code>.</label></li>
+<li><label><input type="checkbox" checked="">Professor: On <code>Home</code>, update the session overview.</label></li>
+<li><label><input type="checkbox" checked="">Professor: On <code>Home</code>, review and update the lecturer profile and literature information.</label></li>
+<li><label><input type="checkbox" checked="">Professor: On <code>Home</code>, provide the examination information.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Prepare and organize the course materials and content in Canvas.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Configure assignments, groups and group sets, and rubrics where applicable.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Define the main communication channel and make it explicit to students.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Create a reminder to post the welcome message based on the course repository’s <code>news.qmd</code>.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Review the complete course using Student View.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Ask TEL for a final link-validation and accessibility check when the course setup is complete.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Notify or involve TEL as required for publication.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Ensure that the Canvas course is published when it is ready for students.</label></li>
 </ul>
 <p>Deadline: April (summer term), October (winter term)</p>
 </section>
@@ -1156,8 +1156,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <h2 class="anchored" data-anchor-id="offer">3. Offer the course</h2>
 <p>Start: April (summer term), October (winter term)</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Professor (Team Assistant): Prepare the exams. Use the <a href="../../teaching/exams.html#preparing-the-exam">exam checklist</a>.</label></li>
-<li><label><input type="checkbox">Add exam dates to the <a href="https://github.com/fs-ise/handbook/tree/main/data/events.yaml">calendar</a></label></li>
+<li><label><input type="checkbox" checked="">Professor (Team Assistant): Prepare the exams. Use the <a href="../../teaching/exams.html#preparing-the-exam">exam checklist</a>.</label></li>
+<li><label><input type="checkbox" checked="">Add exam dates to the <a href="https://github.com/fs-ise/handbook/tree/main/data/events.yaml">calendar</a></label></li>
 </ul>
 </section>
 <section id="grade" class="level2">
