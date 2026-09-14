@@ -73,17 +73,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -93,6 +82,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -106,15 +106,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -1079,30 +1079,32 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li><a href="http://faculty.washington.edu/jscholl/dgrl/" target="_blank">The Digital Government Reference Library</a></li>
 </ul>
 </section>
-<section id="access-to-journals-ub" class="level3">
-<h3 class="anchored" data-anchor-id="access-to-journals-ub">Access to journals (UB)</h3>
+<section id="access" class="level3">
+<h3 class="anchored" data-anchor-id="access">Access</h3>
 <ul>
-<li><a href="https://ezb.uni-regensburg.de/ezeit/fl.phtml?bibid=UBB&amp;colors=7" target="_blank">EZB Uni Bamberg</a></li>
-</ul>
-</section>
-<section id="access-to-databases-ub" class="level3">
-<h3 class="anchored" data-anchor-id="access-to-databases-ub">Access to databases (UB)</h3>
-<ul>
-<li><a href="https://dbis.ur.de//fachliste.php?bib_id=ub_ba&amp;lett=l&amp;colors=&amp;ocolors=" target="_blank">DBIS</a></li>
-</ul>
-<p><strong>Access to books (UB)</strong></p>
-<ul>
-<li><a href="https://katalog.ub.uni-bamberg.de/" target="_blank">Bamberger Katalog</a></li>
-</ul>
-</section>
-<section id="vpn-access" class="level3">
-<h3 class="anchored" data-anchor-id="vpn-access">VPN access</h3>
-<p>VPN is required to access the database or PDFs remotely.</p>
-<ul>
-<li><a href="https://www.uni-bamberg.de/its/dienstleistungen/iam/weblogin/shibboleth/" target="_blank">Uni Bamberg VPN access</a></li>
-<li><a href="https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/eduvpn-einrichten/" target="_blank">EduVPN</a></li>
+<li><a href="https://opac.frankfurt-school.de/webopac/index.asp" target="_blank">OPAC</a></li>
+<li><a href="https://search.ebscohost.com/" target="_blank">EBSCO</a></li>
 </ul>
 <!-- 
+### Access to journals (UB)
+
+- [EZB Uni Bamberg](https://ezb.uni-regensburg.de/ezeit/fl.phtml?bibid=UBB&colors=7){target=_blank}
+
+### Access to databases (UB)
+
+- [DBIS](https://dbis.ur.de//fachliste.php?bib_id=ub_ba&lett=l&colors=&ocolors=){target=_blank}
+
+### Access to books (UB)
+
+- [Bamberger Katalog](https://katalog.ub.uni-bamberg.de/){target=_blank}
+
+### VPN access
+
+VPN is required to access the database or PDFs remotely.
+
+- [Uni Bamberg VPN access](https://www.uni-bamberg.de/its/dienstleistungen/iam/weblogin/shibboleth/){target=_blank}
+- [EduVPN](https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/eduvpn-einrichten/){target=_blank}
+
 ## Criteria
 
 ## Tools
