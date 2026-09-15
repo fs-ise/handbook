@@ -74,15 +74,15 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -107,15 +107,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -1080,6 +1080,54 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li><strong>Productivity &amp; Media</strong> (Thunderbird, Chrome, GIMP, Audacity, OBS Studio)</li>
 <li><strong>Security</strong> (KeePassXC, ClamAV)</li>
 </ul>
+</section>
+<section id="eduroam" class="level2">
+<h2 class="anchored" data-anchor-id="eduroam">Eduroam</h2>
+<p>On Fedora with GNOME, open <strong>Settings → Wi-Fi</strong>, select <strong>eduroam</strong>, and use the following settings:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wi-Fi security</td>
+<td>WPA &amp; WPA2 Enterprise</td>
+</tr>
+<tr class="even">
+<td>Authentication</td>
+<td>Protected EAP (PEAP)</td>
+</tr>
+<tr class="odd">
+<td>Anonymous identity</td>
+<td>Leave blank</td>
+</tr>
+<tr class="even">
+<td>CA certificate</td>
+<td><strong>No CA certificate required</strong></td>
+</tr>
+<tr class="odd">
+<td>PEAP version</td>
+<td>Automatic</td>
+</tr>
+<tr class="even">
+<td>Inner authentication</td>
+<td>MSCHAPv2</td>
+</tr>
+<tr class="odd">
+<td>Username</td>
+<td>Frankfurt School username</td>
+</tr>
+<tr class="even">
+<td>Password</td>
+<td>Frankfurt School password</td>
+</tr>
+</tbody>
+</table>
+<p>For <strong>FS employees</strong>, the username is <code>name@fs.de</code>, where <code>name</code> is the Windows login (without <code>@fs.de</code>). This is not necessarily the employee’s email address.</p>
+<p>Fedora may show a warning when selecting <strong>No CA certificate required</strong>; confirm this choice. After entering your credentials, click <strong>Connect</strong>. Fedora/NetworkManager normally stores the connection profile, so you only need to enter these settings once.</p>
 
 
 </section>
