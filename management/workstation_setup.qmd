@@ -30,3 +30,22 @@ We maintain a reproducible workstation configuration based on Ansible.
 - **Sync & Backup** (Nextcloud, Vorta/Borg)
 - **Productivity & Media** (Thunderbird, Chrome, GIMP, Audacity, OBS Studio)
 - **Security** (KeePassXC, ClamAV)
+
+## Eduroam
+
+On Fedora with GNOME, open **Settings → Wi-Fi**, select **eduroam**, and use the following settings:
+
+| Setting              | Value                          |
+| -------------------- | ------------------------------ |
+| Wi-Fi security       | WPA & WPA2 Enterprise          |
+| Authentication       | Protected EAP (PEAP)           |
+| Anonymous identity   | Leave blank                    |
+| CA certificate       | **No CA certificate required** |
+| PEAP version         | Automatic                      |
+| Inner authentication | MSCHAPv2                       |
+| Username             | Frankfurt School username      |
+| Password             | Frankfurt School password      |
+
+For **FS employees**, the username is `name@fs.de`, where `name` is the Windows login (without `@fs.de`). This is not necessarily the employee's email address.
+
+Fedora may show a warning when selecting **No CA certificate required**; confirm this choice. After entering your credentials, click **Connect**. Fedora/NetworkManager normally stores the connection profile, so you only need to enter these settings once.
