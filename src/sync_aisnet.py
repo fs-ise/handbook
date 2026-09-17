@@ -10,8 +10,7 @@ from typing import Any
 
 import yaml
 from dateutil import parser as date_parser
-from sync_utils import EVENTS_PATH, sort_events, write_events_yaml
-from update_calendar import main as update_calendar_main
+from sync_utils import EVENTS_PATH, FeedValidationError, publish_calendar, reconcile_events, sort_events
 
 AISNET_ICAL_URL = "https://aisnet.org/events/list/?ical=1"
 USER_AGENT = "fs-ise-handbook-aisnet-sync/1.0"
@@ -129,10 +128,10 @@ def parse_ical_date(value: str) -> date | None:
 def source_uid_for(event: dict[str, Any], start: str, end: str, location: str) -> str:
     url = str(event.get("url") or "")
     uid = str(event.get("uid") or "")
-    if url:
-        basis = urllib.parse.urljoin(AISNET_ICAL_URL, url)
-    elif uid:
+    if uid:
         basis = uid
+    elif url:
+        basis = urllib.parse.urljoin(AISNET_ICAL_URL, url)
     else:
         basis = "\u241f".join([str(event.get("summary") or ""), start, end, location])
     return hashlib.sha256(basis.encode("utf-8")).hexdigest()[:24]
@@ -183,12 +182,21 @@ def event_from_ical_event(ical_event: dict[str, Any]) -> dict[str, str] | None:
 
 
 def parse_aisnet_events(ical_text: str) -> list[dict[str, str]]:
+    if not ical_text.strip():
+        raise FeedValidationError("AISNET returned an empty response")
+    upper = ical_text.upper()
+    if "BEGIN:VCALENDAR" not in upper or "END:VCALENDAR" not in upper:
+        raise FeedValidationError("AISNET response is not a complete iCalendar document")
     parsed_events = parse_aisnet_ical_events(ical_text)
     events_by_uid: dict[str, dict[str, str]] = {}
     for parsed_event in parsed_events:
         event = event_from_ical_event(parsed_event)
         if event:
-            events_by_uid[event["source_uid"]] = event
+            uid = event["source_uid"]
+            if uid in events_by_uid:
+                detail = "conflicting" if events_by_uid[uid] != event else "duplicate"
+                raise FeedValidationError(f"AISNET feed contains {detail} UID {uid!r}")
+            events_by_uid[uid] = event
     events = sort_events(list(events_by_uid.values()))
     if not events and TARGET_RE.search(ical_text):
         raise ValueError(
@@ -203,10 +211,9 @@ def main() -> None:
     if not isinstance(raw, list):
         raise ValueError("Parsed YAML is not a list")
     aisnet_events = parse_aisnet_events(fetch_aisnet_ical())
-    preserved_events = [ev for ev in raw if ev.get("source") != "aisnet"]
-    write_events_yaml(sort_events([*preserved_events, *aisnet_events]))
-    print(f"Wrote {len(aisnet_events)} AISNET events to {EVENTS_PATH}")
-    update_calendar_main()
+    combined_events = reconcile_events(raw, aisnet_events, "aisnet")
+    publish_calendar(combined_events)
+    print(f"Reconciled {len(aisnet_events)} AISNET events in {EVENTS_PATH}")
 
 
 if __name__ == "__main__":

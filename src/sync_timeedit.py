@@ -8,8 +8,7 @@ from typing import Any
 
 import yaml
 from icalendar import Calendar
-from sync_utils import EVENTS_PATH, sort_events, write_events_yaml
-from update_calendar import main as update_calendar_main
+from sync_utils import EVENTS_PATH, FeedValidationError, publish_calendar, reconcile_events
 from zoneinfo import ZoneInfo
 
 
@@ -112,10 +111,23 @@ def event_from_component(component: Any) -> dict[str, str] | None:
 
 
 def parse_timeedit_events(ical_bytes: bytes) -> list[dict[str, str]]:
-    calendar = Calendar.from_ical(ical_bytes)
+    if not ical_bytes.strip():
+        raise FeedValidationError("TimeEdit returned an empty response")
+    if b"BEGIN:VCALENDAR" not in ical_bytes or b"END:VCALENDAR" not in ical_bytes:
+        raise FeedValidationError("TimeEdit response is not a complete iCalendar document")
+    try:
+        calendar = Calendar.from_ical(ical_bytes)
+    except Exception as exc:
+        raise FeedValidationError(f"Invalid TimeEdit iCalendar content: {exc}") from exc
     events = []
     for component in calendar.walk("VEVENT"):
-        event = event_from_component(component)
+        try:
+            event = event_from_component(component)
+        except (KeyError, TypeError, ValueError) as exc:
+            uid = component_text(component, "uid") or "unknown"
+            raise FeedValidationError(
+                f"TimeEdit event {uid!r} is missing or has invalid essential information: {exc}"
+            ) from exc
         if event is not None:
             events.append(event)
 
@@ -130,12 +142,10 @@ def main() -> None:
     if not isinstance(raw, list):
         raise ValueError("Parsed YAML is not a list")
 
-    manual_events = [ev for ev in raw if ev.get("source") != "timeedit"]
     timeedit_events = parse_timeedit_events(fetch_timeedit_ical())
-    combined_events = sort_events([*manual_events, *timeedit_events])
-    write_events_yaml(combined_events)
-    print(f"Wrote {len(timeedit_events)} TimeEdit events to {EVENTS_PATH}")
-    update_calendar_main()
+    combined_events = reconcile_events(raw, timeedit_events, "timeedit")
+    publish_calendar(combined_events)
+    print(f"Reconciled {len(timeedit_events)} TimeEdit events in {EVENTS_PATH}")
 
 
 if __name__ == "__main__":
