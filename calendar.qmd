@@ -64,6 +64,16 @@ Use this mode for events that are not available from an automated source.
 
 Some imports are automated, so most users do not need these operational details during normal calendar use.
 
+Imports match events by `source` and `source_uid`, updating metadata without
+changing ICS UIDs while leaving manual and other-source events untouched.
+Historical and missing future events are retained because a missing entry does
+not prove cancellation; future omissions produce workflow warnings.
+
+Invalid, empty, duplicate, or suspiciously reduced feeds fail without publishing.
+Investigate warnings upstream and remove confirmed cancellations from
+`data/events.yaml` in a reviewed change; automatic deletion requires an explicit
+policy backed by reliable proof that the feed and its date range are complete.
+
 ::: {.callout-note collapse="true"}
 ## Details
 
