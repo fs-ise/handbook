@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>git-intro – ISE Lab Handbook</title>
+<title>Shared Printer – ISE Lab Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -73,17 +73,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -93,6 +82,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -106,15 +106,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 </style>
@@ -132,7 +132,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">git-intro</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Shared Printer</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -1026,8 +1026,11 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">git-intro</h1>
-</div>
+<h1 class="title">Shared Printer</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">printer</div>
+  </div>
+  </div>
 
 
 
@@ -1043,20 +1046,21 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout callout-style-default callout-note callout-titled" title="At a glance">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>At a glance
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This page is auto-generated. The authoritative project metadata is stored in <a href="https://github.com/fs-ise/handbook/tree/main/data/projects.yml" target="_blank"><code>data/projects.yml</code></a>.</p>
-</div>
-</div>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 53%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -1065,50 +1069,59 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Acronym</td>
-<td><code>git-intro</code></td>
+<td><strong>Title</strong></td>
+<td><p>Shared Printer</p></td>
 </tr>
 <tr class="even">
-<td>Team</td>
-<td>LaureenTh</td>
+<td><strong>Description</strong></td>
+<td><p>Shared printer at Frankfurt School</p></td>
 </tr>
 <tr class="odd">
-<td>Status</td>
-<td><code>published</code></td>
+<td><strong>Type</strong></td>
+<td><p>printer</p></td>
+</tr>
+<tr class="even">
+<td><strong>Ownership</strong></td>
+<td><p>institution</p></td>
+</tr>
+<tr class="odd">
+<td><strong>Lifecycle status</strong></td>
+<td><p>in_use</p></td>
+</tr>
+<tr class="even">
+<td><strong>Location</strong></td>
+<td><p>Frankfurt School</p></td>
+</tr>
+<tr class="odd">
+<td><strong>Access / borrowing</strong></td>
+<td><p>no</p></td>
 </tr>
 </tbody>
 </table>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Access</th>
-<th>Request</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://github.com/fs-ise/git-intro" target="_blank" rel="noopener">GitHub repository</a></td>
-<td><a href="https://github.com/LaureenTh" target="_blank" rel="noopener">LaureenTh</a></td>
-<td><a href="https://github.com/fs-ise/handbook/issues/new?assignees=geritwagner&amp;labels=access+request&amp;template=request-repo-access.md&amp;title=%5BAccess+Request%5D+Request+for+access+to+repository" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Request-Access-blue" alt="Request Access"></a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="history" class="level2">
-<h2 class="anchored" data-anchor-id="history">History</h2>
-<ul>
-<li><strong>2023-04-04</strong> — started</li>
-<li><strong>2024-08-28</strong> — completed</li>
-</ul>
-</section>
-<section id="output" class="level2">
-<h2 class="anchored" data-anchor-id="output">Output</h2>
-<ul>
-<li><a href="../../research/papers/WagnerThurner2025.html">WagnerThurner2025</a></li>
-</ul>
+</div>
+</div>
+<section id="how-to-print" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-print">How to print</h2>
+<ol type="1">
+<li><strong>Prepare the document:</strong> Export or save the document as a PDF.</li>
+<li><strong>Send the print job:</strong> Email the PDF to <a href="mailto:mp@fs.de">mp@fs.de</a> as an attachment.</li>
+<li><strong>Important — Outlook on the web:</strong> Attach the PDF as an actual file, not as a OneDrive link. If Outlook offers a choice, select <strong>Attach as copy</strong> rather than sharing a link. Before sending, verify that the PDF appears as a file attachment.</li>
+<li><strong>Authenticate at the printer:</strong> Go to the shared printer and place your employee card on the card reader.</li>
+<li><strong>Print:</strong> Select your submitted print job on the printer’s display and initiate printing.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="Attach the PDF file">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Attach the PDF file
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>OneDrive sharing links are not suitable. The PDF must be included as a file attachment in the email.</p>
+</div>
+</div>
 
 
 </section>
@@ -1558,5 +1571,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/research/projects/git-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/management/resources/shared_printer.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
