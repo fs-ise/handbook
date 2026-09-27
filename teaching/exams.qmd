@@ -1,144 +1,166 @@
 ---
 title: "Exams"
-transition_status: "toupdate"
+transition_status: "updated"
 transition_comment: "update"
 ---
 
-::: callout-note
-This section is marked as "toupdate": completely update
-:::
+::: resource
+Directory: [Nextcloud/exams](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2056002?dir=/teaching/exams){target="_blank"}
 
-::: callout-important
-Do not reuse old exams
-Students have a large Dropbox folder with previous exams.
-:::
+**Structure**:
 
-## Administration
+```text
+exams/
+├── checklist.md
+├── template/
+│   ├── exam.qmd
+│   └── [raw-files]
+├── materials/
+│   └── Course-ID/
+├── 2025_WISE/
+│   └── Course-ID/
+│       ├── exam.pdf
+│       ├── exam.qmd
+│       └── [raw-files]
+└── 2025_SUSE/
+    └── Course-ID/
+        ├── exam.pdf
+        ├── exam.qmd
+        └── [raw-files]
+```
+
+:::
 
 ## Preparing the exam
 
-- Exam dates: pruefungsorganisation@fs.de
-- Klausurtermine in TimeEdit einsehen: als Mitarbeiter in TimeEdit einloggen. Danach entweder **Alle Raumbuchungen** öffnen (Prüfungen zwischen dem 22.05. und 30.05. über den jeweiligen Tag einsehbar) oder den **Prüfungsplan** nutzen (Datum in der Kopfzeile einstellen und die passende Klausur über die Suche finden).
-- Provide exam 2 weeks before examination dates, as a PDF document
-- Add space for the solutions
+- Exam dates: <pruefungsorganisation@fs.de>
+- View examination dates in TimeEdit: Log in to TimeEdit as a staff member. Then either open **All Room Bookings** or use the **Examination Schedule** (set the date in the header and search for the relevant exam).
+- Submit the exam as a PDF document at least two weeks before the examination date.
+- Include sufficient space for students to provide their answers.
+- Arrange a review by colleagues for large courses (e.g., Introduction to Programming); prefer sequential over parallel feedback.
 
+::: {.callout-important title="Checklist"}
+- Use a Git repository during development. Once the exam is finalized and archived, remove the `.git` directory.
+- Consider `Nextcloud/teaching/exams/materials/*` for new tasks/ideas.
+- Do not reuse old exams.
+  Students have access to a large Dropbox folder containing previous exams.
+- Use a sandboxed AI to check for errors and potential misunderstandings.
+
+See `Nextcloud/exams/checklist.md` for additional items.
+:::
+
+<!--
 ## Examination day
+-->
 
 ## Grading
 
-- Exato: Link shared by Prüfungsorganisation.
-- Korrektur: 3 wochen (über Weihnachten) -> als 15 Arbeitstage interpretiert
-- Either in digital or paper form
-- Check for grade distribution: https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1728329?dir=/management/compliance&openfile=true
-
-## Entering grades
-
-- Group work graded in Canvas: Send and E-Mail to <pruefungsorganisation@fs.de>, asking them to run the Gradetransfer
+- Exato: Link shared by the Examination Office.
+- Grading deadline: Three weeks (including the Christmas period), interpreted as 15 working days.
+- Grading can be completed digitally or on paper.
+- Group work graded in Canvas: Send an email to <pruefungsorganisation@fs.de>, asking the Examination Office to run the grade transfer.
+- Check the grade distribution: [Faculty manual](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1728329?dir=/management/compliance&openfile=true).
 
 <!--
 ## Administration
 
-- When creating the course in FlexNow, we state that exams will be organized by the examination office ("zentral organisiert").
-- Team Assistant: [order labels etc.](/management/orders.html#examination-documents) ("Etiketten und Mantelbögen") as needed
-- The examination office sends out an e-mail request, asking for the number of additional students ("Meldung der Scheinteilnehmenden")
+- When creating the course in FlexNow, specify that exams will be organized by the Examination Office ("centrally organized").
+- Team Assistant: [order labels, etc.](/management/orders.html#examination-documents) ("labels and examination cover sheets") as needed.
+- The Examination Office sends an email requesting the number of additional students ("registration of students participating without regular enrollment").
 
 ## Preparing the exam
 
-::: resource
-See confidential `exam` repositories in [course overview](course_overview.html#data-and-materials)
-:::
-
 **Creating a new exam**
 
-- Copy the `template_for_copying.tex` to archive and rename; Start with the `_with_solution.tex`
-- Update the header (semester)
-- Check admissible auxiliaries (**student summaries**)
-- Create exam questions (referring to `collection_exam_questions_and_solutions.tex`)
-- Check whether all the contents were covered in the lecture (if sessions were skipped, the contents cannot be covered in the exam)
-- Check specific notes in the `README.md` of the respective exam repository
-- Add grading notes, e.g., "Bewertung: pro fehlendem Zustand und Kante: -0,5 Punkte"
-- Count points within tasks
-- Count points overall
-- Check for missing items (A,B,D)
-- Spellcheck
-- Copy the template and remove the solutions (including multiple-choice checks), update the header
-- Update the `collection_exam_questions_and_solutions.tex`
-- When the exams are not printed immediately, add a reminder to include the student summaries (if applicable)
+- Copy `template_for_copying.tex` to the archive and rename it; start with `_with_solution.tex`.
+- Update the header (semester).
+- Check permitted aids (**student summaries**).
+- Create exam questions (referring to `collection_exam_questions_and_solutions.tex`).
+- Check whether all the contents were covered in the lecture (if sessions were skipped, the contents cannot be covered in the exam).
+- Check specific notes in the `README.md` of the respective exam repository.
+- Add grading notes, e.g., "Grading: deduct 0.5 points for each missing state or transition."
+- Count points within individual tasks.
+- Count points overall.
+- Check for missing items (A, B, D).
+- Spellcheck.
+- Copy the template and remove the solutions (including multiple-choice checks); update the header.
+- Update `collection_exam_questions_and_solutions.tex`.
+- When the exams are not printed immediately, add a reminder to include the student summaries (if applicable).
 
 **Print**
 
-- Print exams
-- Add student summaries (if applicable)
+- Print exams.
+- Add student summaries (if applicable).
 
 ## Preparing materials
 
-- Examination documents by mail
+- Examination documents received by mail.
 - Envelope includes:
-  - Important exam documents for your central exams
-  - Checklist for completing the written exams
+  - Important documents for centrally organized examinations
+  - Checklist for conducting written examinations
   - Name labels
   - Examination protocol
-  - Event log during an exam
+  - Incident log for the examination
   - Name notices
-  - Signs “Please do not disturb the exam.”
+  - Signs stating "Please do not disturb — examination in progress"
   - Attendance list/paper check
-  - Checklist “Examination Process Flow”
+  - Checklist "Examination Process Flow"
   - Supervision guidelines
-  - Information sheet on canceling an exam for health reasons
-  - Participants during maternity leave, "Scheinteilnehmende", etc.
-- Professor includes the exam sheet (and summaries if applicable)
+  - Information sheet on withdrawing from an exam for health reasons
+  - Information on participants on maternity leave, additional examination participants ("Scheinteilnehmende"), etc.
+- Professor provides the exam sheets (and summaries, if applicable).
 
 ## Examination day
 
-- Examination dates are announced via email by the examination office
-- Materials are provided by the professor
-- The secretariat will receive further important information by email, for example, on the topic of “identification after exams” ("Nachträgliche Identitätsfeststellung")
+- Examination dates are announced by email by the Examination Office.
+- Materials are provided by the professor.
+- The secretariat will receive further important information by email, for example, regarding retrospective identity verification after examinations ("Nachträgliche Identitätsfeststellung").
 
 ::: callout-important
-- Cases of cheating (Unterschleif): immediately enter it into FlexNow and send the exam to the examination office (do not grade it)
-- Cases of missed exams (Versäumnisklausuren): immediately enter it into FlexNow, archive the exams for 1 year in the filing cabinet.
-- Send the exam sheets, protocols (Anwesenheitslisten), and two empty exams to the examination office immediately after the exams are completed.
-- Empty exams (Versäumnis-Klausur): archive for one semester.
+- Cases of cheating (academic misconduct/Unterschleif): Immediately enter the incident into FlexNow and send the exam to the Examination Office (do not grade it).
+- Missed examinations (Versäumnisklausuren): Immediately enter the absence into FlexNow and archive the examination papers for one year in the filing cabinet.
+- Send the exam sheets, protocols (attendance lists), and two blank exam copies to the Examination Office immediately after the examinations are completed.
+- Blank exam copies for missed examinations (Versäumnis-Klausur): Archive for one semester.
 :::
 
 ## Grading
 
-- Create a reminder for the deadline: approx. 15. September (summer term), 24. March (winter term). Grade early because colleagues may be on vacation before the deadline (not available to review failed exams).
-- Add bonus points if any and **if exam is passed**. Otherwise, note the bonus points and add a note "kann nicht angerechnet werden".
-- Do not dispose of empty exams
-- Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target=_blank} to assign grades and prepare FlexNow import
-- Have failed exams reviewed by a second professor
+- Create a reminder for the deadline: approximately September 15 (summer semester) or March 24 (winter semester). Grade early because colleagues may be on vacation before the deadline (and unavailable to review failed exams).
+- Add bonus points, if any, **only if the exam has been passed**. Otherwise, record the bonus points and add a note stating "cannot be credited".
+- Do not dispose of blank exam copies.
+- Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target="_blank"} to assign grades and prepare the FlexNow import.
+- Have failed exams reviewed by a second professor.
 
 ## Entering grades (in FlexNow)
 
 ::: callout-note
-Certificates can be issued if exams are not (yet) available in FlexNow (see [process](certificates.html))
+Certificates can be issued if exams are not (yet) available in FlexNow (see [process](certificates.html)).
 :::
 
-- [Login: FlexNow](https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login){target=_blank} - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden
-- Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter
-- Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)
-- Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester:
-"Noten endgültig freischalten und verbuchen" ([Nextcloud]({{< var nextcloud.grades >}}){target=_blank}). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)
-- Only store grades as PDF (not as csv)?
-- Klausuren entsprechend der Reihenfolge im PDF sortieren.
-- The corrected examination papers should be returned to the Examination Office (via Hauspost) in a secure box or envelope.
+- [Login: FlexNow](https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login){target="_blank"} – Department Module – Examination Participants / Centrally Organized / Select Course / Load Participants.
+- Form for editing individual participants: Enter grades (points do not need to be entered), save, and continue.
+- Alternatively, use CSV: Export (UTF-8), add grades/points via VLOOKUP, and import (CSV format: semicolon-separated, no quotation marks).
+- In the upper section: Load Participants, Print, Export by Course Semester:
+  "Permanently release and record grades" ([Nextcloud]({{< var nextcloud.grades >}}){target="_blank"}). After activation, changes can only be made through the Examination Office (wiai.pruefungen@uni-bamberg.de).
+- Only store grades as PDF (not as CSV)?
+- Sort the corrected examination papers according to the order in the PDF.
+- Return corrected examination papers to the Examination Office (via internal mail) in a secure box or envelope.
 
-Projekt:
+Project:
 
-- Dezentral
-- "Teilnehmer hinzufügen"
-- Noten eintragen
-- Noten freigeben
-- Noten als PDF in Nextcloud ablegen (ggf. Excel-Datei löschen)
+- Decentralized examination
+- "Add participants"
+- Enter grades
+- Release grades
+- Save grades as PDF in Nextcloud (delete the Excel file if applicable)
 
 ::: callout-note
-If grades cannot be entered, reach out to the FlexNow team via e-mail: [flexnow@uni-bamberg.de](mailto:flexnow@uni-bamberg.de>).
+If grades cannot be entered, contact the FlexNow team via email: [flexnow@uni-bamberg.de](mailto:flexnow@uni-bamberg.de).
 :::
 
 ## ERASMUS students
 
-For ERASMUS students, the FlexNow team has to assign students to modules. Use the following e-mail template:
+For ERASMUS students, the FlexNow team must assign students to modules. Use the following email template:
 
 ```Markdown
 Betreff: Anlage eines Moduls für ERASMUS Studierende
