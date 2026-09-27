@@ -53,15 +53,15 @@ flowchart LR
 
 <br>
 
-::: {.callout-note collapse="true"}
+::: {.callout-note collapse="true" title="Details"}
 All input modes are normalized into the shared [`data/events.yaml`](https://github.com/fs-ise/handbook/blob/main/data/events.yaml) file before the calendar page and ICS feed are generated.
 
-### Manual additions
+## Manual additions
 
 Manual additions are maintained directly in [`data/events.yaml`](https://github.com/fs-ise/handbook/edit/main/data/events.yaml).
 Use this mode for events that are not available from an automated source.
 
-### Automated imports
+## Automated imports
 
 Some imports are automated, so most users do not need these operational details during normal calendar use.
 
@@ -74,8 +74,6 @@ Invalid, empty, duplicate, or suspiciously reduced feeds fail without publishing
 Investigate warnings upstream and remove confirmed cancellations from
 `data/events.yaml` in a reviewed change; automatic deletion requires an explicit
 policy backed by reliable proof that the feed and its date range are complete.
-
-## Details
 
 ### TimeEdit sync
 
@@ -101,7 +99,7 @@ python -m pip install .
 python src/sync_aisnet.py
 ```
 
-### ICS feed / calendar sync output
+## ICS feed / calendar sync output
 
 The ICS feed is generated from the same canonical data as the calendar page by [`src/update_calendar.py`](src/update_calendar.py), with regular updates handled by the [calendar ICS GitHub Action](.github/workflows/update_calendar_ics.yml).
 Subscribe to the ISE calendar ICS feed from external calendar apps instead of manually copying events.
