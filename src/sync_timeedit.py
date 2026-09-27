@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 import urllib.request
 from datetime import date, datetime
 from typing import Any
@@ -68,6 +69,20 @@ def component_text(component: Any, name: str) -> str:
     return "" if value is None else str(value).strip()
 
 
+def normalize_timeedit_title(title: str) -> str:
+    """Remove volatile TimeEdit fields while retaining timetable information."""
+    title = re.sub(r"\s*Scheduler:\s*[^.]*\.\s*", " ", title)
+    title = re.sub(r"\s*No of students on campus:\s*\d+\s*,\s*", " ", title)
+    title = re.sub(r",\s*\d+\s*$", "", title)
+    return " ".join(title.split())
+
+
+def normalize_timeedit_event(event: dict[str, Any]) -> dict[str, Any]:
+    normalized = dict(event)
+    normalized["title"] = normalize_timeedit_title(str(event.get("title", "")))
+    return normalized
+
+
 def stable_source_uid(title: str, start: str, end: str, location: str) -> str:
     digest = hashlib.sha256(
         "\u241f".join([title, start, end, location]).encode("utf-8")
@@ -87,12 +102,14 @@ def is_lecture_event(title: str, start: str, end: str) -> bool:
 
 
 def event_from_component(component: Any) -> dict[str, str] | None:
-    title = component_text(component, "summary")
+    raw_title = component_text(component, "summary")
     location = component_text(component, "location")
     start = format_dt(as_berlin_datetime(component.decoded("dtstart")))
     end = format_dt(as_berlin_datetime(component.decoded("dtend")))
-    if not is_lecture_event(title, start, end):
+    if not is_lecture_event(raw_title, start, end):
         return None
+
+    title = normalize_timeedit_title(raw_title)
 
     source_uid = component_text(component, "uid") or stable_source_uid(
         title, start, end, location
@@ -143,7 +160,9 @@ def main() -> None:
         raise ValueError("Parsed YAML is not a list")
 
     timeedit_events = parse_timeedit_events(fetch_timeedit_ical())
-    combined_events = reconcile_events(raw, timeedit_events, "timeedit")
+    combined_events = reconcile_events(
+        raw, timeedit_events, "timeedit", event_normalizer=normalize_timeedit_event
+    )
     publish_calendar(combined_events)
     print(f"Reconciled {len(timeedit_events)} TimeEdit events in {EVENTS_PATH}")
 

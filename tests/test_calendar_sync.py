@@ -10,7 +10,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
 
 from sync_aisnet import parse_aisnet_events
-from sync_timeedit import parse_timeedit_events
+from sync_timeedit import normalize_timeedit_event, parse_timeedit_events
 from sync_utils import BERLIN, FeedValidationError, publish_calendar, reconcile_events
 from update_calendar import expand_events, generate_ical
 
@@ -92,6 +92,74 @@ END:VCALENDAR\r
     assert parsed[0]["source_uid"] == "te-1"
     with pytest.raises(FeedValidationError, match="duplicate UID"):
         reconcile_events([], parsed + parsed, "timeedit", now=NOW)
+
+
+PR_97_TITLE_57 = (
+    "Bachelor of Science 2621, BBA E5 Sem1, Introduction to Programming. "
+    "Kennung: 2621 BBA E5. Scheduler: Shestakova, Olga. "
+    "No of students on campus: 57, Wagner, Gerit, Lecture / Vorlesung, 15"
+)
+PR_97_TITLE_56 = (
+    "Bachelor of Science 2621, BBA E5 Sem1, Introduction to Programming. "
+    "Kennung: 2621 BBA E5. Scheduler: Shestakova, Olga. "
+    "No of students on campus: 56, Wagner, Gerit, Lecture / Vorlesung, 16"
+)
+
+
+def timeedit_fixture(title: str, *, start: str = "20260930T140000", uid: str = "") -> bytes:
+    uid_line = f"UID:{uid}\r\n" if uid else ""
+    return f"""BEGIN:VCALENDAR\r
+VERSION:2.0\r
+BEGIN:VEVENT\r
+{uid_line}
+DTSTART:{start}\r
+DTEND:20260930T153000\r
+SUMMARY:{title}\r
+LOCATION:T6 A. Room capacity: 72\r
+END:VEVENT\r
+END:VCALENDAR\r
+""".encode()
+
+
+def test_timeedit_volatile_title_fields_do_not_change_event_or_output():
+    before = parse_timeedit_events(timeedit_fixture(PR_97_TITLE_57))
+    after = parse_timeedit_events(timeedit_fixture(PR_97_TITLE_56))
+
+    assert before == after
+    assert before[0]["title"] == (
+        "Bachelor of Science 2621, BBA E5 Sem1, Introduction to Programming. "
+        "Kennung: 2621 BBA E5. Wagner, Gerit, Lecture / Vorlesung"
+    )
+    assert generate_ical(expand_events(before)) == generate_ical(expand_events(after))
+
+
+def test_timeedit_normalization_preserves_substantive_changes_and_is_idempotent():
+    original = parse_timeedit_events(timeedit_fixture(PR_97_TITLE_57, uid="te-97"))
+    changed = parse_timeedit_events(
+        timeedit_fixture(PR_97_TITLE_56, start="20260930T141500", uid="te-97")
+    )
+    historical = {
+        **original[0],
+        "source_uid": "historical",
+        "title": PR_97_TITLE_57,
+        "end": "2024-09-30 15:30",
+    }
+    manual = event(None, None, PR_97_TITLE_57, "2024-01-01 09:00", "2024-01-01 10:00")
+
+    assert original != changed
+    assert generate_ical(expand_events(original)) != generate_ical(expand_events(changed))
+    reconciled = reconcile_events(
+        [historical, manual], changed, "timeedit", now=NOW,
+        event_normalizer=normalize_timeedit_event,
+    )
+    assert historical not in reconciled
+    assert reconciled[0]["title"] == manual["title"]
+    assert reconciled[1]["title"] == original[0]["title"]
+    assert reconciled[2] == changed[0]
+    assert reconcile_events(
+        reconciled, changed, "timeedit", now=NOW,
+        event_normalizer=normalize_timeedit_event,
+    ) == reconciled
 
 
 def test_aisnet_parses_fixture_and_rejects_conflicting_uid():

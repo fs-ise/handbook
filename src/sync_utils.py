@@ -5,7 +5,7 @@ import os
 import tempfile
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any, Callable, Literal
 
 import yaml
 from zoneinfo import ZoneInfo
@@ -124,12 +124,19 @@ def reconcile_events(
     existing: list[dict[str, Any]], incoming: list[dict[str, Any]], source: str,
     *, now: datetime | None = None,
     missing_future_policy: Literal["preserve", "delete"] = "preserve",
+    event_normalizer: Callable[[dict[str, Any]], dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     """Update events by (source, source_uid), retaining absent events safely.
 
     ``delete`` is intentionally opt-in and is only appropriate when a caller has
     independently established complete upstream coverage for the relevant range.
     """
+    if event_normalizer is not None:
+        existing = [
+            event_normalizer(event) if event.get("source") == source else event
+            for event in existing
+        ]
+        incoming = [event_normalizer(event) for event in incoming]
     validate_incoming_events(existing, incoming, source, now=now)
     current = now or datetime.now(BERLIN)
     if current.tzinfo is None:
