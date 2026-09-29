@@ -4,106 +4,18 @@ transition_status: "updated"
 transition_comment: "update"
 ---
 
+::: {.callout-warning title="TODO"}
+update `labot thesis --register` (maybe based on copier template?)
+:::
+
 ::: callout-tip
-This page is the **supervisor-facing operational guide**. Direct students to the [student-facing thesis guidance](https://fs-ise.github.io/theses/){target=_blank} for instructions, templates, and research guidance rather than reproducing that material here.
+This page is the **supervisor-facing operational guide**.
+Direct students to the [student-facing thesis guidance](https://fs-ise.github.io/theses/){target=_blank} for instructions, templates, and research guidance rather than reproducing that material here.
 :::
 
 ::: confidential
 Information on individual theses is recorded internally on [Nextcloud]({{< var nextcloud.theses >}}){target=_blank}.
 :::
-
-<!--
-    ```{mermaid}
-    sequenceDiagram
-        Note over Professor,Student: 1. Initial meetings to discuss the general topic
-        Note over Student,Examination office: 2. Formal admission
-        Student->>Examination office: Apply for admission
-        activate Examination office
-        Note right of Examination office: Check admission<br/>requirements
-        Examination office->>Student: Topic confirmation form (docx)
-        Examination office->>Team Assistant: Topic confirmation form (docx)
-        deactivate Examination office
-        Note over Professor,Student: Topic selection and registration
-        Student->>Professor: Signed topic confirmations (2x)
-        activate Professor
-        Professor->>Student: Signed topic confirmation I
-        Professor->>Team Assistant: Signed topic confirmation II
-        deactivate Professor
-        activate Team Assistant
-        Team Assistant->>Examination office: Topic confirmation (docx)
-        deactivate Team Assistant
-        loop Regularly
-            Note over Professor,Student: 3. Thesis writing and feedback sessions
-        end
-            Note over Student,Examination office: 4. Submission
-        Student->>Examination office: Submit via the form server
-        Examination office->>Team Assistant: digital version (to archive)
-        activate Team Assistant
-        Team Assistant->>Professor: Digital version
-        deactivate Team Assistant
-        activate Professor
-        alt Master thesis
-            Note over Professor,Student: 5. Thesis presentation
-        end
-        Note over Professor,Student: 6. Grading
-        Professor->>Team Assistant: Review and grade
-        activate Team Assistant
-        Team Assistant->>Examination office: Review and grade
-        deactivate Team Assistant
-        Professor->>Student: Invitation for feedback session
-        deactivate Professor
-        Note over Professor,Student: 7. Feedback session
-    ```
-
-    ## Registration
-
-    The administrative process starts with formal thesis registration.
-
-    Students send the **application for admission** to the thesis to the *examination office* via their **stud email address**.
-    The examination office **verifies** the admission requirements.
-
-    The examination office may ask the student to request **approval from the examination committee** (Prüfungsausschuss) to write a thesis in the area of *Digital Work*.
-    This is the case when older regulations (Studien- und Fachprüfungsordnung) apply (i.e., when master studies were started before 2018), or for students of Informatics and Applied Informatics (e.g., International Software Systems Science).
-
-    Students **receive the topic confirmation** as a (protected) Word document (.docx) by e-mail together with processing/submission instructions.
-    The next step is to make an appointment with the thesis advisor to determine the topic and sign the topic confirmation. The Team Assistant receives this message in CC.
-
-    The student and thesis advisor schedule a meeting to determine the topic and **sign the topic confirmation**.
-    If the appointment is online, students can print and sign the confirmation, and send it to our [postal address](https://www.uni-bamberg.de/digital-work/team/prof-dr-gerit-wagner/){target=_blank}.
-    It is important that we receive **two paper versions with original signatures**:
-
-    - 1 original with the signature of the professor and the student **for the student**.
-    - 1 original with the signature of the professor and the student **for archiving at the chair** (added to the [archive]({{< var nextcloud.grades >}}){target=_blank}).
-
-    To **complete the registration**, the thesis advisor
-
-    ```bash
-    # Save topic confirmation (docx) in this repository and run
-    labot thesis --register
-    # check and merge pull request
-    ```
-
-    - The script creates a folder in the [theses overview](https://github.com/fs-ise/theses-confidential/){target=_blank}.
-    - Moves the documents to [Nextcloud]({{< var nextcloud.theses >}}){target=_blank}.
-    - Enters the **topic** of the thesis and **date** of the topic issue in the Word document (the date of the topic issue cannot be before the date of enrollment in the Word document; if the Word document cannot be found in the E-Mail history, students can share it):
-
-    ![Registration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/thesis-registration.png){target=_blank}
-
-    - Sends an e-mail containing the Word document to the examination office, which enters the topic and the day of the topic issue into FlexNow:
-
-    > wiai.pruefungen@uni-bamberg.de
-    >
-    > **Anmeldung Abschlussarbeit**
-    >
-    > Liebe Frau Schick,
-    >
-    > Anbei übersende ich Ihnen die ausgefüllte Themenbestätigung für XXXXXXX.
-    >
-    > Mit besten Grüßen
-    >
-    > Gerit Wagner
-
--->
 
 ## Registration and project initiation
 
@@ -129,7 +41,8 @@ Gerit Wagner
 
 ### First supervision meeting
 
-Use the first meeting to establish a shared, realistic project frame. Record the decisions in the existing internal thesis notes; do not create a separate tracking system.
+Use the first meeting to establish a shared, realistic project frame.
+Record the decisions in the existing internal thesis notes; do not create a separate tracking system.
 
 - [ ] Agree on the research objective or question and the intended contribution.
 - [ ] Define the scope and explicitly note what is out of scope.
@@ -142,15 +55,18 @@ Use the first meeting to establish a shared, realistic project frame. Record the
 - [ ] Set meeting expectations: the student sends a brief agenda, current material, decisions needed, and specific questions early enough to review; after the meeting, the student records agreed actions.
 - [ ] Explain that students should request feedback proactively and raise conceptual, methodological, data, or implementation difficulties early.
 
-Avoid extending the exposé phase unnecessarily. Once it provides a viable research question, scope, and approach, tell the student clearly that it is complete and that thesis work should proceed.
+Avoid extending the exposé phase unnecessarily.
+Once it provides a viable research question, scope, and approach, tell the student clearly that it is complete and that thesis work should proceed.
 
 ## Advising and iterative feedback
 
-Treat supervision as an iterative research-development process: the student develops and justifies the work, the supervisor challenges assumptions and gives directional feedback, and the student decides how to implement or discuss that feedback. Supervision does not transfer ownership of the research to the supervisor.
+Treat supervision as an iterative research-development process: the student develops and justifies the work, the supervisor challenges assumptions and gives directional feedback, and the student decides how to implement or discuss that feedback.
+Supervision does not transfer ownership of the research to the supervisor.
 
 For each substantial feedback round:
 
-1. **Prepare:** Ask the student to identify the maturity of the material and the specific questions on which feedback is needed. Link to the relevant [student-facing guidance](https://fs-ise.github.io/theses/){target=_blank} rather than repeating writing or method instructions.
+1. **Prepare:** Ask the student to identify the maturity of the material and the specific questions on which feedback is needed.
+   Link to the relevant [student-facing guidance](https://fs-ise.github.io/theses/){target=_blank} rather than repeating writing or method instructions.
 2. **Recommend:** Give prioritized, actionable recommendations and distinguish required corrections from optional suggestions or possible extensions.
 3. **Agree:** Record the important recommendations and agreed actions in the existing thesis notes or meeting notes.
 4. **Follow up:** At the next exchange, ask the student to show where each agreed action was implemented or explain why it should be discussed further.
@@ -159,12 +75,15 @@ Throughout the project:
 
 - State expectations, changes in direction, and concerns about progress or quality promptly and transparently.
 - Relate feedback to the published [assessment criteria](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank}; students should not be surprised by the basis of their grade.
-- Encourage students to seek feedback before uncertainty becomes a major project risk. Make clear that disclosing a difficulty early is part of responsible research practice.
+- Encourage students to seek feedback before uncertainty becomes a major project risk.
+  Make clear that disclosing a difficulty early is part of responsible research practice.
 - Keep feedback proportionate to the stage of the work: emphasize direction and method early, then argument, evidence, coherence, and presentation as the thesis matures.
 - Begin check-ins with an open, respectful question about progress or current obstacles, while allowing students to choose how much personal context they share.
 
 ::: {.callout-note title="Conversation starters"}
-When checking in with thesis students, begin with questions that express interest in their experience—without being too personal. Let students choose how much they wish to share. Examples include:
+When checking in with thesis students, begin with questions that express interest in their experience—without being too personal.
+Let students choose how much they wish to share.
+Examples include:
 
 - *How was the start of your semester?*
 - *Is this a busy time for you? How many exams are on your plate, and which ones?*
@@ -173,22 +92,10 @@ When checking in with thesis students, begin with questions that express interes
 These questions help foster a supportive, respectful environment for supervision.
 :::
 
-<!--
-From December 1st, 2025, the binding and timely submission of bachelor's and master's theses will take place digitally via the form server [here](https://form.uni-bamberg.de/form/alias/1/einreichung-ba-ma-arbeit/){target=_blank}. Digital submission replaces the submission of printed copies, as was previously the case.
-
-## Thesis presentation
-
-- For IS/... students writing a Master's thesis, a presentation is mandatory.
-- The thesis advisor and student set a date for the presentation. Students can decide whether the presentation should be scheduled before or after the grading.
-- A second examiner is required (check whether this is adequate).
-- The grading template is available [here](https://github.com/fs-ise/handbook/raw/main/assets/templates/evaluation_thesis_presentation/thesis_presentation.docx){target=_blank}
-- Protocols should be archived digitally (Nextcloud).
-- A summary and grade of the presentation must be included in the thesis review.
--->
-
 ## Project closure
 
-Use this checklist after the student submits the thesis. The responsible supervisor should verify any program-specific institutional requirements rather than assuming that all programs follow the same process.
+Use this checklist after the student submits the thesis.
+The responsible supervisor should verify any program-specific institutional requirements rather than assuming that all programs follow the same process.
 
 ### Submission and materials
 
@@ -206,10 +113,12 @@ Use this checklist after the student submits the thesis. The responsible supervi
     ```
 
 - [ ] Assess the thesis using the generated template and the published [assessment criteria](https://fs-ise.github.io/theses/docs/criteria.html){target=_blank}.
-- [ ] During assessment, check for potential plagiarism and other indications that submitted work may misrepresent authorship or permitted AI/tool use. Automated similarity or AI-detection results are not proof and cannot reliably establish authorship; manually assess the underlying evidence.
+- [ ] During assessment, check for potential plagiarism and other indications that submitted work may misrepresent authorship or permitted AI/tool use.
+  Automated similarity or AI-detection results are not proof and cannot reliably establish authorship; manually assess the underlying evidence.
 - [ ] Also check for content generated by AI: <!-- generative AI: cannot be detected reliably -->
 
-    The following tools may be used only as supplementary screening aids. Their scores are not reliable evidence that content was AI-generated and must not be used to determine authorship or misconduct without independently verifiable evidence.
+    The following tools may be used only as supplementary screening aids.
+    Their scores are not reliable evidence that content was AI-generated and must not be used to determine authorship or misconduct without independently verifiable evidence.
 
     - [EduWriter AI Content Detector](https://eduwriter.ai/ai-content-detector){target=_blank} — free version for teachers & students; paste/upload text to get % AI ‐ likelihood.
     - [QuillBot AI Detector](https://quillbot.com/ai-content-detector){target=_blank} — free version; supports multiple languages.
@@ -217,7 +126,8 @@ Use this checklist after the student submits the thesis. The responsible supervi
     - [SurgeGraph AI Detector](https://surgegraph.io/ai-detector){target=_blank} — free version; sentence-level tagging.
     - [GPTZero](https://gptzero.me/){target=_blank} — free basic usage; paste in text / upload to get AI content score.
 
-- [ ] If misconduct is suspected, follow the [plagiarism procedure](plagiarism.qmd). Document and refer a substantiated suspicion through the formal process rather than independently imposing or recording a misconduct-related sanction.
+- [ ] If misconduct is suspected, follow the [plagiarism procedure](plagiarism.qmd).
+  Document and refer a substantiated suspicion through the formal process rather than independently imposing or recording a misconduct-related sanction.
 - [ ] Complete and spell-check the assessment report within the deadline set by the responsible examination office; the internal target is two weeks.
 - [ ] Archive the final assessment report as a PDF in the [grade archive]({{< var nextcloud.grades >}}){target=_blank} and consolidate the assessment materials.
 - [ ] Register or forward the grade through the applicable institutional process and verify that the required step has been completed.
@@ -261,47 +171,14 @@ Use this checklist after the student submits the thesis. The responsible supervi
 
 At the feedback meeting, use the same [assessment criteria](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank} to explain the grade, identify strengths and areas for development, and close any remaining administrative or repository-access questions.
 
-<!--
-    - The hardback copy of the thesis, which remains at the chair, is stored in the archive room WE5/05.058.
-    - If programming is required as part of the thesis, this should be confirmed in the review.
-    - For master theses, the weight of the written part is 67% and the weight of the presentation is 33% (based on [Master WI MHB](https://www.uni-bamberg.de/fileadmin/abt-studium/Modulhandbuecher/WIAI/WI/Master/MHB_MA_WI_2018.pdf){target=_blank}). For IBWL students, the presentation is mandatory but not graded. **Grades for the thesis and the colloquium must be stated separately (the overall grade must not be stated - it is calculated by FlexNow)**.
-    - The review and grade in paper form (signed by the professor) are sent to the examination office by the Team Assistant (no cover letter, Hauspost: Ref II/3).
-    - Grades are entered by the examination office.
-    - Students can check the grade via FlexNow.
-
-    A confirmation for passing the thesis (Bestehensbescheinigung) can be issued upon request. Thesis supervisors can send a confirmation to the examination office via email. The official confirmation is issued by the examination office.
-
-    > wiai.pruefungen(at)uni-bamberg.de
-    >
-    > Sehr geehrte Frau Schick,
-    >
-    > Ich bestätige, dass Herr/Frau NAME die Master/Bachelorarbeit mit einer Note besser als 4.0 besteht. Können Sie das Ausstellen der Bestehensbescheinigung veranlassen?
-    >
-    > Mit besten Grüßen
--->
-
 ## Publication and reuse opportunities
 
 When a thesis makes a promising conceptual, empirical, methodological, or technical contribution, discuss whether it could be developed into a publication, research software, or an open-source contribution.
 
 - [ ] Explain that follow-on work is optional, is separate from completing and grading the thesis, and normally requires substantial additional work.
 - [ ] Agree on a realistic next step, responsibilities, and whether the student wants to remain involved before investing in further development.
-- [ ] Discuss authorship early. Co-authorship depends on substantive contributions to the follow-on output, not on supervision or thesis authorship alone.
+- [ ] Discuss authorship early.
+  Co-authorship depends on substantive contributions to the follow-on output, not on supervision or thesis authorship alone.
 - [ ] Obtain and document the necessary permission before publishing the thesis or sharing its data, code, software, or other materials; check third-party rights, licenses, confidentiality, and data-protection constraints.
-- [ ] Ask whether the student permits the thesis to be made available to other students. A decision about sharing the thesis does not automatically grant permission to share its underlying data or code.
-
-<!--
-    ## Applicable regulations
-
-    - Bachelor Business Information Systems
-    - Bachelor International Information Systems Management
-    - Bachelor Angewandte Informatik
-    - Bachelor Software Systems Science
-    - Master Business Information Systems
-    - Master International Information Systems Management
-    - Master Angewandte Informatik
-    - Master Software Systems Science
-    - Master Computing in the Humanities
-
-    - [Prüfungs- und Studienordnungen](https://www.uni-bamberg.de/abt-studium/aufgaben/pruefungs-studienordnungen/){target=_blank}, insbes. Modulhandbücher
--->
+- [ ] Ask whether the student permits the thesis to be made available to other students.
+  A decision about sharing the thesis does not automatically grant permission to share its underlying data or code.
