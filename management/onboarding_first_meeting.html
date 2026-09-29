@@ -73,15 +73,15 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -95,17 +95,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -115,6 +104,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -954,6 +954,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/onboarding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Onboarding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Travel</span></a>
   </div>
@@ -1043,12 +1049,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<p>Welcome to the Digital-Work Team! This agenda structures our first onboarding meeting. We’ll discuss how we work, set initial goals, and align on expectations.</p>
+<p>Welcome to the ISE team at Frankfurt School! This checklist structures our first onboarding meeting. We’ll discuss how we work, set initial goals, and align on expectations.</p>
 <section id="welcome-introductions-5-min" class="level2">
 <h2 class="anchored" data-anchor-id="welcome-introductions-5-min">1. Welcome &amp; Introductions (5 min)</h2>
 <ul>
 <li>Du ok (Sie)?</li>
-<li>Overview of the role and tasks (within the overarching goals/team)</li>
+<li>Review the role using the authoritative <a href="responsibilities.html">Responsibilities</a> page</li>
 <li>What do you hope to learn or contribute during your time with us? When would it be a success?</li>
 </ul>
 <blockquote class="blockquote">
@@ -1060,19 +1066,20 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </section>
 <section id="our-team-how-we-work-10-min" class="level2">
 <h2 class="anchored" data-anchor-id="our-team-how-we-work-10-min">2. Our Team &amp; How We Work (10 min)</h2>
-<section id="vision-mission-00-goals" class="level3">
-<h3 class="anchored" data-anchor-id="vision-mission-00-goals">🌍 Vision &amp; Mission: 00 Goals</h3>
+<section id="vision-mission" class="level3">
+<h3 class="anchored" data-anchor-id="vision-mission">🌍 Vision &amp; Mission</h3>
 <ul>
 <li>Digital technologies transform how work is organized and designed.</li>
 <li>We strive for impact in <strong>research, teaching, and practice</strong>, based on openness, rigor, and support.</li>
 </ul>
 </section>
-<section id="operating-principles-sop" class="level3">
-<h3 class="anchored" data-anchor-id="operating-principles-sop">🧭 Operating Principles: SOP</h3>
+<section id="operating-principles" class="level3">
+<h3 class="anchored" data-anchor-id="operating-principles">🧭 Operating Principles</h3>
 <ul>
 <li>Focused work (deep work, blocking time, Pomodoro, etc.) - Discuss what focused work means for us (when/where/how)</li>
 <li>Collaborative work (co-working, knowledge-sharing, review sessions)</li>
 <li>GitHub as our single source of truth</li>
+<li>Review the <a href="sop.html">standard operating principles</a></li>
 </ul>
 </section>
 </section>
@@ -1129,6 +1136,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li>Open the <strong>personal agenda repository</strong></li>
 <li>Draft 1 semester-level <strong>Objective</strong> (qualitative goal)</li>
 <li>Define 2–3 <strong>Key Results</strong> (measurable outcomes)</li>
+<li>Open the <a href="../academy/development.html#assistant-development-pathway">Assistant Development Pathway</a> and choose realistic <em>observe → contribute → initiate</em> activities.</li>
+<li>Agree on trackable deliverables, target dates, needed support, and the first review date. Adapt them to interests, contract duration, workload, and prior experience.</li>
 </ul>
 <p><strong>Example:</strong></p>
 <ul>
@@ -1144,6 +1153,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <blockquote class="blockquote">
 <p>Use log to break down KRs into weekly tasks. Open issues for specific tasks.</p>
 </blockquote>
+<p>Keep personal employment and development details in the private agenda. Link to GitHub issues for concrete deliverables instead of copying operational task lists.</p>
 <section id="align-with-team-projects" class="level3">
 <h3 class="anchored" data-anchor-id="align-with-team-projects">🔄 Align with Team Projects</h3>
 <ul>
@@ -1164,6 +1174,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li>research-hub</li>
 </ul></li>
 <li>Email setup, calendar subscription, short bio + photo for the website + 02 Teams (Handbook)</li>
+<li>Confirm that the agenda Gantt chart has the recommended Studies, Contract, Development, Responsibilities, Skills, and Milestones sections.</li>
 </ul>
 </section>
 <section id="communication-check-ins" class="level3">
@@ -1185,6 +1196,7 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <li>Confirm next steps:
 <ul>
 <li>Finalize OKRs in the next meetings / within the first 2-4 weeks</li>
+<li>Record the first shadowing or training activity and planned internal presentation</li>
 <li>Start first weekly log and issue in your agenda repo</li>
 <li>Schedule a co-working session this week</li>
 </ul></li>

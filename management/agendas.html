@@ -108,17 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -128,6 +117,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -989,6 +989,12 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/onboarding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Onboarding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Travel</span></a>
   </div>
@@ -1105,7 +1111,9 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <section id="update-the-agenda-regularly" class="level2">
 <h2 class="anchored" data-anchor-id="update-the-agenda-regularly">2. Update the agenda regularly</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Define and revisit shared goals objectives and key results (OKR) together.</label></li>
+<li><label><input type="checkbox">Define and revisit shared objectives and key results (OKRs) together.</label></li>
+<li><label><input type="checkbox">Proactively maintain development objectives, milestones, evidence, and upcoming activities.</label></li>
+<li><label><input type="checkbox">Include planned shadowing, internal presentations, publication contributions, and networking where relevant.</label></li>
 <li><label><input type="checkbox">Maintain a list of major ongoing projects.</label></li>
 <li><label><input type="checkbox">Keep a running “Items to Discuss” section.</label></li>
 <li><label><input type="checkbox">Maintain a weekly task list:</label>
@@ -1132,7 +1140,8 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <section id="maintain-a-timeline-and-planning-view" class="level2">
 <h2 class="anchored" data-anchor-id="maintain-a-timeline-and-planning-view">4. Maintain a timeline and planning view</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Create Mermaid timelines (Gantt charts).</label></li>
+<li><label><input type="checkbox">Create a Mermaid Gantt chart with sections for <strong>Studies</strong>, <strong>Contract</strong>, <strong>Development</strong>, <strong>Responsibilities</strong>, <strong>Skills</strong>, and <strong>Milestones</strong>.</label></li>
+<li><label><input type="checkbox">Give every Mermaid task a unique ID so dependencies remain unambiguous.</label></li>
 <li><label><input type="checkbox">Track contracts and important deadlines.</label></li>
 <li><label><input type="checkbox">Keep an overview of workload / hours.</label></li>
 <li><label><input type="checkbox">Plan development goals (topics, methods, skills).</label></li>
@@ -1203,11 +1212,13 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <p>To avoid duplication and keep information structured:</p>
 <ul>
 <li>Use GitHub issues for well-defined tasks and discussions</li>
+<li>Link concrete deliverables to GitHub issues instead of copying operational task lists into the agenda</li>
 <li>Link issues directly in the agenda</li>
 <li>Link to relevant repositories, documents, datasets, or papers</li>
 <li>Use the agenda as a coordination hub — not as a storage location</li>
 </ul>
 <p>The agenda serves as a shared navigation layer across distributed work.</p>
+<p>Personal employment and development details stay in the private agenda repository and must not be added to the public handbook.</p>
 </section>
 </section>
 <section id="template" class="level2">
@@ -1229,6 +1240,24 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### CW 1</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meeting note</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Add a planning view using the recommended sections. Dates below are placeholders; every task ID is unique.</p>
+<pre class="mermaid"><code>gantt
+    title Individual planning view
+    dateFormat YYYY-MM-DD
+    section Studies
+    Study period                 :studies_period, 2026-01-01, 90d
+    section Contract
+    Contract period              :contract_period, 2026-01-01, 180d
+    section Development
+    Shadow a planning session    :development_shadow, 2026-01-15, 14d
+    Internal presentation        :development_presentation, after development_shadow, 30d
+    section Responsibilities
+    Current responsibility       :responsibility_current, 2026-01-01, 60d
+    section Skills
+    Complete selected training   :skill_training, 2026-01-10, 30d
+    section Milestones
+    Development review           :milestone, milestone_review, 2026-03-31, 0d</code></pre>
+<p>Replace the examples with links to objectives or GitHub issues; do not duplicate issue task lists in the chart.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>

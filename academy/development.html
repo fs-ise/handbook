@@ -73,6 +73,28 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -93,28 +115,6 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
-  background-image: none;
-}
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 </style>
@@ -954,6 +954,12 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/onboarding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Onboarding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Travel</span></a>
   </div>
@@ -1046,21 +1052,79 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <table>
 <tbody><tr>
 <td>
-<a href="#foundations">Foundations</a>
+<a href="#assistant-development-pathway">Assistant pathway</a>
 </td>
 <td>
-<a href="#teaching">Teaching</a>
+<a href="#foundations">Foundations</a>
 </td>
 </tr>
 <tr>
 <td>
+<a href="#teaching">Teaching</a>
+</td>
+<td>
 <a href="#networking">Networking</a>
 </td>
+</tr>
+<tr>
 <td>
 <a href="#research">Research</a>
 </td>
+<td>
+</td>
 </tr>
 </tbody></table>
+<section id="assistant-development-pathway" class="level2">
+<h2 class="anchored" data-anchor-id="assistant-development-pathway">Assistant Development Pathway</h2>
+<p>The pathway turns onboarding and professional development into a shared, trackable process. Its progression is <strong>observe → contribute → initiate</strong>: first learn by watching an experienced colleague, then complete scoped work with feedback, and finally own an activity independently. The phases may overlap, and not every assistant needs the same activities or pace.</p>
+<p>Agree on the pathway during <a href="../management/onboarding.html">onboarding</a>, maintain it in the private <a href="../management/agendas.html">agenda repository</a>, and review it in <a href="../management/planning_review_sessions.html">planning and review sessions</a>. Use <a href="../management/responsibilities.html">Responsibilities</a> as the authoritative source for operational duties; the pathway describes development rather than adding duties.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Phase</th>
+<th>Focus</th>
+<th>Trackable deliverables</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Onboarding</strong></td>
+<td>Establish the agenda and individual objectives.</td>
+<td>Private agenda repository created; interests and baseline skills recorded; one or more objectives, success measures, target dates, and a first review date agreed.</td>
+</tr>
+<tr class="even">
+<td><strong>Training and shadowing</strong> (<em>observe</em>)</td>
+<td>Learn from a project-initiation, manuscript-revision, or improvement-planning session and use relevant learning resources below.</td>
+<td>At least one shadowing activity recorded; a short reflection and questions added to the private agenda; an agreed training resource completed or scheduled.</td>
+</tr>
+<tr class="odd">
+<td><strong>Contribution</strong> (<em>contribute</em>)</td>
+<td>Complete defined assignments with feedback and share learning internally.</td>
+<td>Linked GitHub issue(s) completed with review evidence; one internal presentation delivered; feedback and the resulting next step recorded.</td>
+</tr>
+<tr class="even">
+<td><strong>Ownership</strong> (<em>initiate</em>)</td>
+<td>Independently initiate and coordinate an activity or improvement.</td>
+<td>Proposal or issue with scope, stakeholders, milestones, and success criteria created; activity coordinated to an agreed outcome; retrospective recorded.</td>
+</tr>
+<tr class="odd">
+<td><strong>Networking</strong></td>
+<td>Participate in academic events, explore publication opportunities, and establish professional contacts.</td>
+<td>Relevant event participation recorded; at least one publication opportunity assessed or contribution discussed; networking follow-up or new professional contact documented.</td>
+</tr>
+</tbody>
+</table>
+<p>These are pathway categories, not fixed quotas. Adapt the number, scope, and timing of deliverables to individual interests, employment duration, contracted workload, existing experience, and project opportunities. Do not put personal employment or development details in the public handbook. Keep them in the private agenda and link operational deliverables to their GitHub issues.</p>
+</section>
+<section id="learning-resources" class="level2">
+<h2 class="anchored" data-anchor-id="learning-resources">Learning resources</h2>
+<p>The resources below support a development plan; select only those relevant to the agreed objectives.</p>
+</section>
 <section id="foundations" class="level2">
 <h2 class="anchored" data-anchor-id="foundations">Foundations</h2>
 <p><strong>Productivity and collaboration</strong></p>
@@ -1113,6 +1177,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </section>
 <section id="teaching" class="level2">
 <h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
+<p>The following external learning resources remain available where they fit the individual plan:</p>
 <ul>
 <li><a href="https://www.uni-bamberg.de/zhd/" target="_blank">Zertifikate des Zentrum für Hochschuldidaktik (ZHD)</a></li>
 <li><a href="https://www.fbzhl.fau.de/" target="_blank">Fortbildungszentrum Hochschullehre (FBZHL)</a></li>
@@ -1122,7 +1187,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <section id="networking" class="level2">
 <h2 class="anchored" data-anchor-id="networking">Networking</h2>
 <ul>
-<li><a href="https://www.uni-bamberg.de/trac/" target="_blank">Trimberg Research Academy (trac))</a></li>
+<li><a href="https://www.uni-bamberg.de/trac/" target="_blank">Trimberg Research Academy (TRAc)</a></li>
 <li><a href="https://www.daad.de/de/" target="_blank">Deutscher Akademischer Austauschdienst (DAAD)</a></li>
 <li><a href="https://karpathy.github.io/2016/09/07/phd/" target="_blank">A Survival Guide to a PhD</a></li>
 <li><a href="https://www.uni-bamberg.de/gbwiss/foerderung/" target="_blank">Förderprogramme der Gleichstellungsbeauftragten Wissenschaft der Universität Bamberg</a></li>

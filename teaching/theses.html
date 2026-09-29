@@ -112,15 +112,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -145,15 +145,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -993,6 +993,12 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../management/onboarding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Onboarding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../management/travel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Travel</span></a>
   </div>
@@ -1092,7 +1098,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This page contains <strong>administration details</strong>. For students, information is available on a <a href="https://fs-ise.github.io/theses/" target="_blank">separate page</a>.</p>
+<p>This page is the <strong>supervisor-facing operational guide</strong>. Direct students to the <a href="https://fs-ise.github.io/theses/" target="_blank">student-facing thesis guidance</a> for instructions, templates, and research guidance rather than reproducing that material here.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-confidential callout-titled">
@@ -1105,7 +1111,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Information on individual theses is recorded internally: (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/teaching/theses">nextcloud/teaching/theses</a>).</p>
+<p>Information on individual theses is recorded internally on <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/teaching/theses" target="_blank">Nextcloud</a>.</p>
 </div>
 </div>
 <!--
@@ -1214,13 +1220,12 @@ Tip
     > Gerit Wagner
 
 -->
-<section id="registration" class="level2">
-<h2 class="anchored" data-anchor-id="registration">Registration</h2>
-<ul>
-<li>Students send a request for thesis supervision via e-mail</li>
-<li>Once confirmed by supervisors, students send the request via SuSy</li>
-<li>Supervisors confirm supervision via SuSy</li>
-<li>Suggest a first meeting (via bookings):</li>
+<section id="registration-and-project-initiation" class="level2">
+<h2 class="anchored" data-anchor-id="registration-and-project-initiation">Registration and project initiation</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Respond to the student’s supervision request by email.</label></li>
+<li><label><input type="checkbox">If supervision is accepted, ask the student to submit the request through SuSy and confirm it there.</label></li>
+<li><label><input type="checkbox">Arrange the first supervision meeting, for example through the supervisor’s booking page, and refer the student to the <a href="https://fs-ise.github.io/theses/" target="_blank">student-facing thesis guidance</a> in advance.</label></li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Dear STUDENTNAME,</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1235,14 +1240,40 @@ Tip
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Best regards,</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Gerit Wagner</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="first-supervision-meeting" class="level3">
+<h3 class="anchored" data-anchor-id="first-supervision-meeting">First supervision meeting</h3>
+<p>Use the first meeting to establish a shared, realistic project frame. Record the decisions in the existing internal thesis notes; do not create a separate tracking system.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Agree on the research objective or question and the intended contribution.</label></li>
+<li><label><input type="checkbox">Define the scope and explicitly note what is out of scope.</label></li>
+<li><label><input type="checkbox">Confirm the expected deliverables, including the thesis and any agreed data, code, software, or other supplementary material.</label></li>
+<li><label><input type="checkbox">Set a small number of milestones appropriate to the project, including when the exposé is complete, when substantial interim material should be discussed, and the submission target.</label></li>
+<li><label><input type="checkbox">Clarify methodological requirements, dependencies, feasibility risks, and any ethics, data-protection, or reproducibility requirements that apply.</label></li>
+<li><label><input type="checkbox">Explain the relevant <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a> and how the agreed objectives and deliverables relate to them.</label></li>
+<li><label><input type="checkbox">Agree on supervision arrangements: meeting cadence or triggers, communication channel, typical response expectations, and periods of limited availability.</label></li>
+<li><label><input type="checkbox">Set meeting expectations: the student sends a brief agenda, current material, decisions needed, and specific questions early enough to review; after the meeting, the student records agreed actions.</label></li>
+<li><label><input type="checkbox">Explain that students should request feedback proactively and raise conceptual, methodological, data, or implementation difficulties early.</label></li>
+</ul>
+<p>Avoid extending the exposé phase unnecessarily. Once it provides a viable research question, scope, and approach, tell the student clearly that it is complete and that thesis work should proceed.</p>
 </section>
-<section id="advising" class="level2">
-<h2 class="anchored" data-anchor-id="advising">Advising</h2>
-<p>Notes on thesis advising and process are stored internally on <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/teaching/theses" target="_blank">Nextcloud</a>.</p>
-<p>Supervising principles</p>
+</section>
+<section id="advising-and-iterative-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="advising-and-iterative-feedback">Advising and iterative feedback</h2>
+<p>Treat supervision as an iterative research-development process: the student develops and justifies the work, the supervisor challenges assumptions and gives directional feedback, and the student decides how to implement or discuss that feedback. Supervision does not transfer ownership of the research to the supervisor.</p>
+<p>For each substantial feedback round:</p>
+<ol type="1">
+<li><strong>Prepare:</strong> Ask the student to identify the maturity of the material and the specific questions on which feedback is needed. Link to the relevant <a href="https://fs-ise.github.io/theses/" target="_blank">student-facing guidance</a> rather than repeating writing or method instructions.</li>
+<li><strong>Recommend:</strong> Give prioritized, actionable recommendations and distinguish required corrections from optional suggestions or possible extensions.</li>
+<li><strong>Agree:</strong> Record the important recommendations and agreed actions in the existing thesis notes or meeting notes.</li>
+<li><strong>Follow up:</strong> At the next exchange, ask the student to show where each agreed action was implemented or explain why it should be discussed further.</li>
+</ol>
+<p>Throughout the project:</p>
 <ul>
-<li>Tell students that the exposé is completed (avoid a lengthy process before the actual thesis work starts)</li>
-<li>Give clear feedback on current performance (students should not be surprised by their grade)</li>
+<li>State expectations, changes in direction, and concerns about progress or quality promptly and transparently.</li>
+<li>Relate feedback to the published <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a>; students should not be surprised by the basis of their grade.</li>
+<li>Encourage students to seek feedback before uncertainty becomes a major project risk. Make clear that disclosing a difficulty early is part of responsible research practice.</li>
+<li>Keep feedback proportionate to the stage of the work: emphasize direction and method early, then argument, evidence, coherence, and presentation as the thesis matures.</li>
+<li>Begin check-ins with an open, respectful question about progress or current obstacles, while allowing students to choose how much personal context they share.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1264,10 +1295,6 @@ Note
 <p>These questions help foster a supportive, respectful environment for supervision.</p>
 </div>
 </div>
-</section>
-<section id="submission-of-the-thesis" class="level2">
-<h2 class="anchored" data-anchor-id="submission-of-the-thesis">Submission of the thesis</h2>
-<p>Via SuSy.</p>
 <!--
 From December 1st, 2025, the binding and timely submission of bachelor's and master's theses will take place digitally via the form server [here](https://form.uni-bamberg.de/form/alias/1/einreichung-ba-ma-arbeit/){target=_blank}. Digital submission replaces the submission of printed copies, as was previously the case.
 
@@ -1281,26 +1308,26 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 - A summary and grade of the presentation must be included in the thesis review.
 -->
 </section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To start grading the thesis and to create the review run</p>
-<pre><code>labot thesis --grade</code></pre>
-</div>
-</div>
-<p>The thesis advisor (professor) grades the thesis based on the template (created by labot) and the predefined <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">criteria</a>.</p>
-<ul>
-<li><p>A thesis is checked for plagiarism. In case plagiarism is detected, the <a href="../teaching/plagiarism.html">Plagiarism Process</a> is started.</p></li>
-<li><p>Also check for content generated by AI: <!-- generative AI: cannot be detected reliably --></p>
+<section id="project-closure" class="level2">
+<h2 class="anchored" data-anchor-id="project-closure">Project closure</h2>
+<p>Use this checklist after the student submits the thesis. The responsible supervisor should verify any program-specific institutional requirements rather than assuming that all programs follow the same process.</p>
+<section id="submission-and-materials" class="level3">
+<h3 class="anchored" data-anchor-id="submission-and-materials">Submission and materials</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Confirm that the final thesis was submitted through SuSy and that the submitted version is the version to be assessed.</label></li>
+<li><label><input type="checkbox">Obtain the source files and any supplementary data, code, documentation, or software that were required or agreed for the project.</label></li>
+<li><label><input type="checkbox">Check that access restrictions, licenses, and data-protection requirements for supplementary material are documented before archiving or sharing it.</label></li>
+<li><label><input type="checkbox">Consolidate and archive the final thesis and associated materials in the existing <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/teaching/theses" target="_blank">thesis storage</a>, subject to the applicable permissions.</label></li>
+</ul>
+</section>
+<section id="assessment-and-completion" class="level3">
+<h3 class="anchored" data-anchor-id="assessment-and-completion">Assessment and completion</h3>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Start the assessment workflow and create the review template:</label></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">labot</span> thesis <span class="at">--grade</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><label><input type="checkbox">Assess the thesis using the generated template and the published <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a>.</label></p></li>
+<li><p><label><input type="checkbox">Check the thesis for plagiarism. If plagiarism is suspected, follow the <a href="../teaching/plagiarism.html">plagiarism process</a>.</label></p></li>
+<li><p><label><input type="checkbox">Also check for content generated by AI: <!-- generative AI: cannot be detected reliably --></label></p>
 <ul>
 <li><a href="https://eduwriter.ai/ai-content-detector" target="_blank">EduWriter AI Content Detector</a> — free version for teachers &amp; students; paste/upload text to get % AI ‐ likelihood.</li>
 <li><a href="https://quillbot.com/ai-content-detector" target="_blank">QuillBot AI Detector</a> — free version; supports multiple languages.</li>
@@ -1308,11 +1335,12 @@ Note
 <li><a href="https://surgegraph.io/ai-detector" target="_blank">SurgeGraph AI Detector</a> — free version; sentence-level tagging.</li>
 <li><a href="https://gptzero.me/" target="_blank">GPTZero</a> — free basic usage; paste in text / upload to get AI content score.</li>
 </ul></li>
-<li><p>The deadline is given by the examination office. Our goal is to grade theses within two weeks.</p></li>
-<li><p>Spell-check the review.</p></li>
-<li><p>The review (PDF) is archived on <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades" target="_blank">Nextcloud</a>. Materials should be consolidated.</p></li>
-<li><p>Invite the student to a feedback session using the following template:</p></li>
+<li><p><label><input type="checkbox">Complete and spell-check the assessment report within the deadline set by the responsible examination office; the internal target is two weeks.</label></p></li>
+<li><p><label><input type="checkbox">Archive the final assessment report as a PDF in the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades" target="_blank">grade archive</a> and consolidate the assessment materials.</label></p></li>
+<li><p><label><input type="checkbox">Register or forward the grade through the applicable institutional process and verify that the required step has been completed.</label></p></li>
+<li><p><label><input type="checkbox">Invite the student to a feedback meeting to explain the assessment and discuss the research process; make clear when a grade communicated before formal registration is unofficial.</label></p></li>
 </ul>
+<p>Use the appropriate invitation template:</p>
 <blockquote class="blockquote">
 <p><strong>Bewertung Ihrer Bachelorarbeit und Feedback</strong></p>
 <p>Sehr geehrte/r Frau/Herr XXXXX,</p>
@@ -1333,6 +1361,7 @@ Note
 <p>Mit besten Grüßen</p>
 <p>Gerit Wagner</p>
 </blockquote>
+<p>At the feedback meeting, use the same <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a> to explain the grade, identify strengths and areas for development, and close any remaining administrative or repository-access questions.</p>
 <!--
     - The hardback copy of the thesis, which remains at the chair, is stored in the archive room WE5/05.058.
     - If programming is required as part of the thesis, this should be confirmed in the review.
@@ -1352,22 +1381,17 @@ Note
     > Mit besten Grüßen
 -->
 </section>
-<section id="feedback-session" class="level2">
-<h2 class="anchored" data-anchor-id="feedback-session">Feedback session</h2>
-<p>We provide <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">feedback</a> on the thesis and explain the grading.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ask students whether we can make their thesis available online for other students.</p>
-</div>
-</div>
+</section>
+<section id="publication-and-reuse-opportunities" class="level2">
+<h2 class="anchored" data-anchor-id="publication-and-reuse-opportunities">Publication and reuse opportunities</h2>
+<p>When a thesis makes a promising conceptual, empirical, methodological, or technical contribution, discuss whether it could be developed into a publication, research software, or an open-source contribution.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Explain that follow-on work is optional, is separate from completing and grading the thesis, and normally requires substantial additional work.</label></li>
+<li><label><input type="checkbox">Agree on a realistic next step, responsibilities, and whether the student wants to remain involved before investing in further development.</label></li>
+<li><label><input type="checkbox">Discuss authorship early. Co-authorship depends on substantive contributions to the follow-on output, not on supervision or thesis authorship alone.</label></li>
+<li><label><input type="checkbox">Obtain and document the necessary permission before publishing the thesis or sharing its data, code, software, or other materials; check third-party rights, licenses, confidentiality, and data-protection constraints.</label></li>
+<li><label><input type="checkbox">Ask whether the student permits the thesis to be made available to other students. A decision about sharing the thesis does not automatically grant permission to share its underlying data or code.</label></li>
+</ul>
 <!--
     ## Applicable regulations
 
