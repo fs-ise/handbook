@@ -27,7 +27,7 @@ Nextcloud directories:
 from pathlib import Path
 import yaml
 
-cfg = yaml.safe_load(Path("../_quarto.yml").read_text(encoding="utf-8"))
+cfg = yaml.safe_load(Path("_quarto.yml").read_text(encoding="utf-8"))
 nc = cfg.get("nextcloud", {})
 
 for k in sorted(nc):

@@ -36,7 +36,10 @@ jobs:
       - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
-          pip install nbformat jupyter pandas matplotlib
+          python -m pip install -e . nbformat jupyter pandas matplotlib
+
+      - name: Smoke test teaching reports
+        run: quarto render teaching/reports.qmd --execute
 
       - name: Render site
         timeout-minutes: 30

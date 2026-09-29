@@ -31,7 +31,7 @@ Labot checks (currently implemented for *active paper* repositories only): 🚨 
 import json
 from pathlib import Path
 
-data_path = Path("../assets/repos.json")
+data_path = Path("assets/repos.json")
 repos = json.loads(data_path.read_text(encoding="utf-8"))
 repos = [r for r in repos if r.get("name") != ".github"]
 

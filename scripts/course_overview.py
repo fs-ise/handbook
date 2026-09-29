@@ -3,10 +3,8 @@ from __future__ import annotations
 
 from pathlib import Path
 import re
-import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
 
 from src.course_registry import load_course_registry, resolve_course_metadata
 

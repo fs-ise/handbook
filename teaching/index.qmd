@@ -56,11 +56,7 @@ The course title links to the public GitHub Pages course website. Use the handbo
 ```{python}
 #| echo: false
 #| output: asis
-import sys
-from pathlib import Path
-
-sys.path.extend([str(Path.cwd() / "scripts"), str(Path.cwd().parent / "scripts")])
-from course_overview import current_upcoming_courses_markdown
+from scripts.course_overview import current_upcoming_courses_markdown
 
 print(current_upcoming_courses_markdown())
 ```
