@@ -123,17 +123,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-self-service.callout {
   border-left-color: #198754;
 }
@@ -154,6 +143,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -1250,6 +1250,7 @@ Tip
 <li><label><input type="checkbox">Set a small number of milestones appropriate to the project, including when the exposé is complete, when substantial interim material should be discussed, and the submission target.</label></li>
 <li><label><input type="checkbox">Clarify methodological requirements, dependencies, feasibility risks, and any ethics, data-protection, or reproducibility requirements that apply.</label></li>
 <li><label><input type="checkbox">Explain the relevant <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a> and how the agreed objectives and deliverables relate to them.</label></li>
+<li><label><input type="checkbox">Discuss academic integrity and permitted AI and tool use, referring to the instructor <a href="../teaching/plagiarism.html">plagiarism procedure</a> and the <a href="https://fs-ise.github.io/theses/docs/digital_tools.html" target="_blank">student-facing digital-tools guidance</a>.</label></li>
 <li><label><input type="checkbox">Agree on supervision arrangements: meeting cadence or triggers, communication channel, typical response expectations, and periods of limited availability.</label></li>
 <li><label><input type="checkbox">Set meeting expectations: the student sends a brief agenda, current material, decisions needed, and specific questions early enough to review; after the meeting, the student records agreed actions.</label></li>
 <li><label><input type="checkbox">Explain that students should request feedback proactively and raise conceptual, methodological, data, or implementation difficulties early.</label></li>
@@ -1325,8 +1326,9 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 <li><p><label><input type="checkbox">Start the assessment workflow and create the review template:</label></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">labot</span> thesis <span class="at">--grade</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><label><input type="checkbox">Assess the thesis using the generated template and the published <a href="https://fs-ise.github.io/theses/docs/criteria.html" target="_blank">assessment criteria</a>.</label></p></li>
-<li><p><label><input type="checkbox">Check the thesis for plagiarism. If plagiarism is suspected, follow the <a href="../teaching/plagiarism.html">plagiarism process</a>.</label></p></li>
+<li><p><label><input type="checkbox">During assessment, check for potential plagiarism and other indications that submitted work may misrepresent authorship or permitted AI/tool use. Automated similarity or AI-detection results are not proof and cannot reliably establish authorship; manually assess the underlying evidence.</label></p></li>
 <li><p><label><input type="checkbox">Also check for content generated by AI: <!-- generative AI: cannot be detected reliably --></label></p>
+<p>The following tools may be used only as supplementary screening aids. Their scores are not reliable evidence that content was AI-generated and must not be used to determine authorship or misconduct without independently verifiable evidence.</p>
 <ul>
 <li><a href="https://eduwriter.ai/ai-content-detector" target="_blank">EduWriter AI Content Detector</a> — free version for teachers &amp; students; paste/upload text to get % AI ‐ likelihood.</li>
 <li><a href="https://quillbot.com/ai-content-detector" target="_blank">QuillBot AI Detector</a> — free version; supports multiple languages.</li>
@@ -1334,6 +1336,7 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 <li><a href="https://surgegraph.io/ai-detector" target="_blank">SurgeGraph AI Detector</a> — free version; sentence-level tagging.</li>
 <li><a href="https://gptzero.me/" target="_blank">GPTZero</a> — free basic usage; paste in text / upload to get AI content score.</li>
 </ul></li>
+<li><p><label><input type="checkbox">If misconduct is suspected, follow the <a href="../teaching/plagiarism.html">plagiarism procedure</a>. Document and refer a substantiated suspicion through the formal process rather than independently imposing or recording a misconduct-related sanction.</label></p></li>
 <li><p><label><input type="checkbox">Complete and spell-check the assessment report within the deadline set by the responsible examination office; the internal target is two weeks.</label></p></li>
 <li><p><label><input type="checkbox">Archive the final assessment report as a PDF in the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades" target="_blank">grade archive</a> and consolidate the assessment materials.</label></p></li>
 <li><p><label><input type="checkbox">Register or forward the grade through the applicable institutional process and verify that the required step has been completed.</label></p></li>

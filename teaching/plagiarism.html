@@ -73,17 +73,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -93,6 +82,17 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -106,15 +106,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -1049,49 +1049,69 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="scope" class="level2">
+<h2 class="anchored" data-anchor-id="scope">Scope</h2>
+<p>This procedure applies when assessing theses, seminar papers, projects, and other assessed work at Frankfurt School. It operationalizes the current <a href="https://www.frankfurt-school.de/en/legal/regulations" target="_blank">General Examination Regulations (ABPO), particularly §§ 4 and 11–13</a>. Check the regulations applicable to the student’s program and cohort if program-specific rules differ.</p>
+<p>Plagiarism is one possible form of examination fraud. Distinguish among:</p>
+<ul>
+<li>an <strong>academic shortcoming</strong>, such as a weak synthesis or imprecise scholarly writing, which is addressed through the normal assessment criteria;</li>
+<li><strong>inadequate citation practice</strong>, whose seriousness depends on its extent, context, and effect on the work; and</li>
+<li>a <strong>substantiated suspicion of deliberate misrepresentation</strong>, such as presenting another person’s work or impermissibly generated material as the student’s own.</li>
+</ul>
+<p>A text-similarity score, an AI-detection result, or an isolated matching phrase does <strong>not</strong> by itself establish misconduct. Such output can only prompt a manual, contextual review. The same principle applies to possible misuse of generative AI: consider the assessment rules and the permitted tool use communicated to the student. The <a href="https://fs-ise.github.io/theses/docs/digital_tools.html" target="_blank">student-facing guidance on digital tools</a> explains expectations for students.</p>
+</section>
+<section id="screening-and-identifying-potential-misconduct" class="level2">
+<h2 class="anchored" data-anchor-id="screening-and-identifying-potential-misconduct">Screening and identifying potential misconduct</h2>
+<p>Review the submitted work as part of the normal assessment. Indicators may include unexplained changes in style or terminology, unattributed close paraphrases, copied structure, inconsistent references, or discrepancies between the work and its underlying data, code, or sources.</p>
+<p>Screening supports professional judgment; it does not replace it. Do not treat a match as proof, infer intent from a score, or rely on an automated AI classifier to determine authorship. Compare potentially relevant passages with the original sources and assess their extent and significance in context.</p>
+</section>
+<section id="procedure-for-suspected-plagiarism" class="level2">
+<h2 class="anchored" data-anchor-id="procedure-for-suspected-plagiarism">Procedure for suspected plagiarism</h2>
+<p>If the initial review produces a substantiated suspicion, use this operational checklist:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Preserve the original submission in its submitted form and retain the supporting evidence.</label></li>
+<li><label><input type="checkbox">Manually compare every material passage at issue with the original source; do not rely on a similarity or AI-detection score alone.</label></li>
+<li><label><input type="checkbox">Document the relevant passage, the corresponding source, page or stable location, type of overlap, extent, and significance for the assessed work.</label></li>
+<li><label><input type="checkbox">Separate ordinary academic-quality issues from evidence suggesting deliberate misrepresentation, and record the basis for that distinction without prejudging the formal decision.</label></li>
+<li><label><input type="checkbox">Consult the second examiner where one is appointed, while maintaining confidentiality.</label></li>
+<li><label><input type="checkbox">Refer a substantiated suspicion to the Examination Committee, coordinating the submission through the Examination Office where appropriate for the program.</label></li>
+<li><label><input type="checkbox">Ensure that the student is informed of the allegations and has an opportunity to respond as part of the formal process.</label></li>
+<li><label><input type="checkbox">Await the formal decision before recording or communicating any misconduct-related sanction. Continue or pause the ordinary assessment only as directed by the responsible examination process.</label></li>
+</ul>
+<div class="callout callout-style-default callout-confidential callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Confidential</span>Confidential evidence-documentation checklist
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This section is marked as “toupdate”: update completely</p>
+<p>Keep case material only in the authorized, access-controlled institutional location. <strong>Never commit identifiable student case material to this public repository.</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Identifiers needed to associate the record with the case, kept to the minimum necessary</label></li>
+<li><label><input type="checkbox">Unmodified submitted file, submission date, and version or file hash where available</label></li>
+<li><label><input type="checkbox">Side-by-side extracts with precise page, paragraph, line, URL, or other stable source locations</label></li>
+<li><label><input type="checkbox">Access dates and preserved copies of changeable online sources where institutionally permitted</label></li>
+<li><label><input type="checkbox">Brief account of the extent and significance of each passage and the applicable assessment or tool-use rule</label></li>
+<li><label><input type="checkbox">Relevant correspondence, the student’s response, examiner consultation, and dates of procedural steps</label></li>
+<li><label><input type="checkbox">Access limited to people involved in the authorized examination procedure</label></li>
+</ul>
 </div>
 </div>
-<section id="scope" class="level2">
-<h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<ul>
-<li>Theses</li>
-<li>Projects</li>
-<li>Seminars</li>
-</ul>
 </section>
-<section id="system" class="level2">
-<h2 class="anchored" data-anchor-id="system">System</h2>
-<ul>
-<li><a href="https://www.uni-bamberg.de/its/turnitin" target="_blank">Turnitin</a></li>
-<li><a href="https://vc.uni-bamberg.de/course/view.php?id=61245#section-14" target="_blank">VC-Upload</a></li>
-</ul>
-<p>VC: For upload: switch role</p>
-</section>
-<section id="process" class="level2">
-<h2 class="anchored" data-anchor-id="process">Process</h2>
-<ul>
-<li>Theses and seminar papers are checked for plagiarism using Turnitin.</li>
-<li>If plagiarism or an attempt at deception is detected, the grade will be “5.0” (not sufficient). The <a href="https://fs-ise.github.io/theses/docs/digital_tools.html" target="_blank">Guideline for the Use of Digital Tools</a> provides more details.</li>
-<li>Cases of plagiarism are reported to the examination office (<a href="https://univis.uni-bamberg.de/formbot/dsc_3Danew_2Ftel_26dir_3Dzuv_2Fabtlg2_2Fref3a_26collection_3D2009w_2Fhuman_2Fpaeda_2Feleme_2Fbeglei_26ref_3Dtel" target="_blank">Benjamin Gödicke</a>, wiai.pruefungen@uni-bamberg.de), along with a summary and an assessment (extent and significance).</li>
-<li>Students are given the possibility to explain their case to the examination office.</li>
-</ul>
+<section id="formal-decision-and-possible-consequences" class="level2">
+<h2 class="anchored" data-anchor-id="formal-decision-and-possible-consequences">Formal decision and possible consequences</h2>
+<p>Under the ABPO, the <strong>Examination Committee</strong> is the body responsible for formally establishing examination fraud and determining the consequence applicable to the case. The student must be informed of the allegation and given an opportunity to respond. Examiners should therefore document and refer a substantiated suspicion rather than independently impose a misconduct-related sanction.</p>
+<p>Consequences depend on the formally established facts and the applicable regulations. Not every similarity is plagiarism, and not every citation problem automatically leads to a grade of 5.0. Possible consequences under the applicable examination rules may vary with factors such as the nature, extent, significance, and recurrence of the misconduct; use the Committee’s decision rather than assuming an outcome.</p>
+<p>The Examination Committee’s statutory role in an individual examination case is distinct from the <strong>Honour Council’s</strong> role in matters concerning the institution’s broader honour and values framework. Nothing in this procedure creates an automatic or additional referral to the Honour Council; seek institutional guidance if a separate values matter may be relevant.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
-<li><a href="https://www.uni-bamberg.de/its/wir/itsm/alle-meldungen/" target="_blank">Current status</a></li>
-<li><a href="https://vc.uni-bamberg.de/course/view.php?id=51718" target="_blank">Resources for Turnitin</a></li>
+<li><a href="https://www.frankfurt-school.de/en/legal/regulations" target="_blank">Frankfurt School: statutes and regulations</a> — consult the current ABPO and any program-specific regulations applicable to the case.</li>
+<li><a href="https://fs-ise.github.io/theses/docs/digital_tools.html" target="_blank">Student-facing guidance on digital tools</a> — expectations communicated to students about academic integrity and tool use.</li>
 </ul>
 
 
