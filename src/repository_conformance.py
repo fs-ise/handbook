@@ -23,6 +23,9 @@ from typing import Any, Callable
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from src.course_registry import load_course_registry, resolve_course_metadata
+
 STATUSES = ("pass", "warning", "fail", "not_applicable", "not_checked", "error")
 STATUS_LABELS = {
     "pass": "✅ Pass",
@@ -93,10 +96,11 @@ def normalize_github_repository(value: Any) -> tuple[str, str] | None:
 def discover_repositories(course_pages_dir: Path) -> list[Repository]:
     repositories: list[Repository] = []
     seen: set[str] = set()
+    registry = load_course_registry()
     for path in sorted([*course_pages_dir.glob("*.md"), *course_pages_dir.glob("*.qmd")]):
         meta = read_front_matter(path)
-        course_id = str(meta.get("title_short") or path.stem).strip()
-        course = str(meta.get("title") or course_id).strip()
+        course_id, definition = resolve_course_metadata(meta, registry)
+        course = definition["title"]
         candidates = [("materials", meta.get("repository"))]
         for key in ("exams_repository", "exam_repository", "repository_exams", "exams"):
             candidates.append(("exams", meta.get(key)))

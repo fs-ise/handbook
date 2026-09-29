@@ -3,8 +3,13 @@ from __future__ import annotations
 
 from pathlib import Path
 import re
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from src.course_registry import load_course_registry, resolve_course_metadata
+
 COURSES_DIR = ROOT / "teaching" / "courses"
 ACTIVE_STATUSES = {"in-progress", "grading", "upcoming"}
 
@@ -41,10 +46,14 @@ def read_course(path: Path) -> dict[str, str]:
 def active_courses() -> list[dict[str, str]]:
     """Return active course metadata sorted for display."""
     courses = []
+    registry = load_course_registry()
     course_files = [*COURSES_DIR.glob("*.qmd"), *COURSES_DIR.glob("*.md")]
     for path in sorted(course_files):
         metadata = read_course(path)
         if str(metadata.get("status", "")).lower() in ACTIVE_STATUSES:
+            course_id, definition = resolve_course_metadata(metadata, registry)
+            metadata["course_id"] = course_id
+            metadata["title"] = definition["title"]
             courses.append(metadata)
 
     return sorted(courses, key=lambda course: (course.get("semester", ""), course.get("title", "")))

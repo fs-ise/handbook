@@ -1,4 +1,6 @@
 ---
+course_id: LRS
+offering: HWR
 title_short: LRSemHWR
 title: "The Literature Review Seminar (HWR)"
 degree_program:

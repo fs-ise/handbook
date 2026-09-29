@@ -1,4 +1,6 @@
 ---
+course_id: LRS
+offering: IDIS
 title_short: LRSemIDIS
 title: "The Literature Review Seminar (IDIS)"
 degree_program:

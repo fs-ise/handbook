@@ -4,14 +4,28 @@ from __future__ import annotations
 import os
 from datetime import datetime, timezone
 
-from github import Github
-
-
 ISSUE_TITLE = "Monthly: check handbook data + research streams updates"
 ASSIGNEE = "geritwagner"
 
 HANDBOOK_DATA_URL = "https://github.com/fs-ise/handbook/tree/main/data"
 RESEARCH_STREAMS_URL = "https://fs-ise.github.io/handbook/research/statement.html"
+COURSE_REGISTRY_URL = "https://github.com/fs-ise/handbook/blob/main/data/courses.yml"
+COURSE_OFFERINGS_URL = "https://github.com/fs-ise/handbook/tree/main/teaching/courses"
+NEW_COURSE_URL = "https://fs-ise.github.io/handbook/teaching/new_course.html"
+COURSE_OVERVIEW_URL = "https://fs-ise.github.io/handbook/teaching/course_overview.html"
+
+
+def _course_reminder() -> str:
+    return (
+        "**Are there any additional courses or new course offerings that should be included in the handbook?**\n\n"
+        f"- Course registry: {COURSE_REGISTRY_URL}\n"
+        f"- Semester-specific course offerings: {COURSE_OFFERINGS_URL}\n"
+        f"- Instructions for adding a course: {NEW_COURSE_URL}\n"
+        f"- Course overview: {COURSE_OVERVIEW_URL}\n\n"
+        "For a genuinely new course, register its canonical identifier and official title in "
+        "`courses.yml`, then create its semester-specific record. For a new offering of an "
+        "existing course, reuse its canonical identifier and create only a new semester-specific record."
+    )
 
 
 def _now_utc_monthstamp() -> str:
@@ -31,6 +45,7 @@ def _comment_body() -> str:
         "Could you please confirm whether there is anything to update?\n\n"
         f"- Handbook data files: {HANDBOOK_DATA_URL}\n"
         f"- Papers to add / update in research streams: {RESEARCH_STREAMS_URL}\n\n"
+        f"{_course_reminder()}\n\n"
         "If yes, please drop notes/links here (or open a PR). Thanks!"
         f"{run_hint}"
     )
@@ -42,11 +57,14 @@ def _issue_body() -> str:
         "Each month it will post a comment mentioning the maintainer, asking whether:\n"
         f"- anything in `{HANDBOOK_DATA_URL}` needs updating, and\n"
         f"- any papers should be added to the research streams page: {RESEARCH_STREAMS_URL}\n\n"
+        f"{_course_reminder()}\n\n"
         "Feel free to keep this issue open permanently."
     )
 
 
 def main() -> None:
+    from github import Github
+
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
         raise SystemExit("Missing env var GITHUB_TOKEN")
@@ -79,6 +97,9 @@ def main() -> None:
             body=_issue_body(),
             assignees=[ASSIGNEE],
         )
+    else:
+        # Keep the permanent description aligned with the recurring reminder.
+        target_issue.edit(body=_issue_body())
 
     # Add a monthly comment (always)
     target_issue.create_comment(_comment_body())

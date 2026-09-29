@@ -6,19 +6,26 @@ transition_comment: "update"
 
 ## Setup
 
-Courses are [here]({{< meta handbook.url >}}/tree/main/teaching/courses){target=_blank}.
+Permanent course definitions live in the canonical [course registry]({{< meta handbook.url >}}/blob/main/data/courses.yml){target=_blank}; semester-specific offerings live in [`teaching/courses/`]({{< meta handbook.url >}}/tree/main/teaching/courses){target=_blank}.
+
+Every course has a stable, uppercase acronym (for example, `ITP`) stored as `course_id`. The registry is the single source of truth for that identifier and the official title. Legacy `title_short` values and historical filenames are retained as aliases so that existing pages and URLs keep working.
+
+- **Genuinely new course:** add one definition to `data/courses.yml`, choosing an unused uppercase identifier and official title, and then create its first semester-specific record.
+- **Another offering of an existing course:** do not add another registry entry. Reuse its canonical `course_id` in a new semester-specific record.
+- **Institution-specific offering:** keep one course definition and describe the institution on the offering (for example, `offering: HWR` or `offering: IDIS`). Do not create another course solely for the host institution.
 
 To set up a new lecture, seminar, or project:
 
 - Add a [new module](#new-module) if necessary.
-- Create a [new lecture, seminar, or project]({{< meta handbook.url >}}/new/main/_courses){target=_blank} with this filename pattern: `2023-SuSe-IDW.md` based on the right template:
+- Create a semester-specific lecture, seminar, or project record with the existing filename pattern, such as `2023-SuSe-IDW.md`. Historical filenames need not be renamed. Base the record on the template below:
 
 ::: {.callout-note title="Lecture template" collapse=true}
 
 ````Markdown {shortcodes=false}
 ---
+course_id: IDW
 title_short: IDW
-title: The Literature Review Seminar
+title: Introduction to Digital Work
 degree_program:
   - "Bachelor of Science"
 semester: 20XX-WiSe
@@ -132,6 +139,7 @@ Students can review their exams and grades according to the applicable examinati
 
     ```Markdown {shortcodes=false}
     ---
+    course_id: LRS
     title_short: LRSem
     title: The Literature Review Seminar
     degree_program:
@@ -229,6 +237,7 @@ Students can review their exams and grades according to the applicable examinati
 
     ```Markdown {shortcodes=false}
     ---
+    course_id: OSP
     title_short: OSP
     title: Open-Source Projekt (WI-Projekt)
     degree_program:
