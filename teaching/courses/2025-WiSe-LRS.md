@@ -1,6 +1,5 @@
 ---
 course_id: LRS
-title_short: LRSem
 title: "The Literature Review Seminar"
 degree_program:
   - "Master of Science: Information Systems"
@@ -11,7 +10,7 @@ improvement_issue: ""
 improvement_status: N/A
 ---
 
-# LRSem 2025 WiSe
+# LRS 2025 WiSe
 
 Field               | Value
 ------------------- | -----

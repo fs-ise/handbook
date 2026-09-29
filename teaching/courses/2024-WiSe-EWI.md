@@ -1,6 +1,5 @@
 ---
 course_id: EWI
-title_short: EidWI 
 title: "Einführung in die Wirtschaftsinformatik"
 degree_program:
   - "Bachelor of Science: Information Systems"

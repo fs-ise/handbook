@@ -77,25 +77,34 @@ def load_course_registry(path: Path = DEFAULT_REGISTRY) -> CourseRegistry:
     return CourseRegistry(data["courses"])
 
 
-def resolve_course_metadata(metadata: dict[str, Any], registry: CourseRegistry) -> tuple[str, dict[str, Any]]:
-    """Resolve an offering's new course_id or backwards-compatible title_short."""
-    reference = metadata.get("course_id") or metadata.get("title_short")
-    if not reference:
-        raise CourseRegistryError("Course offering has no course_id or title_short")
-    canonical = registry.resolve(str(reference))
+def resolve_course_metadata(
+    metadata: dict[str, Any],
+    registry: CourseRegistry,
+    source: str | Path | None = None,
+) -> tuple[str, dict[str, Any]]:
+    """Resolve an offering's required canonical ``course_id``."""
+    location = str(source) if source is not None else "Course offering"
+    reference = metadata.get("course_id")
+    if not isinstance(reference, str) or not reference.strip():
+        raise CourseRegistryError(f"{location}: missing required course_id")
+    try:
+        canonical = registry.resolve(reference)
+    except CourseRegistryError as exc:
+        raise CourseRegistryError(f"{location}: {exc}") from exc
+    if reference != canonical:
+        raise CourseRegistryError(
+            f"{location}: course_id {reference!r} is a legacy alias; use canonical identifier {canonical!r}"
+        )
     return canonical, registry.courses[canonical]
 
 
 def validate_course_references(offerings: Iterable[tuple[str, dict[str, Any]]], registry: CourseRegistry) -> None:
-    """Reject unknown or non-canonical explicit course_id references."""
+    """Reject missing, unknown, or non-canonical course references."""
     errors: list[str] = []
     for source, metadata in offerings:
         try:
-            canonical, _ = resolve_course_metadata(metadata, registry)
-            explicit = metadata.get("course_id")
-            if explicit and explicit != canonical:
-                errors.append(f"{source}: course_id {explicit!r} must use canonical identifier {canonical!r}")
+            resolve_course_metadata(metadata, registry, source)
         except CourseRegistryError as exc:
-            errors.append(f"{source}: {exc}")
+            errors.append(str(exc))
     if errors:
         raise CourseRegistryError("Invalid course references:\n" + "\n".join(errors))

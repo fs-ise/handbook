@@ -1,7 +1,6 @@
 ---
 course_id: LRS
 offering: HWR
-title_short: LRSemHWR
 title: "The Literature Review Seminar (HWR)"
 degree_program:
   - "Ph.D."
@@ -12,7 +11,7 @@ improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/2
 improvement_status: N/A
 ---
 
-# LRSem 2025 SoSe
+# LRS 2025 SoSe
 
 Field               | Value
 ------------------- | -----

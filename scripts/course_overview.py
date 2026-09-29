@@ -51,9 +51,9 @@ def active_courses() -> list[dict[str, str]]:
     for path in sorted(course_files):
         metadata = read_course(path)
         if str(metadata.get("status", "")).lower() in ACTIVE_STATUSES:
-            course_id, definition = resolve_course_metadata(metadata, registry)
+            course_id, definition = resolve_course_metadata(metadata, registry, path)
             metadata["course_id"] = course_id
-            metadata["title"] = definition["title"]
+            metadata.setdefault("title", definition["title"])
             courses.append(metadata)
 
     return sorted(courses, key=lambda course: (course.get("semester", ""), course.get("title", "")))

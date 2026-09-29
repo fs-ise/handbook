@@ -1,6 +1,5 @@
 ---
 course_id: IDW
-title_short: IDW
 title: "Introduction to Digital Work"
 degree_program:
   - "Bachelor of Science: Information Systems"

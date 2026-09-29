@@ -15,10 +15,13 @@ import yaml
 from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
+from src.course_registry import load_course_registry, resolve_course_metadata
 
 records = []
+registry = load_course_registry()
 
-for file in Path(".").rglob("*.qmd"):
+course_files = [*Path("teaching/courses").glob("*.md"), *Path("teaching/courses").glob("*.qmd")]
+for file in sorted(course_files):
     text = file.read_text(encoding="utf-8")
 
     if text.startswith("---"):
@@ -28,14 +31,14 @@ for file in Path(".").rglob("*.qmd"):
         if meta and "teaching_load" in meta and "semester" in meta:
 
             semester = meta["semester"]
-            title = meta.get("title_short", file.stem)
+            course_id, _ = resolve_course_metadata(meta, registry, file)
 
             tl = meta["teaching_load"]
 
             if isinstance(tl, dict):
                 records.append({
                     "semester": semester,
-                    "course": title,
+                    "course": course_id,
                     "hours": tl.get("hours", 0)
                 })
 
@@ -44,7 +47,7 @@ for file in Path(".").rglob("*.qmd"):
                     if isinstance(item, dict):
                         records.append({
                             "semester": semester,
-                            "course": title,
+                            "course": course_id,
                             "hours": item.get("hours", 0)
                         })
 

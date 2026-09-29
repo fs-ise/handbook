@@ -1,6 +1,5 @@
 ---
 course_id: LRS
-title_short: LRSem
 title: "The Literature Review Seminar"
 degree_program:
   - "Bachelor of Science: Information Systems"

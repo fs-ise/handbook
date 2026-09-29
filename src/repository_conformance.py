@@ -99,8 +99,8 @@ def discover_repositories(course_pages_dir: Path) -> list[Repository]:
     registry = load_course_registry()
     for path in sorted([*course_pages_dir.glob("*.md"), *course_pages_dir.glob("*.qmd")]):
         meta = read_front_matter(path)
-        course_id, definition = resolve_course_metadata(meta, registry)
-        course = definition["title"]
+        course_id, definition = resolve_course_metadata(meta, registry, path)
+        course = meta.get("title") or definition["title"]
         candidates = [("materials", meta.get("repository"))]
         for key in ("exams_repository", "exam_repository", "repository_exams", "exams"):
             candidates.append(("exams", meta.get(key)))

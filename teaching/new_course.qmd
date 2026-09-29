@@ -8,7 +8,7 @@ transition_comment: "update"
 
 Permanent course definitions live in the canonical [course registry]({{< meta handbook.url >}}/blob/main/data/courses.yml){target=_blank}; semester-specific offerings live in [`teaching/courses/`]({{< meta handbook.url >}}/tree/main/teaching/courses){target=_blank}.
 
-Every course has a stable, uppercase acronym (for example, `ITP`) stored as `course_id`. The registry is the single source of truth for that identifier and the official title. Legacy `title_short` values and historical filenames are retained as aliases so that existing pages and URLs keep working.
+Every course has a stable, uppercase acronym (for example, `ITP`) stored as `course_id`. The registry is the single source of truth for that identifier and the official title. New and existing records must use only the canonical identifier field; historical filenames remain unchanged so that existing pages and URLs keep working.
 
 - **Genuinely new course:** add one definition to `data/courses.yml`, choosing an unused uppercase identifier and official title, and then create its first semester-specific record.
 - **Another offering of an existing course:** do not add another registry entry. Reuse its canonical `course_id` in a new semester-specific record.
@@ -24,7 +24,6 @@ To set up a new lecture, seminar, or project:
 ````Markdown {shortcodes=false}
 ---
 course_id: IDW
-title_short: IDW
 title: Introduction to Digital Work
 degree_program:
   - "Bachelor of Science"
@@ -140,7 +139,6 @@ Students can review their exams and grades according to the applicable examinati
     ```Markdown {shortcodes=false}
     ---
     course_id: LRS
-    title_short: LRSem
     title: The Literature Review Seminar
     degree_program:
       - "Bachelor of Science"
@@ -155,7 +153,7 @@ Students can review their exams and grades according to the applicable examinati
     page: "GitHub Page URL pending"
     ---
 
-    # LRSem 20XX WiSe
+    # LRS 20XX WiSe
 
     Field               | Value
     ------------------- | -----
@@ -238,7 +236,6 @@ Students can review their exams and grades according to the applicable examinati
     ```Markdown {shortcodes=false}
     ---
     course_id: OSP
-    title_short: OSP
     title: Open-Source Projekt (WI-Projekt)
     degree_program:
       - "Bachelor of Science"

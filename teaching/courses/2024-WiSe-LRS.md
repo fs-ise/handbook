@@ -1,6 +1,5 @@
 ---
 course_id: LRS
-title_short: LRSem
 title: "The Literature Review Seminar"
 degree_program:
   - "Master of Science: Information Systems"
@@ -11,7 +10,7 @@ improvement_issue: "https://github.com/fs-ise/literature-review-seminar/issues/3
 improvement_status: in-progress
 ---
 
-# LRSem 2024 WiSe
+# LRS 2024 WiSe
 
 Field               | Value
 ------------------- | -----
