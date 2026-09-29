@@ -12,71 +12,15 @@ This section is marked as "toupdate": completely update
 
 ```{python}
 import yaml
-import os
-import sys
 from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
-
-def find_project_root():
-    """Find the handbook root without relying on the notebook working directory."""
-    candidates = []
-    quarto_project_dir = os.environ.get("QUARTO_PROJECT_DIR")
-    if quarto_project_dir:
-        candidates.append(Path(quarto_project_dir).expanduser())
-    candidates.extend((Path.cwd(), *Path.cwd().parents))
-
-    checked = []
-    for candidate in candidates:
-        candidate = candidate.resolve()
-        if candidate in checked:
-            continue
-        checked.append(candidate)
-        if (
-            (candidate / "src" / "course_registry.py").is_file()
-            and (candidate / "data" / "courses.yml").is_file()
-        ):
-            return candidate
-
-    locations = ", ".join(str(path) for path in checked)
-    raise RuntimeError(
-        "Could not find the handbook project root containing both "
-        f"src/course_registry.py and data/courses.yml. Checked: {locations}"
-    )
-
-project_root = find_project_root()
-project_root_string = str(project_root)
-if project_root_string in sys.path:
-    sys.path.remove(project_root_string)
-sys.path.insert(0, project_root_string)
-
-try:
-    import src.course_registry as course_registry
-except ModuleNotFoundError as exc:
-    loaded_src = sys.modules.get("src")
-    src_location = getattr(loaded_src, "__file__", None) if loaded_src else None
-    raise ImportError(
-        "Could not import the handbook's src.course_registry after adding "
-        f"{project_root} to sys.path. Another package named 'src' may be "
-        f"shadowing it (loaded src: {src_location or 'none'})."
-    ) from exc
-
-expected_registry = (project_root / "src" / "course_registry.py").resolve()
-loaded_registry = Path(course_registry.__file__).resolve()
-if loaded_registry != expected_registry:
-    raise ImportError(
-        f"Imported src.course_registry from {loaded_registry}, but expected "
-        f"{expected_registry}; another package named 'src' is shadowing the handbook source."
-    )
-
-load_course_registry = course_registry.load_course_registry
-resolve_course_metadata = course_registry.resolve_course_metadata
+from src.course_registry import load_course_registry, resolve_course_metadata
 
 records = []
-registry_path = project_root / "data" / "courses.yml"
-registry = load_course_registry(registry_path)
+registry = load_course_registry()
 
-course_directory = project_root / "teaching" / "courses"
+course_directory = Path("teaching/courses")
 course_files = [*course_directory.glob("*.md"), *course_directory.glob("*.qmd")]
 for file in sorted(course_files):
     text = file.read_text(encoding="utf-8")
