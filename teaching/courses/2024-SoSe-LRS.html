@@ -73,6 +73,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -93,17 +104,6 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
-  background-image: none;
-}
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -1043,8 +1043,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<section id="lrsem-2024-wise" class="level1">
-<h1>LRSem 2024 WiSe</h1>
+<section id="lrsem-2024-sose" class="level1">
+<h1>LRSem 2024 SoSe</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1059,7 +1059,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </tr>
 <tr class="even">
 <td>Semester</td>
-<td><p>2024-WiSe</p></td>
+<td><p>2024-SoSe</p></td>
 </tr>
 <tr class="odd">
 <td>Lecturer</td>
@@ -1079,21 +1079,20 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </tr>
 <tr class="odd">
 <td>Student Evaluations</td>
-<td><p><a href="../../data/student_evaluations/000109_20250126_WS24_25-DW-Sem-M__Literature_Review_Seminar.pdf">student_evaluations</a></p></td>
+<td><p><a href="../../data/student_evaluations/000087_20240719_SS24-DW-Sem-M__Literature_review_seminar.pdf">student_evaluations</a></p></td>
 </tr>
 <tr class="even">
 <td>Improvement Issue</td>
-<td><p>https://github.com/fs-ise/literature-review-seminar/issues/31</p></td>
+<td><p>https://github.com/fs-ise/literature-review-seminar/issues/6</p></td>
 </tr>
 <tr class="odd">
 <td>Status of Revisions</td>
-<td><p>in-progress</p></td>
+<td><p>completed</p></td>
 </tr>
 </tbody>
 </table>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
-<p><strong>TODO</strong>: set deadline etc.</p>
 <ul>
 <li>FlexNow: Seminars must be created for each semester (decentral exams), a seminar paper and presentation are mandatory</li>
 <li>Grading: the team assistant registers students for the seminar, enters grades, and submits them online.</li>
@@ -1127,7 +1126,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <p>Start: April (summer term), October (winter term)</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Professor: Schedule evaluations in the pen-ultimate week (<a href="../../teaching/evaluations.html">evaluations</a>).</label></li>
-<li><label><input type="checkbox" checked="">Professor: Set the date for the presentation. Add the date to the calendar.</label></li>
+<li><label><input type="checkbox" checked="">Professor (Team Assistant): Prepare the presentation.</label></li>
+<li><label><input type="checkbox" checked="">Scheine (<a href="https://www.uni-bamberg.de/ism/studium/anmeldung-scheinklausur/" target="_blank">Formular</a>), Scheinklausur-anmeldungen bei Erstellung der Klausurbögen berücksichtigen</label></li>
 </ul>
 </section>
 <section id="grading-and-documentation" class="level2">
@@ -1136,16 +1136,30 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Create reminder for the deadline.</label></li>
 <li><label><input type="checkbox" checked="">Use the <a href="https://github.com/fs-ise/handbook/tree/main/src/grading" target="_blank">grading scripts</a> to assign grades and prepare FlexNow import</label></li>
+<li><label><input type="checkbox" checked="">Have failed exams reviewed by a second professor (?)</label></li>
 </ul>
 <p>Entering Grades into FlexNow</p>
+<ul>
+<li><p><label><input type="checkbox" checked="">Team Assistant: Enter grades in FlexNow (or create certificates if exam is not yet available in FlexNow (<a href="https://github.com/fs-ise/handbook/tree/main/src/scheine" target="_blank">script</a>)).</label></p>
+<ul>
+<li><a href="https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login" target="_blank">Login: FlexNow</a> - Lehrstuhlmodul - Prüfungsteilnehmer / zentral organisiert / Veranstaltung auswählen / Teilnehmer laden</li>
+<li>Formular zum Ändern einzelner Teilnehmer: Noten eingeben (Punkte müssen nicht eingegeben werden), speichern und weiter</li>
+<li>Oder CSV: export (utf-8), add grades/points via vlookup, import (csv-format: semicolon, no quotes)</li>
+<li>Im oberen Bereich: Teilnehmer laden, drucken, exportieren via LV-Semester: “Noten endgültig freischalten und verbuchen” (<a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades" target="_blank">Nextcloud</a>). After the activation, changes can only be made through the examination office (wiai.pruefungen@uni-bamberg.de)</li>
+<li>Only store grades as PDF (not as csv)?</li>
+<li>Klausuren entsprechend der Reihenfolge im PDF sortieren.</li>
+</ul></li>
+<li><p>Grades are archived at <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades" target="_blank">Nextcloud</a>.</p></li>
+</ul>
+<p>Sending exams to the examination office</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Team Assistant: <a href="../../teaching/exams.html#entering-grades-in-flexnow">Enter grades in FlexNow</a> (or create certificates if exam is not yet available in FlexNow (<a href="https://github.com/fs-ise/handbook/tree/main/src/scheine" target="_blank">script</a>)).</label></li>
-<li><label><input type="checkbox" checked="">Professor: Archive grades presentation protocols (projects and seminars: digital is sufficient) on the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades" target="_blank">Nextcloud</a>.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Exams are sent to the examination office (in person): <a href="https://univis.uni-bamberg.de/prg?search=persons&amp;show=info&amp;department=322130&amp;fullname=Silke+Nue%C3%9Flein" target="_blank">Silke Nüßlein</a>, Kapuzinerstr. 25, 00.01</label></li>
 </ul>
 <p>Documentation</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Professor: Analyse the evaluations, store the files, and document the improvements (see <a href="../../teaching/evaluations.html">evaluations</a>).</label></li>
+<li><label><input type="checkbox">Professor: Analyse the evaluations, store the files, and document the improvements (see <a href="../../teaching/evaluations.html">evaluations</a>).</label></li>
 <li><label><input type="checkbox" checked="">Professor: <a href="../../teaching/reports.html">Report</a> teaching efforts at the end of the semester.</label></li>
+<li><label><input type="checkbox" checked="">Professor: Archive presentation protocols (projects and seminars: digital is sufficient).</label></li>
 </ul>
 <p>Deadline: End of August (summer term), March (winter term)</p>
 
@@ -1598,5 +1612,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/courses/2024-WiSe-LRSem.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/fs-ise/handbook/edit/main/teaching/courses/2024-SoSe-LRS.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fs-ise/handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
