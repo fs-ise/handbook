@@ -5,11 +5,11 @@ transition_comment: "update"
 ---
 
 ::: callout-tip
-This page contains **administration details**. For students, information is available on a [separate page](https://fs-ise.github.io/theses/){target=_blank}.
+This page is the **supervisor-facing operational guide**. Direct students to the [student-facing thesis guidance](https://fs-ise.github.io/theses/){target=_blank} for instructions, templates, and research guidance rather than reproducing that material here.
 :::
 
 ::: confidential
-Information on individual theses is recorded internally: ([nextcloud/teaching/theses]({{< var nextcloud.theses >}})).
+Information on individual theses is recorded internally on [Nextcloud]({{< var nextcloud.theses >}}){target=_blank}.
 :::
 
 <!--
@@ -105,13 +105,11 @@ Information on individual theses is recorded internally: ([nextcloud/teaching/th
 
 -->
 
-## Registration
+## Registration and project initiation
 
-- Students send a request for thesis supervision via e-mail
-- Once confirmed by supervisors, students send the request via SuSy
-- Supervisors confirm supervision via SuSy
-- Suggest a first meeting (via bookings):
-
+- [ ] Respond to the student's supervision request by email.
+- [ ] If supervision is accepted, ask the student to submit the request through SuSy and confirm it there.
+- [ ] Arrange the first supervision meeting, for example through the supervisor's booking page, and refer the student to the [student-facing thesis guidance](https://fs-ise.github.io/theses/){target=_blank} in advance.
 
 ```Markdown
 Dear STUDENTNAME,
@@ -129,14 +127,40 @@ Best regards,
 Gerit Wagner
 ```
 
-## Advising
+### First supervision meeting
 
-Notes on thesis advising and process are stored internally on [Nextcloud]({{< var nextcloud.theses >}}){target=_blank}.
+Use the first meeting to establish a shared, realistic project frame. Record the decisions in the existing internal thesis notes; do not create a separate tracking system.
 
-Supervising principles
+- [ ] Agree on the research objective or question and the intended contribution.
+- [ ] Define the scope and explicitly note what is out of scope.
+- [ ] Confirm the expected deliverables, including the thesis and any agreed data, code, software, or other supplementary material.
+- [ ] Set a small number of milestones appropriate to the project, including when the exposé is complete, when substantial interim material should be discussed, and the submission target.
+- [ ] Clarify methodological requirements, dependencies, feasibility risks, and any ethics, data-protection, or reproducibility requirements that apply.
+- [ ] Explain the relevant [assessment criteria](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank} and how the agreed objectives and deliverables relate to them.
+- [ ] Agree on supervision arrangements: meeting cadence or triggers, communication channel, typical response expectations, and periods of limited availability.
+- [ ] Set meeting expectations: the student sends a brief agenda, current material, decisions needed, and specific questions early enough to review; after the meeting, the student records agreed actions.
+- [ ] Explain that students should request feedback proactively and raise conceptual, methodological, data, or implementation difficulties early.
 
-- Tell students that the exposé is completed (avoid a lengthy process before the actual thesis work starts)
-- Give clear feedback on current performance (students should not be surprised by their grade)
+Avoid extending the exposé phase unnecessarily. Once it provides a viable research question, scope, and approach, tell the student clearly that it is complete and that thesis work should proceed.
+
+## Advising and iterative feedback
+
+Treat supervision as an iterative research-development process: the student develops and justifies the work, the supervisor challenges assumptions and gives directional feedback, and the student decides how to implement or discuss that feedback. Supervision does not transfer ownership of the research to the supervisor.
+
+For each substantial feedback round:
+
+1. **Prepare:** Ask the student to identify the maturity of the material and the specific questions on which feedback is needed. Link to the relevant [student-facing guidance](https://fs-ise.github.io/theses/){target=_blank} rather than repeating writing or method instructions.
+2. **Recommend:** Give prioritized, actionable recommendations and distinguish required corrections from optional suggestions or possible extensions.
+3. **Agree:** Record the important recommendations and agreed actions in the existing thesis notes or meeting notes.
+4. **Follow up:** At the next exchange, ask the student to show where each agreed action was implemented or explain why it should be discussed further.
+
+Throughout the project:
+
+- State expectations, changes in direction, and concerns about progress or quality promptly and transparently.
+- Relate feedback to the published [assessment criteria](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank}; students should not be surprised by the basis of their grade.
+- Encourage students to seek feedback before uncertainty becomes a major project risk. Make clear that disclosing a difficulty early is part of responsible research practice.
+- Keep feedback proportionate to the stage of the work: emphasize direction and method early, then argument, evidence, coherence, and presentation as the thesis matures.
+- Begin check-ins with an open, respectful question about progress or current obstacles, while allowing students to choose how much personal context they share.
 
 ::: callout-note
 **💡 Supervising Best Practices: Starting Conversations**
@@ -149,10 +173,6 @@ When checking in with thesis students, begin with questions that express interes
 
 These questions help foster a supportive, respectful environment for supervision.
 :::
-
-## Submission of the thesis
-
-Via SuSy.
 
 <!--
 From December 1st, 2025, the binding and timely submission of bachelor's and master's theses will take place digitally via the form server [here](https://form.uni-bamberg.de/form/alias/1/einreichung-ba-ma-arbeit/){target=_blank}. Digital submission replaces the submission of printed copies, as was previously the case.
@@ -167,21 +187,28 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 - A summary and grade of the presentation must be included in the thesis review.
 -->
 
-## Grading
+## Project closure
 
-::: callout-note
-To start grading the thesis and to create the review run
+Use this checklist after the student submits the thesis. The responsible supervisor should verify any program-specific institutional requirements rather than assuming that all programs follow the same process.
 
-```
-labot thesis --grade
-```
-:::
+### Submission and materials
 
-The thesis advisor (professor) grades the thesis based on the template (created by labot) and the predefined [criteria](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank}.
+- [ ] Confirm that the final thesis was submitted through SuSy and that the submitted version is the version to be assessed.
+- [ ] Obtain the source files and any supplementary data, code, documentation, or software that were required or agreed for the project.
+- [ ] Check that access restrictions, licenses, and data-protection requirements for supplementary material are documented before archiving or sharing it.
+- [ ] Consolidate and archive the final thesis and associated materials in the existing [thesis storage]({{< var nextcloud.theses >}}){target=_blank}, subject to the applicable permissions.
 
-- A thesis is checked for plagiarism.
-  In case plagiarism is detected, the [Plagiarism Process](/teaching/plagiarism.html) is started.
-- Also check for content generated by AI: <!-- generative AI: cannot be detected reliably -->
+### Assessment and completion
+
+- [ ] Start the assessment workflow and create the review template:
+
+    ```bash
+    labot thesis --grade
+    ```
+
+- [ ] Assess the thesis using the generated template and the published [assessment criteria](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank}.
+- [ ] Check the thesis for plagiarism. If plagiarism is suspected, follow the [plagiarism process](/teaching/plagiarism.html).
+- [ ] Also check for content generated by AI: <!-- generative AI: cannot be detected reliably -->
 
     - [EduWriter AI Content Detector](https://eduwriter.ai/ai-content-detector){target=_blank} — free version for teachers & students; paste/upload text to get % AI ‐ likelihood.
     - [QuillBot AI Detector](https://quillbot.com/ai-content-detector){target=_blank} — free version; supports multiple languages.
@@ -189,11 +216,12 @@ The thesis advisor (professor) grades the thesis based on the template (created 
     - [SurgeGraph AI Detector](https://surgegraph.io/ai-detector){target=_blank} — free version; sentence-level tagging.
     - [GPTZero](https://gptzero.me/){target=_blank} — free basic usage; paste in text / upload to get AI content score.
 
-- The deadline is given by the examination office. Our goal is to grade theses within two weeks.
-- Spell-check the review.
-- The review (PDF) is archived on [Nextcloud]({{< var nextcloud.grades >}}){target=_blank}.
-  Materials should be consolidated.
-- Invite the student to a feedback session using the following template:
+- [ ] Complete and spell-check the assessment report within the deadline set by the responsible examination office; the internal target is two weeks.
+- [ ] Archive the final assessment report as a PDF in the [grade archive]({{< var nextcloud.grades >}}){target=_blank} and consolidate the assessment materials.
+- [ ] Register or forward the grade through the applicable institutional process and verify that the required step has been completed.
+- [ ] Invite the student to a feedback meeting to explain the assessment and discuss the research process; make clear when a grade communicated before formal registration is unofficial.
+
+Use the appropriate invitation template:
 
 > **Bewertung Ihrer Bachelorarbeit und Feedback**
 >
@@ -227,6 +255,8 @@ The thesis advisor (professor) grades the thesis based on the template (created 
 >
 > Gerit Wagner
 
+At the feedback meeting, use the same [assessment criteria](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank} to explain the grade, identify strengths and areas for development, and close any remaining administrative or repository-access questions.
+
 <!--
     - The hardback copy of the thesis, which remains at the chair, is stored in the archive room WE5/05.058.
     - If programming is required as part of the thesis, this should be confirmed in the review.
@@ -246,13 +276,15 @@ The thesis advisor (professor) grades the thesis based on the template (created 
     > Mit besten Grüßen
 -->
 
-## Feedback session
+## Publication and reuse opportunities
 
-We provide [feedback](https://fs-ise.github.io/theses/docs/feedback.html){target=_blank} on the thesis and explain the grading.
+When a thesis makes a promising conceptual, empirical, methodological, or technical contribution, discuss whether it could be developed into a publication, research software, or an open-source contribution.
 
-::: callout-note
-Ask students whether we can make their thesis available online for other students.
-:::
+- [ ] Explain that follow-on work is optional, is separate from completing and grading the thesis, and normally requires substantial additional work.
+- [ ] Agree on a realistic next step, responsibilities, and whether the student wants to remain involved before investing in further development.
+- [ ] Discuss authorship early. Co-authorship depends on substantive contributions to the follow-on output, not on supervision or thesis authorship alone.
+- [ ] Obtain and document the necessary permission before publishing the thesis or sharing its data, code, software, or other materials; check third-party rights, licenses, confidentiality, and data-protection constraints.
+- [ ] Ask whether the student permits the thesis to be made available to other students. A decision about sharing the thesis does not automatically grant permission to share its underlying data or code.
 
 <!--
     ## Applicable regulations
