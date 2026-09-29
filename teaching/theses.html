@@ -112,17 +112,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-objective.callout {
   border-left-color: #0d6efd;
 }
@@ -154,6 +143,17 @@ div.callout-self-service.callout-style-default > .callout-header {
 div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
   content: '🛠️';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -1275,17 +1275,16 @@ Tip
 <li>Keep feedback proportionate to the stage of the work: emphasize direction and method early, then argument, evidence, coherence, and presentation as the thesis matures.</li>
 <li>Begin check-ins with an open, respectful question about progress or current obstacles, while allowing students to choose how much personal context they share.</li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-note callout-titled" title="Conversation starters">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Conversation starters
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>💡 Supervising Best Practices: Starting Conversations</strong></p>
 <p>When checking in with thesis students, begin with questions that express interest in their experience—without being too personal. Let students choose how much they wish to share. Examples include:</p>
 <ul>
 <li><em>How was the start of your semester?</em></li>
@@ -1325,7 +1324,7 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 <ul class="task-list">
 <li><p><label><input type="checkbox">Start the assessment workflow and create the review template:</label></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">labot</span> thesis <span class="at">--grade</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p><label><input type="checkbox">Assess the thesis using the generated template and the published <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a>.</label></p></li>
+<li><p><label><input type="checkbox">Assess the thesis using the generated template and the published <a href="https://fs-ise.github.io/theses/docs/criteria.html" target="_blank">assessment criteria</a>.</label></p></li>
 <li><p><label><input type="checkbox">Check the thesis for plagiarism. If plagiarism is suspected, follow the <a href="../teaching/plagiarism.html">plagiarism process</a>.</label></p></li>
 <li><p><label><input type="checkbox">Also check for content generated by AI: <!-- generative AI: cannot be detected reliably --></label></p>
 <ul>
@@ -1340,7 +1339,16 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 <li><p><label><input type="checkbox">Register or forward the grade through the applicable institutional process and verify that the required step has been completed.</label></p></li>
 <li><p><label><input type="checkbox">Invite the student to a feedback meeting to explain the assessment and discuss the research process; make clear when a grade communicated before formal registration is unofficial.</label></p></li>
 </ul>
-<p>Use the appropriate invitation template:</p>
+<div class="callout callout-style-default callout-note callout-titled" title="EMail Templates">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>EMail Templates
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <blockquote class="blockquote">
 <p><strong>Bewertung Ihrer Bachelorarbeit und Feedback</strong></p>
 <p>Sehr geehrte/r Frau/Herr XXXXX,</p>
@@ -1361,6 +1369,8 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 <p>Mit besten Grüßen</p>
 <p>Gerit Wagner</p>
 </blockquote>
+</div>
+</div>
 <p>At the feedback meeting, use the same <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a> to explain the grade, identify strengths and areas for development, and close any remaining administrative or repository-access questions.</p>
 <!--
     - The hardback copy of the thesis, which remains at the chair, is stored in the archive room WE5/05.058.
