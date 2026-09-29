@@ -23,7 +23,9 @@ Use the following checklist to keep your agenda repository a practical, living r
 
 ## 2. Update the agenda regularly
 
-- [ ] Define and revisit shared goals objectives and key results (OKR) together.
+- [ ] Define and revisit shared objectives and key results (OKRs) together.
+- [ ] Proactively maintain development objectives, milestones, evidence, and upcoming activities.
+- [ ] Include planned shadowing, internal presentations, publication contributions, and networking where relevant.
 - [ ] Maintain a list of major ongoing projects.
 - [ ] Keep a running “Items to Discuss” section.
 - [ ] Maintain a weekly task list:
@@ -46,7 +48,8 @@ Use the following checklist to keep your agenda repository a practical, living r
 
 ## 4. Maintain a timeline and planning view
 
-- [ ] Create Mermaid timelines (Gantt charts).
+- [ ] Create a Mermaid Gantt chart with sections for **Studies**, **Contract**, **Development**, **Responsibilities**, **Skills**, and **Milestones**.
+- [ ] Give every Mermaid task a unique ID so dependencies remain unambiguous.
 - [ ] Track contracts and important deadlines.
 - [ ] Keep an overview of workload / hours.
 - [ ] Plan development goals (topics, methods, skills).
@@ -112,11 +115,14 @@ This ensures alignment and clear next actions.
 To avoid duplication and keep information structured:
 
 - Use GitHub issues for well-defined tasks and discussions
+- Link concrete deliverables to GitHub issues instead of copying operational task lists into the agenda
 - Link issues directly in the agenda
 - Link to relevant repositories, documents, datasets, or papers
 - Use the agenda as a coordination hub — not as a storage location
 
 The agenda serves as a shared navigation layer across distributed work.
+
+Personal employment and development details stay in the private agenda repository and must not be added to the public handbook.
 
 
 ## Template
@@ -141,6 +147,29 @@ Regular meeting:
 
 - Meeting note
 ```
+
+Add a planning view using the recommended sections. Dates below are placeholders; every task ID is unique.
+
+```mermaid
+gantt
+    title Individual planning view
+    dateFormat YYYY-MM-DD
+    section Studies
+    Study period                 :studies_period, 2026-01-01, 90d
+    section Contract
+    Contract period              :contract_period, 2026-01-01, 180d
+    section Development
+    Shadow a planning session    :development_shadow, 2026-01-15, 14d
+    Internal presentation        :development_presentation, after development_shadow, 30d
+    section Responsibilities
+    Current responsibility       :responsibility_current, 2026-01-01, 60d
+    section Skills
+    Complete selected training   :skill_training, 2026-01-10, 30d
+    section Milestones
+    Development review           :milestone, milestone_review, 2026-03-31, 0d
+```
+
+Replace the examples with links to objectives or GitHub issues; do not duplicate issue task lists in the chart.
 
 ## Resources
 
