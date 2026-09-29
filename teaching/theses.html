@@ -107,10 +107,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta name="mermaid-theme" content="neutral">
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
 div.callout-confidential.callout {
   border-left-color: #dc3545;
@@ -121,17 +117,6 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -154,6 +139,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 </style>
@@ -1088,6 +1084,19 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </header>
 
 
+<div class="callout callout-style-default callout-warning callout-titled" title="TODO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>TODO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>update <code>labot thesis --register</code> (maybe based on copier template?)</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1114,112 +1123,6 @@ Tip
 <p>Information on individual theses is recorded internally on <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/teaching/theses" target="_blank">Nextcloud</a>.</p>
 </div>
 </div>
-<!--
-
-::::::{.cell layout-align="default"}
-
-:::::{.cell-output-display}
-
-::::{}
-`<figure class=''>`{=html}
-
-:::{}
-
-<pre class="mermaid mermaid-js">    sequenceDiagram
-        Note over Professor,Student: 1. Initial meetings to discuss the general topic
-        Note over Student,Examination office: 2. Formal admission
-        Student-&gt;&gt;Examination office: Apply for admission
-        activate Examination office
-        Note right of Examination office: Check admission&lt;br/&gt;requirements
-        Examination office-&gt;&gt;Student: Topic confirmation form (docx)
-        Examination office-&gt;&gt;Team Assistant: Topic confirmation form (docx)
-        deactivate Examination office
-        Note over Professor,Student: Topic selection and registration
-        Student-&gt;&gt;Professor: Signed topic confirmations (2x)
-        activate Professor
-        Professor-&gt;&gt;Student: Signed topic confirmation I
-        Professor-&gt;&gt;Team Assistant: Signed topic confirmation II
-        deactivate Professor
-        activate Team Assistant
-        Team Assistant-&gt;&gt;Examination office: Topic confirmation (docx)
-        deactivate Team Assistant
-        loop Regularly
-            Note over Professor,Student: 3. Thesis writing and feedback sessions
-        end
-            Note over Student,Examination office: 4. Submission
-        Student-&gt;&gt;Examination office: Submit via the form server
-        Examination office-&gt;&gt;Team Assistant: digital version (to archive)
-        activate Team Assistant
-        Team Assistant-&gt;&gt;Professor: Digital version
-        deactivate Team Assistant
-        activate Professor
-        alt Master thesis
-            Note over Professor,Student: 5. Thesis presentation
-        end
-        Note over Professor,Student: 6. Grading
-        Professor-&gt;&gt;Team Assistant: Review and grade
-        activate Team Assistant
-        Team Assistant-&gt;&gt;Examination office: Review and grade
-        deactivate Team Assistant
-        Professor-&gt;&gt;Student: Invitation for feedback session
-        deactivate Professor
-        Note over Professor,Student: 7. Feedback session
-</pre>
-:::
-`</figure>`{=html}
-::::
-:::::
-::::::
-
-    ## Registration
-
-    The administrative process starts with formal thesis registration.
-
-    Students send the **application for admission** to the thesis to the *examination office* via their **stud email address**.
-    The examination office **verifies** the admission requirements.
-
-    The examination office may ask the student to request **approval from the examination committee** (Prüfungsausschuss) to write a thesis in the area of *Digital Work*.
-    This is the case when older regulations (Studien- und Fachprüfungsordnung) apply (i.e., when master studies were started before 2018), or for students of Informatics and Applied Informatics (e.g., International Software Systems Science).
-
-    Students **receive the topic confirmation** as a (protected) Word document (.docx) by e-mail together with processing/submission instructions.
-    The next step is to make an appointment with the thesis advisor to determine the topic and sign the topic confirmation. The Team Assistant receives this message in CC.
-
-    The student and thesis advisor schedule a meeting to determine the topic and **sign the topic confirmation**.
-    If the appointment is online, students can print and sign the confirmation, and send it to our [postal address](https://www.uni-bamberg.de/digital-work/team/prof-dr-gerit-wagner/){target=_blank}.
-    It is important that we receive **two paper versions with original signatures**:
-
-    - 1 original with the signature of the professor and the student **for the student**.
-    - 1 original with the signature of the professor and the student **for archiving at the chair** (added to the [archive](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades){target=_blank}).
-
-    To **complete the registration**, the thesis advisor
-
-    ```bash
-    # Save topic confirmation (docx) in this repository and run
-    labot thesis --register
-    # check and merge pull request
-    ```
-
-    - The script creates a folder in the [theses overview](https://github.com/fs-ise/theses-confidential/){target=_blank}.
-    - Moves the documents to [Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/124?dir=/teaching/theses){target=_blank}.
-    - Enters the **topic** of the thesis and **date** of the topic issue in the Word document (the date of the topic issue cannot be before the date of enrollment in the Word document; if the Word document cannot be found in the E-Mail history, students can share it):
-
-    ![Registration](https://raw.githubusercontent.com/fs-ise/handbook/main/assets/images/thesis-registration.png){target=_blank}
-
-    - Sends an e-mail containing the Word document to the examination office, which enters the topic and the day of the topic issue into FlexNow:
-
-    > wiai.pruefungen@uni-bamberg.de
-    >
-    > **Anmeldung Abschlussarbeit**
-    >
-    > Liebe Frau Schick,
-    >
-    > Anbei übersende ich Ihnen die ausgefüllte Themenbestätigung für XXXXXXX.
-    >
-    > Mit besten Grüßen
-    >
-    > Gerit Wagner
-
--->
 <section id="registration-and-project-initiation" class="level2">
 <h2 class="anchored" data-anchor-id="registration-and-project-initiation">Registration and project initiation</h2>
 <ul class="task-list">
@@ -1295,18 +1198,6 @@ Tip
 <p>These questions help foster a supportive, respectful environment for supervision.</p>
 </div>
 </div>
-<!--
-From December 1st, 2025, the binding and timely submission of bachelor's and master's theses will take place digitally via the form server [here](https://form.uni-bamberg.de/form/alias/1/einreichung-ba-ma-arbeit/){target=_blank}. Digital submission replaces the submission of printed copies, as was previously the case.
-
-## Thesis presentation
-
-- For IS/... students writing a Master's thesis, a presentation is mandatory.
-- The thesis advisor and student set a date for the presentation. Students can decide whether the presentation should be scheduled before or after the grading.
-- A second examiner is required (check whether this is adequate).
-- The grading template is available [here](https://github.com/fs-ise/handbook/raw/main/assets/templates/evaluation_thesis_presentation/thesis_presentation.docx){target=_blank}
-- Protocols should be archived digitally (Nextcloud).
-- A summary and grade of the presentation must be included in the thesis review.
--->
 </section>
 <section id="project-closure" class="level2">
 <h2 class="anchored" data-anchor-id="project-closure">Project closure</h2>
@@ -1343,14 +1234,16 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 <li><p><label><input type="checkbox">Invite the student to a feedback meeting to explain the assessment and discuss the research process; make clear when a grade communicated before formal registration is unofficial.</label></p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="EMail Templates">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Note</span>EMail Templates
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
 <p><strong>Bewertung Ihrer Bachelorarbeit und Feedback</strong></p>
@@ -1374,25 +1267,8 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 </blockquote>
 </div>
 </div>
+</div>
 <p>At the feedback meeting, use the same <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a> to explain the grade, identify strengths and areas for development, and close any remaining administrative or repository-access questions.</p>
-<!--
-    - The hardback copy of the thesis, which remains at the chair, is stored in the archive room WE5/05.058.
-    - If programming is required as part of the thesis, this should be confirmed in the review.
-    - For master theses, the weight of the written part is 67% and the weight of the presentation is 33% (based on [Master WI MHB](https://www.uni-bamberg.de/fileadmin/abt-studium/Modulhandbuecher/WIAI/WI/Master/MHB_MA_WI_2018.pdf){target=_blank}). For IBWL students, the presentation is mandatory but not graded. **Grades for the thesis and the colloquium must be stated separately (the overall grade must not be stated - it is calculated by FlexNow)**.
-    - The review and grade in paper form (signed by the professor) are sent to the examination office by the Team Assistant (no cover letter, Hauspost: Ref II/3).
-    - Grades are entered by the examination office.
-    - Students can check the grade via FlexNow.
-
-    A confirmation for passing the thesis (Bestehensbescheinigung) can be issued upon request. Thesis supervisors can send a confirmation to the examination office via email. The official confirmation is issued by the examination office.
-
-    > wiai.pruefungen(at)uni-bamberg.de
-    >
-    > Sehr geehrte Frau Schick,
-    >
-    > Ich bestätige, dass Herr/Frau NAME die Master/Bachelorarbeit mit einer Note besser als 4.0 besteht. Können Sie das Ausstellen der Bestehensbescheinigung veranlassen?
-    >
-    > Mit besten Grüßen
--->
 </section>
 </section>
 <section id="publication-and-reuse-opportunities" class="level2">
@@ -1405,21 +1281,6 @@ From December 1st, 2025, the binding and timely submission of bachelor's and mas
 <li><label><input type="checkbox">Obtain and document the necessary permission before publishing the thesis or sharing its data, code, software, or other materials; check third-party rights, licenses, confidentiality, and data-protection constraints.</label></li>
 <li><label><input type="checkbox">Ask whether the student permits the thesis to be made available to other students. A decision about sharing the thesis does not automatically grant permission to share its underlying data or code.</label></li>
 </ul>
-<!--
-    ## Applicable regulations
-
-    - Bachelor Business Information Systems
-    - Bachelor International Information Systems Management
-    - Bachelor Angewandte Informatik
-    - Bachelor Software Systems Science
-    - Master Business Information Systems
-    - Master International Information Systems Management
-    - Master Angewandte Informatik
-    - Master Software Systems Science
-    - Master Computing in the Humanities
-
-    - [Prüfungs- und Studienordnungen](https://www.uni-bamberg.de/abt-studium/aufgaben/pruefungs-studienordnungen/){target=_blank}, insbes. Modulhandbücher
--->
 
 
 </section>
