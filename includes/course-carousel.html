@@ -1,0 +1,25 @@
+<script>
+document.querySelectorAll('[data-course-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('[data-carousel-track]');
+  const previous = carousel.querySelector('[data-carousel-previous]');
+  const next = carousel.querySelector('[data-carousel-next]');
+  const card = () => track.querySelector('[data-course-card]');
+  const step = () => card() ? card().getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0) : track.clientWidth;
+  const update = () => {
+    previous.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+  };
+  const scroll = (direction) => track.scrollBy({ left: direction * step(), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  previous.addEventListener('click', () => scroll(-1));
+  next.addEventListener('click', () => scroll(1));
+  track.addEventListener('scroll', update, { passive: true });
+  track.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      scroll(event.key === 'ArrowLeft' ? -1 : 1);
+    }
+  });
+  new ResizeObserver(update).observe(track);
+  update();
+});
+</script>
