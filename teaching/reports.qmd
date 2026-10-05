@@ -5,12 +5,17 @@ transition_comment: "update"
 ---
 
 ::: callout-note
-This section is marked as "toupdate": completely update
+This section is marked as "toupdate". Add a link to the system for official teaching load tracking.
 :::
 
 ## Teaching load
 
+Based on [courses](course_overview.qmd).
+
 ```{python}
+#| echo: false
+#| fig-align: center
+
 import yaml
 from pathlib import Path
 import pandas as pd
@@ -106,10 +111,10 @@ df_total["difference"] = df_total.apply(
     axis=1
 )
 
-print(df_total[["semester", "hours", "target", "difference"]])
+# print(df_total[["semester", "hours", "target", "difference"]])
 
 # --- plot ---
-plt.figure(figsize=(12, 5))
+plt.figure(figsize=(9, 4))
 
 bottom = pd.Series([0]*len(df_pivot), index=df_pivot.index)
 
@@ -129,7 +134,7 @@ for col in df_pivot.columns:
                 label,
                 ha='center',
                 va='center',
-                rotation=90,
+                rotation=0,
                 fontsize=8
             )
 
@@ -140,13 +145,21 @@ plt.plot(df_total["semester"], df_total["target"], linestyle="--", label="Target
 
 # connected deficit/surplus line (only real semesters)
 df_line = df_total[df_total["difference"].notna()]
-plt.plot(df_line["semester"], df_line["difference"], marker="o", label="Deficit / Surplus")
+plt.plot(
+    df_line["semester"],
+    df_line["difference"],
+    marker="o",
+    color="black",
+    linewidth=2,
+    zorder=10,
+    label="Deficit / Surplus"
+)
 
 plt.axhline(0)
 
 plt.xticks(range(len(df_pivot.index)), df_pivot.index, rotation=45)
 plt.legend()
-plt.title("Teaching Load (Stacked) and Deficit/Surplus")
+plt.title("Teaching Load")
 plt.tight_layout()
 plt.show()
 ```
