@@ -119,15 +119,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -141,15 +141,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -1157,9 +1157,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Guide for uploading exam in Exato: <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2059746?dir=/teaching/exams&amp;editing=false&amp;openfile=true" target="_blank">instructions for PDF upload and problem set creation</a>.</li>
 <li><a href="https://frankfurtschool.instructure.com/courses/17364/pages/instructions-for-exatoexam-supported-paper-based-exam-with-digital-grading-2" target="_blank">Lecturer Guide</a></li>
 </ul>
-<!--
-## Examination day
--->
 </section>
 <section id="grading" class="level2">
 <h2 class="anchored" data-anchor-id="grading">Grading</h2>
@@ -1178,132 +1175,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li>Publishing solutions is not necessary if the grading comments are detailed enough.</li>
 <li>For <em>Introduction to Programming</em>, solutions are usually provided.</li>
 </ul>
-<!--
-## Administration
-
-- When creating the course in FlexNow, specify that exams will be organized by the Examination Office ("centrally organized").
-- Team Assistant: [order labels, etc.](/management/orders.html#examination-documents) ("labels and examination cover sheets") as needed.
-- The Examination Office sends an email requesting the number of additional students ("registration of students participating without regular enrollment").
-
-## Preparing the exam
-
-**Creating a new exam**
-
-- Copy `template_for_copying.tex` to the archive and rename it; start with `_with_solution.tex`.
-- Update the header (semester).
-- Check permitted aids (**student summaries**).
-- Create exam questions (referring to `collection_exam_questions_and_solutions.tex`).
-- Check whether all the contents were covered in the lecture (if sessions were skipped, the contents cannot be covered in the exam).
-- Check specific notes in the `README.md` of the respective exam repository.
-- Add grading notes, e.g., "Grading: deduct 0.5 points for each missing state or transition."
-- Count points within individual tasks.
-- Count points overall.
-- Check for missing items (A, B, D).
-- Spellcheck.
-- Copy the template and remove the solutions (including multiple-choice checks); update the header.
-- Update `collection_exam_questions_and_solutions.tex`.
-- When the exams are not printed immediately, add a reminder to include the student summaries (if applicable).
-
-**Print**
-
-- Print exams.
-- Add student summaries (if applicable).
-
-## Preparing materials
-
-- Examination documents received by mail.
-- Envelope includes:
-  - Important documents for centrally organized examinations
-  - Checklist for conducting written examinations
-  - Name labels
-  - Examination protocol
-  - Incident log for the examination
-  - Name notices
-  - Signs stating "Please do not disturb — examination in progress"
-  - Attendance list/paper check
-  - Checklist "Examination Process Flow"
-  - Supervision guidelines
-  - Information sheet on withdrawing from an exam for health reasons
-  - Information on participants on maternity leave, additional examination participants ("Scheinteilnehmende"), etc.
-- Professor provides the exam sheets (and summaries, if applicable).
-
-## Examination day
-
-- Examination dates are announced by email by the Examination Office.
-- Materials are provided by the professor.
-- The secretariat will receive further important information by email, for example, regarding retrospective identity verification after examinations ("Nachträgliche Identitätsfeststellung").
-
-::: callout-important
-- Cases of cheating (academic misconduct/Unterschleif): Immediately enter the incident into FlexNow and send the exam to the Examination Office (do not grade it).
-- Missed examinations (Versäumnisklausuren): Immediately enter the absence into FlexNow and archive the examination papers for one year in the filing cabinet.
-- Send the exam sheets, protocols (attendance lists), and two blank exam copies to the Examination Office immediately after the examinations are completed.
-- Blank exam copies for missed examinations (Versäumnis-Klausur): Archive for one semester.
-:::
-
-## Grading
-
-- Create a reminder for the deadline: approximately September 15 (summer semester) or March 24 (winter semester). Grade early because colleagues may be on vacation before the deadline (and unavailable to review failed exams).
-- Add bonus points, if any, **only if the exam has been passed**. Otherwise, record the bonus points and add a note stating "cannot be credited".
-- Do not dispose of blank exam copies.
-- Use the [grading scripts](https://github.com/fs-ise/handbook/tree/main/src/grading){target="_blank"} to assign grades and prepare the FlexNow import.
-- Have failed exams reviewed by a second professor.
-
-## Entering grades (in FlexNow)
-
-::: callout-note
-Certificates can be issued if exams are not (yet) available in FlexNow (see [process](certificates.html)).
-:::
-
-- [Login: FlexNow](https://fn2web.zuv.uni-bamberg.de/FN2AUTH/FN2AuthServlet?op=Login){target="_blank"} – Department Module – Examination Participants / Centrally Organized / Select Course / Load Participants.
-- Form for editing individual participants: Enter grades (points do not need to be entered), save, and continue.
-- Alternatively, use CSV: Export (UTF-8), add grades/points via VLOOKUP, and import (CSV format: semicolon-separated, no quotation marks).
-- In the upper section: Load Participants, Print, Export by Course Semester:
-  "Permanently release and record grades" ([Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades){target="_blank"}). After activation, changes can only be made through the Examination Office (wiai.pruefungen@uni-bamberg.de).
-- Only store grades as PDF (not as CSV)?
-- Sort the corrected examination papers according to the order in the PDF.
-- Return corrected examination papers to the Examination Office (via internal mail) in a secure box or envelope.
-
-Project:
-
-- Decentralized examination
-- "Add participants"
-- Enter grades
-- Release grades
-- Save grades as PDF in Nextcloud (delete the Excel file if applicable)
-
-::: callout-note
-If grades cannot be entered, contact the FlexNow team via email: [flexnow@uni-bamberg.de](mailto:flexnow@uni-bamberg.de).
-:::
-
-## ERASMUS students
-
-For ERASMUS students, the FlexNow team must assign students to modules. Use the following email template:
-
-```Markdown
-Betreff: Anlage eines Moduls für ERASMUS Studierende
-
-Liebe Kolleginnen und Kollegen des FlexNow-Teams,
-
-Darf ich Sie bitten, in FlexNow das nachstehende Modul für die unten genannten ERASMUS-Studierenden anzulegen:
-
-* **Modulhandbuch:** Modulhandbuch Bachelor Wirtschaftsinformatik – Studienbeginn ab dem WS 2024/2025
-* **Modultitel:** LV\_721\_114387\_1\_81\_1 – Digital-Work-Projekt-B: Bachelorprojekt aus der Fächergruppe Wirtschaftsinformatik (Wagner)
-
-Für folgende Studierende:
-
-* Student name (student ID)
-* Student name (student ID)
-* Student name (student ID)
-
-Vielen Dank im Voraus!
-
-Mit freundlichen Grüßen
-Gerit Wagner
-```
-
-Once students can be selected, double-check the number of ECTS before submitting grades.
-
--->
 
 
 </section>
