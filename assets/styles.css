@@ -46,9 +46,17 @@ p {
 }
 
 .presentation-embed {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
+}
+
+.presentation-embed__fullscreen {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
 }
 
 .presentation-embed iframe {
