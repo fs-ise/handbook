@@ -108,17 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -130,15 +119,15 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '🔗';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -150,6 +139,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1116,7 +1116,7 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 </div>
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<p>This section explains how to install the environment and build the paper. <a href="https://quarto.org/" target="_blank">Quarto</a> is required. <a href="https://git-scm.com/" target="_blank">Git</a>, <a href="https://www.docker.com/" target="_blank">Docker</a>, and Make are recommended. The following steps describe how to:</p>
+<p>This section explains how to install the environment and build the paper. <a href="https://quarto.org/" target="_blank">Quarto</a> is required to preview a paper project. <a href="https://copier.readthedocs.io/" target="_blank">Copier</a> is required to create a project from the template. <a href="https://git-scm.com/" target="_blank">Git</a>, <a href="https://www.docker.com/" target="_blank">Docker</a>, and Make are recommended. The following steps describe how to:</p>
 <ol type="1">
 <li>Set up the repository (create a new one or contribute to an existing one),</li>
 <li>Edit the paper, and</li>
@@ -1148,18 +1148,16 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
 <ul>
 <li>Select a short and pronounceable title for the paper.</li>
 <li>Do not refer to papers by their target journal (e.g., “the Journal of Information Technology paper”).</li>
-<li>Use our Quarto template:</li>
+<li>Create a project from our Quarto template with Copier:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template fs-ise/quarto-template-paper</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># change title etc.</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># git add .</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># git commit ...</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># etc.</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># git remote add origin https://github.com/....</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># git branch -M main</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># git push -u origin main</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">copier</span> copy <span class="at">--trust</span> gh:fs-ise/quarto-template-paper my-paper</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Answer copier questions on paper metadata</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-paper</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a repository on GitHub, then connect and push it:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/your-account/your-repository.git</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Option 2: Contribute to an existing repository</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull repository</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:fs-ise/...</span>
