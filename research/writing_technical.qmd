@@ -32,7 +32,8 @@ The paper template is based on the following underlying architectural principles
 ## Setup
 
 This section explains how to install the environment and build the paper.
-[Quarto](https://quarto.org/){target=_blank} is required.
+[Quarto](https://quarto.org/){target=_blank} is required to preview a paper project.
+[Copier](https://copier.readthedocs.io/){target=_blank} is required to create a project from the template.
 [Git](https://git-scm.com/){target=_blank}, [Docker](https://www.docker.com/){target=_blank}, and Make are recommended.
 The following steps describe how to:
 
@@ -74,19 +75,17 @@ Option 1: Create a new repository
 
 - Select a short and pronounceable title for the paper.
 - Do not refer to papers by their target journal (e.g., "the Journal of Information Technology paper").
-- Use our Quarto template:
+- Create a project from our Quarto template with Copier:
 
 ```sh
-git init
-quarto use template fs-ise/quarto-template-paper
-# change title etc.
-# git add .
-# git commit ...
-# etc.
-# git remote add origin https://github.com/....
-# git branch -M main
-# git push -u origin main
-quarto preview
+copier copy --trust gh:fs-ise/quarto-template-paper my-paper
+# Answer copier questions on paper metadata
+cd my-paper
+
+# Create a repository on GitHub, then connect and push it:
+git remote add origin https://github.com/your-account/your-repository.git
+git branch -M main
+git push -u origin main
 ```
 
 Option 2: Contribute to an existing repository
