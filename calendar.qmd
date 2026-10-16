@@ -80,6 +80,12 @@ policy backed by reliable proof that the feed and its date range are complete.
 The TimeEdit sync imports teaching and timetable-related events with [`src/sync_timeedit.py`](src/sync_timeedit.py).
 It runs through the [TimeEdit calendar sync GitHub Action](.github/workflows/sync_timeedit_calendar.yml).
 
+::: {.callout-note}
+**Current limitation for appointment bookings:** TimeEdit events are synced into the lab calendar, but this sync does not control availability on the Microsoft Bookings page. Subscribing to the lab calendar in Outlook displays its events; it does not automatically block those times in Bookings. Until an integration is available, configure Bookings to offer only the specific appointment times intended to be bookable.
+
+Power Automate has not been verified as a workaround. Fetching external HTTP resources with Power Automate requires a premium plan.
+:::
+
 To run the same sync locally from the repository root:
 
 ```sh
