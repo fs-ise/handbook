@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -72,20 +107,16 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta name="mermaid-theme" content="neutral">
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <style>
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-confidential.callout {
@@ -110,15 +141,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-self-service.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1053,16 +1084,22 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<section id="request" class="level2">
-<h2 class="anchored" data-anchor-id="request">Request</h2>
-<p><a href="https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&amp;route=shorturl" class="btn btn-lg btn-success btn-center" target="_blank" rel="noopener">Request form</a></p>
-<p>Create a new folder in <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/61?dir=/management/travel" target="_blank">Nextcloud</a> with a new ID.</p>
-</section>
-<section id="book" class="level2">
-<h2 class="anchored" data-anchor-id="book">Book</h2>
-<p>Once your request is approved, book your flights, train travel, and hotel either privately or through <a href="https://app.travelperk.com/login">TravelPerk</a>.</p>
-<p>If you book privately, make sure the hotel invoice is made out to Frankfurt School and includes its address.</p>
-<p>When you book through TravelPerk, the Frankfurt School address is added automatically. The booking is made directly through Frankfurt School, so you do not have to pay the costs upfront. Select the budget that will fund your trip and use its corresponding financial details:</p>
+<p>To set up a travel project, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Nextcloud/management/travel</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">copier</span> copy gh:fs-ise/travel-checklist-template XXXX_LABEL</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It will include the following checklist:</p>
+<section id="travel-checklist" class="level1">
+<h1>Travel checklist</h1>
+<section id="planning-and-approval" class="level2">
+<h2 class="anchored" data-anchor-id="planning-and-approval">Planning and approval</h2>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Define trip purpose, destination, and dates</label></p></li>
+<li><p><label><input type="checkbox">Identify relevant deadlines and planned activities</label></p></li>
+<li><p><label><input type="checkbox">Check the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052508?dir=/management/compliance&amp;openfile=true">policy for travel expenses, business entertainment, gifts, and other expenses</a> / <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052509?dir=%2Fmanagement%2Fcompliance&amp;openfile=true">German version</a></label></p></li>
+<li><p><label><input type="checkbox">Submit the <a href="https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&amp;route=shorturl">business travel request (Dienstreiseantrag)</a></label></p></li>
+<li><p><label><input type="checkbox">Obtain travel approval before booking</label></p></li>
+<li><p><label><input type="checkbox">Estimate travel costs and identify funding sources</label></p></li>
+<li><p><label><input type="checkbox">Select the budget that will fund the trip:</label></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -1096,84 +1133,96 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <td>209999</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="regulations" class="level2">
-<h2 class="anchored" data-anchor-id="regulations">Regulations</h2>
-<ul>
-<li><a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052508?dir=/management/compliance&amp;openfile=true" target="_blank">Policy for travel expenses, business entertainment, gifts and other expenses</a> / <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052509?dir=%2Fmanagement%2Fcompliance&amp;openfile=true" target="_blank">German version</a></li>
+</table></li>
+<li><p><label><input type="checkbox">Apply for external funding, if applicable</label></p></li>
+<li><p><label><input type="checkbox">Request advance payment, if needed</label></p></li>
+<li><p><label><input type="checkbox">Check flight and accommodation booking deadlines, including conference acceptance and registration deadlines</label></p></li>
 </ul>
-<!--
+</section>
+<section id="bookings-and-registration" class="level2">
+<h2 class="anchored" data-anchor-id="bookings-and-registration">Bookings and registration</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Register for conference/event</label></li>
+<li><label><input type="checkbox">Check membership requirements and discounts</label></li>
+<li><label><input type="checkbox">Book transportation (flights, trains, etc.) after approval, privately or through <a href="https://app.travelperk.com/login">TravelPerk</a></label></li>
+<li><label><input type="checkbox">If booking privately, ensure the hotel invoice is addressed to Frankfurt School and includes its address</label></li>
+<li><label><input type="checkbox">If booking through TravelPerk, select the budget that will fund the trip; Frankfurt School’s address is added automatically and costs are paid directly</label></li>
+<li><label><input type="checkbox">Book accommodation</label></li>
+<li><label><input type="checkbox">Arrange airport and local transfers</label></li>
+<li><label><input type="checkbox">Check passport, visa, and entry requirements for every destination and transit country, including connecting flights; verify that any required travel authorizations are valid</label></li>
+<li><label><input type="checkbox">Check travel insurance coverage</label></li>
+<li><label><input type="checkbox">Save booking confirmations and invoices in the trip folder</label></li>
+<li><label><input type="checkbox">Download offline maps and save the hotel, venue, and transfer points</label></li>
+</ul>
+</section>
+<section id="preparation" class="level2">
+<h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Share travel dates with colleagues, HIWIs, and relevant seminar or thesis students; coordinate work and coverage</label></li>
+<li><label><input type="checkbox">Arrange teaching, meetings, and supervision coverage</label></li>
+<li><label><input type="checkbox">Schedule meetings with collaborators</label></li>
+<li><label><input type="checkbox">Prepare presentation and other materials</label></li>
+<li><label><input type="checkbox">Check mobile connectivity and roaming charges; consider an eSIM or local connectivity option where useful</label></li>
+<li><label><input type="checkbox">Check that payment cards will work abroad, identify a backup payment method, and check currency and cash requirements</label></li>
+<li><label><input type="checkbox">Save your bank’s contact details and card-blocking instructions offline, separately from your payment cards</label></li>
+<li><label><input type="checkbox">Prepare equipment, adapters, and clothing</label></li>
+<li><label><input type="checkbox">Back up important files on devices you plan to bring and make sure you can access the backups</label></li>
+<li><label><input type="checkbox">Install important device updates and charge devices and power banks</label></li>
+<li><label><input type="checkbox">Download the itinerary, booking details, addresses, and key contact numbers for offline access; keep paper copies if useful</label></li>
+<li><label><input type="checkbox">Bring health-insurance details and any required vaccination or medication documents for the destination</label></li>
+<li><label><input type="checkbox">Identify a reliable local public-transport app or other mobility options</label></li>
+<li><label><input type="checkbox">Review itinerary and set travel reminders</label></li>
+</ul>
+</section>
+<section id="during-the-trip" class="level2">
+<h2 class="anchored" data-anchor-id="during-the-trip">During the trip</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Keep receipts and proof of payment</label></li>
+<li><label><input type="checkbox">Retain boarding passes and transport tickets</label></li>
+<li><label><input type="checkbox">Record expenses not covered by invoices</label></li>
+<li><label><input type="checkbox">Request missing invoices or payment receipts from airlines or booking providers</label></li>
+<li><label><input type="checkbox">Document relevant meetings and follow-up actions</label></li>
+</ul>
+</section>
+<section id="reimbursement" class="level2">
+<h2 class="anchored" data-anchor-id="reimbursement">Reimbursement</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Collect and organize all receipts</label></li>
+<li><label><input type="checkbox">Prepare expense overview</label></li>
+<li><label><input type="checkbox">Submit travel expense claim (Reisekostenabrechnung)</label></li>
+<li><label><input type="checkbox">Submit external funding reimbursement claims, if applicable</label></li>
+<li><label><input type="checkbox">Reconcile advance payments and third-party funding</label></li>
+<li><label><input type="checkbox">Verify reimbursement payments</label></li>
+<li><label><input type="checkbox">Follow up on outstanding reimbursements</label></li>
+<li><label><input type="checkbox">Set a reminder to check the status of the reimbursement claim</label></li>
+</ul>
+</section>
+<section id="follow-up-and-archiving" class="level2">
+<h2 class="anchored" data-anchor-id="follow-up-and-archiving">Follow-up and archiving</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Send follow-up messages to collaborators</label></li>
+<li><label><input type="checkbox">Share relevant research materials and outcomes</label></li>
+<li><label><input type="checkbox">Complete outstanding trip-related deliverables</label></li>
+<li><label><input type="checkbox">Document lessons learned</label></li>
+<li><label><input type="checkbox">Archive travel documents in the trip folder</label></li>
+<li><label><input type="checkbox">Close the trip</label></li>
+</ul>
+<div class="callout callout-style-default callout-resource callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Resource</span>Resource
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://github.com/MacLemon/CongressChecklist">Congress checklist</a></p>
+</div>
+</div>
 
-::: callout-note
-This section is marked as "toupdate": completely update
-:::
 
-
-::::::{.cell layout-align="default"}
-
-:::::{.cell-output-display}
-
-::::{}
-`<figure class=''>`{=html}
-
-:::{}
-
-<pre class="mermaid mermaid-js">sequenceDiagram
-    Professor-&gt;&gt;+Travel Expenses Office: Request for approval of a business trip
-    Travel Expenses Office-&gt;&gt;+Professor: Approved request
-    Note over Professor: Booking
-    Note over Professor: Conference (receipts)
-    Professor-&gt;&gt;+Travel Expenses Office: Travel expense reimbursement claim (including receipts and request)
-    Travel Expenses Office-&gt;&gt;+Professor: Reimbursement
-</pre>
-:::
-`</figure>`{=html}
-::::
-:::::
-::::::
-
-## Travel request
-
-- Create a new folder on [Nextcloud](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/61?dir=/management/travel){target=_blank} with a new ID.
-- Travel request via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
-
-![Reisekostenmanagement](/assets/images/Screenshot_Reisekostenmanagement.JPG)
-
-  - Select "Reisemanagement" -> "Neuer Genehmigungsantrag"
-  - Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.
-
-- Air travel restrictions must be considered, in particular for short flights (2024-03-07_Rundschreiben Genehmigung von Flugreisen.pdf)
-
-## Confirmation
-
-- The applicant will receive the approval by email
-
-## Travel
-
-- Collect receipts for expenses
-
-## Hotel lists
-
-TODO: include link here
-
-## Reimbursement of expenses
-
-- Via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
-
-  - Select "Neuer Abrechnungsantrag"
-  - Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.
-
-- Don’t forget to attach receipts, till vouchers, etc., as PDF
-- Save the complete PDF in the travel folder on Nextcloud ([here](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/61?dir=/management/travel){target=_blank}).
-
-::: callout-note
-> At the end of the settlement, all receipts/invoices must be attached to the "File Upload" section; otherwise, payment cannot be made! All original receipts must be retained by the traveler according to the statutory retention period (6 years / exception for projects: 10 years after the end of the project).
-:::
-
--->
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
