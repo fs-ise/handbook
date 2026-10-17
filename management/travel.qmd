@@ -4,81 +4,17 @@ transition_status: "updated"
 transition_comment: "update"
 ---
 
-## Request
+To  set up a travel project, run:
 
-[Request form](https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&route=shorturl){.btn .btn-lg .btn-success .btn-center target="_blank" rel="noopener"}
-
-Create a new folder in [Nextcloud]({{< var nextcloud.travel >}}){target=_blank} with a new ID.
-
-## Book
-
-Once your request is approved, book your flights, train travel, and hotel either privately or through [TravelPerk](https://app.travelperk.com/login).
-
-If you book privately, make sure the hotel invoice is made out to Frankfurt School and includes its address.
-
-When you book through TravelPerk, the Frankfurt School address is added automatically. The booking is made directly through Frankfurt School, so you do not have to pay the costs upfront. Select the budget that will fund your trip and use its corresponding financial details:
-
-| Budget | Approver | Cost center | Cost object | Project number |
-| --- | --- | --- | --- | --- |
-| Research budget (personal budget) | Ansgar Richter | 1700 | 175999 | 180049 |
-| Research funding | Frank Ecker | 1905 | 19999 | 209999 |
-
-## Regulations
-
-- [Policy for travel expenses, business entertainment, gifts and other expenses](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052508?dir=/management/compliance&openfile=true){target=_blank} / [German version](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052509?dir=%2Fmanagement%2Fcompliance&openfile=true){target=_blank}
-
-<!--
-
-::: callout-note
-This section is marked as "toupdate": completely update
-:::
-
-```{mermaid}
-sequenceDiagram
-    Professor->>+Travel Expenses Office: Request for approval of a business trip
-    Travel Expenses Office->>+Professor: Approved request
-    Note over Professor: Booking
-    Note over Professor: Conference (receipts)
-    Professor->>+Travel Expenses Office: Travel expense reimbursement claim (including receipts and request)
-    Travel Expenses Office->>+Professor: Reimbursement
+```sh
+cd ~/Nextcloud/management/travel
+copier copy gh:fs-ise/travel-checklist-template XXXX_LABEL
 ```
 
-## Travel request
+It will include the following checklist:
 
-- Create a new folder on [Nextcloud]({{< var nextcloud.travel >}}){target=_blank} with a new ID.
-- Travel request via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
+{{< include ../checklists/travel.md >}}
 
-![Reisekostenmanagement](/assets/images/Screenshot_Reisekostenmanagement.JPG)
-
-  - Select "Reisemanagement" -> "Neuer Genehmigungsantrag"
-  - Fill out as much of the application as possible. This will reduce your workload when it comes to claiming travel expenses.
-
-- Air travel restrictions must be considered, in particular for short flights (2024-03-07_Rundschreiben Genehmigung von Flugreisen.pdf)
-
-## Confirmation
-
-- The applicant will receive the approval by email
-
-## Travel
-
-- Collect receipts for expenses
-
-## Hotel lists
-
-TODO: include link here
-
-## Reimbursement of expenses
-
-- Via [Mitarbeiterservice Bayern](https://www.mitarbeiterservice.bayern.de/){target=_blank}
-
-  - Select "Neuer Abrechnungsantrag"
-  - Information from the application is automatically saved and transferred to the travel expense report. Complete the rest.
-
-- Don’t forget to attach receipts, till vouchers, etc., as PDF
-- Save the complete PDF in the travel folder on Nextcloud ([here]({{< var nextcloud.travel >}}){target=_blank}).
-
-::: callout-note
-> At the end of the settlement, all receipts/invoices must be attached to the "File Upload" section; otherwise, payment cannot be made! All original receipts must be retained by the traveler according to the statutory retention period (6 years / exception for projects: 10 years after the end of the project).
+::: resource
+[Congress checklist](https://github.com/MacLemon/CongressChecklist)
 :::
-
--->
