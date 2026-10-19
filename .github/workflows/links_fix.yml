@@ -65,7 +65,11 @@ jobs:
       - name: Switch to branch
         run: git checkout -b ${{ env.BRANCH_NAME }}
 
+      - name: Remove stale broken links report
+        run: rm -f broken_links.md
+
       - name: Fix links
+        id: internal
         run: python src/link_fix.py
 
       - name: Check for broken links file
@@ -76,14 +80,36 @@ jobs:
             echo "found=false" >> $GITHUB_ENV
           fi
 
+      - name: Reopen Issue When Broken Links Remain
+        if: github.event_name != 'pull_request' && steps.internal.outcome == 'success' && env.found == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          issue_state=$(gh issue view 5 --json state --jq .state)
+          if [ "$issue_state" = "CLOSED" ]; then
+            gh issue reopen 5
+          fi
+
       - name: Create Issue From File
-        if: github.event_name != 'pull_request' && env.found == 'true'
+        if: github.event_name != 'pull_request' && steps.internal.outcome == 'success' && env.found == 'true'
         uses: peter-evans/create-issue-from-file@v5
         with:
           issue-number: 5
           title: "Report: broken links (internal)"
           content-filepath: ./broken_links.md
           labels: report, automated issue, help-needed
+
+      - name: Close Issue When Internal Links Are Clean
+        if: github.event_name != 'pull_request' && steps.internal.outcome == 'success' && env.found == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          issue_state=$(gh issue view 5 --json state --jq .state)
+          if [ "$issue_state" = "OPEN" ]; then
+            gh issue close 5 --reason completed
+          fi
 
       - name: Determine if changes have been made
         id: changed
