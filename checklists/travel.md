@@ -4,8 +4,8 @@
 
 - [ ] Define trip purpose, destination, and dates
 - [ ] Identify relevant deadlines and planned activities
-- [ ] Check the [policy for travel expenses, business entertainment, gifts, and other expenses](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052508?dir=/management/compliance&openfile=true) / [German version](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052509?dir=%2Fmanagement%2Fcompliance&openfile=true)
-- [ ] Submit the [business travel request (Dienstreiseantrag)](https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&route=shorturl)
+- [ ] Check the [policy for travel expenses, business entertainment, gifts, and other expenses](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052508?dir=/management/compliance&openfile=true){target=_blank} / [German version](https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/2052509?dir=%2Fmanagement%2Fcompliance&openfile=true){target=_blank}
+- [ ] Submit the [business travel request (Dienstreiseantrag)](https://forms.office.com/pages/responsepage.aspx?id=avrDopl3l0WOtmeG27ygke2r1eR1BLpIvnZ_q46oMYxUMFVEVTM2TENQNThZNUtZSldPRENOM0VDTC4u&route=shorturl){target=_blank}
 - [ ] Obtain travel approval before booking
 - [ ] Estimate travel costs and identify funding sources
 - [ ] Select the budget that will fund the trip:
@@ -23,7 +23,7 @@
 
 - [ ] Register for conference/event
 - [ ] Check membership requirements and discounts
-- [ ] Book transportation (flights, trains, etc.) after approval, privately or through [TravelPerk](https://app.travelperk.com/login)
+- [ ] Book transportation (flights, trains, etc.) after approval, privately or through [TravelPerk](https://app.travelperk.com/login){target=_blank}
 - [ ] If booking privately, ensure the hotel invoice is addressed to Frankfurt School and includes its address
 - [ ] If booking through TravelPerk, select the budget that will fund the trip; Frankfurt School's address is added automatically and costs are paid directly
 - [ ] Book accommodation
