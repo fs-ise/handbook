@@ -108,15 +108,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -130,15 +130,15 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1153,7 +1153,7 @@ Tip
 <li><label><input type="checkbox">Set a small number of milestones appropriate to the project, including when the exposé is complete, when substantial interim material should be discussed, and the submission target.</label></li>
 <li><label><input type="checkbox">Clarify methodological requirements, dependencies, feasibility risks, and any ethics, data-protection, or reproducibility requirements that apply.</label></li>
 <li><label><input type="checkbox">Explain the relevant <a href="https://fs-ise.github.io/theses/docs/feedback.html" target="_blank">assessment criteria</a> and how the agreed objectives and deliverables relate to them.</label></li>
-<li><label><input type="checkbox">Discuss academic integrity and permitted AI and tool use, referring to the instructor <a href="../teaching/plagiarism.html">plagiarism procedure</a> and the <a href="https://fs-ise.github.io/theses/docs/digital_tools.html" target="_blank">student-facing digital-tools guidance</a>.</label></li>
+<li><label><input type="checkbox">Discuss academic integrity and permitted AI and tool use, referring to the instructor <a href="plagiarism.html">plagiarism procedure</a> and the <a href="https://fs-ise.github.io/theses/docs/digital_tools.html" target="_blank">student-facing digital-tools guidance</a>.</label></li>
 <li><label><input type="checkbox">Agree on supervision arrangements: meeting cadence or triggers, communication channel, typical response expectations, and periods of limited availability.</label></li>
 <li><label><input type="checkbox">Set meeting expectations: the student sends a brief agenda, current material, decisions needed, and specific questions early enough to review; after the meeting, the student records agreed actions.</label></li>
 <li><label><input type="checkbox">Explain that students should request feedback proactively and raise conceptual, methodological, data, or implementation difficulties early.</label></li>
@@ -1227,7 +1227,7 @@ Tip
 <li><a href="https://surgegraph.io/ai-detector" target="_blank">SurgeGraph AI Detector</a> — free version; sentence-level tagging.</li>
 <li><a href="https://gptzero.me/" target="_blank">GPTZero</a> — free basic usage; paste in text / upload to get AI content score.</li>
 </ul></li>
-<li><p><label><input type="checkbox">If misconduct is suspected, follow the <a href="../teaching/plagiarism.html">plagiarism procedure</a>. Document and refer a substantiated suspicion through the formal process rather than independently imposing or recording a misconduct-related sanction.</label></p></li>
+<li><p><label><input type="checkbox">If misconduct is suspected, follow the <a href="plagiarism.html">plagiarism procedure</a>. Document and refer a substantiated suspicion through the formal process rather than independently imposing or recording a misconduct-related sanction.</label></p></li>
 <li><p><label><input type="checkbox">Assess the thesis using the generated template and the published <a href="https://fs-ise.github.io/theses/docs/criteria.html" target="_blank">assessment criteria</a>.</label></p></li>
 <li><p><label><input type="checkbox">Complete and spell-check the assessment report within the deadline set by the responsible examination office; the internal target is two weeks.</label></p></li>
 <li><p><label><input type="checkbox">Archive the final assessment report as a PDF in the <a href="https://nc-2272638881871040784.nextcloud-ionos.com/index.php/apps/files/files/1121810?dir=/management/grades" target="_blank">grade archive</a> and consolidate the assessment materials.</label></p></li>
