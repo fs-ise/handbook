@@ -108,17 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -130,15 +119,15 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
   content: '🔒';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
   background-image: none;
 }
 div.callout-resource.callout {
@@ -150,6 +139,17 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1086,7 +1086,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 <section id="take-vacation" class="level2">
 <h2 class="anchored" data-anchor-id="take-vacation">1. Take vacation</h2>
-<p>Fill out the official vacation request form in <a href="https://fs.cloud.veda.net/horizon/" target="_blank">veda</a> (<code>Profile &amp; Personal Area</code>, <code>Absence request</code>).</p>
+<p>Fill out the official vacation request form in <a href="https://fs.cloud.veda.net/horizon/" target="_blank">veda</a> (<code>Profile &amp; Personal Area</code> &gt; <code>Absence request</code>).</p>
 </section>
 <section id="documentation---vacation-balances-tracking" class="level2">
 <h2 class="anchored" data-anchor-id="documentation---vacation-balances-tracking">2. Documentation - Vacation Balances Tracking</h2>
@@ -1111,7 +1111,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Outlook.com &gt; Settings ⚙️ &gt; Accounts &gt; Automatic replies &gt; Turn on Automatic replies</p>
+<p><a href="https://outlook.com/">outlook.com</a> &gt; <code>Settings ⚙️</code> &gt; <code>Accounts</code> &gt; <code>Automatic replies</code> &gt; <code>Turn on Automatic replies</code></p>
 <p><strong>E-Mail template:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">Subject:</span><span class="co"> Out of the office</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1157,66 +1157,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <ul>
 <li>It is recommended to take all vacation days in the same year. You may be required to take your vacations before a certain date in the following year (other regulations may apply).</li>
 </ul>
-<p>Note: see <a href="http://ivory.idyll.org/lab/philosophy.html#lab-details" target="_blank">lazy consensus</a> 11 <!--
-
-- The remaining vacation days for **non-scientific staff** are stated in **[BayZeit](https://www.uni-bamberg.de/intranet/arbeitsplatz/zeiterfassung/){target=_blank}** (Urlaubsbogen für aktuelles Jahr)
-
-Welcome to the vacation section for the fs-ise lab!
-This guide streamlines the administrative process for requesting and managing vacation time. Enjoy your time off and return refreshed 🌴 ✈️ 🏖️
-
-
-- To take vacation, coordinate your responsibilities (such as teaching and project work), decide when to take vacation, and *inform* Gerit in advance via e-mail (ideally, at least 2 weeks in advance)
-- If there are any additional scheduling constraints, Gerit will respond and ask for a meeting to discuss possible adjustments
-- If you do not receive a response within **3 days**, the request is approved (following the principle of "[lazy consensus](https://openoffice.apache.org/docs/governance/lazyConsensus.html){target=_blank}").
-- Add your vacation to the agenda repository and/or internal shared calendar.
-  If students need to know about your availability, you may add your vacation to the [Calendar](index.html).
-
-**E-Mail template:**
-
-```markdown
-Subject: Vacation Notice
-
-Hi Gerit,
-
-I will be on vacation on the following dates:
-
-Start: [Date]
-End:   [Date]
-
-I have coordinated my responsibilities and ensured that teaching, project work, and
-other duties are covered during my absence.
-
-If there are any scheduling issues, please let me know. If I don’t hear back within
-three days, I will assume that my vacation request is approved, as outlined in our
-guidelines.
-
-Cheers,
-[Your Name]
-```
-
-
-  **Scientific Staff**
-
-  Fill out the official vacation request form, available on the HR page of Uni Bamberg (Urlaubsantrag für wissenschaftliche Beschäftigte) **[Link](https://www.uni-bamberg.de/abt-personal/formulare-infos-und-merkblaetter/){target=_blank}** and send it to your supervisor or just send an informal e-mail with the requested vacation date.
-
-  **Non-scientific Staff**
-
-  Send your vacation request via **[BayZeit](https://www.uni-bamberg.de/intranet/arbeitsplatz/zeiterfassung/){target=_blank}**.
-  Specific instructions can be found in the manual, which is available under the same link.
-
-  **Student Assistants**
-
-  Send an informal e-mail to your supervisor with the requested vacation date.
-  To calculate your vacation days you can use this **[form](https://zuvportal.uni-bamberg.de/Hilfskraftvertraege/urlaubsanspruch_hk_ber.jspx){target=_blank}**.
-
-  ::: callout-note
-  **Calculation**
-
-  With flexible working hours, which are the norm, the vacation entitlement is calculated as follows: <br>
-  → ((monthly hours / 4.348 ) / 5) x 1.66 x months; the result must be rounded commercially!
-
-  :::
---></p>
+<p>Note: see <a href="http://ivory.idyll.org/lab/philosophy.html#lab-details" target="_blank">lazy consensus</a></p>
 
 
 </section>
