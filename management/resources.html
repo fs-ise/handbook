@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
 
     const options = {
-      valueNames: ['listing-title','listing-category','listing-ownership','listing-lifecycle_status','listing-location',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-title','listing-categories','listing-ownership','listing-lifecycle_status','listing-location',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-title","listing-author"],
     };
@@ -139,15 +139,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
 }
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
 }
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
   background-image: none;
 }
 div.callout-objective.callout {
@@ -172,15 +172,15 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
   content: '🛠️';
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 </style>
@@ -1122,7 +1122,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="cHJpbnRlcg==">printer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3N0YXRpb24=">workstation <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJpbnRlcg==">printer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3N0YXRpb24=">workstation <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1164,7 +1164,7 @@ Title
 </th>
 
 <th>
-category
+Categories
 </th>
 
 <th>
@@ -1183,12 +1183,12 @@ location
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="d29ya3N0YXRpb24=" data-listing-file-modified-sort="1793354225930" data-listing-reading-time-sort="2" data-listing-word-count-sort="251" data-listing-title-sort="notebook_dell16" data-listing-filename-sort="notebook_gw.qmd">
+<tr data-index="0" data-categories="d29ya3N0YXRpb24=" data-listing-file-modified-sort="1793355964656" data-listing-reading-time-sort="2" data-listing-word-count-sort="253" data-listing-title-sort="notebook_dell16" data-listing-filename-sort="notebook_gw.qmd">
 <td>
 <a href="../management/resources/notebook_gw.html" class="title listing-title">notebook_dell16</a>
 </td>
 <td>
-<span class="listing-category">&nbsp;</span>
+<span class="listing-categories">workstation</span>
 </td>
 <td>
 <span class="listing-ownership">institution</span>
@@ -1202,12 +1202,12 @@ location
 
 </tr>
 
-<tr data-index="1" data-categories="d29ya3N0YXRpb24=" data-listing-file-modified-sort="1793354225930" data-listing-reading-time-sort="2" data-listing-word-count-sort="245" data-listing-title-sort="TODO" data-listing-filename-sort="notebook_windows_gw.qmd">
+<tr data-index="1" data-categories="d29ya3N0YXRpb24=" data-listing-file-modified-sort="1793355964657" data-listing-reading-time-sort="2" data-listing-word-count-sort="245" data-listing-title-sort="ThinkPad E15" data-listing-filename-sort="notebook_windows_gw.qmd">
 <td>
-<a href="../management/resources/notebook_windows_gw.html" class="title listing-title">TODO</a>
+<a href="../management/resources/notebook_windows_gw.html" class="title listing-title">ThinkPad E15</a>
 </td>
 <td>
-<span class="listing-category">&nbsp;</span>
+<span class="listing-categories">workstation</span>
 </td>
 <td>
 <span class="listing-ownership">personal</span>
@@ -1221,12 +1221,12 @@ location
 
 </tr>
 
-<tr data-index="2" data-categories="cHJpbnRlcg==" data-listing-file-modified-sort="1793354225930" data-listing-reading-time-sort="1" data-listing-word-count-sort="178" data-listing-title-sort="Shared Printer" data-listing-filename-sort="shared_printer.qmd">
+<tr data-index="2" data-categories="cHJpbnRlcg==" data-listing-file-modified-sort="1793355964657" data-listing-reading-time-sort="1" data-listing-word-count-sort="178" data-listing-title-sort="Shared Printer" data-listing-filename-sort="shared_printer.qmd">
 <td>
 <a href="../management/resources/shared_printer.html" class="title listing-title">Shared Printer</a>
 </td>
 <td>
-<span class="listing-category">&nbsp;</span>
+<span class="listing-categories">printer</span>
 </td>
 <td>
 <span class="listing-ownership">institution</span>
@@ -1236,63 +1236,6 @@ location
 </td>
 <td>
 <span class="listing-location">Frankfurt School</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-file-modified-sort="1793354298707" data-listing-filename-sort="notebook_gw.html">
-<td>
-<a href="../management/resources/notebook_gw.html" class="title listing-title">&nbsp;</a>
-</td>
-<td>
-<span class="listing-category">&nbsp;</span>
-</td>
-<td>
-<span class="listing-ownership">&nbsp;</span>
-</td>
-<td>
-<span class="listing-lifecycle_status">&nbsp;</span>
-</td>
-<td>
-<span class="listing-location">&nbsp;</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-file-modified-sort="1793354297438" data-listing-filename-sort="notebook_windows_gw.html">
-<td>
-<a href="../management/resources/notebook_windows_gw.html" class="title listing-title">&nbsp;</a>
-</td>
-<td>
-<span class="listing-category">&nbsp;</span>
-</td>
-<td>
-<span class="listing-ownership">&nbsp;</span>
-</td>
-<td>
-<span class="listing-lifecycle_status">&nbsp;</span>
-</td>
-<td>
-<span class="listing-location">&nbsp;</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-file-modified-sort="1793354298070" data-listing-filename-sort="shared_printer.html">
-<td>
-<a href="../management/resources/shared_printer.html" class="title listing-title">&nbsp;</a>
-</td>
-<td>
-<span class="listing-category">&nbsp;</span>
-</td>
-<td>
-<span class="listing-ownership">&nbsp;</span>
-</td>
-<td>
-<span class="listing-lifecycle_status">&nbsp;</span>
-</td>
-<td>
-<span class="listing-location">&nbsp;</span>
 </td>
 
 </tr>
@@ -1391,7 +1334,7 @@ location
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ======================================================</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "TODO"</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="an">summary:</span><span class="co"> "TODO"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="an">category:</span><span class="co"> "TODO"             # Printer | Workstation | VM | Room | Tool</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> ["TODO"]         # printer | workstation | vm | room | tool</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="an">ownership:</span><span class="co"> "TODO"            # lab-owned | institution-owned | external | personal</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ======================================================</span></span>
@@ -1419,7 +1362,7 @@ location
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|-------|</span></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Title** <span class="pp">|</span> Resources <span class="pp">|</span></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Description** <span class="pp">|</span> ?meta:summary <span class="pp">|</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Type** <span class="pp">|</span> ?meta:category <span class="pp">|</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Type** <span class="pp">|</span> ?meta:categories <span class="pp">|</span></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Ownership** <span class="pp">|</span> ?meta:ownership <span class="pp">|</span></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Current user** <span class="pp">|</span> ?meta:current_user <span class="pp">|</span></span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Lifecycle status** <span class="pp">|</span> ?meta:lifecycle_status <span class="pp">|</span></span>
