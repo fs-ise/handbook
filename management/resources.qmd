@@ -3,9 +3,9 @@ title: "Resources"
 
 listing:
   - id: listing-resources
-    contents: resources/*
+    contents: resources/*.qmd
     type: table
-    fields: ["title", "category", "ownership", "lifecycle_status", "location"]
+    fields: ["title", "categories", "ownership", "lifecycle_status", "location"]
     sort: "lifecycle_status"
     sort-ui: false
     filter-ui: true
@@ -101,7 +101,7 @@ QR labels should include:
 # ======================================================
 title: "TODO"
 summary: "TODO"
-category: "TODO"             # Printer | Workstation | VM | Room | Tool
+categories: ["TODO"]         # printer | workstation | vm | room | tool
 ownership: "TODO"            # lab-owned | institution-owned | external | personal
 
 # ======================================================
@@ -129,7 +129,7 @@ lifecycle_status: "TODO"     # ordered | in_use | not_in_use | inactive | broken
 |------|-------|
 | **Title** | {{< meta title >}} |
 | **Description** | {{< meta summary >}} |
-| **Type** | {{< meta category >}} |
+| **Type** | {{< meta categories >}} |
 | **Ownership** | {{< meta ownership >}} |
 | **Current user** | {{< meta current_user >}} |
 | **Lifecycle status** | {{< meta lifecycle_status >}} |
