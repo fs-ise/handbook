@@ -73,17 +73,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-confidential.callout {
-  border-left-color: #dc3545;
-}
-div.callout-confidential.callout-style-default > .callout-header {
-  background-color: rgba(220, 53, 69, 0.13);
-}
-div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
-  content: '🔒';
-  background-image: none;
-}
 div.callout-resource.callout {
   border-left-color: #0d6efd;
 }
@@ -104,6 +93,17 @@ div.callout-objective.callout-style-default > .callout-header {
 div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
   content: '🎯';
+  background-image: none;
+}
+div.callout-confidential.callout {
+  border-left-color: #dc3545;
+}
+div.callout-confidential.callout-style-default > .callout-header {
+  background-color: rgba(220, 53, 69, 0.13);
+}
+div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
+  content: '🔒';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1055,19 +1055,20 @@ div.callout-self-service.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This section is marked as “toupdate”: update complete process</p>
-</div>
-</div>
+<section id="cybersecurity-incidents" class="level2">
+<h2 class="anchored" data-anchor-id="cybersecurity-incidents">Cybersecurity incidents</h2>
+<section id="when-in-doubt-report-it-immediately" class="level3">
+<h3 class="anchored" data-anchor-id="when-in-doubt-report-it-immediately">When in doubt, report it immediately</h3>
+<p>If something seems suspicious, contact IT immediately — even if you have already clicked a suspicious link. It is better to report a possible incident once too often than once too little.</p>
+<ul>
+<li><strong>Suspected security incident:</strong> <a href="mailto:sicherheitsvorfall@fs.de">sicherheitsvorfall@fs.de</a></li>
+<li><strong>Urgent support:</strong> IT hotline, <a href="tel:+4969154008111">+49 69 154008 - 111</a></li>
+<li><strong>Technical problems or non-urgent requests:</strong> IT ticket system</li>
+</ul>
+</section>
+</section>
+<section id="physical-emergencies" class="level2">
+<h2 class="anchored" data-anchor-id="physical-emergencies">Physical emergencies</h2>
 <p>Emergency procedures are stated here: <a href="https://www.uni-bamberg.de/sicherheit/krisenhandbuch/" target="_blank">Krisenhandbuch der Universität Bamberg</a> and <a href="https://www.uni-bamberg.de/fileadmin/www.abt-studium/Rechtsvorschriften/3Liegenschaften/Brandschutzordnung/Brandschutzordnung.pdf" target="_blank">Brandschutzordnung</a></p>
 <div style="display: flex; gap: 20px;">
 <p><a href="https://www.uni-bamberg.de/sicherheit/krisenhandbuch/" target="_blank" rel="noopener noreferrer"> <img src="../assets/images/Cover_Krisenhandbuch.jpg" alt="Cover Krisenhandbuch" width="303"> </a></p>
@@ -1075,6 +1076,7 @@ Note
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
