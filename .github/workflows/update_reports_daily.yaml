@@ -69,17 +69,17 @@ jobs:
             echo "No changes to commit"
           fi
 
-      - name: Release watch (updates references.bib + news.qmd)
+      - name: Release watch (updates references.bib + news/posts/)
         env:
           GITHUB_TOKEN: ${{ secrets.LABOT_PAT_TOKEN }}
         run: |
           python src/release_watch.py
 
-      # If news.qmd changed, open a PR for that change and request geritwagner to review/merge
+      # If a release post changed, open a PR and request geritwagner to review/merge
       #
-      # IMPORTANT: This works best if release_watch.py only changes references.bib/news.qmd when a release happens.
-      # If you also want references.bib in the PR, include it in `add-paths` below.
-      - name: Create PR for news update (if news.qmd changed)
+      # IMPORTANT: This works best if release_watch.py only changes references.bib/news/posts/ when a release happens.
+      # The `add-paths` below includes both release posts and references.bib.
+      - name: Create PR for news update (if release posts changed)
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.LABOT_PAT_TOKEN }}
@@ -88,7 +88,7 @@ jobs:
           body: |
             Automated release watch detected new software releases and updated:
 
-            - news.qmd (with release notes)
+            - news/posts/*.qmd (with release notes)
             - data/references.bib (version/urldate)
 
             Please review & merge.
