@@ -66,6 +66,12 @@ make exams
   (**ITP exams: no calculator**)
 - Add the confirmed exam date and time to your personal calendar, and check that the event is available on your phone and in Teams.
 
+**Course-specific checks**:
+
+- **ITP / Python (Pandas):**
+  - Avoid ambiguous references such as “the nth row/column.” For `.iloc`, state whether *n* is a human-counted ordinal (e.g., “the 4th column (position 3)”) or a zero-based position (e.g., “column position 3, zero-based” / `.iloc[:, 3]`). For `.loc`, specify the row or column labels explicitly (e.g., “index label `A`”).
+  - State that Pandas commands are entered directly in the Python console; expressions display their result automatically, so do not use `print()` unless explicitly requested.
+
 See `Nextcloud/teaching/exams/checklist.md` for additional items.
 
 :::
