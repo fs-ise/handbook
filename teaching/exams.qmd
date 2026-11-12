@@ -50,7 +50,7 @@ make exams
 - Include sufficient space for students to provide their answers.
 - Arrange a review by colleagues for large courses (e.g., Introduction to Programming); prefer sequential over parallel feedback.
 
-::: {.callout-important title="Checklist"}
+::: checklist
 - Use a Git repository during development. Once the exam is finalized and archived, remove the `.git` directory.
 - Consider `Nextcloud/teaching/exams/materials/*` for new tasks/ideas.
 - Do not reuse old exams.
@@ -71,6 +71,7 @@ make exams
 - **ITP / Python (Pandas):**
   - Avoid ambiguous references such as “the nth row/column.” For `.iloc`, state whether *n* is a human-counted ordinal (e.g., “the 4th column (position 3)”) or a zero-based position (e.g., “column position 3, zero-based” / `.iloc[:, 3]`). For `.loc`, specify the row or column labels explicitly (e.g., “index label `A`”).
   - State that Pandas commands are entered directly in the Python console; expressions display their result automatically, so do not use `print()` unless explicitly requested.
+  - **Exam scope:** Machine Learning is a demonstration of how quickly higher-level applications can be built, not exam content; do not assess it. Topics from dictionaries onward may be assessed only with multiple-choice questions focused on basic understanding. Decide at the end whether to include these questions, based on how far the course got. The instructor may tell students that both areas are candidates for MC questions to encourage attendance, but this does not change the final exam scope.
 
 See `Nextcloud/teaching/exams/checklist.md` for additional items.
 
