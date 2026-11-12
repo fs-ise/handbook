@@ -105,6 +105,30 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
+div.callout-checklist.callout {
+  border-left-color: #198754;
+}
+div.callout-checklist.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-checklist .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-checklist.callout-style-default .callout-icon::before, div.callout-checklist.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f14a' !important;
+  background-image: none;
+}
+div.callout-objective.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-objective.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -125,17 +149,6 @@ div.callout-resource.callout-style-default > .callout-header {
 div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   content: '🔗';
-  background-image: none;
-}
-div.callout-objective.callout {
-  border-left-color: #0d6efd;
-}
-div.callout-objective.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
-}
-div.callout-objective .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-objective.callout-style-default .callout-icon::before, div.callout-objective.callout-titled .callout-icon::before {
-  content: '🎯';
   background-image: none;
 }
 div.callout-self-service.callout {
@@ -1262,7 +1275,7 @@ student_evaluations
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="4" data-listing-word-count-sort="682" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-ITP.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="4" data-listing-word-count-sort="682" data-listing-title-sort="Introduction to Programming" data-listing-filename-sort="2026-WiSe-ITP.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -1275,7 +1288,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="4" data-listing-word-count-sort="679" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="4" data-listing-word-count-sort="679" data-listing-title-sort="Machine Learning for Big Data" data-listing-filename-sort="2026-WiSe-MLBD.qmd">
 <td>
 <span class="listing-semester">2026-WiSe</span>
 </td>
@@ -1288,7 +1301,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="4" data-listing-word-count-sort="663" data-listing-title-sort="Analytics and Big Data" data-listing-filename-sort="2026-SuSe-ABD.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="4" data-listing-word-count-sort="663" data-listing-title-sort="Analytics and Big Data" data-listing-filename-sort="2026-SuSe-ABD.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -1301,7 +1314,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="4" data-listing-word-count-sort="663" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSEC.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="4" data-listing-word-count-sort="663" data-listing-title-sort="IT Security Management" data-listing-filename-sort="2026-SuSe-ITSEC.qmd">
 <td>
 <span class="listing-semester">2026-SuSe</span>
 </td>
@@ -1314,7 +1327,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="519" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRS.md">
+<tr data-index="4" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="519" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-WiSe-LRS.md">
 <td>
 <span class="listing-semester">2025-WiSe</span>
 </td>
@@ -1327,7 +1340,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
+<tr data-index="5" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="540" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2025-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1340,7 +1353,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRS.md">
+<tr data-index="6" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2025-SoSe-LRS.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1353,7 +1366,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRS-HWR.md">
+<tr data-index="7" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="402" data-listing-title-sort="The Literature Review Seminar (HWR)" data-listing-filename-sort="2025-SoSe-LRS-HWR.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1366,7 +1379,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRS-IDIS.md">
+<tr data-index="8" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="405" data-listing-title-sort="The Literature Review Seminar (IDIS)" data-listing-filename-sort="2025-SoSe-LRS-IDIS.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1379,7 +1392,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
+<tr data-index="9" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="4" data-listing-word-count-sort="689" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2025-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2025-SoSe</span>
 </td>
@@ -1392,7 +1405,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="10" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRS.md">
+<tr data-index="10" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="443" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-WiSe-LRS.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1405,7 +1418,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="11" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
+<tr data-index="11" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="435" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1418,7 +1431,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="12" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EWI.md">
+<tr data-index="12" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="4" data-listing-word-count-sort="662" data-listing-title-sort="Einführung in die Wirtschaftsinformatik" data-listing-filename-sort="2024-WiSe-EWI.md">
 <td>
 <span class="listing-semester">2024-WiSe</span>
 </td>
@@ -1431,7 +1444,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="13" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
+<tr data-index="13" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="456" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2024-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1444,7 +1457,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="14" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRS.md">
+<tr data-index="14" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="591" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2024-SoSe-LRS.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1457,7 +1470,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="15" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
+<tr data-index="15" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2024-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2024-SoSe</span>
 </td>
@@ -1470,7 +1483,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="16" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRS.md">
+<tr data-index="16" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="570" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2023-WiSe-LRS.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1483,7 +1496,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="17" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
+<tr data-index="17" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="3" data-listing-word-count-sort="553" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-WiSe-OSP.md">
 <td>
 <span class="listing-semester">2023-WiSe</span>
 </td>
@@ -1496,7 +1509,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="18" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
+<tr data-index="18" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="Introduction to Digital Work" data-listing-filename-sort="2023-SoSe-IDW.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1509,7 +1522,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="19" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
+<tr data-index="19" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="1" data-listing-word-count-sort="129" data-listing-title-sort="Open-Source Projekt (WI-Projekt)" data-listing-filename-sort="2023-SoSe-OSP.md">
 <td>
 <span class="listing-semester">2023-SoSe</span>
 </td>
@@ -1522,7 +1535,7 @@ student_evaluations
 
 </tr>
 
-<tr data-index="20" data-listing-file-modified-sort="1794388923333" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRS.md">
+<tr data-index="20" data-listing-file-modified-sort="1794471115877" data-listing-reading-time-sort="1" data-listing-word-count-sort="130" data-listing-title-sort="The Literature Review Seminar" data-listing-filename-sort="2022-WiSe-LRS.md">
 <td>
 <span class="listing-semester">2022-WiSe</span>
 </td>

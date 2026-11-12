@@ -73,15 +73,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-div.callout-resource.callout {
-  border-left-color: #0d6efd;
+div.callout-checklist.callout {
+  border-left-color: #198754;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgba(13, 110, 253, 0.13);
+div.callout-checklist.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  content: '🔗';
+div.callout-checklist .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-checklist.callout-style-default .callout-icon::before, div.callout-checklist.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f14a' !important;
   background-image: none;
 }
 div.callout-objective.callout {
@@ -95,17 +97,6 @@ div.callout-objective.callout-style-default .callout-icon::before, div.callout-o
   content: '🎯';
   background-image: none;
 }
-div.callout-self-service.callout {
-  border-left-color: #198754;
-}
-div.callout-self-service.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
-  content: '🛠️';
-  background-image: none;
-}
 div.callout-confidential.callout {
   border-left-color: #dc3545;
 }
@@ -115,6 +106,28 @@ div.callout-confidential.callout-style-default > .callout-header {
 div.callout-confidential .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-confidential.callout-style-default .callout-icon::before, div.callout-confidential.callout-titled .callout-icon::before {
   content: '🔒';
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: #0d6efd;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgba(13, 110, 253, 0.13);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  content: '🔗';
+  background-image: none;
+}
+div.callout-self-service.callout {
+  border-left-color: #198754;
+}
+div.callout-self-service.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-self-service .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-self-service.callout-style-default .callout-icon::before, div.callout-self-service.callout-titled .callout-icon::before {
+  content: '🛠️';
   background-image: none;
 }
 </style>
@@ -1059,9 +1072,16 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <h2 class="anchored" data-anchor-id="trigger-scheduling-email">Trigger: scheduling email</h2>
 <p>The process starts when the scheduling team asks you to submit your availability. The personalized TimeEdit invitation typically has the subject <strong>“You have been requested to fill out a form”</strong>. The accompanying email explains which programme and teaching period the survey covers, what information is needed, and the submission deadline.</p>
 <p>Use the personal link in that invitation to open your form. Do not share or publish the link. If you have questions, contact the scheduling team using the details in the email or form guide (the guide lists <a href="mailto:planning@fs.de">planning@fs.de</a>).</p>
-</section>
-<section id="checklist-complete-the-timeedit-form" class="level2">
-<h2 class="anchored" data-anchor-id="checklist-complete-the-timeedit-form">Checklist: complete the TimeEdit form</h2>
+<div class="callout callout-style-default callout-checklist callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Checklist</span>Checklist: complete the TimeEdit form
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li><strong>Check the request details.</strong> Read the email and form description. Note the programme, teaching period, deadline, and any programme-specific questions.</li>
 <li><strong>Review your calendar and commitments.</strong> Identify personal obligations and planned vacation during the teaching period before entering availability. Submit official vacation requests separately through <a href="../management/vacation.html#1-take-vacation">Veda</a>, and follow the <a href="../management/vacation.html#3-communication-notification-to-colleagues">vacation communication guidance</a>.</li>
@@ -1071,6 +1091,8 @@ div.callout-confidential.callout-style-default .callout-icon::before, div.callou
 <li><strong>Review and submit.</strong> Check that all answers and dates are correct and required questions are complete. You can save and return later, but saving does not submit the form. Submit it by the deadline. If the calendar generates a list of entries below it, use the calendar to make changes and review your answers before submitting.</li>
 <li><strong>Check the proposed timetable.</strong> When it arrives, look for conflicts with other teaching and personal commitments, and verify the ITP daily limit for each group. Follow up with the scheduling team or colleagues to resolve conflicts. Ensure the module coordinator has listed the correct instructor so timetable invitations reach the right person.</li>
 </ol>
+</div>
+</div>
 
 
 </section>
