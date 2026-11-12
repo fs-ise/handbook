@@ -26,6 +26,10 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
+::: {.checklist title="Course process checklist"}
+
+Track the course lifecycle using this checklist.
+
 ## 1. Announce the project (4 months before)
 
 Start: December (summer term), May (winter term)
@@ -89,3 +93,9 @@ Documentation
 - [x] Professor: Archive presentation protocols (projects and seminars: digital is sufficient).
 
 Deadline: End of August (summer term), March (winter term)
+
+## 5. Repeat exam (following term)
+
+Not applicable for this course offering.
+
+:::

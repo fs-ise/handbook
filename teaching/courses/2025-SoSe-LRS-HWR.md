@@ -27,6 +27,10 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
+::: {.checklist title="Course process checklist"}
+
+Track the course lifecycle using this checklist.
+
 {: .info }
 > Offered as part of HWR : [registration](https://lets-meet.org/reg/cdba4cb7f7742b71e7){target=_blank}
 > 
@@ -85,3 +89,9 @@ Documentation
 - [ ] ~~Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.~~
 
 Deadline: End of August (summer term), March (winter term)
+
+## 5. Repeat exam (following term)
+
+Not applicable for this course offering.
+
+:::

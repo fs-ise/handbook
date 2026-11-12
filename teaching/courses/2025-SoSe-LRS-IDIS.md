@@ -27,7 +27,10 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
-{: .info }
+::: {.checklist title="Course process checklist"}
+
+Track the course lifecycle using this checklist.
+
 > Offered as part of [IDIS](https://idis.digital/phd-course/){target=_blank}
 > 
 > Website: [here](https://fs-ise.github.io/literature-review-seminar/2025_IDIS/){target=_blank}.
@@ -85,3 +88,9 @@ Documentation
 - [ ] ~~Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.~~
 
 Deadline: End of August (summer term), March (winter term)
+
+## 5. Repeat exam (following term)
+
+Not applicable for this course offering.
+
+:::

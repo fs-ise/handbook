@@ -26,6 +26,10 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
+::: {.checklist title="Course process checklist"}
+
+Track the course lifecycle using this checklist.
+
 **TODO**: set deadline etc.
 
 ## 1. Announce the project (4 months before)
@@ -80,3 +84,9 @@ Documentation
 - [x] Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.
 
 Deadline: End of August (summer term), March (winter term)
+
+## 5. Repeat exam (following term)
+
+Not applicable for this course offering.
+
+:::

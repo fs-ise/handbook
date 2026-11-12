@@ -26,6 +26,10 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
+::: {.checklist title="Course process checklist"}
+
+Track the course lifecycle using this checklist.
+
 ## 1. Announce the course (4 months before)
  
 Start: December (summer term), May (winter term)
@@ -98,3 +102,5 @@ Students have the possibility to repeat the exam in the following term (even if 
 - [x] Repeat relevant steps of *Exams and documentation* (step 4) 
 
 Students can review their exams and grades in person (Einsichtnahme) on the dates set by the examination office ([link](https://www.uni-bamberg.de/pruefungsamt/einsichtnahmen/){target=_blank}).
+
+:::

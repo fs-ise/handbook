@@ -26,6 +26,10 @@ Status of Revisions | {{< meta improvement_status >}}
 
 ## Process
 
+::: {.checklist title="Course process checklist"}
+
+Track the course lifecycle using this checklist.
+
 - FlexNow: Seminars must be created for each semester (decentral exams), a seminar paper and presentation are mandatory
 - Grading: the team assistant registers students for the seminar, enters grades, and submits them online. Students do not need to register on FlexNow.
 
@@ -94,3 +98,9 @@ Documentation
 - [x] Professor: [Report](/teaching/reports.html) teaching efforts at the end of the semester.
 
 Deadline: End of August (summer term), March (winter term)
+
+## 5. Repeat exam (following term)
+
+Not applicable for this course offering.
+
+:::
