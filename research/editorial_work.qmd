@@ -2,10 +2,33 @@
 title: "Editorial work"
 ---
 
-TODO
+## Creating an editorial case
+
+Choose a private, local workspace location using the [workstation-setup Nextcloud guidance](https://fs-ise.github.io/workstation-setup/nextcloud.html). The location can differ across machines.
+
+```sh
+labot editorial create
+```
+
+LaBot prompts for the editorial role, submission ID, optional round, manuscript PDF, reviewer-files folder, and optional deadline. Choose an existing role or create a new one. It creates `<role>/<submission-id>[.<round>]/` with `README.md`, `report.qmd`, and `reviews/`; provided source files are copied into the case.
+
+For non-interactive setup, provide the case details directly:
+
+```sh
+labot editorial create \
+  --role AE_venue2026 \
+  --submission-id submission-id \
+  --round R1 \
+  --manuscript "/path/to/manuscript.pdf" \
+  --reviews-dir "/path/to/reviewer-files" \
+  --deadline '2026-12-15 09:00' \
+  --reminder-days 7
+```
+
+For non-interactive use, the `--role` directory must already exist. If a deadline is supplied, LaBot creates `task.ics`; import it into Thunderbird Tasks to schedule the reminder. Work directly in the case folder, use relative links to its files, and record a related peer-review case by its restricted local path rather than copying its files. Do not commit manuscripts, reviews, or editorial assessments to a public or shared repository.
 
 
-## Pre-publishing checks (polishing)
+## Pre-publishing checks (paper polishing)
 
 ```sh
 colrev convert references.md
