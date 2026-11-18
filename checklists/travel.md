@@ -39,6 +39,7 @@
 - [ ] Arrange teaching, meetings, and supervision coverage
 - [ ] Schedule meetings with collaborators
 - [ ] Prepare presentation and other materials
+- [ ] Prepare a way to share your contact details: bring business cards, or create a QR code linking to your digital contact details; consider keeping the QR code somewhere easy to show, such as on the back of your phone
 - [ ] Check mobile connectivity and roaming charges; consider an eSIM or local connectivity option where useful
 - [ ] Check that payment cards will work abroad, identify a backup payment method, and check currency and cash requirements
 - [ ] Save your bank's contact details and card-blocking instructions offline, separately from your payment cards
