@@ -197,7 +197,7 @@ def parse_aisnet_events(ical_text: str) -> list[dict[str, str]]:
                 detail = "conflicting" if events_by_uid[uid] != event else "duplicate"
                 raise FeedValidationError(f"AISNET feed contains {detail} UID {uid!r}")
             events_by_uid[uid] = event
-    events = sort_events(list(events_by_uid.values()))
+    events = deduplicate_aisnet_events(list(events_by_uid.values()))
     if not events and TARGET_RE.search(ical_text):
         raise ValueError(
             "Found ECIS/ICIS text in AISNET iCalendar export but could not parse "
@@ -206,11 +206,50 @@ def parse_aisnet_events(ical_text: str) -> list[dict[str, str]]:
     return events
 
 
+def aisnet_event_fingerprint(event: dict[str, Any]) -> tuple[str, ...]:
+    """Identify identical AISNET listings without relying on their upstream UID."""
+    return tuple(
+        " ".join(str(event.get(field, "")).split()).casefold()
+        for field in ("title", "start", "end", "location", "description")
+    )
+
+
+def deduplicate_aisnet_events(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Keep one record for each identical AISNET listing, deterministically."""
+    unique: dict[tuple[str, ...], dict[str, Any]] = {}
+    for event in sorted(events, key=lambda item: str(item.get("source_uid", ""))):
+        unique.setdefault(aisnet_event_fingerprint(event), event)
+    return sort_events(list(unique.values()))
+
+
+def clean_existing_aisnet_duplicates(
+    existing: list[dict[str, Any]], incoming: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Remove existing duplicate listings, including ones replaced by a feed UID."""
+    incoming_by_fingerprint = {
+        aisnet_event_fingerprint(event): event for event in incoming
+    }
+    unique_existing = deduplicate_aisnet_events(existing)
+    return [
+        event
+        for event in unique_existing
+        if aisnet_event_fingerprint(event) not in incoming_by_fingerprint
+        or event.get("source_uid")
+        == incoming_by_fingerprint[aisnet_event_fingerprint(event)].get("source_uid")
+    ]
+
+
 def main() -> None:
     raw = yaml.safe_load(EVENTS_PATH.read_text(encoding="utf-8"))
     if not isinstance(raw, list):
         raise ValueError("Parsed YAML is not a list")
     aisnet_events = parse_aisnet_events(fetch_aisnet_ical())
+    non_aisnet_events = [event for event in raw if event.get("source") != "aisnet"]
+    existing_aisnet_events = [event for event in raw if event.get("source") == "aisnet"]
+    existing_aisnet_events = clean_existing_aisnet_duplicates(
+        existing_aisnet_events, aisnet_events
+    )
+    raw = non_aisnet_events + existing_aisnet_events
     combined_events = reconcile_events(raw, aisnet_events, "aisnet")
     publish_calendar(combined_events)
     print(f"Reconciled {len(aisnet_events)} AISNET events in {EVENTS_PATH}")
