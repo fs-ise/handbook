@@ -213,7 +213,6 @@ def collect_org_activity(github_token):
         "theses-confidential",
         "teaching_hub",
         "practice-git",
-        "digital-work-lecture-exam",
     }
 
     all_rows_teaching = []
