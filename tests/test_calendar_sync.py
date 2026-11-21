@@ -9,7 +9,11 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
 
-from sync_aisnet import parse_aisnet_events
+from sync_aisnet import (
+    clean_existing_aisnet_duplicates,
+    deduplicate_aisnet_events,
+    parse_aisnet_events,
+)
 from sync_timeedit import normalize_timeedit_event, parse_timeedit_events
 from sync_utils import BERLIN, FeedValidationError, publish_calendar, reconcile_events
 from update_calendar import expand_events, generate_ical
@@ -179,6 +183,52 @@ END:VCALENDAR
     conflicting = {**parsed[0], "title": "ICIS instead"}
     with pytest.raises(FeedValidationError, match="conflicting UID"):
         reconcile_events([], [parsed[0], conflicting], "aisnet", now=NOW)
+
+
+def test_aisnet_feed_deduplicates_identical_events_with_different_uids():
+    fixture = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+UID:ais-1
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270527
+SUMMARY:ECIS 2027
+LOCATION:Lisbon
+URL:https://aisnet.org/event/ecis-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:ais-2
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270527
+SUMMARY:ECIS 2027
+LOCATION:Lisbon
+URL:https://aisnet.org/event/ecis-2027/
+END:VEVENT
+END:VCALENDAR
+"""
+
+    parsed = parse_aisnet_events(fixture)
+
+    assert len(parsed) == 1
+    assert parsed[0]["title"] == "ECIS 2027"
+
+
+def test_aisnet_existing_duplicates_are_removed_without_merging_distinct_events():
+    duplicate_a = event("aisnet", "a", "ECIS 2027", "2027-05-24 09:00", "2027-05-26 17:00")
+    duplicate_b = {**duplicate_a, "source_uid": "b", "title": "  ECIS   2027 "}
+    distinct = {**duplicate_a, "source_uid": "c", "location": "Different venue"}
+
+    result = deduplicate_aisnet_events([duplicate_b, distinct, duplicate_a])
+
+    assert len(result) == 2
+    assert {event["source_uid"] for event in result} == {"a", "c"}
+
+
+def test_aisnet_cleanup_replaces_existing_duplicate_with_incoming_uid():
+    old = event("aisnet", "old", "ICIS 2026", "2026-12-13 09:00", "2026-12-16 17:00")
+    incoming = {**old, "source_uid": "new"}
+
+    assert clean_existing_aisnet_duplicates([old], [incoming]) == []
 
 
 def test_missing_essential_information_is_rejected():
